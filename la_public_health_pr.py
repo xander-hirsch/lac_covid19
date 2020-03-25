@@ -1,5 +1,6 @@
 import datetime as dt
 import re
+from typing import Dict, Tuple
 
 import bs4
 import requests
@@ -59,6 +60,26 @@ def get_html_place(pr_statement: bs4.Tag) -> bs4.Tag:
             return bold_tag.next_sibling.next_sibling
 
 
+def parse_case_count(case_count: bs4.Tag) -> Dict[str, int]:
+    pass
+
+
+def parse_age_group(age_group: bs4.Tag) -> Dict[Tuple[int, int], int]:
+    pass
+
+
+def parse_med_attn(med_attn: bs4.Tag) -> Dict[str, int]:
+    pass
+
+
+def parse_place(place: bs4.Tag) -> Dict[str, int]:
+    pass
+
+
 if __name__ == "__main__":
     today = fetch_press_release(2280)
     statement = get_statement(today)
+    html_cases_count = get_html_cases_count(statement)
+    html_age_group = get_html_age_group(statement)
+    html_med_attn = get_html_med_attn(statement)
+    html_place = get_html_place(statement)
