@@ -10,8 +10,8 @@ IMMEDIATE_RELEASE = re.compile('^For Immediate Release:$')
 STATEMENT_START = re.compile('^LOS ANGELES –')
 
 HEADER_CASES_COUNT = re.compile('^Laboratory Confirmed Cases')
-HEADER_AGE_GROUP = re.compile('^Age Group (Los Angeles County Cases Only-excl LB and Pas)')
-HEADER_MED_ATTN = re.compile('^Hospitalization and Death (among Investigated Cases)')
+HEADER_AGE_GROUP = re.compile('^Age Group')
+HEADER_MED_ATTN = re.compile('^Hospitalization and Death')
 HEADER_PLACE = re.compile('^CITY / COMMUNITY')
 
 
@@ -33,6 +33,30 @@ def get_statement(pr_html: bs4.BeautifulSoup) -> bs4.Tag:
     for td_tag in pr_html.find_all('td'):
         if STATEMENT_START.match(td_tag.get_text(strip=True)) is not None:
             return td_tag
+
+
+def get_html_cases_count(pr_statement: bs4.Tag) -> bs4.Tag:
+    for bold_tag in pr_statement.find_all('b'):
+        if HEADER_CASES_COUNT.match(bold_tag.get_text(strip=True)) is not None:
+            return bold_tag.parent.find('ul')
+
+
+def get_html_age_group(pr_statement: bs4.Tag) -> bs4.Tag:
+    for bold_tag in pr_statement.find_all('b'):
+        if HEADER_AGE_GROUP.match(bold_tag.get_text(strip=True)) is not None:
+            return bold_tag.next_sibling.next_sibling
+
+
+def get_html_med_attn(pr_statement: bs4.Tag) -> bs4.Tag:
+    for bold_tag in pr_statement.find_all('b'):
+        if HEADER_MED_ATTN.match(bold_tag.get_text(strip=True)) is not None:
+            return bold_tag.next_sibling.next_sibling
+
+
+def get_html_place(pr_statement: bs4.Tag) -> bs4.Tag:
+    for bold_tag in pr_statement.find_all('b'):
+        if HEADER_PLACE.match(bold_tag.get_text(strip=True)) is not None:
+            return bold_tag.next_sibling.next_sibling
 
 
 if __name__ == "__main__":
