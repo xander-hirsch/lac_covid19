@@ -7,6 +7,7 @@ import requests
 LAC_DPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='
 
 IMMEDIATE_RELEASE = re.compile('^For Immediate Release:$')
+STATEMENT_START = re.compile('^LOS ANGELES –')
 
 HEADER_CASES_COUNT = re.compile('^Laboratory Confirmed Cases')
 HEADER_AGE_GROUP = re.compile('^Age Group (Los Angeles County Cases Only-excl LB and Pas)')
@@ -28,5 +29,12 @@ def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
             return dt.datetime.strptime(date_str, '%B %d, %Y').date()
 
 
+def get_statement(pr_html: bs4.BeautifulSoup) -> bs4.Tag:
+    for td_tag in pr_html.find_all('td'):
+        if STATEMENT_START.match(td_tag.get_text(strip=True)) is not None:
+            return td_tag
+
+
 if __name__ == "__main__":
     today = fetch_press_release(2280)
+    statement = get_statement(today)
