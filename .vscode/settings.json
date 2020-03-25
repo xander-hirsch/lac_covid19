@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/home/xander/.local/share/virtualenvs/gla-covid-19-JbQey1Oz/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
+}
