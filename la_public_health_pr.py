@@ -64,7 +64,7 @@ def get_html_place(pr_statement: bs4.Tag) -> bs4.Tag:
             return bold_tag.next_sibling.next_sibling
 
 
-def parse_case_count(case_count: bs4.Tag) -> Dict[str, int]:
+def parse_cases_count(case_count: bs4.Tag) -> Dict[str, int]:
     case_dict = {}
     while case_count.find('li') is not None:
         case_count = case_count.find('li')
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     date = get_date(today)
 
     html_cases_count = get_html_cases_count(statement)
-    cases_count = parse_case_count(html_cases_count)
+    cases_count = parse_cases_count(html_cases_count)
 
     html_age_group = get_html_age_group(statement)
     age_group = parse_age_group(html_age_group)
