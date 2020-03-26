@@ -61,11 +61,24 @@ def get_html_place(pr_statement: bs4.Tag) -> bs4.Tag:
 
 
 def parse_case_count(case_count: bs4.Tag) -> Dict[str, int]:
-    pass
+    case_dict = {}
+    while case_count.find('li') is not None:
+        case_count = case_count.find('li')
+        entry = case_count.contents[0].strip()
+        area, count = entry.split(' -- ')
+        case_dict[area] = int(count.rstrip('*'))
+    return case_dict
 
 
 def parse_age_group(age_group: bs4.Tag) -> Dict[Tuple[int, int], int]:
-    pass
+    age_dict = {}
+    while age_group.find('li') is not None:
+        age_group = age_group.find('li')
+        entry = age_group.contents[0].strip()
+        age_str, count_str = entry.split('--')
+        # age_split = age_str.split()
+        age_dict[age_str.strip()] = int(count_str.strip())
+    return age_dict
 
 
 def parse_med_attn(med_attn: bs4.Tag) -> Dict[str, int]:
