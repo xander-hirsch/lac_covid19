@@ -1,6 +1,7 @@
 import datetime as dt
+from math import inf
 import re
-from typing import Dict, Tuple
+from typing import Dict, Tuple, Union
 
 import bs4
 import requests
@@ -14,6 +15,8 @@ HEADER_CASES_COUNT = re.compile('^Laboratory Confirmed Cases')
 HEADER_AGE_GROUP = re.compile('^Age Group')
 HEADER_MED_ATTN = re.compile('^Hospitalization and Death')
 HEADER_PLACE = re.compile('^CITY / COMMUNITY')
+
+AGE_RANGE = re.compile('\d+ to \d+')
 
 
 def fetch_press_release(id: int):
@@ -70,14 +73,21 @@ def parse_case_count(case_count: bs4.Tag) -> Dict[str, int]:
     return case_dict
 
 
+def _interpret_age_range(desc: str) -> Tuple[int, Union[int, float]]:
+    if AGE_RANGE.match(desc) is None:
+        lower_bound = int(desc.split()[-1])
+        return (lower_bound, inf)
+    desc_split = desc.split()
+    return (int(desc_split[0]), int(desc_split[-1]))
+
+
 def parse_age_group(age_group: bs4.Tag) -> Dict[Tuple[int, int], int]:
     age_dict = {}
     while age_group.find('li') is not None:
         age_group = age_group.find('li')
         entry = age_group.contents[0].strip()
         age_str, count_str = entry.split('--')
-        # age_split = age_str.split()
-        age_dict[age_str.strip()] = int(count_str.strip())
+        age_dict[_interpret_age_range(age_str.strip())] = int(count_str.strip())
     return age_dict
 
 
