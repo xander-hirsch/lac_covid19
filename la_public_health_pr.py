@@ -19,12 +19,18 @@ STATEMENT_START = re.compile('^LOS ANGELES –')
 HEADER_CASES_COUNT = re.compile('^Laboratory Confirmed Cases')
 HEADER_AGE_GROUP = re.compile('^Age Group')
 HEADER_MED_ATTN = re.compile('^Hospitalization and Death')
+HEADER_DEATHS = re.compile('^Deaths')
+HEADER_HOSPITAL = re.compile('^Hospitalization')
 HEADER_CITIES = re.compile('^CITY / COMMUNITY')
 
 AGE_RANGE = re.compile('\d+ to \d+')
 UNDER_INVESTIGATION = re.compile('^-  Under Investigation')
 
 WHOLE_NUMBER = re.compile('\d+')
+
+
+def b_contents(b_tag: bs4.Tag) -> str:
+    return b_tag.get_text(strip=True)
 
 
 def fetch_press_release(prid: int):
@@ -62,6 +68,12 @@ def get_html_age_group(pr_statement: bs4.Tag) -> bs4.Tag:
 def get_html_med_attn(pr_statement: bs4.Tag) -> bs4.Tag:
     for bold_tag in pr_statement.find_all('b'):
         if HEADER_MED_ATTN.match(bold_tag.get_text(strip=True)) is not None:
+            return bold_tag.next_sibling.next_sibling
+
+
+def get_html_hospital(pr_statement: bs4.Tag) -> bs4.Tag:
+    for bold_tag in pr_statement.find_all('b'):
+        if HEADER_HOSPITAL.match(b_contents(bold_tag)):
             return bold_tag.next_sibling.next_sibling
 
 
@@ -114,6 +126,23 @@ def parse_med_attn(med_attn: bs4.Tag) -> Dict[str, int]:
         entry_split = entry.split()
         attn_dict[' '.join(entry_split[:-1])] = int(entry_split[-1])
     return attn_dict
+
+
+def parse_deaths(pr_statement: bs4.Tag) -> int:
+    for bold_tag in pr_statement.find_all('b'):
+        content = b_contents(bold_tag)
+        if HEADER_DEATHS.match(content):
+            return int(WHOLE_NUMBER.search(content).group(0))
+
+
+def parse_hospital(hospital: bs4.Tag) -> Dict[str, int]:
+    hospital_dict = {}
+    while hospital.find('li') is not None:
+        hospital = hospital.find('li')
+        entry = hospital.contents[0].strip()
+        entry_split = entry.split()
+        hospital_dict[' '.join(entry_split[:-1])] = int(entry_split[-1])
+    return hospital_dict
 
 
 def parse_cities(place: bs4.Tag) -> Dict[str, int]:
