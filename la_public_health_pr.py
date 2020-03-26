@@ -1,12 +1,17 @@
 import datetime as dt
 from math import inf
 import re
-from typing import Dict, Tuple, Union
+from typing import Any, Dict, Tuple, Union
 
 import bs4
 import requests
 
 LAC_DPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='
+
+COVID_STAT_PR = {'2020-03-22': 2277,
+                 '2020-03-23': 2279,
+                 '2020-03-24': 2280,
+                 '2020-03-25': 2282}
 
 IMMEDIATE_RELEASE = re.compile('^For Immediate Release:$')
 STATEMENT_START = re.compile('^LOS ANGELES –')
@@ -107,25 +112,48 @@ def parse_cities(place: bs4.Tag) -> Dict[str, int]:
     while place.find('li') is not None:
         place = place.find('li')
         entry = place.contents[0].strip()
-        if UNDER_INVESTIGATION.match(entry) is None:
+        if (len(entry) > 0) and (UNDER_INVESTIGATION.match(entry) is None):
             entry_split = entry.split()
             place_dict[' '.join(entry_split[:-1])] = int(entry_split[-1])
     return place_dict
 
 
+def extract_covid_data(prid: int) -> Dict[str, Any]:
+    DATE = 'date'
+    HOSPITALIZATIONS = 'hospitalizations'
+    DEATHS = 'deaths'
+    AGE_GROUP = 'age group'
+    CITY_COMMUNITY = 'cities and communities'
+
+    LONG_BEACH = 'Long Beach'
+    PASADENA = 'Pasadena'
+
+    HOSPITAL_ENTRY = 'Hospitalized (Ever)'
+    DEATH_ENTRY = 'Deaths'
+
+    press_release = fetch_press_release(prid)
+    date = get_date(press_release)
+    statement = get_statement(press_release)
+
+    cases_count = parse_cases_count(get_html_cases_count(statement))
+    age_group = parse_age_group(get_html_age_group(statement))
+    med_attn = parse_med_attn(get_html_med_attn(statement))
+
+    cities = parse_cities(get_html_cities(statement))
+    cities[LONG_BEACH] = cases_count[LONG_BEACH]
+    cities[PASADENA] = cases_count[PASADENA]
+
+    output_dict = {DATE: str(date),
+                   HOSPITALIZATIONS: med_attn[HOSPITAL_ENTRY],
+                   DEATHS: med_attn[DEATH_ENTRY],
+                   AGE_GROUP: age_group,
+                   CITY_COMMUNITY: cities}
+
+    return output_dict
+
+
 if __name__ == "__main__":
-    today = fetch_press_release(2277)
-    statement = get_statement(today)
-    date = get_date(today)
-
-    html_cases_count = get_html_cases_count(statement)
-    cases_count = parse_cases_count(html_cases_count)
-
-    html_age_group = get_html_age_group(statement)
-    age_group = parse_age_group(html_age_group)
-
-    html_med_attn = get_html_med_attn(statement)
-    med_attn = parse_med_attn(html_med_attn)
-
-    html_place = get_html_cities(statement)
-    place = parse_cities(html_place)
+    sun = extract_covid_data(COVID_STAT_PR['2020-03-22'])
+    mon = extract_covid_data(COVID_STAT_PR['2020-03-23'])
+    tues = extract_covid_data(COVID_STAT_PR['2020-03-24'])
+    # wed = extract_covid_data(COVID_STAT_PR['2020-03-25'])
