@@ -29,7 +29,7 @@ UNDER_INVESTIGATION = re.compile('^-  Under Investigation')
 WHOLE_NUMBER = re.compile('\d+')
 
 
-def b_contents(b_tag: bs4.Tag) -> str:
+def tag_contents(b_tag: bs4.Tag) -> str:
     return b_tag.get_text(strip=True)
 
 
@@ -42,52 +42,52 @@ def fetch_press_release(prid: int):
 
 def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
     for bold_tag in pr_html.find_all('b'):
-        if IMMEDIATE_RELEASE.match(bold_tag.get_text(strip=True)) is not None:
+        if IMMEDIATE_RELEASE.match(tag_contents(bold_tag)):
             date_str = bold_tag.next_sibling.next_sibling.strip()
             return dt.datetime.strptime(date_str, '%B %d, %Y').date()
 
 
 def get_statement(pr_html: bs4.BeautifulSoup) -> bs4.Tag:
     for td_tag in pr_html.find_all('td'):
-        if STATEMENT_START.match(td_tag.get_text(strip=True)) is not None:
+        if STATEMENT_START.match(tag_contents(td_tag)):
             return td_tag
 
 
 def get_html_cases_count(pr_statement: bs4.Tag) -> bs4.Tag:
     for bold_tag in pr_statement.find_all('b'):
-        if HEADER_CASES_COUNT.match(bold_tag.get_text(strip=True)) is not None:
+        if HEADER_CASES_COUNT.match(tag_contents(bold_tag)):
             return bold_tag.parent.find('ul')
 
 
 def get_html_age_group(pr_statement: bs4.Tag) -> bs4.Tag:
     for bold_tag in pr_statement.find_all('b'):
-        if HEADER_AGE_GROUP.match(bold_tag.get_text(strip=True)) is not None:
+        if HEADER_AGE_GROUP.match(tag_contents(bold_tag)):
             return bold_tag.next_sibling.next_sibling
 
 
 def get_html_med_attn(pr_statement: bs4.Tag) -> bs4.Tag:
     for bold_tag in pr_statement.find_all('b'):
-        if HEADER_MED_ATTN.match(bold_tag.get_text(strip=True)) is not None:
+        if HEADER_MED_ATTN.match(tag_contents(bold_tag)):
             return bold_tag.next_sibling.next_sibling
 
 
 def get_html_hospital(pr_statement: bs4.Tag) -> bs4.Tag:
     for bold_tag in pr_statement.find_all('b'):
-        if HEADER_HOSPITAL.match(b_contents(bold_tag)):
+        if HEADER_HOSPITAL.match(tag_contents(bold_tag)):
             return bold_tag.next_sibling.next_sibling
 
 
 def get_html_cities(pr_statement: bs4.Tag) -> bs4.Tag:
     for bold_tag in pr_statement.find_all('b'):
-        if HEADER_CITIES.match(bold_tag.get_text(strip=True)) is not None:
+        if HEADER_CITIES.match(tag_contents(bold_tag)):
             return bold_tag.next_sibling.next_sibling
 
 
 def parse_total_cases(pr_statement: bs4.Tag) -> int:
     for bold_tag in pr_statement.find_all('b'):
-        if HEADER_CASES_COUNT.match(bold_tag.get_text(strip=True)):
-            return int(WHOLE_NUMBER.search(
-                bold_tag.get_text(strip=True)).group(0))
+        content = tag_contents(bold_tag)
+        if HEADER_CASES_COUNT.match(content):
+            return int(WHOLE_NUMBER.search(content).group(0))
 
 
 def parse_cases_count(case_count: bs4.Tag) -> Dict[str, int]:
@@ -130,7 +130,7 @@ def parse_med_attn(med_attn: bs4.Tag) -> Dict[str, int]:
 
 def parse_deaths(pr_statement: bs4.Tag) -> int:
     for bold_tag in pr_statement.find_all('b'):
-        content = b_contents(bold_tag)
+        content = tag_contents(bold_tag)
         if HEADER_DEATHS.match(content):
             return int(WHOLE_NUMBER.search(content).group(0))
 
