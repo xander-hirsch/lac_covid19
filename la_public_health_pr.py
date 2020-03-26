@@ -17,6 +17,7 @@ HEADER_MED_ATTN = re.compile('^Hospitalization and Death')
 HEADER_PLACE = re.compile('^CITY / COMMUNITY')
 
 AGE_RANGE = re.compile('\d+ to \d+')
+UNDER_INVESTIGATION = re.compile('^-  Under Investigation')
 
 
 def fetch_press_release(id: int):
@@ -92,17 +93,39 @@ def parse_age_group(age_group: bs4.Tag) -> Dict[Tuple[int, int], int]:
 
 
 def parse_med_attn(med_attn: bs4.Tag) -> Dict[str, int]:
-    pass
+    attn_dict = {}
+    while med_attn.find('li') is not None:
+        med_attn = med_attn.find('li')
+        entry = med_attn.contents[0].strip()
+        entry_split = entry.split()
+        attn_dict[' '.join(entry_split[:-1])] = int(entry_split[-1])
+    return attn_dict
 
 
 def parse_place(place: bs4.Tag) -> Dict[str, int]:
-    pass
+    place_dict = {}
+    while place.find('li') is not None:
+        place = place.find('li')
+        entry = place.contents[0].strip()
+        if UNDER_INVESTIGATION.match(entry) is None:
+            entry_split = entry.split()
+            place_dict[' '.join(entry_split[:-1])] = int(entry_split[-1])
+    return place_dict
 
 
 if __name__ == "__main__":
     today = fetch_press_release(2280)
     statement = get_statement(today)
+    date = get_date(today)
+
     html_cases_count = get_html_cases_count(statement)
+    cases_count = parse_case_count(html_cases_count)
+
     html_age_group = get_html_age_group(statement)
+    age_group = parse_age_group(html_age_group)
+
     html_med_attn = get_html_med_attn(statement)
+    med_attn = parse_med_attn(html_med_attn)
+
     html_place = get_html_place(statement)
+    place = parse_place(html_place)
