@@ -177,7 +177,15 @@ def extract_covid_data(prid: int) -> Dict[str, Any]:
     total_cases = parse_total_cases(statement)
     cases_count = parse_cases_count(get_html_cases_count(statement))
     age_group = parse_age_group(get_html_age_group(statement))
-    med_attn = parse_med_attn(get_html_med_attn(statement))
+
+    hospital = deaths = None
+    if dt.date(2020, 3, 22) <= date <= dt.date(2020, 3, 24):
+        med_attn = parse_med_attn(get_html_med_attn(statement))
+        hospital = {HOSPITAL_ENTRY: med_attn[HOSPITAL_ENTRY]}
+        deaths = med_attn[DEATH_ENTRY]
+    elif dt.date(2020, 3, 25) <= date:
+        hospital = parse_hospital(get_html_hospital(statement))
+        deaths = parse_deaths(statement)
 
     cities = parse_cities(get_html_cities(statement))
     cities[LONG_BEACH] = cases_count[LONG_BEACH]
@@ -185,8 +193,8 @@ def extract_covid_data(prid: int) -> Dict[str, Any]:
 
     output_dict = {DATE: str(date),
                    CASES: total_cases,
-                   HOSPITALIZATIONS: med_attn[HOSPITAL_ENTRY],
-                   DEATHS: med_attn[DEATH_ENTRY],
+                   HOSPITALIZATIONS: hospital,
+                   DEATHS: deaths,
                    AGE_GROUP: age_group,
                    CITY_COMMUNITY: cities}
 
@@ -194,10 +202,7 @@ def extract_covid_data(prid: int) -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
-    # sun = extract_covid_data(COVID_STAT_PR['2020-03-22'])
-    # mon = extract_covid_data(COVID_STAT_PR['2020-03-23'])
+    sun = extract_covid_data(COVID_STAT_PR['2020-03-22'])
+    mon = extract_covid_data(COVID_STAT_PR['2020-03-23'])
     tues = extract_covid_data(COVID_STAT_PR['2020-03-24'])
-    # wed = extract_covid_data(COVID_STAT_PR['2020-03-25'])
-
-    wed_statement = get_statement(fetch_press_release(COVID_STAT_PR['2020-03-25']))
-    wed_count = parse_total_cases(wed_statement)
+    wed = extract_covid_data(COVID_STAT_PR['2020-03-25'])
