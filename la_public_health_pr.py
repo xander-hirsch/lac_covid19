@@ -14,14 +14,14 @@ STATEMENT_START = re.compile('^LOS ANGELES –')
 HEADER_CASES_COUNT = re.compile('^Laboratory Confirmed Cases')
 HEADER_AGE_GROUP = re.compile('^Age Group')
 HEADER_MED_ATTN = re.compile('^Hospitalization and Death')
-HEADER_PLACE = re.compile('^CITY / COMMUNITY')
+HEADER_CITIES = re.compile('^CITY / COMMUNITY')
 
 AGE_RANGE = re.compile('\d+ to \d+')
 UNDER_INVESTIGATION = re.compile('^-  Under Investigation')
 
 
-def fetch_press_release(id: int):
-    r = requests.get(LAC_DPH_PR_URL_BASE + str(id))
+def fetch_press_release(prid: int):
+    r = requests.get(LAC_DPH_PR_URL_BASE + str(prid))
     if r.status_code == 200:
         return bs4.BeautifulSoup(r.text, 'html.parser')
     raise requests.exceptions.ConnectionError('Cannot retrieve the PR statement')
@@ -60,7 +60,7 @@ def get_html_med_attn(pr_statement: bs4.Tag) -> bs4.Tag:
 
 def get_html_place(pr_statement: bs4.Tag) -> bs4.Tag:
     for bold_tag in pr_statement.find_all('b'):
-        if HEADER_PLACE.match(bold_tag.get_text(strip=True)) is not None:
+        if HEADER_CITIES.match(bold_tag.get_text(strip=True)) is not None:
             return bold_tag.next_sibling.next_sibling
 
 
