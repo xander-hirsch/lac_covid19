@@ -24,6 +24,8 @@ HEADER_CITIES = re.compile('^CITY / COMMUNITY')
 AGE_RANGE = re.compile('\d+ to \d+')
 UNDER_INVESTIGATION = re.compile('^-  Under Investigation')
 
+WHOLE_NUMBER = re.compile('\d+')
+
 
 def fetch_press_release(prid: int):
     r = requests.get(LAC_DPH_PR_URL_BASE + str(prid))
@@ -67,6 +69,13 @@ def get_html_cities(pr_statement: bs4.Tag) -> bs4.Tag:
     for bold_tag in pr_statement.find_all('b'):
         if HEADER_CITIES.match(bold_tag.get_text(strip=True)) is not None:
             return bold_tag.next_sibling.next_sibling
+
+
+def parse_total_cases(pr_statement: bs4.Tag) -> int:
+    for bold_tag in pr_statement.find_all('b'):
+        if HEADER_CASES_COUNT.match(bold_tag.get_text(strip=True)):
+            return int(WHOLE_NUMBER.search(
+                bold_tag.get_text(strip=True)).group(0))
 
 
 def parse_cases_count(case_count: bs4.Tag) -> Dict[str, int]:
@@ -120,6 +129,7 @@ def parse_cities(place: bs4.Tag) -> Dict[str, int]:
 
 def extract_covid_data(prid: int) -> Dict[str, Any]:
     DATE = 'date'
+    CASES = 'cases'
     HOSPITALIZATIONS = 'hospitalizations'
     DEATHS = 'deaths'
     AGE_GROUP = 'age group'
@@ -135,6 +145,7 @@ def extract_covid_data(prid: int) -> Dict[str, Any]:
     date = get_date(press_release)
     statement = get_statement(press_release)
 
+    total_cases = parse_total_cases(statement)
     cases_count = parse_cases_count(get_html_cases_count(statement))
     age_group = parse_age_group(get_html_age_group(statement))
     med_attn = parse_med_attn(get_html_med_attn(statement))
@@ -144,6 +155,7 @@ def extract_covid_data(prid: int) -> Dict[str, Any]:
     cities[PASADENA] = cases_count[PASADENA]
 
     output_dict = {DATE: str(date),
+                   CASES: total_cases,
                    HOSPITALIZATIONS: med_attn[HOSPITAL_ENTRY],
                    DEATHS: med_attn[DEATH_ENTRY],
                    AGE_GROUP: age_group,
@@ -153,7 +165,10 @@ def extract_covid_data(prid: int) -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
-    sun = extract_covid_data(COVID_STAT_PR['2020-03-22'])
-    mon = extract_covid_data(COVID_STAT_PR['2020-03-23'])
+    # sun = extract_covid_data(COVID_STAT_PR['2020-03-22'])
+    # mon = extract_covid_data(COVID_STAT_PR['2020-03-23'])
     tues = extract_covid_data(COVID_STAT_PR['2020-03-24'])
     # wed = extract_covid_data(COVID_STAT_PR['2020-03-25'])
+
+    wed_statement = get_statement(fetch_press_release(COVID_STAT_PR['2020-03-25']))
+    wed_count = parse_total_cases(wed_statement)
