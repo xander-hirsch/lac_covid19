@@ -58,7 +58,7 @@ def get_html_med_attn(pr_statement: bs4.Tag) -> bs4.Tag:
             return bold_tag.next_sibling.next_sibling
 
 
-def get_html_place(pr_statement: bs4.Tag) -> bs4.Tag:
+def get_html_cities(pr_statement: bs4.Tag) -> bs4.Tag:
     for bold_tag in pr_statement.find_all('b'):
         if HEADER_CITIES.match(bold_tag.get_text(strip=True)) is not None:
             return bold_tag.next_sibling.next_sibling
@@ -102,7 +102,7 @@ def parse_med_attn(med_attn: bs4.Tag) -> Dict[str, int]:
     return attn_dict
 
 
-def parse_place(place: bs4.Tag) -> Dict[str, int]:
+def parse_cities(place: bs4.Tag) -> Dict[str, int]:
     place_dict = {}
     while place.find('li') is not None:
         place = place.find('li')
@@ -114,7 +114,7 @@ def parse_place(place: bs4.Tag) -> Dict[str, int]:
 
 
 if __name__ == "__main__":
-    today = fetch_press_release(2280)
+    today = fetch_press_release(2277)
     statement = get_statement(today)
     date = get_date(today)
 
@@ -127,5 +127,5 @@ if __name__ == "__main__":
     html_med_attn = get_html_med_attn(statement)
     med_attn = parse_med_attn(html_med_attn)
 
-    html_place = get_html_place(statement)
-    place = parse_place(html_place)
+    html_place = get_html_cities(statement)
+    place = parse_cities(html_place)
