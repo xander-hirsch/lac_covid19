@@ -8,12 +8,12 @@ import requests
 
 LAC_DPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='
 
-COVID_STAT_PR = {'2020-03-22': 2277,
-                 '2020-03-23': 2279,
-                 '2020-03-24': 2280,
-                 '2020-03-25': 2282,
-                 '2020-03-26': 2284,
-                 '2020-03-27': 2285}
+COVID_STAT_PR = (2277,  # Sun, March 22
+                 2279,  # Mon, March 23
+                 2280,  # Tues, March 24
+                 2282,  # Wed, March 25
+                 2284,  # Thurs, March 26
+                 2285)  # Fri, March 26
 
 IMMEDIATE_RELEASE = re.compile('^For Immediate Release:$')
 STATEMENT_START = re.compile('^LOS ANGELES –')
@@ -182,7 +182,7 @@ def parse_cities(place: bs4.Tag, distinction=False) -> Dict[str, int]:
     return place_dict
 
 
-def extract_covid_data(prid: int) -> Dict[str, Any]:
+def extract_single_day(prid: int) -> Dict[str, Any]:
     DATE = 'date'
     CASES = 'cases'
     HOSPITALIZATIONS = 'hospitalizations'
@@ -231,10 +231,19 @@ def extract_covid_data(prid: int) -> Dict[str, Any]:
     return output_dict
 
 
+def extract_all_days(many_prid: Tuple) -> Dict[dt.date, Dict[str, Any]]:
+    days_list = []
+    for prid in many_prid:
+        days_list += [extract_single_day(prid)]
+    days_list.sort(key=(lambda x: x['date']))
+
+    days_dict = {}
+    for day in days_list:
+        current_date = day.pop('date')
+        days_dict[current_date] = day
+
+    return days_dict
+
+
 if __name__ == "__main__":
-    # sun = extract_covid_data(COVID_STAT_PR['2020-03-22'])
-    mon = extract_covid_data(COVID_STAT_PR['2020-03-23'])
-    tues = extract_covid_data(COVID_STAT_PR['2020-03-24'])
-    wed = extract_covid_data(COVID_STAT_PR['2020-03-25'])
-    thurs = extract_covid_data(COVID_STAT_PR['2020-03-26'])
-    fri = extract_covid_data(COVID_STAT_PR['2020-03-27'])
+    days = extract_all_days(COVID_STAT_PR)
