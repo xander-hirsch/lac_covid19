@@ -12,7 +12,8 @@ COVID_STAT_PR = {'2020-03-22': 2277,
                  '2020-03-23': 2279,
                  '2020-03-24': 2280,
                  '2020-03-25': 2282,
-                 '2020-03-26': 2284}
+                 '2020-03-26': 2284,
+                 '2020-03-27': 2285}
 
 IMMEDIATE_RELEASE = re.compile('^For Immediate Release:$')
 STATEMENT_START = re.compile('^LOS ANGELES –')
@@ -26,6 +27,7 @@ HEADER_CITIES = re.compile('^CITY / COMMUNITY')
 
 AGE_RANGE = re.compile('\d+ to \d+')
 UNDER_INVESTIGATION = re.compile('^-  Under Investigation')
+NO_COUNT = re.compile('--')
 
 WHOLE_NUMBER = re.compile('\d+')
 
@@ -153,8 +155,9 @@ def parse_cities(place: bs4.Tag) -> Dict[str, int]:
         entry = place.contents[0].strip()
         if (len(entry) > 0) and (UNDER_INVESTIGATION.match(entry) is None):
             entry_split = entry.split()
-            city_name = ' '.join(entry_split[:-1]).rstrip('*')
-            place_dict[city_name] = int(entry_split[-1])
+            if not NO_COUNT.match(entry_split[-1]):
+                city_name = ' '.join(entry_split[:-1]).rstrip('*')
+                place_dict[city_name] = int(entry_split[-1])
     return place_dict
 
 
@@ -204,8 +207,9 @@ def extract_covid_data(prid: int) -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
-    sun = extract_covid_data(COVID_STAT_PR['2020-03-22'])
+    # sun = extract_covid_data(COVID_STAT_PR['2020-03-22'])
     mon = extract_covid_data(COVID_STAT_PR['2020-03-23'])
     tues = extract_covid_data(COVID_STAT_PR['2020-03-24'])
     wed = extract_covid_data(COVID_STAT_PR['2020-03-25'])
     thurs = extract_covid_data(COVID_STAT_PR['2020-03-26'])
+    fri = extract_covid_data(COVID_STAT_PR['2020-03-27'])
