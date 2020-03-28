@@ -26,10 +26,19 @@ HEADER_HOSPITAL = re.compile('^Hospitalization')
 HEADER_CITIES = re.compile('^CITY / COMMUNITY')
 
 AGE_RANGE = re.compile('\d+ to \d+')
-UNDER_INVESTIGATION = re.compile('^-  Under Investigation')
+UNDER_INVESTIGATION = re.compile('Under Investigation')
 NO_COUNT = re.compile('--')
 
 WHOLE_NUMBER = re.compile('\d+')
+WHOLE_NUMBER_END = re.compile('\d+$')
+
+AREA_CITY = re.compile('(?<=City of ) *[A-Za-z ]+')
+AREA_LA = re.compile('(?<=Los Angeles - )[A-Za-z ]+')
+AREA_UNINCORPORATED = re.compile('(?<=Unincorporated - )[A-Za-z/\(\) ]+')
+
+CITY = 'city'
+LOS_ANGELES = 'los angeles'
+UNINCORPORATED = 'unincorporated'
 
 
 def tag_contents(b_tag: bs4.Tag) -> str:
@@ -148,16 +157,28 @@ def parse_hospital(hospital: bs4.Tag) -> Dict[str, int]:
     return hospital_dict
 
 
-def parse_cities(place: bs4.Tag) -> Dict[str, int]:
-    place_dict = {}
+def parse_cities(place: bs4.Tag, distinction=False) -> Dict[str, int]:
+    place_dict = {CITY: {}, LOS_ANGELES: {}, UNINCORPORATED: {}}
     while place.find('li') is not None:
         place = place.find('li')
         entry = place.contents[0].strip()
-        if (len(entry) > 0) and (UNDER_INVESTIGATION.match(entry) is None):
+        if (len(entry) > 0) and (UNDER_INVESTIGATION.search(entry) is None):
             entry_split = entry.split()
+            place_name = ' '.join(entry_split[:-1]).strip().rstrip('*')
             if not NO_COUNT.match(entry_split[-1]):
-                city_name = ' '.join(entry_split[:-1]).rstrip('*')
-                place_dict[city_name] = int(entry_split[-1])
+                place_count = int(entry_split[-1])
+                if distinction:
+                    city_match = AREA_CITY.search(place_name)
+                    la_match = AREA_LA.search(place_name)
+                    unincorporated_match = AREA_UNINCORPORATED.search(place_name)
+                    if city_match:
+                        place_dict[CITY][city_match.group(0)] = place_count
+                    elif la_match:
+                        place_dict[LOS_ANGELES][la_match.group(0)] = place_count
+                    elif unincorporated_match:
+                        place_dict[UNINCORPORATED][unincorporated_match.group(0)] = place_count
+                else:
+                    place_dict[CITY][place_name] = place_count
     return place_dict
 
 
@@ -167,7 +188,7 @@ def extract_covid_data(prid: int) -> Dict[str, Any]:
     HOSPITALIZATIONS = 'hospitalizations'
     DEATHS = 'deaths'
     AGE_GROUP = 'age group'
-    CITY_COMMUNITY = 'cities and communities'
+    LOCATION = 'location'
 
     LONG_BEACH = 'Long Beach'
     PASADENA = 'Pasadena'
@@ -192,16 +213,20 @@ def extract_covid_data(prid: int) -> Dict[str, Any]:
         hospital = parse_hospital(get_html_hospital(statement))
         deaths = parse_deaths(statement)
 
-    cities = parse_cities(get_html_cities(statement))
-    cities[LONG_BEACH] = cases_count[LONG_BEACH]
-    cities[PASADENA] = cases_count[PASADENA]
+    if dt.date(2020, 3, 27) <= date:
+        cities = parse_cities(get_html_cities(statement), True)
+    else:
+        cities = parse_cities(get_html_cities(statement), False)
+
+    cities[CITY][LONG_BEACH] = cases_count[LONG_BEACH]
+    cities[CITY][PASADENA] = cases_count[PASADENA]
 
     output_dict = {DATE: date,
                    CASES: total_cases,
                    HOSPITALIZATIONS: hospital,
                    DEATHS: deaths,
                    AGE_GROUP: age_group,
-                   CITY_COMMUNITY: cities}
+                   LOCATION: cities}
 
     return output_dict
 
