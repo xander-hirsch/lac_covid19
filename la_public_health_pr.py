@@ -13,7 +13,8 @@ COVID_STAT_PR = (2277,  # Sun, March 22
                  2280,  # Tues, March 24
                  2282,  # Wed, March 25
                  2284,  # Thurs, March 26
-                 2285)  # Fri, March 26
+                 2285,  # Fri, March 27
+                 2287)  # Sat, March 28
 
 IMMEDIATE_RELEASE = re.compile('^For Immediate Release:$')
 STATEMENT_START = re.compile('^LOS ANGELES –')
