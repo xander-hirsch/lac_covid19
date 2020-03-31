@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/home/xander/.local/share/virtualenvs/gla-covid-19-JbQey1Oz/bin/python",
+    "python.pythonPath": "C:\\Users\\amhir\\.virtualenvs\\gla-covid-19-WajapodM\\Scripts\\python.exe",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
