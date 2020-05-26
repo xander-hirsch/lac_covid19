@@ -9,10 +9,13 @@ import gla_covid_19.lacph_const as lacph_const
 
 
 def tag_contents(b_tag: bs4.Tag) -> str:
+    """Extracts text content from Beautiful Soup Tag and strips whitespace."""
     return b_tag.get_text(strip=True)
 
 
-def fetch_press_release(prid: int):
+def fetch_press_release(year: int, month: int, day: int):
+    """Fetches the HTML page with the press release for the given date."""
+    prid = lacph_const.DAILY_STATS_PR[(year, month, day)]
     r = requests.get(lacph_const.LACPH_PR_URL_BASE + str(prid))
     if r.status_code == 200:
         return bs4.BeautifulSoup(r.text, 'html.parser')
@@ -20,6 +23,7 @@ def fetch_press_release(prid: int):
 
 
 def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
+    """Finds the date from the HTML press release."""
     for bold_tag in pr_html.find_all('b'):
         if lacph_const.IMMEDIATE_RELEASE.match(tag_contents(bold_tag)):
             date_str = bold_tag.next_sibling.next_sibling.strip()
@@ -27,42 +31,66 @@ def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
 
 
 def get_statement(pr_html: bs4.BeautifulSoup) -> bs4.Tag:
+    """Pulls out the statement content from the entrire HTML page."""
     for td_tag in pr_html.find_all('td'):
         if lacph_const.STATEMENT_START.match(tag_contents(td_tag)):
             return td_tag
 
 
 def get_html_cases_count(pr_statement: bs4.Tag) -> bs4.Tag:
+    """Isolates the element with cases count information."""
     for bold_tag in pr_statement.find_all('b'):
         if lacph_const.HEADER_CASES_COUNT.match(tag_contents(bold_tag)):
             return bold_tag.parent.find('ul')
 
 
 def get_html_age_group(pr_statement: bs4.Tag) -> bs4.Tag:
+    """Isolates the element with age group information."""
     for bold_tag in pr_statement.find_all('b'):
         if lacph_const.HEADER_AGE_GROUP.match(tag_contents(bold_tag)):
             return bold_tag.next_sibling.next_sibling
 
 
 def get_html_med_attn(pr_statement: bs4.Tag) -> bs4.Tag:
+    """Isolates the element with hospitalizations and deaths.
+
+    These two statistics are combined in earlier press releases. See the
+    functions get_html_hospital and get_html_deaths for parsing in later
+    releases.
+    """
+
     for bold_tag in pr_statement.find_all('b'):
         if lacph_const.HEADER_MED_ATTN.match(tag_contents(bold_tag)):
             return bold_tag.next_sibling.next_sibling
 
 
 def get_html_hospital(pr_statement: bs4.Tag) -> bs4.Tag:
+    """Isolates the element with hospitalization information."""
     for bold_tag in pr_statement.find_all('b'):
         if lacph_const.HEADER_HOSPITAL.match(tag_contents(bold_tag)):
             return bold_tag.next_sibling.next_sibling
 
 
 def get_html_cities(pr_statement: bs4.Tag) -> bs4.Tag:
+    """Isolates the element with per location breakdown of COVID-19 cases."""
     for bold_tag in pr_statement.find_all('b'):
         if lacph_const.HEADER_CITIES.match(tag_contents(bold_tag)):
             return bold_tag.next_sibling.next_sibling
 
 
 def parse_total_cases(pr_statement: bs4.Tag) -> int:
+    """Returns the total COVID-19 cases in Los Angeles County,
+    including Long Beach and Pasadena.
+
+    SAMPLE:
+    Laboratory Confirmed Cases -- 44988 Total Cases*
+
+        Los Angeles County (excl. LB and Pas) -- 42604
+        Long Beach -- 1553
+        Pasadena -- 831
+    RETURNS: 44988
+    """
+
     for bold_tag in pr_statement.find_all('b'):
         content = tag_contents(bold_tag)
         if lacph_const.HEADER_CASES_COUNT.match(content):
@@ -70,6 +98,23 @@ def parse_total_cases(pr_statement: bs4.Tag) -> int:
 
 
 def parse_cases_count(case_count: bs4.Tag) -> Dict[str, int]:
+    """Returns the COVID-19 cases count in Los Angeles broken down by public
+    health departments for Los Angeles, Long Beach, and Pasadena
+
+    SAMPLE:
+    Laboratory Confirmed Cases -- 44988 Total Cases*
+
+        Los Angeles County (excl. LB and Pas) -- 42604
+        Long Beach -- 1553
+        Pasadena -- 831
+    RETURNS:
+    {
+        "Los Angeles County (excl. LB and Pas)": 42604,
+        "Long Beach": 1553,
+        "Pasadena": 831
+    }
+    """
+
     case_dict = {}
     while case_count.find('li') is not None:
         case_count = case_count.find('li')
@@ -80,7 +125,17 @@ def parse_cases_count(case_count: bs4.Tag) -> Dict[str, int]:
 
 
 def _interpret_age_range(desc: str) -> Tuple[int, Union[int, float]]:
-    if lacph_const.AGE_RANGE.match(desc) is None:
+    """Helper function to convert an age range textual description to a
+    tuple with integer values.
+
+    SAMPLE: "18 to 40"
+    RETURNS: (18, 40)
+
+    SAMPLE: "over 65"
+    RETURNS (65, inf)
+    """
+
+    if lacph_const.AGE_RANGE.match(desc) is None:  # Checks for "over 65"
         lower_bound = int(desc.split()[-1])
         return (lower_bound, inf)
     desc_split = desc.split()
@@ -88,6 +143,24 @@ def _interpret_age_range(desc: str) -> Tuple[int, Union[int, float]]:
 
 
 def parse_age_group(age_group: bs4.Tag) -> Dict[Tuple[int, int], int]:
+    """Returns the age breakdown of COVID-19 cases in Los Angeles County.
+
+    SAMPLE:
+    Age Group (Los Angeles County Cases Only-excl LB and Pas)
+        0 to 17 -- 1795
+        18 to 40 --15155
+        41 to 65 --17106
+        over 65 --8376
+        Under Investigation --172
+    RETURNS:
+    {
+        (0, 17): 1795,
+        (18, 40): 15155
+        (41, 65): 17106
+        (66, inf): 8376
+    }
+    """
+
     age_dict = {}
     while age_group.find('li') is not None:
         age_group = age_group.find('li')
@@ -98,6 +171,20 @@ def parse_age_group(age_group: bs4.Tag) -> Dict[Tuple[int, int], int]:
 
 
 def parse_med_attn(med_attn: bs4.Tag) -> Dict[str, int]:
+    """Returns the medical status of COVID-19 patients including
+    hospitalization and death.
+
+    SAMPLE:
+    Hospitalization and Death (among Investigated Cases)
+        Hospitalized (Ever) 84
+        Deaths 5
+    RETURNS:
+    {
+        "Hospitalized (Ever)": 84,
+        "Deaths": 5
+    }
+    """
+
     attn_dict = {}
     while med_attn.find('li') is not None:
         med_attn = med_attn.find('li')
@@ -108,6 +195,16 @@ def parse_med_attn(med_attn: bs4.Tag) -> Dict[str, int]:
 
 
 def parse_deaths(pr_statement: bs4.Tag) -> int:
+    """Returns the total COVID-19 deaths from Los Angeles County
+    
+    SAMPLE:
+    Deaths 2104
+        Los Angeles County (excl. LB and Pas) 1953
+        Long Beach 71
+        Pasadena 80
+    RETURNS: 2104
+    """
+
     for bold_tag in pr_statement.find_all('b'):
         content = tag_contents(bold_tag)
         if lacph_const.HEADER_DEATHS.match(content):
@@ -115,6 +212,17 @@ def parse_deaths(pr_statement: bs4.Tag) -> int:
 
 
 def parse_hospital(hospital: bs4.Tag) -> Dict[str, int]:
+    """Returns the hospitalizations due to COVID-19
+
+    SAMPLE:
+    Hospitalization
+        Hospitalized (Ever) 6177
+    RETURNS:
+    {
+        "Hospitalized (Ever)": 6177
+    }
+    """
+
     hospital_dict = {}
     while hospital.find('li') is not None:
         hospital = hospital.find('li')
@@ -125,6 +233,35 @@ def parse_hospital(hospital: bs4.Tag) -> Dict[str, int]:
 
 
 def parse_cities(place: bs4.Tag, distinction=False) -> Dict[str, int]:
+    """Returns the per city count of COVID-19. The three distinct groups are:
+    incorporated cities, City of Los Angeles neighborhoods, and unicorporated
+    areas.
+
+    SAMPLE:
+    CITY / COMMUNITY (Rate**)
+        City of Burbank 371 ( 346.15 )
+        City of Claremont 35 ( 95.93 )
+        Los Angeles - Sherman Oaks 216 ( 247.55 )
+        Los Angeles - Van Nuys 629 ( 674.94 )
+        Unincorporated - Lake Los Angeles 28 ( 215.48 )
+        Unincorporated - Palmdale 4 ( 475.06 )
+    RETURNS:
+    {
+        "City": {
+            "Burbank": (371, 346.15),
+            "Claremont": (35, 95.93)
+        },
+        "Los Angeles": {
+            "Sherman Oaks": (216, 247.55),
+            "Van Nuys": (629, 674.94)
+        },
+        "Unincorporated": {
+            "Lake Los Angeles": (23, 215.48),
+            "Palmdale": (4, 475.06)
+        }
+    }
+    """
+
     place_dict = {lacph_const.CITY: {}, lacph_const.LOS_ANGELES: {}, lacph_const.UNINCORPORATED: {}}
     while place.find('li') is not None:
         place = place.find('li')
