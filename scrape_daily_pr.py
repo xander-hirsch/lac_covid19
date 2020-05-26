@@ -37,6 +37,10 @@ def get_statement(pr_html: bs4.BeautifulSoup) -> bs4.Tag:
             return td_tag
 
 
+# GET_HTML helper functions find the HTML elements releated to a certain piece
+# of data in the press release HTML file.
+
+
 def get_html_cases_count(pr_statement: bs4.Tag) -> bs4.Tag:
     """Isolates the element with cases count information."""
     for bold_tag in pr_statement.find_all('b'):
@@ -78,7 +82,11 @@ def get_html_cities(pr_statement: bs4.Tag) -> bs4.Tag:
             return bold_tag.next_sibling.next_sibling
 
 
-def parse_total_cases(pr_statement: bs4.Tag) -> int:
+# PARSE helper functions utilize textual patterns to extract the desired
+# information once a HTML segment has been identified.
+
+
+def parse_cases_total(pr_statement: bs4.Tag) -> int:
     """Returns the total COVID-19 cases in Los Angeles County,
     including Long Beach and Pasadena.
 
@@ -97,7 +105,7 @@ def parse_total_cases(pr_statement: bs4.Tag) -> int:
             return int(lacph_const.WHOLE_NUMBER.search(content).group(0))
 
 
-def parse_cases_count(case_count: bs4.Tag) -> Dict[str, int]:
+def parse_cases_dept(case_count: bs4.Tag) -> Dict[str, int]:
     """Returns the COVID-19 cases count in Los Angeles broken down by public
     health departments for Los Angeles, Long Beach, and Pasadena
 
@@ -196,7 +204,7 @@ def parse_med_attn(med_attn: bs4.Tag) -> Dict[str, int]:
 
 def parse_deaths(pr_statement: bs4.Tag) -> int:
     """Returns the total COVID-19 deaths from Los Angeles County
-    
+
     SAMPLE:
     Deaths 2104
         Los Angeles County (excl. LB and Pas) 1953
@@ -286,6 +294,23 @@ def parse_cities(place: bs4.Tag, distinction=False) -> Dict[str, int]:
     return place_dict
 
 
+# EXTRACT functions take the press release HTML code and pull out the targeted
+# information. The pattern of the press releases slowly change, so this takes
+# the guesswork away from figuring out what pattern was in use at the time
+# of announcement.
+
+
+def extract_cases(pr_statement: bs4.Tag) -> Dict[str, int]:
+    """Extracts the COVID-19 cases count, both by health department and total.
+    See parse_cases_total and parse_cases_dept.
+    """
+
+    total = parse_cases_total(pr_statement)
+    cases_breakdown = parse_cases_dept(get_html_cases_count(pr_statement))
+    cases_breakdown["total"] = total
+    return cases_breakdown
+
+
 def extract_single_day(prid: int) -> Dict[str, Any]:
     DATE = 'date'
     CASES = 'cases'
@@ -304,8 +329,8 @@ def extract_single_day(prid: int) -> Dict[str, Any]:
     date = get_date(press_release)
     statement = get_statement(press_release)
 
-    total_cases = parse_total_cases(statement)
-    cases_count = parse_cases_count(get_html_cases_count(statement))
+    total_cases = parse_cases_total(statement)
+    cases_count = parse_cases_dept(get_html_cases_count(statement))
     age_group = parse_age_group(get_html_age_group(statement))
 
     hospital = deaths = None
