@@ -6,6 +6,8 @@ LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/
 IMMEDIATE_RELEASE = re.compile('^For Immediate Release:$')
 STATEMENT_START = re.compile('^LOS ANGELES –')
 
+DATE = re.compile('[A-Z][a-z]+ [0-9]{1,2}, 20[0-9]{2}')
+
 HEADER_CASES_COUNT = re.compile('^Laboratory Confirmed Cases')
 HEADER_AGE_GROUP = re.compile('^Age Group')
 HEADER_MED_ATTN = re.compile('^Hospitalization and Death')

@@ -24,10 +24,8 @@ def fetch_press_release(year: int, month: int, day: int):
 
 def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
     """Finds the date from the HTML press release."""
-    for bold_tag in pr_html.find_all('b'):
-        if lacph_const.IMMEDIATE_RELEASE.match(tag_contents(bold_tag)):
-            date_str = bold_tag.next_sibling.next_sibling.strip()
-            return dt.datetime.strptime(date_str, '%B %d, %Y').date()
+    date_text = lacph_const.DATE.search(pr_html.get_text()).group()
+    return dt.datetime.strptime(date_text, '%B %d, %Y').date()
 
 
 def get_statement(pr_html: bs4.BeautifulSoup) -> bs4.Tag:
@@ -375,4 +373,4 @@ def extract_all_days(many_prid: Tuple) -> Dict[dt.date, Dict[str, Any]]:
 
 
 if __name__ == "__main__":
-    pass
+    sun = fetch_press_release(2020, 5, 24)
