@@ -11,7 +11,7 @@ DATE = re.compile('[A-Z][a-z]+ [0-9]{1,2}, 20[0-9]{2}')
 HEADER_CASES_COUNT = re.compile('^Laboratory Confirmed Cases')
 HEADER_AGE_GROUP = re.compile('^Age Group')
 HEADER_MED_ATTN = re.compile('^Hospitalization and Death')
-HEADER_DEATHS = re.compile('^Deaths')
+HEADER_DEATHS = re.compile('^Deaths [0-9]+')
 HEADER_HOSPITAL = re.compile('^Hospitalization')
 HEADER_CITIES = re.compile('^CITY / COMMUNITY')
 
@@ -22,9 +22,9 @@ NO_COUNT = re.compile('--')
 WHOLE_NUMBER = re.compile('\d+')
 WHOLE_NUMBER_END = re.compile('\d+$')
 
-AREA_CITY = re.compile('(?<=City of ) *[A-Za-z ]+')
-AREA_LA = re.compile('(?<=Los Angeles - )[A-Za-z ]+')
-AREA_UNINCORPORATED = re.compile('(?<=Unincorporated - )[A-Za-z/\(\) ]+')
+AREA_CITY = re.compile('City of +([A-Z][A-Za-z ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)')
+AREA_LA = re.compile('Los Angeles - +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)')
+AREA_UNINCORPORATED = re.compile('Unincorporated - +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)')
 
 CITY = 'city'
 LOS_ANGELES = 'los angeles'
@@ -40,6 +40,9 @@ START_LOC_RATE = date(2020, 3, 30)
 START_GENDER = date(2020, 4, 4)
 START_RACE_CASES = date(2020, 4, 7)
 START_RACE_DEATHS = date(2020, 4, 7)
+
+# Formating Changes
+START_FORMAT_HOSPITAL_NESTED = date(2020, 4, 4)
 
 DAILY_STATS_PR = {(2020, 3, 30): 2289,
                   (2020, 3, 31): 2290,
@@ -97,5 +100,6 @@ DAILY_STATS_PR = {(2020, 3, 30): 2289,
                   (2020, 5, 22): 2393,
                   (2020, 5, 23): 2394,
                   (2020, 5, 24): 2399,
-                  (2020, 5, 25): 2400
+                  (2020, 5, 25): 2400,
+                  (2020, 5, 26): 2403
 }

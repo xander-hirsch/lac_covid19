@@ -1,5 +1,6 @@
 import datetime as dt
 from math import inf
+import re
 from typing import Any, Dict, Tuple, Union
 
 import bs4
@@ -18,7 +19,9 @@ def fetch_press_release(year: int, month: int, day: int):
     prid = lacph_const.DAILY_STATS_PR[(year, month, day)]
     r = requests.get(lacph_const.LACPH_PR_URL_BASE + str(prid))
     if r.status_code == 200:
-        return bs4.BeautifulSoup(r.text, 'html.parser')
+        # return bs4.BeautifulSoup(r.text, 'html.parser')
+        entire = bs4.BeautifulSoup(r.text, 'html.parser')
+        return entire.find('div', class_='container p-4')
     raise requests.exceptions.ConnectionError('Cannot retrieve the PR statement')
 
 
@@ -39,18 +42,23 @@ def get_statement(pr_html: bs4.BeautifulSoup) -> bs4.Tag:
 # of data in the press release HTML file.
 
 
+def get_html_general(pr_statement: bs4.Tag, header_pattern: re.Pattern, nested: bool) -> bs4.Tag:
+    for bold_tag in pr_statement.find_all('b'):
+        if header_pattern.match(tag_contents(bold_tag)):
+            if nested:
+                return bold_tag.parent.find('ul')
+            else:
+                return bold_tag.next_sibling.next_sibling
+
+
 def get_html_cases_count(pr_statement: bs4.Tag) -> bs4.Tag:
     """Isolates the element with cases count information."""
-    for bold_tag in pr_statement.find_all('b'):
-        if lacph_const.HEADER_CASES_COUNT.match(tag_contents(bold_tag)):
-            return bold_tag.parent.find('ul')
+    return get_html_general(pr_statement, lacph_const.HEADER_CASES_COUNT, True)
 
 
 def get_html_age_group(pr_statement: bs4.Tag) -> bs4.Tag:
     """Isolates the element with age group information."""
-    for bold_tag in pr_statement.find_all('b'):
-        if lacph_const.HEADER_AGE_GROUP.match(tag_contents(bold_tag)):
-            return bold_tag.next_sibling.next_sibling
+    return get_html_general(pr_statement, lacph_const.HEADER_AGE_GROUP, True)
 
 
 def get_html_med_attn(pr_statement: bs4.Tag) -> bs4.Tag:
@@ -68,16 +76,18 @@ def get_html_med_attn(pr_statement: bs4.Tag) -> bs4.Tag:
 
 def get_html_hospital(pr_statement: bs4.Tag) -> bs4.Tag:
     """Isolates the element with hospitalization information."""
-    for bold_tag in pr_statement.find_all('b'):
-        if lacph_const.HEADER_HOSPITAL.match(tag_contents(bold_tag)):
-            return bold_tag.next_sibling.next_sibling
+    nested = True if get_date(pr_statement) >= lacph_const.START_FORMAT_HOSPITAL_NESTED else False
+    return get_html_general(pr_statement, lacph_const.HEADER_HOSPITAL, nested)
+
+
+def get_html_deaths(pr_statement: bs4.Tag) -> bs4.Tag:
+    """Isolates the element with death tallies."""
+    return get_html_general(pr_statement, lacph_const.HEADER_DEATHS, True)
 
 
 def get_html_cities(pr_statement: bs4.Tag) -> bs4.Tag:
     """Isolates the element with per location breakdown of COVID-19 cases."""
-    for bold_tag in pr_statement.find_all('b'):
-        if lacph_const.HEADER_CITIES.match(tag_contents(bold_tag)):
-            return bold_tag.next_sibling.next_sibling
+    return get_html_general(pr_statement, lacph_const.HEADER_CITIES, True)
 
 
 # PARSE helper functions utilize textual patterns to extract the desired
@@ -373,4 +383,11 @@ def extract_all_days(many_prid: Tuple) -> Dict[dt.date, Dict[str, Any]]:
 
 
 if __name__ == "__main__":
-    sun = fetch_press_release(2020, 5, 24)
+    april_1 = fetch_press_release(2020, 4, 1)
+    april_15 = fetch_press_release(2020, 4, 15)
+    april_30 = fetch_press_release(2020, 4, 30)
+    may_14 = fetch_press_release(2020, 5, 14)
+    may_25 = fetch_press_release(2020, 5, 25)
+
+    april_1_loc = get_html_cities(april_1)
+    may_25_loc = get_html_cities(may_25)
