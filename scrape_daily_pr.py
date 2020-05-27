@@ -108,9 +108,9 @@ def parse_cases_total(pr_statement: bs4.Tag) -> int:
     """
 
     for bold_tag in pr_statement.find_all('b'):
-        content = tag_contents(bold_tag)
-        if lacph_const.HEADER_CASES_COUNT.match(content):
-            return int(lacph_const.WHOLE_NUMBER.search(content).group(0))
+        match_attempt = lacph_const.HEADER_CASES_COUNT.search(tag_contents(bold_tag))
+        if match_attempt:
+            return int(match_attempt.group(1).replace(',', ''))
 
 
 def parse_cases_dept(case_count: bs4.Tag) -> Dict[str, int]:
@@ -222,9 +222,9 @@ def parse_deaths(pr_statement: bs4.Tag) -> int:
     """
 
     for bold_tag in pr_statement.find_all('b'):
-        content = tag_contents(bold_tag)
-        if lacph_const.HEADER_DEATHS.match(content):
-            return int(lacph_const.WHOLE_NUMBER.search(content).group(0))
+        match_attempt = lacph_const.HEADER_DEATHS.search(tag_contents(bold_tag))
+        if match_attempt:
+            return int(match_attempt.group(1).replace(',', ''))
 
 
 def parse_hospital(hospital: bs4.Tag) -> Dict[str, int]:

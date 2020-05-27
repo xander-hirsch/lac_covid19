@@ -8,10 +8,10 @@ STATEMENT_START = re.compile('^LOS ANGELES –')
 
 DATE = re.compile('[A-Z][a-z]+ [0-9]{1,2}, 20[0-9]{2}')
 
-HEADER_CASES_COUNT = re.compile('^Laboratory Confirmed Cases')
+HEADER_CASES_COUNT = re.compile('Laboratory Confirmed Cases -- ([\d,]+) Total Cases')
 HEADER_AGE_GROUP = re.compile('^Age Group')
 HEADER_MED_ATTN = re.compile('^Hospitalization and Death')
-HEADER_DEATHS = re.compile('^Deaths [0-9]+')
+HEADER_DEATHS = re.compile('Deaths\s+([\d,]+)')
 HEADER_HOSPITAL = re.compile('^Hospitalization')
 HEADER_CITIES = re.compile('^CITY / COMMUNITY')
 
