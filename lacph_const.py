@@ -13,7 +13,7 @@ HEADER_AGE_GROUP = re.compile('^Age Group')
 HEADER_MED_ATTN = re.compile('^Hospitalization and Death')
 HEADER_DEATHS = re.compile('Deaths\s+([\d,]+)')
 HEADER_HOSPITAL = re.compile('^Hospitalization')
-HEADER_CITIES = re.compile('^CITY / COMMUNITY')
+HEADER_CITIES = re.compile('CITY / COMMUNITY\** \(Rate\**\)')
 
 AGE_RANGE = re.compile('\d+ to \d+')
 UNDER_INVESTIGATION = re.compile('Under Investigation')

@@ -9,6 +9,20 @@ import requests
 import gla_covid_19.lacph_const as lacph_const
 
 
+def str_to_int(string: str) -> int:
+    """Converts a string to an integer.
+    Safely removes commas included for human readability.
+    """
+    int(string.replace(',', ''))
+
+
+def str_to_float(string: str) -> float:
+    """Converts a string to an float.
+    Safely removes commas included for human readability.
+    """
+    float(string.replace(',', ''))
+
+
 def tag_contents(b_tag: bs4.Tag) -> str:
     """Extracts text content from Beautiful Soup Tag and strips whitespace."""
     return b_tag.get_text(strip=True)
@@ -19,7 +33,6 @@ def fetch_press_release(year: int, month: int, day: int):
     prid = lacph_const.DAILY_STATS_PR[(year, month, day)]
     r = requests.get(lacph_const.LACPH_PR_URL_BASE + str(prid))
     if r.status_code == 200:
-        # return bs4.BeautifulSoup(r.text, 'html.parser')
         entire = bs4.BeautifulSoup(r.text, 'html.parser')
         return entire.find('div', class_='container p-4')
     raise requests.exceptions.ConnectionError('Cannot retrieve the PR statement')
@@ -29,13 +42,6 @@ def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
     """Finds the date from the HTML press release."""
     date_text = lacph_const.DATE.search(pr_html.get_text()).group()
     return dt.datetime.strptime(date_text, '%B %d, %Y').date()
-
-
-def get_statement(pr_html: bs4.BeautifulSoup) -> bs4.Tag:
-    """Pulls out the statement content from the entrire HTML page."""
-    for td_tag in pr_html.find_all('td'):
-        if lacph_const.STATEMENT_START.match(tag_contents(td_tag)):
-            return td_tag
 
 
 # GET_HTML helper functions find the HTML elements releated to a certain piece
@@ -319,7 +325,7 @@ def extract_cases(pr_statement: bs4.Tag) -> Dict[str, int]:
     return cases_breakdown
 
 
-def extract_single_day(prid: int) -> Dict[str, Any]:
+def extract_single_day(year: int, month: int, day: int) -> Dict[str, Any]:
     DATE = 'date'
     CASES = 'cases'
     HOSPITALIZATIONS = 'hospitalizations'
@@ -333,9 +339,8 @@ def extract_single_day(prid: int) -> Dict[str, Any]:
     HOSPITAL_ENTRY = 'Hospitalized (Ever)'
     DEATH_ENTRY = 'Deaths'
 
-    press_release = fetch_press_release(prid)
-    date = get_date(press_release)
-    statement = get_statement(press_release)
+    statement = fetch_press_release(year, month, day)
+    date = get_date(statement)
 
     total_cases = parse_cases_total(statement)
     cases_count = parse_cases_dept(get_html_cases_count(statement))
