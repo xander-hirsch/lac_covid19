@@ -9,6 +9,44 @@ import requests
 import gla_covid_19.lacph_const as lacph_const
 
 
+LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='
+
+DATE = re.compile('[A-Z][a-z]+ \d{2}, 20\d{2}')
+
+BY_DEPT_COUNT = re.compile('(Los Angeles County \(excl\. LB and Pas\)|Long Beach|Pasadena)[\s-]*(\d+)')
+
+HEADER_CASES_COUNT = re.compile('Laboratory Confirmed Cases -- ([\d,]+) Total Cases')
+HEADER_AGE_GROUP = re.compile('^Age Group')
+HEADER_DEATHS = re.compile('Deaths\s+([\d,]+)')
+HEADER_HOSPITAL = re.compile('^Hospitalization')
+HEADER_CITIES = re.compile('CITY / COMMUNITY\** \(Rate\**\)')
+
+AGE_RANGE = re.compile('(\d+) to (\d+)\s*--\s*(\d+)')
+AGE_OVER = re.compile('over (\d+)\s*--\s*(\d+)')
+UNDER_INVESTIGATION = re.compile('Under Investigation')
+NO_COUNT = re.compile('--')
+
+HOSPITAL_STATUS = re.compile('([A-Z][A-Za-z() ]+[)a-z])\s*(\d+)')
+
+AREA_CITY = re.compile('City of +([A-Z][A-Za-z ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)')
+AREA_LA = re.compile('Los Angeles - +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)')
+AREA_UNINCORPORATED = re.compile('Unincorporated - +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)')
+
+TOTAL = 'Total'
+CITY = 'City'
+LOS_ANGELES = 'Los Angeles'
+UNINCORPORATED = 'Unincorporated'
+
+START_GENDER = dt.date(2020, 4, 4)
+START_RACE_CASES = dt.date(2020, 4, 7)
+START_RACE_DEATHS = dt.date(2020, 4, 7)
+
+# Formating Changes
+START_FORMAT_HOSPITAL_NESTED = dt.date(2020, 4, 4)
+FORMAT_AGE_NESTED = dt.date(2020, 4, 4)
+FORMAT_OMIT_LOCATION_HEADER = dt.date(2020, 5, 26)
+
+
 def str_to_int(string: str) -> int:
     """Converts a string to an integer.
     Safely removes commas included for human readability.
@@ -31,7 +69,7 @@ def tag_contents(b_tag: bs4.Tag) -> str:
 def fetch_press_release(year: int, month: int, day: int):
     """Fetches the HTML page with the press release for the given date."""
     prid = lacph_const.DAILY_STATS_PR[(year, month, day)]
-    r = requests.get(lacph_const.LACPH_PR_URL_BASE + str(prid))
+    r = requests.get(LACPH_PR_URL_BASE + str(prid))
     if r.status_code == 200:
         entire = bs4.BeautifulSoup(r.text, 'html.parser')
         return entire.find('div', class_='container p-4')
@@ -40,7 +78,7 @@ def fetch_press_release(year: int, month: int, day: int):
 
 def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
     """Finds the date from the HTML press release."""
-    date_text = lacph_const.DATE.search(pr_html.get_text()).group()
+    date_text = DATE.search(pr_html.get_text()).group()
     return dt.datetime.strptime(date_text, '%B %d, %Y').date()
 
 
@@ -59,19 +97,19 @@ def get_html_general(pr_statement: bs4.Tag, header_pattern: re.Pattern, nested: 
 
 def get_html_age_group(pr_statement: bs4.Tag) -> str:
     """Isolates the element with age group information."""
-    nested = True if get_date(pr_statement) >= lacph_const.FORMAT_AGE_NESTED else False
-    return get_html_general(pr_statement, lacph_const.HEADER_AGE_GROUP, nested)
+    nested = True if get_date(pr_statement) >= FORMAT_AGE_NESTED else False
+    return get_html_general(pr_statement, HEADER_AGE_GROUP, nested)
 
 
 def get_html_hospital(pr_statement: bs4.Tag) -> str:
     """Isolates the element with hospitalization information."""
-    nested = True if get_date(pr_statement) >= lacph_const.START_FORMAT_HOSPITAL_NESTED else False
-    return get_html_general(pr_statement, lacph_const.HEADER_HOSPITAL, nested)
+    nested = True if get_date(pr_statement) >= START_FORMAT_HOSPITAL_NESTED else False
+    return get_html_general(pr_statement, HEADER_HOSPITAL, nested)
 
 
 def get_html_locations(pr_statement: bs4.Tag) -> str:
     """Isolates the element with per location breakdown of COVID-19 cases."""
-    return get_html_general(pr_statement, lacph_const.HEADER_CITIES, True)
+    return get_html_general(pr_statement, HEADER_CITIES, True)
 
 
 def parse_total_by_dept_general(pr_statement: bs4.Tag, header_pattern: re.Pattern) -> Dict[str, int]:
@@ -89,10 +127,10 @@ def parse_total_by_dept_general(pr_statement: bs4.Tag, header_pattern: re.Patter
         if match_attempt:
             total = str_to_int(match_attempt.group(1))
             break
-    result[lacph_const.TOTAL] = total
+    result[TOTAL] = total
 
     by_dept_raw = get_html_general(pr_statement, header_pattern, True)
-    by_dept_extracted = lacph_const.BY_DEPT_COUNT.findall(by_dept_raw)
+    by_dept_extracted = BY_DEPT_COUNT.findall(by_dept_raw)
     for dept in by_dept_extracted:
         result[dept[0]] = str_to_int(dept[-1])
 
@@ -118,7 +156,7 @@ def parse_cases(pr_statement: bs4.Tag) -> Dict[str, int]:
     }
     """
 
-    return parse_total_by_dept_general(pr_statement, lacph_const.HEADER_CASES_COUNT)
+    return parse_total_by_dept_general(pr_statement, HEADER_CASES_COUNT)
 
 
 def parse_deaths(pr_statement: bs4.Tag) -> Dict[str, int]:
@@ -137,7 +175,7 @@ def parse_deaths(pr_statement: bs4.Tag) -> Dict[str, int]:
         "Pasadena": 80
     }
     """
-    return parse_total_by_dept_general(pr_statement, lacph_const.HEADER_DEATHS)
+    return parse_total_by_dept_general(pr_statement, HEADER_DEATHS)
 
 
 def parse_age_cases(pr_statement: bs4.Tag) -> Dict[Tuple[int, int], int]:
@@ -162,12 +200,12 @@ def parse_age_cases(pr_statement: bs4.Tag) -> Dict[Tuple[int, int], int]:
     result = {}
     age_data_raw = get_html_age_group(pr_statement)
 
-    range_extracted = lacph_const.AGE_RANGE.findall(age_data_raw)
+    range_extracted = AGE_RANGE.findall(age_data_raw)
     for age_range in range_extracted:
         ages = (int(age_range[0]), int(age_range[1]))
         result[ages] = str_to_int(age_range[-1])
 
-    upper_extracted = lacph_const.AGE_OVER.search(age_data_raw)
+    upper_extracted = AGE_OVER.search(age_data_raw)
     upper_age = int(upper_extracted.group(1)) + 1
     result[(upper_age, inf)] = str_to_int(upper_extracted.group(2))
 
@@ -189,7 +227,7 @@ def parse_hospital(pr_statement: bs4.Tag) -> Dict[str, int]:
     result = {}
     hospital_raw = get_html_hospital(pr_statement)
 
-    hospital_extracted = lacph_const.HOSPITAL_STATUS.findall(hospital_raw)
+    hospital_extracted = HOSPITAL_STATUS.findall(hospital_raw)
     for status in hospital_extracted:
         result[status[0]] = str_to_int(status[-1])
 
@@ -200,10 +238,10 @@ def _loc_interp_helper(loc_regex_match: Tuple[str, str, str]) -> Tuple[str, int,
     loc_name = loc_regex_match[0]
 
     loc_cases_str = loc_regex_match[1]
-    loc_cases = None if lacph_const.NO_COUNT.match(loc_cases_str) else str_to_int(loc_cases_str)
+    loc_cases = None if NO_COUNT.match(loc_cases_str) else str_to_int(loc_cases_str)
 
     loc_rate_str = loc_regex_match[2]
-    loc_rate = None if lacph_const.NO_COUNT.match(loc_rate_str) else str_to_float(loc_rate_str)
+    loc_rate = None if NO_COUNT.match(loc_rate_str) else str_to_float(loc_rate_str)
 
     return (loc_name, loc_cases, loc_rate)
 
@@ -238,26 +276,29 @@ def parse_locations(pr_statement: bs4.Tag) -> Dict[str, int]:
     }
     """
 
-    result = {lacph_const.CITY: {},
-              lacph_const.LOS_ANGELES: {},
-              lacph_const.UNINCORPORATED: {}
+    result = {CITY: {},
+              LOS_ANGELES: {},
+              UNINCORPORATED: {}
     }
-    locations_raw = get_html_locations(pr_statement)
+    locations_raw = (get_html_locations(pr_statement)
+                     if get_date(pr_statement) < FORMAT_OMIT_LOCATION_HEADER
+                     else pr_statement.get_text()
+    )
 
-    cities_extracted = lacph_const.AREA_CITY.findall(locations_raw)
+    cities_extracted = AREA_CITY.findall(locations_raw)
     for city in cities_extracted:
         name, cases, rate = _loc_interp_helper(city)
-        result[lacph_const.CITY][name] = (cases, rate)
+        result[CITY][name] = (cases, rate)
 
-    la_extracted = lacph_const.AREA_LA.findall(locations_raw)
+    la_extracted = AREA_LA.findall(locations_raw)
     for district in la_extracted:
         name, cases, rate = _loc_interp_helper(district)
-        result[lacph_const.LOS_ANGELES][name] = (cases, rate)
+        result[LOS_ANGELES][name] = (cases, rate)
 
-    unincorporated_extracted = lacph_const.AREA_UNINCORPORATED.findall(locations_raw)
+    unincorporated_extracted = AREA_UNINCORPORATED.findall(locations_raw)
     for area in unincorporated_extracted:
         name, cases, rate = _loc_interp_helper(area)
-        result[lacph_const.UNINCORPORATED][name] = (cases, rate)
+        result[UNINCORPORATED][name] = (cases, rate)
 
     return result
 
