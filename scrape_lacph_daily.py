@@ -41,6 +41,12 @@ START_GENDER = dt.date(2020, 4, 4)
 START_RACE_CASES = dt.date(2020, 4, 7)
 START_RACE_DEATHS = dt.date(2020, 4, 7)
 
+REGEX_GENDER_HEADER = re.compile('Gender \(Los Angeles County Cases Only-excl LB and Pas\)')
+REGEX_GENDER_ENTRY = re.compile('(Male|Female|Other)\s+(\d+)')
+
+REGEX_RACE_CASES_HEADER = re.compile('Race/Ethnicity \(Los Angeles County Cases Only-excl LB and Pas\)')
+REGEX_RACE_ENTRY = re.compile('([A-Z][A-Za-z/ ]+[a-z])\s+(\d+)')
+
 # Formating Changes
 START_FORMAT_HOSPITAL_NESTED = dt.date(2020, 4, 4)
 FORMAT_AGE_NESTED = dt.date(2020, 4, 4)
@@ -109,7 +115,18 @@ def get_html_hospital(pr_statement: bs4.Tag) -> str:
 
 def get_html_locations(pr_statement: bs4.Tag) -> str:
     """Isolates the element with per location breakdown of COVID-19 cases."""
-    return get_html_general(pr_statement, HEADER_CITIES, True)
+    return (get_html_general(pr_statement, HEADER_CITIES, True)
+            if get_date(pr_statement) < FORMAT_OMIT_LOCATION_HEADER
+            else pr_statement.get_text()
+    )
+
+
+def get_html_gender(pr_statement: bs4.Tag) -> str:
+    return get_html_general(pr_statement, REGEX_GENDER_HEADER, True)
+
+
+def get_html_race_cases(pr_statement: bs4.Tag) -> str:
+    return get_html_general(pr_statement, REGEX_RACE_CASES_HEADER, True)
 
 
 def parse_total_by_dept_general(pr_statement: bs4.Tag, header_pattern: re.Pattern) -> Dict[str, int]:
@@ -234,6 +251,29 @@ def parse_hospital(pr_statement: bs4.Tag) -> Dict[str, int]:
     return result
 
 
+def parse_gender(pr_statement: bs4.Tag) -> Dict[str, int]:
+    result = {}
+    gender_raw = get_html_gender(pr_statement)
+
+    gender_extracted = REGEX_GENDER_ENTRY.findall(gender_raw)
+    for gender in gender_extracted:
+        result[gender[0]] = int(gender[-1])
+
+    return result
+
+
+def parse_race_cases(pr_statement: bs4.Tag) -> Dict[str, int]:
+    result = {}
+    race_raw = get_html_race_cases(pr_statement)
+
+    race_extracted = REGEX_RACE_ENTRY.findall(race_raw)
+    for race in race_extracted:
+        if not UNDER_INVESTIGATION.match(race[0]):
+            result[race[0]] = int(race[-1])
+
+    return result
+
+
 def _loc_interp_helper(loc_regex_match: Tuple[str, str, str]) -> Tuple[str, int, float]:
     loc_name = loc_regex_match[0]
 
@@ -280,10 +320,7 @@ def parse_locations(pr_statement: bs4.Tag) -> Dict[str, int]:
               LOS_ANGELES: {},
               UNINCORPORATED: {}
     }
-    locations_raw = (get_html_locations(pr_statement)
-                     if get_date(pr_statement) < FORMAT_OMIT_LOCATION_HEADER
-                     else pr_statement.get_text()
-    )
+    locations_raw = get_html_locations(pr_statement)
 
     cities_extracted = AREA_CITY.findall(locations_raw)
     for city in cities_extracted:
