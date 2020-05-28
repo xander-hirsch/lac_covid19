@@ -3,46 +3,39 @@ import re
 
 LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='
 
-IMMEDIATE_RELEASE = re.compile('^For Immediate Release:$')
-STATEMENT_START = re.compile('^LOS ANGELES –')
+DATE = re.compile('[A-Z][a-z]+ \d{2}, 20\d{2}')
 
-DATE = re.compile('[A-Z][a-z]+ [0-9]{1,2}, 20[0-9]{2}')
+BY_DEPT_COUNT = re.compile('(Los Angeles County \(excl\. LB and Pas\)|Long Beach|Pasadena)[\s-]*(\d+)')
 
 HEADER_CASES_COUNT = re.compile('Laboratory Confirmed Cases -- ([\d,]+) Total Cases')
 HEADER_AGE_GROUP = re.compile('^Age Group')
-HEADER_MED_ATTN = re.compile('^Hospitalization and Death')
 HEADER_DEATHS = re.compile('Deaths\s+([\d,]+)')
 HEADER_HOSPITAL = re.compile('^Hospitalization')
 HEADER_CITIES = re.compile('CITY / COMMUNITY\** \(Rate\**\)')
 
-AGE_RANGE = re.compile('\d+ to \d+')
+AGE_RANGE = re.compile('(\d+) to (\d+)\s*--\s*(\d+)')
+AGE_OVER = re.compile('over (\d+)\s*--\s*(\d+)')
 UNDER_INVESTIGATION = re.compile('Under Investigation')
 NO_COUNT = re.compile('--')
 
-WHOLE_NUMBER = re.compile('\d+')
-WHOLE_NUMBER_END = re.compile('\d+$')
+HOSPITAL_STATUS = re.compile('([A-Z][A-Za-z() ]+[)a-z])\s*(\d+)')
 
 AREA_CITY = re.compile('City of +([A-Z][A-Za-z ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)')
 AREA_LA = re.compile('Los Angeles - +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)')
 AREA_UNINCORPORATED = re.compile('Unincorporated - +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)')
 
-CITY = 'city'
-LOS_ANGELES = 'los angeles'
-UNINCORPORATED = 'unincorporated'
+TOTAL = 'Total'
+CITY = 'City'
+LOS_ANGELES = 'Los Angeles'
+UNINCORPORATED = 'Unincorporated'
 
-START_CASES_COUNT = date(2020, 3, 16)
-START_AGE_GROUP = date(2020, 3, 22)
-START_HOSPITAL_DEATH_COMBINED = date(2020, 3, 22)
-START_DEATHS = date(2020, 3, 25)
-START_HOSPITAL = date(2020, 3, 25)
-START_LOCATION = date(2020, 3, 27)
-START_LOC_RATE = date(2020, 3, 30)
 START_GENDER = date(2020, 4, 4)
 START_RACE_CASES = date(2020, 4, 7)
 START_RACE_DEATHS = date(2020, 4, 7)
 
 # Formating Changes
 START_FORMAT_HOSPITAL_NESTED = date(2020, 4, 4)
+FORMAT_AGE_NESTED = date(2020, 4, 4)
 
 DAILY_STATS_PR = {(2020, 3, 30): 2289,
                   (2020, 3, 31): 2290,
