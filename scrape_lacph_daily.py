@@ -44,7 +44,8 @@ START_RACE_DEATHS = dt.date(2020, 4, 7)
 REGEX_GENDER_HEADER = re.compile('Gender \(Los Angeles County Cases Only-excl LB and Pas\)')
 REGEX_GENDER_ENTRY = re.compile('(Male|Female|Other)\s+(\d+)')
 
-REGEX_RACE_CASES_HEADER = re.compile('Race/Ethnicity \(Los Angeles County Cases Only-excl LB and Pas\)')
+REGEX_RACE_CASES_HEADER = re.compile('^Race/Ethnicity \(Los Angeles County Cases Only-excl LB and Pas\)')
+HEADER_RACE_DEATH = re.compile('Deaths Race/Ethnicity \(Los Angeles County Cases Only-excl LB and Pas\)')
 REGEX_RACE_ENTRY = re.compile('([A-Z][A-Za-z/ ]+[a-z])\s+(\d+)')
 
 # Formating Changes
@@ -129,6 +130,42 @@ def get_html_race_cases(pr_statement: bs4.Tag) -> str:
     return get_html_general(pr_statement, REGEX_RACE_CASES_HEADER, True)
 
 
+def get_html_race_deaths(pr_statement: bs4.Tag) -> str:
+    return get_html_general(pr_statement, HEADER_RACE_DEATH, True)
+
+
+def parse_list_entries_general(pr_text: str, entry_regex: re.Pattern) -> Dict[str, int]:
+    """Helper function for the common pattern where text entries are
+    followed by a count statistic.
+
+    Args:
+        pr_text: Raw text with the data to be extracted. This is intended to
+            be taken from a BeautifulSoup Tag's get_text() function.
+        entry_regex: The regular expression which defines the entry and its
+            corresponding statistic. The function needs the passed regex to
+            utilize groups to identify the entry and data. The first group
+            being the textual representation of the group and the last group
+            being the statistic, represented by a numeral.
+
+    Returns:
+        A dictionary whose keys are the text entries and values are the
+        corresponding statistic, converted to an integer. Note the key
+        "Under Investigation" will be omitted as it is not useful for the
+        purposes of this project.
+    """
+
+    result = {}
+    entries_extracted = entry_regex.findall(pr_text)
+
+    for entry in entries_extracted:
+        name = entry[0]
+        stat = entry[-1]
+        if not UNDER_INVESTIGATION.match(name):
+            result[name] = int(stat)
+
+    return result
+
+
 def parse_total_by_dept_general(pr_statement: bs4.Tag, header_pattern: re.Pattern) -> Dict[str, int]:
     """Generalized parsing when a header has a total statistic followed by a
     per public health department breakdown.
@@ -136,7 +173,8 @@ def parse_total_by_dept_general(pr_statement: bs4.Tag, header_pattern: re.Patter
     See parse_cases and parse_deaths for examples.
     """
 
-    result = {}
+    by_dept_raw = get_html_general(pr_statement, header_pattern, True)
+    result = parse_list_entries_general(by_dept_raw, BY_DEPT_COUNT)
 
     total = None
     for bold_tag in pr_statement.find_all('b'):
@@ -145,11 +183,6 @@ def parse_total_by_dept_general(pr_statement: bs4.Tag, header_pattern: re.Patter
             total = str_to_int(match_attempt.group(1))
             break
     result[TOTAL] = total
-
-    by_dept_raw = get_html_general(pr_statement, header_pattern, True)
-    by_dept_extracted = BY_DEPT_COUNT.findall(by_dept_raw)
-    for dept in by_dept_extracted:
-        result[dept[0]] = str_to_int(dept[-1])
 
     return result
 
@@ -241,37 +274,23 @@ def parse_hospital(pr_statement: bs4.Tag) -> Dict[str, int]:
     }
     """
 
-    result = {}
-    hospital_raw = get_html_hospital(pr_statement)
-
-    hospital_extracted = HOSPITAL_STATUS.findall(hospital_raw)
-    for status in hospital_extracted:
-        result[status[0]] = str_to_int(status[-1])
-
-    return result
+    return parse_list_entries_general(get_html_hospital(pr_statement),
+                                      HOSPITAL_STATUS)
 
 
 def parse_gender(pr_statement: bs4.Tag) -> Dict[str, int]:
-    result = {}
-    gender_raw = get_html_gender(pr_statement)
-
-    gender_extracted = REGEX_GENDER_ENTRY.findall(gender_raw)
-    for gender in gender_extracted:
-        result[gender[0]] = int(gender[-1])
-
-    return result
+    return parse_list_entries_general(get_html_gender(pr_statement),
+                                      REGEX_GENDER_ENTRY)
 
 
 def parse_race_cases(pr_statement: bs4.Tag) -> Dict[str, int]:
-    result = {}
-    race_raw = get_html_race_cases(pr_statement)
+    return parse_list_entries_general(get_html_race_cases(pr_statement),
+                                      REGEX_RACE_ENTRY)
 
-    race_extracted = REGEX_RACE_ENTRY.findall(race_raw)
-    for race in race_extracted:
-        if not UNDER_INVESTIGATION.match(race[0]):
-            result[race[0]] = int(race[-1])
 
-    return result
+def parse_race_deaths(pr_statement: bs4.Tag) -> Dict[str, int]:
+    return parse_list_entries_general(get_html_race_deaths(pr_statement),
+                                      REGEX_RACE_ENTRY)
 
 
 def _loc_interp_helper(loc_regex_match: Tuple[str, str, str]) -> Tuple[str, int, float]:
