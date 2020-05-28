@@ -33,9 +33,19 @@ AREA_LA = re.compile('Los Angeles - +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\
 AREA_UNINCORPORATED = re.compile('Unincorporated - +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)')
 
 TOTAL = 'Total'
+CITY_OF = 'City of'
 CITY = 'City'
 LOS_ANGELES = 'Los Angeles'
 UNINCORPORATED = 'Unincorporated'
+CITY_PREFIX = 'City of'
+LA_PREFIX = 'Los Angeles -'
+UNINC_PREFIX = 'Unincorporated -'
+AREA_NAME = {
+    CITY_PREFIX: CITY_PREFIX.rstrip(' of'),
+    LA_PREFIX: LA_PREFIX.rstrip(' -'),
+    UNINC_PREFIX: UNINC_PREFIX.rstrip(' -')
+}
+RE_LOC = re.compile('({}|{}|{}) +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)'.format(CITY_PREFIX, LA_PREFIX, UNINC_PREFIX))
 
 START_GENDER = dt.date(2020, 4, 4)
 START_RACE_CASES = dt.date(2020, 4, 7)
@@ -289,16 +299,14 @@ def parse_race_deaths(pr_statement: bs4.Tag) -> Dict[str, int]:
                                       REGEX_RACE_ENTRY)
 
 
-def _loc_interp_helper(loc_regex_match: Tuple[str, str, str]) -> Tuple[str, int, float]:
-    loc_name = loc_regex_match[0]
+def _loc_interp_helper(loc_regex_match: Tuple[str, str, str, str]) -> Tuple[str, str, int, float]:
+    loc_type = AREA_NAME[loc_regex_match[0]]
+    name = loc_regex_match[1]
 
-    loc_cases_str = loc_regex_match[1]
-    loc_cases = None if NO_COUNT.match(loc_cases_str) else str_to_num(loc_cases_str)
+    cases = str_to_num(loc_regex_match[2])
+    rate = str_to_num(loc_regex_match[3])
 
-    loc_rate_str = loc_regex_match[2]
-    loc_rate = None if NO_COUNT.match(loc_rate_str) else str_to_num(loc_rate_str)
-
-    return (loc_name, loc_cases, loc_rate)
+    return (loc_type, name, cases, rate)
 
 
 def parse_locations(pr_statement: bs4.Tag) -> Dict[str, int]:
@@ -331,26 +339,16 @@ def parse_locations(pr_statement: bs4.Tag) -> Dict[str, int]:
     }
     """
 
-    result = {CITY: {},
-              LOS_ANGELES: {},
-              UNINCORPORATED: {}
+    result = {AREA_NAME[CITY_PREFIX]: {},
+              AREA_NAME[LA_PREFIX]: {},
+              AREA_NAME[UNINC_PREFIX]: {}
     }
     locations_raw = get_html_locations(pr_statement)
 
-    cities_extracted = AREA_CITY.findall(locations_raw)
-    for city in cities_extracted:
-        name, cases, rate = _loc_interp_helper(city)
-        result[CITY][name] = (cases, rate)
-
-    la_extracted = AREA_LA.findall(locations_raw)
-    for district in la_extracted:
-        name, cases, rate = _loc_interp_helper(district)
-        result[LOS_ANGELES][name] = (cases, rate)
-
-    unincorporated_extracted = AREA_UNINCORPORATED.findall(locations_raw)
-    for area in unincorporated_extracted:
-        name, cases, rate = _loc_interp_helper(area)
-        result[UNINCORPORATED][name] = (cases, rate)
+    loc_extracted = RE_LOC.findall(locations_raw)
+    for location in loc_extracted:
+        loc_type, name, cases, rate = _loc_interp_helper(location)
+        result[loc_type][name] = (cases, rate)
 
     return result
 
