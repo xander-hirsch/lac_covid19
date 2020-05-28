@@ -1,7 +1,7 @@
 import datetime as dt
 from math import inf
 import re
-from typing import Any, Dict, Tuple
+from typing import Any, Dict, Tuple, Union
 
 import bs4
 import requests
@@ -54,23 +54,19 @@ FORMAT_AGE_NESTED = dt.date(2020, 4, 4)
 FORMAT_OMIT_LOCATION_HEADER = dt.date(2020, 5, 26)
 
 
-def str_to_int(string: str) -> int:
-    """Converts a string to an integer.
-    Safely removes commas included for human readability.
-    """
-    return int(string.replace(',', ''))
+def str_to_num(number: str) -> Union[int, float]:
+    number = number.replace(',', '')
+    val = None
 
+    try:
+        val = int(number)
+    except ValueError:
+        try:
+            val = float(number)
+        except ValueError:
+            pass
 
-def str_to_float(string: str) -> float:
-    """Converts a string to an float.
-    Safely removes commas included for human readability.
-    """
-    return float(string.replace(',', ''))
-
-
-def tag_contents(b_tag: bs4.Tag) -> str:
-    """Extracts text content from Beautiful Soup Tag and strips whitespace."""
-    return b_tag.get_text(strip=True)
+    return val
 
 
 def fetch_press_release(year: int, month: int, day: int):
@@ -95,7 +91,7 @@ def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
 
 def get_html_general(pr_statement: bs4.Tag, header_pattern: re.Pattern, nested: bool) -> str:
     for bold_tag in pr_statement.find_all('b'):
-        if header_pattern.match(tag_contents(bold_tag)):
+        if header_pattern.match(bold_tag.get_text(strip=True)):
             if nested:
                 return bold_tag.parent.find('ul').get_text()
             else:
@@ -178,9 +174,9 @@ def parse_total_by_dept_general(pr_statement: bs4.Tag, header_pattern: re.Patter
 
     total = None
     for bold_tag in pr_statement.find_all('b'):
-        match_attempt = header_pattern.search(tag_contents(bold_tag))
+        match_attempt = header_pattern.search(bold_tag.get_text(strip=True))
         if match_attempt:
-            total = str_to_int(match_attempt.group(1))
+            total = str_to_num(match_attempt.group(1))
             break
     result[TOTAL] = total
 
@@ -253,11 +249,11 @@ def parse_age_cases(pr_statement: bs4.Tag) -> Dict[Tuple[int, int], int]:
     range_extracted = AGE_RANGE.findall(age_data_raw)
     for age_range in range_extracted:
         ages = (int(age_range[0]), int(age_range[1]))
-        result[ages] = str_to_int(age_range[-1])
+        result[ages] = str_to_num(age_range[-1])
 
     upper_extracted = AGE_OVER.search(age_data_raw)
     upper_age = int(upper_extracted.group(1)) + 1
-    result[(upper_age, inf)] = str_to_int(upper_extracted.group(2))
+    result[(upper_age, inf)] = str_to_num(upper_extracted.group(2))
 
     return result
 
@@ -297,10 +293,10 @@ def _loc_interp_helper(loc_regex_match: Tuple[str, str, str]) -> Tuple[str, int,
     loc_name = loc_regex_match[0]
 
     loc_cases_str = loc_regex_match[1]
-    loc_cases = None if NO_COUNT.match(loc_cases_str) else str_to_int(loc_cases_str)
+    loc_cases = None if NO_COUNT.match(loc_cases_str) else str_to_num(loc_cases_str)
 
     loc_rate_str = loc_regex_match[2]
-    loc_rate = None if NO_COUNT.match(loc_rate_str) else str_to_float(loc_rate_str)
+    loc_rate = None if NO_COUNT.match(loc_rate_str) else str_to_num(loc_rate_str)
 
     return (loc_name, loc_cases, loc_rate)
 
