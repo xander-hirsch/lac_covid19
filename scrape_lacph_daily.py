@@ -1,7 +1,8 @@
 import datetime as dt
+import json
 import os
 import re
-from typing import Any, Dict, Iterable, List, Tuple, Union
+from typing import Any, Dict, List, Tuple, Union
 
 import bs4
 import requests
@@ -129,6 +130,31 @@ def cache_read_resp(pr_date: dt.date) -> str:
         cache_write_resp(resp, pr_date)
 
     return resp
+
+
+def cache_write_parsed(daily_stats: Dict[str, Any]) -> None:
+    stats_date = dt.date.fromisoformat(daily_stats[DATE])
+    parsed_dir = os.path.join(os.path.dirname(__file__), DIR_PARSED_PR)
+
+    if not os.path.isdir(parsed_dir):
+        os.mkdir(parsed_dir)
+
+    assert type(daily_stats) is dict
+    with open(local_json_name(stats_date, LACPH), 'w') as f:
+        json.dump(daily_stats, f)
+
+
+def cache_read_parsed(pr_date: dt.date) -> Dict[str, Any]:
+    parsed = None
+    local_file = local_json_name(pr_date, LACPH)
+
+    if os.path.isfile(local_file):
+        with open(local_file, 'r') as f:
+            parsed = json.load(f)
+    else:
+        parsed = query_single_date(date_to_tuple(pr_date), False)
+
+    return parsed
 
 
 def request_pr_online(pr_date: dt.date) -> str:
@@ -462,26 +488,16 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
 
 def query_single_date(requested_date: Tuple[int, int, int],
                       cached: bool = True) -> Dict[str, Any]:
-    cached = False
     result = None
 
     if cached:
-        # Read in JSON
-        pass
+        result = cache_read_parsed(dt.date(requested_date[0], requested_date[1],
+                                           requested_date[2]))
     else:
         result = parse_entire_day(fetch_press_release(requested_date))
+        cache_write_parsed(result)
 
     return result
-
-
-def query_many_dates(requested_dates: Iterable[Tuple[int, int, int]],
-                     cached: bool = True) -> List[Dict[str, Any]]:
-    parsed_daily_stats = []
-
-    for single_date in requested_dates:
-        parsed_daily_stats.append(query_single_date(single_date, True))
-
-    return parsed_daily_stats
 
 
 if __name__ == "__main__":
@@ -489,7 +505,7 @@ if __name__ == "__main__":
                   (2020, 4, 7),
                   (2020, 4, 16),
                   (2020, 4, 29),
-                  (2020, 5, 11),
+                  (2020, 5, 13),
                   (2020, 5, 18),
                   (2020, 5, 27)
     )
