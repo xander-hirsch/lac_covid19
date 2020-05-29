@@ -1,7 +1,7 @@
 import datetime as dt
 from math import inf
 import re
-from typing import Any, Dict, Tuple, Union
+from typing import Any, Dict, Iterable, List, Tuple, Union
 
 import bs4
 import requests
@@ -63,14 +63,36 @@ def str_to_num(number: str) -> Union[int, float]:
     return val
 
 
-def fetch_press_release(year: int, month: int, day: int):
-    """Fetches the HTML page with the press release for the given date."""
-    prid = lacph_const.DAILY_STATS_PR[(year, month, day)]
-    r = requests.get(LACPH_PR_URL_BASE + str(prid))
-    if r.status_code == 200:
-        entire = bs4.BeautifulSoup(r.text, 'html.parser')
-        return entire.find('div', class_='container p-4')
-    raise requests.exceptions.ConnectionError('Cannot retrieve the PR statement')
+def fetch_press_release(dates: Iterable[Tuple[int, int, int]], cached: bool = True) -> List[bs4.Tag]:
+    """Fetches the HTML of press releases for the given dates. The source can
+    come from cache or by fetching from the internet.
+
+    Args:
+        dates: An interable whose elements are three element tuples. Each
+            tuple contains integers of the form (year, month, day) representing
+            the desired press release.
+        cached: A flag which determines if the sourced from a local cache of
+            fetched press releases or requests the page from the deparment's
+            website. Any online requests will be cached regardless of flag.
+
+    Returns:
+        A list of BeautifulSoup tags containing the requested press releases.
+        The associated date can be retrived with the get_date function.
+    """
+    daily_pr = []
+
+    for date in dates:
+        year, month, day = date
+        prid = lacph_const.DAILY_STATS_PR[(year, month, day)]
+        r = requests.get(LACPH_PR_URL_BASE + str(prid))
+        if r.status_code == 200:
+            entire = bs4.BeautifulSoup(r.text, 'html.parser')
+            assert dt.date(year, month, day) == get_date(entire)
+            daily_pr.append(entire.find('div', class_='container p-4'))
+        else:
+            raise requests.exceptions.ConnectionError('Cannot retrieve the PR statement')
+
+    return daily_pr
 
 
 def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
@@ -369,9 +391,11 @@ def extract_all_days(many_prid: Tuple) -> Dict[dt.date, Dict[str, Any]]:
 
 
 if __name__ == "__main__":
-    pr_sample = [fetch_press_release(2020, 3, 30),
-                 fetch_press_release(2020, 4, 15),
-                 fetch_press_release(2020, 4, 28),
-                 fetch_press_release(2020, 5, 13),
-                 fetch_press_release(2020, 5, 26)
-    ]
+    test_dates = ((2020, 3, 30),
+                  (2020, 4, 15),
+                  (2020, 4, 28),
+                  (2020, 5, 13),
+                  (2020, 5, 26)
+    )
+
+    pr_sample = fetch_press_release(test_dates)
