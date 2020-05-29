@@ -1,5 +1,7 @@
 import datetime as dt
 from math import inf
+import os.path
+import pickle
 import re
 from typing import Any, Dict, Iterable, List, Tuple, Union
 
@@ -47,6 +49,8 @@ RE_LOC = re.compile('({}|{}|{}) +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(
 FORMAT_START_HOSPITAL_NESTED = dt.date(2020, 4, 4)
 FORMAT_START_AGE_NESTED = dt.date(2020, 4, 4)
 
+PR_CACHE = 'lacph_pr.pickle'
+
 
 def str_to_num(number: str) -> Union[int, float]:
     number = number.replace(',', '')
@@ -61,6 +65,16 @@ def str_to_num(number: str) -> Union[int, float]:
             pass
 
     return val
+
+
+def request_pr_online(date: Tuple[int, int, int]) -> str:
+    """Helper function to request the press release from the online source."""
+    prid = lacph_const.DAILY_STATS_PR[date]
+    r = requests.get(LACPH_PR_URL_BASE + str(prid))
+    if r.status_code == 200:
+        return r.text
+    else:
+        raise requests.exceptions.ConnectionError('Cannot retrieve the PR statement')
 
 
 def fetch_press_release(dates: Iterable[Tuple[int, int, int]], cached: bool = True) -> List[bs4.Tag]:
@@ -79,20 +93,41 @@ def fetch_press_release(dates: Iterable[Tuple[int, int, int]], cached: bool = Tr
         A list of BeautifulSoup tags containing the requested press releases.
         The associated date can be retrived with the get_date function.
     """
-    daily_pr = []
+
+    all_fetched_daily_pr = []
 
     for date in dates:
         year, month, day = date
-        prid = lacph_const.DAILY_STATS_PR[(year, month, day)]
-        r = requests.get(LACPH_PR_URL_BASE + str(prid))
-        if r.status_code == 200:
-            entire = bs4.BeautifulSoup(r.text, 'html.parser')
-            assert dt.date(year, month, day) == get_date(entire)
-            daily_pr.append(entire.find('div', class_='container p-4'))
-        else:
-            raise requests.exceptions.ConnectionError('Cannot retrieve the PR statement')
+        pr_html_text = ''
 
-    return daily_pr
+        if cached:
+            assert os.path.exists(PR_CACHE)
+            with open(PR_CACHE, 'rb') as f:
+                cache = pickle.load(f)
+                if date in cache:
+                    pr_html_text = cache[date]
+        else:
+            pr_html_text = request_pr_online(date)
+            # Update the cache with latest press release retrival
+            if os.path.exists(PR_CACHE):
+                with open(PR_CACHE, 'r+b') as f:
+                    cache = pickle.load(f)
+                    cache[date] = pr_html_text
+                    f.seek(0)
+                    pickle.dump(cache, f)
+            else:
+                with open(PR_CACHE, 'wb') as f:
+                    cache = {date: pr_html_text}
+                    pickle.dump(cache, f)
+
+        # Parse the HTTP response
+        entire = bs4.BeautifulSoup(pr_html_text, 'html.parser')
+        daily_pr = entire.find('div', class_='container p-4')
+        assert dt.date(year, month, day) == get_date(entire)
+
+        all_fetched_daily_pr.append(daily_pr)
+
+    return all_fetched_daily_pr
 
 
 def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
@@ -398,4 +433,4 @@ if __name__ == "__main__":
                   (2020, 5, 26)
     )
 
-    pr_sample = fetch_press_release(test_dates)
+    pr_sample = fetch_press_release(test_dates, True)
