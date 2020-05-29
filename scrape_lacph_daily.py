@@ -44,13 +44,8 @@ AREA_NAME = {
 }
 RE_LOC = re.compile('({}|{}|{}) +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)'.format(CITY_PREFIX, LA_PREFIX, UNINC_PREFIX))
 
-START_GENDER = dt.date(2020, 4, 4)
-START_RACE_CASE = dt.date(2020, 4, 7)
-START_RACE_DEATH = dt.date(2020, 4, 9)
-
 FORMAT_START_HOSPITAL_NESTED = dt.date(2020, 4, 4)
 FORMAT_START_AGE_NESTED = dt.date(2020, 4, 4)
-FORMAT_OMIT_LOCATION_HEADER = dt.date(2020, 5, 26)
 
 
 def str_to_num(number: str) -> Union[int, float]:
@@ -79,54 +74,50 @@ def fetch_press_release(year: int, month: int, day: int):
 
 
 def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
-    """Finds the date from the HTML press release."""
+    """Finds the date from the HTML press release. This makes an assumption
+    the first date in the press release is the date of release."""
     date_text = RE_DATE.search(pr_html.get_text()).group()
     return dt.datetime.strptime(date_text, '%B %d, %Y').date()
 
 
-# GET_HTML helper functions find the HTML elements releated to a certain piece
-# of data in the press release HTML file.
-
-
-def get_html_general(pr_statement: bs4.Tag, header_pattern: re.Pattern, nested: bool) -> str:
-    for bold_tag in pr_statement.find_all('b'):
+def get_html_general(daily_pr: bs4.Tag, header_pattern: re.Pattern, nested: bool) -> str:
+    for bold_tag in daily_pr.find_all('b'):
         if header_pattern.match(bold_tag.get_text(strip=True)):
             if nested:
                 return bold_tag.parent.find('ul').get_text()
             else:
                 return bold_tag.next_sibling.next_sibling.get_text()
+    else:
+        # Calling functions need some string returned, so return empty
+        return ''
 
 
-def get_html_age_group(pr_statement: bs4.Tag) -> str:
-    """Isolates the element with age group information."""
-    nested = True if get_date(pr_statement) >= FORMAT_START_AGE_NESTED else False
-    return get_html_general(pr_statement, HEADER_AGE_GROUP, nested)
+def get_html_age_group(daily_pr: bs4.Tag) -> str:
+    nested = True if get_date(daily_pr) >= FORMAT_START_AGE_NESTED else False
+    return get_html_general(daily_pr, HEADER_AGE_GROUP, nested)
 
 
-def get_html_hospital(pr_statement: bs4.Tag) -> str:
-    """Isolates the element with hospitalization information."""
-    nested = True if get_date(pr_statement) >= FORMAT_START_HOSPITAL_NESTED else False
-    return get_html_general(pr_statement, HEADER_HOSPITAL, nested)
+def get_html_hospital(daily_pr: bs4.Tag) -> str:
+    nested = True if get_date(daily_pr) >= FORMAT_START_HOSPITAL_NESTED else False
+    return get_html_general(daily_pr, HEADER_HOSPITAL, nested)
 
 
-def get_html_locations(pr_statement: bs4.Tag) -> str:
-    """Isolates the element with per location breakdown of COVID-19 cases."""
-    return (get_html_general(pr_statement, HEADER_LOC, True)
-            if get_date(pr_statement) < FORMAT_OMIT_LOCATION_HEADER
-            else pr_statement.get_text()
-    )
+def get_html_locations(daily_pr: bs4.Tag) -> str:
+    # The usage of location header is unpredictable, so just check against
+    # the entire daily press release.
+    return daily_pr.get_text()
 
 
-def get_html_gender(pr_statement: bs4.Tag) -> str:
-    return get_html_general(pr_statement, HEADER_GENDER, True)
+def get_html_gender(daily_pr: bs4.Tag) -> str:
+    return get_html_general(daily_pr, HEADER_GENDER, True)
 
 
-def get_html_race_cases(pr_statement: bs4.Tag) -> str:
-    return get_html_general(pr_statement, HEADER_RACE_CASE, True)
+def get_html_race_cases(daily_pr: bs4.Tag) -> str:
+    return get_html_general(daily_pr, HEADER_RACE_CASE, True)
 
 
-def get_html_race_deaths(pr_statement: bs4.Tag) -> str:
-    return get_html_general(pr_statement, HEADER_RACE_DEATH, True)
+def get_html_race_deaths(daily_pr: bs4.Tag) -> str:
+    return get_html_general(daily_pr, HEADER_RACE_DEATH, True)
 
 
 def parse_list_entries_general(pr_text: str, entry_regex: re.Pattern) -> Dict[str, int]:
@@ -156,23 +147,25 @@ def parse_list_entries_general(pr_text: str, entry_regex: re.Pattern) -> Dict[st
         name = entry[0]
         stat = entry[-1]
         if not RE_UNDER_INVESTIGATION.match(name):
-            result[name] = int(stat)
+            result[name] = str_to_num(stat)
 
     return result
 
 
-def parse_total_by_dept_general(pr_statement: bs4.Tag, header_pattern: re.Pattern) -> Dict[str, int]:
+def parse_total_by_dept_general(daily_pr: bs4.Tag, header_pattern: re.Pattern) -> Dict[str, int]:
     """Generalized parsing when a header has a total statistic followed by a
     per public health department breakdown.
 
     See parse_cases and parse_deaths for examples.
     """
 
-    by_dept_raw = get_html_general(pr_statement, header_pattern, True)
+    by_dept_raw = get_html_general(daily_pr, header_pattern, True)
+    # The per department breakdown statistics
     result = parse_list_entries_general(by_dept_raw, ENTRY_BY_DEPT)
 
+    # The cumultive count across departments
     total = None
-    for bold_tag in pr_statement.find_all('b'):
+    for bold_tag in daily_pr.find_all('b'):
         match_attempt = header_pattern.search(bold_tag.get_text(strip=True))
         if match_attempt:
             total = str_to_num(match_attempt.group(1))
@@ -182,7 +175,7 @@ def parse_total_by_dept_general(pr_statement: bs4.Tag, header_pattern: re.Patter
     return result
 
 
-def parse_cases(pr_statement: bs4.Tag) -> Dict[str, int]:
+def parse_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
     """Returns the total COVID-19 cases in Los Angeles County,
     including Long Beach and Pasadena.
 
@@ -201,10 +194,10 @@ def parse_cases(pr_statement: bs4.Tag) -> Dict[str, int]:
     }
     """
 
-    return parse_total_by_dept_general(pr_statement, HEADER_CASE_COUNT)
+    return parse_total_by_dept_general(daily_pr, HEADER_CASE_COUNT)
 
 
-def parse_deaths(pr_statement: bs4.Tag) -> Dict[str, int]:
+def parse_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
     """Returns the total COVID-19 deaths from Los Angeles County
 
     SAMPLE:
@@ -220,10 +213,10 @@ def parse_deaths(pr_statement: bs4.Tag) -> Dict[str, int]:
         "Pasadena": 80
     }
     """
-    return parse_total_by_dept_general(pr_statement, HEADER_DEATH)
+    return parse_total_by_dept_general(daily_pr, HEADER_DEATH)
 
 
-def parse_age_cases(pr_statement: bs4.Tag) -> Dict[Tuple[int, int], int]:
+def parse_age_cases(daily_pr: bs4.Tag) -> Dict[Tuple[int, int], int]:
     """Returns the age breakdown of COVID-19 cases in Los Angeles County.
 
     SAMPLE:
@@ -243,8 +236,10 @@ def parse_age_cases(pr_statement: bs4.Tag) -> Dict[Tuple[int, int], int]:
     """
 
     result = {}
-    age_data_raw = get_html_age_group(pr_statement)
+    age_data_raw = get_html_age_group(daily_pr)
 
+    # Similar to the general entries parsing, but has additional computation
+    # regarding age range interpretation
     range_extracted = RE_AGE_RANGE.findall(age_data_raw)
     for age_range in range_extracted:
         ages = (int(age_range[0]), int(age_range[1]))
@@ -257,7 +252,7 @@ def parse_age_cases(pr_statement: bs4.Tag) -> Dict[Tuple[int, int], int]:
     return result
 
 
-def parse_hospital(pr_statement: bs4.Tag) -> Dict[str, int]:
+def parse_hospital(daily_pr: bs4.Tag) -> Dict[str, int]:
     """Returns the hospitalizations due to COVID-19
 
     SAMPLE:
@@ -269,22 +264,21 @@ def parse_hospital(pr_statement: bs4.Tag) -> Dict[str, int]:
     }
     """
 
-    return parse_list_entries_general(get_html_hospital(pr_statement),
+    return parse_list_entries_general(get_html_hospital(daily_pr),
                                       ENTRY_HOSPITAL)
 
 
-def parse_gender(pr_statement: bs4.Tag) -> Dict[str, int]:
-    return parse_list_entries_general(get_html_gender(pr_statement),
-                                      ENTRY_GENDER)
+def parse_gender(daily_pr: bs4.Tag) -> Dict[str, int]:
+    return parse_list_entries_general(get_html_gender(daily_pr), ENTRY_GENDER)
 
 
-def parse_race_cases(pr_statement: bs4.Tag) -> Dict[str, int]:
-    return parse_list_entries_general(get_html_race_cases(pr_statement),
+def parse_race_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
+    return parse_list_entries_general(get_html_race_cases(daily_pr),
                                       ENTRY_RACE)
 
 
-def parse_race_deaths(pr_statement: bs4.Tag) -> Dict[str, int]:
-    return parse_list_entries_general(get_html_race_deaths(pr_statement),
+def parse_race_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
+    return parse_list_entries_general(get_html_race_deaths(daily_pr),
                                       ENTRY_RACE)
 
 
@@ -298,7 +292,7 @@ def _loc_interp_helper(loc_regex_match: Tuple[str, str, str, str]) -> Tuple[str,
     return (loc_type, name, cases, rate)
 
 
-def parse_locations(pr_statement: bs4.Tag) -> Dict[str, int]:
+def parse_locations(daily_pr: bs4.Tag) -> Dict[str, int]:
     """Returns the per city count of COVID-19. The three distinct groups are:
     incorporated cities, City of Los Angeles neighborhoods, and unicorporated
     areas.
@@ -332,7 +326,7 @@ def parse_locations(pr_statement: bs4.Tag) -> Dict[str, int]:
               AREA_NAME[LA_PREFIX]: {},
               AREA_NAME[UNINC_PREFIX]: {}
     }
-    locations_raw = get_html_locations(pr_statement)
+    locations_raw = get_html_locations(daily_pr)
 
     loc_extracted = RE_LOC.findall(locations_raw)
     for location in loc_extracted:
