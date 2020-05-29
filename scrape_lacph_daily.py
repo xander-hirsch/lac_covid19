@@ -73,6 +73,10 @@ def str_to_num(number: str) -> Union[int, float]:
     return val
 
 
+def date_to_tuple(date_: dt.date) -> Tuple[int, int, int]:
+    return (date_.year, date_.month, date_.day)
+
+
 def cache_write_resp(resp: str, pr_date: dt.date) -> None:
     cache_dir = os.path.join(os.path.dirname(__file__), DIR_RESP_CACHE)
     if not os.path.isdir(cache_dir):
@@ -99,7 +103,7 @@ def cache_read_resp(pr_date: dt.date) -> str:
 
 def request_pr_online(pr_date: dt.date) -> str:
     """Helper function to request the press release from the online source."""
-    prid = lacph_const.DAILY_STATS_PR[(pr_date.year, pr_date.month, pr_date.day)]
+    prid = lacph_const.DAILY_STATS_PR[date_to_tuple(pr_date)]
     r = requests.get(LACPH_PR_URL_BASE + str(prid))
     if r.status_code == 200:
         cache_write_resp(r.text, pr_date)
@@ -127,15 +131,14 @@ def fetch_press_release(dates: Iterable[Tuple[int, int, int]], cached: bool = Tr
 
     all_fetched_daily_pr = []
 
-    for tuple_date in dates:
-        pr_date = dt.date(tuple_date[0], tuple_date[1], tuple_date[2])
+    for date_tuple in dates:
+        pr_date = dt.date(date_tuple[0], date_tuple[1], date_tuple[2])
         pr_html_text = ''
 
         if cached:
             pr_html_text = cache_read_resp(pr_date)
         else:
-            prid = lacph_const.DAILY_STATS_PR[tuple_date]
-            pr_html_text = request_pr_online(prid)
+            pr_html_text = request_pr_online(pr_date)
 
         # Parse the HTTP response
         entire = bs4.BeautifulSoup(pr_html_text, 'html.parser')
@@ -443,11 +446,11 @@ def extract_all_days(many_prid: Tuple) -> Dict[dt.date, Dict[str, Any]]:
 
 
 if __name__ == "__main__":
-    test_dates = ((2020, 3, 30),
-                  (2020, 4, 15),
-                  (2020, 4, 28),
-                  (2020, 5, 13),
-                  (2020, 5, 26)
+    test_dates = ((2020, 3, 31),
+                  (2020, 4, 16),
+                  (2020, 4, 29),
+                  (2020, 5, 17),
+                  (2020, 5, 28)
     )
 
-    pr_sample = fetch_press_release(test_dates, True)
+    pr_sample = fetch_press_release(test_dates, False)
