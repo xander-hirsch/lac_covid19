@@ -1,5 +1,4 @@
 import datetime as dt
-from math import inf
 import os
 import re
 from typing import Any, Dict, Iterable, List, Tuple, Union
@@ -20,18 +19,22 @@ HEADER_DEATH = re.compile('Deaths\s+([\d,]+)')
 ENTRY_BY_DEPT = re.compile('(Los Angeles County \(excl\. LB and Pas\)|Long Beach|Pasadena)[\s-]*(\d+)')
 TOTAL = 'Total'
 
-HEADER_AGE_GROUP = re.compile('^Age Group')
-RE_AGE_RANGE = re.compile('(\d+) to (\d+)\s*--\s*(\d+)')
-RE_AGE_OVER = re.compile('over (\d+)\s*--\s*(\d+)')
+LAC_ONLY = '\(Los Angeles County Cases Only-excl LB and Pas\)'
 
-HEADER_HOSPITAL = re.compile('^Hospitalization')
+HEADER_AGE_GROUP = re.compile('Age Group {}'.format(LAC_ONLY))
+ENTRY_AGE = re.compile('(\d+ to \d+|over \d+)\s*--\s*(\d+)')
+
+HEADER_HOSPITAL = re.compile('Hospitalization')
 ENTRY_HOSPITAL = re.compile('([A-Z][A-Za-z() ]+[)a-z])\s*(\d+)')
 
-HEADER_GENDER = re.compile('Gender \(Los Angeles County Cases Only-excl LB and Pas\)')
-ENTRY_GENDER = re.compile('(Male|Female|Other)\s+(\d+)')
+MALE = 'Male'
+FEMALE = 'Female'
+OTHER = 'Other'
+HEADER_GENDER = re.compile('Gender {}'.format(LAC_ONLY))
+ENTRY_GENDER = re.compile('(Mm*ale|{}|{})\s+(\d+)'.format(FEMALE, OTHER))
 
-HEADER_RACE_CASE = re.compile('^Race/Ethnicity \(Los Angeles County Cases Only-excl LB and Pas\)')
-HEADER_RACE_DEATH = re.compile('Deaths Race/Ethnicity \(Los Angeles County Cases Only-excl LB and Pas\)')
+HEADER_RACE_CASE = re.compile('(?<!Deaths )Race/Ethnicity {}'.format(LAC_ONLY))
+HEADER_RACE_DEATH = re.compile('Deaths Race/Ethnicity {}'.format(LAC_ONLY))
 ENTRY_RACE = re.compile('([A-Z][A-Za-z/ ]+[a-z])\s+(\d+)')
 
 HEADER_LOC = re.compile('CITY / COMMUNITY\** \(Rate\**\)')
@@ -51,6 +54,24 @@ FORMAT_START_AGE_NESTED = dt.date(2020, 4, 4)
 DIR_RESP_CACHE = os.path.join(os.path.dirname(__file__),
                               'daily-covid-19-stats')
 LACPH = 'lacph'
+
+DATE = 'Date'
+CASES = 'Cases'
+DEATHS = 'Deaths'
+AGE_GROUP = 'Age'
+GENDER = 'Gender'
+RACE = 'Race/Ethnicity'
+HOSPITALIZATIONS = 'Hospitalizations'
+LOCATIONS = 'Locations'
+
+CITY = AREA_NAME[CITY_PREFIX]
+LONG_BEACH = 'Long Beach'
+PASADENA = 'Pasadena'
+TOTAL_HOSPITALIZATIONS = 'Hospitalized (Ever)'
+
+
+def stat_by_group(stat: str, group: str) -> str:
+    return '{} by {}'.format(stat, group)
 
 
 def local_html_name(pr_date: dt.date, deparment: str) -> str:
@@ -293,7 +314,7 @@ def parse_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
     return parse_total_by_dept_general(daily_pr, HEADER_DEATH)
 
 
-def parse_age_cases(daily_pr: bs4.Tag) -> Dict[Tuple[int, int], int]:
+def parse_age_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
     """Returns the age breakdown of COVID-19 cases in Los Angeles County.
 
     SAMPLE:
@@ -305,28 +326,13 @@ def parse_age_cases(daily_pr: bs4.Tag) -> Dict[Tuple[int, int], int]:
         Under Investigation --172
     RETURNS:
     {
-        (0, 17): 1795,
-        (18, 40): 15155
-        (41, 65): 17106
-        (66, inf): 8376
+        "0 to 17": 1795,
+        "18 to 40": 15155
+        "41 to 65": 17106
+        "over 65": 8376
     }
     """
-
-    result = {}
-    age_data_raw = get_html_age_group(daily_pr)
-
-    # Similar to the general entries parsing, but has additional computation
-    # regarding age range interpretation
-    range_extracted = RE_AGE_RANGE.findall(age_data_raw)
-    for age_range in range_extracted:
-        ages = (int(age_range[0]), int(age_range[1]))
-        result[ages] = str_to_num(age_range[-1])
-
-    upper_extracted = RE_AGE_OVER.search(age_data_raw)
-    upper_age = int(upper_extracted.group(1)) + 1
-    result[(upper_age, inf)] = str_to_num(upper_extracted.group(2))
-
-    return result
+    return parse_list_entries_general(get_html_age_group(daily_pr), ENTRY_AGE)
 
 
 def parse_hospital(daily_pr: bs4.Tag) -> Dict[str, int]:
@@ -346,7 +352,15 @@ def parse_hospital(daily_pr: bs4.Tag) -> Dict[str, int]:
 
 
 def parse_gender(daily_pr: bs4.Tag) -> Dict[str, int]:
-    return parse_list_entries_general(get_html_gender(daily_pr), ENTRY_GENDER)
+    result = parse_list_entries_general(get_html_gender(daily_pr), ENTRY_GENDER)
+
+    # Correct spelling error on some releases
+    old_keys = list(result.keys())
+    for key in old_keys:
+        if key == 'Mmale':
+            result[MALE] = result.pop(key)
+
+    return result
 
 
 def parse_race_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
@@ -413,44 +427,55 @@ def parse_locations(daily_pr: bs4.Tag) -> Dict[str, int]:
     return result
 
 
-def extract_single_day(year: int, month: int, day: int) -> Dict[str, Any]:
-    DATE = 'date'
-    CASES = 'cases'
-    AGE_GROUP = 'age group'
+def extract_single_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
+    pr_date = get_date(daily_pr)
 
-    statement = fetch_press_release(year, month, day)
-    date = get_date(statement)
+    cases_by_dept = parse_cases(daily_pr)
+    total_cases = cases_by_dept[TOTAL]
+    total_deaths = parse_deaths(daily_pr)[TOTAL]
+    total_hospitalizations = parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS]
 
-    total_cases = parse_cases(statement)
-    age_group = parse_age_cases(get_html_age_group(statement))
+    cases_by_age = parse_age_cases(daily_pr)
+    cases_by_gender = parse_gender(daily_pr)
+    cases_by_race = parse_race_cases(daily_pr)
+    deaths_by_race = parse_race_deaths(daily_pr)
 
-    output_dict = {DATE: date,
-                   CASES: total_cases,
-                   AGE_GROUP: age_group}
+    cases_by_loc = parse_locations(daily_pr)
+    cases_by_loc[CITY][LONG_BEACH] = cases_by_dept[LONG_BEACH]
+    cases_by_loc[CITY][PASADENA] = cases_by_dept[PASADENA]
 
-    return output_dict
+    return {
+        DATE: pr_date,
+        CASES: total_cases,
+        DEATHS: total_deaths,
+        HOSPITALIZATIONS: total_hospitalizations,
+        stat_by_group(CASES, AGE_GROUP): cases_by_age,
+        stat_by_group(CASES, GENDER): cases_by_gender,
+        stat_by_group(CASES, RACE): cases_by_race,
+        stat_by_group(DEATHS, RACE): deaths_by_race,
+        LOCATIONS: cases_by_loc
+    }
 
 
-def extract_all_days(many_prid: Tuple) -> Dict[dt.date, Dict[str, Any]]:
-    days_list = []
-    for prid in many_prid:
-        days_list += [extract_single_day(prid)]
-    days_list.sort(key=(lambda x: x['date']))
+def extract_many_days(requested_dates: Iterable[Tuple[int, int, int]]) -> List[Dict[str, Any]]:
+    raw_daily_stats = fetch_press_release(requested_dates)
+    parsed_daily_stats = []
 
-    days_dict = {}
-    for day in days_list:
-        current_date = day.pop('date')
-        days_dict[current_date] = day
+    for daily_pr in raw_daily_stats:
+        parsed_daily_stats.append(extract_single_day(daily_pr))
 
-    return days_dict
+    return parsed_daily_stats
 
 
 if __name__ == "__main__":
     test_dates = ((2020, 3, 31),
+                  (2020, 4, 7),
                   (2020, 4, 16),
                   (2020, 4, 29),
-                  (2020, 5, 17),
-                  (2020, 5, 28)
+                  (2020, 5, 11),
+                  (2020, 5, 18),
+                  (2020, 5, 27)
     )
 
-    pr_sample = fetch_press_release(test_dates, False)
+    pr_sample = fetch_press_release(test_dates, True)
+    stats_sample = extract_many_days(test_dates)
