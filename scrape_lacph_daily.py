@@ -1,7 +1,6 @@
 import datetime as dt
 from math import inf
-import os.path
-import pickle
+import os
 import re
 from typing import Any, Dict, Iterable, List, Tuple, Union
 
@@ -49,7 +48,14 @@ RE_LOC = re.compile('({}|{}|{}) +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(
 FORMAT_START_HOSPITAL_NESTED = dt.date(2020, 4, 4)
 FORMAT_START_AGE_NESTED = dt.date(2020, 4, 4)
 
-PR_CACHE = 'lacph_pr.pickle'
+DIR_RESP_CACHE = os.path.join(os.path.dirname(__file__),
+                              'daily-covid-19-stats')
+LACPH = 'lacph'
+
+
+def local_html_name(pr_date: dt.date, deparment: str) -> str:
+    filename = '{}-{}.html'.format(pr_date.isoformat(), deparment)
+    return os.path.join(DIR_RESP_CACHE, filename)
 
 
 def str_to_num(number: str) -> Union[int, float]:
@@ -67,11 +73,36 @@ def str_to_num(number: str) -> Union[int, float]:
     return val
 
 
-def request_pr_online(date: Tuple[int, int, int]) -> str:
+def cache_write_resp(resp: str, pr_date: dt.date) -> None:
+    cache_dir = os.path.join(os.path.dirname(__file__), DIR_RESP_CACHE)
+    if not os.path.isdir(cache_dir):
+        os.mkdir(cache_dir)
+
+    assert type(resp) is str
+    with open(local_html_name(pr_date, LACPH), 'w') as f:
+        f.write(resp)
+
+
+def cache_read_resp(pr_date: dt.date) -> str:
+    resp = None
+    local_file = local_html_name(pr_date, LACPH)
+
+    if os.path.isfile(local_file):
+        with open(local_file, 'r') as f:
+            resp = f.read()
+    else:
+        resp = request_pr_online(pr_date)
+        cache_write_resp(resp, pr_date)
+
+    return resp
+
+
+def request_pr_online(pr_date: dt.date) -> str:
     """Helper function to request the press release from the online source."""
-    prid = lacph_const.DAILY_STATS_PR[date]
+    prid = lacph_const.DAILY_STATS_PR[(pr_date.year, pr_date.month, pr_date.day)]
     r = requests.get(LACPH_PR_URL_BASE + str(prid))
     if r.status_code == 200:
+        cache_write_resp(r.text, pr_date)
         return r.text
     else:
         raise requests.exceptions.ConnectionError('Cannot retrieve the PR statement')
@@ -96,34 +127,20 @@ def fetch_press_release(dates: Iterable[Tuple[int, int, int]], cached: bool = Tr
 
     all_fetched_daily_pr = []
 
-    for date in dates:
-        year, month, day = date
+    for tuple_date in dates:
+        pr_date = dt.date(tuple_date[0], tuple_date[1], tuple_date[2])
         pr_html_text = ''
 
         if cached:
-            assert os.path.exists(PR_CACHE)
-            with open(PR_CACHE, 'rb') as f:
-                cache = pickle.load(f)
-                if date in cache:
-                    pr_html_text = cache[date]
+            pr_html_text = cache_read_resp(pr_date)
         else:
-            pr_html_text = request_pr_online(date)
-            # Update the cache with latest press release retrival
-            if os.path.exists(PR_CACHE):
-                with open(PR_CACHE, 'r+b') as f:
-                    cache = pickle.load(f)
-                    cache[date] = pr_html_text
-                    f.seek(0)
-                    pickle.dump(cache, f)
-            else:
-                with open(PR_CACHE, 'wb') as f:
-                    cache = {date: pr_html_text}
-                    pickle.dump(cache, f)
+            prid = lacph_const.DAILY_STATS_PR[tuple_date]
+            pr_html_text = request_pr_online(prid)
 
         # Parse the HTTP response
         entire = bs4.BeautifulSoup(pr_html_text, 'html.parser')
         daily_pr = entire.find('div', class_='container p-4')
-        assert dt.date(year, month, day) == get_date(entire)
+        assert pr_date == get_date(entire)
 
         all_fetched_daily_pr.append(daily_pr)
 
