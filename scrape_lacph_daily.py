@@ -436,7 +436,7 @@ def parse_locations(daily_pr: bs4.Tag) -> Dict[str, int]:
     return result
 
 
-def extract_single_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
+def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     pr_date = get_date(daily_pr)
 
     cases_by_dept = parse_cases(daily_pr)
@@ -466,12 +466,26 @@ def extract_single_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     }
 
 
-def extract_many_days(requested_dates: Iterable[Tuple[int, int, int]]) -> List[Dict[str, Any]]:
-    raw_daily_stats = fetch_press_release(requested_dates)
+def query_single_date(requested_date: Tuple[int, int, int],
+                      cached: bool = True) -> Dict[str, Any]:
+    cached = False
+    result = None
+
+    if cached:
+        # Read in JSON
+        pass
+    else:
+        result = parse_entire_day(fetch_press_release((requested_date,))[0])
+
+    return result
+
+
+def query_many_dates(requested_dates: Iterable[Tuple[int, int, int]],
+                     cached: bool = True) -> List[Dict[str, Any]]:
     parsed_daily_stats = []
 
-    for daily_pr in raw_daily_stats:
-        parsed_daily_stats.append(extract_single_day(daily_pr))
+    for single_date in requested_dates:
+        parsed_daily_stats.append(query_single_date(single_date, True))
 
     return parsed_daily_stats
 
@@ -487,4 +501,4 @@ if __name__ == "__main__":
     )
 
     pr_sample = fetch_press_release(test_dates, True)
-    stats_sample = extract_many_days(test_dates)
+    stats_sample = query_many_dates(test_dates)
