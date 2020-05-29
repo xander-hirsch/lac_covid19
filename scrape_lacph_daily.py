@@ -142,7 +142,7 @@ def request_pr_online(pr_date: dt.date) -> str:
         raise requests.exceptions.ConnectionError('Cannot retrieve the PR statement')
 
 
-def fetch_press_release(dates: Iterable[Tuple[int, int, int]], cached: bool = True) -> List[bs4.Tag]:
+def fetch_press_release(requested_date: Tuple[int, int, int], cached: bool = True) -> List[bs4.Tag]:
     """Fetches the HTML of press releases for the given dates. The source can
     come from cache or by fetching from the internet.
 
@@ -158,26 +158,20 @@ def fetch_press_release(dates: Iterable[Tuple[int, int, int]], cached: bool = Tr
         A list of BeautifulSoup tags containing the requested press releases.
         The associated date can be retrived with the get_date function.
     """
+    pr_date = dt.date(requested_date[0], requested_date[1], requested_date[2])
+    pr_html_text = ''
 
-    all_fetched_daily_pr = []
+    if cached:
+        pr_html_text = cache_read_resp(pr_date)
+    else:
+        pr_html_text = request_pr_online(pr_date)
 
-    for date_tuple in dates:
-        pr_date = dt.date(date_tuple[0], date_tuple[1], date_tuple[2])
-        pr_html_text = ''
+    # Parse the HTTP response
+    entire = bs4.BeautifulSoup(pr_html_text, 'html.parser')
+    daily_pr = entire.find('div', class_='container p-4')
+    assert pr_date == get_date(entire)
 
-        if cached:
-            pr_html_text = cache_read_resp(pr_date)
-        else:
-            pr_html_text = request_pr_online(pr_date)
-
-        # Parse the HTTP response
-        entire = bs4.BeautifulSoup(pr_html_text, 'html.parser')
-        daily_pr = entire.find('div', class_='container p-4')
-        assert pr_date == get_date(entire)
-
-        all_fetched_daily_pr.append(daily_pr)
-
-    return all_fetched_daily_pr
+    return daily_pr
 
 
 def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
@@ -475,7 +469,7 @@ def query_single_date(requested_date: Tuple[int, int, int],
         # Read in JSON
         pass
     else:
-        result = parse_entire_day(fetch_press_release((requested_date,))[0])
+        result = parse_entire_day(fetch_press_release(requested_date))
 
     return result
 
@@ -500,5 +494,5 @@ if __name__ == "__main__":
                   (2020, 5, 27)
     )
 
-    pr_sample = fetch_press_release(test_dates, True)
-    stats_sample = query_many_dates(test_dates)
+    pr_sample = [fetch_press_release(x) for x in test_dates]
+    stats_sample = [query_single_date(x) for x in test_dates]
