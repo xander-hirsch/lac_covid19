@@ -51,8 +51,8 @@ RE_LOC = re.compile('({}|{}|{}) +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(
 FORMAT_START_HOSPITAL_NESTED = dt.date(2020, 4, 4)
 FORMAT_START_AGE_NESTED = dt.date(2020, 4, 4)
 
-DIR_RESP_CACHE = os.path.join(os.path.dirname(__file__),
-                              'daily-covid-19-stats')
+DIR_RESP_CACHE = 'cached-daily-pr'
+DIR_PARSED_PR = 'parsed-daily-pr'
 LACPH = 'lacph'
 
 DATE = 'Date'
@@ -74,9 +74,18 @@ def stat_by_group(stat: str, group: str) -> str:
     return '{} by {}'.format(stat, group)
 
 
+def local_file_name(proj_dir: str, pr_date: dt.date, deparment: str,
+                    extenstion: str) -> str:
+    filename = '{}-{}.{}'.format(pr_date.isoformat(), deparment, extenstion)
+    return os.path.join(os.path.dirname(__file__), proj_dir, filename)
+
+
 def local_html_name(pr_date: dt.date, deparment: str) -> str:
-    filename = '{}-{}.html'.format(pr_date.isoformat(), deparment)
-    return os.path.join(DIR_RESP_CACHE, filename)
+    return local_file_name(DIR_RESP_CACHE, pr_date, LACPH, 'html')
+
+
+def local_json_name(pr_date: dt.date, deparment: str) -> str:
+    return local_file_name(DIR_PARSED_PR, pr_date, LACPH, 'json')
 
 
 def str_to_num(number: str) -> Union[int, float]:
@@ -445,7 +454,7 @@ def extract_single_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     cases_by_loc[CITY][PASADENA] = cases_by_dept[PASADENA]
 
     return {
-        DATE: pr_date,
+        DATE: pr_date.isoformat(),
         CASES: total_cases,
         DEATHS: total_deaths,
         HOSPITALIZATIONS: total_hospitalizations,
