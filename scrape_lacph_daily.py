@@ -70,6 +70,8 @@ LONG_BEACH = 'Long Beach'
 PASADENA = 'Pasadena'
 TOTAL_HOSPITALIZATIONS = 'Hospitalized (Ever)'
 
+EXTENDED_HTML = (dt.date(2020, 4, 23),)
+
 
 def stat_by_group(stat: str, group: str) -> str:
     return '{} by {}'.format(stat, group)
@@ -194,7 +196,11 @@ def fetch_press_release(requested_date: Tuple[int, int, int], cached: bool = Tru
 
     # Parse the HTTP response
     entire = bs4.BeautifulSoup(pr_html_text, 'html.parser')
-    daily_pr = entire.find('div', class_='container p-4')
+    daily_pr = None
+    if pr_date in EXTENDED_HTML:
+        daily_pr = entire
+    else:
+        daily_pr = entire.find('div', class_='container p-4')
     assert pr_date == get_date(entire)
 
     return daily_pr
@@ -462,7 +468,10 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     cases_by_dept = parse_cases(daily_pr)
     total_cases = cases_by_dept[TOTAL]
     total_deaths = parse_deaths(daily_pr)[TOTAL]
-    total_hospitalizations = parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS]
+    try:
+        total_hospitalizations = parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS]
+    except KeyError:
+        print('Hospitalization not found ', pr_date)
 
     cases_by_age = parse_age_cases(daily_pr)
     cases_by_gender = parse_gender(daily_pr)
@@ -470,8 +479,11 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     deaths_by_race = parse_race_deaths(daily_pr)
 
     cases_by_loc = parse_locations(daily_pr)
-    cases_by_loc[CITY][LONG_BEACH] = cases_by_dept[LONG_BEACH]
-    cases_by_loc[CITY][PASADENA] = cases_by_dept[PASADENA]
+    try:
+        cases_by_loc[CITY][LONG_BEACH] = cases_by_dept[LONG_BEACH]
+        cases_by_loc[CITY][PASADENA] = cases_by_dept[PASADENA]
+    except KeyError:
+        print('Department cases not found ', pr_date)
 
     return {
         DATE: pr_date.isoformat(),
