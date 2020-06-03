@@ -201,7 +201,8 @@ def cache_read_resp(pr_date: dt.date) -> str:
 
 def cache_write_parsed(daily_stats: Dict[str, Any]) -> None:
     """Exports parsed version of LACPH daily COVID-19 briefings as JSON."""
-    stats_date = dt.date.fromisoformat(daily_stats[DATE])
+    stats_date = daily_stats[DATE]
+    _json_export(daily_stats)
     _cache_write_generic(daily_stats, stats_date, DIR_PARSED_PR, JSON,
                          (lambda x: type(x) is dict),
                          (lambda f, x: json.dump(x, f)))
@@ -209,8 +210,14 @@ def cache_write_parsed(daily_stats: Dict[str, Any]) -> None:
 
 def cache_read_parsed(pr_date: dt.date) -> Dict[str, Any]:
     """Reads in previously parsed daily LACPH briefing."""
-    return _cache_read_generic(pr_date, DIR_PARSED_PR, JSON,
-                               (lambda f: json.load(f)))
+    imported = _cache_read_generic(pr_date, DIR_PARSED_PR, JSON,
+                                   (lambda f: json.load(f)))
+
+    # Convert date string into date object
+    if imported is not None:
+        _json_import(imported)
+
+    return imported
 
 
 def request_pr_online(pr_date: dt.date) -> str:
@@ -553,13 +560,13 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
 
     cases_by_loc = parse_locations(daily_pr)
     try:
-        cases_by_loc[CITY][LONG_BEACH] = cases_by_dept[LONG_BEACH]
-        cases_by_loc[CITY][PASADENA] = cases_by_dept[PASADENA]
+        cases_by_loc[CITY][LONG_BEACH] = (cases_by_dept[LONG_BEACH], None)
+        cases_by_loc[CITY][PASADENA] = (cases_by_dept[PASADENA], None)
     except KeyError:
         print('Department cases not found ', pr_date)
 
     return {
-        DATE: pr_date.isoformat(),
+        DATE: pr_date,
         CASES: total_cases,
         DEATHS: total_deaths,
         HOSPITALIZATIONS: total_hospitalizations,
@@ -573,13 +580,34 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
 
 def query_single_date(date_: Tuple[int, int, int],
                       cached: bool = True) -> Dict[str, Any]:
-    result = cache_read_parsed(dt.date(date_[0], date_[1], date_[2]))
+
+    result = None
+
+    if cached:
+        result = cache_read_parsed(dt.date(date_[0], date_[1], date_[2]))
 
     if result is None:
         result = parse_entire_day(fetch_press_release(date_))
         cache_write_parsed(result)
 
     return result
+
+
+def _json_import(dict_content: Dict) -> Dict[str, Any]:
+    """Changes date string into date object. Converts location lists
+    into tuples.
+    """
+    dict_content[DATE] = dt.date.fromisoformat(dict_content[DATE])
+
+    for loc_type in dict_content[LOCATIONS].keys():
+        for loc_name in dict_content[LOCATIONS][loc_type].keys():
+            dict_content[LOCATIONS][loc_type][loc_name] \
+                = tuple(dict_content[LOCATIONS][loc_type][loc_name])
+
+
+def _json_export(dict_content: Dict) -> Dict[str, Any]:
+    """Changes date object into date string"""
+    dict_content[DATE] = dict_content[DATE].isoformat()
 
 
 if __name__ == "__main__":
@@ -597,7 +625,9 @@ if __name__ == "__main__":
                  (2020, 6, 1),
                  (2020, 6, 2))
 
-    selected_dates = new_dates
+    all_dates = lacph_const.DAILY_STATS_PR.keys()
+
+    selected_dates = all_dates
 
     pr_sample = [fetch_press_release(x) for x in selected_dates]
     stats_sample = [query_single_date(x) for x in selected_dates]
