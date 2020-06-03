@@ -57,6 +57,9 @@ DIR_RESP_CACHE = 'cached-daily-pr'
 DIR_PARSED_PR = 'parsed-daily-pr'
 LACPH = 'lacph'
 
+HTML = 'html'
+JSON = 'json'
+
 DATE = 'Date'
 CASES = 'Cases'
 DEATHS = 'Deaths'
@@ -164,7 +167,7 @@ def _cache_read_generic(date_: dt.date, directory: str, extension: str,
         it returns None.
     """
 
-    file_ = os.path.join(__file__, dir,
+    file_ = os.path.join(os.path.dirname(__file__), directory,
                          local_filename(date_, LACPH, extension))
 
     if os.path.isfile(file_):
@@ -176,26 +179,20 @@ def _cache_read_generic(date_: dt.date, directory: str, extension: str,
 
 def cache_write_resp(resp: str, pr_date: dt.date) -> None:
     """Writes a local copy of Los Angeles County COVID-19 daily briefings."""
-    cache_dir = os.path.join(os.path.dirname(__file__), DIR_RESP_CACHE)
-    if not os.path.isdir(cache_dir):
-        os.mkdir(cache_dir)
-
-    assert type(resp) is str
-    with open(lacph_html_name(pr_date), 'w') as f:
-        f.write(resp)
+    _cache_write_generic(resp, pr_date, DIR_RESP_CACHE, HTML,
+                         (lambda r: type(r) is str),
+                         (lambda f, r: f.write(r)))
 
 
 def cache_read_resp(pr_date: dt.date) -> str:
     """Attempts to read local copy of daily LACPH COVID-19 briefings.
     Automatically resorts to online request if local copy unavalible.
     """
-    resp = None
-    local_file = lacph_html_name(pr_date)
 
-    if os.path.isfile(local_file):
-        with open(local_file, 'r') as f:
-            resp = f.read()
-    else:
+    resp = _cache_read_generic(pr_date, DIR_RESP_CACHE, HTML,
+                               (lambda f: f.read()))
+
+    if resp is None:
         resp = request_pr_online(pr_date)
         cache_write_resp(resp, pr_date)
 
@@ -205,28 +202,15 @@ def cache_read_resp(pr_date: dt.date) -> str:
 def cache_write_parsed(daily_stats: Dict[str, Any]) -> None:
     """Exports parsed version of LACPH daily COVID-19 briefings as JSON."""
     stats_date = dt.date.fromisoformat(daily_stats[DATE])
-    parsed_dir = os.path.join(os.path.dirname(__file__), DIR_PARSED_PR)
-
-    if not os.path.isdir(parsed_dir):
-        os.mkdir(parsed_dir)
-
-    assert type(daily_stats) is dict
-    with open(lacph_json_name(stats_date), 'w') as f:
-        json.dump(daily_stats, f)
+    _cache_write_generic(daily_stats, stats_date, DIR_PARSED_PR, JSON,
+                         (lambda x: type(x) is dict),
+                         (lambda f, x: json.dump(x, f)))
 
 
 def cache_read_parsed(pr_date: dt.date) -> Dict[str, Any]:
     """Reads in previously parsed daily LACPH briefing."""
-    parsed = None
-    local_file = lacph_json_name(pr_date)
-
-    if os.path.isfile(local_file):
-        with open(local_file, 'r') as f:
-            parsed = json.load(f)
-    else:
-        parsed = query_single_date(date_to_tuple(pr_date), False)
-
-    return parsed
+    return _cache_read_generic(pr_date, DIR_PARSED_PR, JSON,
+                               (lambda f: json.load(f)))
 
 
 def request_pr_online(pr_date: dt.date) -> str:
@@ -240,7 +224,7 @@ def request_pr_online(pr_date: dt.date) -> str:
         raise requests.exceptions.ConnectionError('Cannot retrieve the PR statement')
 
 
-def fetch_press_release(requested_date: Tuple[int, int, int], cached: bool = True) -> List[bs4.Tag]:
+def fetch_press_release(date_: Tuple[int, int, int], cached: bool = True) -> List[bs4.Tag]:
     """Fetches the HTML of press releases for the given dates. The source can
     come from cache or by fetching from the internet.
 
@@ -256,7 +240,7 @@ def fetch_press_release(requested_date: Tuple[int, int, int], cached: bool = Tru
         A list of BeautifulSoup tags containing the requested press releases.
         The associated date can be retrived with the get_date function.
     """
-    pr_date = dt.date(requested_date[0], requested_date[1], requested_date[2])
+    pr_date = dt.date(date_[0], date_[1], date_[2])
     pr_html_text = ''
 
     if cached:
@@ -587,15 +571,12 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     }
 
 
-def query_single_date(requested_date: Tuple[int, int, int],
+def query_single_date(date_: Tuple[int, int, int],
                       cached: bool = True) -> Dict[str, Any]:
-    result = None
+    result = cache_read_parsed(dt.date(date_[0], date_[1], date_[2]))
 
-    if cached:
-        result = cache_read_parsed(dt.date(requested_date[0], requested_date[1],
-                                           requested_date[2]))
-    else:
-        result = parse_entire_day(fetch_press_release(requested_date))
+    if result is None:
+        result = parse_entire_day(fetch_press_release(date_))
         cache_write_parsed(result)
 
     return result
@@ -611,5 +592,12 @@ if __name__ == "__main__":
                   (2020, 5, 27)
     )
 
-    pr_sample = [fetch_press_release(x) for x in test_dates]
-    stats_sample = [query_single_date(x) for x in test_dates]
+    new_dates = ((2020, 5, 30),
+                 (2020, 5, 31),
+                 (2020, 6, 1),
+                 (2020, 6, 2))
+
+    selected_dates = new_dates
+
+    pr_sample = [fetch_press_release(x) for x in selected_dates]
+    stats_sample = [query_single_date(x) for x in selected_dates]
