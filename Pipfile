@@ -11,6 +11,8 @@ rope = "*"
 [packages]
 bs4 = "*"
 requests = "*"
+pandas = "*"
+jupyterlab = "*"
 
 [requires]
 python_version = "3.8"
