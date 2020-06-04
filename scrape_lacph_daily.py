@@ -629,5 +629,5 @@ if __name__ == "__main__":
 
     selected_dates = all_dates
 
-    pr_sample = [fetch_press_release(x) for x in selected_dates]
-    stats_sample = [query_single_date(x) for x in selected_dates]
+    pr_sample = tuple(map(lambda x: fetch_press_release(x), selected_dates))
+    stats_sample = tuple(map(lambda x: query_single_date(x), selected_dates))
