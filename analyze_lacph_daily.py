@@ -23,9 +23,12 @@ def make_df_dates(pr_stats):
 
 
 def make_loc_ts(pr_stats, loc_type, loc_name):
+    num_copies = len(pr_stats)
     data = {
         lacph_const.DATE:
             map(lambda x: pd.to_datetime(x[lacph_const.DATE]), pr_stats),
+        lacph_const.LOC_CAT: (loc_type,) * num_copies,
+        lacph_const.LOC_NAME: (loc_name,) * num_copies,
         lacph_const.CASES:
             map(lambda x: x[lacph_const.LOCATIONS][loc_type][loc_name][0], pr_stats),
         lacph_const.CASES_NORMALIZED:
