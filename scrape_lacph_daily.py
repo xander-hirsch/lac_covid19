@@ -7,7 +7,7 @@ from typing import Any, Callable, Dict, List, Tuple, Union
 import bs4
 import requests
 
-import gla_covid_19.lacph_const as lacph_const
+import gla_covid_19.lacph_prid as lacph_prid
 
 
 LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='
@@ -222,7 +222,7 @@ def cache_read_parsed(pr_date: dt.date) -> Dict[str, Any]:
 
 def request_pr_online(pr_date: dt.date) -> str:
     """Helper function to request the press release from the online source."""
-    prid = lacph_const.DAILY_STATS_PR[date_to_tuple(pr_date)]
+    prid = lacph_prid.DAILY_STATS[date_to_tuple(pr_date)]
     r = requests.get(LACPH_PR_URL_BASE + str(prid))
     if r.status_code == 200:
         cache_write_resp(r.text, pr_date)
@@ -625,7 +625,7 @@ if __name__ == "__main__":
                  (2020, 6, 1),
                  (2020, 6, 2))
 
-    all_dates = lacph_const.DAILY_STATS_PR.keys()
+    all_dates = lacph_prid.DAILY_STATS.keys()
 
     selected_dates = all_dates
 
