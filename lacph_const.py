@@ -17,4 +17,4 @@ RACE = 'Race/Ethnicity'
 HOSPITALIZATIONS = 'Hospitalizations'
 LOCATIONS = 'Locations'
 
-TOTAL_HOSPITALIZATIONS = 'Hospitalized (Ever)'
+CASES_NORMALIZED = CASES + ' per 100,000'
