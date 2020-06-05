@@ -1,5 +1,6 @@
 .vscode/*
 __pycache__/*
+.ipynb_checkpoints/*
 
 cached-daily-pr/*.html
 cached-daily-pr/.ipynb_checkpoints/*
