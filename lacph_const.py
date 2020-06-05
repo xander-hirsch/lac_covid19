@@ -25,6 +25,11 @@ LOC_NAME = 'Name'
 
 CASE_RATE_SCALE = 100_000
 
+AGE_0_17 = '0 to 17'
+AGE_18_40 = '18 to 40'
+AGE_41_65 = '41 to 65'
+AGE_OVER_65 = 'over 65'
+
 
 def stat_by_group(stat: str, group: str) -> str:
     """Provides consistant naming to statistic descriptors"""

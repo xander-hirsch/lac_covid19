@@ -5,6 +5,22 @@ import gla_covid_19.lacph_prid as lacph_prid
 import gla_covid_19.scrape_lacph_daily as scrape_lacph_daily
 
 
+def access_generic(*key_name):
+    dict_access = None
+    if len(key_name) == 1:
+        dict_access = lambda x: x[key_name[0]]
+    elif len(key_name) == 2:
+        dict_access = lambda x: x[key_name[0]][key_name[1]]
+    elif len(key_name) == 3:
+        dict_access = lambda x: x[key_name[0]][key_name[1]][key_name[2]]
+
+    return dict_access
+
+
+def access_date(pr_stats):
+    return pd.to_datetime(pr_stats[lacph_const.DATE])
+
+
 def make_df_dates(pr_stats):
     data = {
         lacph_const.DATE:
@@ -67,6 +83,19 @@ def make_loc_ts(pr_stats, loc_type, loc_name):
     return pd.DataFrame(data)
 
 
+def make_by_age(pr_stats):
+    CASES_BY_AGE = lacph_const.stat_by_group(lacph_const.CASES,
+                                             lacph_const.AGE_GROUP)
+    data = {
+        lacph_const.DATE: map(lambda x: access_date(x), pr_stats),
+        lacph_const.AGE_0_17: map(lambda x: x[CASES_BY_AGE][lacph_const.AGE_0_17], pr_stats),
+        lacph_const.AGE_18_40: map(lambda x: x[CASES_BY_AGE][lacph_const.AGE_18_40], pr_stats),
+        lacph_const.AGE_41_65: map(lambda x: x[CASES_BY_AGE][lacph_const.AGE_41_65], pr_stats),
+        lacph_const.AGE_OVER_65: map(lambda x: x[CASES_BY_AGE][lacph_const.AGE_OVER_65], pr_stats)
+    }
+    return pd.DataFrame(data)
+
+
 if __name__ == "__main__":
     all_dates = tuple(map(lambda x: scrape_lacph_daily.query_single_date(x),
                       lacph_prid.DAILY_STATS))
@@ -78,4 +107,5 @@ if __name__ == "__main__":
     june_1 = all_dates[63]
 
     # test = single_day_race(june_1)
-    test = make_by_race(last_week)
+    # test = make_by_race(last_week)
+    test = make_by_age(last_week)
