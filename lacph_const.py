@@ -24,3 +24,8 @@ LOC_CAT = 'Category'
 LOC_NAME = 'Name'
 
 CASE_RATE_SCALE = 100_000
+
+
+def stat_by_group(stat: str, group: str) -> str:
+    """Provides consistant naming to statistic descriptors"""
+    return '{} by {}'.format(stat, group)
