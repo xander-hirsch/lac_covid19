@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import pandas as pd
 
 import gla_covid_19.lacph_const as lacph_const
@@ -18,7 +19,19 @@ def access_generic(*key_name):
 
 
 def access_date(pr_stats):
-    return pd.to_datetime(pr_stats[lacph_const.DATE])
+    return pd.to_datetime(pr_stats[lacph_const.DATE], unit='D')
+
+
+def date_limits(date_series):
+    return (date_series[lacph_const.DATE].min(), date_series[lacph_const.DATE].max())
+
+
+def adjust_ax(observations):
+    min_date = observations[lacph_const.DATE].min()
+    max_date = observations[lacph_const.DATE].max()
+    plt.xlim((min_date, max_date))
+    plt.xticks(pd.date_range(min_date, max_date, freq='SMS'), rotation=45)
+    plt.show()
 
 
 def make_df_dates(pr_stats):
@@ -87,7 +100,7 @@ def make_by_age(pr_stats):
     CASES_BY_AGE = lacph_const.stat_by_group(lacph_const.CASES,
                                              lacph_const.AGE_GROUP)
     data = {
-        lacph_const.DATE: map(lambda x: access_date(x), pr_stats),
+        lacph_const.DATE: pd.to_datetime(tuple(map(lambda x: x[lacph_const.DATE], pr_stats))),
         lacph_const.AGE_0_17: map(lambda x: x[CASES_BY_AGE][lacph_const.AGE_0_17], pr_stats),
         lacph_const.AGE_18_40: map(lambda x: x[CASES_BY_AGE][lacph_const.AGE_18_40], pr_stats),
         lacph_const.AGE_41_65: map(lambda x: x[CASES_BY_AGE][lacph_const.AGE_41_65], pr_stats),
