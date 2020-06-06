@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
@@ -25,14 +24,6 @@ def access_date(pr_stats):
 
 def date_limits(date_series):
     return (date_series[lacph_const.DATE].min(), date_series[lacph_const.DATE].max())
-
-
-def adjust_ax(observations):
-    min_date = observations[lacph_const.DATE].min()
-    max_date = observations[lacph_const.DATE].max()
-    plt.xlim((min_date, max_date))
-    plt.xticks(pd.date_range(min_date, max_date, freq='SMS'), rotation=45)
-    plt.show()
 
 
 def make_df_dates(pr_stats):
