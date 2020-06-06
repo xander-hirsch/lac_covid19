@@ -7,6 +7,7 @@ from typing import Any, Callable, Dict, List, Tuple, Union
 import bs4
 import requests
 
+import gla_covid_19.const as const
 import gla_covid_19.lacph_prid as lacph_prid
 
 
@@ -18,7 +19,6 @@ RE_UNDER_INVESTIGATION = re.compile('Under Investigation')
 HEADER_CASE_COUNT = re.compile('Laboratory Confirmed Cases -- ([\d,]+) Total Cases')
 HEADER_DEATH = re.compile('Deaths\s+([\d,]+)')
 ENTRY_BY_DEPT = re.compile('(Los Angeles County \(excl\. LB and Pas\)|Long Beach|Pasadena)[\s-]*(\d+)')
-TOTAL = 'Total'
 
 LAC_ONLY = '\(Los Angeles County Cases Only-excl LB and Pas\)'
 
@@ -28,11 +28,8 @@ ENTRY_AGE = re.compile('(\d+ to \d+|over \d+)\s*--\s*(\d+)')
 HEADER_HOSPITAL = re.compile('Hospitalization')
 ENTRY_HOSPITAL = re.compile('([A-Z][A-Za-z() ]+[)a-z])\s*(\d+)')
 
-MALE = 'Male'
-FEMALE = 'Female'
-OTHER = 'Other'
 HEADER_GENDER = re.compile('Gender {}'.format(LAC_ONLY))
-ENTRY_GENDER = re.compile('(Mm*ale|{}|{})\s+(\d+)'.format(FEMALE, OTHER))
+ENTRY_GENDER = re.compile('(Mm*ale|{}|{})\s+(\d+)'.format(const.FEMALE, const.OTHER))
 
 HEADER_RACE_CASE = re.compile('(?<!Deaths )Race/Ethnicity {}'.format(LAC_ONLY))
 HEADER_RACE_DEATH = re.compile('Deaths Race/Ethnicity {}'.format(LAC_ONLY))
@@ -59,15 +56,6 @@ LACPH = 'lacph'
 
 HTML = 'html'
 JSON = 'json'
-
-DATE = 'Date'
-CASES = 'Cases'
-DEATHS = 'Deaths'
-AGE_GROUP = 'Age'
-GENDER = 'Gender'
-RACE = 'Race/Ethnicity'
-HOSPITALIZATIONS = 'Hospitalizations'
-LOCATIONS = 'Locations'
 
 CITY = AREA_NAME[CITY_PREFIX]
 LONG_BEACH = 'Long Beach'
@@ -201,7 +189,7 @@ def cache_read_resp(pr_date: dt.date) -> str:
 
 def cache_write_parsed(daily_stats: Dict[str, Any]) -> None:
     """Exports parsed version of LACPH daily COVID-19 briefings as JSON."""
-    stats_date = daily_stats[DATE]
+    stats_date = daily_stats[const.DATE]
     _json_export(daily_stats)
     _cache_write_generic(daily_stats, stats_date, DIR_PARSED_PR, JSON,
                          (lambda x: type(x) is dict),
@@ -383,7 +371,7 @@ def parse_total_by_dept_general(daily_pr: bs4.Tag, header_pattern: re.Pattern) -
         if match_attempt:
             total = str_to_num(match_attempt.group(1))
             break
-    result[TOTAL] = total
+    result[const.TOTAL] = total
 
     return result
 
@@ -473,7 +461,7 @@ def parse_gender(daily_pr: bs4.Tag) -> Dict[str, int]:
     old_keys = list(result.keys())
     for key in old_keys:
         if key == 'Mmale':
-            result[MALE] = result.pop(key)
+            result[const.MALE] = result.pop(key)
 
     return result
 
@@ -546,8 +534,8 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     pr_date = get_date(daily_pr)
 
     cases_by_dept = parse_cases(daily_pr)
-    total_cases = cases_by_dept[TOTAL]
-    total_deaths = parse_deaths(daily_pr)[TOTAL]
+    total_cases = cases_by_dept[const.TOTAL]
+    total_deaths = parse_deaths(daily_pr)[const.TOTAL]
     try:
         total_hospitalizations = parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS]
     except KeyError:
@@ -566,15 +554,15 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
         print('Department cases not found ', pr_date)
 
     return {
-        DATE: pr_date,
-        CASES: total_cases,
-        DEATHS: total_deaths,
-        HOSPITALIZATIONS: total_hospitalizations,
-        stat_by_group(CASES, AGE_GROUP): cases_by_age,
-        stat_by_group(CASES, GENDER): cases_by_gender,
-        stat_by_group(CASES, RACE): cases_by_race,
-        stat_by_group(DEATHS, RACE): deaths_by_race,
-        LOCATIONS: cases_by_loc
+        const.DATE: pr_date,
+        const.CASES: total_cases,
+        const.DEATHS: total_deaths,
+        const.HOSPITALIZATIONS: total_hospitalizations,
+        const.CASES_BY_AGE: cases_by_age,
+        const.CASES_BY_GENDER: cases_by_gender,
+        const.CASES_BY_RACE: cases_by_race,
+        const.DEATHS_BY_RACE: deaths_by_race,
+        const.LOCATIONS: cases_by_loc
     }
 
 
@@ -597,17 +585,17 @@ def _json_import(dict_content: Dict) -> Dict[str, Any]:
     """Changes date string into date object. Converts location lists
     into tuples.
     """
-    dict_content[DATE] = dt.date.fromisoformat(dict_content[DATE])
+    dict_content[const.DATE] = dt.date.fromisoformat(dict_content[const.DATE])
 
-    for loc_type in dict_content[LOCATIONS].keys():
-        for loc_name in dict_content[LOCATIONS][loc_type].keys():
-            dict_content[LOCATIONS][loc_type][loc_name] \
-                = tuple(dict_content[LOCATIONS][loc_type][loc_name])
+    for loc_type in dict_content[const.LOCATIONS].keys():
+        for loc_name in dict_content[const.LOCATIONS][loc_type].keys():
+            dict_content[const.LOCATIONS][loc_type][loc_name] \
+                = tuple(dict_content[const.LOCATIONS][loc_type][loc_name])
 
 
 def _json_export(dict_content: Dict) -> Dict[str, Any]:
     """Changes date object into date string"""
-    dict_content[DATE] = dict_content[DATE].isoformat()
+    dict_content[const.DATE] = dict_content[const.DATE].isoformat()
 
 
 if __name__ == "__main__":
@@ -630,4 +618,4 @@ if __name__ == "__main__":
     selected_dates = all_dates
 
     pr_sample = tuple(map(lambda x: fetch_press_release(x), selected_dates))
-    stats_sample = tuple(map(lambda x: query_single_date(x), selected_dates))
+    stats_sample = tuple(map(lambda x: parse_entire_day(x), pr_sample))
