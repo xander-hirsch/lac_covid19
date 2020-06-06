@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 
 import gla_covid_19.lacph_const as lacph_const
@@ -62,20 +63,25 @@ def single_day_race(pr_stats):
     for race in pr_stats[DEATHS_BY_RACE].keys():
         recorded_races.add(race)
 
-    for race in recorded_races:
-        data = {
-            lacph_const.DATE: pd.to_datetime(pr_stats[lacph_const.DATE]),
-            lacph_const.RACE: race,
-            lacph_const.CASES: pr_stats[CASES_BY_RACE].get(race, None),
-            lacph_const.DEATHS: pr_stats[DEATHS_BY_RACE].get(race, None)
-        }
-        indiv_race.append(pd.DataFrame(data, index=(0,)))
+    # Ensure the data is present
+    if recorded_races:
+        for race in recorded_races:
+            data = {
+                lacph_const.DATE: pd.to_datetime(pr_stats[lacph_const.DATE]),
+                lacph_const.RACE: race,
+                lacph_const.CASES: pr_stats[CASES_BY_RACE].get(race, np.nan),
+                lacph_const.DEATHS: pr_stats[DEATHS_BY_RACE].get(race, np.nan)
+            }
+            indiv_race.append(pd.DataFrame(data, index=(0,)))
 
-    return pd.concat(indiv_race, ignore_index=True)
+        return pd.concat(indiv_race, ignore_index=True)
+    else:
+        return None
 
 
 def make_by_race(pr_stats):
-    per_day = list(map(lambda x: single_day_race(x), pr_stats))
+    per_day = tuple(map(lambda x: single_day_race(x), pr_stats))
+    per_day = tuple(filter(lambda x: x is not None, per_day))
     df = pd.concat(per_day, ignore_index=True)
     df[lacph_const.RACE] = df[lacph_const.RACE].astype('category')
     return df
