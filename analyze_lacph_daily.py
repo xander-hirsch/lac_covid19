@@ -44,14 +44,9 @@ def single_day_race(pr_stats):
     recorded_races = set()
     indiv_race = []
 
-    CASES_BY_RACE = const.stat_by_group(const.CASES,
-                                              const.RACE)
-    DEATHS_BY_RACE = const.stat_by_group(const.DEATHS,
-                                               const.RACE)
-
-    for race in pr_stats[CASES_BY_RACE].keys():
+    for race in pr_stats[const.CASES_BY_RACE].keys():
         recorded_races.add(race)
-    for race in pr_stats[DEATHS_BY_RACE].keys():
+    for race in pr_stats[const.DEATHS_BY_RACE].keys():
         recorded_races.add(race)
 
     # Ensure the data is present
@@ -60,8 +55,8 @@ def single_day_race(pr_stats):
             data = {
                 const.DATE: pd.to_datetime(pr_stats[const.DATE]),
                 const.RACE: race,
-                const.CASES: pr_stats[CASES_BY_RACE].get(race, np.nan),
-                const.DEATHS: pr_stats[DEATHS_BY_RACE].get(race, np.nan)
+                const.CASES: pr_stats[const.CASES_BY_RACE].get(race, np.nan),
+                const.DEATHS: pr_stats[const.DEATHS_BY_RACE].get(race, np.nan)
             }
             indiv_race.append(pd.DataFrame(data, index=(0,)))
 
@@ -94,24 +89,21 @@ def make_loc_ts(pr_stats, loc_type, loc_name):
 
 
 def make_by_age(pr_stats):
-    CASES_BY_AGE = const.stat_by_group(const.CASES,
-                                             const.AGE_GROUP)
     data = {
         const.DATE: pd.to_datetime(tuple(map(lambda x: x[const.DATE], pr_stats))),
-        const.AGE_0_17: map(lambda x: x[CASES_BY_AGE][const.AGE_0_17], pr_stats),
-        const.AGE_18_40: map(lambda x: x[CASES_BY_AGE][const.AGE_18_40], pr_stats),
-        const.AGE_41_65: map(lambda x: x[CASES_BY_AGE][const.AGE_41_65], pr_stats),
-        const.AGE_OVER_65: map(lambda x: x[CASES_BY_AGE][const.AGE_OVER_65], pr_stats)
+        const.AGE_0_17: map(lambda x: x[const.CASES_BY_AGE][const.AGE_0_17], pr_stats),
+        const.AGE_18_40: map(lambda x: x[const.CASES_BY_AGE][const.AGE_18_40], pr_stats),
+        const.AGE_41_65: map(lambda x: x[const.CASES_BY_AGE][const.AGE_41_65], pr_stats),
+        const.AGE_OVER_65: map(lambda x: x[const.CASES_BY_AGE][const.AGE_OVER_65], pr_stats)
     }
     return pd.DataFrame(data)
 
 
 def make_by_gender(pr_stats):
-    CASES_BY_GENDER = const.stat_by_group(const.CASES, const.GENDER)
     data = {
         const.DATE: pd.to_datetime(tuple(map(lambda x: x[const.DATE], pr_stats))),
-        const.MALE: map(lambda x: x[CASES_BY_GENDER][const.MALE], pr_stats),
-        const.FEMALE: map(lambda x: x[CASES_BY_GENDER][const.FEMALE], pr_stats)
+        const.MALE: map(lambda x: x[const.CASES_BY_GENDER][const.MALE], pr_stats),
+        const.FEMALE: map(lambda x: x[const.CASES_BY_GENDER][const.FEMALE], pr_stats)
     }
     return pd.DataFrame(data)
 
