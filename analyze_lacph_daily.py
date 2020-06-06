@@ -106,6 +106,16 @@ def make_by_age(pr_stats):
     return pd.DataFrame(data)
 
 
+def make_by_gender(pr_stats):
+    CASES_BY_GENDER = lacph_const.stat_by_group(lacph_const.CASES, lacph_const.GENDER)
+    data = {
+        lacph_const.DATE: pd.to_datetime(tuple(map(lambda x: x[lacph_const.DATE], pr_stats))),
+        lacph_const.MALE: map(lambda x: x[CASES_BY_GENDER][lacph_const.MALE], pr_stats),
+        lacph_const.FEMALE: map(lambda x: x[CASES_BY_GENDER][lacph_const.FEMALE], pr_stats)
+    }
+    return pd.DataFrame(data)
+
+
 if __name__ == "__main__":
     all_dates = tuple(map(lambda x: scrape_lacph_daily.query_single_date(x),
                       lacph_prid.DAILY_STATS))
@@ -118,4 +128,5 @@ if __name__ == "__main__":
 
     # test = single_day_race(june_1)
     # test = make_by_race(last_week)
-    test = make_by_age(last_week)
+    # test = make_by_age(last_week)
+    test = make_by_gender(last_week)
