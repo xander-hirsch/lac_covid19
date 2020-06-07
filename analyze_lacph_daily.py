@@ -1,3 +1,5 @@
+from typing import Iterable, Tuple
+
 import numpy as np
 import pandas as pd
 
@@ -125,6 +127,26 @@ def infer_pop(df_loc: pd.DataFrame, loc_type: str, loc_name: str):
         return np.nan
 
 
+def is_select_location(location_entry: pd.Series, locations: Iterable[Tuple[str, str]]) -> bool:
+    return (location_entry[const.LOC_CAT], location_entry[const.LOC_NAME]) in locations
+
+
+def aggregate_locations(df_all_loc: pd.DataFrame, locations: Iterable[Tuple[str, str]]) -> pd.DataFrame:
+    df_sel_loc = df_all_loc[df_all_loc.loc[:, (const.LOC_CAT, const.LOC_NAME)].apply(lambda x: is_select_location(x, locations), axis=1)]
+
+    aggregate_population = 0
+    for location in locations:
+        aggregate_population += infer_pop(df_sel_loc, location[0], location[1])
+
+    df_sel_loc = df_sel_loc.loc[:, (const.DATE, const.CASES)]
+    aggregate_cases = df_sel_loc.groupby(by=const.DATE).sum()
+
+    normalize = const.CASE_RATE_SCALE / aggregate_population
+    aggregate_cases[const.CASES_NORMALIZED] = (aggregate_cases[const.CASES] * normalize).round(2)
+
+    return aggregate_cases
+
+
 def make_by_age(pr_stats):
     data = {
         const.DATE: pd.to_datetime(tuple(map(lambda x: x[const.DATE], pr_stats))),
@@ -160,4 +182,7 @@ if __name__ == "__main__":
     # test = make_by_age(all_dates)
     # test = make_by_gender(all_dates)
     # test = single_day_loc(june_1)
-    test = make_by_loc(last_week)
+
+    selected_loc = ((const.CITY, 'Burbank'), (const.CITY, 'Glendale'))
+    df_loc_small = make_by_loc(last_week)
+    test = aggregate_locations(df_loc_small, selected_loc)
