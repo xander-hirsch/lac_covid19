@@ -18,6 +18,13 @@ def access_generic(*key_name):
     return dict_access
 
 
+def tidy_data(df: pd.DataFrame, var_desc: str, value_desc: str) -> pd.DataFrame:
+    df = df.melt(id_vars=const.DATE, var_name=var_desc, value_name=value_desc)
+    df[var_desc] = df[var_desc].astype('category')
+    df.sort_values(by=[const.DATE, var_desc], ignore_index=True, inplace=True)
+    return df
+
+
 def access_date(pr_stats):
     return pd.to_datetime(pr_stats[const.DATE], unit='D')
 
@@ -58,7 +65,10 @@ def single_day_race(pr_stats):
         }
         indiv_race.append(pd.DataFrame(data, index=(0,)))
 
-    return pd.concat(indiv_race, ignore_index=True)
+    df = pd.concat(indiv_race, ignore_index=True)
+    df[const.CASES] = df[const.CASES].convert_dtypes()
+    df[const.DEATHS] = df[const.DEATHS].convert_dtypes()
+    return df
 
 
 def make_by_race(pr_stats):
@@ -93,7 +103,7 @@ def make_by_age(pr_stats):
         const.AGE_41_65: map(lambda x: x[const.CASES_BY_AGE][const.AGE_41_65], pr_stats),
         const.AGE_OVER_65: map(lambda x: x[const.CASES_BY_AGE][const.AGE_OVER_65], pr_stats)
     }
-    return pd.DataFrame(data)
+    return tidy_data(pd.DataFrame(data), const.AGE_GROUP, const.CASES)
 
 
 def make_by_gender(pr_stats):
@@ -103,7 +113,7 @@ def make_by_gender(pr_stats):
         const.MALE: map(lambda x: x[const.CASES_BY_GENDER][const.MALE], pr_stats),
         const.FEMALE: map(lambda x: x[const.CASES_BY_GENDER][const.FEMALE], pr_stats)
     }
-    return pd.DataFrame(data)
+    return tidy_data(pd.DataFrame(data), const.GENDER, const.CASES)
 
 
 if __name__ == "__main__":
@@ -117,6 +127,6 @@ if __name__ == "__main__":
     june_1 = all_dates[63]
 
     # test = single_day_race(june_1)
-    # test = make_by_race(all_dates)
+    test = make_by_race(all_dates)
     # test = make_by_age(all_dates)
     # test = make_by_gender(all_dates)
