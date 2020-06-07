@@ -1,0 +1,12 @@
+name: la_covid_19
+dependencies:
+  - flake8
+  - rope
+  - ipython
+  - jupyterlab
+  - requests
+  - beautifulsoup4
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
