@@ -80,19 +80,34 @@ def make_by_race(pr_stats):
     return df
 
 
-def make_loc_ts(pr_stats, loc_type, loc_name):
-    num_copies = len(pr_stats)
-    data = {
-        const.DATE:
-            map(lambda x: pd.to_datetime(x[const.DATE]), pr_stats),
-        const.LOC_CAT: (loc_type,) * num_copies,
-        const.LOC_NAME: (loc_name,) * num_copies,
-        const.CASES:
-            map(lambda x: x[const.LOCATIONS][loc_type][loc_name][0], pr_stats),
-        const.CASES_NORMALIZED:
-            map(lambda x: x[const.LOCATIONS][loc_type][loc_name][1], pr_stats)
-    }
-    return pd.DataFrame(data)
+def single_day_loc(pr_stats):
+    record_date = pd.to_datetime(pr_stats[const.DATE])
+    df_indiv_cities = []
+
+    for loc_type in pr_stats[const.LOCATIONS]:
+        for loc_name in pr_stats[const.LOCATIONS][loc_type]:
+            loc_data = pr_stats[const.LOCATIONS][loc_type][loc_name]
+            data = {
+                const.DATE: record_date,
+                const.LOC_CAT: loc_type,
+                const.LOC_NAME: loc_name,
+                const.CASES: loc_data[0],
+                const.CASES_NORMALIZED: loc_data[1]
+            }
+            df_indiv_cities.append(pd.DataFrame(data, index=(0,)))
+
+    df = pd.concat(df_indiv_cities, ignore_index=True)
+    df[const.CASES] = df[const.CASES].convert_dtypes()
+    df[const.CASES_NORMALIZED] = df[const.CASES_NORMALIZED].convert_dtypes()
+    return df
+
+
+def make_by_loc(pr_stats):
+    all_dates = map(lambda x: single_day_loc(x), pr_stats)
+    df = pd.concat(all_dates, ignore_index=True)
+    df[const.LOC_CAT] = df[const.LOC_CAT] = df[const.LOC_CAT].astype('category')
+    df[const.LOC_NAME] = df[const.LOC_NAME].astype('category')
+    return df
 
 
 def make_by_age(pr_stats):
@@ -121,12 +136,13 @@ if __name__ == "__main__":
                       lacph_prid.DAILY_STATS))
 
     df = make_df_dates(all_dates)
-    burbank = make_loc_ts(all_dates, const.CITY, 'Burbank')
 
     last_week = all_dates[56:63]
     june_1 = all_dates[63]
 
     # test = single_day_race(june_1)
-    test = make_by_race(all_dates)
+    # test = make_by_race(all_dates)
     # test = make_by_age(all_dates)
     # test = make_by_gender(all_dates)
+    # test = single_day_loc(june_1)
+    test = make_by_loc(last_week)
