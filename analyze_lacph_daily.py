@@ -49,23 +49,20 @@ def single_day_race(pr_stats):
     for race in pr_stats[const.DEATHS_BY_RACE].keys():
         recorded_races.add(race)
 
-    # Ensure the data is present
-    if recorded_races:
-        for race in recorded_races:
-            data = {
-                const.DATE: pd.to_datetime(pr_stats[const.DATE]),
-                const.RACE: race,
-                const.CASES: pr_stats[const.CASES_BY_RACE].get(race, np.nan),
-                const.DEATHS: pr_stats[const.DEATHS_BY_RACE].get(race, np.nan)
-            }
-            indiv_race.append(pd.DataFrame(data, index=(0,)))
+    for race in recorded_races:
+        data = {
+            const.DATE: pd.to_datetime(pr_stats[const.DATE]),
+            const.RACE: race,
+            const.CASES: pr_stats[const.CASES_BY_RACE].get(race, np.nan),
+            const.DEATHS: pr_stats[const.DEATHS_BY_RACE].get(race, np.nan)
+        }
+        indiv_race.append(pd.DataFrame(data, index=(0,)))
 
-        return pd.concat(indiv_race, ignore_index=True)
-    else:
-        return None
+    return pd.concat(indiv_race, ignore_index=True)
 
 
 def make_by_race(pr_stats):
+    pr_stats = tuple(filter(lambda x: (x[const.CASES_BY_RACE] or x[const.DEATHS_BY_RACE]), pr_stats))
     per_day = tuple(map(lambda x: single_day_race(x), pr_stats))
     per_day = tuple(filter(lambda x: x is not None, per_day))
     df = pd.concat(per_day, ignore_index=True)
@@ -100,6 +97,7 @@ def make_by_age(pr_stats):
 
 
 def make_by_gender(pr_stats):
+    pr_stats = tuple(filter(lambda x: x[const.CASES_BY_GENDER], pr_stats))
     data = {
         const.DATE: pd.to_datetime(tuple(map(lambda x: x[const.DATE], pr_stats))),
         const.MALE: map(lambda x: x[const.CASES_BY_GENDER][const.MALE], pr_stats),
@@ -119,6 +117,6 @@ if __name__ == "__main__":
     june_1 = all_dates[63]
 
     # test = single_day_race(june_1)
-    # test = make_by_race(last_week)
-    # test = make_by_age(last_week)
-    test = make_by_gender(last_week)
+    # test = make_by_race(all_dates)
+    # test = make_by_age(all_dates)
+    # test = make_by_gender(all_dates)
