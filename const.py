@@ -34,6 +34,11 @@ CASE_RATE_SCALE = 100_000
 
 LOC_CAT = 'Category'
 LOC_NAME = 'Name'
+LOC_POP = 'Population'
+
+# US Census estimates as of 1 July 2019
+POPULATION_LONG_BEACH = 462_628
+POPULATION_PASADENA = 141_029
 
 
 def stat_by_group(stat: str, group: str) -> str:

@@ -110,6 +110,21 @@ def make_by_loc(pr_stats):
     return df
 
 
+def infer_pop(df_loc: pd.DataFrame, loc_type: str, loc_name: str):
+    if loc_type == const.CITY:
+        if loc_name == 'Long Beach':
+            return const.POPULATION_LONG_BEACH
+        elif loc_name == 'Pasadena':
+            return const.POPULATION_PASADENA
+    df_loc = df_loc[(df_loc[const.LOC_CAT] == loc_type) & (df_loc[const.LOC_NAME] == loc_name) & (df_loc[const.CASES] > 0)]
+    pop_estimation = df_loc[const.CASES] / df_loc[const.CASES_NORMALIZED] * const.CASE_RATE_SCALE
+    pop_estimation = pop_estimation.round(0)
+    try:
+        return pop_estimation.median()
+    except ValueError:
+        return np.nan
+
+
 def make_by_age(pr_stats):
     data = {
         const.DATE: pd.to_datetime(tuple(map(lambda x: x[const.DATE], pr_stats))),
