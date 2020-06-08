@@ -92,7 +92,7 @@ REGION = {
         (LOS_ANGELES, 'Brookside'),
         (LOS_ANGELES, 'Cadillac-Corning'),
         (LOS_ANGELES, 'Carthay'),
-        (LOS_ANGELES, 'Central')
+        (LOS_ANGELES, 'Central'),
         (LOS_ANGELES, 'Chinatown'),
         (LOS_ANGELES, 'Cloverdale/Cochran'),
         (LOS_ANGELES, 'Country Club Park'),
