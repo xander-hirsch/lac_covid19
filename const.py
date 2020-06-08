@@ -28,6 +28,8 @@ LOCATIONS = LOCATION + 's'
 CITY = 'City'
 LOS_ANGELES = 'Los Angeles'
 UNINC = 'Unincorporated'
+LONG_BEACH = 'Long Beach'
+PASADENA = 'Pasadena'
 
 CASES_NORMALIZED = CASES + ' per 100,000'
 CASE_RATE_SCALE = 100_000
@@ -52,23 +54,58 @@ CASES_BY_AGE = stat_by_group(CASES, AGE_GROUP)
 CASES_BY_GENDER = stat_by_group(CASES, GENDER)
 
 REGION = {
-    'Angeles Forest': (),
+    'Angeles Forest': (
+        (LOS_ANGELES, 'Angeles National Forest')
+    ),
     'Antelope Valley': (
         (CITY, 'Lancaster'),
         (CITY, 'Palmdale')
     ),
     'Central LA': (
-        (CITY, 'West Hollywood')
+        (CITY, 'West Hollywood'),
+        (LOS_ANGELES, 'Carthay'),
+        (LOS_ANGELES, 'Chinatown'),
+        (LOS_ANGELES, 'Downtown'),
+        (LOS_ANGELES, 'East Hollywood'),
+        (LOS_ANGELES, 'Echo Park'),
+        (LOS_ANGELES, 'Elysian Park'),
+        (LOS_ANGELES, 'Elysian Valley'),
+        (LOS_ANGELES, 'Exposition Park'),
+        (LOS_ANGELES, 'Hancock Park'),
+        (LOS_ANGELES, 'Harvard Heights'),
+        (LOS_ANGELES, 'Hollywood'),
+        (LOS_ANGELES, 'Hollywood Hills'),
+        (LOS_ANGELES, 'Koreatown'),
+        (LOS_ANGELES, 'Los Feliz'),
+        (LOS_ANGELES, 'Mid-city'),
+        (LOS_ANGELES, 'Pico-Union'),
+        (LOS_ANGELES, 'Silverlake'),
+        (LOS_ANGELES, 'Westlake')
     ),
-    'Eastside': (),
+    'Eastside': (
+        (LOS_ANGELES, 'Boyle Heights'),
+        (LOS_ANGELES, 'El Sereno'),
+        (LOS_ANGELES, 'Lincoln Heights')
+    ),
     'Harbor': (
         (CITY, 'Avalon'),
         (CITY, 'Carson'),
         (CITY, 'Hawaiian Gardens'),
         (CITY, 'Lakewood'),
-        (CITY, 'Signal Hill')
+        (CITY, 'Signal Hill'),
+        (CITY, LONG_BEACH),
+        (LOS_ANGELES, 'Harbor City'),
+        (LOS_ANGELES, 'Harbor Gateway'),
+        (LOS_ANGELES, 'San Pedro'),
+        (LOS_ANGELES, 'Wilmington')
     ),
-    'Northeast LA': (),
+    'Northeast LA': (
+        (LOS_ANGELES, 'Atwater Village'),
+        (LOS_ANGELES, 'Eagle Rock'),
+        (LOS_ANGELES, 'Glassell Park'),
+        (LOS_ANGELES, 'Highland Park'),
+        (LOS_ANGELES, 'Mt. Washington')
+    ),
     'Northwest County': (
         (CITY, 'Santa Clarita')
     ),
@@ -79,7 +116,35 @@ REGION = {
     ),
     'San Fernando Valley': (
         (CITY, 'Burbank'),
-        (CITY, 'San Fernando')
+        (CITY, 'San Fernando'),
+        (LOS_ANGELES, 'Arleta'),
+        (LOS_ANGELES, 'Canoga Park'),
+        (LOS_ANGELES, 'Chatsworth'),
+        (LOS_ANGELES, 'Encino'),
+        (LOS_ANGELES, 'Granada Hills'),
+        (LOS_ANGELES, 'Lake Balboa'),
+        (LOS_ANGELES, 'Lakeview Terrace'),
+        (LOS_ANGELES, 'Mission Hills'),
+        (LOS_ANGELES, 'North Hills'),
+        (LOS_ANGELES, 'North Hollywood'),
+        (LOS_ANGELES, 'Northridge'),
+        (LOS_ANGELES, 'Pacoima'),
+        (LOS_ANGELES, 'Panorama City'),
+        (LOS_ANGELES, 'Porter Ranch'),
+        (LOS_ANGELES, 'Reseda'),
+        (LOS_ANGELES, 'Shadow Hills'),
+        (LOS_ANGELES, 'Sherman Oaks'),
+        (LOS_ANGELES, 'Studio City'),
+        (LOS_ANGELES, 'Sun Valley'),
+        (LOS_ANGELES, 'Sylmar'),
+        (LOS_ANGELES, 'Tarzana'),
+        (LOS_ANGELES, 'Toluca Lake'),
+        (LOS_ANGELES, 'Valley Glen'),
+        (LOS_ANGELES, 'Valley Village'),
+        (LOS_ANGELES, 'Van Nuys'),
+        (LOS_ANGELES, 'West Hills'),
+        (LOS_ANGELES, 'Winnetka'),
+        (LOS_ANGELES, 'Woodland Hills')
     ),
     'San Gabriel Valley': (
         (CITY, 'Alhambra'),
@@ -131,9 +196,28 @@ REGION = {
         (CITY, 'Redondo Beach'),
         (CITY, 'Rolling Hills'),
         (CITY, 'Rolling Hills Estates'),
-        (CITY, 'Torrance')
+        (CITY, 'Torrance'),
+        (LOS_ANGELES, 'Playa Del Rey'),
+        (LOS_ANGELES, 'Westchester')
     ),
-    'South LA': (),
+    'South LA': (
+        (LOS_ANGELES, 'Adams-Normandie'),
+        (LOS_ANGELES, 'Baldwin Hills'),
+        (LOS_ANGELES, 'Florence-Firestone'),
+        (LOS_ANGELES, 'Green Meadows'),
+        (LOS_ANGELES, 'Harvard Park'),
+        (LOS_ANGELES, 'Hyde Park'),
+        (LOS_ANGELES, 'Jefferson Park'),
+        (LOS_ANGELES, 'Leimert Park'),
+        (LOS_ANGELES, 'Manchester Square'),
+        (LOS_ANGELES, 'South Park'),
+        (LOS_ANGELES, 'University Park'),
+        (LOS_ANGELES, 'Vermont Knolls'),
+        (LOS_ANGELES, 'Vermont Square'),
+        (LOS_ANGELES, 'Vermont Vista'),
+        (LOS_ANGELES, 'Watts'),
+        (LOS_ANGELES, 'West Adams')
+    ),
     'Southeast': (
         (CITY, 'Artesia'),
         (CITY, 'Bell'),
@@ -158,11 +242,29 @@ REGION = {
     ),
     'Verdugos': (
         (CITY, 'Glendale'),
-        (CITY, 'La Canada Flintridge')
+        (CITY, 'La Canada Flintridge'),
+        (CITY, PASADENA),
+        (CITY, 'Sunland'),
+        (LOS_ANGELES, 'Tujunga')
     ),
     'Westside': (
         (CITY, 'Beverly Hills'),
         (CITY, 'Culver City'),
-        (CITY, 'Santa Monica')
+        (CITY, 'Santa Monica'),
+        (LOS_ANGELES, 'Bel Air'),
+        (LOS_ANGELES, 'Beverly Crest'),
+        (LOS_ANGELES, 'Beverlywood'),
+        (LOS_ANGELES, 'Brentwood'),
+        (LOS_ANGELES, 'Century City'),
+        (LOS_ANGELES, 'Cheviot Hills'),
+        (LOS_ANGELES, 'Del Rey'),
+        (LOS_ANGELES, 'Mar Vista'),
+        (LOS_ANGELES, 'Pacific Palisades'),
+        (LOS_ANGELES, 'Palms'),
+        (LOS_ANGELES, 'Playa Vista'),
+        (LOS_ANGELES, 'Rancho Park'),
+        (LOS_ANGELES, 'Venice'),
+        (LOS_ANGELES, 'West Los Angeles'),
+        (LOS_ANGELES, 'Westwood')
     )
 }
