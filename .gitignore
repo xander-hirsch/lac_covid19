@@ -7,3 +7,5 @@ cached-daily-pr/.ipynb_checkpoints/*
 
 parsed-daily-pr/*.json
 parsed-daily-pr/.ipynb_checkpoints/*
+
+*.pickle

@@ -1,3 +1,4 @@
+import os.path
 from typing import Iterable, Tuple
 
 import numpy as np
@@ -104,11 +105,19 @@ def single_day_loc(pr_stats):
     return df
 
 
-def make_by_loc(pr_stats):
-    all_dates = map(lambda x: single_day_loc(x), pr_stats)
-    df = pd.concat(all_dates, ignore_index=True)
-    df[const.LOC_CAT] = df[const.LOC_CAT] = df[const.LOC_CAT].astype('category')
-    df[const.LOC_NAME] = df[const.LOC_NAME].astype('category')
+def make_by_loc(pr_stats, use_cached=True):
+    FILENAME = 'location-cases.pickle'
+    ABS_PATH = os.path.join(os.path.dirname(__file__), FILENAME)
+    df = None
+    if use_cached and os.path.isfile(ABS_PATH):
+        df = pd.read_pickle(ABS_PATH)
+    else:
+        all_dates = map(lambda x: single_day_loc(x), pr_stats)
+        df = pd.concat(all_dates, ignore_index=True)
+        df[const.LOC_CAT] = df[const.LOC_CAT] = df[const.LOC_CAT].astype('category')
+        df[const.LOC_NAME] = df[const.LOC_NAME].astype('category')
+        df.to_pickle(ABS_PATH)
+
     return df
 
 
@@ -172,17 +181,11 @@ if __name__ == "__main__":
     all_dates = tuple(map(lambda x: scrape_lacph_daily.query_single_date(x),
                       lacph_prid.DAILY_STATS))
 
-    df = make_df_dates(all_dates)
+    last_week = all_dates[-7:-1]
+    june_2 = all_dates[64]
 
-    last_week = all_dates[56:63]
-    june_1 = all_dates[63]
-
-    # test = single_day_race(june_1)
-    # test = make_by_race(all_dates)
-    # test = make_by_age(all_dates)
-    # test = make_by_gender(all_dates)
-    # test = single_day_loc(june_1)
+    df_location = make_by_loc(all_dates)
+    df_aggregate = make_df_dates(all_dates)
 
     selected_loc = ((const.CITY, 'Burbank'), (const.CITY, 'Glendale'))
-    df_loc_small = make_by_loc(last_week)
-    test = aggregate_locations(df_loc_small, selected_loc)
+    test = aggregate_locations(df_location, selected_loc)
