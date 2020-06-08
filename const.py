@@ -55,11 +55,22 @@ CASES_BY_GENDER = stat_by_group(CASES, GENDER)
 
 REGION = {
     'Angeles Forest': (
-        (LOS_ANGELES, 'Angeles National Forest')
+        (LOS_ANGELES, 'Angeles National Forest'),
+        (UNINC, 'Angeles National Forest')
     ),
     'Antelope Valley': (
         (CITY, 'Lancaster'),
-        (CITY, 'Palmdale')
+        (CITY, 'Palmdale'),
+        (UNINC, 'Acton'),
+        (UNINC, 'East Lancaster'),
+        (UNINC, 'Leona Valley'),
+        (UNINC, 'Littlerock'),
+        (UNINC, 'Littlerock/Juniper Hills'),
+        (UNINC, 'Littlerock/Pearblossom'),
+        (UNINC, 'North Lancaster'),
+        (UNINC, 'Palmdale'),
+        (UNINC, 'Quartz Hill'),
+        (UNINC, 'Sun Village')
     ),
     'Central LA': (
         (CITY, 'West Hollywood'),
@@ -85,7 +96,8 @@ REGION = {
     'Eastside': (
         (LOS_ANGELES, 'Boyle Heights'),
         (LOS_ANGELES, 'El Sereno'),
-        (LOS_ANGELES, 'Lincoln Heights')
+        (LOS_ANGELES, 'Lincoln Heights'),
+        (UNINC, 'East Los Angeles')
     ),
     'Harbor': (
         (CITY, 'Avalon'),
@@ -97,7 +109,11 @@ REGION = {
         (LOS_ANGELES, 'Harbor City'),
         (LOS_ANGELES, 'Harbor Gateway'),
         (LOS_ANGELES, 'San Pedro'),
-        (LOS_ANGELES, 'Wilmington')
+        (LOS_ANGELES, 'Wilmington'),
+        (UNINC, 'Harbor Gateway'),
+        (UNINC, 'Lakewood'),
+        (UNINC, 'Rancho Dominguez'),
+        (UNINC, 'West Carson')
     ),
     'Northeast LA': (
         (LOS_ANGELES, 'Atwater Village'),
@@ -107,12 +123,20 @@ REGION = {
         (LOS_ANGELES, 'Mt. Washington')
     ),
     'Northwest County': (
-        (CITY, 'Santa Clarita')
+        (CITY, 'Santa Clarita'),
+        (UNINC, 'Agua Dulce'),
+        (UNINC, 'Castaic'),
+        (UNINC, 'Elizabeth Lake'),
+        (UNINC, 'Stevenson Ranch'),
+        (UNINC, 'Val Verde')
     ),
     'Pomona Valley': (
         (CITY, 'Claremont'),
         (CITY, 'La Verne'),
-        (CITY, 'Pomona')
+        (CITY, 'Pomona'),
+        (UNINC, 'Claremont'),
+        (UNINC, 'La Verne'),
+        (UNINC, 'Pomona')
     ),
     'San Fernando Valley': (
         (CITY, 'Burbank'),
@@ -173,14 +197,37 @@ REGION = {
         (CITY, 'Temple City'),
         (CITY, 'Walnut'),
         (CITY, 'West Covina'),
-        (CITY, 'Whittier')
+        (CITY, 'Whittier'),
+        (UNINC, 'Arcadia'),
+        (UNINC, 'Avocado Heights'),
+        (UNINC, 'Azusa'),
+        (UNINC, 'Bradbury'),
+        (UNINC, 'Charter Oak'),
+        (UNINC, 'Covina'),
+        (UNINC, 'Covina (Charter Oak)'),
+        (UNINC, 'Duarte'),
+        (UNINC, 'East Covina'),
+        (UNINC, 'East Pasadena'),
+        (UNINC, 'El Monte'),
+        (UNINC, 'Glendora'),
+        (UNINC, 'Hacienda Heights'),
+        (UNINC, 'La Habra Heights'),
+        (UNINC, 'Monrovia'),
+        (UNINC, 'North Whittier'),
+        (UNINC, 'Rowland Heights'),
+        (UNINC, 'San Pasqual'),
+        (UNINC, 'Valinda'),
+        (UNINC, 'West Puente Valley'),
+        (UNINC, 'Whittier'),
+        (UNINC, 'Whittier Narrows')
     ),
     'Santa Monica Mountains': (
         (CITY, 'Agoura Hills'),
         (CITY, 'Calabasas'),
         (CITY, 'Hidden Hills'),
         (CITY, 'Malibu'),
-        (CITY, 'Westlake Village')
+        (CITY, 'Westlake Village'),
+        (UNINC, 'Santa Monica Mountains')
     ),
     'South Bay': (
         (CITY, 'El Segundo'),
@@ -198,7 +245,10 @@ REGION = {
         (CITY, 'Rolling Hills Estates'),
         (CITY, 'Torrance'),
         (LOS_ANGELES, 'Playa Del Rey'),
-        (LOS_ANGELES, 'Westchester')
+        (LOS_ANGELES, 'Westchester'),
+        (UNINC, 'Del Aire'),
+        (UNINC, 'Hawthorne'),
+        (UNINC, 'Lennox')
     ),
     'South LA': (
         (LOS_ANGELES, 'Adams-Normandie'),
@@ -216,7 +266,9 @@ REGION = {
         (LOS_ANGELES, 'Vermont Square'),
         (LOS_ANGELES, 'Vermont Vista'),
         (LOS_ANGELES, 'Watts'),
-        (LOS_ANGELES, 'West Adams')
+        (LOS_ANGELES, 'West Adams'),
+        (UNINC, 'Florence-Firestone'),
+        (UNINC, 'Willowbrook')
     ),
     'Southeast': (
         (CITY, 'Artesia'),
@@ -238,14 +290,20 @@ REGION = {
         (CITY, 'Pico Rivera'),
         (CITY, 'Santa Fe Springs'),
         (CITY, 'South Gate'),
-        (CITY, 'Vernon')
+        (CITY, 'Vernon'),
+        (UNINC, 'Cerritos'),
+        (UNINC, 'East La Mirada'),
+        (UNINC, 'Walnut Park'),
+        (UNINC, 'West Whittier/Los Nietos')
     ),
     'Verdugos': (
         (CITY, 'Glendale'),
         (CITY, 'La Canada Flintridge'),
         (CITY, PASADENA),
         (CITY, 'Sunland'),
-        (LOS_ANGELES, 'Tujunga')
+        (LOS_ANGELES, 'Tujunga'),
+        (UNINC, 'Altadena'),
+        (UNINC, 'La Crescenta-Montrose')
     ),
     'Westside': (
         (CITY, 'Beverly Hills'),
@@ -265,6 +323,9 @@ REGION = {
         (LOS_ANGELES, 'Rancho Park'),
         (LOS_ANGELES, 'Venice'),
         (LOS_ANGELES, 'West Los Angeles'),
-        (LOS_ANGELES, 'Westwood')
+        (LOS_ANGELES, 'Westwood'),
+        (UNINC, 'Del Rey'),
+        (UNINC, 'Marina del Rey'),
+        (UNINC, 'West LA')
     )
 }
