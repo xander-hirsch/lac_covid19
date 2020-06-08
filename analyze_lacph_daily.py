@@ -127,13 +127,10 @@ def infer_pop(df_loc: pd.DataFrame, loc_type: str, loc_name: str):
             return const.POPULATION_LONG_BEACH
         elif loc_name == 'Pasadena':
             return const.POPULATION_PASADENA
-    df_loc = df_loc[(df_loc[const.LOC_CAT] == loc_type) & (df_loc[const.LOC_NAME] == loc_name) & (df_loc[const.CASES] > 0)]
+    df_loc = df_loc[(df_loc[const.LOC_CAT] == loc_type) & (df_loc[const.LOC_NAME] == loc_name)]
     pop_estimation = df_loc[const.CASES] / df_loc[const.CASES_NORMALIZED] * const.CASE_RATE_SCALE
     pop_estimation = pop_estimation.round(0)
-    try:
-        return pop_estimation.median()
-    except ValueError:
-        return np.nan
+    return pop_estimation.median()
 
 
 def is_select_location(location_entry: pd.Series, locations: Iterable[Tuple[str, str]]) -> bool:
@@ -141,10 +138,18 @@ def is_select_location(location_entry: pd.Series, locations: Iterable[Tuple[str,
 
 
 def aggregate_locations(df_all_loc: pd.DataFrame, locations: Iterable[Tuple[str, str]]) -> pd.DataFrame:
-    df_sel_loc = df_all_loc[df_all_loc.loc[:, (const.LOC_CAT, const.LOC_NAME)].apply(lambda x: is_select_location(x, locations), axis=1)]
+    # Filter, keeping only the selected locations
+    selected_loc_bool = df_all_loc.loc[:, (const.LOC_CAT, const.LOC_NAME)].apply(lambda x: is_select_location(x, locations), axis=1)
+    df_sel_loc = df_all_loc[selected_loc_bool]
+    # Filter, removing locations with unknown population sizes
+    known_pop_bool = df_sel_loc.loc[:, const.CASES] > 0
+    df_sel_loc = df_sel_loc[known_pop_bool]
+
+    # Recompute the locations represented in the region
+    represented_loc = df_sel_loc.apply(lambda x: (x[const.LOC_CAT], x[const.LOC_NAME]), axis=1).unique()
 
     aggregate_population = 0
-    for location in locations:
+    for location in represented_loc:
         aggregate_population += infer_pop(df_sel_loc, location[0], location[1])
 
     df_sel_loc = df_sel_loc.loc[:, (const.DATE, const.CASES)]
@@ -187,5 +192,4 @@ if __name__ == "__main__":
     df_location = make_by_loc(all_dates)
     df_aggregate = make_df_dates(all_dates)
 
-    selected_loc = ((const.CITY, 'Burbank'), (const.CITY, 'Glendale'))
-    test = aggregate_locations(df_location, selected_loc)
+    test = aggregate_locations(df_location, const.REGION['San Gabriel Valley'])
