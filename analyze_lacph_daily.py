@@ -166,9 +166,14 @@ def location_cases_comparison(df_all_loc: pd.DataFrame, region_def: Dict[str, Tu
     region_time_series = {}
     for region in region_def:
         df_indiv_region = aggregate_locations(df_all_loc, region_def[region])
-        # df_indiv_region[REGION] = pd.Series(region).repeat(df_indiv_region.shape[0])
+        region_name = pd.Series(region, name=REGION, dtype='string').repeat(df_indiv_region.shape[0]).reset_index(drop=True)
+        df_indiv_region = pd.concat((df_indiv_region, region_name), axis=1)
+        df_indiv_region = df_indiv_region[[const.DATE, REGION, const.CASES_NORMALIZED]]
         region_time_series[region] = df_indiv_region
-    return region_time_series
+    df_all_regions = pd.concat(region_time_series.values())
+    df_all_regions[REGION] = df_all_regions[REGION].astype('category')
+    df_all_regions.sort_values(by=const.DATE, ignore_index=True, inplace=True)
+    return df_all_regions
 
 
 def make_by_age(pr_stats):
@@ -208,5 +213,5 @@ if __name__ == "__main__":
     WS = 'Westside'
     sample_regions = {SFV: const.REGION[SFV], WS: const.REGION[WS]}
     region_ts = location_cases_comparison(df_location, sample_regions)
-    df_sfv = region_ts[SFV]
-    sfv_series = pd.Series(SFV).repeat(df_sfv.size[0]).reset_index()
+    # df_sfv = region_ts[SFV]
+    # sfv_series = pd.Series(SFV, name='Region', dtype='string').repeat(df_sfv.shape[0]).reset_index(drop=True)
