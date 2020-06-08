@@ -1,5 +1,5 @@
 import os.path
-from typing import Iterable, Tuple
+from typing import Dict, Iterable, Tuple
 
 import numpy as np
 import pandas as pd
@@ -158,7 +158,17 @@ def aggregate_locations(df_all_loc: pd.DataFrame, locations: Iterable[Tuple[str,
     normalize = const.CASE_RATE_SCALE / aggregate_population
     aggregate_cases[const.CASES_NORMALIZED] = (aggregate_cases[const.CASES] * normalize).round(2)
 
-    return aggregate_cases
+    return aggregate_cases.reset_index()
+
+
+def location_cases_comparison(df_all_loc: pd.DataFrame, region_def: Dict[str, Tuple[str, str]]) -> pd.DataFrame:
+    REGION = 'Region'
+    region_time_series = {}
+    for region in region_def:
+        df_indiv_region = aggregate_locations(df_all_loc, region_def[region])
+        # df_indiv_region[REGION] = pd.Series(region).repeat(df_indiv_region.shape[0])
+        region_time_series[region] = df_indiv_region
+    return region_time_series
 
 
 def make_by_age(pr_stats):
@@ -193,3 +203,10 @@ if __name__ == "__main__":
     df_aggregate = make_df_dates(all_dates)
 
     test = aggregate_locations(df_location, const.REGION['San Gabriel Valley'])
+
+    SFV = 'San Fernando Valley'
+    WS = 'Westside'
+    sample_regions = {SFV: const.REGION[SFV], WS: const.REGION[WS]}
+    region_ts = location_cases_comparison(df_location, sample_regions)
+    df_sfv = region_ts[SFV]
+    sfv_series = pd.Series(SFV).repeat(df_sfv.size[0]).reset_index()
