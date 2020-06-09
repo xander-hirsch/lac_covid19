@@ -7,8 +7,8 @@ from typing import Any, Callable, Dict, List, Tuple, Union
 import bs4
 import requests
 
-import gla_covid_19.const as const
-import gla_covid_19.lacph_prid as lacph_prid
+import lac_covid19.const as const
+import lac_covid19.lacph_prid as lacph_prid
 
 
 LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='

@@ -1,4 +1,4 @@
-name: la_covid_19
+name: lac_covid19
 dependencies:
   - flake8
   - rope

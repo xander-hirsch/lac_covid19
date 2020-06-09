@@ -4,9 +4,9 @@ from typing import Dict, Iterable, Tuple
 import numpy as np
 import pandas as pd
 
-import gla_covid_19.const as const
-import gla_covid_19.lacph_prid as lacph_prid
-import gla_covid_19.scrape_daily_stats as scrape_daily_stats
+import lac_covid19.const as const
+import lac_covid19.lacph_prid as lacph_prid
+import lac_covid19.scrape_daily_stats as scrape_daily_stats
 
 
 def access_generic(*key_name):
