@@ -6,7 +6,7 @@ import pandas as pd
 
 import gla_covid_19.const as const
 import gla_covid_19.lacph_prid as lacph_prid
-import gla_covid_19.scrape_lacph_daily as scrape_lacph_daily
+import gla_covid_19.scrape_daily_stats as scrape_daily_stats
 
 
 def access_generic(*key_name):
@@ -198,7 +198,7 @@ def make_by_gender(pr_stats):
 
 
 if __name__ == "__main__":
-    all_dates = tuple(map(lambda x: scrape_lacph_daily.query_single_date(x),
+    all_dates = tuple(map(lambda x: scrape_daily_stats.query_single_date(x),
                       lacph_prid.DAILY_STATS))
 
     last_week = all_dates[-7:-1]
