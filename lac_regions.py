@@ -3,6 +3,7 @@ REGION = {
         'Los Angeles - Angeles National Forest',
         'Unincorporated - Angeles National Forest',
         'Unincorporated - Kagel/Lopez Canyons',
+        'Unincorporated - Placerita Canyon',
         'Unincorporated - Sand Canyon'
     ),
     'Antelope Valley': (
@@ -26,6 +27,7 @@ REGION = {
         'Unincorporated - Quartz Hill',
         'Unincorporated - Roosevelt',
         'Unincorporated - South Antelope Valley',
+        'Unincorporated - South Edwards',
         'Unincorporated - Southeast Antelope Valley',
         'Unincorporated - Sun Village',
         'Unincorporated - West Antelope Valley',
@@ -64,6 +66,7 @@ REGION = {
         'Los Angeles - Melrose',
         'Los Angeles - Miracle Mile',
         'Los Angeles - Mid-city',
+        'Los Angeles - Park La Brea',
         'Los Angeles - Pico-Union',
         'Los Angeles - Regent Square',
         'Los Angeles - Reynier Village',
@@ -82,6 +85,7 @@ REGION = {
         'Unincorporated - Miracle Mile'
     ),
     'Eastside': (
+        'Unincorporated - Bandini Islands',
         'Los Angeles - Boyle Heights',
         'Los Angeles - El Sereno',
         'Los Angeles - Lincoln Heights',
@@ -103,6 +107,7 @@ REGION = {
         'Unincorporated - Harbor Gateway',
         'Unincorporated - La Rambla',
         'Unincorporated - Lakewood',
+        'Unincorporated - Long Beach',
         'Unincorporated - Rancho Dominguez',
         'Unincorporated - San Clemente Island',
         'Unincorporated - Santa Catalina Island',
@@ -139,6 +144,7 @@ REGION = {
         'City of Pomona',
         'Unincorporated - Claremont',
         'Unincorporated - La Verne',
+        'Unincorporated - Padua Hills',
         'Unincorporated - Pomona'
     ),
     'San Fernando Valley': (
@@ -176,6 +182,7 @@ REGION = {
         'Los Angeles - Winnetka',
         'Los Angeles - Woodland Hills',
         'Unincorporated - Lake Manor',
+        'Unincorporated - Universal City',
         'Unincorporated - West Chatsworth',
         'Unincorporated - Westhills'
     ),
@@ -234,6 +241,7 @@ REGION = {
         'Unincorporated - South San Gabriel',
         'Unincorporated - Sunrise Village',
         'Unincorporated - Valinda',
+        'Unincorporated - Walnut',
         'Unincorporated - West Puente Valley',
         'Unincorporated - Whittier',
         'Unincorporated - Whittier Narrows'
@@ -268,6 +276,7 @@ REGION = {
         'Unincorporated - Hawthorne',
         'Unincorporated - Lennox',
         'Unincorporated - Palos Verdes Peninsula',
+        'Unincorporated - Westfield/Academy Hills',
         'Unincorporated - Wiseburn'
     ),
     'South LA': (
@@ -327,8 +336,10 @@ REGION = {
         'Unincorporated - Cerritos',
         'Unincorporated - East La Mirada',
         'Unincorporated - East Whittier',
+        'Unincorporated - Lynwood',
         'Unincorporated - Rosewood',
         'Unincorporated - Rosewood/West Rancho Dominguez',
+        'Unincorporated - South Whittier',
         'Unincorporated - Walnut Park',
         'Unincorporated - West Whittier/Los Nietos'
     ),
@@ -337,6 +348,7 @@ REGION = {
         'City of La Canada Flintridge',
         'City of Sunland',
         'City of Pasadena',
+        'Los Angeles - Sunland',
         'Los Angeles - Tujunga',
         'Unincorporated - Altadena',
         'Unincorporated - La Crescenta-Montrose'
@@ -369,3 +381,9 @@ REGION = {
         'Unincorporated - West LA'
     )
 }
+
+REGION_MAP = {}
+for region in REGION:
+    for area in REGION[region]:
+        REGION_MAP[area] = region
+REGION_MAP['Los Angeles'] = None

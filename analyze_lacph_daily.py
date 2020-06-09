@@ -8,7 +8,10 @@ import pandas as pd
 import lac_covid19.cache_mgmt as cache_mgmt
 import lac_covid19.const as const
 import lac_covid19.lacph_prid as lacph_prid
+import lac_covid19.lac_regions as lac_regions
 import lac_covid19.scrape_daily_stats as scrape_daily_stats
+
+REGION = 'Region'
 
 
 def query_all_dates(use_cached: bool = True) -> Tuple[Dict[str, Any]]:
@@ -106,24 +109,12 @@ def make_by_race(pr_stats):
 
 
 def single_day_loc(pr_stats):
-    record_date = pd.to_datetime(pr_stats[const.DATE])
-    df_indiv_cities = []
-
-    for loc_type in pr_stats[const.LOCATIONS]:
-        for loc_name in pr_stats[const.LOCATIONS][loc_type]:
-            loc_data = pr_stats[const.LOCATIONS][loc_type][loc_name]
-            data = {
-                const.DATE: record_date,
-                const.LOC_CAT: loc_type,
-                const.LOC_NAME: loc_name,
-                const.CASES: loc_data[0],
-                const.CASES_NORMALIZED: loc_data[1]
-            }
-            df_indiv_cities.append(pd.DataFrame(data, index=(0,)))
-
-    df = pd.concat(df_indiv_cities, ignore_index=True)
+    df = pd.DataFrame(pr_stats[const.LOCATIONS], columns=(const.LOC_NAME, const.CASES, const.CASES_NORMALIZED))
     df[const.CASES] = df[const.CASES].convert_dtypes()
-    df[const.CASES_NORMALIZED] = df[const.CASES_NORMALIZED].convert_dtypes()
+    record_date = pd.Series(pd.to_datetime(pr_stats[const.DATE])).repeat(df.shape[0]).reset_index(drop=True)
+    df[const.DATE] = record_date
+    df[REGION] = df.apply(lambda x: lac_regions.REGION_MAP.get(x[const.LOC_NAME], None), axis='columns').astype('string')
+    df = df[[const.DATE, REGION, const.LOC_NAME, const.CASES, const.CASES_NORMALIZED]]
     return df
 
 
@@ -136,7 +127,7 @@ def make_by_loc(pr_stats, use_cached=True):
     else:
         all_dates = map(lambda x: single_day_loc(x), pr_stats)
         df = pd.concat(all_dates, ignore_index=True)
-        df[const.LOC_CAT] = df[const.LOC_CAT] = df[const.LOC_CAT].astype('category')
+        df[REGION] = df[REGION].astype('category')
         df[const.LOC_NAME] = df[const.LOC_NAME].astype('category')
         df.to_pickle(ABS_PATH)
 
@@ -224,6 +215,9 @@ if __name__ == "__main__":
 
     last_week = all_dates[-7:]
     june_2 = all_dates[64]
+    today = all_dates[-1]
+
+    one_day_loc = single_day_loc(today)
 
     # df_location = make_by_loc(all_dates)
     # df_aggregate = make_df_dates(all_dates)
