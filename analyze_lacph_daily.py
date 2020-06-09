@@ -194,6 +194,45 @@ def location_cases_comparison(df_all_loc: pd.DataFrame, region_def: Dict[str, Tu
     return df_all_regions
 
 
+def location_some_decrease(df_location, days_back):
+    start_date = df_location[const.DATE].max() - pd.Timedelta(days=days_back)
+    df_location = df_location[df_location[const.DATE] >= start_date]
+    all_locations = df_location[const.LOC_NAME].unique()
+    some_decreases = tuple(filter(
+        lambda x: not (
+            df_location[df_location[const.LOC_NAME] == x]
+            .loc[:, const.CASES].is_monotonic_increasing),
+        all_locations
+    ))
+    return some_decreases
+
+
+def area_slowed_increase(df_area_ts: pd.DataFrame, location: str, days_back: int, threshold: float) -> Tuple[str]:
+    MIN_CASES = 'Minimum Cases'
+    MAX_CASES = 'Maximum Cases'
+    CURR_CASES = 'Current Cases'
+    PROP_INC = 'Proportion Increase'
+    # Filter to provided time frame
+    start_date = df_area_ts[const.DATE].max() - pd.Timedelta(days=days_back)
+    df_area_ts = (
+        df_area_ts[df_area_ts[const.DATE] >= start_date]
+        .loc[:, [location, const.CASES]])
+    # Compute summary stats for each area
+    area_group = df_area_ts.groupby(location)
+    df_min_cases = area_group.min().rename(columns={const.CASES: MIN_CASES})
+    df_max_cases = area_group.max().rename(columns={const.CASES: MAX_CASES})
+    df_curr_cases = area_group.last().rename(columns={const.CASES: CURR_CASES})
+    # Construct the dataframe to use for analysis
+    area_cases = (
+        pd.concat((df_min_cases, df_max_cases, df_curr_cases), axis='columns')
+        .reset_index())
+    # Compute relative case increase over duration
+    area_cases[PROP_INC] = (area_cases[MAX_CASES] - area_cases[MIN_CASES]) / area_cases[CURR_CASES]
+    # Keep only area under threshold
+    area_cases = area_cases[area_cases[PROP_INC] < threshold]
+    return area_cases[location].astype('string')
+
+
 def make_by_age(pr_stats):
     data = {
         const.DATE: pd.to_datetime(tuple(map(lambda x: x[const.DATE], pr_stats))),
@@ -226,9 +265,11 @@ if __name__ == "__main__":
 
     df_location = make_by_loc(all_dates)
     # df_aggregate = make_df_dates(all_dates)
-    test = aggregate_locations(df_location)
+    df_aggregate = aggregate_locations(df_location)
 
     # test = aggregate_locations(df_location, const.REGION['San Gabriel Valley'])
+
+    test = area_slowed_increase(df_location, const.LOC_NAME, 14, 0.01)
 
     # SFV = 'San Fernando Valley'
     # WS = 'Westside'
