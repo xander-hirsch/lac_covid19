@@ -588,9 +588,9 @@ def _json_import(dict_content: Dict) -> Dict[str, Any]:
     """
     dict_content[const.DATE] = dt.date.fromisoformat(dict_content[const.DATE])
 
-    for i in range(len(dict_content[const.LOCATIONS])):
-        dict_content[const.LOCATIONS][i] = tuple(dict_content[const.LOCATIONS][i])
-    dict_content[const.LOCATIONS] = tuple(dict_content[const.LOCATIONS])
+    dict_content[const.LOCATIONS] = tuple(map(
+        lambda x: tuple(x), dict_content[const.LOCATIONS]
+    ))
 
 
 def _json_export(dict_content: Dict) -> Dict[str, Any]:
