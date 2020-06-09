@@ -1,12 +1,34 @@
 import os.path
-from typing import Dict, Iterable, Tuple
+import pickle
+from typing import Any, Dict, Iterable, Tuple
 
 import numpy as np
 import pandas as pd
 
+import lac_covid19.cache_mgmt as cache_mgmt
 import lac_covid19.const as const
 import lac_covid19.lacph_prid as lacph_prid
 import lac_covid19.scrape_daily_stats as scrape_daily_stats
+
+
+def query_all_dates(use_cached: bool = True) -> Tuple[Dict[str, Any]]:
+    def assert_check(contents: Any) -> bool:
+        return ((type(contents) is tuple) and
+                all(map(lambda x: type(x) is dict, contents)))
+
+    FILENAME = 'all_dates.pickle'
+    all_dates = None
+
+    if use_cached:
+        all_dates = cache_mgmt.read_cache(FILENAME, True, assert_check, lambda x: pickle.load(x))
+
+    if not all_dates:
+        all_dates = tuple(map(lambda x: scrape_daily_stats.query_single_date(x),
+                              lacph_prid.DAILY_STATS))
+        cache_mgmt.write_cache(all_dates, FILENAME, True, assert_check,
+                               lambda x, y: pickle.dump(x, y))
+
+    return all_dates
 
 
 def access_generic(*key_name):
@@ -198,20 +220,19 @@ def make_by_gender(pr_stats):
 
 
 if __name__ == "__main__":
-    all_dates = tuple(map(lambda x: scrape_daily_stats.query_single_date(x),
-                      lacph_prid.DAILY_STATS))
+    all_dates = query_all_dates()
 
-    last_week = all_dates[-7:-1]
+    last_week = all_dates[-7:]
     june_2 = all_dates[64]
 
-    df_location = make_by_loc(all_dates)
-    df_aggregate = make_df_dates(all_dates)
+    # df_location = make_by_loc(all_dates)
+    # df_aggregate = make_df_dates(all_dates)
 
-    test = aggregate_locations(df_location, const.REGION['San Gabriel Valley'])
+    # test = aggregate_locations(df_location, const.REGION['San Gabriel Valley'])
 
-    SFV = 'San Fernando Valley'
-    WS = 'Westside'
-    sample_regions = {SFV: const.REGION[SFV], WS: const.REGION[WS]}
-    region_ts = location_cases_comparison(df_location, sample_regions)
+    # SFV = 'San Fernando Valley'
+    # WS = 'Westside'
+    # sample_regions = {SFV: const.REGION[SFV], WS: const.REGION[WS]}
+    # region_ts = location_cases_comparison(df_location, sample_regions)
     # df_sfv = region_ts[SFV]
     # sfv_series = pd.Series(SFV, name='Region', dtype='string').repeat(df_sfv.shape[0]).reset_index(drop=True)
