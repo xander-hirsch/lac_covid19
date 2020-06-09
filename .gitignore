@@ -10,3 +10,5 @@ parsed-daily-pr/.ipynb_checkpoints/*
 
 lacph_graphs.ipynb
 *.pickle
+
+.DS_Store

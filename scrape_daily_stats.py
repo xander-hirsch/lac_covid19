@@ -44,11 +44,13 @@ AREA_NAME = {
     LA_PREFIX: LA_PREFIX.rstrip(' -'),
     UNINC_PREFIX: UNINC_PREFIX.rstrip(' -')
 }
-RE_LOC = re.compile('({}|{}|{}) +([A-Z][A-Za-z/\- ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+([0-9\.]+|--)\s\)'.format(CITY_PREFIX, LA_PREFIX, UNINC_PREFIX))
+RE_LOC = re.compile('([A-Z][A-Za-z/\-\. ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+(--|[0-9]|[0-9]+\.[0-9]+)\s\)')
+
 
 EXTENDED_HTML = (dt.date(2020, 4, 23),)
 FORMAT_START_HOSPITAL_NESTED = dt.date(2020, 4, 4)
 FORMAT_START_AGE_NESTED = dt.date(2020, 4, 4)
+CORR_FACILITY_RECORDED = dt.date(2020, 5, 14)
 
 DIR_RESP_CACHE = 'cached-daily-pr'
 DIR_PARSED_PR = 'parsed-daily-pr'
@@ -61,6 +63,9 @@ CITY = AREA_NAME[CITY_PREFIX]
 LONG_BEACH = 'Long Beach'
 PASADENA = 'Pasadena'
 TOTAL_HOSPITALIZATIONS = 'Hospitalized (Ever)'
+
+LONG_BEACH_NAME = ' '.join((CITY_PREFIX, LONG_BEACH))
+PASADENA_NAME = ' '.join((CITY_PREFIX, PASADENA))
 
 
 def stat_by_group(stat: str, group: str) -> str:
@@ -476,16 +481,6 @@ def parse_race_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
                                       ENTRY_RACE)
 
 
-def _loc_interp_helper(loc_regex_match: Tuple[str, str, str, str]) -> Tuple[str, str, int, float]:
-    loc_type = AREA_NAME[loc_regex_match[0]]
-    name = loc_regex_match[1]
-
-    cases = str_to_num(loc_regex_match[2])
-    rate = str_to_num(loc_regex_match[3])
-
-    return (loc_type, name, cases, rate)
-
-
 def parse_locations(daily_pr: bs4.Tag) -> Dict[str, int]:
     """Returns the per city count of COVID-19. The three distinct groups are:
     incorporated cities, City of Los Angeles neighborhoods, and unicorporated
@@ -515,19 +510,25 @@ def parse_locations(daily_pr: bs4.Tag) -> Dict[str, int]:
         }
     }
     """
-
-    result = {AREA_NAME[CITY_PREFIX]: {},
-              AREA_NAME[LA_PREFIX]: {},
-              AREA_NAME[UNINC_PREFIX]: {}
-    }
     locations_raw = get_html_locations(daily_pr)
-
     loc_extracted = RE_LOC.findall(locations_raw)
-    for location in loc_extracted:
-        loc_type, name, cases, rate = _loc_interp_helper(location)
-        result[loc_type][name] = (cases, rate)
+    pr_date = get_date(daily_pr)
 
-    return result
+    ASTERISK = '*'
+    NODATA = '--'
+    for i in range(len(loc_extracted)):
+        name, cases, rate = loc_extracted[i]
+        if (name[-1] == ASTERISK) and (pr_date < CORR_FACILITY_RECORDED):
+            name = name.rstrip(ASTERISK)
+        if cases == NODATA:
+            cases = None
+            rate = None
+        else:
+            cases = int(cases)
+            rate = float(rate)
+        loc_extracted[i] = (name, cases, rate)
+
+    return(loc_extracted)
 
 
 def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
@@ -536,10 +537,8 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     cases_by_dept = parse_cases(daily_pr)
     total_cases = cases_by_dept[const.TOTAL]
     total_deaths = parse_deaths(daily_pr)[const.TOTAL]
-    try:
-        total_hospitalizations = parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS]
-    except KeyError:
-        print('Hospitalization not found ', pr_date)
+
+    total_hospitalizations = parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS]
 
     cases_by_age = parse_age_cases(daily_pr)
     cases_by_gender = parse_gender(daily_pr)
@@ -547,11 +546,13 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     deaths_by_race = parse_race_deaths(daily_pr)
 
     cases_by_loc = parse_locations(daily_pr)
-    try:
-        cases_by_loc[CITY][LONG_BEACH] = (cases_by_dept[LONG_BEACH], None)
-        cases_by_loc[CITY][PASADENA] = (cases_by_dept[PASADENA], None)
-    except KeyError:
-        print('Department cases not found ', pr_date)
+    long_beach_cases = cases_by_dept[LONG_BEACH]
+    long_beach_rate = round(long_beach_cases / const.POPULATION_LONG_BEACH * const.CASE_RATE_SCALE, 2)
+    cases_by_loc.append((LONG_BEACH_NAME, long_beach_cases, long_beach_rate))
+    pasadena_cases = cases_by_dept[PASADENA]
+    pasadena_rate = round(pasadena_cases / const.POPULATION_PASADENA * const.CASE_RATE_SCALE, 2)
+    cases_by_loc.append((PASADENA_NAME, pasadena_cases, pasadena_rate))
+    cases_by_loc = tuple(cases_by_loc)
 
     return {
         const.DATE: pr_date,
@@ -587,10 +588,9 @@ def _json_import(dict_content: Dict) -> Dict[str, Any]:
     """
     dict_content[const.DATE] = dt.date.fromisoformat(dict_content[const.DATE])
 
-    for loc_type in dict_content[const.LOCATIONS].keys():
-        for loc_name in dict_content[const.LOCATIONS][loc_type].keys():
-            dict_content[const.LOCATIONS][loc_type][loc_name] \
-                = tuple(dict_content[const.LOCATIONS][loc_type][loc_name])
+    for i in range(len(dict_content[const.LOCATIONS])):
+        dict_content[const.LOCATIONS][i] = tuple(dict_content[const.LOCATIONS][i])
+    dict_content[const.LOCATIONS] = tuple(dict_content[const.LOCATIONS])
 
 
 def _json_export(dict_content: Dict) -> Dict[str, Any]:
@@ -615,7 +615,9 @@ if __name__ == "__main__":
 
     all_dates = lacph_prid.DAILY_STATS.keys()
 
-    selected_dates = all_dates
+    selected_dates = new_dates
 
     pr_sample = tuple(map(lambda x: fetch_press_release(x), selected_dates))
     stats_sample = tuple(map(lambda x: parse_entire_day(x), pr_sample))
+
+    parsed_all = tuple(map(lambda x: query_single_date(x), all_dates))
