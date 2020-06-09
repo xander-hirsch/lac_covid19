@@ -12,6 +12,7 @@ import lac_covid19.lac_regions as lac_regions
 import lac_covid19.scrape_daily_stats as scrape_daily_stats
 
 REGION = 'Region'
+POPULATION = 'Population'
 
 
 def query_all_dates(use_cached: bool = True) -> Tuple[Dict[str, Any]]:
@@ -119,17 +120,16 @@ def single_day_loc(pr_stats):
 
 
 def make_by_loc(pr_stats, use_cached=True):
-    FILENAME = 'location-cases.pickle'
-    ABS_PATH = os.path.join(os.path.dirname(__file__), FILENAME)
+    FILENAME = os.path.join(cache_mgmt.CACHE_DIR, 'location-cases.pickle')
     df = None
-    if use_cached and os.path.isfile(ABS_PATH):
-        df = pd.read_pickle(ABS_PATH)
+    if use_cached and os.path.isfile(FILENAME):
+        df = pd.read_pickle(FILENAME)
     else:
         all_dates = map(lambda x: single_day_loc(x), pr_stats)
         df = pd.concat(all_dates, ignore_index=True)
         df[REGION] = df[REGION].astype('category')
         df[const.LOC_NAME] = df[const.LOC_NAME].astype('category')
-        df.to_pickle(ABS_PATH)
+        df.to_pickle(FILENAME)
 
     return df
 
@@ -150,28 +150,45 @@ def is_select_location(location_entry: pd.Series, locations: Iterable[Tuple[str,
     return (location_entry[const.LOC_CAT], location_entry[const.LOC_NAME]) in locations
 
 
-def aggregate_locations(df_all_loc: pd.DataFrame, locations: Iterable[Tuple[str, str]]) -> pd.DataFrame:
-    # Filter, keeping only the selected locations
-    selected_loc_bool = df_all_loc.loc[:, (const.LOC_CAT, const.LOC_NAME)].apply(lambda x: is_select_location(x, locations), axis=1)
-    df_sel_loc = df_all_loc[selected_loc_bool]
-    # Filter, removing locations with unknown population sizes
-    known_pop_bool = df_sel_loc.loc[:, const.CASES] > 0
-    df_sel_loc = df_sel_loc[known_pop_bool]
+def aggregate_locations(df_all_loc: pd.DataFrame) -> pd.DataFrame:
+    # Filter, keeping only the areas in a region
+    df_all_loc = df_all_loc[df_all_loc[REGION].notna()]
+    # Estimate the populations using the relationship between cases and case rate
+    pop_estimate = (df_all_loc[const.CASES] / df_all_loc[const.CASES_NORMALIZED] * const.CASE_RATE_SCALE).copy()
+    # df_all_loc[POPULATION] = df_all_loc.apply((lambda x: x[const.CASES] / x[const.CASES_NORMALIZED] * const.CASE_RATE_SCALE), axis='columns')
+    df_all_loc.loc[:, POPULATION] = pop_estimate
+    df_all_loc.drop(const.CASES_NORMALIZED, axis='columns', inplace=True)
+    # Aggregate the cases and population into regions
+    df_region = df_all_loc.groupby([const.DATE, REGION]).sum()
+    region_population = df_region.groupby(REGION).median()[POPULATION].round().astype('int')
+    df_region = df_region.reset_index()
+    df_region.drop(POPULATION, axis='columns', inplace=True)
+    # Recompute the normalized case rate
+    df_region[const.CASES_NORMALIZED] = df_region.apply(
+        (lambda x: x[const.CASES] / region_population[x[REGION]] * const.CASE_RATE_SCALE),
+        axis='columns').round(2)
+    return df_region
 
-    # Recompute the locations represented in the region
-    represented_loc = df_sel_loc.apply(lambda x: (x[const.LOC_CAT], x[const.LOC_NAME]), axis=1).unique()
+    # selected_loc_bool = df_all_loc.loc[:, (const.LOC_CAT, const.LOC_NAME)].apply(lambda x: is_select_location(x, locations), axis=1)
+    # df_sel_loc = df_all_loc[selected_loc_bool]
+    # # Filter, removing locations with unknown population sizes
+    # known_pop_bool = df_sel_loc.loc[:, const.CASES] > 0
+    # df_sel_loc = df_sel_loc[known_pop_bool]
 
-    aggregate_population = 0
-    for location in represented_loc:
-        aggregate_population += infer_pop(df_sel_loc, location[0], location[1])
+    # # Recompute the locations represented in the region
+    # represented_loc = df_sel_loc.apply(lambda x: (x[const.LOC_CAT], x[const.LOC_NAME]), axis=1).unique()
 
-    df_sel_loc = df_sel_loc.loc[:, (const.DATE, const.CASES)]
-    aggregate_cases = df_sel_loc.groupby(by=const.DATE).sum()
+    # aggregate_population = 0
+    # for location in represented_loc:
+    #     aggregate_population += infer_pop(df_sel_loc, location[0], location[1])
 
-    normalize = const.CASE_RATE_SCALE / aggregate_population
-    aggregate_cases[const.CASES_NORMALIZED] = (aggregate_cases[const.CASES] * normalize).round(2)
+    # df_sel_loc = df_sel_loc.loc[:, (const.DATE, const.CASES)]
+    # aggregate_cases = df_sel_loc.groupby(by=const.DATE).sum()
 
-    return aggregate_cases.reset_index()
+    # normalize = const.CASE_RATE_SCALE / aggregate_population
+    # aggregate_cases[const.CASES_NORMALIZED] = (aggregate_cases[const.CASES] * normalize).round(2)
+
+    # return aggregate_cases.reset_index()
 
 
 def location_cases_comparison(df_all_loc: pd.DataFrame, region_def: Dict[str, Tuple[str, str]]) -> pd.DataFrame:
@@ -219,8 +236,9 @@ if __name__ == "__main__":
 
     one_day_loc = single_day_loc(today)
 
-    # df_location = make_by_loc(all_dates)
+    df_location = make_by_loc(all_dates)
     # df_aggregate = make_df_dates(all_dates)
+    test = aggregate_locations(df_location)
 
     # test = aggregate_locations(df_location, const.REGION['San Gabriel Valley'])
 
