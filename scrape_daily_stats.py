@@ -21,7 +21,7 @@ RE_UNDER_INVESTIGATION = re.compile('Under Investigation')
 
 HEADER_CASE_COUNT = re.compile('Laboratory Confirmed Cases -- ([\d,]+) Total Cases')
 HEADER_DEATH = re.compile('Deaths\s+([\d,]+)')
-ENTRY_BY_DEPT = re.compile('(Los Angeles County \(excl\. LB and Pas\)|Long Beach|Pasadena)[\s-]*(\d+)')
+ENTRY_BY_DEPT = re.compile('(Los Angeles County \(excl\. LB and Pas\)|{}|{})[\s-]*(\d+)'.format(LONG_BEACH, PASADENA))
 
 LAC_ONLY = '\(Los Angeles County Cases Only-excl LB and Pas\)'
 
@@ -621,4 +621,4 @@ if __name__ == "__main__":
     pr_sample = tuple(map(lambda x: fetch_press_release(x), selected_dates))
     stats_sample = tuple(map(lambda x: parse_entire_day(x), pr_sample))
 
-    parsed_all = tuple(map(lambda x: query_single_date(x), all_dates))
+    # parsed_all = tuple(map(lambda x: query_single_date(x), all_dates))
