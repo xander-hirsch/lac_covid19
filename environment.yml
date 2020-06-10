@@ -1,6 +1,6 @@
 name: lac_covid19
 dependencies:
-  - flake8
+  - pylint
   - rope
   - ipython
   - jupyterlab

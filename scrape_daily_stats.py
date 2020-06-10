@@ -21,7 +21,8 @@ RE_UNDER_INVESTIGATION = re.compile('Under Investigation')
 
 HEADER_CASE_COUNT = re.compile('Laboratory Confirmed Cases -- ([\d,]+) Total Cases')
 HEADER_DEATH = re.compile('Deaths\s+([\d,]+)')
-ENTRY_BY_DEPT = re.compile('(Los Angeles County \(excl\. LB and Pas\)|{}|{})[\s-]*(\d+)'.format(LONG_BEACH, PASADENA))
+ENTRY_BY_DEPT = re.compile('(Los Angeles County \(excl\. LB and Pas\)|{}|{})[\s-]*(\d+)'
+                           .format(LONG_BEACH, PASADENA))
 
 LAC_ONLY = '\(Los Angeles County Cases Only-excl LB and Pas\)'
 
