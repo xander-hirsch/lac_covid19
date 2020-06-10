@@ -34,9 +34,9 @@ PASADENA = 'Pasadena'
 CASES_NORMALIZED = CASES + ' per 100,000'
 CASE_RATE_SCALE = 100_000
 
-LOC_CAT = 'Category'
-LOC_NAME = 'Name'
-LOC_POP = 'Population'
+REGION = 'Region'
+AREA = 'Area'
+POPULATION = 'Population'
 
 # US Census estimates as of 1 July 2019
 POPULATION_LONG_BEACH = 462_628
