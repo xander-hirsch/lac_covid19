@@ -3,7 +3,7 @@
 """
 
 import os.path
-from typing import Any, Callable, Optional
+from typing import Any, Callable, Dict, Optional
 
 CACHE_DIR = os.path.join(os.path.dirname(__file__), 'memoization')
 BAD_DATA_MSG = 'The contents do not pass the assertion check'
@@ -27,6 +27,7 @@ def write_cache(contents: Any, filename: str, is_binary,
     """
 
     if not assert_check(contents):
+        print('Content type: ', type(contents))
         raise ValueError(BAD_DATA_MSG)
 
     if not os.path.isdir(CACHE_DIR):
@@ -89,3 +90,9 @@ def use_cache(
         write_cache(cached_val, filename, is_binary, assert_check, write_func)
 
     return cached_val
+
+
+def is_json_dict(contents: Dict) -> bool:
+    return (isinstance(contents, dict) 
+            and all(map(lambda x: isinstance(x, str), contents.keys()))
+            or isinstance(contents, list))
