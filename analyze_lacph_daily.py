@@ -6,7 +6,8 @@ import numpy as np
 import pandas as pd
 
 import lac_covid19.cache_mgmt as cache_mgmt
-from lac_covid19.const import (DATE, CASES, HOSPITALIZATIONS, DEATHS,
+from lac_covid19.const import (
+    DATE, CASES, HOSPITALIZATIONS, DEATHS,
     CASES_BY_GENDER, CASES_BY_RACE, DEATHS_BY_RACE, AREA, CASES_NORMALIZED,
     CASES_BY_AGE, RACE, LOCATIONS, CASE_RATE_SCALE,
     MALE, FEMALE, AGE_GROUP, GENDER,
@@ -18,19 +19,19 @@ import lac_covid19.scrape_daily_stats as scrape_daily_stats
 
 def query_all_dates(use_cached: bool = True) -> Tuple[Dict[str, Any]]:
     def assert_check(contents: Any) -> bool:
-        return ((type(contents) is tuple) and
-                all(map(lambda x: type(x) is dict, contents)))
+        return ((isinstance(contents, tuple)) and
+                all(map(lambda x: isinstance(x, dict), contents)))
 
-    FILENAME = 'all_dates.pickle'
+    filename = 'all_dates.pickle'
     all_dates = None
 
     if use_cached:
-        all_dates = cache_mgmt.read_cache(FILENAME, True, assert_check, pickle.load)
+        all_dates = cache_mgmt.read_cache(filename, True, assert_check, pickle.load)
 
     if not all_dates:
         all_dates = tuple(map(scrape_daily_stats.query_single_date,
                               lacph_prid.DAILY_STATS))
-        cache_mgmt.write_cache(all_dates, FILENAME, True, assert_check,
+        cache_mgmt.write_cache(all_dates, filename, True, assert_check,
                                pickle.dump)
 
     return all_dates
@@ -113,24 +114,27 @@ def make_by_race(pr_stats):
 def single_day_loc(pr_stats):
     df = pd.DataFrame(pr_stats[LOCATIONS], columns=(AREA, CASES, CASES_NORMALIZED))
     df[CASES] = df[CASES].convert_dtypes()
-    record_date = pd.Series(pd.to_datetime(pr_stats[DATE])).repeat(df.shape[0]).reset_index(drop=True)
+    record_date = (pd.Series(pd.to_datetime(pr_stats[DATE])).repeat(df.shape[0])
+                   .reset_index(drop=True))
     df[DATE] = record_date
-    df[REGION] = df.apply(lambda x: lac_regions.REGION_MAP.get(x[AREA], None), axis='columns').astype('string')
+    df[REGION] = df.apply(
+        lambda x: lac_regions.REGION_MAP.get(x[AREA], None),
+        axis='columns').astype('string')
     df = df[[DATE, REGION, AREA, CASES, CASES_NORMALIZED]]
     return df
 
 
 def make_by_loc(pr_stats, use_cached=True):
-    FILENAME = os.path.join(cache_mgmt.CACHE_DIR, 'location-cases.pickle')
+    filename = os.path.join(cache_mgmt.CACHE_DIR, 'location-cases.pickle')
     df = None
-    if use_cached and os.path.isfile(FILENAME):
-        df = pd.read_pickle(FILENAME)
+    if use_cached and os.path.isfile(filename):
+        df = pd.read_pickle(filename)
     else:
         all_dates = map(single_day_loc, pr_stats)
         df = pd.concat(all_dates, ignore_index=True)
         df[REGION] = df[REGION].astype('category')
         df[AREA] = df[AREA].astype('string')
-        df.to_pickle(FILENAME)
+        df.to_pickle(filename)
 
     return df
 
@@ -151,29 +155,31 @@ def aggregate_locations(df_all_loc: pd.DataFrame) -> pd.DataFrame:
     # Use each daily estimate to come up with single reasonable guess
     filtered_pop_estimate = df_all_loc[[AREA, POPULATION]]
     filtered_pop_estimate = filtered_pop_estimate[filtered_pop_estimate[POPULATION].notna()]
-    area_estimate = filtered_pop_estimate.groupby(AREA).median().reset_index().round().convert_dtypes()
+    area_estimate = (filtered_pop_estimate.groupby(AREA).median().reset_index()
+                     .round().convert_dtypes())
     area_estimate[REGION] = area_estimate.apply(
         lambda x: lac_regions.REGION_MAP[x[AREA]], axis='columns').astype('category')
     # Sum the populations to get per region
-    region_estimate = area_estimate.loc[:, [REGION, POPULATION]].groupby(REGION).sum().loc[:, POPULATION]
+    region_estimate = (area_estimate.loc[:, [REGION, POPULATION]]
+                       .groupby(REGION).sum().loc[:, POPULATION])
 
     # Aggregate the cases and population into regions
     df_region = (df_all_loc[[DATE, REGION, CASES]]
                  .groupby([DATE, REGION]).sum().reset_index())
-    df_region[CASES_NORMALIZED] = (
-        df_region.apply((lambda x:
-        x[CASES] / region_estimate[x[REGION]] * CASE_RATE_SCALE),
+    df_region[CASES_NORMALIZED] = df_region.apply(
+        (lambda x: x[CASES] / region_estimate[x[REGION]] * CASE_RATE_SCALE),
         axis='columns').round(2)
-    )
     return df_region
 
 
-def location_cases_comparison(df_all_loc: pd.DataFrame, region_def: Dict[str, Tuple[str, str]]) -> pd.DataFrame:
-    REGION = 'Region'
+def location_cases_comparison(
+        df_all_loc: pd.DataFrame, region_def: Dict[str, Tuple[str, str]]
+) -> pd.DataFrame:
     region_time_series = {}
     for region in region_def:
         df_indiv_region = aggregate_locations(df_all_loc)
-        region_name = pd.Series(region, name=REGION, dtype='string').repeat(df_indiv_region.shape[0]).reset_index(drop=True)
+        region_name = (pd.Series(region, name=REGION, dtype='string')
+                       .repeat(df_indiv_region.shape[0]).reset_index(drop=True))
         df_indiv_region = pd.concat((df_indiv_region, region_name), axis=1)
         df_indiv_region = df_indiv_region[[DATE, REGION, CASES_NORMALIZED]]
         region_time_series[region] = df_indiv_region
@@ -196,11 +202,12 @@ def location_some_decrease(df_location, days_back):
     return some_decreases
 
 
-def area_slowed_increase(df_area_ts: pd.DataFrame, location: str, days_back: int, threshold: float) -> Tuple[str]:
-    MIN_CASES = 'Minimum Cases'
-    MAX_CASES = 'Maximum Cases'
-    CURR_CASES = 'Current Cases'
-    PROP_INC = 'Proportion Increase'
+def area_slowed_increase(df_area_ts: pd.DataFrame, location: str,
+                         days_back: int, threshold: float) -> Tuple[str]:
+    min_cases = 'Minimum Cases'
+    max_cases = 'Maximum Cases'
+    curr_cases = 'Current Cases'
+    prop_inc = 'Proportion Increase'
     # Filter to provided time frame
     start_date = df_area_ts[DATE].max() - pd.Timedelta(days=days_back)
     df_area_ts = (
@@ -208,17 +215,17 @@ def area_slowed_increase(df_area_ts: pd.DataFrame, location: str, days_back: int
         .loc[:, [location, CASES]])
     # Compute summary stats for each area
     area_group = df_area_ts.groupby(location)
-    df_min_cases = area_group.min().rename(columns={CASES: MIN_CASES})
-    df_max_cases = area_group.max().rename(columns={CASES: MAX_CASES})
-    df_curr_cases = area_group.last().rename(columns={CASES: CURR_CASES})
+    df_min_cases = area_group.min().rename(columns={CASES: min_cases})
+    df_max_cases = area_group.max().rename(columns={CASES: max_cases})
+    df_curr_cases = area_group.last().rename(columns={CASES: curr_cases})
     # Construct the dataframe to use for analysis
     area_cases = (
         pd.concat((df_min_cases, df_max_cases, df_curr_cases), axis='columns')
         .reset_index())
     # Compute relative case increase over duration
-    area_cases[PROP_INC] = (area_cases[MAX_CASES] - area_cases[MIN_CASES]) / area_cases[CURR_CASES]
+    area_cases[prop_inc] = (area_cases[max_cases] - area_cases[min_cases]) / area_cases[curr_cases]
     # Keep only area under threshold
-    area_cases = area_cases[area_cases[PROP_INC] < threshold]
+    area_cases = area_cases[area_cases[prop_inc] < threshold]
     return area_cases[location].astype('string')
 
 
@@ -244,15 +251,15 @@ def make_by_gender(pr_stats):
 
 
 if __name__ == "__main__":
-    all_dates = query_all_dates()
+    every_day = query_all_dates()
 
-    last_week = all_dates[-7:]
-    june_2 = all_dates[64]
-    today = all_dates[-1]
+    last_week = every_day[-7:]
+    june_2 = every_day[64]
+    today = every_day[-1]
 
     one_day_loc = single_day_loc(today)
 
-    df_location = make_by_loc(all_dates)
+    df_location = make_by_loc(every_day)
     # df_aggregate = make_df_dates(all_dates)
     df_aggregate = aggregate_locations(df_location)
 

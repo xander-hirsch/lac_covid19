@@ -1,7 +1,12 @@
 [MESSAGES CONTROL]
-disable=anomalous-backslash-in-string
+disable=anomalous-backslash-in-string,
+        missing-function-docstring,
+        missing-module-docstring
 
 [BASIC]
-good-names=f, i, r
+good-names=f, i, r, df
 
 docstring-min-length=5
+
+[FORMAT]
+max-line-length=80
