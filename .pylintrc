@@ -2,5 +2,6 @@
 disable=anomalous-backslash-in-string
 
 [BASIC]
-good-names=f,
-           r
+good-names=f, i, r
+
+docstring-min-length=5

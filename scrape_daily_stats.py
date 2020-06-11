@@ -7,22 +7,39 @@ from typing import Any, Callable, Dict, List, Tuple, Union
 import bs4
 import requests
 
-from const import (DATE, TOTAL, CASES, HOSPITALIZATIONS, LOCATIONS,
-    FEMALE, MALE, OTHER, DEATHS, POPULATION_LONG_BEACH, POPULATION_PASADENA,
-    CASE_RATE_SCALE, CASES_BY_AGE, CASES_BY_GENDER,
-    CASES_BY_RACE, DEATHS_BY_RACE, PASADENA, LONG_BEACH)
+import lac_covid19.const as const
 import lac_covid19.lacph_prid as lacph_prid
 
+DATE = const.DATE
+TOTAL = const.TOTAL
+CASES = const.CASES
+HOSPITALIZATIONS = const.HOSPITALIZATIONS
+LOCATIONS = const.LOCATIONS
+FEMALE = const.FEMALE
+MALE = const.MALE
+OTHER = const.OTHER
+DEATHS = const.DEATHS
+POPULATION_LONG_BEACH = const.POPULATION_LONG_BEACH
+POPULATION_PASADENA = const.POPULATION_PASADENA
+CASE_RATE_SCALE = const.CASE_RATE_SCALE
+CASES_BY_AGE = const.CASES_BY_AGE
+CASES_BY_GENDER = const.CASES_BY_GENDER
+CASES_BY_RACE = const.CASES_BY_RACE
+DEATHS_BY_RACE = const.DEATHS_BY_RACE
+PASADENA = const.PASADENA
+LONG_BEACH = const.LONG_BEACH
 
-LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='
+LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='  # pylint: disable=line-too-long
 RE_DATE = re.compile('[A-Z][a-z]+ \d{2}, 20\d{2}')
 
 RE_UNDER_INVESTIGATION = re.compile('Under Investigation')
 
-HEADER_CASE_COUNT = re.compile('Laboratory Confirmed Cases -- ([\d,]+) Total Cases')
+HEADER_CASE_COUNT = re.compile(
+    'Laboratory Confirmed Cases -- ([\d,]+) Total Cases')
 HEADER_DEATH = re.compile('Deaths\s+([\d,]+)')
-ENTRY_BY_DEPT = re.compile('(Los Angeles County \(excl\. LB and Pas\)|{}|{})[\s-]*(\d+)'
-                           .format(LONG_BEACH, PASADENA))
+ENTRY_BY_DEPT = re.compile(
+    '(Los Angeles County \(excl\. LB and Pas\)|{}|{})[\s-]*(\d+)'
+    .format(LONG_BEACH, PASADENA))
 
 LAC_ONLY = '\(Los Angeles County Cases Only-excl LB and Pas\)'
 
@@ -48,7 +65,8 @@ AREA_NAME = {
     LA_PREFIX: LA_PREFIX.rstrip(' -'),
     UNINC_PREFIX: UNINC_PREFIX.rstrip(' -')
 }
-RE_LOC = re.compile('([A-Z][A-Za-z/\-\. ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+(--|[0-9]|[0-9]+\.[0-9]+)\s\)')
+RE_LOC = re.compile(
+    '([A-Z][A-Za-z/\-\. ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+(--|[0-9]|[0-9]+\.[0-9]+)\s\)')  # pylint: disable=line-too-long
 
 
 EXTENDED_HTML = (dt.date(2020, 4, 23),)
@@ -84,14 +102,14 @@ def lacph_html_name(pr_date: dt.date) -> str:
     """Naming for local HTML cache of Los Angeles County daily COVID-19
     press breifings.
     """
-    return local_filename(DIR_RESP_CACHE, pr_date, LACPH, 'html')
+    return local_filename(pr_date, LACPH, HTML)
 
 
 def lacph_json_name(pr_date: dt.date) -> str:
     """Naming for local store of parses for Los Angeles County daily COVID-19
     breifings in JSON format.
     """
-    return local_filename(DIR_PARSED_PR, pr_date, LACPH, 'json')
+    return local_filename(pr_date, LACPH, JSON)
 
 
 def str_to_num(number: str) -> Union[int, float]:
@@ -175,7 +193,7 @@ def _cache_read_generic(date_: dt.date, directory: str, extension: str,
 def cache_write_resp(resp: str, pr_date: dt.date) -> None:
     """Writes a local copy of Los Angeles County COVID-19 daily briefings."""
     _cache_write_generic(resp, pr_date, DIR_RESP_CACHE, HTML,
-                         (lambda r: type(r) is str),
+                         (lambda r: isinstance(r, str)),
                          (lambda f, r: f.write(r)))
 
 
@@ -199,14 +217,13 @@ def cache_write_parsed(daily_stats: Dict[str, Any]) -> None:
     stats_date = daily_stats[DATE]
     _json_export(daily_stats)
     _cache_write_generic(daily_stats, stats_date, DIR_PARSED_PR, JSON,
-                         (lambda x: type(x) is dict),
+                         (lambda x: isinstance(x, dict)),
                          (lambda f, x: json.dump(x, f)))
 
 
 def cache_read_parsed(pr_date: dt.date) -> Dict[str, Any]:
     """Reads in previously parsed daily LACPH briefing."""
-    imported = _cache_read_generic(pr_date, DIR_PARSED_PR, JSON,
-                                   (lambda f: json.load(f)))
+    imported = _cache_read_generic(pr_date, DIR_PARSED_PR, JSON, json.load)
 
     # Convert date string into date object
     if imported is not None:
@@ -295,9 +312,7 @@ def get_html_general(daily_pr: bs4.Tag, header_pattern: re.Pattern, nested: bool
                 return bold_tag.parent.find('ul').get_text()
             else:
                 return bold_tag.next_sibling.next_sibling.get_text()
-    else:
-        # Calling functions need some string returned, so return empty
-        return ''
+    return ''
 
 
 def get_html_age_group(daily_pr: bs4.Tag) -> str:
@@ -516,9 +531,9 @@ def parse_locations(daily_pr: bs4.Tag) -> Dict[str, int]:
     loc_extracted = RE_LOC.findall(locations_raw)
     pr_date = get_date(daily_pr)
 
-    ASTERISK = '*'
-    NODATA = '--'
-    for i in range(len(loc_extracted)):
+    ASTERISK = '*'  # pylint: disable=invalid-name
+    NODATA = '--'  # pylint: disable=invalid-name
+    for i in range(len(loc_extracted)):  # pylint: disable=consider-using-enumerate
         name, cases, rate = loc_extracted[i]
         if (name[-1] == ASTERISK) and (pr_date < CORR_FACILITY_RECORDED):
             name = name.rstrip(ASTERISK)
@@ -530,7 +545,7 @@ def parse_locations(daily_pr: bs4.Tag) -> Dict[str, int]:
             rate = float(rate)
         loc_extracted[i] = (name, cases, rate)
 
-    return(loc_extracted)
+    return loc_extracted
 
 
 def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
@@ -549,10 +564,10 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
 
     cases_by_loc = parse_locations(daily_pr)
     long_beach_cases = cases_by_dept[LONG_BEACH]
-    long_beach_rate = round(long_beach_cases / POPULATION_LONG_BEACH * CASE_RATE_SCALE, 2)
+    long_beach_rate = round(long_beach_cases / POPULATION_LONG_BEACH * CASE_RATE_SCALE, 2)  # pylint: disable=old-division
     cases_by_loc.append((LONG_BEACH_NAME, long_beach_cases, long_beach_rate))
     pasadena_cases = cases_by_dept[PASADENA]
-    pasadena_rate = round(pasadena_cases / POPULATION_PASADENA * CASE_RATE_SCALE, 2)
+    pasadena_rate = round(pasadena_cases / POPULATION_PASADENA * CASE_RATE_SCALE, 2)  # pylint: disable=old-division
     cases_by_loc.append((PASADENA_NAME, pasadena_cases, pasadena_rate))
     cases_by_loc = tuple(cases_by_loc)
 
@@ -590,9 +605,7 @@ def _json_import(dict_content: Dict) -> Dict[str, Any]:
     """
     dict_content[DATE] = dt.date.fromisoformat(dict_content[DATE])
 
-    dict_content[LOCATIONS] = tuple(map(
-        lambda x: tuple(x), dict_content[LOCATIONS]
-    ))
+    dict_content[LOCATIONS] = tuple(map(tuple, dict_content[LOCATIONS]))
 
 
 def _json_export(dict_content: Dict) -> Dict[str, Any]:
@@ -607,8 +620,7 @@ if __name__ == "__main__":
                   (2020, 4, 29),
                   (2020, 5, 13),
                   (2020, 5, 18),
-                  (2020, 5, 27)
-    )
+                  (2020, 5, 27))
 
     new_dates = ((2020, 5, 30),
                  (2020, 5, 31),
@@ -619,7 +631,7 @@ if __name__ == "__main__":
 
     selected_dates = new_dates
 
-    pr_sample = tuple(map(lambda x: fetch_press_release(x), selected_dates))
-    stats_sample = tuple(map(lambda x: parse_entire_day(x), pr_sample))
+    pr_sample = tuple(map(fetch_press_release, selected_dates))
+    stats_sample = tuple(map(parse_entire_day, pr_sample))
 
     # parsed_all = tuple(map(lambda x: query_single_date(x), all_dates))

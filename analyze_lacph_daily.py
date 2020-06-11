@@ -25,13 +25,13 @@ def query_all_dates(use_cached: bool = True) -> Tuple[Dict[str, Any]]:
     all_dates = None
 
     if use_cached:
-        all_dates = cache_mgmt.read_cache(FILENAME, True, assert_check, lambda x: pickle.load(x))
+        all_dates = cache_mgmt.read_cache(FILENAME, True, assert_check, pickle.load)
 
     if not all_dates:
-        all_dates = tuple(map(lambda x: scrape_daily_stats.query_single_date(x),
+        all_dates = tuple(map(scrape_daily_stats.query_single_date,
                               lacph_prid.DAILY_STATS))
         cache_mgmt.write_cache(all_dates, FILENAME, True, assert_check,
-                               lambda x, y: pickle.dump(x, y))
+                               pickle.dump)
 
     return all_dates
 
@@ -103,7 +103,7 @@ def single_day_race(pr_stats):
 
 def make_by_race(pr_stats):
     pr_stats = tuple(filter(lambda x: (x[CASES_BY_RACE] or x[DEATHS_BY_RACE]), pr_stats))
-    per_day = tuple(map(lambda x: single_day_race(x), pr_stats))
+    per_day = tuple(map(single_day_race, pr_stats))
     per_day = tuple(filter(lambda x: x is not None, per_day))
     df = pd.concat(per_day, ignore_index=True)
     df[RACE] = df[RACE].astype('category')
@@ -126,7 +126,7 @@ def make_by_loc(pr_stats, use_cached=True):
     if use_cached and os.path.isfile(FILENAME):
         df = pd.read_pickle(FILENAME)
     else:
-        all_dates = map(lambda x: single_day_loc(x), pr_stats)
+        all_dates = map(single_day_loc, pr_stats)
         df = pd.concat(all_dates, ignore_index=True)
         df[REGION] = df[REGION].astype('category')
         df[AREA] = df[AREA].astype('string')
@@ -172,7 +172,7 @@ def location_cases_comparison(df_all_loc: pd.DataFrame, region_def: Dict[str, Tu
     REGION = 'Region'
     region_time_series = {}
     for region in region_def:
-        df_indiv_region = aggregate_locations(df_all_loc, region_def[region])
+        df_indiv_region = aggregate_locations(df_all_loc)
         region_name = pd.Series(region, name=REGION, dtype='string').repeat(df_indiv_region.shape[0]).reset_index(drop=True)
         df_indiv_region = pd.concat((df_indiv_region, region_name), axis=1)
         df_indiv_region = df_indiv_region[[DATE, REGION, CASES_NORMALIZED]]
