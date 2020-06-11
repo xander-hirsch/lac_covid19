@@ -5,7 +5,7 @@ import datetime as dt
 import json
 import os
 import re
-from typing import Any, Callable, Dict, List, Optional, Tuple, Union
+from typing import Any, Callable, Dict, List, Optional, Tuple
 
 import bs4
 import requests
@@ -17,7 +17,7 @@ DATE = const.DATE
 TOTAL = const.TOTAL
 CASES = const.CASES
 HOSPITALIZATIONS = const.HOSPITALIZATIONS
-LOCATIONS = const.LOCATIONS
+AREA = const.AREA
 FEMALE = const.FEMALE
 MALE = const.MALE
 OTHER = const.OTHER
@@ -88,26 +88,14 @@ def local_filename(pr_date: dt.date, deparment: str, extenstion: str) -> str:
     return '{}-{}.{}'.format(pr_date.isoformat(), deparment, extenstion)
 
 
-def str_to_num(number: str) -> Union[int, float]:
-    """Parses a string to a number with safegaurds for commas in text and
-    ambiguity of number type.
+def _str_to_int(number: str) -> int:
+    """Parses a string to an integer with safegaurds for commas in numerical
+        representation.
     """
-
-    number = number.replace(',', '')
-    val = None
-
-    try:
-        val = int(number)
-    except ValueError:
-        try:
-            val = float(number)
-        except ValueError:
-            pass
-
-    return val
+    return int(number.replace(',', ''))
 
 
-def date_to_tuple(date_: dt.date) -> Tuple[int, int, int]:
+def _date_to_tuple(date_: dt.date) -> Tuple[int, int, int]:
     return date_.year, date_.month, date_.day
 
 
@@ -128,7 +116,9 @@ def _cache_write_generic(contents: Any, date_: dt.date, directory: str,
             This takes a text I/O object and contents and writes out.
     """
 
-    assert assert_check(contents)
+    if not assert_check(contents):
+        raise ValueError('Attempted to write data which does not pass '
+                         'correctness test.')
 
     cache_dir = os.path.join(os.path.dirname(__file__), directory)
     if not os.path.isdir(cache_dir):
@@ -163,11 +153,10 @@ def _cache_read_generic(date_: dt.date, directory: str, extension: str,
     if os.path.isfile(file_):
         with open(file_, 'r') as f:
             return read_func(f)
-    else:
-        return None
+    return None
 
 
-def cache_write_resp(resp: str, pr_date: dt.date) -> None:
+def _cache_write_html_resp(resp: str, pr_date: dt.date) -> None:
     """Writes a local copy of Los Angeles County COVID-19 daily briefings."""
 
     _cache_write_generic(resp, pr_date, DIR_RESP_CACHE, HTML,
@@ -175,22 +164,42 @@ def cache_write_resp(resp: str, pr_date: dt.date) -> None:
                          (lambda f, r: f.write(r)))
 
 
-def cache_read_resp(pr_date: dt.date) -> str:
-    """Attempts to read local copy of daily LACPH COVID-19 briefings.
-    Automatically resorts to online request if local copy unavalible.
+def _cache_read_html_resp(pr_date: dt.date) -> str:
+    """Attempts to read local copy of daily LACPH COVID-19 briefings and
+    automatically resorts to online request if local copy is unavalible.
     """
 
     resp = _cache_read_generic(pr_date, DIR_RESP_CACHE, HTML,
                                (lambda f: f.read()))
 
     if resp is None:
-        resp = request_pr_online(pr_date)
-        cache_write_resp(resp, pr_date)
+        resp = _request_pr_online(pr_date)
+        _cache_write_html_resp(resp, pr_date)
 
     return resp
 
 
-def cache_write_parsed(daily_stats: Dict[str, Any]) -> None:
+def _json_import(dict_content: Dict) -> Dict[str, Any]:
+    """Modifies an imported JSON representation of parsed statistics
+        into a more applicable Python data structure.
+
+    The date is converted from ISO 8601 to a date object. Cases by area are
+    converted to tuples.
+    """
+    dict_content[DATE] = dt.date.fromisoformat(dict_content[DATE])
+    dict_content[AREA] = tuple(map(tuple, dict_content[AREA]))
+
+
+def _json_export(dict_content: Dict) -> Dict[str, Any]:
+    """Modifies a Python dictionary to be exported to JSON to compatible data
+    types.
+
+    Date is converted from a date object to a string ISO 8601 representation.
+    """
+    dict_content[DATE] = dict_content[DATE].isoformat()
+
+
+def _cache_write_parsed(daily_stats: Dict[str, Any]) -> None:
     """Exports parsed version of LACPH daily COVID-19 briefings as JSON."""
 
     stats_date = daily_stats[DATE]
@@ -200,7 +209,7 @@ def cache_write_parsed(daily_stats: Dict[str, Any]) -> None:
                          (lambda f, x: json.dump(x, f)))
 
 
-def cache_read_parsed(pr_date: dt.date) -> Dict[str, Any]:
+def _cache_read_parsed(pr_date: dt.date) -> Dict[str, Any]:
     """Reads in previously parsed daily LACPH briefing."""
 
     imported = _cache_read_generic(pr_date, DIR_PARSED_PR, JSON, json.load)
@@ -212,20 +221,20 @@ def cache_read_parsed(pr_date: dt.date) -> Dict[str, Any]:
     return imported
 
 
-def request_pr_online(pr_date: dt.date) -> str:
-    """Helper function to request the press release from the online source."""
+def _request_pr_online(pr_date: dt.date) -> str:
+    """Requests the press release online and caches a valid response."""
 
-    prid = lacph_prid.DAILY_STATS[date_to_tuple(pr_date)]
+    prid = lacph_prid.DAILY_STATS[_date_to_tuple(pr_date)]
     r = requests.get(LACPH_PR_URL_BASE + str(prid))
     if r.status_code == 200:
-        cache_write_resp(r.text, pr_date)
+        _cache_write_html_resp(r.text, pr_date)
         return r.text
 
     raise requests.exceptions.ConnectionError(
-        'Cannot retrieve the PR statement')
+        'Cannot retrieve the press release statement')
 
 
-def fetch_press_release(
+def _fetch_press_release(
         date_: Tuple[int, int, int], cached: bool = True) -> List[bs4.Tag]:
     """Fetches the HTML of press releases for the given dates. The source can
     come from cache or by fetching from the internet.
@@ -242,13 +251,14 @@ def fetch_press_release(
         A list of BeautifulSoup tags containing the requested press releases.
         The associated date can be retrived with the get_date function.
     """
+
     pr_date = dt.date(date_[0], date_[1], date_[2])
     pr_html_text = ''
 
     if cached:
-        pr_html_text = cache_read_resp(pr_date)
+        pr_html_text = _cache_read_html_resp(pr_date)
     else:
-        pr_html_text = request_pr_online(pr_date)
+        pr_html_text = _request_pr_online(pr_date)
 
     # Parse the HTTP response
     entire = bs4.BeautifulSoup(pr_html_text, 'html.parser')
@@ -259,12 +269,12 @@ def fetch_press_release(
         daily_pr = entire
     else:
         daily_pr = entire.find('div', class_='container p-4')
-    assert pr_date == get_date(entire)
+    assert pr_date == _get_date(entire)
 
     return daily_pr
 
 
-def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
+def _get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
     """Finds the date from the HTML press release. This makes an assumption
     the first date in the press release is the date of release."""
 
@@ -272,7 +282,7 @@ def get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
     return dt.datetime.strptime(date_text, '%B %d, %Y').date()
 
 
-def get_html_general(
+def _get_html_general(
         daily_pr: bs4.Tag, header_pattern: re.Pattern, nested: bool) -> str:
     """Narrows down the section of HTML which must be parsed for data
         extraction.
@@ -301,35 +311,35 @@ def get_html_general(
     return ''
 
 
-def get_html_age_group(daily_pr: bs4.Tag) -> str:
-    nested = get_date(daily_pr) >= FORMAT_START_AGE_NESTED
-    return get_html_general(daily_pr, HEADER_AGE_GROUP, nested)
+def _get_html_age_group(daily_pr: bs4.Tag) -> str:
+    nested = _get_date(daily_pr) >= FORMAT_START_AGE_NESTED
+    return _get_html_general(daily_pr, HEADER_AGE_GROUP, nested)
 
 
-def get_html_hospital(daily_pr: bs4.Tag) -> str:
-    nested = get_date(daily_pr) >= FORMAT_START_HOSPITAL_NESTED
-    return get_html_general(daily_pr, HEADER_HOSPITAL, nested)
+def _get_html_hospital(daily_pr: bs4.Tag) -> str:
+    nested = _get_date(daily_pr) >= FORMAT_START_HOSPITAL_NESTED
+    return _get_html_general(daily_pr, HEADER_HOSPITAL, nested)
 
 
-def get_html_locations(daily_pr: bs4.Tag) -> str:
+def _get_html_area(daily_pr: bs4.Tag) -> str:
     # The usage of location header is unpredictable, so just check against
     # the entire daily press release.
     return daily_pr.get_text()
 
 
-def get_html_gender(daily_pr: bs4.Tag) -> str:
-    return get_html_general(daily_pr, HEADER_GENDER, True)
+def _get_html_gender(daily_pr: bs4.Tag) -> str:
+    return _get_html_general(daily_pr, HEADER_GENDER, True)
 
 
-def get_html_race_cases(daily_pr: bs4.Tag) -> str:
-    return get_html_general(daily_pr, HEADER_RACE_CASE, True)
+def _get_html_race_cases(daily_pr: bs4.Tag) -> str:
+    return _get_html_general(daily_pr, HEADER_RACE_CASE, True)
 
 
-def get_html_race_deaths(daily_pr: bs4.Tag) -> str:
-    return get_html_general(daily_pr, HEADER_RACE_DEATH, True)
+def _get_html_race_deaths(daily_pr: bs4.Tag) -> str:
+    return _get_html_general(daily_pr, HEADER_RACE_DEATH, True)
 
 
-def parse_list_entries_general(
+def _parse_list_entries_general(
         pr_text: str, entry_regex: re.Pattern) -> Dict[str, int]:
     """Helper function for the common pattern where text entries are
     followed by a count statistic.
@@ -357,12 +367,12 @@ def parse_list_entries_general(
         name = entry[0]
         stat = entry[-1]
         if not RE_UNDER_INVESTIGATION.match(name):
-            result[name] = str_to_num(stat)
+            result[name] = _str_to_int(stat)
 
     return result
 
 
-def parse_total_by_dept_general(
+def _parse_total_by_dept_general(
         daily_pr: bs4.Tag, header_pattern: re.Pattern) -> Dict[str, int]:
     """Generalized parsing when a header has a total statistic followed by a
     per public health department breakdown.
@@ -370,24 +380,24 @@ def parse_total_by_dept_general(
     See parse_cases and parse_deaths for examples.
     """
 
-    by_dept_raw = get_html_general(daily_pr, header_pattern, True)
+    by_dept_raw = _get_html_general(daily_pr, header_pattern, True)
     # The per department breakdown statistics
-    result = parse_list_entries_general(by_dept_raw, ENTRY_BY_DEPT)
+    result = _parse_list_entries_general(by_dept_raw, ENTRY_BY_DEPT)
 
     # The cumultive count across departments
     total = None
     for bold_tag in daily_pr.find_all('b'):
         match_attempt = header_pattern.search(bold_tag.get_text(strip=True))
         if match_attempt:
-            total = str_to_num(match_attempt.group(1))
+            total = _str_to_int(match_attempt.group(1))
             break
     result[TOTAL] = total
 
     return result
 
 
-def parse_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
-    """Returns the total COVID-19 cases in Los Angeles County,
+def _parse_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
+    """Parses the total COVID-19 cases in Los Angeles County,
     including Long Beach and Pasadena.
 
     SAMPLE:
@@ -405,11 +415,12 @@ def parse_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
     }
     """
 
-    return parse_total_by_dept_general(daily_pr, HEADER_CASE_COUNT)
+    return _parse_total_by_dept_general(daily_pr, HEADER_CASE_COUNT)
 
 
 def parse_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
-    """Returns the total COVID-19 deaths from Los Angeles County
+    """Parses the total COVID-19 deaths from Los Angeles County,
+    including Long Beach and Pasadena.
 
     SAMPLE:
     Deaths 2104
@@ -424,11 +435,28 @@ def parse_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
         "Pasadena": 80
     }
     """
-    return parse_total_by_dept_general(daily_pr, HEADER_DEATH)
+
+    return _parse_total_by_dept_general(daily_pr, HEADER_DEATH)
+
+
+def parse_hospital(daily_pr: bs4.Tag) -> Dict[str, int]:
+    """Parses the hospitalizations due to COVID-19.
+
+    SAMPLE:
+    Hospitalization
+        Hospitalized (Ever) 6177
+    RETURNS:
+    {
+        "Hospitalized (Ever)": 6177
+    }
+    """
+
+    return _parse_list_entries_general(_get_html_hospital(daily_pr),
+                                       ENTRY_HOSPITAL)
 
 
 def parse_age_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
-    """Returns the age breakdown of COVID-19 cases in Los Angeles County.
+    """Parses the age breakdown of COVID-19 cases in Los Angeles County.
 
     SAMPLE:
     Age Group (Los Angeles County Cases Only-excl LB and Pas)
@@ -445,27 +473,29 @@ def parse_age_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
         "over 65": 8376
     }
     """
-    return parse_list_entries_general(get_html_age_group(daily_pr), ENTRY_AGE)
-
-
-def parse_hospital(daily_pr: bs4.Tag) -> Dict[str, int]:
-    """Returns the hospitalizations due to COVID-19
-
-    SAMPLE:
-    Hospitalization
-        Hospitalized (Ever) 6177
-    RETURNS:
-    {
-        "Hospitalized (Ever)": 6177
-    }
-    """
-
-    return parse_list_entries_general(get_html_hospital(daily_pr),
-                                      ENTRY_HOSPITAL)
+    return _parse_list_entries_general(_get_html_age_group(daily_pr), ENTRY_AGE)
 
 
 def parse_gender(daily_pr: bs4.Tag) -> Dict[str, int]:
-    result = parse_list_entries_general(get_html_gender(daily_pr), ENTRY_GENDER)
+    """Parses the age breakdown of COVID-19 cases in Los Angeles County.
+
+    SAMPLE:
+    Gender (Los Angeles County Cases Only-excl LB and Pas)
+        Female 31109
+        Male 32202
+        Other 10
+        Under Investigation 339
+    RETURNS:
+    {
+        "Female": 31109,
+        "Male": 32202,
+        "Other": 10
+    }
+
+    """
+
+    result = _parse_list_entries_general(_get_html_gender(daily_pr),
+                                         ENTRY_GENDER)
 
     # Correct spelling error on some releases
     old_keys = list(result.keys())
@@ -477,19 +507,38 @@ def parse_gender(daily_pr: bs4.Tag) -> Dict[str, int]:
 
 
 def parse_race_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
-    return parse_list_entries_general(get_html_race_cases(daily_pr),
-                                      ENTRY_RACE)
+    """Parses the race breakdown of COVID-19 cases in Los Angeles County.
+
+    SAMPLE:
+    Race/Ethnicity (Los Angeles County Cases Only-excl LB and Pas)
+        American Indian/Alaska Native 60
+        Asian 3376
+        ...
+        Other 8266
+        Under Investigation 19606
+    RETURNS:
+    {
+        "American Indian/Alaska Native": 60,
+        "Asian": 3376,
+        ...
+        "Other": 8266
+    }
+    """
+    return _parse_list_entries_general(_get_html_race_cases(daily_pr),
+                                       ENTRY_RACE)
 
 
 def parse_race_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
-    return parse_list_entries_general(get_html_race_deaths(daily_pr),
-                                      ENTRY_RACE)
+    """Parses the race breakdown of COVID-19 deaths in Los Angeles County.
+
+    See parse_race_cases for an example.
+    """
+    return _parse_list_entries_general(_get_html_race_deaths(daily_pr),
+                                       ENTRY_RACE)
 
 
-def parse_locations(daily_pr: bs4.Tag) -> Dict[str, int]:
-    """Returns the per city count of COVID-19. The three distinct groups are:
-    incorporated cities, City of Los Angeles neighborhoods, and unicorporated
-    areas.
+def _parse_area(daily_pr: bs4.Tag) -> Dict[str, int]:
+    """Returns the per area count of COVID-19 cases.
 
     SAMPLE:
     CITY / COMMUNITY (Rate**)
@@ -501,28 +550,22 @@ def parse_locations(daily_pr: bs4.Tag) -> Dict[str, int]:
         Unincorporated - Palmdale 4 ( 475.06 )
     RETURNS:
     {
-        "City": {
-            "Burbank": (371, 346.15),
-            "Claremont": (35, 95.93)
-        },
-        "Los Angeles": {
-            "Sherman Oaks": (216, 247.55),
-            "Van Nuys": (629, 674.94)
-        },
-        "Unincorporated": {
-            "Lake Los Angeles": (23, 215.48),
-            "Palmdale": (4, 475.06)
-        }
+        "City of Burbank": (371, 346.15),
+        "City of Claremont": (35, 95.93),
+        "Los Angeles - Sherman Oaks": (216, 247.55),
+        "Los Angeles - Van Nuys": (629, 674.94),
+        "Unincorporated - Lake Los Angeles": (23, 215.48),
+        "Unincorporated - Palmdale": (4, 475.06)
     }
     """
-    locations_raw = get_html_locations(daily_pr)
-    loc_extracted = RE_LOC.findall(locations_raw)
-    pr_date = get_date(daily_pr)
+    areas_raw = _get_html_area(daily_pr)
+    area_extracted = RE_LOC.findall(areas_raw)
+    pr_date = _get_date(daily_pr)
 
     ASTERISK = '*'  # pylint: disable=invalid-name
     NODATA = '--'  # pylint: disable=invalid-name
-    for i in range(len(loc_extracted)):  # pylint: disable=consider-using-enumerate
-        name, cases, rate = loc_extracted[i]
+    for i in range(len(area_extracted)):  # pylint: disable=consider-using-enumerate
+        name, cases, rate = area_extracted[i]
         if (name[-1] == ASTERISK) and (pr_date < CORR_FACILITY_RECORDED):
             name = name.rstrip(ASTERISK)
         if cases == NODATA:
@@ -531,15 +574,19 @@ def parse_locations(daily_pr: bs4.Tag) -> Dict[str, int]:
         else:
             cases = int(cases)
             rate = float(rate)
-        loc_extracted[i] = (name, cases, rate)
+        area_extracted[i] = name, cases, rate
 
-    return loc_extracted
+    return area_extracted
 
 
-def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
-    pr_date = get_date(daily_pr)
+def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
+    """Parses each section of the daily COVID-19 report and places everything
+        in a single object.
+    """
 
-    cases_by_dept = parse_cases(daily_pr)
+    pr_date = _get_date(daily_pr)
+
+    cases_by_dept = _parse_cases(daily_pr)
     total_cases = cases_by_dept[TOTAL]
     total_deaths = parse_deaths(daily_pr)[TOTAL]
 
@@ -550,16 +597,16 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     cases_by_race = parse_race_cases(daily_pr)
     deaths_by_race = parse_race_deaths(daily_pr)
 
-    cases_by_loc = parse_locations(daily_pr)
+    cases_by_area = _parse_area(daily_pr)
     long_beach_cases = cases_by_dept[LONG_BEACH]
     long_beach_rate = round(
         long_beach_cases / POPULATION_LONG_BEACH * CASE_RATE_SCALE, 2)  # pylint: disable=old-division
-    cases_by_loc.append((LONG_BEACH_NAME, long_beach_cases, long_beach_rate))
+    cases_by_area.append((LONG_BEACH_NAME, long_beach_cases, long_beach_rate))
     pasadena_cases = cases_by_dept[PASADENA]
     pasadena_rate = round(
         pasadena_cases / POPULATION_PASADENA * CASE_RATE_SCALE, 2)  # pylint: disable=old-division
-    cases_by_loc.append((PASADENA_NAME, pasadena_cases, pasadena_rate))
-    cases_by_loc = tuple(cases_by_loc)
+    cases_by_area.append((PASADENA_NAME, pasadena_cases, pasadena_rate))
+    cases_by_area = tuple(cases_by_area)
 
     return {
         DATE: pr_date,
@@ -570,58 +617,37 @@ def parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
         CASES_BY_GENDER: cases_by_gender,
         CASES_BY_RACE: cases_by_race,
         DEATHS_BY_RACE: deaths_by_race,
-        LOCATIONS: cases_by_loc
+        AREA: cases_by_area
     }
 
 
 def query_single_date(date_: Tuple[int, int, int],
                       cached: bool = True) -> Dict[str, Any]:
+    """This puts together all the steps to go from a given date to a parsed
+        response of daily COVID-19 data in Los Angeles County.
+
+    The function can check for an already parsed response stored as JSON before
+    the expensive task of fetching and parsing the report.
+    """
 
     result = None
 
     if cached:
-        result = cache_read_parsed(dt.date(date_[0], date_[1], date_[2]))
+        result = _cache_read_parsed(dt.date(date_[0], date_[1], date_[2]))
 
     if result is None:
-        result = parse_entire_day(fetch_press_release(date_))
-        cache_write_parsed(result)
+        result = _parse_entire_day(_fetch_press_release(date_))
+        _cache_write_parsed(result)
 
     return result
 
 
-def _json_import(dict_content: Dict) -> Dict[str, Any]:
-    """Changes date string into date object. Converts location lists
-    into tuples.
+def query_all_dates() -> Tuple[Dict[str, Any], ...]:
+    """Frontend to query_single_date for every date which daily COVID-19
+        statistics have been released.
     """
-    dict_content[DATE] = dt.date.fromisoformat(dict_content[DATE])
-
-    dict_content[LOCATIONS] = tuple(map(tuple, dict_content[LOCATIONS]))
-
-
-def _json_export(dict_content: Dict) -> Dict[str, Any]:
-    """Changes date object into date string"""
-    dict_content[DATE] = dict_content[DATE].isoformat()
+    return tuple(map(query_single_date, lacph_prid.DAILY_STATS))
 
 
 if __name__ == "__main__":
-    test_dates = ((2020, 3, 31),
-                  (2020, 4, 7),
-                  (2020, 4, 16),
-                  (2020, 4, 29),
-                  (2020, 5, 13),
-                  (2020, 5, 18),
-                  (2020, 5, 27))
-
-    new_dates = ((2020, 5, 30),
-                 (2020, 5, 31),
-                 (2020, 6, 1),
-                 (2020, 6, 2))
-
-    all_dates = lacph_prid.DAILY_STATS.keys()
-
-    selected_dates = new_dates
-
-    pr_sample = tuple(map(fetch_press_release, selected_dates))
-    stats_sample = tuple(map(parse_entire_day, pr_sample))
-
-    # parsed_all = tuple(map(lambda x: query_single_date(x), all_dates))
+    query_all_dates()
