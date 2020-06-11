@@ -1,4 +1,4 @@
-REGION = {
+_REGION = {
     'Angeles Forest': (
         'Los Angeles - Angeles National Forest',
         'Unincorporated - Angeles National Forest',
@@ -383,7 +383,7 @@ REGION = {
 }
 
 REGION_MAP = {}
-for region in REGION:
-    for area in REGION[region]:
+for region in _REGION:
+    for area in _REGION[region]:
         REGION_MAP[area] = region
 REGION_MAP['Los Angeles'] = None
