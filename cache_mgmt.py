@@ -1,7 +1,12 @@
+"""Interfaces with the filesystem to manage a cache of returned values from
+    resource intensive tasks.
+"""
+
 import os.path
-from typing import Any, Callable
+from typing import Any, Callable, Optional
 
 CACHE_DIR = os.path.join(os.path.dirname(__file__), 'memoization')
+BAD_DATA_MSG = 'The contents do not pass the assertion check'
 
 
 def write_cache(contents: Any, filename: str, is_binary,
@@ -21,7 +26,8 @@ def write_cache(contents: Any, filename: str, is_binary,
             boolean.
     """
 
-    assert assert_check(contents)
+    if not assert_check(contents):
+        raise ValueError(BAD_DATA_MSG)
 
     if not os.path.isdir(CACHE_DIR):
         os.mkdir(CACHE_DIR)
@@ -35,7 +41,7 @@ def write_cache(contents: Any, filename: str, is_binary,
 
 
 def read_cache(filename: str, is_binary: bool, assert_check: Callable,
-               read_func: Callable) -> Any:
+               read_func: Callable) -> Optional[Any]:
     """Customizable function to read file contents.
 
     Args:
@@ -60,7 +66,26 @@ def read_cache(filename: str, is_binary: bool, assert_check: Callable,
     if os.path.isfile(file_):
         with open(file_, mode_) as f:
             output = read_func(f)
-            assert assert_check(output)
+
+            if not assert_check(output):
+                raise ValueError(BAD_DATA_MSG)
+
             return output
     else:
         return None
+
+
+def use_cache(
+        filename: str, is_binary: bool, assert_check: Callable,
+        read_func: Callable, write_func: Callable,
+        fallback_func: Callable, *fallback_args) -> Any:
+    """Attempts to read result from cache first before falling back to
+        another function."""
+
+    cached_val = read_cache(filename, is_binary, assert_check, read_func)
+
+    if not cached_val:
+        cached_val = fallback_func(*fallback_args)
+        write_cache(cached_val, filename, is_binary, assert_check, write_func)
+
+    return cached_val

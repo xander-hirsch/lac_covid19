@@ -12,29 +12,24 @@ from lac_covid19.const import (
     CASES_BY_AGE, RACE, LOCATIONS, CASE_RATE_SCALE,
     MALE, FEMALE, AGE_GROUP, GENDER,
     AGE_0_17, AGE_18_40, AGE_41_65, AGE_OVER_65, REGION, POPULATION)
-import lac_covid19.lacph_prid as lacph_prid
 import lac_covid19.lac_regions as lac_regions
 import lac_covid19.scrape_daily_stats as scrape_daily_stats
 
 
-def query_all_dates(use_cached: bool = True) -> Tuple[Dict[str, Any]]:
+def query_all_dates() -> Tuple[Dict[str, Any]]:
+
     def assert_check(contents: Any) -> bool:
         return ((isinstance(contents, tuple)) and
                 all(map(lambda x: isinstance(x, dict), contents)))
+    
+    def execute_query():
+        return scrape_daily_stats.query_all_dates()
 
     filename = 'all_dates.pickle'
-    all_dates = None
 
-    if use_cached:
-        all_dates = cache_mgmt.read_cache(filename, True, assert_check, pickle.load)
-
-    if not all_dates:
-        all_dates = tuple(map(scrape_daily_stats.query_single_date,
-                              lacph_prid.DAILY_STATS))
-        cache_mgmt.write_cache(all_dates, filename, True, assert_check,
-                               pickle.dump)
-
-    return all_dates
+    return cache_mgmt.use_cache(
+        filename, True, assert_check, pickle.load, pickle.dump, execute_query,
+    )
 
 
 def access_generic(*key_name):

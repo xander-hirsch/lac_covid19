@@ -10,3 +10,6 @@ docstring-min-length=5
 
 [FORMAT]
 max-line-length=80
+
+[DESIGN]
+max-args=6
