@@ -101,6 +101,11 @@ def make_by_race(pr_stats):
     return df
 
 
+def make_by_age(pr_stats):
+    data = map(lambda x: make_section_ts(x, CASES_BY_AGE), pr_stats)
+    return tidy_data(pd.DataFrame(data), AGE_GROUP, CASES)
+
+
 def make_by_gender(pr_stats):
     # Ignore dates where cases by gender are not recorded
     pr_stats = tuple(filter(lambda x: x[CASES_BY_GENDER], pr_stats))
@@ -200,22 +205,11 @@ def area_slowed_increase(df_area_ts: pd.DataFrame, location: str,
     return area_cases[location].astype('string')
 
 
-def make_by_age(pr_stats):
-    data = {
-        DATE: pd.to_datetime(tuple(map(lambda x: x[DATE], pr_stats))),
-        AGE_0_17: map(lambda x: x[CASES_BY_AGE][AGE_0_17], pr_stats),
-        AGE_18_40: map(lambda x: x[CASES_BY_AGE][AGE_18_40], pr_stats),
-        AGE_41_65: map(lambda x: x[CASES_BY_AGE][AGE_41_65], pr_stats),
-        AGE_OVER_65: map(lambda x: x[CASES_BY_AGE][AGE_OVER_65], pr_stats)
-    }
-    return tidy_data(pd.DataFrame(data), AGE_GROUP, CASES)
-
-
 if __name__ == "__main__":
     every_day = query_all_dates()
     last_week = every_day[-7:]
     today = every_day[-1]
 
-    df_gender = make_by_gender(last_week)
+    df_age = make_by_age(last_week)
     # df_area = make_by_loc(every_day)
     # test = aggregate_locations(df_area)
