@@ -77,15 +77,15 @@ def read_cache(filename: str, is_binary: bool, assert_check: Callable,
 
 
 def use_cache(
-        filename: str, is_binary: bool, assert_check: Callable,
-        read_func: Callable, write_func: Callable,
-        fallback_func: Callable, *fallback_args) -> Any:
+    filename: str, is_binary: bool, assert_check: Callable,
+    read_func: Callable, write_func: Callable,
+    fallback_func: Callable, *fallback_args) -> Any:
     """Attempts to read result from cache first before falling back to
         another function."""
 
     cached_val = read_cache(filename, is_binary, assert_check, read_func)
 
-    if not cached_val:
+    if cached_val is None:
         cached_val = fallback_func(*fallback_args)
         write_cache(cached_val, filename, is_binary, assert_check, write_func)
 

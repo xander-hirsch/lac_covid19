@@ -12,6 +12,7 @@ from lac_covid19.const import (
     CASES_BY_AGE, RACE, LOCATIONS, CASE_RATE_SCALE,
     MALE, FEMALE, AGE_GROUP, GENDER,
     AGE_0_17, AGE_18_40, AGE_41_65, AGE_OVER_65, REGION, POPULATION)
+import lac_covid19.external_data as external_data
 import lac_covid19.lac_regions as lac_regions
 import lac_covid19.scrape_daily_stats as scrape_daily_stats
 
@@ -139,32 +140,22 @@ def is_select_location(location_entry: pd.Series, locations: Iterable[Tuple[str,
 
 
 def aggregate_locations(df_all_loc: pd.DataFrame) -> pd.DataFrame:
+    population_map = external_data.process_population()
+    df_all_loc.drop(columns=CASES_NORMALIZED, inplace=True)
     # Filter, keeping only the areas in a region
     df_all_loc = df_all_loc[df_all_loc[REGION].notna()]
-    # Estimate the populations using the relationship between cases and case rate
-    daily_pop_estimate = df_all_loc[CASES] / df_all_loc[CASES_NORMALIZED] * CASE_RATE_SCALE
-    daily_pop_estimate.name = POPULATION
-    daily_pop_estimate = daily_pop_estimate.round().convert_dtypes()
-    df_all_loc = df_all_loc.join(daily_pop_estimate, how='inner')
-    df_all_loc.drop(CASES_NORMALIZED, axis='columns', inplace=True)
-    # Use each daily estimate to come up with single reasonable guess
-    filtered_pop_estimate = df_all_loc[[AREA, POPULATION]]
-    filtered_pop_estimate = filtered_pop_estimate[filtered_pop_estimate[POPULATION].notna()]
-    area_estimate = (filtered_pop_estimate.groupby(AREA).median().reset_index()
-                     .round().convert_dtypes())
-    area_estimate[REGION] = area_estimate.apply(
-        lambda x: lac_regions.REGION_MAP[x[AREA]], axis='columns').astype('category')
-    # Sum the populations to get per region
-    region_estimate = (area_estimate.loc[:, [REGION, POPULATION]]
-                       .groupby(REGION).sum().loc[:, POPULATION])
+    # TODO fix discrepancy with Rosewood/West Rancho Dominguez and
+    # San Francisquito Canyon/Bouquet Canyon
+    population_col = df_all_loc[AREA].apply(population_map.get).convert_dtypes()
+    population_col.name = POPULATION
+    df_all_loc = df_all_loc.join(population_col, how='inner')
 
-    # Aggregate the cases and population into regions
-    df_region = (df_all_loc[[DATE, REGION, CASES]]
-                 .groupby([DATE, REGION]).sum().reset_index())
-    df_region[CASES_NORMALIZED] = df_region.apply(
-        (lambda x: x[CASES] / region_estimate[x[REGION]] * CASE_RATE_SCALE),
-        axis='columns').round(2)
-    return df_region
+    df_region = df_all_loc.groupby(([DATE, REGION])).sum().reset_index()
+    df_region[CASES_NORMALIZED] = (
+        (df_region[CASES] / df_region[POPULATION] * CASE_RATE_SCALE)
+        .round(2))
+
+    return df_region.drop(columns=POPULATION)
 
 
 def location_cases_comparison(
@@ -260,7 +251,7 @@ if __name__ == "__main__":
 
     # test = aggregate_locations(df_location, REGION['San Gabriel Valley'])
 
-    test = area_slowed_increase(df_location, AREA, 14, 0.01)
+    # test = area_slowed_increase(df_location, AREA, 14, 0.01)
 
     # SFV = 'San Fernando Valley'
     # WS = 'Westside'
