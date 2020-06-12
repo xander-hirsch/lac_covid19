@@ -33,18 +33,6 @@ def query_all_dates() -> Tuple[Dict[str, Any]]:
     )
 
 
-def access_generic(*key_name):
-    dict_access = None
-    if len(key_name) == 1:
-        dict_access = lambda x: x[key_name[0]]
-    elif len(key_name) == 2:
-        dict_access = lambda x: x[key_name[0]][key_name[1]]
-    elif len(key_name) == 3:
-        dict_access = lambda x: x[key_name[0]][key_name[1]][key_name[2]]
-
-    return dict_access
-
-
 def tidy_data(df: pd.DataFrame, var_desc: str, value_desc: str) -> pd.DataFrame:
     df = df.melt(id_vars=DATE, var_name=var_desc, value_name=value_desc)
     df[var_desc] = df[var_desc].astype('category')
@@ -56,14 +44,10 @@ def access_date(pr_stats):
     return pd.to_datetime(pr_stats[DATE], unit='D')
 
 
-def date_limits(date_series):
-    return (date_series[DATE].min(), date_series[DATE].max())
-
-
 def make_df_dates(pr_stats):
     data = {
         DATE:
-            map(lambda x: pd.to_datetime(x[DATE]), pr_stats),
+            map(access_date, pr_stats),
         CASES:
             map(lambda x: x[CASES], pr_stats),
         HOSPITALIZATIONS:
@@ -166,19 +150,6 @@ def aggregate_locations(df_all_loc: pd.DataFrame) -> pd.DataFrame:
     return df_region.drop(columns=POPULATION)
 
 
-def location_some_decrease(df_location, days_back):
-    start_date = df_location[DATE].max() - pd.Timedelta(days=days_back)
-    df_location = df_location[df_location[DATE] >= start_date]
-    all_locations = df_location[AREA].unique()
-    some_decreases = tuple(filter(
-        lambda x: not (
-            df_location[df_location[AREA] == x]
-            .loc[:, CASES].is_monotonic_increasing),
-        all_locations
-    ))
-    return some_decreases
-
-
 def area_slowed_increase(df_area_ts: pd.DataFrame, location: str,
                          days_back: int, threshold: float) -> Tuple[str]:
     min_cases = 'Minimum Cases'
@@ -200,7 +171,8 @@ def area_slowed_increase(df_area_ts: pd.DataFrame, location: str,
         pd.concat((df_min_cases, df_max_cases, df_curr_cases), axis='columns')
         .reset_index())
     # Compute relative case increase over duration
-    area_cases[prop_inc] = (area_cases[max_cases] - area_cases[min_cases]) / area_cases[curr_cases]
+    area_cases[prop_inc] = ((area_cases[max_cases] - area_cases[min_cases])
+                            / area_cases[curr_cases])
     # Keep only area under threshold
     area_cases = area_cases[area_cases[prop_inc] < threshold]
     return area_cases[location].astype('string')
