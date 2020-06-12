@@ -1,6 +1,6 @@
 import os.path
 import pickle
-from typing import Any, Dict, Iterable, Tuple
+from typing import Any, Dict, Tuple
 
 import numpy as np
 import pandas as pd
@@ -9,10 +9,8 @@ import lac_covid19.cache_mgmt as cache_mgmt
 from lac_covid19.const import (
     DATE, CASES, HOSPITALIZATIONS, DEATHS,
     CASES_BY_GENDER, CASES_BY_RACE, DEATHS_BY_RACE, AREA, CASES_NORMALIZED,
-    CASES_BY_AGE, RACE, LOCATIONS, CASE_RATE_SCALE,
-    MALE, FEMALE, AGE_GROUP, GENDER,
-    AGE_0_17, AGE_18_40, AGE_41_65, AGE_OVER_65, REGION, POPULATION)
-import lac_covid19.external_data as external_data
+    CASES_BY_AGE, RACE, CASE_RATE_SCALE,
+    MALE, FEMALE, AGE_GROUP, GENDER, REGION, POPULATION)
 import lac_covid19.lac_regions as lac_regions
 import lac_covid19.scrape_daily_stats as scrape_daily_stats
 
@@ -56,49 +54,29 @@ def make_section_ts(daily_pr: Dict, section: str) -> Dict[str, Any]:
 
 def make_df_dates(pr_stats):
     data = {
-        DATE:
-            map(access_date, pr_stats),
-        CASES:
-            map(lambda x: x[CASES], pr_stats),
-        HOSPITALIZATIONS:
-            map(lambda x: x[HOSPITALIZATIONS], pr_stats),
-        DEATHS:
-            map(lambda x: x[DEATHS], pr_stats)
+        DATE: map(access_date, pr_stats),
+        CASES: map(lambda x: x[CASES], pr_stats),
+        HOSPITALIZATIONS: map(lambda x: x[HOSPITALIZATIONS], pr_stats),
+        DEATHS: map(lambda x: x[DEATHS], pr_stats)
     }
     return pd.DataFrame(data)
 
 
-def single_day_race(pr_stats):
-    recorded_races = set()
-    indiv_race = []
-
-    for race in pr_stats[CASES_BY_RACE].keys():
-        recorded_races.add(race)
-    for race in pr_stats[DEATHS_BY_RACE].keys():
-        recorded_races.add(race)
-
-    for race in recorded_races:
-        data = {
-            DATE: pd.to_datetime(pr_stats[DATE]),
-            RACE: race,
-            CASES: pr_stats[CASES_BY_RACE].get(race, np.nan),
-            DEATHS: pr_stats[DEATHS_BY_RACE].get(race, np.nan)
-        }
-        indiv_race.append(pd.DataFrame(data, index=(0,)))
-
-    df = pd.concat(indiv_race, ignore_index=True)
-    df[CASES] = df[CASES].convert_dtypes()
-    df[DEATHS] = df[DEATHS].convert_dtypes()
-    return df
-
-
 def make_by_race(pr_stats):
-    pr_stats = tuple(filter(lambda x: (x[CASES_BY_RACE] or x[DEATHS_BY_RACE]), pr_stats))
-    per_day = tuple(map(single_day_race, pr_stats))
-    per_day = tuple(filter(lambda x: x is not None, per_day))
-    df = pd.concat(per_day, ignore_index=True)
-    df[RACE] = df[RACE].astype('category')
-    return df
+    
+    cases = map(lambda x: make_section_ts(x, CASES_BY_RACE), pr_stats)
+    deaths = map(lambda x: make_section_ts(x, DEATHS_BY_RACE), pr_stats) 
+
+    df_cases = (pd.DataFrame(cases)
+                .melt(id_vars=DATE, var_name=RACE, value_name=CASES))
+    df_deaths = (pd.DataFrame(deaths)
+                .melt(id_vars=DATE, var_name=RACE, value_name=DEATHS))
+
+    df_all = df_cases.merge(df_deaths, on=[DATE, RACE], how='left')
+    df_all[RACE] = df_all[RACE].astype('category')
+    df_all.sort_values(by=[DATE, RACE], inplace=True)
+
+    return df_all
 
 
 def make_by_age(pr_stats):
@@ -210,6 +188,7 @@ if __name__ == "__main__":
     last_week = every_day[-7:]
     today = every_day[-1]
 
-    df_age = make_by_age(last_week)
+    # df_oneday_race = single_day_race(today)
+    df_race = make_by_race(last_week)
     # df_area = make_by_loc(every_day)
     # test = aggregate_locations(df_area)
