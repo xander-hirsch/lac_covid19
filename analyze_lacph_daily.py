@@ -33,15 +33,25 @@ def query_all_dates() -> Tuple[Dict[str, Any]]:
     )
 
 
-def tidy_data(df: pd.DataFrame, var_desc: str, value_desc: str) -> pd.DataFrame:
+def tidy_data(df: pd.DataFrame, var_desc: str, value_desc: str,
+              make_categorical: bool = True) -> pd.DataFrame:
     df = df.melt(id_vars=DATE, var_name=var_desc, value_name=value_desc)
-    df[var_desc] = df[var_desc].astype('category')
+
+    variable_type = 'category' if make_categorical else 'string'
+    df[var_desc] = df[var_desc].astype(variable_type)
     df.sort_values(by=[DATE, var_desc], ignore_index=True, inplace=True)
     return df
 
 
 def access_date(pr_stats):
-    return pd.to_datetime(pr_stats[DATE], unit='D')
+    return pd.to_datetime(pr_stats[DATE])
+
+
+def make_section_ts(daily_pr: Dict, section: str) -> Dict[str, Any]:
+    """Extracts a section and appends the corersponding date."""
+    data = daily_pr[section]
+    data[DATE] = access_date(daily_pr)
+    return data
 
 
 def make_df_dates(pr_stats):
@@ -88,6 +98,18 @@ def make_by_race(pr_stats):
     per_day = tuple(filter(lambda x: x is not None, per_day))
     df = pd.concat(per_day, ignore_index=True)
     df[RACE] = df[RACE].astype('category')
+    return df
+
+
+def make_by_gender(pr_stats):
+    # Ignore dates where cases by gender are not recorded
+    pr_stats = tuple(filter(lambda x: x[CASES_BY_GENDER], pr_stats))
+    data = map(lambda x: make_section_ts(x, CASES_BY_GENDER), pr_stats)
+
+    df = tidy_data(pd.DataFrame(data), GENDER, CASES, False)
+    df = df[df[GENDER] != 'Other']
+    df[GENDER] = df[GENDER].astype('category')
+
     return df
 
 
@@ -189,20 +211,11 @@ def make_by_age(pr_stats):
     return tidy_data(pd.DataFrame(data), AGE_GROUP, CASES)
 
 
-def make_by_gender(pr_stats):
-    pr_stats = tuple(filter(lambda x: x[CASES_BY_GENDER], pr_stats))
-    data = {
-        DATE: pd.to_datetime(tuple(map(lambda x: x[DATE], pr_stats))),
-        MALE: map(lambda x: x[CASES_BY_GENDER][MALE], pr_stats),
-        FEMALE: map(lambda x: x[CASES_BY_GENDER][FEMALE], pr_stats)
-    }
-    return tidy_data(pd.DataFrame(data), GENDER, CASES)
-
-
 if __name__ == "__main__":
     every_day = query_all_dates()
     last_week = every_day[-7:]
     today = every_day[-1]
 
-    df_area = make_by_loc(every_day)
-    test = aggregate_locations(df_area)
+    df_gender = make_by_gender(last_week)
+    # df_area = make_by_loc(every_day)
+    # test = aggregate_locations(df_area)
