@@ -108,7 +108,7 @@ def make_by_race(pr_stats):
 
 
 def single_day_loc(pr_stats):
-    df = pd.DataFrame(pr_stats[LOCATIONS], columns=(AREA, CASES, CASES_NORMALIZED))
+    df = pd.DataFrame(pr_stats[AREA], columns=(AREA, CASES, CASES_NORMALIZED))
     df[CASES] = df[CASES].convert_dtypes()
     record_date = (pd.Series(pd.to_datetime(pr_stats[DATE])).repeat(df.shape[0])
                    .reset_index(drop=True))
@@ -135,44 +135,35 @@ def make_by_loc(pr_stats, use_cached=True):
     return df
 
 
-def is_select_location(location_entry: pd.Series, locations: Iterable[Tuple[str, str]]) -> bool:
-    return (location_entry[REGION], location_entry[AREA]) in locations
+def infer_area_pop(df_area_ts: pd.DataFrame) -> pd.Series:
+    # Drop unused columns for this function
+    df_area_ts = df_area_ts.drop(columns=REGION)
+    # Computation relies on last entry, so ascending order is necessary
+    if not df_area_ts[DATE].is_monotonic_increasing:
+        df_area_ts.sort_values(DATE, inplace=True)
+    # Identify every area
+    df_area_last = df_area_ts.groupby(AREA).last()
+    # Use last recorded cases and case rate to backtrack population
+    return (df_area_last[CASES].divide(df_area_last[CASES_NORMALIZED])
+            * CASE_RATE_SCALE).round()
 
 
 def aggregate_locations(df_all_loc: pd.DataFrame) -> pd.DataFrame:
-    population_map = external_data.process_population()
-    df_all_loc.drop(columns=CASES_NORMALIZED, inplace=True)
-    # Filter, keeping only the areas in a region
+    area_population = infer_area_pop(df_all_loc)
+    df_all_loc = df_all_loc.drop(columns=CASES_NORMALIZED)
+    # Keep only areas in a region
     df_all_loc = df_all_loc[df_all_loc[REGION].notna()]
-    # TODO fix discrepancy with Rosewood/West Rancho Dominguez and
-    # San Francisquito Canyon/Bouquet Canyon
-    population_col = df_all_loc[AREA].apply(population_map.get).convert_dtypes()
+    population_col = (df_all_loc[AREA].apply(area_population.get)
+                      .convert_dtypes())
     population_col.name = POPULATION
-    df_all_loc = df_all_loc.join(population_col, how='inner')
 
-    df_region = df_all_loc.groupby(([DATE, REGION])).sum().reset_index()
+    df_all_loc = df_all_loc.join(population_col, how='left')
+    # Use case count and population count to normalize cases
+    df_region = df_all_loc.groupby([DATE, REGION]).sum().reset_index()
     df_region[CASES_NORMALIZED] = (
         (df_region[CASES] / df_region[POPULATION] * CASE_RATE_SCALE)
         .round(2))
-
     return df_region.drop(columns=POPULATION)
-
-
-def location_cases_comparison(
-        df_all_loc: pd.DataFrame, region_def: Dict[str, Tuple[str, str]]
-) -> pd.DataFrame:
-    region_time_series = {}
-    for region in region_def:
-        df_indiv_region = aggregate_locations(df_all_loc)
-        region_name = (pd.Series(region, name=REGION, dtype='string')
-                       .repeat(df_indiv_region.shape[0]).reset_index(drop=True))
-        df_indiv_region = pd.concat((df_indiv_region, region_name), axis=1)
-        df_indiv_region = df_indiv_region[[DATE, REGION, CASES_NORMALIZED]]
-        region_time_series[region] = df_indiv_region
-    df_all_regions = pd.concat(region_time_series.values())
-    df_all_regions[REGION] = df_all_regions[REGION].astype('category')
-    df_all_regions.sort_values(by=DATE, ignore_index=True, inplace=True)
-    return df_all_regions
 
 
 def location_some_decrease(df_location, days_back):
@@ -238,24 +229,8 @@ def make_by_gender(pr_stats):
 
 if __name__ == "__main__":
     every_day = query_all_dates()
-
     last_week = every_day[-7:]
-    june_2 = every_day[64]
     today = every_day[-1]
 
-    one_day_loc = single_day_loc(today)
-
-    df_location = make_by_loc(every_day)
-    # df_aggregate = make_df_dates(all_dates)
-    df_aggregate = aggregate_locations(df_location)
-
-    # test = aggregate_locations(df_location, REGION['San Gabriel Valley'])
-
-    # test = area_slowed_increase(df_location, AREA, 14, 0.01)
-
-    # SFV = 'San Fernando Valley'
-    # WS = 'Westside'
-    # sample_regions = {SFV: REGION[SFV], WS: REGION[WS]}
-    # region_ts = location_cases_comparison(df_location, sample_regions)
-    # df_sfv = region_ts[SFV]
-    # sfv_series = pd.Series(SFV, name='Region', dtype='string').repeat(df_sfv.shape[0]).reset_index(drop=True)
+    df_area = make_by_loc(every_day)
+    test = aggregate_locations(df_area)
