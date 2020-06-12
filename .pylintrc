@@ -2,7 +2,8 @@
 disable=anomalous-backslash-in-string,
         missing-function-docstring,
         missing-module-docstring,
-        redefined-outer-name
+        redefined-outer-name,
+        invalid-name
 
 [BASIC]
 good-names=f, i, r, df
