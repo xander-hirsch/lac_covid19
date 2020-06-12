@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 
 import lac_covid19.cache_mgmt as cache_mgmt
+import lac_covid19.const as const
 from lac_covid19.const import (
     DATE, CASES, HOSPITALIZATIONS, DEATHS,
     CASES_BY_GENDER, CASES_BY_RACE, DEATHS_BY_RACE, AREA, CASES_NORMALIZED,
@@ -16,11 +17,21 @@ import lac_covid19.scrape_daily_stats as scrape_daily_stats
 
 
 def query_all_dates() -> Tuple[Dict[str, Any]]:
+    """Loads in previously scraped press releases. See query_all_dates() in
+        module scrape_daily_stats for more information.
+    """
+
+    if not os.path.isfile(const.FILE_ALL_DATA_RAW):
+        return scrape_daily_stats.query_all_dates()
+
+    with open(const.FILE_ALL_DATA_RAW, 'rb') as f:
+        return pickle.load(f)
+
 
     def assert_check(contents: Any) -> bool:
         return ((isinstance(contents, tuple)) and
                 all(map(lambda x: isinstance(x, dict), contents)))
-    
+
     def execute_query():
         return scrape_daily_stats.query_all_dates()
 
@@ -63,9 +74,9 @@ def make_df_dates(pr_stats):
 
 
 def make_by_race(pr_stats):
-    
+
     cases = map(lambda x: make_section_ts(x, CASES_BY_RACE), pr_stats)
-    deaths = map(lambda x: make_section_ts(x, DEATHS_BY_RACE), pr_stats) 
+    deaths = map(lambda x: make_section_ts(x, DEATHS_BY_RACE), pr_stats)
 
     df_cases = (pd.DataFrame(cases)
                 .melt(id_vars=DATE, var_name=RACE, value_name=CASES))

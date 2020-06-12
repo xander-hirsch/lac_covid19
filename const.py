@@ -1,3 +1,5 @@
+import os.path
+
 TOTAL = 'Total'
 AGGREGATE = 'Aggregate'
 
@@ -41,6 +43,9 @@ POPULATION = 'Population'
 # US Census estimates as of 1 July 2019
 POPULATION_LONG_BEACH = 462_628
 POPULATION_PASADENA = 141_029
+
+FILE_ALL_DATA_RAW = os.path.join(os.path.dirname(__file__),
+                    'all-data-raw.pickle') 
 
 
 def stat_by_group(stat: str, group: str) -> str:

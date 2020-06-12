@@ -4,6 +4,7 @@
 import datetime as dt
 import json
 import os
+import pickle
 import re
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
@@ -642,11 +643,19 @@ def query_single_date(date_: Tuple[int, int, int],
     return result
 
 
-def query_all_dates() -> Tuple[Dict[str, Any], ...]:
+def query_all_dates(cached: bool = True) -> Tuple[Dict[str, Any], ...]:
     """Frontend to query_single_date for every date which daily COVID-19
-        statistics have been released.
+        statistics have been released. Caches the result to reduce need for more
+        I/O operations later.
     """
-    return tuple(map(query_single_date, lacph_prid.DAILY_STATS))
+
+    result = tuple(
+        [query_single_date(x, cached) for x in lacph_prid.DAILY_STATS])
+
+    with open(const.FILE_ALL_DATA_RAW, 'wb') as f:
+        pickle.dump(result, f)
+    
+    return result
 
 
 if __name__ == "__main__":

@@ -3,12 +3,9 @@ __pycache__/*
 .ipynb_checkpoints/*
 
 cached-daily-pr/*.html
-cached-daily-pr/.ipynb_checkpoints/*
-
 parsed-daily-pr/*.json
-parsed-daily-pr/.ipynb_checkpoints/*
 
-data/lac-population.csv
+scratchpad.py
 
 lacph_graphs.ipynb
 *.pickle
