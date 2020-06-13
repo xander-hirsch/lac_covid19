@@ -123,6 +123,8 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     # Merge cases and deaths
     df_all = df_cases.merge(df_deaths, on=[DATE, RACE], how='left')
     df_all[RACE] = df_all[RACE].astype('category')
+    df_all[CASES] = df_all[CASES].convert_dtypes()
+    df_all[DEATHS] = df_all[DEATHS].convert_dtypes()
 
     return df_all.sort_values(by=[DATE, RACE])
 
@@ -252,4 +254,5 @@ if __name__ == "__main__":
     last_week = every_day[-7:]
     today = every_day[-1]
 
-    df_area = create_by_area(last_week)
+    # df_race = create_by_race(every_day)
+    # df_area = create_by_area(last_week)
