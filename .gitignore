@@ -4,6 +4,7 @@ __pycache__/*
 
 cached-daily-pr/*.html
 parsed-daily-pr/*.json
+docs/*.pickle
 
 scratchpad.py
 

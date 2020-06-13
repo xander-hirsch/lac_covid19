@@ -1,35 +1,34 @@
-import os.path
-
 import lac_covid19.analyze_lacph_daily as analyze_lacph_daily
+import lac_covid19.const as const
 import lac_covid19.scrape_daily_stats as scrape_daily_stats
 
-EXPORT_DIR = os.path.join(os.path.dirname(__file__), 'docs')
-FILENAME_PREFIX = 'lac-covid19'
-FILENAME_EXT = '.csv'
-
-
-def make_filepath(description: str) -> str:
-    """Creates the entire path for the output file"""
-    filename = '{}-{}{}'.format(FILENAME_PREFIX, description, FILENAME_EXT)
-    return os.path.join(EXPORT_DIR, filename)
-
 to_export = (
-    (make_filepath('main-stats'), analyze_lacph_daily.create_main_stats),
-    (make_filepath('age'), analyze_lacph_daily.create_by_age),
-    (make_filepath('gender'), analyze_lacph_daily.create_by_gender),
-    (make_filepath('race'), analyze_lacph_daily.create_by_race),
+    (const.FILE_MAIN_STATS_CSV, const.FILE_MAIN_STATS_PICKLE,
+        analyze_lacph_daily.create_main_stats),
+    (const.FILE_AGE_CSV, const.FILE_AGE_PICKLE,
+        analyze_lacph_daily.create_by_age),
+    (const.FILE_GENDER_CSV, const.FILE_GENDER_PICKLE,
+        analyze_lacph_daily.create_by_gender),
+    (const.FILE_RACE_CSV, const.FILE_RACE_PICKLE,
+        analyze_lacph_daily.create_by_race),
 )
-
-LOC_PREFIX = 'loc-'
-LOC_CSA = make_filepath('{}csa'.format(LOC_PREFIX))
-LOC_REGION = make_filepath('{}region'.format(LOC_PREFIX))
 
 if __name__ == "__main__":
     all_dates = scrape_daily_stats.query_all_dates()
 
-    for filename, function in to_export:
-        function(all_dates).to_csv(filename)
+    for csv_file, pickle_file, function in to_export:
+        df = function(all_dates)
+        df.to_csv(csv_file)
+        df.to_pickle(pickle_file)
 
     df_csa = analyze_lacph_daily.create_by_area(all_dates)
-    df_csa.to_csv(LOC_CSA)
-    analyze_lacph_daily.aggregate_locations(df_csa).to_csv(LOC_REGION)
+    df_region = analyze_lacph_daily.aggregate_locations(df_csa)
+
+    location_export = (
+        (const.FILE_CSA_CSV, const.FILE_CSA_PICKLE, df_csa),
+        (const.FILE_REGION_CSV, const.FILE_REGION_PICKLE, df_region),
+    )
+    
+    for csv_file, pickle_file, df in location_export:
+        df.to_csv(csv_file)
+        df.to_pickle(pickle_file)
