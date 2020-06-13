@@ -126,7 +126,7 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     df_all[CASES] = df_all[CASES].convert_dtypes()
     df_all[DEATHS] = df_all[DEATHS].convert_dtypes()
 
-    return df_all.sort_values(by=[DATE, RACE])
+    return df_all.sort_values(by=[DATE, RACE]).reset_index()
 
 
 def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
