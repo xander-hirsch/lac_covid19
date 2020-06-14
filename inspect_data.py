@@ -9,6 +9,7 @@ if __name__ == "__main__":
 
     raw_daily_pr = [scrape_daily_stats.fetch_press_release(x) for x in
                     lacph_prid.DAILY_STATS]
+    today = raw_daily_pr[-1]
 
     df_summary = pd.read_pickle(const.FILE_MAIN_STATS_PICKLE)
 

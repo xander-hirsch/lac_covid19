@@ -10,6 +10,8 @@ DATE = 'Date'
 CASES = 'Cases'
 DEATHS = 'Deaths'
 HOSPITALIZATIONS = 'Hospitalizations'
+TEST_RESULTS = 'Test Results'
+PERCENT_POSITIVE_TESTS = '% Positive Tests'
 
 OTHER = 'Other'
 

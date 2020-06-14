@@ -16,25 +16,18 @@ import lac_covid19.lacph_prid as lacph_prid
 
 DATE = const.DATE
 TOTAL = const.TOTAL
-CASES = const.CASES
-HOSPITALIZATIONS = const.HOSPITALIZATIONS
 AREA = const.AREA
 FEMALE = const.FEMALE
 MALE = const.MALE
 OTHER = const.OTHER
-DEATHS = const.DEATHS
-POPULATION_LONG_BEACH = const.POPULATION_LONG_BEACH
-POPULATION_PASADENA = const.POPULATION_PASADENA
-CASE_RATE_SCALE = const.CASE_RATE_SCALE
-CASES_BY_AGE = const.CASES_BY_AGE
-CASES_BY_GENDER = const.CASES_BY_GENDER
-CASES_BY_RACE = const.CASES_BY_RACE
-DEATHS_BY_RACE = const.DEATHS_BY_RACE
 PASADENA = const.PASADENA
 LONG_BEACH = const.LONG_BEACH
 
 LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='  # pylint: disable=line-too-long
 RE_DATE = re.compile('[A-Z][a-z]+ \d{2}, 20\d{2}')
+
+RE_TESTING = re.compile(
+    'testing\s+results\s+available.+\s([\d,]{6,})\s+individuals.+\s(\d{1,2})%.+testing\s+positive')  # pylint: disable=line-too-long
 
 RE_UNDER_INVESTIGATION = re.compile('Under Investigation')
 
@@ -281,6 +274,16 @@ def _get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
 
     date_text = RE_DATE.search(pr_html.get_text()).group()
     return dt.datetime.strptime(date_text, '%B %d, %Y').date()
+
+
+def _get_testing(pr_html: bs4.BeautifulSoup) -> Optional[Tuple[int, int]]:
+    """Extacts the number of test results and percent of positive tests."""
+    result = RE_TESTING.search(pr_html.get_text())
+    num_tests, pos_rate = None, None
+    if result:
+        num_tests = _str_to_int(result.group(1))
+        pos_rate = int(result.group(2))
+    return num_tests, pos_rate
 
 
 def _get_html_general(
@@ -585,39 +588,35 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
         in a single object.
     """
 
-    pr_date = _get_date(daily_pr)
-
     cases_by_dept = _parse_cases(daily_pr)
-    total_cases = cases_by_dept[TOTAL]
-    total_deaths = _parse_deaths(daily_pr)[TOTAL]
-
-    total_hospitalizations = _parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS]
-
-    cases_by_age = _parse_age_cases(daily_pr)
-    cases_by_gender = _parse_gender(daily_pr)
-    cases_by_race = _parse_race_cases(daily_pr)
-    deaths_by_race = _parse_race_deaths(daily_pr)
+    tests_available, positive_tests = _get_testing(daily_pr)
 
     cases_by_area = _parse_area(daily_pr)
+
+    CASE_RATE_SCALE = const.CASE_RATE_SCALE
     long_beach_cases = cases_by_dept[LONG_BEACH]
     long_beach_rate = round(
-        long_beach_cases / POPULATION_LONG_BEACH * CASE_RATE_SCALE, 2)  # pylint: disable=old-division
+        long_beach_cases / const.POPULATION_LONG_BEACH * CASE_RATE_SCALE, 2)  # pylint: disable=old-division
     cases_by_area.append((LONG_BEACH_NAME, long_beach_cases, long_beach_rate))
     pasadena_cases = cases_by_dept[PASADENA]
     pasadena_rate = round(
-        pasadena_cases / POPULATION_PASADENA * CASE_RATE_SCALE, 2)  # pylint: disable=old-division
+        pasadena_cases / const.POPULATION_PASADENA * CASE_RATE_SCALE, 2)  # pylint: disable=old-division
     cases_by_area.append((PASADENA_NAME, pasadena_cases, pasadena_rate))
+
     cases_by_area = tuple(cases_by_area)
 
     return {
-        DATE: pr_date,
-        CASES: total_cases,
-        DEATHS: total_deaths,
-        HOSPITALIZATIONS: total_hospitalizations,
-        CASES_BY_AGE: cases_by_age,
-        CASES_BY_GENDER: cases_by_gender,
-        CASES_BY_RACE: cases_by_race,
-        DEATHS_BY_RACE: deaths_by_race,
+        DATE: _get_date(daily_pr),
+        const.CASES: cases_by_dept[TOTAL],
+        const.DEATHS: _parse_deaths(daily_pr)[TOTAL],
+        const.HOSPITALIZATIONS:
+            _parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS],
+        const.TEST_RESULTS: tests_available,
+        const.PERCENT_POSITIVE_TESTS: positive_tests,
+        const.CASES_BY_AGE: _parse_age_cases(daily_pr),
+        const.CASES_BY_GENDER: _parse_gender(daily_pr),
+        const.CASES_BY_RACE: _parse_race_cases(daily_pr),
+        const.DEATHS_BY_RACE: _parse_race_deaths(daily_pr),
         AREA: cases_by_area
     }
 
@@ -654,9 +653,14 @@ def query_all_dates(cached: bool = True) -> Tuple[Dict[str, Any], ...]:
 
     with open(const.FILE_ALL_DATA_RAW, 'wb') as f:
         pickle.dump(result, f)
-    
+
     return result
 
 
 if __name__ == "__main__":
     query_all_dates(False)
+
+    # debug_raw_pr = tuple([fetch_press_release(x)
+    #                       for x in lacph_prid.DAILY_STATS])
+    # today_parse = _parse_entire_day(debug_raw_pr[-1])
+    # another_parse = _parse_entire_day(debug_raw_pr[12])
