@@ -62,7 +62,7 @@ ENTRY_RACE = re.compile('([A-Z][A-Za-z/ ]+[a-z])\s+(\d+)')
 
 HEADER_LOC = re.compile('CITY / COMMUNITY\** \(Rate\**\)')
 RE_LOC = re.compile(
-    '([A-Z][A-Za-z/\-\. ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+(--|[0-9]|[0-9]+\.[0-9]+)\s\)')  # pylint: disable=line-too-long
+    '([A-Z][A-Za-z/\-\. ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+(--|[0-9]+|[0-9]+\.[0-9]+)\s\)')  # pylint: disable=line-too-long
 
 
 EXTENDED_HTML = (dt.date(2020, 4, 23),)

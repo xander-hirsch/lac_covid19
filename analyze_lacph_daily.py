@@ -168,6 +168,10 @@ def infer_area_pop(df_area_ts: pd.DataFrame) -> pd.Series:
 
     # Drop unused columns for this function
     df_area_ts = df_area_ts.drop(columns=REGION)
+    # June 13 and on rounds the case rate, making the estimation less accurate.
+    rounded_case_rate = pd.Timestamp('2020-06-13')
+    df_area_ts = df_area_ts[df_area_ts[DATE] < rounded_case_rate]
+
     # Computation relies on last entry, so ascending order is necessary
     if not df_area_ts[DATE].is_monotonic_increasing:
         df_area_ts.sort_values(DATE, inplace=True)
