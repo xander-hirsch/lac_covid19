@@ -26000,3 +26000,343 @@
 25998,2020-06-13,South Bay,Unincorporated - Wiseburn,22,365.0
 25999,2020-06-13,Harbor,City of Long Beach,2565,554.44
 26000,2020-06-13,Verdugos,City of Pasadena,1028,728.93
+26001,2020-06-14,Santa Monica Mountains,City of Agoura Hills,38,182.0
+26002,2020-06-14,San Gabriel Valley,City of Alhambra,286,330.0
+26003,2020-06-14,San Gabriel Valley,City of Arcadia,106,184.0
+26004,2020-06-14,Southeast,City of Artesia,59,351.0
+26005,2020-06-14,Harbor,City of Avalon,0,0.0
+26006,2020-06-14,San Gabriel Valley,City of Azusa,273,546.0
+26007,2020-06-14,San Gabriel Valley,City of Baldwin Park,494,643.0
+26008,2020-06-14,Southeast,City of Bell,486,1338.0
+26009,2020-06-14,Southeast,City of Bell Gardens,448,1040.0
+26010,2020-06-14,Southeast,City of Bellflower,554,713.0
+26011,2020-06-14,Westside,City of Beverly Hills,169,490.0
+26012,2020-06-14,San Gabriel Valley,City of Bradbury,4,374.0
+26013,2020-06-14,San Fernando Valley,City of Burbank,443,413.0
+26014,2020-06-14,Santa Monica Mountains,City of Calabasas,99,407.0
+26015,2020-06-14,Harbor,City of Carson,534,569.0
+26016,2020-06-14,Southeast,City of Cerritos,153,306.0
+26017,2020-06-14,Pomona Valley,City of Claremont,72,197.0
+26018,2020-06-14,,City of Commerce*,124,949.0
+26019,2020-06-14,Southeast,City of Compton,935,936.0
+26020,2020-06-14,San Gabriel Valley,City of Covina,248,506.0
+26021,2020-06-14,Southeast,City of Cudahy,344,1413.0
+26022,2020-06-14,Westside,City of Culver City,175,439.0
+26023,2020-06-14,San Gabriel Valley,City of Diamond Bar,88,153.0
+26024,2020-06-14,Southeast,City of Downey,1035,906.0
+26025,2020-06-14,San Gabriel Valley,City of Duarte,148,672.0
+26026,2020-06-14,San Gabriel Valley,City of El Monte,932,795.0
+26027,2020-06-14,South Bay,City of El Segundo,39,232.0
+26028,2020-06-14,South Bay,City of Gardena,351,573.0
+26029,2020-06-14,Verdugos,City of Glendale,1131,548.0
+26030,2020-06-14,San Gabriel Valley,City of Glendora,188,356.0
+26031,2020-06-14,Harbor,City of Hawaiian Gardens,114,777.0
+26032,2020-06-14,South Bay,City of Hawthorne,531,598.0
+26033,2020-06-14,South Bay,City of Hermosa Beach,45,229.0
+26034,2020-06-14,Santa Monica Mountains,City of Hidden Hills,3,159.0
+26035,2020-06-14,Southeast,City of Huntington Park,767,1289.0
+26036,2020-06-14,San Gabriel Valley,City of Industry,12,2746.0
+26037,2020-06-14,South Bay,City of Inglewood,753,663.0
+26038,2020-06-14,San Gabriel Valley,City of Irwindale,5,343.0
+26039,2020-06-14,Verdugos,City of La Canada Flintridge,57,275.0
+26040,2020-06-14,San Gabriel Valley,City of La Habra Heights,12,220.0
+26041,2020-06-14,Southeast,City of La Mirada,228,460.0
+26042,2020-06-14,San Gabriel Valley,City of La Puente,226,555.0
+26043,2020-06-14,Pomona Valley,City of La Verne,43,129.0
+26044,2020-06-14,Harbor,City of Lakewood,279,347.0
+26045,2020-06-14,,City of Lancaster*,756,468.0
+26046,2020-06-14,South Bay,City of Lawndale,157,467.0
+26047,2020-06-14,South Bay,City of Lomita,57,275.0
+26048,2020-06-14,,City of Lynwood*,931,1292.0
+26049,2020-06-14,Santa Monica Mountains,City of Malibu,40,309.0
+26050,2020-06-14,South Bay,City of Manhattan Beach,87,242.0
+26051,2020-06-14,Southeast,City of Maywood,437,1558.0
+26052,2020-06-14,San Gabriel Valley,City of Monrovia,187,482.0
+26053,2020-06-14,Southeast,City of Montebello,571,887.0
+26054,2020-06-14,San Gabriel Valley,City of Monterey Park,222,357.0
+26055,2020-06-14,Southeast,City of Norwalk,734,682.0
+26056,2020-06-14,Antelope Valley,City of Palmdale,917,577.0
+26057,2020-06-14,South Bay,City of Palos Verdes Estates,46,340.0
+26058,2020-06-14,Southeast,City of Paramount,539,962.0
+26059,2020-06-14,Southeast,City of Pico Rivera,701,1090.0
+26060,2020-06-14,Pomona Valley,City of Pomona,822,527.0
+26061,2020-06-14,South Bay,City of Rancho Palos Verdes,108,253.0
+26062,2020-06-14,South Bay,City of Redondo Beach,167,243.0
+26063,2020-06-14,South Bay,City of Rolling Hills,2,103.0
+26064,2020-06-14,South Bay,City of Rolling Hills Estates,17,210.0
+26065,2020-06-14,San Gabriel Valley,City of Rosemead,163,294.0
+26066,2020-06-14,San Gabriel Valley,City of San Dimas,88,255.0
+26067,2020-06-14,San Fernando Valley,City of San Fernando,243,987.0
+26068,2020-06-14,San Gabriel Valley,City of San Gabriel,183,447.0
+26069,2020-06-14,San Gabriel Valley,City of San Marino,24,181.0
+26070,2020-06-14,Northwest County,City of Santa Clarita,889,403.0
+26071,2020-06-14,Southeast,City of Santa Fe Springs,101,550.0
+26072,2020-06-14,Westside,City of Santa Monica,337,365.0
+26073,2020-06-14,San Gabriel Valley,City of Sierra Madre,19,173.0
+26074,2020-06-14,Harbor,City of Signal Hill,50,424.0
+26075,2020-06-14,San Gabriel Valley,City of South El Monte,176,843.0
+26076,2020-06-14,Southeast,City of South Gate,1060,1080.0
+26077,2020-06-14,San Gabriel Valley,City of South Pasadena,137,526.0
+26078,2020-06-14,San Gabriel Valley,City of Temple City,192,527.0
+26079,2020-06-14,South Bay,City of Torrance,449,301.0
+26080,2020-06-14,Southeast,City of Vernon,4,1914.0
+26081,2020-06-14,San Gabriel Valley,City of Walnut,63,206.0
+26082,2020-06-14,San Gabriel Valley,City of West Covina,538,497.0
+26083,2020-06-14,Central LA,City of West Hollywood,199,539.0
+26084,2020-06-14,Santa Monica Mountains,City of Westlake Village,7,84.0
+26085,2020-06-14,San Gabriel Valley,City of Whittier,447,511.0
+26086,2020-06-14,,Los Angeles,33216,821.0
+26087,2020-06-14,South LA,Los Angeles - Adams-Normandie,71,866.0
+26088,2020-06-14,South LA,Los Angeles - Alsace,80,643.0
+26089,2020-06-14,Angeles Forest,Los Angeles - Angeles National Forest,1,2500.0
+26090,2020-06-14,Central LA,Los Angeles - Angelino Heights,21,839.0
+26091,2020-06-14,San Fernando Valley,Los Angeles - Arleta,339,986.0
+26092,2020-06-14,Northeast LA,Los Angeles - Atwater Village,56,382.0
+26093,2020-06-14,South LA,Los Angeles - Baldwin Hills,206,662.0
+26094,2020-06-14,Westside,Los Angeles - Bel Air,39,463.0
+26095,2020-06-14,Westside,Los Angeles - Beverly Crest,41,327.0
+26096,2020-06-14,Westside,Los Angeles - Beverlywood,43,326.0
+26097,2020-06-14,,Los Angeles - Boyle Heights*,1153,1327.0
+26098,2020-06-14,Westside,Los Angeles - Brentwood,90,291.0
+26099,2020-06-14,Central LA,Los Angeles - Brookside,1,172.0
+26100,2020-06-14,Central LA,Los Angeles - Cadillac-Corning,36,506.0
+26101,2020-06-14,San Fernando Valley,Los Angeles - Canoga Park,616,943.0
+26102,2020-06-14,Central LA,Los Angeles - Carthay,93,647.0
+26103,2020-06-14,South LA,Los Angeles - Central,643,1649.0
+26104,2020-06-14,Westside,Los Angeles - Century City,41,321.0
+26105,2020-06-14,South LA,Los Angeles - Century Palms/Cove,421,1247.0
+26106,2020-06-14,San Fernando Valley,Los Angeles - Chatsworth,231,623.0
+26107,2020-06-14,Westside,Los Angeles - Cheviot Hills,22,240.0
+26108,2020-06-14,Central LA,Los Angeles - Chinatown,29,362.0
+26109,2020-06-14,Central LA,Los Angeles - Cloverdale/Cochran,97,667.0
+26110,2020-06-14,Central LA,Los Angeles - Country Club Park,117,772.0
+26111,2020-06-14,South LA,Los Angeles - Crenshaw District,95,687.0
+26112,2020-06-14,Central LA,Los Angeles - Crestview,98,862.0
+26113,2020-06-14,Westside,Los Angeles - Del Rey,96,321.0
+26114,2020-06-14,,Los Angeles - Downtown*,199,723.0
+26115,2020-06-14,Northeast LA,Los Angeles - Eagle Rock,222,561.0
+26116,2020-06-14,Central LA,Los Angeles - East Hollywood,255,871.0
+26117,2020-06-14,Central LA,Los Angeles - Echo Park,64,449.0
+26118,2020-06-14,Eastside,Los Angeles - El Sereno,270,646.0
+26119,2020-06-14,Central LA,Los Angeles - Elysian Park,17,298.0
+26120,2020-06-14,Northeast LA,Los Angeles - Elysian Valley,74,728.0
+26121,2020-06-14,San Fernando Valley,Los Angeles - Encino,157,348.0
+26122,2020-06-14,South LA,Los Angeles - Exposition,16,481.0
+26123,2020-06-14,South LA,Los Angeles - Exposition Park,342,761.0
+26124,2020-06-14,Central LA,Los Angeles - Faircrest Heights,10,278.0
+26125,2020-06-14,South LA,Los Angeles - Figueroa Park Square,66,757.0
+26126,2020-06-14,South LA,Los Angeles - Florence-Firestone,615,1296.0
+26127,2020-06-14,Northeast LA,Los Angeles - Glassell Park,221,699.0
+26128,2020-06-14,South LA,Los Angeles - Gramercy Place,92,855.0
+26129,2020-06-14,San Fernando Valley,Los Angeles - Granada Hills,443,761.0
+26130,2020-06-14,South LA,Los Angeles - Green Meadows,245,1139.0
+26131,2020-06-14,Central LA,Los Angeles - Hancock Park,96,563.0
+26132,2020-06-14,Harbor,Los Angeles - Harbor City,144,495.0
+26133,2020-06-14,Harbor,Los Angeles - Harbor Gateway,192,440.0
+26134,2020-06-14,Harbor,Los Angeles - Harbor Pines,9,374.0
+26135,2020-06-14,Central LA,Los Angeles - Harvard Heights,176,976.0
+26136,2020-06-14,South LA,Los Angeles - Harvard Park,443,1168.0
+26137,2020-06-14,Northeast LA,Los Angeles - Highland Park,336,694.0
+26138,2020-06-14,Central LA,Los Angeles - Historic Filipinotown,180,1298.0
+26139,2020-06-14,Central LA,Los Angeles - Hollywood,334,489.0
+26140,2020-06-14,Central LA,Los Angeles - Hollywood Hills,91,309.0
+26141,2020-06-14,South LA,Los Angeles - Hyde Park,193,676.0
+26142,2020-06-14,South LA,Los Angeles - Jefferson Park,63,780.0
+26143,2020-06-14,Central LA,Los Angeles - Koreatown,374,724.0
+26144,2020-06-14,Central LA,Los Angeles - Lafayette Square,25,548.0
+26145,2020-06-14,San Fernando Valley,Los Angeles - Lake Balboa,252,597.0
+26146,2020-06-14,San Fernando Valley,Los Angeles - Lakeview Terrace,143,1089.0
+26147,2020-06-14,South LA,Los Angeles - Leimert Park,74,486.0
+26148,2020-06-14,Eastside,Los Angeles - Lincoln Heights,369,1132.0
+26149,2020-06-14,Central LA,Los Angeles - Little Armenia,229,2854.0
+26150,2020-06-14,Central LA,Los Angeles - Little Bangladesh,187,660.0
+26151,2020-06-14,Central LA,Los Angeles - Little Tokyo,34,1085.0
+26152,2020-06-14,Central LA,Los Angeles - Longwood,32,743.0
+26153,2020-06-14,Central LA,Los Angeles - Los Feliz,63,292.0
+26154,2020-06-14,South LA,Los Angeles - Manchester Square,33,387.0
+26155,2020-06-14,Westside,Los Angeles - Mandeville Canyon,3,96.0
+26156,2020-06-14,Westside,Los Angeles - Mar Vista,93,219.0
+26157,2020-06-14,Westside,Los Angeles - Marina Peninsula,15,344.0
+26158,2020-06-14,Central LA,Los Angeles - Melrose,688,886.0
+26159,2020-06-14,Central LA,Los Angeles - Mid-city,136,905.0
+26160,2020-06-14,Central LA,Los Angeles - Miracle Mile,49,272.0
+26161,2020-06-14,San Fernando Valley,Los Angeles - Mission Hills,205,850.0
+26162,2020-06-14,Northeast LA,Los Angeles - Mt. Washington,131,543.0
+26163,2020-06-14,San Fernando Valley,Los Angeles - North Hills,606,984.0
+26164,2020-06-14,San Fernando Valley,Los Angeles - North Hollywood,913,603.0
+26165,2020-06-14,San Fernando Valley,Los Angeles - Northridge,428,613.0
+26166,2020-06-14,Westside,Los Angeles - Pacific Palisades,62,291.0
+26167,2020-06-14,San Fernando Valley,Los Angeles - Pacoima,996,1294.0
+26168,2020-06-14,Westside,Los Angeles - Palisades Highlands,7,182.0
+26169,2020-06-14,Westside,Los Angeles - Palms,219,499.0
+26170,2020-06-14,San Fernando Valley,Los Angeles - Panorama City,1031,1370.0
+26171,2020-06-14,Central LA,Los Angeles - Park La Brea,23,169.0
+26172,2020-06-14,Central LA,Los Angeles - Pico-Union,737,1761.0
+26173,2020-06-14,South Bay,Los Angeles - Playa Del Rey,5,156.0
+26174,2020-06-14,Westside,Los Angeles - Playa Vista,36,329.0
+26175,2020-06-14,San Fernando Valley,Los Angeles - Porter Ranch,106,298.0
+26176,2020-06-14,Westside,Los Angeles - Rancho Park,20,305.0
+26177,2020-06-14,Central LA,Los Angeles - Regent Square,10,360.0
+26178,2020-06-14,San Fernando Valley,Los Angeles - Reseda,758,989.0
+26179,2020-06-14,San Fernando Valley,Los Angeles - Reseda Ranch,33,712.0
+26180,2020-06-14,Central LA,Los Angeles - Reynier Village,14,331.0
+26181,2020-06-14,,Los Angeles - San Pedro*,1022,1310.0
+26182,2020-06-14,San Fernando Valley,Los Angeles - Shadow Hills,12,270.0
+26183,2020-06-14,San Fernando Valley,Los Angeles - Sherman Oaks,284,325.0
+26184,2020-06-14,Central LA,Los Angeles - Silverlake,221,501.0
+26185,2020-06-14,Central LA,Los Angeles - South Carthay,40,378.0
+26186,2020-06-14,South LA,Los Angeles - South Park,599,1578.0
+26187,2020-06-14,Central LA,Los Angeles - St Elmo Village,51,1113.0
+26188,2020-06-14,San Fernando Valley,Los Angeles - Studio City,89,397.0
+26189,2020-06-14,San Fernando Valley,Los Angeles - Sun Valley,391,745.0
+26190,2020-06-14,Verdugos,Los Angeles - Sunland,177,867.0
+26191,2020-06-14,Central LA,Los Angeles - Sycamore Square,1,155.0
+26192,2020-06-14,,Los Angeles - Sylmar*,1017,1234.0
+26193,2020-06-14,San Fernando Valley,Los Angeles - Tarzana,285,923.0
+26194,2020-06-14,Central LA,Los Angeles - Temple-Beaudry,417,1056.0
+26195,2020-06-14,Central LA,Los Angeles - Thai Town,39,398.0
+26196,2020-06-14,San Fernando Valley,Los Angeles - Toluca Lake,23,264.0
+26197,2020-06-14,San Fernando Valley,Los Angeles - Toluca Terrace,8,613.0
+26198,2020-06-14,San Fernando Valley,Los Angeles - Toluca Woods,3,161.0
+26199,2020-06-14,Verdugos,Los Angeles - Tujunga,141,507.0
+26200,2020-06-14,Eastside,Los Angeles - University Hills,16,467.0
+26201,2020-06-14,South LA,Los Angeles - University Park,272,991.0
+26202,2020-06-14,San Fernando Valley,Los Angeles - Valley Glen,170,566.0
+26203,2020-06-14,San Fernando Valley,Los Angeles - Valley Village,253,1023.0
+26204,2020-06-14,San Fernando Valley,Los Angeles - Van Nuys,947,1016.0
+26205,2020-06-14,Westside,Los Angeles - Venice,75,221.0
+26206,2020-06-14,South LA,Los Angeles - Vermont Knolls,227,1320.0
+26207,2020-06-14,South LA,Los Angeles - Vermont Square,107,1397.0
+26208,2020-06-14,South LA,Los Angeles - Vermont Vista,525,1275.0
+26209,2020-06-14,South LA,Los Angeles - Vernon Central,906,1742.0
+26210,2020-06-14,Central LA,Los Angeles - Victoria Park,68,810.0
+26211,2020-06-14,South LA,Los Angeles - View Heights,11,298.0
+26212,2020-06-14,South LA,Los Angeles - Watts,468,1097.0
+26213,2020-06-14,Central LA,Los Angeles - Wellington Square,35,712.0
+26214,2020-06-14,South LA,Los Angeles - West Adams,308,1115.0
+26215,2020-06-14,San Fernando Valley,Los Angeles - West Hills,174,429.0
+26216,2020-06-14,Westside,Los Angeles - West Los Angeles,101,268.0
+26217,2020-06-14,South LA,Los Angeles - West Vernon,669,1247.0
+26218,2020-06-14,South Bay,Los Angeles - Westchester,123,238.0
+26219,2020-06-14,Central LA,Los Angeles - Westlake,1018,1715.0
+26220,2020-06-14,Westside,Los Angeles - Westwood,92,170.0
+26221,2020-06-14,,Los Angeles - Wholesale District*,945,2616.0
+26222,2020-06-14,Harbor,Los Angeles - Wilmington,399,706.0
+26223,2020-06-14,Central LA,Los Angeles - Wilshire Center,322,642.0
+26224,2020-06-14,San Fernando Valley,Los Angeles - Winnetka,369,713.0
+26225,2020-06-14,San Fernando Valley,Los Angeles - Woodland Hills,206,303.0
+26226,2020-06-14,Antelope Valley,Unincorporated - Acton,19,238.0
+26227,2020-06-14,Northwest County,Unincorporated - Agua Dulce,9,216.0
+26228,2020-06-14,Verdugos,Unincorporated - Altadena,181,415.0
+26229,2020-06-14,Antelope Valley,Unincorporated - Anaverde,2,133.0
+26230,2020-06-14,Angeles Forest,Unincorporated - Angeles National Forest,2,161.0
+26231,2020-06-14,San Gabriel Valley,Unincorporated - Arcadia,12,150.0
+26232,2020-06-14,South LA,Unincorporated - Athens-Westmont,315,742.0
+26233,2020-06-14,South LA,Unincorporated - Athens Village,48,980.0
+26234,2020-06-14,San Gabriel Valley,Unincorporated - Avocado Heights,42,620.0
+26235,2020-06-14,San Gabriel Valley,Unincorporated - Azusa,100,628.0
+26236,2020-06-14,San Gabriel Valley,Unincorporated - Bassett,154,1039.0
+26237,2020-06-14,Northwest County,Unincorporated - Bouquet Canyon,1,93.0
+26238,2020-06-14,San Gabriel Valley,Unincorporated - Bradbury,0,0.0
+26239,2020-06-14,Northwest County,Unincorporated - Canyon Country,39,505.0
+26240,2020-06-14,,Unincorporated - Castaic*,1719,6322.0
+26241,2020-06-14,Southeast,Unincorporated - Cerritos,0,0.0
+26242,2020-06-14,San Gabriel Valley,Unincorporated - Charter Oak,0,0.0
+26243,2020-06-14,Pomona Valley,Unincorporated - Claremont,0,0.0
+26244,2020-06-14,San Gabriel Valley,Unincorporated - Covina,72,428.0
+26245,2020-06-14,South Bay,Unincorporated - Del Aire,18,410.0
+26246,2020-06-14,Westside,Unincorporated - Del Rey,1,314.0
+26247,2020-06-14,Antelope Valley,Unincorporated - Del Sur,2,83.0
+26248,2020-06-14,Antelope Valley,Unincorporated - Desert View Highlands,6,241.0
+26249,2020-06-14,San Gabriel Valley,Unincorporated - Duarte,20,452.0
+26250,2020-06-14,San Gabriel Valley,Unincorporated - East Covina,0,0.0
+26251,2020-06-14,Southeast,Unincorporated - East La Mirada,23,435.0
+26252,2020-06-14,Antelope Valley,Unincorporated - East Lancaster,0,0.0
+26253,2020-06-14,Eastside,Unincorporated - East Los Angeles,1657,1323.0
+26254,2020-06-14,San Gabriel Valley,Unincorporated - East Pasadena,4,62.0
+26255,2020-06-14,Southeast,Unincorporated - East Rancho Dominguez,111,725.0
+26256,2020-06-14,Southeast,Unincorporated - East Whittier,15,283.0
+26257,2020-06-14,South Bay,Unincorporated - El Camino Village,60,683.0
+26258,2020-06-14,San Gabriel Valley,Unincorporated - El Monte,0,0.0
+26259,2020-06-14,Antelope Valley,Unincorporated - Elizabeth Lake,4,241.0
+26260,2020-06-14,South LA,Unincorporated - Florence-Firestone,885,1368.0
+26261,2020-06-14,Central LA,Unincorporated - Franklin Canyon,0,0.0
+26262,2020-06-14,San Gabriel Valley,Unincorporated - Glendora,3,455.0
+26263,2020-06-14,San Gabriel Valley,Unincorporated - Hacienda Heights,216,386.0
+26264,2020-06-14,Harbor,Unincorporated - Harbor Gateway,0,0.0
+26265,2020-06-14,South Bay,Unincorporated - Hawthorne,10,398.0
+26266,2020-06-14,Antelope Valley,Unincorporated - Hi Vista,1,91.0
+26267,2020-06-14,Angeles Forest,Unincorporated - Kagel/Lopez Canyons,8,567.0
+26268,2020-06-14,Verdugos,Unincorporated - La Crescenta-Montrose,37,187.0
+26269,2020-06-14,San Gabriel Valley,Unincorporated - La Habra Heights,0,0.0
+26270,2020-06-14,Harbor,Unincorporated - La Rambla,42,2024.0
+26271,2020-06-14,Pomona Valley,Unincorporated - La Verne,5,245.0
+26272,2020-06-14,Westside,Unincorporated - Ladera Heights,25,354.0
+26273,2020-06-14,Northwest County,Unincorporated - Lake Hughes,1,150.0
+26274,2020-06-14,Antelope Valley,Unincorporated - Lake Los Angeles,33,254.0
+26275,2020-06-14,San Fernando Valley,Unincorporated - Lake Manor,4,243.0
+26276,2020-06-14,Harbor,Unincorporated - Lakewood,0,0.0
+26277,2020-06-14,South Bay,Unincorporated - Lennox,145,643.0
+26278,2020-06-14,Antelope Valley,Unincorporated - Leona Valley,3,171.0
+26279,2020-06-14,Antelope Valley,Unincorporated - Littlerock,16,398.0
+26280,2020-06-14,Antelope Valley,Unincorporated - Littlerock/Juniper Hills,2,154.0
+26281,2020-06-14,Antelope Valley,Unincorporated - Littlerock/Pearblossom,26,728.0
+26282,2020-06-14,Antelope Valley,Unincorporated - Llano,1,114.0
+26283,2020-06-14,Westside,Unincorporated - Marina del Rey,17,181.0
+26284,2020-06-14,Central LA,Unincorporated - Miracle Mile,0,0.0
+26285,2020-06-14,San Gabriel Valley,Unincorporated - Monrovia,23,593.0
+26286,2020-06-14,Northwest County,Unincorporated - Newhall,1,455.0
+26287,2020-06-14,Antelope Valley,Unincorporated - North Lancaster,6,501.0
+26288,2020-06-14,San Gabriel Valley,Unincorporated - North Whittier,23,275.0
+26289,2020-06-14,San Gabriel Valley,Unincorporated - Northeast San Gabriel,70,291.0
+26290,2020-06-14,Antelope Valley,Unincorporated - Palmdale,6,713.0
+26291,2020-06-14,South Bay,Unincorporated - Palos Verdes Peninsula,0,0.0
+26292,2020-06-14,Antelope Valley,Unincorporated - Pearblossom/Llano,4,204.0
+26293,2020-06-14,San Gabriel Valley,Unincorporated - Pellissier Village,1,162.0
+26294,2020-06-14,Angeles Forest,Unincorporated - Placerita Canyon,0,0.0
+26295,2020-06-14,San Gabriel Valley,Unincorporated - Pomona,4,206.0
+26296,2020-06-14,Antelope Valley,Unincorporated - Quartz Hill,48,372.0
+26297,2020-06-14,Harbor,Unincorporated - Rancho Dominguez,21,789.0
+26298,2020-06-14,Antelope Valley,Unincorporated - Roosevelt,1,107.0
+26299,2020-06-14,Southeast,Unincorporated - Rosewood,8,622.0
+26300,2020-06-14,Southeast,Unincorporated - Rosewood/East Gardena,1,84.0
+26301,2020-06-14,Southeast,Unincorporated - Rosewood/West Rancho Dominguez,30,893.0
+26302,2020-06-14,San Gabriel Valley,Unincorporated - Rowland Heights,192,376.0
+26303,2020-06-14,Harbor,Unincorporated - San Clemente Island,0,0.0
+26304,2020-06-14,Northwest County,Unincorporated - San Francisquito Canyon/Bouquet Canyon,0,0.0
+26305,2020-06-14,San Gabriel Valley,Unincorporated - San Jose Hills,124,613.0
+26306,2020-06-14,San Gabriel Valley,Unincorporated - San Pasqual,2,98.0
+26307,2020-06-14,Angeles Forest,Unincorporated - Sand Canyon,0,0.0
+26308,2020-06-14,Harbor,Unincorporated - Santa Catalina Island,3,1124.0
+26309,2020-06-14,Santa Monica Mountains,Unincorporated - Santa Monica Mountains,28,150.0
+26310,2020-06-14,Northwest County,Unincorporated - Saugus,5,3226.0
+26311,2020-06-14,Northwest County,Unincorporated - Saugus/Canyon Country,0,0.0
+26312,2020-06-14,Antelope Valley,Unincorporated - South Antelope Valley,1,220.0
+26313,2020-06-14,San Gabriel Valley,Unincorporated - South El Monte,10,557.0
+26314,2020-06-14,San Gabriel Valley,Unincorporated - South San Gabriel,54,610.0
+26315,2020-06-14,Southeast,Unincorporated - South Whittier,246,415.0
+26316,2020-06-14,Antelope Valley,Unincorporated - Southeast Antelope Valley,0,0.0
+26317,2020-06-14,Northwest County,Unincorporated - Stevenson Ranch,39,186.0
+26318,2020-06-14,Antelope Valley,Unincorporated - Sun Village,26,431.0
+26319,2020-06-14,San Gabriel Valley,Unincorporated - Sunrise Village,8,617.0
+26320,2020-06-14,Northwest County,Unincorporated - Twin Lakes/Oat Mountain,7,422.0
+26321,2020-06-14,Northwest County,Unincorporated - Val Verde,23,695.0
+26322,2020-06-14,Northwest County,Unincorporated - Valencia,12,391.0
+26323,2020-06-14,San Gabriel Valley,Unincorporated - Valinda,152,650.0
+26324,2020-06-14,South LA,Unincorporated - View Park/Windsor Hills,45,387.0
+26325,2020-06-14,Southeast,Unincorporated - Walnut Park,186,1152.0
+26326,2020-06-14,Antelope Valley,Unincorporated - West Antelope Valley,2,132.0
+26327,2020-06-14,Harbor,Unincorporated - West Carson,127,575.0
+26328,2020-06-14,San Fernando Valley,Unincorporated - West Chatsworth,0,0.0
+26329,2020-06-14,San Gabriel Valley,Unincorporated - West Puente Valley,61,620.0
+26330,2020-06-14,Harbor,Unincorporated - West Rancho Dominguez,10,736.0
+26331,2020-06-14,Southeast,Unincorporated - West Whittier/Los Nietos,242,899.0
+26332,2020-06-14,South Bay,Unincorporated - Westfield/Academy Hills,0,0.0
+26333,2020-06-14,San Fernando Valley,Unincorporated - Westhills,0,0.0
+26334,2020-06-14,Antelope Valley,Unincorporated - White Fence Farms,15,407.0
+26335,2020-06-14,San Gabriel Valley,Unincorporated - Whittier,15,396.0
+26336,2020-06-14,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0
+26337,2020-06-14,South LA,Unincorporated - Willowbrook,363,1040.0
+26338,2020-06-14,South Bay,Unincorporated - Wiseburn,22,365.0
+26339,2020-06-14,Harbor,City of Long Beach,2599,561.79
+26340,2020-06-14,Verdugos,City of Pasadena,1037,735.31
