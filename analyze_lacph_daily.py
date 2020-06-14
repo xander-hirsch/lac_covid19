@@ -72,14 +72,24 @@ def create_main_stats(
         many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     """Time series of total cases, deaths, and hospitalizaitons."""
 
-    HOSPITALIZATIONS = const.HOSPITALIZATIONS
+    TEST_RESULTS = const.TEST_RESULTS
+    PERCENT_POSITIVE = const.PERCENT_POSITIVE_TESTS
+
     data = {
         DATE: map(access_date, many_daily_pr),
         CASES: map(lambda x: x[CASES], many_daily_pr),
-        HOSPITALIZATIONS: map(lambda x: x[HOSPITALIZATIONS], many_daily_pr),
-        DEATHS: map(lambda x: x[DEATHS], many_daily_pr)
+        const.HOSPITALIZATIONS:
+            map(lambda x: x[const.HOSPITALIZATIONS], many_daily_pr),
+        DEATHS: map(lambda x: x[DEATHS], many_daily_pr),
+        TEST_RESULTS: map(lambda x: x[TEST_RESULTS], many_daily_pr),
+        PERCENT_POSITIVE: map(lambda x: x[PERCENT_POSITIVE], many_daily_pr)
     }
-    return pd.DataFrame(data)
+
+    df = pd.DataFrame(data)
+    df[TEST_RESULTS] = df[TEST_RESULTS].convert_dtypes()
+    df[PERCENT_POSITIVE] = df[PERCENT_POSITIVE].convert_dtypes()
+
+    return df
 
 
 def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
@@ -258,5 +268,6 @@ if __name__ == "__main__":
     last_week = every_day[-7:]
     today = every_day[-1]
 
+    df_summary = create_main_stats(every_day)
     # df_race = create_by_race(every_day)
     # df_area = create_by_area(last_week)
