@@ -235,7 +235,7 @@ def _request_pr_online(pr_date: dt.date) -> str:
         'Cannot retrieve the press release statement')
 
 
-def _fetch_press_release(
+def fetch_press_release(
         date_: Tuple[int, int, int], cached: bool = True) -> List[bs4.Tag]:
     """Fetches the HTML of press releases for the given dates. The source can
     come from cache or by fetching from the internet.
@@ -419,7 +419,7 @@ def _parse_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
     return _parse_total_by_dept_general(daily_pr, HEADER_CASE_COUNT)
 
 
-def parse_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
+def _parse_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
     """Parses the total COVID-19 deaths from Los Angeles County,
     including Long Beach and Pasadena.
 
@@ -440,7 +440,7 @@ def parse_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
     return _parse_total_by_dept_general(daily_pr, HEADER_DEATH)
 
 
-def parse_hospital(daily_pr: bs4.Tag) -> Dict[str, int]:
+def _parse_hospital(daily_pr: bs4.Tag) -> Dict[str, int]:
     """Parses the hospitalizations due to COVID-19.
 
     SAMPLE:
@@ -456,7 +456,7 @@ def parse_hospital(daily_pr: bs4.Tag) -> Dict[str, int]:
                                        ENTRY_HOSPITAL)
 
 
-def parse_age_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
+def _parse_age_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
     """Parses the age breakdown of COVID-19 cases in Los Angeles County.
 
     SAMPLE:
@@ -477,7 +477,7 @@ def parse_age_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
     return _parse_list_entries_general(_get_html_age_group(daily_pr), ENTRY_AGE)
 
 
-def parse_gender(daily_pr: bs4.Tag) -> Dict[str, int]:
+def _parse_gender(daily_pr: bs4.Tag) -> Dict[str, int]:
     """Parses the age breakdown of COVID-19 cases in Los Angeles County.
 
     SAMPLE:
@@ -507,7 +507,7 @@ def parse_gender(daily_pr: bs4.Tag) -> Dict[str, int]:
     return result
 
 
-def parse_race_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
+def _parse_race_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
     """Parses the race breakdown of COVID-19 cases in Los Angeles County.
 
     SAMPLE:
@@ -529,7 +529,7 @@ def parse_race_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
                                        ENTRY_RACE)
 
 
-def parse_race_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
+def _parse_race_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
     """Parses the race breakdown of COVID-19 deaths in Los Angeles County.
 
     See parse_race_cases for an example.
@@ -589,14 +589,14 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
 
     cases_by_dept = _parse_cases(daily_pr)
     total_cases = cases_by_dept[TOTAL]
-    total_deaths = parse_deaths(daily_pr)[TOTAL]
+    total_deaths = _parse_deaths(daily_pr)[TOTAL]
 
-    total_hospitalizations = parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS]
+    total_hospitalizations = _parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS]
 
-    cases_by_age = parse_age_cases(daily_pr)
-    cases_by_gender = parse_gender(daily_pr)
-    cases_by_race = parse_race_cases(daily_pr)
-    deaths_by_race = parse_race_deaths(daily_pr)
+    cases_by_age = _parse_age_cases(daily_pr)
+    cases_by_gender = _parse_gender(daily_pr)
+    cases_by_race = _parse_race_cases(daily_pr)
+    deaths_by_race = _parse_race_deaths(daily_pr)
 
     cases_by_area = _parse_area(daily_pr)
     long_beach_cases = cases_by_dept[LONG_BEACH]
@@ -634,10 +634,10 @@ def query_single_date(date_: Tuple[int, int, int],
     result = None
 
     if cached:
-        result = _cache_read_parsed(dt.date(date_[0], date_[1], date_[2]))
+        result = _cache_read_parsed(dt.date(*date_))
 
     if result is None:
-        result = _parse_entire_day(_fetch_press_release(date_))
+        result = _parse_entire_day(fetch_press_release(date_))
         _cache_write_parsed(result)
 
     return result
@@ -659,4 +659,4 @@ def query_all_dates(cached: bool = True) -> Tuple[Dict[str, Any], ...]:
 
 
 if __name__ == "__main__":
-    query_all_dates()
+    query_all_dates(False)
