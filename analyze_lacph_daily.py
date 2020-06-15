@@ -2,6 +2,7 @@ import os.path
 import pickle
 from typing import Any, Dict, Tuple, Union
 
+import numpy as np
 import pandas as pd
 
 import lac_covid19.const as const
@@ -13,11 +14,77 @@ CASES = const.CASES
 DEATHS = const.DEATHS
 
 CASES_NORMALIZED = const.CASES_NORMALIZED
+CASE_RATE = const.CASE_RATE
+DEATH_RATE = const.DEATH_RATE
 CASE_RATE_SCALE = const.CASE_RATE_SCALE
+RATE_SCALE = const.RATE_SCALE
 
 AREA = const.AREA
 REGION = const.REGION
 POPULATION = const.POPULATION
+
+
+def demographic_table(table_dir: str, desc: str) -> str:
+    return os.path.join(table_dir, 'demographic_table_{}.csv'.format(desc))
+
+TABLE_DIR = os.path.join(os.path.dirname(__file__), 'lacph_import')
+TABLE_AGE = demographic_table(TABLE_DIR, 'age')
+TABLE_GENDER = demographic_table(TABLE_DIR, 'gender')
+TABLE_RACE = demographic_table(TABLE_DIR, 'race')
+
+
+def read_lacph_table(table_path: str,
+                     indep_var: str, pop_var: str) -> pd.Series:
+
+    df = pd.read_csv(table_path)
+    df = df[df[pop_var].notna()]
+    df[pop_var] = df[pop_var].convert_dtypes()
+
+    return pd.Series(df[pop_var].to_numpy('int'),
+                     index=df[indep_var].to_numpy('str'))
+
+
+def read_csa_population() -> pd.Series:
+    table_path = os.path.join(TABLE_DIR, 'city_community_table.csv')
+    indep_var = 'geo_merge'
+    pop_var = 'population'
+    return read_lacph_table(table_path, indep_var, pop_var)
+
+
+def read_demographic_population(demographic: str) -> pd.Series:
+    table_path = demographic_table(TABLE_DIR, demographic)
+    characteristic = 'characteristic'
+    population = 'POP'
+
+    return read_lacph_table(table_path, characteristic, population)
+
+
+def read_age_population() -> pd.Series:
+    raw_values = read_demographic_population('age')
+    new_names = (
+        const.AGE_0_17,
+        const.AGE_18_40,
+        const.AGE_41_65,
+        const.AGE_OVER_65,
+    )
+    return pd.Series(raw_values.to_numpy('int'), index=new_names)
+
+
+def read_gender_population() -> pd.Series:
+    return read_demographic_population('gender')
+
+
+def read_race_population() -> pd.Series:
+    raw_values = read_demographic_population('race')
+    new_names = (
+        const.RACE_AI_AN,
+        const.RACE_ASIAN,
+        const.RACE_BLACK,
+        const.RACE_HL,
+        const.RACE_NH_PI,
+        const.RACE_WHITE,
+    )
+    return pd.Series(raw_values.to_numpy('int'), index=new_names)
 
 
 def query_all_dates() -> Tuple[Dict[str, Any]]:
@@ -119,6 +186,15 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
 
     RACE = const.RACE
 
+    def calculate_rate(date_race_entry: pd.Series, variable_name: str,
+                       race_pop: pd.Series) -> float:
+        count = date_race_entry[variable_name]
+        race = date_race_entry[RACE]
+        if race == 'Other' or count is pd.NA:
+            return np.nan
+
+        return round((count / race_pop.get(race) * RATE_SCALE), 2)
+
     cases_raw = map(lambda x: make_section_ts(x, const.CASES_BY_RACE),
                     many_daily_pr)
     deaths_raw = map(lambda x: make_section_ts(x, const.DEATHS_BY_RACE),
@@ -136,7 +212,17 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     df_all[CASES] = df_all[CASES].convert_dtypes()
     df_all[DEATHS] = df_all[DEATHS].convert_dtypes()
 
-    return df_all.sort_values(by=[DATE, RACE]).reset_index()
+    df_all = df_all.sort_values(by=[DATE, RACE]).reset_index(drop=True)
+
+    race_pop = read_race_population()
+
+    df_all[CASE_RATE] = df_all.apply(
+        lambda x: calculate_rate(x, CASES, race_pop), axis='columns')
+
+    df_all[DEATH_RATE] = df_all.apply(
+        lambda x: calculate_rate(x, DEATHS, race_pop), axis='columns')
+
+    return df_all[[DATE, RACE, CASES, CASE_RATE, DEATHS, DEATH_RATE]]
 
 
 def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
@@ -268,6 +354,6 @@ if __name__ == "__main__":
     last_week = every_day[-7:]
     today = every_day[-1]
 
-    df_summary = create_main_stats(every_day)
-    # df_race = create_by_race(every_day)
+    # df_summary = create_main_stats(every_day)
+    # df_race = create_by_race(last_week)
     # df_area = create_by_area(last_week)

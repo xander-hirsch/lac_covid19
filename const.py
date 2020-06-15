@@ -32,19 +32,35 @@ LOCATIONS = LOCATION + 's'
 CITY = 'City'
 LOS_ANGELES = 'Los Angeles'
 UNINC = 'Unincorporated'
+LAC = 'Los Angeles County'
 LONG_BEACH = 'Long Beach'
 PASADENA = 'Pasadena'
 
+RACE_AI_AN = 'American Indian/Alaska Native'
+RACE_ASIAN = 'Asian'
+RACE_BLACK = 'Black'
+RACE_HL = 'Hispanic/Latino'
+RACE_NH_PI = 'Native Hawaiian/Pacific Islander'
+RACE_WHITE = 'White'
+RACE_OTHER = OTHER
+
 CASES_NORMALIZED = CASES + ' per 100,000'
+CASE_RATE = 'Case Rate'
+DEATH_RATE = 'Death Rate'
 CASE_RATE_SCALE = 100_000
+RATE_SCALE = CASE_RATE_SCALE
 
 REGION = 'Region'
 AREA = 'Area'
 POPULATION = 'Population'
 
-# US Census estimates as of 1 July 2019
-POPULATION_LONG_BEACH = 462_628
-POPULATION_PASADENA = 141_029
+# US Census Table DP05 2018 5-year
+POPULATION_LAC = 10_098_052
+POPULATION_LONG_BEACH = 468_883
+POPULATION_PASADENA = 141_246
+
+DEATH_RATE = 'Death Rate'
+
 
 
 def stat_by_group(stat: str, group: str) -> str:
