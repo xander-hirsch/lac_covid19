@@ -4,13 +4,13 @@ import lac_covid19.scrape_daily_stats as scrape_daily_stats
 
 to_export = (
     (const.FILE_MAIN_STATS_CSV, const.FILE_MAIN_STATS_PICKLE,
-        analyze_lacph_daily.create_main_stats),
+     analyze_lacph_daily.create_main_stats),
     (const.FILE_AGE_CSV, const.FILE_AGE_PICKLE,
-        analyze_lacph_daily.create_by_age),
+     analyze_lacph_daily.create_by_age),
     (const.FILE_GENDER_CSV, const.FILE_GENDER_PICKLE,
-        analyze_lacph_daily.create_by_gender),
+     analyze_lacph_daily.create_by_gender),
     (const.FILE_RACE_CSV, const.FILE_RACE_PICKLE,
-        analyze_lacph_daily.create_by_race),
+     analyze_lacph_daily.create_by_race),
 )
 
 if __name__ == "__main__":
@@ -28,7 +28,7 @@ if __name__ == "__main__":
         (const.FILE_CSA_CSV, const.FILE_CSA_PICKLE, df_csa),
         (const.FILE_REGION_CSV, const.FILE_REGION_PICKLE, df_region),
     )
-    
+
     for csv_file, pickle_file, df in location_export:
         df.to_csv(csv_file)
         df.to_pickle(pickle_file)

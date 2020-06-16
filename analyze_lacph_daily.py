@@ -1,6 +1,6 @@
 import os.path
 import pickle
-from typing import Any, Dict, Tuple, Union
+from typing import Any, Dict, Iterable, Tuple, Union
 
 import numpy as np
 import pandas as pd
@@ -277,7 +277,7 @@ def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
 
     # Assings region category to every area
     df[REGION] = df.apply(
-        lambda x: lac_regions.REGION_MAP.get(x[AREA], None),
+        lambda x: lac_regions.REGION_MAP.get(x[AREA], pd.NA),
         axis='columns').astype('string')
 
     return df[[DATE, REGION, AREA, CASES, CASE_RATE]]
@@ -317,6 +317,29 @@ def aggregate_locations(df_all_loc: pd.DataFrame) -> pd.DataFrame:
         .round(2))
 
     return df_region.drop(columns=POPULATION)
+
+
+def create_custom_region(df_all_loc: pd.DataFrame,
+                         areas: Iterable) -> pd.DataFrame:
+    """Tallies the cases and case rate of a custom defined region."""
+
+    area_population = read_csa_population()
+    region_pop = 0
+    for area in areas:
+        region_pop += area_population[area]
+
+    # Takes out the notation of a correctional facility outbreak
+    df_all_loc[AREA] = df_all_loc[AREA].apply(lambda x: x.rstrip('*'))
+
+    # Keep only areas from parameter
+    df_custom_region = df_all_loc[df_all_loc[AREA].isin(areas)]
+    df_custom_region = df_custom_region.groupby(DATE).sum()
+
+    case_multiplier = RATE_SCALE / region_pop
+    df_custom_region[CASE_RATE] = (df_custom_region[CASES]
+                                   * case_multiplier).round(2)
+
+    return df_custom_region
 
 
 def area_slowed_increase(
@@ -373,7 +396,9 @@ if __name__ == "__main__":
     # df_age = create_by_age(every_day)
     # df_gender = create_by_gender(every_day)
     # df_race = create_by_race(last_week)
-    # df_area = create_by_area(last_week)
+    df_area = create_by_area(last_week)
     # df_region = aggregate_locations(df_area)
 
     # csa_pop = read_csa_population()
+    # df_custom_region = create_custom_region(
+    #     df_area, ('City of Burbank', 'City of Glendale'))

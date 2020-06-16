@@ -582,14 +582,13 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
 
     cases_by_area = _parse_area(daily_pr)
 
-    CASE_RATE_SCALE = const.CASE_RATE_SCALE
     long_beach_cases = cases_by_dept[const.LONG_BEACH]
     long_beach_rate = round(
-        long_beach_cases / const.POPULATION_LONG_BEACH * CASE_RATE_SCALE, 2)  # pylint: disable=old-division
+        long_beach_cases / const.POPULATION_LONG_BEACH * const.RATE_SCALE, 2)  # pylint: disable=old-division
     cases_by_area.append((const.CITY_OF_LB, long_beach_cases, long_beach_rate))
     pasadena_cases = cases_by_dept[const.PASADENA]
     pasadena_rate = round(
-        pasadena_cases / const.POPULATION_PASADENA * CASE_RATE_SCALE, 2)  # pylint: disable=old-division
+        pasadena_cases / const.POPULATION_PASADENA * const.RATE_SCALE, 2)  # pylint: disable=old-division
     cases_by_area.append((const.CITY_OF_PAS, pasadena_cases, pasadena_rate))
 
     cases_by_area = tuple(cases_by_area)
