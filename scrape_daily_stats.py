@@ -15,13 +15,6 @@ import lac_covid19.const as const
 import lac_covid19.lacph_prid as lacph_prid
 
 DATE = const.DATE
-TOTAL = const.TOTAL
-AREA = const.AREA
-FEMALE = const.FEMALE
-MALE = const.MALE
-OTHER = const.OTHER
-PASADENA = const.PASADENA
-LONG_BEACH = const.LONG_BEACH
 
 LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='  # pylint: disable=line-too-long
 RE_DATE = re.compile('[A-Z][a-z]+ \d{2}, 20\d{2}')
@@ -36,7 +29,7 @@ HEADER_CASE_COUNT = re.compile(
 HEADER_DEATH = re.compile('Deaths\s+([\d,]+)')
 ENTRY_BY_DEPT = re.compile(
     '(Los Angeles County \(excl\. LB and Pas\)|{}|{})[\s-]*(\d+)'
-    .format(LONG_BEACH, PASADENA))
+    .format(const.LONG_BEACH, const.PASADENA))
 
 LAC_ONLY = '\(Los Angeles County Cases Only-excl LB and Pas\)'
 
@@ -47,7 +40,8 @@ HEADER_HOSPITAL = re.compile('Hospitalization')
 ENTRY_HOSPITAL = re.compile('([A-Z][A-Za-z() ]+[)a-z])\s*(\d+)')
 
 HEADER_GENDER = re.compile('Gender {}'.format(LAC_ONLY))
-ENTRY_GENDER = re.compile('(Mm*ale|{}|{})\s+(\d+)'.format(FEMALE, OTHER))
+ENTRY_GENDER = re.compile('(Mm*ale|{}|{})\s+(\d+)'.format(const.FEMALE,
+                                                          const.OTHER))
 
 HEADER_RACE_CASE = re.compile('(?<!Deaths )Race/Ethnicity {}'.format(LAC_ONLY))
 HEADER_RACE_DEATH = re.compile('Deaths Race/Ethnicity {}'.format(LAC_ONLY))
@@ -56,7 +50,6 @@ ENTRY_RACE = re.compile('([A-Z][A-Za-z/ ]+[a-z])\s+(\d+)')
 HEADER_LOC = re.compile('CITY / COMMUNITY\** \(Rate\**\)')
 RE_LOC = re.compile(
     '([A-Z][A-Za-z/\-\. ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+(--|[0-9]+|[0-9]+\.[0-9]+)\s\)')  # pylint: disable=line-too-long
-
 
 EXTENDED_HTML = (dt.date(2020, 4, 23),)
 FORMAT_START_HOSPITAL_NESTED = dt.date(2020, 4, 4)
@@ -71,10 +64,6 @@ HTML = 'html'
 JSON = 'json'
 
 TOTAL_HOSPITALIZATIONS = 'Hospitalized (Ever)'
-
-CITY_PREFIX = 'City of'
-LONG_BEACH_NAME = ' '.join((CITY_PREFIX, LONG_BEACH))
-PASADENA_NAME = ' '.join((CITY_PREFIX, PASADENA))
 
 
 def local_filename(pr_date: dt.date, deparment: str, extenstion: str) -> str:
@@ -181,7 +170,7 @@ def _json_import(dict_content: Dict) -> Dict[str, Any]:
     converted to tuples.
     """
     dict_content[DATE] = dt.date.fromisoformat(dict_content[DATE])
-    dict_content[AREA] = tuple(map(tuple, dict_content[AREA]))
+    dict_content[const.AREA] = tuple(map(tuple, dict_content[const.AREA]))
 
 
 def _json_export(dict_content: Dict) -> Dict[str, Any]:
@@ -395,7 +384,7 @@ def _parse_total_by_dept_general(
         if match_attempt:
             total = _str_to_int(match_attempt.group(1))
             break
-    result[TOTAL] = total
+    result[const.TOTAL] = total
 
     return result
 
@@ -505,7 +494,7 @@ def _parse_gender(daily_pr: bs4.Tag) -> Dict[str, int]:
     old_keys = list(result.keys())
     for key in old_keys:
         if key == 'Mmale':
-            result[MALE] = result.pop(key)
+            result[const.MALE] = result.pop(key)
 
     return result
 
@@ -594,21 +583,21 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     cases_by_area = _parse_area(daily_pr)
 
     CASE_RATE_SCALE = const.CASE_RATE_SCALE
-    long_beach_cases = cases_by_dept[LONG_BEACH]
+    long_beach_cases = cases_by_dept[const.LONG_BEACH]
     long_beach_rate = round(
         long_beach_cases / const.POPULATION_LONG_BEACH * CASE_RATE_SCALE, 2)  # pylint: disable=old-division
-    cases_by_area.append((LONG_BEACH_NAME, long_beach_cases, long_beach_rate))
-    pasadena_cases = cases_by_dept[PASADENA]
+    cases_by_area.append((const.CITY_OF_LB, long_beach_cases, long_beach_rate))
+    pasadena_cases = cases_by_dept[const.PASADENA]
     pasadena_rate = round(
         pasadena_cases / const.POPULATION_PASADENA * CASE_RATE_SCALE, 2)  # pylint: disable=old-division
-    cases_by_area.append((PASADENA_NAME, pasadena_cases, pasadena_rate))
+    cases_by_area.append((const.CITY_OF_PAS, pasadena_cases, pasadena_rate))
 
     cases_by_area = tuple(cases_by_area)
 
     return {
         DATE: _get_date(daily_pr),
-        const.CASES: cases_by_dept[TOTAL],
-        const.DEATHS: _parse_deaths(daily_pr)[TOTAL],
+        const.CASES: cases_by_dept[const.TOTAL],
+        const.DEATHS: _parse_deaths(daily_pr)[const.TOTAL],
         const.HOSPITALIZATIONS:
             _parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS],
         const.TEST_RESULTS: tests_available,
@@ -617,7 +606,7 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
         const.CASES_BY_GENDER: _parse_gender(daily_pr),
         const.CASES_BY_RACE: _parse_race_cases(daily_pr),
         const.DEATHS_BY_RACE: _parse_race_deaths(daily_pr),
-        AREA: cases_by_area
+        const.AREA: cases_by_area
     }
 
 

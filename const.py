@@ -1,10 +1,6 @@
 import os.path
 
 TOTAL = 'Total'
-AGGREGATE = 'Aggregate'
-
-STAT = 'Statistic'
-COUNT = 'Count'
 
 DATE = 'Date'
 CASES = 'Cases'
@@ -27,12 +23,12 @@ AGE_OVER_65 = 'over 65'
 MALE = 'Male'
 FEMALE = 'Female'
 
-LOCATION = 'Location'
-LOCATIONS = LOCATION + 's'
-CITY = 'City'
-LOS_ANGELES = 'Los Angeles'
-UNINC = 'Unincorporated'
-LAC = 'Los Angeles County'
+RACE_AI_AN = 'American Indian/Alaska Native'
+RACE_ASIAN = 'Asian'
+RACE_BLACK = 'Black'
+RACE_HL = 'Hispanic/Latino'
+RACE_NH_PI = 'Native Hawaiian/Pacific Islander'
+RACE_WHITE = 'White'
 
 LONG_BEACH = 'Long Beach'
 PASADENA = 'Pasadena'
@@ -40,19 +36,9 @@ _CITY_PREFIX = 'City of '
 CITY_OF_LB = '{}{}'.format(_CITY_PREFIX, LONG_BEACH)
 CITY_OF_PAS = '{}{}'.format(_CITY_PREFIX, PASADENA)
 
-RACE_AI_AN = 'American Indian/Alaska Native'
-RACE_ASIAN = 'Asian'
-RACE_BLACK = 'Black'
-RACE_HL = 'Hispanic/Latino'
-RACE_NH_PI = 'Native Hawaiian/Pacific Islander'
-RACE_WHITE = 'White'
-RACE_OTHER = OTHER
-
-CASES_NORMALIZED = CASES + ' per 100,000'
 CASE_RATE = 'Case Rate'
 DEATH_RATE = 'Death Rate'
-CASE_RATE_SCALE = 100_000
-RATE_SCALE = CASE_RATE_SCALE
+RATE_SCALE = 100_000
 
 REGION = 'Region'
 AREA = 'Area'
@@ -62,9 +48,6 @@ POPULATION = 'Population'
 POPULATION_LAC = 10_098_052
 POPULATION_LONG_BEACH = 468_883
 POPULATION_PASADENA = 141_246
-
-DEATH_RATE = 'Death Rate'
-
 
 
 def stat_by_group(stat: str, group: str) -> str:

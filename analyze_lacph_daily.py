@@ -13,10 +13,10 @@ DATE = const.DATE
 CASES = const.CASES
 DEATHS = const.DEATHS
 
-CASES_NORMALIZED = const.CASES_NORMALIZED
+RATE_SCALE = const.RATE_SCALE
+CASES_NORMALIZED = RATE_SCALE
 CASE_RATE = const.CASE_RATE
 DEATH_RATE = const.DEATH_RATE
-CASE_RATE_SCALE = const.CASE_RATE_SCALE
 RATE_SCALE = const.RATE_SCALE
 
 AREA = const.AREA
@@ -25,6 +25,7 @@ POPULATION = const.POPULATION
 
 
 def demographic_table(table_dir: str, desc: str) -> str:
+    """Returns the file path of the passed demographic description."""
     return os.path.join(table_dir, 'demographic_table_{}.csv'.format(desc))
 
 TABLE_DIR = os.path.join(os.path.dirname(__file__), 'lacph_import')
@@ -32,6 +33,7 @@ TABLE_DIR = os.path.join(os.path.dirname(__file__), 'lacph_import')
 
 def read_lacph_table(table_path: str,
                      indep_var: str, pop_var: str) -> pd.Series:
+    """Produces a mapping between groups and population size"""
 
     df = pd.read_csv(table_path)
     df = df[df[pop_var].notna()]
@@ -54,6 +56,10 @@ def read_csa_population() -> pd.Series:
 
 
 def read_demographic_population(demographic: str) -> pd.Series:
+    """Helper function to reading in a demographic table for its population
+        entries.
+    """
+
     table_path = demographic_table(TABLE_DIR, demographic)
     characteristic = 'characteristic'
     population = 'POP'
@@ -91,12 +97,16 @@ def read_race_population() -> pd.Series:
 
 def calculate_rate(date_group_entry: pd.Series, population_map: pd.Series,
                    group_col: str, count_col: str) -> float:
+    """Calculates the case or death rate of a given entry and population
+        mapping.
+    """
+
     group = date_group_entry[group_col]
     count = date_group_entry[count_col]
 
     if group not in population_map or count is pd.NA:
         return np.nan
-    
+
     return round((count / population_map[group] * RATE_SCALE), 2)
 
 
@@ -183,7 +193,7 @@ def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     age_pop = read_age_population()
     df[CASE_RATE] = df.apply(
         lambda x: calculate_rate(x, age_pop, AGE_GROUP, CASES), axis='columns')
-    
+
     return df
 
 
@@ -303,7 +313,7 @@ def aggregate_locations(df_all_loc: pd.DataFrame) -> pd.DataFrame:
     df_region = df_all_loc.groupby([DATE, REGION]).sum().reset_index()
     # Compute case rate using the estimated area populations.
     df_region[CASE_RATE] = (
-        (df_region[CASES] / df_region[POPULATION] * CASE_RATE_SCALE)
+        (df_region[CASES] / df_region[POPULATION] * RATE_SCALE)
         .round(2))
 
     return df_region.drop(columns=POPULATION)
