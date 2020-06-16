@@ -28,9 +28,6 @@ def demographic_table(table_dir: str, desc: str) -> str:
     return os.path.join(table_dir, 'demographic_table_{}.csv'.format(desc))
 
 TABLE_DIR = os.path.join(os.path.dirname(__file__), 'lacph_import')
-TABLE_AGE = demographic_table(TABLE_DIR, 'age')
-TABLE_GENDER = demographic_table(TABLE_DIR, 'gender')
-TABLE_RACE = demographic_table(TABLE_DIR, 'race')
 
 
 def read_lacph_table(table_path: str,
@@ -48,7 +45,12 @@ def read_csa_population() -> pd.Series:
     table_path = os.path.join(TABLE_DIR, 'city_community_table.csv')
     indep_var = 'geo_merge'
     pop_var = 'population'
-    return read_lacph_table(table_path, indep_var, pop_var)
+    lac_raw = read_lacph_table(table_path, indep_var, pop_var)
+
+    lb_pas = pd.Series((const.POPULATION_LONG_BEACH, const.POPULATION_PASADENA),
+                       index=(const.CITY_OF_LB, const.CITY_OF_PAS))
+
+    return lac_raw.append(lb_pas)
 
 
 def read_demographic_population(demographic: str) -> pd.Series:
@@ -85,6 +87,17 @@ def read_race_population() -> pd.Series:
         const.RACE_WHITE,
     )
     return pd.Series(raw_values.to_numpy('int'), index=new_names)
+
+
+def calculate_rate(date_group_entry: pd.Series, population_map: pd.Series,
+                   group_col: str, count_col: str) -> float:
+    group = date_group_entry[group_col]
+    count = date_group_entry[count_col]
+
+    if group not in population_map or count is pd.NA:
+        return np.nan
+    
+    return round((count / population_map[group] * RATE_SCALE), 2)
 
 
 def query_all_dates() -> Tuple[Dict[str, Any]]:
@@ -161,8 +174,17 @@ def create_main_stats(
 
 def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     """Time series of cases by age group"""
+
+    AGE_GROUP = const.AGE_GROUP
+
     data = map(lambda x: make_section_ts(x, const.CASES_BY_AGE), many_daily_pr)
-    return tidy_data(pd.DataFrame(data), const.AGE_GROUP, CASES)
+    df = tidy_data(pd.DataFrame(data), const.AGE_GROUP, CASES)
+
+    age_pop = read_age_population()
+    df[CASE_RATE] = df.apply(
+        lambda x: calculate_rate(x, age_pop, AGE_GROUP, CASES), axis='columns')
+    
+    return df
 
 
 def create_by_gender(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
@@ -170,13 +192,17 @@ def create_by_gender(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
 
     GENDER = const.GENDER
     CASES_BY_GENDER = const.CASES_BY_GENDER
-    # Ignore dates where cases by gender are not recorded
-    many_daily_pr = tuple(filter(lambda x: x[CASES_BY_GENDER], many_daily_pr))
+
     data = map(lambda x: make_section_ts(x, CASES_BY_GENDER), many_daily_pr)
 
     df = tidy_data(pd.DataFrame(data), GENDER, CASES, False)
     df = df[df[GENDER] != const.OTHER]
     df[GENDER] = df[GENDER].astype('category')
+    df[CASES] = df[CASES].convert_dtypes()
+
+    gender_pop = read_gender_population()
+    df[CASE_RATE] = df.apply(
+        lambda x: calculate_rate(x, gender_pop, GENDER, CASES), axis='columns')
 
     return df
 
@@ -231,7 +257,7 @@ def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
     """
 
     # Leverage the provided grouping of area, cases, and case rate.
-    df = pd.DataFrame(daily_pr[AREA], columns=(AREA, CASES, CASES_NORMALIZED))
+    df = pd.DataFrame(daily_pr[AREA], columns=(AREA, CASES, CASE_RATE))
     df[CASES] = df[CASES].convert_dtypes()
 
     # Attach a date to each entry
@@ -244,7 +270,7 @@ def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
         lambda x: lac_regions.REGION_MAP.get(x[AREA], None),
         axis='columns').astype('string')
 
-    return df[[DATE, REGION, AREA, CASES, CASES_NORMALIZED]]
+    return df[[DATE, REGION, AREA, CASES, CASE_RATE]]
 
 
 def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
@@ -259,33 +285,12 @@ def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     return df
 
 
-def infer_area_pop(df_area_ts: pd.DataFrame) -> pd.Series:
-    """Infers the population of every area using the cases and case rate."""
-
-    # Drop unused columns for this function
-    df_area_ts = df_area_ts.drop(columns=REGION)
-    # June 13 and on rounds the case rate, making the estimation less accurate.
-    rounded_case_rate = pd.Timestamp('2020-06-13')
-    df_area_ts = df_area_ts[df_area_ts[DATE] < rounded_case_rate]
-
-    # Computation relies on last entry, so ascending order is necessary
-    if not df_area_ts[DATE].is_monotonic_increasing:
-        df_area_ts.sort_values(DATE, inplace=True)
-
-    # Identify every area
-    df_area_last = df_area_ts.groupby(AREA).last()
-
-    # Use last recorded cases and case rate to backtrack population
-    return (df_area_last[CASES].divide(df_area_last[CASES_NORMALIZED])
-            * CASE_RATE_SCALE).round()
-
-
 def aggregate_locations(df_all_loc: pd.DataFrame) -> pd.DataFrame:
     """Aggregates the individual areas to larger regions and computes the case
         rate."""
 
-    area_population = infer_area_pop(df_all_loc)
-    df_all_loc = df_all_loc.drop(columns=CASES_NORMALIZED)
+    area_population = read_csa_population()
+    df_all_loc = df_all_loc.drop(columns=CASE_RATE)
 
     # Keep only areas in a region
     df_all_loc = df_all_loc[df_all_loc[REGION].notna()]
@@ -297,7 +302,7 @@ def aggregate_locations(df_all_loc: pd.DataFrame) -> pd.DataFrame:
     # Use case count and population count to normalize cases
     df_region = df_all_loc.groupby([DATE, REGION]).sum().reset_index()
     # Compute case rate using the estimated area populations.
-    df_region[CASES_NORMALIZED] = (
+    df_region[CASE_RATE] = (
         (df_region[CASES] / df_region[POPULATION] * CASE_RATE_SCALE)
         .round(2))
 
@@ -355,5 +360,10 @@ if __name__ == "__main__":
     today = every_day[-1]
 
     # df_summary = create_main_stats(every_day)
+    # df_age = create_by_age(every_day)
+    # df_gender = create_by_gender(every_day)
     # df_race = create_by_race(last_week)
     # df_area = create_by_area(last_week)
+    # df_region = aggregate_locations(df_area)
+
+    # csa_pop = read_csa_population()

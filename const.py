@@ -33,8 +33,12 @@ CITY = 'City'
 LOS_ANGELES = 'Los Angeles'
 UNINC = 'Unincorporated'
 LAC = 'Los Angeles County'
+
 LONG_BEACH = 'Long Beach'
 PASADENA = 'Pasadena'
+_CITY_PREFIX = 'City of '
+CITY_OF_LB = '{}{}'.format(_CITY_PREFIX, LONG_BEACH)
+CITY_OF_PAS = '{}{}'.format(_CITY_PREFIX, PASADENA)
 
 RACE_AI_AN = 'American Indian/Alaska Native'
 RACE_ASIAN = 'Asian'

@@ -1,540 +1,547 @@
-,index,Date,Race/Ethnicity,Cases,Deaths
-0,385,2020-03-30,American Indian/Alaska Native,,
-1,0,2020-03-30,Asian,,
-2,77,2020-03-30,Black,,
-3,154,2020-03-30,Hispanic/Latino,,
-4,462,2020-03-30,Native Hawaiian/Pacific Islander,,
-5,308,2020-03-30,Other,,
-6,231,2020-03-30,White,,
-7,386,2020-03-31,American Indian/Alaska Native,,
-8,1,2020-03-31,Asian,,
-9,78,2020-03-31,Black,,
-10,155,2020-03-31,Hispanic/Latino,,
-11,463,2020-03-31,Native Hawaiian/Pacific Islander,,
-12,309,2020-03-31,Other,,
-13,232,2020-03-31,White,,
-14,387,2020-04-01,American Indian/Alaska Native,,
-15,2,2020-04-01,Asian,,
-16,79,2020-04-01,Black,,
-17,156,2020-04-01,Hispanic/Latino,,
-18,464,2020-04-01,Native Hawaiian/Pacific Islander,,
-19,310,2020-04-01,Other,,
-20,233,2020-04-01,White,,
-21,388,2020-04-02,American Indian/Alaska Native,,
-22,3,2020-04-02,Asian,,
-23,80,2020-04-02,Black,,
-24,157,2020-04-02,Hispanic/Latino,,
-25,465,2020-04-02,Native Hawaiian/Pacific Islander,,
-26,311,2020-04-02,Other,,
-27,234,2020-04-02,White,,
-28,389,2020-04-03,American Indian/Alaska Native,,
-29,4,2020-04-03,Asian,,
-30,81,2020-04-03,Black,,
-31,158,2020-04-03,Hispanic/Latino,,
-32,466,2020-04-03,Native Hawaiian/Pacific Islander,,
-33,312,2020-04-03,Other,,
-34,235,2020-04-03,White,,
-35,390,2020-04-04,American Indian/Alaska Native,,
-36,5,2020-04-04,Asian,,
-37,82,2020-04-04,Black,,
-38,159,2020-04-04,Hispanic/Latino,,
-39,467,2020-04-04,Native Hawaiian/Pacific Islander,,
-40,313,2020-04-04,Other,,
-41,236,2020-04-04,White,,
-42,391,2020-04-05,American Indian/Alaska Native,,
-43,6,2020-04-05,Asian,,
-44,83,2020-04-05,Black,,
-45,160,2020-04-05,Hispanic/Latino,,
-46,468,2020-04-05,Native Hawaiian/Pacific Islander,,
-47,314,2020-04-05,Other,,
-48,237,2020-04-05,White,,
-49,392,2020-04-06,American Indian/Alaska Native,,
-50,7,2020-04-06,Asian,,
-51,84,2020-04-06,Black,,
-52,161,2020-04-06,Hispanic/Latino,,
-53,469,2020-04-06,Native Hawaiian/Pacific Islander,,
-54,315,2020-04-06,Other,,
-55,238,2020-04-06,White,,
-56,393,2020-04-07,American Indian/Alaska Native,,
-57,8,2020-04-07,Asian,316,
-58,85,2020-04-07,Black,283,
-59,162,2020-04-07,Hispanic/Latino,735,
-60,470,2020-04-07,Native Hawaiian/Pacific Islander,,
-61,316,2020-04-07,Other,693,
-62,239,2020-04-07,White,870,
-63,394,2020-04-08,American Indian/Alaska Native,,
-64,9,2020-04-08,Asian,334,
-65,86,2020-04-08,Black,301,
-66,163,2020-04-08,Hispanic/Latino,807,
-67,471,2020-04-08,Native Hawaiian/Pacific Islander,,
-68,317,2020-04-08,Other,747,
-69,240,2020-04-08,White,872,
-70,395,2020-04-09,American Indian/Alaska Native,,
-71,10,2020-04-09,Asian,463,32
-72,87,2020-04-09,Black,384,23
-73,164,2020-04-09,Hispanic/Latino,1309,46
-74,472,2020-04-09,Native Hawaiian/Pacific Islander,,
-75,318,2020-04-09,Other,707,6
-76,241,2020-04-09,White,1161,46
-77,396,2020-04-10,American Indian/Alaska Native,,
-78,11,2020-04-10,Asian,526,38
-79,88,2020-04-10,Black,429,26
-80,165,2020-04-10,Hispanic/Latino,1621,51
-81,473,2020-04-10,Native Hawaiian/Pacific Islander,,
-82,319,2020-04-10,Other,655,7
-83,242,2020-04-10,White,1292,54
-84,397,2020-04-11,American Indian/Alaska Native,,
-85,12,2020-04-11,Asian,589,40
-86,89,2020-04-11,Black,460,27
-87,166,2020-04-11,Hispanic/Latino,1869,64
-88,474,2020-04-11,Native Hawaiian/Pacific Islander,,
-89,320,2020-04-11,Other,661,6
-90,243,2020-04-11,White,1399,64
-91,398,2020-04-12,American Indian/Alaska Native,,
-92,13,2020-04-12,Asian,632,46
-93,90,2020-04-12,Black,478,33
-94,167,2020-04-12,Hispanic/Latino,2025,79
-95,475,2020-04-12,Native Hawaiian/Pacific Islander,,
-96,321,2020-04-12,Other,670,5
-97,244,2020-04-12,White,1445,77
-98,399,2020-04-13,American Indian/Alaska Native,,
-99,14,2020-04-13,Asian,673,47
-100,91,2020-04-13,Black,504,37
-101,168,2020-04-13,Hispanic/Latino,2213,87
-102,476,2020-04-13,Native Hawaiian/Pacific Islander,,
-103,322,2020-04-13,Other,681,4
-104,245,2020-04-13,White,1524,87
-105,400,2020-04-14,American Indian/Alaska Native,,
-106,15,2020-04-14,Asian,713,49
-107,92,2020-04-14,Black,539,46
-108,169,2020-04-14,Hispanic/Latino,2416,98
-109,477,2020-04-14,Native Hawaiian/Pacific Islander,,
-110,323,2020-04-14,Other,747,6
-111,246,2020-04-14,White,1610,93
-112,401,2020-04-15,American Indian/Alaska Native,,
-113,16,2020-04-15,Asian,756,57
-114,93,2020-04-15,Black,563,50
-115,170,2020-04-15,Hispanic/Latino,2634,112
-116,478,2020-04-15,Native Hawaiian/Pacific Islander,,
-117,324,2020-04-15,Other,766,8
-118,247,2020-04-15,White,1732,103
-119,402,2020-04-16,American Indian/Alaska Native,,
-120,17,2020-04-16,Asian,783,67
-121,94,2020-04-16,Black,590,64
-122,171,2020-04-16,Hispanic/Latino,2818,130
-123,479,2020-04-16,Native Hawaiian/Pacific Islander,,
-124,325,2020-04-16,Other,766,10
-125,248,2020-04-16,White,1807,119
-126,403,2020-04-17,American Indian/Alaska Native,,
-127,18,2020-04-17,Asian,844,75
-128,95,2020-04-17,Black,630,69
-129,172,2020-04-17,Hispanic/Latino,3066,146
-130,480,2020-04-17,Native Hawaiian/Pacific Islander,,
-131,326,2020-04-17,Other,790,12
-132,249,2020-04-17,White,1903,123
-133,404,2020-04-18,American Indian/Alaska Native,,
-134,19,2020-04-18,Asian,900,84
-135,96,2020-04-18,Black,669,79
-136,173,2020-04-18,Hispanic/Latino,3353,177
-137,481,2020-04-18,Native Hawaiian/Pacific Islander,,
-138,327,2020-04-18,Other,817,15
-139,250,2020-04-18,White,1982,143
-140,405,2020-04-19,American Indian/Alaska Native,,
-141,20,2020-04-19,Asian,915,91
-142,97,2020-04-19,Black,687,83
-143,174,2020-04-19,Hispanic/Latino,3402,189
-144,482,2020-04-19,Native Hawaiian/Pacific Islander,,
-145,328,2020-04-19,Other,884,13
-146,251,2020-04-19,White,2022,152
-147,406,2020-04-20,American Indian/Alaska Native,,
-148,21,2020-04-20,Asian,953,94
-149,98,2020-04-20,Black,720,87
-150,175,2020-04-20,Hispanic/Latino,3597,194
-151,483,2020-04-20,Native Hawaiian/Pacific Islander,,
-152,329,2020-04-20,Other,899,14
-153,252,2020-04-20,White,2071,155
-154,407,2020-04-21,American Indian/Alaska Native,,
-155,22,2020-04-21,Asian,1028,105
-156,99,2020-04-21,Black,769,93
-157,176,2020-04-21,Hispanic/Latino,3872,207
-158,484,2020-04-21,Native Hawaiian/Pacific Islander,,
-159,330,2020-04-21,Other,1011,15
-160,253,2020-04-21,White,2195,162
-161,408,2020-04-22,American Indian/Alaska Native,,
-162,23,2020-04-22,Asian,1078,118
-163,100,2020-04-22,Black,794,100
-164,177,2020-04-22,Hispanic/Latino,4227,237
-165,485,2020-04-22,Native Hawaiian/Pacific Islander,,
-166,331,2020-04-22,Other,972,15
-167,254,2020-04-22,White,2293,176
-168,409,2020-04-23,American Indian/Alaska Native,,
-169,24,2020-04-23,Asian,1124,128
-170,101,2020-04-23,Black,826,107
-171,178,2020-04-23,Hispanic/Latino,4433,267
-172,486,2020-04-23,Native Hawaiian/Pacific Islander,,
-173,332,2020-04-23,Other,984,17
-174,255,2020-04-23,White,2374,197
-175,410,2020-04-24,American Indian/Alaska Native,12,1
-176,25,2020-04-24,Asian,1155,138
-177,102,2020-04-24,Black,844,113
-178,179,2020-04-24,Hispanic/Latino,4634,282
-179,487,2020-04-24,Native Hawaiian/Pacific Islander,157,11
-180,333,2020-04-24,Other,838,8
-181,256,2020-04-24,White,2428,218
-182,411,2020-04-25,American Indian/Alaska Native,12,1
-183,26,2020-04-25,Asian,1194,149
-184,103,2020-04-25,Black,869,115
-185,180,2020-04-25,Hispanic/Latino,4828,301
-186,488,2020-04-25,Native Hawaiian/Pacific Islander,160,11
-187,334,2020-04-25,Other,878,10
-188,257,2020-04-25,White,2479,233
-189,412,2020-04-26,American Indian/Alaska Native,12,1
-190,27,2020-04-26,Asian,1214,152
-191,104,2020-04-26,Black,879,117
-192,181,2020-04-26,Hispanic/Latino,4908,311
-193,489,2020-04-26,Native Hawaiian/Pacific Islander,163,11
-194,335,2020-04-26,Other,912,10
-195,258,2020-04-26,White,2509,235
-196,413,2020-04-27,American Indian/Alaska Native,12,1
-197,28,2020-04-27,Asian,1231,159
-198,105,2020-04-27,Black,882,119
-199,182,2020-04-27,Hispanic/Latino,4960,321
-200,490,2020-04-27,Native Hawaiian/Pacific Islander,163,11
-201,336,2020-04-27,Other,923,10
-202,259,2020-04-27,White,2528,244
-203,414,2020-04-28,American Indian/Alaska Native,13,1
-204,29,2020-04-28,Asian,1269,167
-205,106,2020-04-28,Black,904,124
-206,183,2020-04-28,Hispanic/Latino,5155,343
-207,491,2020-04-28,Native Hawaiian/Pacific Islander,171,10
-208,337,2020-04-28,Other,990,8
-209,260,2020-04-28,White,2581,265
-210,415,2020-04-29,American Indian/Alaska Native,13,1
-211,30,2020-04-29,Asian,1331,179
-212,107,2020-04-29,Black,950,130
-213,184,2020-04-29,Hispanic/Latino,5418,367
-214,492,2020-04-29,Native Hawaiian/Pacific Islander,177,12
-215,338,2020-04-29,Other,1005,11
-216,261,2020-04-29,White,2744,277
-217,416,2020-04-30,American Indian/Alaska Native,13,1
-218,31,2020-04-30,Asian,1394,189
-219,108,2020-04-30,Black,992,132
-220,185,2020-04-30,Hispanic/Latino,5901,388
-221,493,2020-04-30,Native Hawaiian/Pacific Islander,184,12
-222,339,2020-04-30,Other,1031,10
-223,262,2020-04-30,White,2849,288
-224,417,2020-05-01,American Indian/Alaska Native,14,1
-225,32,2020-05-01,Asian,1459,199
-226,109,2020-05-01,Black,1028,139
-227,186,2020-05-01,Hispanic/Latino,6285,401
-228,494,2020-05-01,Native Hawaiian/Pacific Islander,187,12
-229,340,2020-05-01,Other,1063,12
-230,263,2020-05-01,White,2932,305
-231,418,2020-05-02,American Indian/Alaska Native,14,1
-232,33,2020-05-02,Asian,1526,205
-233,110,2020-05-02,Black,1066,139
-234,187,2020-05-02,Hispanic/Latino,6922,413
-235,495,2020-05-02,Native Hawaiian/Pacific Islander,189,13
-236,341,2020-05-02,Other,1069,12
-237,264,2020-05-02,White,3057,318
-238,419,2020-05-03,American Indian/Alaska Native,13,1
-239,34,2020-05-03,Asian,1573,211
-240,111,2020-05-03,Black,1087,141
-241,188,2020-05-03,Hispanic/Latino,7241,421
-242,496,2020-05-03,Native Hawaiian/Pacific Islander,192,13
-243,342,2020-05-03,Other,1092,12
-244,265,2020-05-03,White,3139,322
-245,420,2020-05-04,American Indian/Alaska Native,13,1
-246,35,2020-05-04,Asian,1595,215
-247,112,2020-05-04,Black,1097,144
-248,189,2020-05-04,Hispanic/Latino,7336,431
-249,497,2020-05-04,Native Hawaiian/Pacific Islander,193,13
-250,343,2020-05-04,Other,1146,12
-251,266,2020-05-04,White,3185,332
-252,421,2020-05-05,American Indian/Alaska Native,15,1
-253,36,2020-05-05,Asian,1678,224
-254,113,2020-05-05,Black,1151,148
-255,190,2020-05-05,Hispanic/Latino,8065,461
-256,498,2020-05-05,Native Hawaiian/Pacific Islander,196,13
-257,344,2020-05-05,Other,1217,15
-258,267,2020-05-05,White,3307,339
-259,422,2020-05-06,American Indian/Alaska Native,15,1
-260,37,2020-05-06,Asian,1721,234
-261,114,2020-05-06,Black,1185,155
-262,191,2020-05-06,Hispanic/Latino,8241,486
-263,499,2020-05-06,Native Hawaiian/Pacific Islander,198,13
-264,345,2020-05-06,Other,1228,17
-265,268,2020-05-06,White,3375,354
-266,423,2020-05-07,American Indian/Alaska Native,16,1
-267,38,2020-05-07,Asian,1765,242
-268,115,2020-05-07,Black,1230,161
-269,192,2020-05-07,Hispanic/Latino,8504,503
-270,500,2020-05-07,Native Hawaiian/Pacific Islander,201,14
-271,346,2020-05-07,Other,1245,18
-272,269,2020-05-07,White,3484,370
-273,424,2020-05-08,American Indian/Alaska Native,16,1
-274,39,2020-05-08,Asian,1802,248
-275,116,2020-05-08,Black,1250,165
-276,193,2020-05-08,Hispanic/Latino,8721,520
-277,501,2020-05-08,Native Hawaiian/Pacific Islander,206,14
-278,347,2020-05-08,Other,1314,15
-279,270,2020-05-08,White,3532,389
-280,425,2020-05-09,American Indian/Alaska Native,17,1
-281,40,2020-05-09,Asian,1855,260
-282,117,2020-05-09,Black,1296,173
-283,194,2020-05-09,Hispanic/Latino,9124,531
-284,502,2020-05-09,Native Hawaiian/Pacific Islander,207,14
-285,348,2020-05-09,Other,1303,16
-286,271,2020-05-09,White,3621,402
-287,426,2020-05-10,American Indian/Alaska Native,18,1
-288,41,2020-05-10,Asian,1907,263
-289,118,2020-05-10,Black,1316,175
-290,195,2020-05-10,Hispanic/Latino,9236,539
-291,503,2020-05-10,Native Hawaiian/Pacific Islander,207,14
-292,349,2020-05-10,Other,1327,16
-293,272,2020-05-10,White,3667,404
-294,427,2020-05-11,American Indian/Alaska Native,19,1
-295,42,2020-05-11,Asian,1936,266
-296,119,2020-05-11,Black,1329,179
-297,196,2020-05-11,Hispanic/Latino,9413,552
-298,504,2020-05-11,Native Hawaiian/Pacific Islander,209,14
-299,350,2020-05-11,Other,1341,15
-300,273,2020-05-11,White,3732,418
-301,428,2020-05-12,American Indian/Alaska Native,20,1
-302,43,2020-05-12,Asian,2009,271
-303,120,2020-05-12,Black,1389,187
-304,197,2020-05-12,Hispanic/Latino,9882,567
-305,505,2020-05-12,Native Hawaiian/Pacific Islander,220,15
-306,351,2020-05-12,Other,1389,17
-307,274,2020-05-12,White,3819,432
-308,429,2020-05-13,American Indian/Alaska Native,20,1
-309,44,2020-05-13,Asian,2088,275
-310,121,2020-05-13,Black,1405,190
-311,198,2020-05-13,Hispanic/Latino,10430,588
-312,506,2020-05-13,Native Hawaiian/Pacific Islander,227,15
-313,352,2020-05-13,Other,1443,14
-314,275,2020-05-13,White,4078,446
-315,430,2020-05-14,American Indian/Alaska Native,20,1
-316,45,2020-05-14,Asian,2126,288
-317,122,2020-05-14,Black,1445,193
-318,199,2020-05-14,Hispanic/Latino,11147,603
-319,507,2020-05-14,Native Hawaiian/Pacific Islander,252,16
-320,353,2020-05-14,Other,1452,15
-321,276,2020-05-14,White,4255,457
-322,431,2020-05-15,American Indian/Alaska Native,22,2
-323,46,2020-05-15,Asian,2226,292
-324,123,2020-05-15,Black,1543,199
-325,200,2020-05-15,Hispanic/Latino,11656,620
-326,508,2020-05-15,Native Hawaiian/Pacific Islander,252,16
-327,354,2020-05-15,Other,1471,17
-328,277,2020-05-15,White,4311,469
-329,432,2020-05-16,American Indian/Alaska Native,24,2
-330,47,2020-05-16,Asian,2385,299
-331,124,2020-05-16,Black,1562,203
-332,201,2020-05-16,Hispanic/Latino,12368,640
-333,509,2020-05-16,Native Hawaiian/Pacific Islander,253,16
-334,355,2020-05-16,Other,1520,17
-335,278,2020-05-16,White,4482,482
-336,433,2020-05-17,American Indian/Alaska Native,27,2
-337,48,2020-05-17,Asian,2480,299
-338,125,2020-05-17,Black,1580,207
-339,202,2020-05-17,Hispanic/Latino,12467,653
-340,510,2020-05-17,Native Hawaiian/Pacific Islander,256,16
-341,356,2020-05-17,Other,1542,18
-342,279,2020-05-17,White,4514,493
-343,434,2020-05-18,American Indian/Alaska Native,28,2
-344,49,2020-05-18,Asian,2489,303
-345,126,2020-05-18,Black,1623,208
-346,203,2020-05-18,Hispanic/Latino,12769,659
-347,511,2020-05-18,Native Hawaiian/Pacific Islander,262,15
-348,357,2020-05-18,Other,1576,18
-349,280,2020-05-18,White,4777,501
-350,435,2020-05-19,American Indian/Alaska Native,28,2
-351,50,2020-05-19,Asian,2554,313
-352,127,2020-05-19,Black,1664,218
-353,204,2020-05-19,Hispanic/Latino,13242,690
-354,512,2020-05-19,Native Hawaiian/Pacific Islander,261,15
-355,358,2020-05-19,Other,1598,20
-356,281,2020-05-19,White,4844,514
-357,436,2020-05-20,American Indian/Alaska Native,30,2
-358,51,2020-05-20,Asian,2598,321
-359,128,2020-05-20,Black,1685,222
-360,205,2020-05-20,Hispanic/Latino,13861,715
-361,513,2020-05-20,Native Hawaiian/Pacific Islander,265,15
-362,359,2020-05-20,Other,1641,20
-363,282,2020-05-20,White,5001,531
-364,437,2020-05-21,American Indian/Alaska Native,31,2
-365,52,2020-05-21,Asian,2645,324
-366,129,2020-05-21,Black,1720,230
-367,206,2020-05-21,Hispanic/Latino,14197,733
-368,514,2020-05-21,Native Hawaiian/Pacific Islander,266,15
-369,360,2020-05-21,Other,1766,21
-370,283,2020-05-21,White,5175,538
-371,438,2020-05-22,American Indian/Alaska Native,29,2
-372,53,2020-05-22,Asian,2676,328
-373,130,2020-05-22,Black,1756,232
-374,207,2020-05-22,Hispanic/Latino,14519,747
-375,515,2020-05-22,Native Hawaiian/Pacific Islander,267,16
-376,361,2020-05-22,Other,1856,21
-377,284,2020-05-22,White,5257,546
-378,439,2020-05-23,American Indian/Alaska Native,31,2
-379,54,2020-05-23,Asian,2704,334
-380,131,2020-05-23,Black,1772,233
-381,208,2020-05-23,Hispanic/Latino,14940,759
-382,516,2020-05-23,Native Hawaiian/Pacific Islander,265,16
-383,362,2020-05-23,Other,2193,20
-384,285,2020-05-23,White,5322,565
-385,440,2020-05-24,American Indian/Alaska Native,34,2
-386,55,2020-05-24,Asian,2738,336
-387,132,2020-05-24,Black,1792,233
-388,209,2020-05-24,Hispanic/Latino,15221,767
-389,517,2020-05-24,Native Hawaiian/Pacific Islander,272,16
-390,363,2020-05-24,Other,2446,20
-391,286,2020-05-24,White,5400,567
-392,441,2020-05-25,American Indian/Alaska Native,37,2
-393,56,2020-05-25,Asian,2776,337
-394,133,2020-05-25,Black,1833,234
-395,210,2020-05-25,Hispanic/Latino,15377,771
-396,518,2020-05-25,Native Hawaiian/Pacific Islander,273,16
-397,364,2020-05-25,Other,2757,20
-398,287,2020-05-25,White,5456,569
-399,442,2020-05-26,American Indian/Alaska Native,39,2
-400,57,2020-05-26,Asian,2826,343
-401,134,2020-05-26,Black,1863,240
-402,211,2020-05-26,Hispanic/Latino,16123,779
-403,519,2020-05-26,Native Hawaiian/Pacific Islander,279,16
-404,365,2020-05-26,Other,3240,20
-405,288,2020-05-26,White,5546,574
-406,443,2020-05-27,American Indian/Alaska Native,41,2
-407,58,2020-05-27,Asian,2841,354
-408,135,2020-05-27,Black,1874,244
-409,212,2020-05-27,Hispanic/Latino,16285,808
-410,520,2020-05-27,Native Hawaiian/Pacific Islander,280,17
-411,366,2020-05-27,Other,3714,22
-412,289,2020-05-27,White,5581,577
-413,444,2020-05-28,American Indian/Alaska Native,42,2
-414,59,2020-05-28,Asian,2869,360
-415,136,2020-05-28,Black,1892,246
-416,213,2020-05-28,Hispanic/Latino,16741,825
-417,521,2020-05-28,Native Hawaiian/Pacific Islander,280,18
-418,367,2020-05-28,Other,4079,20
-419,290,2020-05-28,White,5641,591
-420,445,2020-05-29,American Indian/Alaska Native,45,2
-421,60,2020-05-29,Asian,3005,369
-422,137,2020-05-29,Black,1986,250
-423,214,2020-05-29,Hispanic/Latino,17279,849
-424,522,2020-05-29,Native Hawaiian/Pacific Islander,285,17
-425,368,2020-05-29,Other,4485,18
-426,291,2020-05-29,White,5731,607
-427,446,2020-05-30,American Indian/Alaska Native,50,2
-428,61,2020-05-30,Asian,3057,379
-429,138,2020-05-30,Black,2044,258
-430,215,2020-05-30,Hispanic/Latino,18167,872
-431,523,2020-05-30,Native Hawaiian/Pacific Islander,287,16
-432,369,2020-05-30,Other,5063,16
-433,292,2020-05-30,White,6056,612
-434,447,2020-05-31,American Indian/Alaska Native,51,2
-435,62,2020-05-31,Asian,3058,382
-436,139,2020-05-31,Black,2067,259
-437,216,2020-05-31,Hispanic/Latino,18281,887
-438,524,2020-05-31,Native Hawaiian/Pacific Islander,289,16
-439,370,2020-05-31,Other,5486,17
-440,293,2020-05-31,White,6080,616
-441,448,2020-06-01,American Indian/Alaska Native,52,2
-442,63,2020-06-01,Asian,3066,384
-443,140,2020-06-01,Black,2089,263
-444,217,2020-06-01,Hispanic/Latino,18406,895
-445,525,2020-06-01,Native Hawaiian/Pacific Islander,292,16
-446,371,2020-06-01,Other,5943,18
-447,294,2020-06-01,White,6117,622
-448,449,2020-06-02,American Indian/Alaska Native,54,2
-449,64,2020-06-02,Asian,3199,384
-450,141,2020-06-02,Black,2134,265
-451,218,2020-06-02,Hispanic/Latino,18693,917
-452,526,2020-06-02,Native Hawaiian/Pacific Islander,301,17
-453,372,2020-06-02,Other,6301,20
-454,295,2020-06-02,White,6277,643
-455,450,2020-06-03,American Indian/Alaska Native,54,2
-456,65,2020-06-03,Asian,3142,398
-457,142,2020-06-03,Black,2177,273
-458,219,2020-06-03,Hispanic/Latino,18873,935
-459,527,2020-06-03,Native Hawaiian/Pacific Islander,304,18
-460,373,2020-06-03,Other,6571,23
-461,296,2020-06-03,White,6342,652
-462,451,2020-06-04,American Indian/Alaska Native,57,2
-463,66,2020-06-04,Asian,3248,419
-464,143,2020-06-04,Black,2217,278
-465,220,2020-06-04,Hispanic/Latino,19592,956
-466,528,2020-06-04,Native Hawaiian/Pacific Islander,293,4
-467,374,2020-06-04,Other,6724,24
-468,297,2020-06-04,White,6523,658
-469,452,2020-06-05,American Indian/Alaska Native,57,2
-470,67,2020-06-05,Asian,3265,423
-471,144,2020-06-05,Black,2233,279
-472,221,2020-06-05,Hispanic/Latino,19946,970
-473,529,2020-06-05,Native Hawaiian/Pacific Islander,290,5
-474,375,2020-06-05,Other,6875,24
-475,298,2020-06-05,White,6567,670
-476,453,2020-06-06,American Indian/Alaska Native,58,2
-477,68,2020-06-06,Asian,3317,431
-478,145,2020-06-06,Black,2258,286
-479,222,2020-06-06,Hispanic/Latino,20824,998
-480,530,2020-06-06,Native Hawaiian/Pacific Islander,288,6
-481,376,2020-06-06,Other,7102,27
-482,299,2020-06-06,White,6661,683
-483,454,2020-06-07,American Indian/Alaska Native,59,2
-484,69,2020-06-07,Asian,3329,435
-485,146,2020-06-07,Black,2264,289
-486,223,2020-06-07,Hispanic/Latino,21212,1005
-487,531,2020-06-07,Native Hawaiian/Pacific Islander,289,6
-488,377,2020-06-07,Other,7366,26
-489,300,2020-06-07,White,6699,690
-490,455,2020-06-08,American Indian/Alaska Native,59,2
-491,70,2020-06-08,Asian,3339,436
-492,147,2020-06-08,Black,2275,289
-493,224,2020-06-08,Hispanic/Latino,21916,1012
-494,532,2020-06-08,Native Hawaiian/Pacific Islander,292,6
-495,378,2020-06-08,Other,7689,26
-496,301,2020-06-08,White,6728,692
-497,456,2020-06-09,American Indian/Alaska Native,59,2
-498,71,2020-06-09,Asian,3355,440
-499,148,2020-06-09,Black,2292,296
-500,225,2020-06-09,Hispanic/Latino,22544,1026
-501,533,2020-06-09,Native Hawaiian/Pacific Islander,294,6
-502,379,2020-06-09,Other,7918,30
-503,302,2020-06-09,White,6793,712
-504,457,2020-06-10,American Indian/Alaska Native,60,2
-505,72,2020-06-10,Asian,3376,445
-506,149,2020-06-10,Black,2323,299
-507,226,2020-06-10,Hispanic/Latino,22872,1060
-508,534,2020-06-10,Native Hawaiian/Pacific Islander,296,6
-509,380,2020-06-10,Other,8266,29
-510,303,2020-06-10,White,6861,728
-511,458,2020-06-11,American Indian/Alaska Native,60,2
-512,73,2020-06-11,Asian,3399,449
-513,150,2020-06-11,Black,2345,303
-514,227,2020-06-11,Hispanic/Latino,23715,1078
-515,535,2020-06-11,Native Hawaiian/Pacific Islander,298,7
-516,381,2020-06-11,Other,8363,29
-517,304,2020-06-11,White,6936,749
-518,459,2020-06-12,American Indian/Alaska Native,61,2
-519,74,2020-06-12,Asian,3430,452
-520,151,2020-06-12,Black,2368,302
-521,228,2020-06-12,Hispanic/Latino,24226,1088
-522,536,2020-06-12,Native Hawaiian/Pacific Islander,303,9
-523,382,2020-06-12,Other,8734,26
-524,305,2020-06-12,White,6991,750
-525,460,2020-06-13,American Indian/Alaska Native,63,3
-526,75,2020-06-13,Asian,3449,458
-527,152,2020-06-13,Black,2394,306
-528,229,2020-06-13,Hispanic/Latino,24567,1113
-529,537,2020-06-13,Native Hawaiian/Pacific Islander,306,9
-530,383,2020-06-13,Other,9023,30
-531,306,2020-06-13,White,7067,769
-532,461,2020-06-14,American Indian/Alaska Native,62,3
-533,76,2020-06-14,Asian,3453,460
-534,153,2020-06-14,Black,2399,307
-535,230,2020-06-14,Hispanic/Latino,24681,1116
-536,538,2020-06-14,Native Hawaiian/Pacific Islander,311,9
-537,384,2020-06-14,Other,9355,31
-538,307,2020-06-14,White,7116,774
+,Date,Race/Ethnicity,Cases,Case Rate,Deaths,Death Rate
+0,2020-03-30,American Indian/Alaska Native,,,,
+1,2020-03-30,Asian,,,,
+2,2020-03-30,Black,,,,
+3,2020-03-30,Hispanic/Latino,,,,
+4,2020-03-30,Native Hawaiian/Pacific Islander,,,,
+5,2020-03-30,Other,,,,
+6,2020-03-30,White,,,,
+7,2020-03-31,American Indian/Alaska Native,,,,
+8,2020-03-31,Asian,,,,
+9,2020-03-31,Black,,,,
+10,2020-03-31,Hispanic/Latino,,,,
+11,2020-03-31,Native Hawaiian/Pacific Islander,,,,
+12,2020-03-31,Other,,,,
+13,2020-03-31,White,,,,
+14,2020-04-01,American Indian/Alaska Native,,,,
+15,2020-04-01,Asian,,,,
+16,2020-04-01,Black,,,,
+17,2020-04-01,Hispanic/Latino,,,,
+18,2020-04-01,Native Hawaiian/Pacific Islander,,,,
+19,2020-04-01,Other,,,,
+20,2020-04-01,White,,,,
+21,2020-04-02,American Indian/Alaska Native,,,,
+22,2020-04-02,Asian,,,,
+23,2020-04-02,Black,,,,
+24,2020-04-02,Hispanic/Latino,,,,
+25,2020-04-02,Native Hawaiian/Pacific Islander,,,,
+26,2020-04-02,Other,,,,
+27,2020-04-02,White,,,,
+28,2020-04-03,American Indian/Alaska Native,,,,
+29,2020-04-03,Asian,,,,
+30,2020-04-03,Black,,,,
+31,2020-04-03,Hispanic/Latino,,,,
+32,2020-04-03,Native Hawaiian/Pacific Islander,,,,
+33,2020-04-03,Other,,,,
+34,2020-04-03,White,,,,
+35,2020-04-04,American Indian/Alaska Native,,,,
+36,2020-04-04,Asian,,,,
+37,2020-04-04,Black,,,,
+38,2020-04-04,Hispanic/Latino,,,,
+39,2020-04-04,Native Hawaiian/Pacific Islander,,,,
+40,2020-04-04,Other,,,,
+41,2020-04-04,White,,,,
+42,2020-04-05,American Indian/Alaska Native,,,,
+43,2020-04-05,Asian,,,,
+44,2020-04-05,Black,,,,
+45,2020-04-05,Hispanic/Latino,,,,
+46,2020-04-05,Native Hawaiian/Pacific Islander,,,,
+47,2020-04-05,Other,,,,
+48,2020-04-05,White,,,,
+49,2020-04-06,American Indian/Alaska Native,,,,
+50,2020-04-06,Asian,,,,
+51,2020-04-06,Black,,,,
+52,2020-04-06,Hispanic/Latino,,,,
+53,2020-04-06,Native Hawaiian/Pacific Islander,,,,
+54,2020-04-06,Other,,,,
+55,2020-04-06,White,,,,
+56,2020-04-07,American Indian/Alaska Native,,,,
+57,2020-04-07,Asian,316,22.64,,
+58,2020-04-07,Black,283,35.86,,
+59,2020-04-07,Hispanic/Latino,735,15.45,,
+60,2020-04-07,Native Hawaiian/Pacific Islander,,,,
+61,2020-04-07,Other,693,,,
+62,2020-04-07,White,870,32.63,,
+63,2020-04-08,American Indian/Alaska Native,,,,
+64,2020-04-08,Asian,334,23.93,,
+65,2020-04-08,Black,301,38.14,,
+66,2020-04-08,Hispanic/Latino,807,16.96,,
+67,2020-04-08,Native Hawaiian/Pacific Islander,,,,
+68,2020-04-08,Other,747,,,
+69,2020-04-08,White,872,32.7,,
+70,2020-04-09,American Indian/Alaska Native,,,,
+71,2020-04-09,Asian,463,33.18,32,2.29
+72,2020-04-09,Black,384,48.66,23,2.91
+73,2020-04-09,Hispanic/Latino,1309,27.51,46,0.97
+74,2020-04-09,Native Hawaiian/Pacific Islander,,,,
+75,2020-04-09,Other,707,,6,
+76,2020-04-09,White,1161,43.54,46,1.73
+77,2020-04-10,American Indian/Alaska Native,,,,
+78,2020-04-10,Asian,526,37.69,38,2.72
+79,2020-04-10,Black,429,54.36,26,3.29
+80,2020-04-10,Hispanic/Latino,1621,34.06,51,1.07
+81,2020-04-10,Native Hawaiian/Pacific Islander,,,,
+82,2020-04-10,Other,655,,7,
+83,2020-04-10,White,1292,48.45,54,2.03
+84,2020-04-11,American Indian/Alaska Native,,,,
+85,2020-04-11,Asian,589,42.2,40,2.87
+86,2020-04-11,Black,460,58.29,27,3.42
+87,2020-04-11,Hispanic/Latino,1869,39.27,64,1.34
+88,2020-04-11,Native Hawaiian/Pacific Islander,,,,
+89,2020-04-11,Other,661,,6,
+90,2020-04-11,White,1399,52.46,64,2.4
+91,2020-04-12,American Indian/Alaska Native,,,,
+92,2020-04-12,Asian,632,45.29,46,3.3
+93,2020-04-12,Black,478,60.57,33,4.18
+94,2020-04-12,Hispanic/Latino,2025,42.55,79,1.66
+95,2020-04-12,Native Hawaiian/Pacific Islander,,,,
+96,2020-04-12,Other,670,,5,
+97,2020-04-12,White,1445,54.19,77,2.89
+98,2020-04-13,American Indian/Alaska Native,,,,
+99,2020-04-13,Asian,673,48.22,47,3.37
+100,2020-04-13,Black,504,63.86,37,4.69
+101,2020-04-13,Hispanic/Latino,2213,46.5,87,1.83
+102,2020-04-13,Native Hawaiian/Pacific Islander,,,,
+103,2020-04-13,Other,681,,4,
+104,2020-04-13,White,1524,57.15,87,3.26
+105,2020-04-14,American Indian/Alaska Native,,,,
+106,2020-04-14,Asian,713,51.09,49,3.51
+107,2020-04-14,Black,539,68.3,46,5.83
+108,2020-04-14,Hispanic/Latino,2416,50.77,98,2.06
+109,2020-04-14,Native Hawaiian/Pacific Islander,,,,
+110,2020-04-14,Other,747,,6,
+111,2020-04-14,White,1610,60.38,93,3.49
+112,2020-04-15,American Indian/Alaska Native,,,,
+113,2020-04-15,Asian,756,54.17,57,4.08
+114,2020-04-15,Black,563,71.34,50,6.34
+115,2020-04-15,Hispanic/Latino,2634,55.35,112,2.35
+116,2020-04-15,Native Hawaiian/Pacific Islander,,,,
+117,2020-04-15,Other,766,,8,
+118,2020-04-15,White,1732,64.95,103,3.86
+119,2020-04-16,American Indian/Alaska Native,,,,
+120,2020-04-16,Asian,783,56.1,67,4.8
+121,2020-04-16,Black,590,74.76,64,8.11
+122,2020-04-16,Hispanic/Latino,2818,59.22,130,2.73
+123,2020-04-16,Native Hawaiian/Pacific Islander,,,,
+124,2020-04-16,Other,766,,10,
+125,2020-04-16,White,1807,67.77,119,4.46
+126,2020-04-17,American Indian/Alaska Native,,,,
+127,2020-04-17,Asian,844,60.48,75,5.37
+128,2020-04-17,Black,630,79.83,69,8.74
+129,2020-04-17,Hispanic/Latino,3066,64.43,146,3.07
+130,2020-04-17,Native Hawaiian/Pacific Islander,,,,
+131,2020-04-17,Other,790,,12,
+132,2020-04-17,White,1903,71.37,123,4.61
+133,2020-04-18,American Indian/Alaska Native,,,,
+134,2020-04-18,Asian,900,64.49,84,6.02
+135,2020-04-18,Black,669,84.77,79,10.01
+136,2020-04-18,Hispanic/Latino,3353,70.46,177,3.72
+137,2020-04-18,Native Hawaiian/Pacific Islander,,,,
+138,2020-04-18,Other,817,,15,
+139,2020-04-18,White,1982,74.33,143,5.36
+140,2020-04-19,American Indian/Alaska Native,,,,
+141,2020-04-19,Asian,915,65.56,91,6.52
+142,2020-04-19,Black,687,87.05,83,10.52
+143,2020-04-19,Hispanic/Latino,3402,71.49,189,3.97
+144,2020-04-19,Native Hawaiian/Pacific Islander,,,,
+145,2020-04-19,Other,884,,13,
+146,2020-04-19,White,2022,75.83,152,5.7
+147,2020-04-20,American Indian/Alaska Native,,,,
+148,2020-04-20,Asian,953,68.29,94,6.74
+149,2020-04-20,Black,720,91.23,87,11.02
+150,2020-04-20,Hispanic/Latino,3597,75.59,194,4.08
+151,2020-04-20,Native Hawaiian/Pacific Islander,,,,
+152,2020-04-20,Other,899,,14,
+153,2020-04-20,White,2071,77.67,155,5.81
+154,2020-04-21,American Indian/Alaska Native,,,,
+155,2020-04-21,Asian,1028,73.66,105,7.52
+156,2020-04-21,Black,769,97.44,93,11.78
+157,2020-04-21,Hispanic/Latino,3872,81.36,207,4.35
+158,2020-04-21,Native Hawaiian/Pacific Islander,,,,
+159,2020-04-21,Other,1011,,15,
+160,2020-04-21,White,2195,82.32,162,6.08
+161,2020-04-22,American Indian/Alaska Native,,,,
+162,2020-04-22,Asian,1078,77.24,118,8.46
+163,2020-04-22,Black,794,100.61,100,12.67
+164,2020-04-22,Hispanic/Latino,4227,88.82,237,4.98
+165,2020-04-22,Native Hawaiian/Pacific Islander,,,,
+166,2020-04-22,Other,972,,15,
+167,2020-04-22,White,2293,85.99,176,6.6
+168,2020-04-23,American Indian/Alaska Native,,,,
+169,2020-04-23,Asian,1124,80.54,128,9.17
+170,2020-04-23,Black,826,104.66,107,13.56
+171,2020-04-23,Hispanic/Latino,4433,93.15,267,5.61
+172,2020-04-23,Native Hawaiian/Pacific Islander,,,,
+173,2020-04-23,Other,984,,17,
+174,2020-04-23,White,2374,89.03,197,7.39
+175,2020-04-24,American Indian/Alaska Native,12,54.53,1,4.54
+176,2020-04-24,Asian,1155,82.76,138,9.89
+177,2020-04-24,Black,844,106.94,113,14.32
+178,2020-04-24,Hispanic/Latino,4634,97.38,282,5.93
+179,2020-04-24,Native Hawaiian/Pacific Islander,157,819.76,11,57.44
+180,2020-04-24,Other,838,,8,
+181,2020-04-24,White,2428,91.05,218,8.18
+182,2020-04-25,American Indian/Alaska Native,12,54.53,1,4.54
+183,2020-04-25,Asian,1194,85.55,149,10.68
+184,2020-04-25,Black,869,110.11,115,14.57
+185,2020-04-25,Hispanic/Latino,4828,101.45,301,6.33
+186,2020-04-25,Native Hawaiian/Pacific Islander,160,835.42,11,57.44
+187,2020-04-25,Other,878,,10,
+188,2020-04-25,White,2479,92.97,233,8.74
+189,2020-04-26,American Indian/Alaska Native,12,54.53,1,4.54
+190,2020-04-26,Asian,1214,86.99,152,10.89
+191,2020-04-26,Black,879,111.38,117,14.83
+192,2020-04-26,Hispanic/Latino,4908,103.14,311,6.54
+193,2020-04-26,Native Hawaiian/Pacific Islander,163,851.09,11,57.44
+194,2020-04-26,Other,912,,10,
+195,2020-04-26,White,2509,94.09,235,8.81
+196,2020-04-27,American Indian/Alaska Native,12,54.53,1,4.54
+197,2020-04-27,Asian,1231,88.21,159,11.39
+198,2020-04-27,Black,882,111.76,119,15.08
+199,2020-04-27,Hispanic/Latino,4960,104.23,321,6.75
+200,2020-04-27,Native Hawaiian/Pacific Islander,163,851.09,11,57.44
+201,2020-04-27,Other,923,,10,
+202,2020-04-27,White,2528,94.8,244,9.15
+203,2020-04-28,American Indian/Alaska Native,13,59.08,1,4.54
+204,2020-04-28,Asian,1269,90.93,167,11.97
+205,2020-04-28,Black,904,114.55,124,15.71
+206,2020-04-28,Hispanic/Latino,5155,108.33,343,7.21
+207,2020-04-28,Native Hawaiian/Pacific Islander,171,892.86,10,52.21
+208,2020-04-28,Other,990,,8,
+209,2020-04-28,White,2581,96.79,265,9.94
+210,2020-04-29,American Indian/Alaska Native,13,59.08,1,4.54
+211,2020-04-29,Asian,1331,95.37,179,12.83
+212,2020-04-29,Black,950,120.37,130,16.47
+213,2020-04-29,Hispanic/Latino,5418,113.85,367,7.71
+214,2020-04-29,Native Hawaiian/Pacific Islander,177,924.19,12,62.66
+215,2020-04-29,Other,1005,,11,
+216,2020-04-29,White,2744,102.9,277,10.39
+217,2020-04-30,American Indian/Alaska Native,13,59.08,1,4.54
+218,2020-04-30,Asian,1394,99.88,189,13.54
+219,2020-04-30,Black,992,125.7,132,16.73
+220,2020-04-30,Hispanic/Latino,5901,124.0,388,8.15
+221,2020-04-30,Native Hawaiian/Pacific Islander,184,960.74,12,62.66
+222,2020-04-30,Other,1031,,10,
+223,2020-04-30,White,2849,106.84,288,10.8
+224,2020-05-01,American Indian/Alaska Native,14,63.62,1,4.54
+225,2020-05-01,Asian,1459,104.54,199,14.26
+226,2020-05-01,Black,1028,130.26,139,17.61
+227,2020-05-01,Hispanic/Latino,6285,132.07,401,8.43
+228,2020-05-01,Native Hawaiian/Pacific Islander,187,976.4,12,62.66
+229,2020-05-01,Other,1063,,12,
+230,2020-05-01,White,2932,109.95,305,11.44
+231,2020-05-02,American Indian/Alaska Native,14,63.62,1,4.54
+232,2020-05-02,Asian,1526,109.34,205,14.69
+233,2020-05-02,Black,1066,135.07,139,17.61
+234,2020-05-02,Hispanic/Latino,6922,145.46,413,8.68
+235,2020-05-02,Native Hawaiian/Pacific Islander,189,986.84,13,67.88
+236,2020-05-02,Other,1069,,12,
+237,2020-05-02,White,3057,114.64,318,11.93
+238,2020-05-03,American Indian/Alaska Native,13,59.08,1,4.54
+239,2020-05-03,Asian,1573,112.71,211,15.12
+240,2020-05-03,Black,1087,137.73,141,17.87
+241,2020-05-03,Hispanic/Latino,7241,152.16,421,8.85
+242,2020-05-03,Native Hawaiian/Pacific Islander,192,1002.51,13,67.88
+243,2020-05-03,Other,1092,,12,
+244,2020-05-03,White,3139,117.72,322,12.08
+245,2020-05-04,American Indian/Alaska Native,13,59.08,1,4.54
+246,2020-05-04,Asian,1595,114.29,215,15.41
+247,2020-05-04,Black,1097,139.0,144,18.25
+248,2020-05-04,Hispanic/Latino,7336,154.16,431,9.06
+249,2020-05-04,Native Hawaiian/Pacific Islander,193,1007.73,13,67.88
+250,2020-05-04,Other,1146,,12,
+251,2020-05-04,White,3185,119.44,332,12.45
+252,2020-05-05,American Indian/Alaska Native,15,68.17,1,4.54
+253,2020-05-05,Asian,1678,120.23,224,16.05
+254,2020-05-05,Black,1151,145.84,148,18.75
+255,2020-05-05,Hispanic/Latino,8065,169.48,461,9.69
+256,2020-05-05,Native Hawaiian/Pacific Islander,196,1023.39,13,67.88
+257,2020-05-05,Other,1217,,15,
+258,2020-05-05,White,3307,124.02,339,12.71
+259,2020-05-06,American Indian/Alaska Native,15,68.17,1,4.54
+260,2020-05-06,Asian,1721,123.32,234,16.77
+261,2020-05-06,Black,1185,150.15,155,19.64
+262,2020-05-06,Hispanic/Latino,8241,173.17,486,10.21
+263,2020-05-06,Native Hawaiian/Pacific Islander,198,1033.83,13,67.88
+264,2020-05-06,Other,1228,,17,
+265,2020-05-06,White,3375,126.57,354,13.28
+266,2020-05-07,American Indian/Alaska Native,16,72.71,1,4.54
+267,2020-05-07,Asian,1765,126.47,242,17.34
+268,2020-05-07,Black,1230,155.85,161,20.4
+269,2020-05-07,Hispanic/Latino,8504,178.7,503,10.57
+270,2020-05-07,Native Hawaiian/Pacific Islander,201,1049.5,14,73.1
+271,2020-05-07,Other,1245,,18,
+272,2020-05-07,White,3484,130.66,370,13.88
+273,2020-05-08,American Indian/Alaska Native,16,72.71,1,4.54
+274,2020-05-08,Asian,1802,129.12,248,17.77
+275,2020-05-08,Black,1250,158.39,165,20.91
+276,2020-05-08,Hispanic/Latino,8721,183.26,520,10.93
+277,2020-05-08,Native Hawaiian/Pacific Islander,206,1075.61,14,73.1
+278,2020-05-08,Other,1314,,15,
+279,2020-05-08,White,3532,132.46,389,14.59
+280,2020-05-09,American Indian/Alaska Native,17,77.26,1,4.54
+281,2020-05-09,Asian,1855,132.92,260,18.63
+282,2020-05-09,Black,1296,164.22,173,21.92
+283,2020-05-09,Hispanic/Latino,9124,191.73,531,11.16
+284,2020-05-09,Native Hawaiian/Pacific Islander,207,1080.83,14,73.1
+285,2020-05-09,Other,1303,,16,
+286,2020-05-09,White,3621,135.79,402,15.08
+287,2020-05-10,American Indian/Alaska Native,18,81.8,1,4.54
+288,2020-05-10,Asian,1907,136.64,263,18.84
+289,2020-05-10,Black,1316,166.75,175,22.17
+290,2020-05-10,Hispanic/Latino,9236,194.08,539,11.33
+291,2020-05-10,Native Hawaiian/Pacific Islander,207,1080.83,14,73.1
+292,2020-05-10,Other,1327,,16,
+293,2020-05-10,White,3667,137.52,404,15.15
+294,2020-05-11,American Indian/Alaska Native,19,86.34,1,4.54
+295,2020-05-11,Asian,1936,138.72,266,19.06
+296,2020-05-11,Black,1329,168.4,179,22.68
+297,2020-05-11,Hispanic/Latino,9413,197.8,552,11.6
+298,2020-05-11,Native Hawaiian/Pacific Islander,209,1091.27,14,73.1
+299,2020-05-11,Other,1341,,15,
+300,2020-05-11,White,3732,139.96,418,15.68
+301,2020-05-12,American Indian/Alaska Native,20,90.89,1,4.54
+302,2020-05-12,Asian,2009,143.95,271,19.42
+303,2020-05-12,Black,1389,176.0,187,23.69
+304,2020-05-12,Hispanic/Latino,9882,207.66,567,11.91
+305,2020-05-12,Native Hawaiian/Pacific Islander,220,1148.71,15,78.32
+306,2020-05-12,Other,1389,,17,
+307,2020-05-12,White,3819,143.22,432,16.2
+308,2020-05-13,American Indian/Alaska Native,20,90.89,1,4.54
+309,2020-05-13,Asian,2088,149.61,275,19.7
+310,2020-05-13,Black,1405,178.03,190,24.07
+311,2020-05-13,Hispanic/Latino,10430,219.17,588,12.36
+312,2020-05-13,Native Hawaiian/Pacific Islander,227,1185.25,15,78.32
+313,2020-05-13,Other,1443,,14,
+314,2020-05-13,White,4078,152.93,446,16.73
+315,2020-05-14,American Indian/Alaska Native,20,90.89,1,4.54
+316,2020-05-14,Asian,2126,152.34,288,20.64
+317,2020-05-14,Black,1445,183.1,193,24.46
+318,2020-05-14,Hispanic/Latino,11147,234.24,603,12.67
+319,2020-05-14,Native Hawaiian/Pacific Islander,252,1315.79,16,83.54
+320,2020-05-14,Other,1452,,15,
+321,2020-05-14,White,4255,159.57,457,17.14
+322,2020-05-15,American Indian/Alaska Native,22,99.98,2,9.09
+323,2020-05-15,Asian,2226,159.5,292,20.92
+324,2020-05-15,Black,1543,195.51,199,25.22
+325,2020-05-15,Hispanic/Latino,11656,244.94,620,13.03
+326,2020-05-15,Native Hawaiian/Pacific Islander,252,1315.79,16,83.54
+327,2020-05-15,Other,1471,,17,
+328,2020-05-15,White,4311,161.67,469,17.59
+329,2020-05-16,American Indian/Alaska Native,24,109.07,2,9.09
+330,2020-05-16,Asian,2385,170.89,299,21.42
+331,2020-05-16,Black,1562,197.92,203,25.72
+332,2020-05-16,Hispanic/Latino,12368,259.9,640,13.45
+333,2020-05-16,Native Hawaiian/Pacific Islander,253,1321.01,16,83.54
+334,2020-05-16,Other,1520,,17,
+335,2020-05-16,White,4482,168.08,482,18.08
+336,2020-05-17,American Indian/Alaska Native,27,122.7,2,9.09
+337,2020-05-17,Asian,2480,177.7,299,21.42
+338,2020-05-17,Black,1580,200.2,207,26.23
+339,2020-05-17,Hispanic/Latino,12467,261.98,653,13.72
+340,2020-05-17,Native Hawaiian/Pacific Islander,256,1336.68,16,83.54
+341,2020-05-17,Other,1542,,18,
+342,2020-05-17,White,4514,169.28,493,18.49
+343,2020-05-18,American Indian/Alaska Native,28,127.24,2,9.09
+344,2020-05-18,Asian,2489,178.35,303,21.71
+345,2020-05-18,Black,1623,205.65,208,26.36
+346,2020-05-18,Hispanic/Latino,12769,268.32,659,13.85
+347,2020-05-18,Native Hawaiian/Pacific Islander,262,1368.0,15,78.32
+348,2020-05-18,Other,1576,,18,
+349,2020-05-18,White,4777,179.14,501,18.79
+350,2020-05-19,American Indian/Alaska Native,28,127.24,2,9.09
+351,2020-05-19,Asian,2554,183.0,313,22.43
+352,2020-05-19,Black,1664,210.85,218,27.62
+353,2020-05-19,Hispanic/Latino,13242,278.26,690,14.5
+354,2020-05-19,Native Hawaiian/Pacific Islander,261,1362.78,15,78.32
+355,2020-05-19,Other,1598,,20,
+356,2020-05-19,White,4844,181.66,514,19.28
+357,2020-05-20,American Indian/Alaska Native,30,136.33,2,9.09
+358,2020-05-20,Asian,2598,186.16,321,23.0
+359,2020-05-20,Black,1685,213.51,222,28.13
+360,2020-05-20,Hispanic/Latino,13861,291.27,715,15.02
+361,2020-05-20,Native Hawaiian/Pacific Islander,265,1383.67,15,78.32
+362,2020-05-20,Other,1641,,20,
+363,2020-05-20,White,5001,187.55,531,19.91
+364,2020-05-21,American Indian/Alaska Native,31,140.88,2,9.09
+365,2020-05-21,Asian,2645,189.52,324,23.22
+366,2020-05-21,Black,1720,217.94,230,29.14
+367,2020-05-21,Hispanic/Latino,14197,298.33,733,15.4
+368,2020-05-21,Native Hawaiian/Pacific Islander,266,1388.89,15,78.32
+369,2020-05-21,Other,1766,,21,
+370,2020-05-21,White,5175,194.07,538,20.18
+371,2020-05-22,American Indian/Alaska Native,29,131.79,2,9.09
+372,2020-05-22,Asian,2676,191.74,328,23.5
+373,2020-05-22,Black,1756,222.5,232,29.4
+374,2020-05-22,Hispanic/Latino,14519,305.1,747,15.7
+375,2020-05-22,Native Hawaiian/Pacific Islander,267,1394.11,16,83.54
+376,2020-05-22,Other,1856,,21,
+377,2020-05-22,White,5257,197.15,546,20.48
+378,2020-05-23,American Indian/Alaska Native,31,140.88,2,9.09
+379,2020-05-23,Asian,2704,193.75,334,23.93
+380,2020-05-23,Black,1772,224.53,233,29.52
+381,2020-05-23,Hispanic/Latino,14940,313.94,759,15.95
+382,2020-05-23,Native Hawaiian/Pacific Islander,265,1383.67,16,83.54
+383,2020-05-23,Other,2193,,20,
+384,2020-05-23,White,5322,199.58,565,21.19
+385,2020-05-24,American Indian/Alaska Native,34,154.51,2,9.09
+386,2020-05-24,Asian,2738,196.19,336,24.08
+387,2020-05-24,Black,1792,227.06,233,29.52
+388,2020-05-24,Hispanic/Latino,15221,319.85,767,16.12
+389,2020-05-24,Native Hawaiian/Pacific Islander,272,1420.22,16,83.54
+390,2020-05-24,Other,2446,,20,
+391,2020-05-24,White,5400,202.51,567,21.26
+392,2020-05-25,American Indian/Alaska Native,37,168.14,2,9.09
+393,2020-05-25,Asian,2776,198.91,337,24.15
+394,2020-05-25,Black,1833,232.26,234,29.65
+395,2020-05-25,Hispanic/Latino,15377,323.13,771,16.2
+396,2020-05-25,Native Hawaiian/Pacific Islander,273,1425.44,16,83.54
+397,2020-05-25,Other,2757,,20,
+398,2020-05-25,White,5456,204.61,569,21.34
+399,2020-05-26,American Indian/Alaska Native,39,177.23,2,9.09
+400,2020-05-26,Asian,2826,202.49,343,24.58
+401,2020-05-26,Black,1863,236.06,240,30.41
+402,2020-05-26,Hispanic/Latino,16123,338.8,779,16.37
+403,2020-05-26,Native Hawaiian/Pacific Islander,279,1456.77,16,83.54
+404,2020-05-26,Other,3240,,20,
+405,2020-05-26,White,5546,207.98,574,21.53
+406,2020-05-27,American Indian/Alaska Native,41,186.32,2,9.09
+407,2020-05-27,Asian,2841,203.57,354,25.37
+408,2020-05-27,Black,1874,237.46,244,30.92
+409,2020-05-27,Hispanic/Latino,16285,342.21,808,16.98
+410,2020-05-27,Native Hawaiian/Pacific Islander,280,1461.99,17,88.76
+411,2020-05-27,Other,3714,,22,
+412,2020-05-27,White,5581,209.3,577,21.64
+413,2020-05-28,American Indian/Alaska Native,42,190.87,2,9.09
+414,2020-05-28,Asian,2869,205.57,360,25.8
+415,2020-05-28,Black,1892,239.74,246,31.17
+416,2020-05-28,Hispanic/Latino,16741,351.79,825,17.34
+417,2020-05-28,Native Hawaiian/Pacific Islander,280,1461.99,18,93.98
+418,2020-05-28,Other,4079,,20,
+419,2020-05-28,White,5641,211.55,591,22.16
+420,2020-05-29,American Indian/Alaska Native,45,204.5,2,9.09
+421,2020-05-29,Asian,3005,215.32,369,26.44
+422,2020-05-29,Black,1986,251.65,250,31.68
+423,2020-05-29,Hispanic/Latino,17279,363.1,849,17.84
+424,2020-05-29,Native Hawaiian/Pacific Islander,285,1488.1,17,88.76
+425,2020-05-29,Other,4485,,18,
+426,2020-05-29,White,5731,214.92,607,22.76
+427,2020-05-30,American Indian/Alaska Native,50,227.22,2,9.09
+428,2020-05-30,Asian,3057,219.04,379,27.16
+429,2020-05-30,Black,2044,259.0,258,32.69
+430,2020-05-30,Hispanic/Latino,18167,381.76,872,18.32
+431,2020-05-30,Native Hawaiian/Pacific Islander,287,1498.54,16,83.54
+432,2020-05-30,Other,5063,,16,
+433,2020-05-30,White,6056,227.11,612,22.95
+434,2020-05-31,American Indian/Alaska Native,51,231.77,2,9.09
+435,2020-05-31,Asian,3058,219.12,382,27.37
+436,2020-05-31,Black,2067,261.91,259,32.82
+437,2020-05-31,Hispanic/Latino,18281,384.15,887,18.64
+438,2020-05-31,Native Hawaiian/Pacific Islander,289,1508.98,16,83.54
+439,2020-05-31,Other,5486,,17,
+440,2020-05-31,White,6080,228.01,616,23.1
+441,2020-06-01,American Indian/Alaska Native,52,236.31,2,9.09
+442,2020-06-01,Asian,3066,219.69,384,27.51
+443,2020-06-01,Black,2089,264.7,263,33.32
+444,2020-06-01,Hispanic/Latino,18406,386.78,895,18.81
+445,2020-06-01,Native Hawaiian/Pacific Islander,292,1524.64,16,83.54
+446,2020-06-01,Other,5943,,18,
+447,2020-06-01,White,6117,229.4,622,23.33
+448,2020-06-02,American Indian/Alaska Native,54,245.4,2,9.09
+449,2020-06-02,Asian,3199,229.22,384,27.51
+450,2020-06-02,Black,2134,270.4,265,33.58
+451,2020-06-02,Hispanic/Latino,18693,392.81,917,19.27
+452,2020-06-02,Native Hawaiian/Pacific Islander,301,1571.64,17,88.76
+453,2020-06-02,Other,6301,,20,
+454,2020-06-02,White,6277,235.4,643,24.11
+455,2020-06-03,American Indian/Alaska Native,54,245.4,2,9.09
+456,2020-06-03,Asian,3142,225.14,398,28.52
+457,2020-06-03,Black,2177,275.85,273,34.59
+458,2020-06-03,Hispanic/Latino,18873,396.59,935,19.65
+459,2020-06-03,Native Hawaiian/Pacific Islander,304,1587.3,18,93.98
+460,2020-06-03,Other,6571,,23,
+461,2020-06-03,White,6342,237.83,652,24.45
+462,2020-06-04,American Indian/Alaska Native,57,259.03,2,9.09
+463,2020-06-04,Asian,3248,232.73,419,30.02
+464,2020-06-04,Black,2217,280.92,278,35.23
+465,2020-06-04,Hispanic/Latino,19592,411.7,956,20.09
+466,2020-06-04,Native Hawaiian/Pacific Islander,293,1529.87,4,20.89
+467,2020-06-04,Other,6724,,24,
+468,2020-06-04,White,6523,244.62,658,24.68
+469,2020-06-05,American Indian/Alaska Native,57,259.03,2,9.09
+470,2020-06-05,Asian,3265,233.95,423,30.31
+471,2020-06-05,Black,2233,282.94,279,35.35
+472,2020-06-05,Hispanic/Latino,19946,419.14,970,20.38
+473,2020-06-05,Native Hawaiian/Pacific Islander,290,1514.2,5,26.11
+474,2020-06-05,Other,6875,,24,
+475,2020-06-05,White,6567,246.27,670,25.13
+476,2020-06-06,American Indian/Alaska Native,58,263.58,2,9.09
+477,2020-06-06,Asian,3317,237.67,431,30.88
+478,2020-06-06,Black,2258,286.11,286,36.24
+479,2020-06-06,Hispanic/Latino,20824,437.59,998,20.97
+480,2020-06-06,Native Hawaiian/Pacific Islander,288,1503.76,6,31.33
+481,2020-06-06,Other,7102,,27,
+482,2020-06-06,White,6661,249.8,683,25.61
+483,2020-06-07,American Indian/Alaska Native,59,268.12,2,9.09
+484,2020-06-07,Asian,3329,238.53,435,31.17
+485,2020-06-07,Black,2264,286.87,289,36.62
+486,2020-06-07,Hispanic/Latino,21212,445.74,1005,21.12
+487,2020-06-07,Native Hawaiian/Pacific Islander,289,1508.98,6,31.33
+488,2020-06-07,Other,7366,,26,
+489,2020-06-07,White,6699,251.22,690,25.88
+490,2020-06-08,American Indian/Alaska Native,59,268.12,2,9.09
+491,2020-06-08,Asian,3339,239.25,436,31.24
+492,2020-06-08,Black,2275,288.27,289,36.62
+493,2020-06-08,Hispanic/Latino,21916,460.54,1012,21.27
+494,2020-06-08,Native Hawaiian/Pacific Islander,292,1524.64,6,31.33
+495,2020-06-08,Other,7689,,26,
+496,2020-06-08,White,6728,252.31,692,25.95
+497,2020-06-09,American Indian/Alaska Native,59,268.12,2,9.09
+498,2020-06-09,Asian,3355,240.4,440,31.53
+499,2020-06-09,Black,2292,290.42,296,37.51
+500,2020-06-09,Hispanic/Latino,22544,473.73,1026,21.56
+501,2020-06-09,Native Hawaiian/Pacific Islander,294,1535.09,6,31.33
+502,2020-06-09,Other,7918,,30,
+503,2020-06-09,White,6793,254.75,712,26.7
+504,2020-06-10,American Indian/Alaska Native,60,272.67,2,9.09
+505,2020-06-10,Asian,3376,241.9,445,31.89
+506,2020-06-10,Black,2323,294.35,299,37.89
+507,2020-06-10,Hispanic/Latino,22872,480.62,1060,22.27
+508,2020-06-10,Native Hawaiian/Pacific Islander,296,1545.53,6,31.33
+509,2020-06-10,Other,8266,,29,
+510,2020-06-10,White,6861,257.3,728,27.3
+511,2020-06-11,American Indian/Alaska Native,60,272.67,2,9.09
+512,2020-06-11,Asian,3399,243.55,449,32.17
+513,2020-06-11,Black,2345,297.14,303,38.39
+514,2020-06-11,Hispanic/Latino,23715,498.34,1078,22.65
+515,2020-06-11,Native Hawaiian/Pacific Islander,298,1555.97,7,36.55
+516,2020-06-11,Other,8363,,29,
+517,2020-06-11,White,6936,260.11,749,28.09
+518,2020-06-12,American Indian/Alaska Native,61,277.21,2,9.09
+519,2020-06-12,Asian,3430,245.77,452,32.39
+520,2020-06-12,Black,2368,300.05,302,38.27
+521,2020-06-12,Hispanic/Latino,24226,509.08,1088,22.86
+522,2020-06-12,Native Hawaiian/Pacific Islander,303,1582.08,9,46.99
+523,2020-06-12,Other,8734,,26,
+524,2020-06-12,White,6991,262.17,750,28.13
+525,2020-06-13,American Indian/Alaska Native,63,286.3,3,13.63
+526,2020-06-13,Asian,3449,247.13,458,32.82
+527,2020-06-13,Black,2394,303.34,306,38.77
+528,2020-06-13,Hispanic/Latino,24567,516.24,1113,23.39
+529,2020-06-13,Native Hawaiian/Pacific Islander,306,1597.74,9,46.99
+530,2020-06-13,Other,9023,,30,
+531,2020-06-13,White,7067,265.02,769,28.84
+532,2020-06-14,American Indian/Alaska Native,62,281.75,3,13.63
+533,2020-06-14,Asian,3453,247.42,460,32.96
+534,2020-06-14,Black,2399,303.98,307,38.9
+535,2020-06-14,Hispanic/Latino,24681,518.64,1116,23.45
+536,2020-06-14,Native Hawaiian/Pacific Islander,311,1623.85,9,46.99
+537,2020-06-14,Other,9355,,31,
+538,2020-06-14,White,7116,266.86,774,29.03
+539,2020-06-15,American Indian/Alaska Native,62,281.75,3,13.63
+540,2020-06-15,Asian,3471,248.71,461,33.03
+541,2020-06-15,Black,2416,306.13,309,39.15
+542,2020-06-15,Hispanic/Latino,25277,531.16,1128,23.7
+543,2020-06-15,Native Hawaiian/Pacific Islander,313,1634.29,9,46.99
+544,2020-06-15,Other,9699,,31,
+545,2020-06-15,White,7134,267.54,779,29.21
