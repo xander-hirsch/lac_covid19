@@ -3,10 +3,9 @@ dependencies:
   - pylint
   - rope
   - ipython
-  - jupyterlab
   - requests
   - beautifulsoup4
   - numpy
   - pandas
-  - matplotlib
-  - seaborn
+  - notebook
+  - plotly
