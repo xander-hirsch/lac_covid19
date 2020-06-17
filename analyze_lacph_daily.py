@@ -339,7 +339,7 @@ def create_custom_region(df_all_loc: pd.DataFrame,
     df_custom_region[CASE_RATE] = (df_custom_region[CASES]
                                    * case_multiplier).round(2)
 
-    return df_custom_region
+    return df_custom_region.reset_index()
 
 
 def area_slowed_increase(
