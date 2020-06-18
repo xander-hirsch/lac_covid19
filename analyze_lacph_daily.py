@@ -1,6 +1,6 @@
 import os.path
 import pickle
-from typing import Any, Dict, Iterable, Tuple, Union
+from typing import Any, Dict, Iterable, Optional, Tuple, Union
 
 import numpy as np
 import pandas as pd
@@ -295,12 +295,27 @@ def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     return df
 
 
-def aggregate_locations(df_all_loc: pd.DataFrame) -> pd.DataFrame:
+def aggregate_locations(
+        df_all_loc: pd.DataFrame,
+        exclude_date_area: Optional[Iterable[Tuple[str, str]]] = None
+        ) -> pd.DataFrame:
     """Aggregates the individual areas to larger regions and computes the case
-        rate."""
+        rate. exclude_date_area is of form (date, area) """
+
+    def filter_mask(
+        date_area_entry: pd.Series, exclusions: Tuple[str, str]) -> bool:
+        date_ = str(date_area_entry[const.DATE])[:10]
+        area = date_area_entry[const.AREA]
+        return not (date_, area) in exclusions
 
     area_population = read_csa_population()
     df_all_loc = df_all_loc.drop(columns=CASE_RATE)
+
+    # Exclude eroneous dates
+    if exclude_date_area:
+        drop_entry = df_all_loc.apply(
+            lambda x: filter_mask(x, exclude_date_area), axis='columns')
+        df_all_loc = df_all_loc[drop_entry]
 
     # Keep only areas in a region
     df_all_loc = df_all_loc[df_all_loc[REGION].notna()]

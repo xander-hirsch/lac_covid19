@@ -1,4 +1,5 @@
 import lac_covid19.analyze_lacph_daily as analyze_lacph_daily
+import lac_covid19.bad_data as bad_data
 import lac_covid19.const as const
 import lac_covid19.scrape_daily_stats as scrape_daily_stats
 
@@ -22,7 +23,8 @@ if __name__ == "__main__":
         df.to_pickle(pickle_file)
 
     df_csa = analyze_lacph_daily.create_by_area(all_dates)
-    df_region = analyze_lacph_daily.aggregate_locations(df_csa)
+    df_region = analyze_lacph_daily.aggregate_locations(
+        df_csa, bad_data.BAD_DATE_AREA)
 
     location_export = (
         (const.FILE_CSA_CSV, const.FILE_CSA_PICKLE, df_csa),

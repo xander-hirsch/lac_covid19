@@ -1,8 +1,18 @@
 import pandas as pd
 
 import lac_covid19.const as const
+import lac_covid19.lac_regions as lac_regions
 import lac_covid19.lacph_prid as lacph_prid
 import lac_covid19.scrape_daily_stats as scrape_daily_stats
+
+
+def isolate_area_interval(df_loc: pd.DataFrame, loc_col: str, loc_name: str,
+                          start_date: str, end_date: str) -> pd.DataFrame:
+    start_ts = pd.Timestamp(start_date)
+    end_ts = pd.Timestamp(end_date)
+    return df_loc[(df_loc[loc_col] == loc_name)
+                  & (df_loc[const.DATE] >= start_ts)
+                  & (df_loc[const.DATE] <= end_ts)]
 
 
 if __name__ == "__main__":
