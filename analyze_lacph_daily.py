@@ -311,11 +311,31 @@ def aggregate_locations(
     area_population = read_csa_population()
     df_all_loc = df_all_loc.drop(columns=CASE_RATE)
 
-    # Exclude eroneous dates
+    # Drop areas with correctional facility outbreaks from average
+    # Identify just the areas, using asterisk suffix
+    corr_facility_filter = df_all_loc[AREA].apply(lambda x: x[-1] == '*')
+    # Make these areas - with and without asterisk - into list 
+    corr_facility_areas = list(
+        df_all_loc.loc[corr_facility_filter, [AREA]]
+        .groupby(AREA).groups.keys())
+    corr_facility_areas += [x.rstrip('*') for x in corr_facility_areas]
+    corr_facility_areas = np.array(corr_facility_areas, dtype='str')            
+    # Filter these areas, both before and after outbreaks
+    df_all_loc = df_all_loc[~df_all_loc[AREA].isin(corr_facility_areas)]
+
+    # Drop erroneous dates and forward fill previous records
     if exclude_date_area:
         drop_entry = df_all_loc.apply(
-            lambda x: filter_mask(x, exclude_date_area), axis='columns')
-        df_all_loc = df_all_loc[drop_entry]
+            lambda x: (x[DATE].isoformat()[:10], x[AREA]) in exclude_date_area,
+            axis='columns') 
+        df_all_loc.loc[drop_entry, CASES] = pd.NA
+        
+        # Forward fill using previous area locations
+        for area in [x[1] for x in exclude_date_area]:
+            area_cases = df_all_loc.loc[df_all_loc[AREA] == area, CASES]
+            area_cases = area_cases.fillna(method='pad')
+            # Put area cases back into wider area time series
+            df_all_loc.loc[area_cases.index, CASES] = area_cases
 
     # Keep only areas in a region
     df_all_loc = df_all_loc[df_all_loc[REGION].notna()]
