@@ -5,6 +5,7 @@ import lac_covid19.lac_regions as lac_regions
 import lac_covid19.lacph_prid as lacph_prid
 import lac_covid19.scrape_daily_stats as scrape_daily_stats
 
+REGIONS = lac_regions._REGION
 
 def isolate_area_interval(df_loc: pd.DataFrame, loc_col: str, loc_name: str,
                           start_date: str, end_date: str) -> pd.DataFrame:
@@ -13,6 +14,17 @@ def isolate_area_interval(df_loc: pd.DataFrame, loc_col: str, loc_name: str,
     return df_loc[(df_loc[loc_col] == loc_name)
                   & (df_loc[const.DATE] >= start_ts)
                   & (df_loc[const.DATE] <= end_ts)]
+
+
+def check_always_increasing(df_loc: pd.DataFrame, region: str):
+    region_areas = REGIONS[region]
+    test_areas = [
+        (area,
+        df_loc.loc[df_loc[const.AREA] == area, const.CASES]
+        .is_monotonic_increasing)
+        for area in region_areas
+    ]
+    return [x[0] for x in test_areas if not x[1]]
 
 
 if __name__ == "__main__":

@@ -51,7 +51,7 @@ HEADER_LOC = re.compile('CITY / COMMUNITY\** \(Rate\**\)')
 RE_LOC = re.compile(
     '([A-Z][A-Za-z/\-\. ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+(--|[0-9]+|[0-9]+\.[0-9]+)\s\)')  # pylint: disable=line-too-long
 
-EXTENDED_HTML = (dt.date(2020, 4, 23),)
+EXTENDED_HTML = (dt.date(2020, 4, 23), dt.date(2020, 6, 18))
 FORMAT_START_HOSPITAL_NESTED = dt.date(2020, 4, 4)
 FORMAT_START_AGE_NESTED = dt.date(2020, 4, 4)
 CORR_FACILITY_RECORDED = dt.date(2020, 5, 14)
@@ -536,38 +536,47 @@ def _parse_area(daily_pr: bs4.Tag) -> Dict[str, int]:
     SAMPLE:
     CITY / COMMUNITY (Rate**)
         City of Burbank 371 ( 346.15 )
-        City of Claremont 35 ( 95.93 )
+        City of Lancaster* 821 ( 508 )
         Los Angeles - Sherman Oaks 216 ( 247.55 )
         Los Angeles - Van Nuys 629 ( 674.94 )
         Unincorporated - Lake Los Angeles 28 ( 215.48 )
         Unincorporated - Palmdale 4 ( 475.06 )
     RETURNS:
     {
-        "City of Burbank": (371, 346.15),
-        "City of Claremont": (35, 95.93),
-        "Los Angeles - Sherman Oaks": (216, 247.55),
-        "Los Angeles - Van Nuys": (629, 674.94),
-        "Unincorporated - Lake Los Angeles": (23, 215.48),
-        "Unincorporated - Palmdale": (4, 475.06)
+        "City of Burbank": (371, 346.15, False),
+        "City of Lancaster": (831, 508, True),
+        "Los Angeles - Sherman Oaks": (216, 247.55, False),
+        "Los Angeles - Van Nuys": (629, 674.94, False),
+        "Unincorporated - Lake Los Angeles": (23, 215.48, False),
+        "Unincorporated - Palmdale": (4, 475.06, False)
     }
     """
+
     areas_raw = _get_html_area(daily_pr)
     area_extracted = RE_LOC.findall(areas_raw)
     pr_date = _get_date(daily_pr)
 
     ASTERISK = '*'  # pylint: disable=invalid-name
     NODATA = '--'  # pylint: disable=invalid-name
+
     for i in range(len(area_extracted)):  # pylint: disable=consider-using-enumerate
         name, cases, rate = area_extracted[i]
-        if (name[-1] == ASTERISK) and (pr_date < CORR_FACILITY_RECORDED):
+        cf_recorded = pr_date >= CORR_FACILITY_RECORDED
+        cf_outbreak = False if cf_recorded else None
+
+        if name[-1] == ASTERISK:
             name = name.rstrip(ASTERISK)
+            if cf_recorded:
+                cf_outbreak = True
+
         if cases == NODATA:
             cases = None
             rate = None
         else:
             cases = int(cases)
             rate = float(rate)
-        area_extracted[i] = name, cases, rate
+
+        area_extracted[i] = name, cases, rate, cf_outbreak
 
     return area_extracted
 

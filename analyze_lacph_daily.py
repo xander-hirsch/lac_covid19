@@ -14,7 +14,6 @@ CASES = const.CASES
 DEATHS = const.DEATHS
 
 RATE_SCALE = const.RATE_SCALE
-CASES_NORMALIZED = RATE_SCALE
 CASE_RATE = const.CASE_RATE
 DEATH_RATE = const.DEATH_RATE
 RATE_SCALE = const.RATE_SCALE
@@ -22,6 +21,7 @@ RATE_SCALE = const.RATE_SCALE
 AREA = const.AREA
 REGION = const.REGION
 POPULATION = const.POPULATION
+CF_OUTBREAK = const.CF_OUTBREAK
 
 
 def demographic_table(table_dir: str, desc: str) -> str:
@@ -267,8 +267,10 @@ def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
     """
 
     # Leverage the provided grouping of area, cases, and case rate.
-    df = pd.DataFrame(daily_pr[AREA], columns=(AREA, CASES, CASE_RATE))
+    df = pd.DataFrame(daily_pr[AREA], columns=(AREA, CASES, CASE_RATE,
+                                               CF_OUTBREAK))
     df[CASES] = df[CASES].convert_dtypes()
+    df[CF_OUTBREAK] = df[CF_OUTBREAK].convert_dtypes()
 
     # Attach a date to each entry
     record_date = (pd.Series(pd.to_datetime(daily_pr[DATE])).repeat(df.shape[0])
@@ -280,7 +282,7 @@ def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
         lambda x: lac_regions.REGION_MAP.get(x[AREA], pd.NA),
         axis='columns').astype('string')
 
-    return df[[DATE, REGION, AREA, CASES, CASE_RATE]]
+    return df[[DATE, REGION, AREA, CASES, CASE_RATE, CF_OUTBREAK]]
 
 
 def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
@@ -302,56 +304,51 @@ def aggregate_locations(
     """Aggregates the individual areas to larger regions and computes the case
         rate. exclude_date_area is of form (date, area) """
 
-    def filter_mask(
-        date_area_entry: pd.Series, exclusions: Tuple[str, str]) -> bool:
-        date_ = str(date_area_entry[const.DATE])[:10]
-        area = date_area_entry[const.AREA]
-        return not (date_, area) in exclusions
-
     area_population = read_csa_population()
     df_all_loc = df_all_loc.drop(columns=CASE_RATE)
-
-    # Drop areas with correctional facility outbreaks from average
-    # Identify just the areas, using asterisk suffix
-    corr_facility_filter = df_all_loc[AREA].apply(lambda x: x[-1] == '*')
-    # Make these areas - with and without asterisk - into list 
-    corr_facility_areas = list(
-        df_all_loc.loc[corr_facility_filter, [AREA]]
-        .groupby(AREA).groups.keys())
-    corr_facility_areas += [x.rstrip('*') for x in corr_facility_areas]
-    corr_facility_areas = np.array(corr_facility_areas, dtype='str')            
-    # Filter these areas, both before and after outbreaks
-    df_all_loc = df_all_loc[~df_all_loc[AREA].isin(corr_facility_areas)]
-
-    # Drop erroneous dates and forward fill previous records
+    # Only keep areas assigned a region
+    df_all_loc = df_all_loc[df_all_loc[REGION].notna()]
+    
+    # Correct erroneous area records by using previous dates
     if exclude_date_area:
-        drop_entry = df_all_loc.apply(
+        drop_entry_mask = df_all_loc.apply(
             lambda x: (x[DATE].isoformat()[:10], x[AREA]) in exclude_date_area,
             axis='columns') 
-        df_all_loc.loc[drop_entry, CASES] = pd.NA
-        
-        # Forward fill using previous area locations
+        df_all_loc.loc[drop_entry_mask, CASES] = pd.NA
+
+        # Isolate each area with bad data and forward fill cases
         for area in [x[1] for x in exclude_date_area]:
             area_cases = df_all_loc.loc[df_all_loc[AREA] == area, CASES]
             area_cases = area_cases.fillna(method='pad')
             # Put area cases back into wider area time series
             df_all_loc.loc[area_cases.index, CASES] = area_cases
+    
+    # Tally total cases including correctional facility outbreaks
+    df_total_cases = (df_all_loc[[DATE, REGION, CASES]]
+                     .groupby([DATE, REGION]).sum().reset_index())
 
-    # Keep only areas in a region
-    df_all_loc = df_all_loc[df_all_loc[REGION].notna()]
-    population_col = (df_all_loc[AREA].apply(area_population.get)
-                      .convert_dtypes())
-    population_col.name = POPULATION
+    # Drop areas with correctional facility outbreaks from case rate calculation
+    df_all_loc[CF_OUTBREAK] = df_all_loc[CF_OUTBREAK].fillna(value=False)
+    has_cf_outbreak = df_all_loc.loc[df_all_loc[CF_OUTBREAK], AREA].unique()
+    df_case_rate = df_all_loc.loc[~df_all_loc[AREA].isin(has_cf_outbreak),
+                                  [DATE, REGION, AREA, CASES]]
 
-    df_all_loc = df_all_loc.join(population_col, how='left')
-    # Use case count and population count to normalize cases
-    df_region = df_all_loc.groupby([DATE, REGION]).sum().reset_index()
-    # Compute case rate using the estimated area populations.
-    df_region[CASE_RATE] = (
-        (df_region[CASES] / df_region[POPULATION] * RATE_SCALE)
-        .round(2))
+    # Assign populations
+    df_case_rate[POPULATION] = (df_case_rate[AREA].apply(area_population.get)
+                                .convert_dtypes())
+    # Group into regional totals
+    df_case_rate = df_case_rate.groupby([DATE, REGION]).sum().reset_index()
+    # Calculate case rate
+    df_case_rate[CASE_RATE] = (df_case_rate[CASES] / df_case_rate[POPULATION]
+                               * RATE_SCALE).round(2)
 
-    return df_region.drop(columns=POPULATION)
+    # Remove intermediate columns
+    df_case_rate = df_case_rate.drop(columns=[CASES, POPULATION])
+
+    df_together = df_total_cases.merge(df_case_rate, how='outer',
+                                       on=[DATE, REGION])
+
+    return df_together
 
 
 def create_custom_region(df_all_loc: pd.DataFrame,
@@ -363,13 +360,11 @@ def create_custom_region(df_all_loc: pd.DataFrame,
     for area in areas:
         region_pop += area_population[area]
 
-    # Takes out the notation of a correctional facility outbreak
-    df_all_loc[AREA] = df_all_loc[AREA].apply(lambda x: x.rstrip('*'))
-
     # Keep only areas from parameter
     df_custom_region = df_all_loc[df_all_loc[AREA].isin(areas)]
     df_custom_region = df_custom_region.groupby(DATE).sum()
 
+    # Calculate case rate - but compute constants only once
     case_multiplier = RATE_SCALE / region_pop
     df_custom_region[CASE_RATE] = (df_custom_region[CASES]
                                    * case_multiplier).round(2)
@@ -424,6 +419,7 @@ def area_slowed_increase(
 
 if __name__ == "__main__":
     every_day = query_all_dates()
+    mid_april = every_day[14:21]
     last_week = every_day[-7:]
     today = every_day[-1]
 
@@ -431,8 +427,11 @@ if __name__ == "__main__":
     # df_age = create_by_age(every_day)
     # df_gender = create_by_gender(every_day)
     # df_race = create_by_race(last_week)
-    df_area = create_by_area(last_week)
+
+    # df_area = create_by_area(every_day)
     # df_region = aggregate_locations(df_area)
+    # df_area_recent = create_by_area(last_week)
+    # df_region_recent = aggregate_locations(df_area_recent)
 
     # csa_pop = read_csa_population()
     # df_custom_region = create_custom_region(

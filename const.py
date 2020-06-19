@@ -43,6 +43,7 @@ RATE_SCALE = 100_000
 REGION = 'Region'
 AREA = 'Area'
 POPULATION = 'Population'
+CF_OUTBREAK = 'CF Outbreak'
 
 # US Census Table DP05 2018 5-year
 POPULATION_LAC = 10_098_052
