@@ -203,12 +203,13 @@ def create_by_gender(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     GENDER = const.GENDER
     CASES_BY_GENDER = const.CASES_BY_GENDER
 
-    data = map(lambda x: make_section_ts(x, CASES_BY_GENDER), many_daily_pr)
+    data = [make_section_ts(x, CASES_BY_GENDER)
+            for x in many_daily_pr if x[CASES_BY_GENDER]]
 
     df = tidy_data(pd.DataFrame(data), GENDER, CASES, False)
     df = df[df[GENDER] != const.OTHER]
     df[GENDER] = df[GENDER].astype('category')
-    df[CASES] = df[CASES].convert_dtypes()
+    df[CASES] = df[CASES].astype('int')
 
     gender_pop = read_gender_population()
     df[CASE_RATE] = df.apply(
@@ -222,19 +223,10 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
 
     RACE = const.RACE
 
-    def calculate_rate(date_race_entry: pd.Series, variable_name: str,
-                       race_pop: pd.Series) -> float:
-        count = date_race_entry[variable_name]
-        race = date_race_entry[RACE]
-        if race == 'Other' or count is pd.NA:
-            return np.nan
-
-        return round((count / race_pop.get(race) * RATE_SCALE), 2)
-
-    cases_raw = map(lambda x: make_section_ts(x, const.CASES_BY_RACE),
-                    many_daily_pr)
-    deaths_raw = map(lambda x: make_section_ts(x, const.DEATHS_BY_RACE),
-                     many_daily_pr)
+    cases_raw = [make_section_ts(x, const.CASES_BY_RACE)
+                 for x in many_daily_pr if x[const.CASES_BY_RACE]]
+    deaths_raw = [make_section_ts(x, const.DEATHS_BY_RACE)
+                  for x in many_daily_pr if x[const.DEATHS_BY_RACE]]
 
     # Create cases and deaths tables seperately
     df_cases = (pd.DataFrame(cases_raw)
@@ -253,10 +245,10 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     race_pop = read_race_population()
 
     df_all[CASE_RATE] = df_all.apply(
-        lambda x: calculate_rate(x, CASES, race_pop), axis='columns')
+        lambda x: calculate_rate(x, race_pop, RACE, CASES), axis='columns')
 
     df_all[DEATH_RATE] = df_all.apply(
-        lambda x: calculate_rate(x, DEATHS, race_pop), axis='columns')
+        lambda x: calculate_rate(x, race_pop, RACE, DEATHS), axis='columns')
 
     return df_all[[DATE, RACE, CASES, CASE_RATE, DEATHS, DEATH_RATE]]
 
@@ -424,9 +416,9 @@ if __name__ == "__main__":
     today = every_day[-1]
 
     # df_summary = create_main_stats(every_day)
-    # df_age = create_by_age(every_day)
-    # df_gender = create_by_gender(every_day)
-    # df_race = create_by_race(last_week)
+    df_age = create_by_age(every_day)
+    df_gender = create_by_gender(every_day)
+    df_race = create_by_race(last_week)
 
     # df_area = create_by_area(every_day)
     # df_region = aggregate_locations(df_area)

@@ -9,7 +9,7 @@
 7,2020-03-30,Pomona Valley,8,3.5
 8,2020-03-30,San Fernando Valley,347,21.6
 9,2020-03-30,San Gabriel Valley,93,6.3
-10,2020-03-30,Santa Monica Mountains,20,22.98
+10,2020-03-30,Santa Monica Mountains,20,29.23
 11,2020-03-30,South Bay,213,27.46
 12,2020-03-30,South LA,91,10.79
 13,2020-03-30,Southeast,156,12.25
@@ -25,7 +25,7 @@
 23,2020-03-31,Pomona Valley,14,6.13
 24,2020-03-31,San Fernando Valley,410,25.27
 25,2020-03-31,San Gabriel Valley,115,7.79
-26,2020-03-31,Santa Monica Mountains,24,27.57
+26,2020-03-31,Santa Monica Mountains,24,35.08
 27,2020-03-31,South Bay,261,33.64
 28,2020-03-31,South LA,147,17.44
 29,2020-03-31,Southeast,201,16.01
@@ -41,7 +41,7 @@
 39,2020-04-01,Pomona Valley,18,7.88
 40,2020-04-01,San Fernando Valley,487,30.0
 41,2020-04-01,San Gabriel Valley,151,10.22
-42,2020-04-01,Santa Monica Mountains,23,26.43
+42,2020-04-01,Santa Monica Mountains,23,33.62
 43,2020-04-01,South Bay,303,39.06
 44,2020-04-01,South LA,221,26.21
 45,2020-04-01,Southeast,248,19.94
@@ -57,7 +57,7 @@
 55,2020-04-02,Pomona Valley,20,8.76
 56,2020-04-02,San Fernando Valley,568,34.99
 57,2020-04-02,San Gabriel Valley,177,11.99
-58,2020-04-02,Santa Monica Mountains,32,36.77
+58,2020-04-02,Santa Monica Mountains,32,46.77
 59,2020-04-02,South Bay,346,44.6
 60,2020-04-02,South LA,271,32.15
 61,2020-04-02,Southeast,290,23.53
@@ -73,7 +73,7 @@
 71,2020-04-03,Pomona Valley,28,12.26
 72,2020-04-03,San Fernando Valley,658,40.44
 73,2020-04-03,San Gabriel Valley,200,13.54
-74,2020-04-03,Santa Monica Mountains,39,44.81
+74,2020-04-03,Santa Monica Mountains,39,57.0
 75,2020-04-03,South Bay,402,51.82
 76,2020-04-03,South LA,314,37.25
 77,2020-04-03,Southeast,325,26.41
@@ -89,7 +89,7 @@
 87,2020-04-04,Pomona Valley,31,13.57
 88,2020-04-04,San Fernando Valley,802,49.23
 89,2020-04-04,San Gabriel Valley,248,16.79
-90,2020-04-04,Santa Monica Mountains,41,47.11
+90,2020-04-04,Santa Monica Mountains,41,59.93
 91,2020-04-04,South Bay,440,56.72
 92,2020-04-04,South LA,376,44.6
 93,2020-04-04,Southeast,398,32.36
@@ -105,7 +105,7 @@
 103,2020-04-05,Pomona Valley,36,15.76
 104,2020-04-05,San Fernando Valley,906,55.47
 105,2020-04-05,San Gabriel Valley,298,20.18
-106,2020-04-05,Santa Monica Mountains,51,58.6
+106,2020-04-05,Santa Monica Mountains,51,67.23
 107,2020-04-05,South Bay,478,61.62
 108,2020-04-05,South LA,438,51.95
 109,2020-04-05,Southeast,502,40.67
@@ -121,7 +121,7 @@
 119,2020-04-06,Pomona Valley,43,18.82
 120,2020-04-06,San Fernando Valley,979,59.67
 121,2020-04-06,San Gabriel Valley,343,23.23
-122,2020-04-06,Santa Monica Mountains,52,59.74
+122,2020-04-06,Santa Monica Mountains,52,68.7
 123,2020-04-06,South Bay,523,67.42
 124,2020-04-06,South LA,476,56.46
 125,2020-04-06,Southeast,546,44.0
@@ -137,7 +137,7 @@
 135,2020-04-07,Pomona Valley,48,21.01
 136,2020-04-07,San Fernando Valley,1088,66.1
 137,2020-04-07,San Gabriel Valley,377,25.53
-138,2020-04-07,Santa Monica Mountains,53,60.89
+138,2020-04-07,Santa Monica Mountains,53,70.16
 139,2020-04-07,South Bay,566,72.96
 140,2020-04-07,South LA,537,63.7
 141,2020-04-07,Southeast,615,49.68
@@ -153,7 +153,7 @@
 151,2020-04-08,Pomona Valley,55,24.08
 152,2020-04-08,San Fernando Valley,1172,71.29
 153,2020-04-08,San Gabriel Valley,392,26.54
-154,2020-04-08,Santa Monica Mountains,59,67.79
+154,2020-04-08,Santa Monica Mountains,59,78.93
 155,2020-04-08,South Bay,609,78.5
 156,2020-04-08,South LA,596,70.7
 157,2020-04-08,Southeast,675,54.58
@@ -169,7 +169,7 @@
 167,2020-04-09,Pomona Valley,61,26.7
 168,2020-04-09,San Fernando Valley,1247,76.02
 169,2020-04-09,San Gabriel Valley,440,29.79
-170,2020-04-09,Santa Monica Mountains,61,70.08
+170,2020-04-09,Santa Monica Mountains,61,81.85
 171,2020-04-09,South Bay,650,83.79
 172,2020-04-09,South LA,647,76.75
 173,2020-04-09,Southeast,747,60.26
@@ -185,7 +185,7 @@
 183,2020-04-10,Pomona Valley,63,27.58
 184,2020-04-10,San Fernando Valley,1316,80.41
 185,2020-04-10,San Gabriel Valley,487,32.98
-186,2020-04-10,Santa Monica Mountains,68,78.13
+186,2020-04-10,Santa Monica Mountains,68,92.08
 187,2020-04-10,South Bay,681,87.79
 188,2020-04-10,South LA,687,81.49
 189,2020-04-10,Southeast,811,65.34
@@ -201,7 +201,7 @@
 199,2020-04-11,Pomona Valley,65,28.45
 200,2020-04-11,San Fernando Valley,1392,85.01
 201,2020-04-11,San Gabriel Valley,536,36.3
-202,2020-04-11,Santa Monica Mountains,70,80.42
+202,2020-04-11,Santa Monica Mountains,70,93.54
 203,2020-04-11,South Bay,727,93.72
 204,2020-04-11,South LA,735,87.18
 205,2020-04-11,Southeast,873,70.41
@@ -217,7 +217,7 @@
 215,2020-04-12,Pomona Valley,68,29.77
 216,2020-04-12,San Fernando Valley,1445,87.96
 217,2020-04-12,San Gabriel Valley,558,37.78
-218,2020-04-12,Santa Monica Mountains,71,81.57
+218,2020-04-12,Santa Monica Mountains,71,95.01
 219,2020-04-12,South Bay,755,97.33
 220,2020-04-12,South LA,749,88.84
 221,2020-04-12,Southeast,891,71.98
@@ -233,7 +233,7 @@
 231,2020-04-13,Pomona Valley,70,30.64
 232,2020-04-13,San Fernando Valley,1491,90.85
 233,2020-04-13,San Gabriel Valley,578,39.14
-234,2020-04-13,Santa Monica Mountains,74,85.02
+234,2020-04-13,Santa Monica Mountains,74,97.93
 235,2020-04-13,South Bay,774,99.77
 236,2020-04-13,South LA,779,92.4
 237,2020-04-13,Southeast,918,73.91
@@ -249,7 +249,7 @@
 247,2020-04-14,Pomona Valley,78,34.14
 248,2020-04-14,San Fernando Valley,1588,96.76
 249,2020-04-14,San Gabriel Valley,626,42.39
-250,2020-04-14,Santa Monica Mountains,78,89.62
+250,2020-04-14,Santa Monica Mountains,78,103.78
 251,2020-04-14,South Bay,812,104.67
 252,2020-04-14,South LA,846,100.35
 253,2020-04-14,Southeast,992,79.86
@@ -265,7 +265,7 @@
 263,2020-04-15,Pomona Valley,80,35.02
 264,2020-04-15,San Fernando Valley,1679,102.27
 265,2020-04-15,San Gabriel Valley,662,44.83
-266,2020-04-15,Santa Monica Mountains,78,89.62
+266,2020-04-15,Santa Monica Mountains,78,103.78
 267,2020-04-15,South Bay,838,108.02
 268,2020-04-15,South LA,897,106.4
 269,2020-04-15,Southeast,1046,84.14
@@ -281,7 +281,7 @@
 279,2020-04-16,Pomona Valley,85,37.21
 280,2020-04-16,San Fernando Valley,1737,105.62
 281,2020-04-16,San Gabriel Valley,687,46.52
-282,2020-04-16,Santa Monica Mountains,78,89.62
+282,2020-04-16,Santa Monica Mountains,78,103.78
 283,2020-04-16,South Bay,859,110.73
 284,2020-04-16,South LA,923,109.48
 285,2020-04-16,Southeast,1117,89.48
@@ -297,7 +297,7 @@
 295,2020-04-17,Pomona Valley,93,40.71
 296,2020-04-17,San Fernando Valley,1832,111.2
 297,2020-04-17,San Gabriel Valley,739,50.04
-298,2020-04-17,Santa Monica Mountains,81,93.06
+298,2020-04-17,Santa Monica Mountains,81,108.16
 299,2020-04-17,South Bay,897,115.63
 300,2020-04-17,South LA,987,117.08
 301,2020-04-17,Southeast,1188,95.16
@@ -313,7 +313,7 @@
 311,2020-04-18,Pomona Valley,97,42.46
 312,2020-04-18,San Fernando Valley,1946,118.23
 313,2020-04-18,San Gabriel Valley,784,53.09
-314,2020-04-18,Santa Monica Mountains,84,96.51
+314,2020-04-18,Santa Monica Mountains,84,112.55
 315,2020-04-18,South Bay,933,120.27
 316,2020-04-18,South LA,1053,124.9
 317,2020-04-18,Southeast,1259,101.02
@@ -329,7 +329,7 @@
 327,2020-04-19,Pomona Valley,98,42.9
 328,2020-04-19,San Fernando Valley,1983,120.52
 329,2020-04-19,San Gabriel Valley,811,54.92
-330,2020-04-19,Santa Monica Mountains,85,97.66
+330,2020-04-19,Santa Monica Mountains,85,114.01
 331,2020-04-19,South Bay,952,122.72
 332,2020-04-19,South LA,1084,128.58
 333,2020-04-19,Southeast,1300,104.35
@@ -345,7 +345,7 @@
 343,2020-04-20,Pomona Valley,110,48.15
 344,2020-04-20,San Fernando Valley,2227,134.96
 345,2020-04-20,San Gabriel Valley,879,59.52
-346,2020-04-20,Santa Monica Mountains,91,104.55
+346,2020-04-20,Santa Monica Mountains,91,122.78
 347,2020-04-20,South Bay,1022,131.74
 348,2020-04-20,South LA,1245,147.68
 349,2020-04-20,Southeast,1474,119.3
@@ -361,7 +361,7 @@
 359,2020-04-21,Pomona Valley,129,56.47
 360,2020-04-21,San Fernando Valley,2543,154.13
 361,2020-04-21,San Gabriel Valley,996,67.44
-362,2020-04-21,Santa Monica Mountains,98,112.59
+362,2020-04-21,Santa Monica Mountains,98,131.55
 363,2020-04-21,South Bay,1144,147.47
 364,2020-04-21,South LA,1418,168.2
 365,2020-04-21,Southeast,1640,132.25
@@ -377,7 +377,7 @@
 375,2020-04-22,Pomona Valley,145,63.47
 376,2020-04-22,San Fernando Valley,2836,171.73
 377,2020-04-22,San Gabriel Valley,1127,76.31
-378,2020-04-22,Santa Monica Mountains,100,114.89
+378,2020-04-22,Santa Monica Mountains,100,134.47
 379,2020-04-22,South Bay,1182,152.37
 380,2020-04-22,South LA,1574,186.7
 381,2020-04-22,Southeast,1773,142.66
@@ -393,7 +393,7 @@
 391,2020-04-23,Pomona Valley,157,68.73
 392,2020-04-23,San Fernando Valley,3039,183.74
 393,2020-04-23,San Gabriel Valley,1222,82.75
-394,2020-04-23,Santa Monica Mountains,102,117.19
+394,2020-04-23,Santa Monica Mountains,102,137.39
 395,2020-04-23,South Bay,1228,158.3
 396,2020-04-23,South LA,1710,202.84
 397,2020-04-23,Southeast,1895,152.54
@@ -409,7 +409,7 @@
 407,2020-04-24,Pomona Valley,164,71.79
 408,2020-04-24,San Fernando Valley,3224,195.16
 409,2020-04-24,San Gabriel Valley,1297,87.83
-410,2020-04-24,Santa Monica Mountains,105,120.64
+410,2020-04-24,Santa Monica Mountains,105,140.32
 411,2020-04-24,South Bay,1263,162.81
 412,2020-04-24,South LA,1850,219.44
 413,2020-04-24,Southeast,1989,159.98
@@ -425,7 +425,7 @@
 423,2020-04-25,Pomona Valley,170,74.42
 424,2020-04-25,San Fernando Valley,3325,201.33
 425,2020-04-25,San Gabriel Valley,1366,92.5
-426,2020-04-25,Santa Monica Mountains,106,121.79
+426,2020-04-25,Santa Monica Mountains,106,141.78
 427,2020-04-25,South Bay,1297,167.19
 428,2020-04-25,South LA,1912,226.8
 429,2020-04-25,Southeast,2058,165.57
@@ -441,7 +441,7 @@
 439,2020-04-26,Pomona Valley,171,74.86
 440,2020-04-26,San Fernando Valley,3411,206.45
 441,2020-04-26,San Gabriel Valley,1398,94.67
-442,2020-04-26,Santa Monica Mountains,107,122.93
+442,2020-04-26,Santa Monica Mountains,107,143.24
 443,2020-04-26,South Bay,1308,168.61
 444,2020-04-26,South LA,1966,233.2
 445,2020-04-26,Southeast,2102,169.25
@@ -457,7 +457,7 @@
 455,2020-04-27,Pomona Valley,188,82.3
 456,2020-04-27,San Fernando Valley,3647,219.91
 457,2020-04-27,San Gabriel Valley,1460,98.86
-458,2020-04-27,Santa Monica Mountains,107,122.93
+458,2020-04-27,Santa Monica Mountains,107,143.24
 459,2020-04-27,South Bay,1355,174.67
 460,2020-04-27,South LA,2084,247.2
 461,2020-04-27,Southeast,2164,174.32
@@ -473,7 +473,7 @@
 471,2020-04-28,Pomona Valley,190,83.17
 472,2020-04-28,San Fernando Valley,3753,226.74
 473,2020-04-28,San Gabriel Valley,1522,103.06
-474,2020-04-28,Santa Monica Mountains,112,128.68
+474,2020-04-28,Santa Monica Mountains,112,144.7
 475,2020-04-28,South Bay,1375,177.25
 476,2020-04-28,South LA,2170,257.4
 477,2020-04-28,Southeast,2230,179.83
@@ -489,7 +489,7 @@
 487,2020-04-29,Pomona Valley,210,91.93
 488,2020-04-29,San Fernando Valley,4043,244.26
 489,2020-04-29,San Gabriel Valley,1611,109.09
-490,2020-04-29,Santa Monica Mountains,115,132.13
+490,2020-04-29,Santa Monica Mountains,115,149.09
 491,2020-04-29,South Bay,1456,187.69
 492,2020-04-29,South LA,2307,273.65
 493,2020-04-29,Southeast,2335,188.49
@@ -505,7 +505,7 @@
 503,2020-04-30,Pomona Valley,212,92.8
 504,2020-04-30,San Fernando Valley,4154,251.35
 505,2020-04-30,San Gabriel Valley,1664,112.68
-506,2020-04-30,Santa Monica Mountains,117,134.42
+506,2020-04-30,Santa Monica Mountains,117,152.01
 507,2020-04-30,South Bay,1475,190.14
 508,2020-04-30,South LA,2381,282.43
 509,2020-04-30,Southeast,2440,196.89
@@ -521,7 +521,7 @@
 519,2020-05-01,Pomona Valley,218,95.43
 520,2020-05-01,San Fernando Valley,4420,268.03
 521,2020-05-01,San Gabriel Valley,1725,116.81
-522,2020-05-01,Santa Monica Mountains,119,136.72
+522,2020-05-01,Santa Monica Mountains,119,153.47
 523,2020-05-01,South Bay,1528,196.97
 524,2020-05-01,South LA,2518,298.68
 525,2020-05-01,Southeast,2570,206.86
@@ -537,7 +537,7 @@
 535,2020-05-02,Pomona Valley,224,98.06
 536,2020-05-02,San Fernando Valley,4550,275.9
 537,2020-05-02,San Gabriel Valley,1782,120.67
-538,2020-05-02,Santa Monica Mountains,119,136.72
+538,2020-05-02,Santa Monica Mountains,119,153.47
 539,2020-05-02,South Bay,1554,200.32
 540,2020-05-02,South LA,2596,307.93
 541,2020-05-02,Southeast,2648,213.07
@@ -553,7 +553,7 @@
 551,2020-05-03,Pomona Valley,235,102.87
 552,2020-05-03,San Fernando Valley,4730,286.54
 553,2020-05-03,San Gabriel Valley,1839,124.53
-554,2020-05-03,Santa Monica Mountains,126,144.76
+554,2020-05-03,Santa Monica Mountains,126,162.24
 555,2020-05-03,South Bay,1590,204.96
 556,2020-05-03,South LA,2680,317.89
 557,2020-05-03,Southeast,2693,216.57
@@ -569,7 +569,7 @@
 567,2020-05-04,Pomona Valley,240,105.06
 568,2020-05-04,San Fernando Valley,4839,292.64
 569,2020-05-04,San Gabriel Valley,1881,127.37
-570,2020-05-04,Santa Monica Mountains,127,145.91
+570,2020-05-04,Santa Monica Mountains,127,163.7
 571,2020-05-04,South Bay,1608,207.28
 572,2020-05-04,South LA,2717,322.28
 573,2020-05-04,Southeast,2742,220.59
@@ -585,7 +585,7 @@
 583,2020-05-05,Pomona Valley,259,113.38
 584,2020-05-05,San Fernando Valley,5318,320.67
 585,2020-05-05,San Gabriel Valley,1995,135.09
-586,2020-05-05,Santa Monica Mountains,130,149.36
+586,2020-05-05,Santa Monica Mountains,130,166.63
 587,2020-05-05,South Bay,1693,218.24
 588,2020-05-05,South LA,2958,350.87
 589,2020-05-05,Southeast,2922,234.85
@@ -601,7 +601,7 @@
 599,2020-05-06,Pomona Valley,268,117.32
 600,2020-05-06,San Fernando Valley,5458,329.01
 601,2020-05-06,San Gabriel Valley,2068,140.03
-602,2020-05-06,Santa Monica Mountains,133,152.81
+602,2020-05-06,Santa Monica Mountains,133,166.63
 603,2020-05-06,South Bay,1752,225.85
 604,2020-05-06,South LA,3083,365.7
 605,2020-05-06,Southeast,3021,242.72
@@ -617,7 +617,7 @@
 615,2020-05-07,Pomona Valley,279,122.13
 616,2020-05-07,San Fernando Valley,5615,338.72
 617,2020-05-07,San Gabriel Valley,2173,147.14
-618,2020-05-07,Santa Monica Mountains,134,153.96
+618,2020-05-07,Santa Monica Mountains,134,168.09
 619,2020-05-07,South Bay,1786,230.23
 620,2020-05-07,South LA,3184,377.68
 621,2020-05-07,Southeast,3100,248.93
@@ -633,7 +633,7 @@
 631,2020-05-08,Pomona Valley,287,125.64
 632,2020-05-08,San Fernando Valley,5730,345.55
 633,2020-05-08,San Gabriel Valley,2236,151.41
-634,2020-05-08,Santa Monica Mountains,134,153.96
+634,2020-05-08,Santa Monica Mountains,134,168.09
 635,2020-05-08,South Bay,1801,232.16
 636,2020-05-08,South LA,3241,384.44
 637,2020-05-08,Southeast,3221,258.11
@@ -649,7 +649,7 @@
 647,2020-05-09,Pomona Valley,304,133.08
 648,2020-05-09,San Fernando Valley,5919,357.37
 649,2020-05-09,San Gabriel Valley,2338,158.32
-650,2020-05-09,Santa Monica Mountains,136,156.25
+650,2020-05-09,Santa Monica Mountains,136,171.01
 651,2020-05-09,South Bay,1839,237.06
 652,2020-05-09,South LA,3355,397.96
 653,2020-05-09,Southeast,3308,265.11
@@ -665,7 +665,7 @@
 663,2020-05-10,Pomona Valley,310,135.7
 664,2020-05-10,San Fernando Valley,5974,360.65
 665,2020-05-10,San Gabriel Valley,2383,161.36
-666,2020-05-10,Santa Monica Mountains,136,156.25
+666,2020-05-10,Santa Monica Mountains,136,171.01
 667,2020-05-10,South Bay,1848,238.22
 668,2020-05-10,South LA,3404,403.77
 669,2020-05-10,Southeast,3359,268.61
@@ -681,7 +681,7 @@
 679,2020-05-11,Pomona Valley,318,139.21
 680,2020-05-11,San Fernando Valley,6132,369.84
 681,2020-05-11,San Gabriel Valley,2461,166.65
-682,2020-05-11,Santa Monica Mountains,136,156.25
+682,2020-05-11,Santa Monica Mountains,136,171.01
 683,2020-05-11,South Bay,1859,239.64
 684,2020-05-11,South LA,3473,411.96
 685,2020-05-11,Southeast,3406,272.11
@@ -697,7 +697,7 @@
 695,2020-05-12,Pomona Valley,325,142.27
 696,2020-05-12,San Fernando Valley,6308,380.21
 697,2020-05-12,San Gabriel Valley,2582,174.84
-698,2020-05-12,Santa Monica Mountains,139,159.7
+698,2020-05-12,Santa Monica Mountains,139,173.93
 699,2020-05-12,South Bay,1897,244.54
 700,2020-05-12,South LA,3598,426.78
 701,2020-05-12,Southeast,3544,283.3
@@ -713,7 +713,7 @@
 711,2020-05-13,Pomona Valley,335,146.65
 712,2020-05-13,San Fernando Valley,6503,391.37
 713,2020-05-13,San Gabriel Valley,2740,185.54
-714,2020-05-13,Santa Monica Mountains,139,159.7
+714,2020-05-13,Santa Monica Mountains,139,173.93
 715,2020-05-13,South Bay,1943,250.47
 716,2020-05-13,South LA,3754,445.29
 717,2020-05-13,Southeast,3766,301.67
@@ -729,7 +729,7 @@
 727,2020-05-14,Pomona Valley,340,148.84
 728,2020-05-14,San Fernando Valley,6708,403.58
 729,2020-05-14,San Gabriel Valley,2820,190.96
-730,2020-05-14,Santa Monica Mountains,142,163.15
+730,2020-05-14,Santa Monica Mountains,142,178.32
 731,2020-05-14,South Bay,1972,254.21
 732,2020-05-14,South LA,3847,456.32
 733,2020-05-14,Southeast,3867,309.8
@@ -745,7 +745,7 @@
 743,2020-05-15,Pomona Valley,343,150.15
 744,2020-05-15,San Fernando Valley,6894,414.94
 745,2020-05-15,San Gabriel Valley,2887,195.49
-746,2020-05-15,Santa Monica Mountains,143,164.3
+746,2020-05-15,Santa Monica Mountains,143,179.78
 747,2020-05-15,South Bay,1997,257.43
 748,2020-05-15,South LA,3966,470.44
 749,2020-05-15,Southeast,3997,320.48
@@ -761,7 +761,7 @@
 759,2020-05-16,Pomona Valley,354,154.96
 760,2020-05-16,San Fernando Valley,7095,427.34
 761,2020-05-16,San Gabriel Valley,2982,201.93
-762,2020-05-16,Santa Monica Mountains,144,165.44
+762,2020-05-16,Santa Monica Mountains,144,181.24
 763,2020-05-16,South Bay,2035,262.33
 764,2020-05-16,South LA,4117,488.35
 765,2020-05-16,Southeast,4164,334.12
@@ -777,7 +777,7 @@
 775,2020-05-17,Pomona Valley,356,155.84
 776,2020-05-17,San Fernando Valley,7221,435.35
 777,2020-05-17,San Gabriel Valley,3030,205.18
-778,2020-05-17,Santa Monica Mountains,146,167.74
+778,2020-05-17,Santa Monica Mountains,146,184.16
 779,2020-05-17,South Bay,2060,265.55
 780,2020-05-17,South LA,4233,502.11
 781,2020-05-17,Southeast,4246,340.33
@@ -793,7 +793,7 @@
 791,2020-05-18,Pomona Valley,363,158.9
 792,2020-05-18,San Fernando Valley,7332,441.79
 793,2020-05-18,San Gabriel Valley,3057,207.0
-794,2020-05-18,Santa Monica Mountains,146,167.74
+794,2020-05-18,Santa Monica Mountains,146,184.16
 795,2020-05-18,South Bay,2083,268.51
 796,2020-05-18,South LA,4318,512.19
 797,2020-05-18,Southeast,4352,348.99
@@ -809,7 +809,7 @@
 807,2020-05-19,Pomona Valley,369,161.53
 808,2020-05-19,San Fernando Valley,7483,450.58
 809,2020-05-19,San Gabriel Valley,3184,215.6
-810,2020-05-19,Santa Monica Mountains,146,167.74
+810,2020-05-19,Santa Monica Mountains,146,184.16
 811,2020-05-19,South Bay,2115,272.64
 812,2020-05-19,South LA,4480,531.4
 813,2020-05-19,Southeast,4555,365.17
@@ -825,7 +825,7 @@
 823,2020-05-20,Pomona Valley,380,166.35
 824,2020-05-20,San Fernando Valley,7629,459.31
 825,2020-05-20,San Gabriel Valley,3358,227.39
-826,2020-05-20,Santa Monica Mountains,147,168.89
+826,2020-05-20,Santa Monica Mountains,147,185.63
 827,2020-05-20,South Bay,2146,276.64
 828,2020-05-20,South LA,4637,550.03
 829,2020-05-20,Southeast,4885,391.24
@@ -841,7 +841,7 @@
 839,2020-05-21,Pomona Valley,389,170.29
 840,2020-05-21,San Fernando Valley,7780,468.24
 841,2020-05-21,San Gabriel Valley,3405,239.95
-842,2020-05-21,Santa Monica Mountains,147,168.89
+842,2020-05-21,Santa Monica Mountains,147,185.63
 843,2020-05-21,South Bay,2190,282.31
 844,2020-05-21,South LA,4774,566.28
 845,2020-05-21,Southeast,5064,405.06
@@ -857,7 +857,7 @@
 855,2020-05-22,Pomona Valley,400,175.1
 856,2020-05-22,San Fernando Valley,7946,478.15
 857,2020-05-22,San Gabriel Valley,3604,244.04
-858,2020-05-22,Santa Monica Mountains,147,168.89
+858,2020-05-22,Santa Monica Mountains,147,185.63
 859,2020-05-22,South Bay,2222,286.43
 860,2020-05-22,South LA,4947,586.8
 861,2020-05-22,Southeast,5250,418.18
@@ -873,7 +873,7 @@
 871,2020-05-23,Pomona Valley,416,182.11
 872,2020-05-23,San Fernando Valley,8175,492.27
 873,2020-05-23,San Gabriel Valley,3731,252.64
-874,2020-05-23,Santa Monica Mountains,148,170.04
+874,2020-05-23,Santa Monica Mountains,148,187.09
 875,2020-05-23,South Bay,2258,291.07
 876,2020-05-23,South LA,5089,603.64
 877,2020-05-23,Southeast,5408,430.51
@@ -889,7 +889,7 @@
 887,2020-05-24,Pomona Valley,425,186.05
 888,2020-05-24,San Fernando Valley,8326,499.88
 889,2020-05-24,San Gabriel Valley,3817,258.47
-890,2020-05-24,Santa Monica Mountains,148,170.04
+890,2020-05-24,Santa Monica Mountains,148,187.09
 891,2020-05-24,South Bay,2278,293.65
 892,2020-05-24,South LA,5218,618.94
 893,2020-05-24,Southeast,5607,446.34
@@ -905,7 +905,7 @@
 903,2020-05-25,Pomona Valley,441,193.05
 904,2020-05-25,San Fernando Valley,8473,508.48
 905,2020-05-25,San Gabriel Valley,3904,264.36
-906,2020-05-25,Santa Monica Mountains,155,178.08
+906,2020-05-25,Santa Monica Mountains,155,197.32
 907,2020-05-25,South Bay,2319,298.94
 908,2020-05-25,South LA,5394,639.82
 909,2020-05-25,Southeast,5763,458.58
@@ -921,7 +921,7 @@
 919,2020-05-26,Pomona Valley,469,205.31
 920,2020-05-26,San Fernando Valley,8668,521.08
 921,2020-05-26,San Gabriel Valley,4120,278.98
-922,2020-05-26,Santa Monica Mountains,156,179.23
+922,2020-05-26,Santa Monica Mountains,156,197.32
 923,2020-05-26,South Bay,2355,303.58
 924,2020-05-26,South LA,5677,673.39
 925,2020-05-26,Southeast,6250,496.63
@@ -937,7 +937,7 @@
 935,2020-05-27,Pomona Valley,485,212.31
 936,2020-05-27,San Fernando Valley,8851,531.85
 937,2020-05-27,San Gabriel Valley,4209,285.01
-938,2020-05-27,Santa Monica Mountains,157,180.38
+938,2020-05-27,Santa Monica Mountains,157,198.78
 939,2020-05-27,South Bay,2384,307.32
 940,2020-05-27,South LA,5844,693.2
 941,2020-05-27,Southeast,6371,505.12
@@ -953,7 +953,7 @@
 951,2020-05-28,Pomona Valley,501,219.31
 952,2020-05-28,San Fernando Valley,9062,544.19
 953,2020-05-28,San Gabriel Valley,4311,291.92
-954,2020-05-28,Santa Monica Mountains,158,181.53
+954,2020-05-28,Santa Monica Mountains,158,198.78
 955,2020-05-28,South Bay,2421,312.08
 956,2020-05-28,South LA,6038,716.21
 957,2020-05-28,Southeast,6516,516.57
@@ -969,7 +969,7 @@
 967,2020-05-29,Pomona Valley,521,228.07
 968,2020-05-29,San Fernando Valley,9243,554.43
 969,2020-05-29,San Gabriel Valley,4483,303.57
-970,2020-05-29,Santa Monica Mountains,160,183.83
+970,2020-05-29,Santa Monica Mountains,160,201.7
 971,2020-05-29,South Bay,2461,317.24
 972,2020-05-29,South LA,6268,743.49
 973,2020-05-29,Southeast,6987,554.01
@@ -985,7 +985,7 @@
 983,2020-05-30,Pomona Valley,558,244.27
 984,2020-05-30,San Fernando Valley,9492,569.99
 985,2020-05-30,San Gabriel Valley,4673,316.43
-986,2020-05-30,Santa Monica Mountains,165,189.57
+986,2020-05-30,Santa Monica Mountains,165,206.09
 987,2020-05-30,South Bay,2510,323.56
 988,2020-05-30,South LA,6537,775.4
 989,2020-05-30,Southeast,7470,593.37
@@ -1001,7 +1001,7 @@
 999,2020-05-31,Pomona Valley,586,256.52
 1000,2020-05-31,San Fernando Valley,9727,584.56
 1001,2020-05-31,San Gabriel Valley,4776,323.41
-1002,2020-05-31,Santa Monica Mountains,176,202.21
+1002,2020-05-31,Santa Monica Mountains,176,219.24
 1003,2020-05-31,South Bay,2555,329.36
 1004,2020-05-31,South LA,6729,798.17
 1005,2020-05-31,Southeast,7642,606.66
@@ -1017,7 +1017,7 @@
 1015,2020-06-01,Pomona Valley,598,261.78
 1016,2020-06-01,San Fernando Valley,9895,594.74
 1017,2020-06-01,San Gabriel Valley,4875,330.11
-1018,2020-06-01,Santa Monica Mountains,189,217.15
+1018,2020-06-01,Santa Monica Mountains,189,238.24
 1019,2020-06-01,South Bay,2589,333.74
 1020,2020-06-01,South LA,6888,817.03
 1021,2020-06-01,Southeast,7794,618.3
@@ -1033,7 +1033,7 @@
 1031,2020-06-02,Pomona Valley,624,273.16
 1032,2020-06-02,San Fernando Valley,10146,609.31
 1033,2020-06-02,San Gabriel Valley,4978,337.08
-1034,2020-06-02,Santa Monica Mountains,191,219.44
+1034,2020-06-02,Santa Monica Mountains,191,242.63
 1035,2020-06-02,South Bay,2660,342.89
 1036,2020-06-02,South LA,7083,840.16
 1037,2020-06-02,Southeast,7962,631.94
@@ -1049,7 +1049,7 @@
 1047,2020-06-03,Pomona Valley,660,288.92
 1048,2020-06-03,San Fernando Valley,10310,619.16
 1049,2020-06-03,San Gabriel Valley,5111,346.09
-1050,2020-06-03,Santa Monica Mountains,192,220.59
+1050,2020-06-03,Santa Monica Mountains,192,244.09
 1051,2020-06-03,South Bay,2705,348.69
 1052,2020-06-03,South LA,7247,859.62
 1053,2020-06-03,Southeast,8151,647.07
@@ -1065,7 +1065,7 @@
 1063,2020-06-04,Pomona Valley,695,304.24
 1064,2020-06-04,San Fernando Valley,10461,628.74
 1065,2020-06-04,San Gabriel Valley,5324,360.51
-1066,2020-06-04,Santa Monica Mountains,194,222.89
+1066,2020-06-04,Santa Monica Mountains,194,245.55
 1067,2020-06-04,South Bay,2740,353.21
 1068,2020-06-04,South LA,7411,879.07
 1069,2020-06-04,Southeast,8466,672.0
@@ -1081,7 +1081,7 @@
 1079,2020-06-05,Pomona Valley,715,312.99
 1080,2020-06-05,San Fernando Valley,10604,638.13
 1081,2020-06-05,San Gabriel Valley,5437,368.17
-1082,2020-06-05,Santa Monica Mountains,196,225.19
+1082,2020-06-05,Santa Monica Mountains,196,248.48
 1083,2020-06-05,South Bay,2778,358.1
 1084,2020-06-05,South LA,7596,901.02
 1085,2020-06-05,Southeast,8739,694.04
@@ -1097,7 +1097,7 @@
 1095,2020-06-06,Pomona Valley,740,323.94
 1096,2020-06-06,San Fernando Valley,10731,646.07
 1097,2020-06-06,San Gabriel Valley,5579,377.78
-1098,2020-06-06,Santa Monica Mountains,199,228.64
+1098,2020-06-06,Santa Monica Mountains,199,252.86
 1099,2020-06-06,South Bay,2827,364.42
 1100,2020-06-06,South LA,7817,927.23
 1101,2020-06-06,Southeast,8962,711.54
@@ -1113,7 +1113,7 @@
 1111,2020-06-07,Pomona Valley,756,330.94
 1112,2020-06-07,San Fernando Valley,10920,657.82
 1113,2020-06-07,San Gabriel Valley,5732,388.14
-1114,2020-06-07,Santa Monica Mountains,201,230.93
+1114,2020-06-07,Santa Monica Mountains,201,255.78
 1115,2020-06-07,South Bay,2860,368.68
 1116,2020-06-07,South LA,8066,956.77
 1117,2020-06-07,Southeast,9211,730.34
@@ -1129,7 +1129,7 @@
 1127,2020-06-08,Pomona Valley,779,341.01
 1128,2020-06-08,San Fernando Valley,11081,667.54
 1129,2020-06-08,San Gabriel Valley,5809,393.36
-1130,2020-06-08,Santa Monica Mountains,201,230.93
+1130,2020-06-08,Santa Monica Mountains,201,255.78
 1131,2020-06-08,South Bay,2890,372.54
 1132,2020-06-08,South LA,8189,971.36
 1133,2020-06-08,Southeast,9339,740.92
@@ -1145,7 +1145,7 @@
 1143,2020-06-09,Pomona Valley,805,352.39
 1144,2020-06-09,San Fernando Valley,11236,677.38
 1145,2020-06-09,San Gabriel Valley,5916,400.6
-1146,2020-06-09,Santa Monica Mountains,204,234.38
+1146,2020-06-09,Santa Monica Mountains,204,260.17
 1147,2020-06-09,South Bay,2911,375.25
 1148,2020-06-09,South LA,8384,994.49
 1149,2020-06-09,Southeast,9600,761.92
@@ -1161,7 +1161,7 @@
 1159,2020-06-10,Pomona Valley,841,368.15
 1160,2020-06-10,San Fernando Valley,11385,686.18
 1161,2020-06-10,San Gabriel Valley,6037,408.79
-1162,2020-06-10,Santa Monica Mountains,205,235.53
+1162,2020-06-10,Santa Monica Mountains,205,261.63
 1163,2020-06-10,South Bay,2969,382.73
 1164,2020-06-10,South LA,8565,1015.96
 1165,2020-06-10,Southeast,9900,784.83
@@ -1177,7 +1177,7 @@
 1175,2020-06-11,Pomona Valley,866,379.09
 1176,2020-06-11,San Fernando Valley,11653,701.34
 1177,2020-06-11,San Gabriel Valley,6244,422.81
-1178,2020-06-11,Santa Monica Mountains,210,241.27
+1178,2020-06-11,Santa Monica Mountains,210,266.02
 1179,2020-06-11,South Bay,3038,391.62
 1180,2020-06-11,South LA,8838,1048.34
 1181,2020-06-11,Southeast,10209,808.62
@@ -1193,7 +1193,7 @@
 1191,2020-06-12,Pomona Valley,900,393.98
 1192,2020-06-12,San Fernando Valley,11857,713.68
 1193,2020-06-12,San Gabriel Valley,6471,438.18
-1194,2020-06-12,Santa Monica Mountains,213,244.72
+1194,2020-06-12,Santa Monica Mountains,213,270.4
 1195,2020-06-12,South Bay,3094,398.84
 1196,2020-06-12,South LA,9075,1076.45
 1197,2020-06-12,Southeast,10578,837.05
@@ -1209,7 +1209,7 @@
 1207,2020-06-13,Pomona Valley,919,402.3
 1208,2020-06-13,San Fernando Valley,12043,724.65
 1209,2020-06-13,San Gabriel Valley,6709,454.3
-1210,2020-06-13,Santa Monica Mountains,215,247.02
+1210,2020-06-13,Santa Monica Mountains,215,273.32
 1211,2020-06-13,South Bay,3153,406.44
 1212,2020-06-13,South LA,9328,1106.46
 1213,2020-06-13,Southeast,10903,862.68
@@ -1225,7 +1225,7 @@
 1223,2020-06-14,Pomona Valley,942,412.36
 1224,2020-06-14,San Fernando Valley,12178,732.66
 1225,2020-06-14,San Gabriel Valley,6823,462.02
-1226,2020-06-14,Santa Monica Mountains,215,247.02
+1226,2020-06-14,Santa Monica Mountains,215,273.32
 1227,2020-06-14,South Bay,3192,411.47
 1228,2020-06-14,South LA,9446,1120.46
 1229,2020-06-14,Southeast,11073,876.23
@@ -1241,7 +1241,7 @@
 1239,2020-06-15,Pomona Valley,972,425.5
 1240,2020-06-15,San Fernando Valley,12273,737.38
 1241,2020-06-15,San Gabriel Valley,6965,471.63
-1242,2020-06-15,Santa Monica Mountains,214,245.87
+1242,2020-06-15,Santa Monica Mountains,214,271.86
 1243,2020-06-15,South Bay,3222,415.34
 1244,2020-06-15,South LA,9613,1140.27
 1245,2020-06-15,Southeast,11254,891.72
@@ -1257,7 +1257,7 @@
 1255,2020-06-16,Pomona Valley,998,436.88
 1256,2020-06-16,San Fernando Valley,12409,745.85
 1257,2020-06-16,San Gabriel Valley,7118,481.99
-1258,2020-06-16,Santa Monica Mountains,216,248.17
+1258,2020-06-16,Santa Monica Mountains,216,274.79
 1259,2020-06-16,South Bay,3265,420.88
 1260,2020-06-16,South LA,9852,1168.62
 1261,2020-06-16,Southeast,11512,911.57
@@ -1273,7 +1273,7 @@
 1271,2020-06-17,Pomona Valley,1033,452.2
 1272,2020-06-17,San Fernando Valley,12660,761.21
 1273,2020-06-17,San Gabriel Valley,7345,497.36
-1274,2020-06-17,Santa Monica Mountains,216,248.17
+1274,2020-06-17,Santa Monica Mountains,216,274.79
 1275,2020-06-17,South Bay,3330,429.26
 1276,2020-06-17,South LA,10193,1209.06
 1277,2020-06-17,Southeast,11919,944.28
@@ -1289,9 +1289,25 @@
 1287,2020-06-18,Pomona Valley,1066,466.65
 1288,2020-06-18,San Fernando Valley,12841,772.37
 1289,2020-06-18,San Gabriel Valley,7461,505.22
-1290,2020-06-18,Santa Monica Mountains,223,256.21
+1290,2020-06-18,Santa Monica Mountains,223,282.09
 1291,2020-06-18,South Bay,3367,434.03
 1292,2020-06-18,South LA,10351,1227.81
 1293,2020-06-18,Southeast,12091,958.1
 1294,2020-06-18,Verdugos,2932,610.74
 1295,2020-06-18,Westside,1921,341.38
+1296,2020-06-19,Angeles Forest,12,346.32
+1297,2020-06-19,Antelope Valley,2072,536.71
+1298,2020-06-19,Central LA,8460,867.8
+1299,2020-06-19,Eastside,3921,1285.06
+1300,2020-06-19,Harbor,6048,597.76
+1301,2020-06-19,Northeast LA,1135,673.33
+1302,2020-06-19,Northwest County,2807,409.42
+1303,2020-06-19,Pomona Valley,1104,483.28
+1304,2020-06-19,San Fernando Valley,13059,785.7
+1305,2020-06-19,San Gabriel Valley,7622,516.12
+1306,2020-06-19,Santa Monica Mountains,228,287.94
+1307,2020-06-19,South Bay,3411,439.7
+1308,2020-06-19,South LA,10549,1251.29
+1309,2020-06-19,Southeast,12283,973.67
+1310,2020-06-19,Verdugos,2969,618.45
+1311,2020-06-19,Westside,1951,346.71

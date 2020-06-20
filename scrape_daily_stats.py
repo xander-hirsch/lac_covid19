@@ -51,7 +51,8 @@ HEADER_LOC = re.compile('CITY / COMMUNITY\** \(Rate\**\)')
 RE_LOC = re.compile(
     '([A-Z][A-Za-z/\-\. ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+(--|[0-9]+|[0-9]+\.[0-9]+)\s\)')  # pylint: disable=line-too-long
 
-EXTENDED_HTML = (dt.date(2020, 4, 23), dt.date(2020, 6, 18))
+EXTENDED_HTML = (dt.date(2020, 4, 23), dt.date(2020, 6, 18),
+                 dt.date(2020, 6, 19))
 FORMAT_START_HOSPITAL_NESTED = dt.date(2020, 4, 4)
 FORMAT_START_AGE_NESTED = dt.date(2020, 4, 4)
 CORR_FACILITY_RECORDED = dt.date(2020, 5, 14)
