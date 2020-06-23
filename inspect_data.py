@@ -13,6 +13,19 @@ REGIONS = lac_regions.REGIONS
 
 def isolate_area_interval(df_loc: pd.DataFrame, loc_col: str, loc_name: str,
                           start_date: str, end_date: str) -> pd.DataFrame:
+    """Quickly isolate an area or region of intrest within a given timeframe.
+
+    Args:
+        df_loc: The timeseries DataFrame with location identifiers and cases.
+        loc_col: The column whose values are the location identifiers of
+            intrest. For example, this could be area or region.
+        loc_name: The location which isolation is desired.
+        start_date: The start date (inclusive) of the desired interval.
+        end_date: The end date (inclusive) of the desired interval.
+
+    Returns:
+        df_loc, but isolated by the passed criteria.
+    """
     start_ts = pd.Timestamp(start_date)
     end_ts = pd.Timestamp(end_date)
     return df_loc[(df_loc[loc_col] == loc_name)
@@ -24,8 +37,8 @@ def check_always_increasing(df_loc: pd.DataFrame, region: str):
     region_areas = REGIONS[region]
     test_areas = [
         (area,
-        df_loc.loc[df_loc[const.AREA] == area, const.CASES]
-        .is_monotonic_increasing)
+         df_loc.loc[df_loc[const.AREA] == area, const.CASES]
+         .is_monotonic_increasing)
         for area in region_areas
     ]
     return [x[0] for x in test_areas if not x[1]]
@@ -34,8 +47,8 @@ def check_always_increasing(df_loc: pd.DataFrame, region: str):
 def plot_area(df_area: pd.DataFrame, area_id: str) -> plt.Axes:
     df_focus = df_area.loc[df_area[const.AREA] == area_id,
                            [const.DATE, const.CASES]]
-    
-    fig.add_axes(sns.lineplot(x=const.DATE, y=const.CASES, data=df_focus))
+
+    return sns.lineplot(x=const.DATE, y=const.CASES, data=df_focus)
 
 
 if __name__ == "__main__":

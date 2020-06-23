@@ -1,3 +1,7 @@
+"""Converts the JSON representation of daily COVID-19 news releases into pandas
+    dataframes.
+"""
+
 import os.path
 import pickle
 from typing import Any, Dict, Iterable, Optional, Tuple, Union
@@ -26,7 +30,7 @@ CF_OUTBREAK = const.CF_OUTBREAK
 
 def demographic_table(table_dir: str, desc: str) -> str:
     """Returns the file path of the population counts for the passed demographic
-    description.
+        description. See lacph_import/README.md for more details.
     """
     return os.path.join(table_dir, 'demographic_table_{}.csv'.format(desc))
 
@@ -35,7 +39,19 @@ TABLE_DIR = os.path.join(os.path.dirname(__file__), 'lacph_import')
 
 def read_lacph_table(table_path: str,
                      indep_var: str, pop_var: str) -> pd.Series:
-    """Produces a mapping between demographic groups and population size."""
+    """Produces a mapping between demographic groups and population size.
+
+    Args:
+        table_path: The path of the CSV file to read.
+        indep_var: The column whose values identify the group to which a
+            population count referes.
+        pop_var: The column whose values are the population estimates for a
+            group.
+
+    Returns:
+        A pandas Series with the groups as indicies and population counts as
+            data.
+    """
 
     df = pd.read_csv(table_path)
     df = df[df[pop_var].notna()]
@@ -46,6 +62,7 @@ def read_lacph_table(table_path: str,
 
 
 def read_csa_population() -> pd.Series:
+    """Reads the population per countywide statistical area."""
     table_path = os.path.join(TABLE_DIR, 'city_community_table.csv')
     indep_var = 'geo_merge'
     pop_var = 'population'
@@ -58,7 +75,7 @@ def read_csa_population() -> pd.Series:
 
 
 def read_demographic_population(demographic: str) -> pd.Series:
-    """Helper function to reading in a demographic table for its population
+    """Helper function to read in a demographic table for its population
         entries.
     """
 
@@ -101,6 +118,16 @@ def calculate_rate(date_group_entry: pd.Series, population_map: pd.Series,
                    group_col: str, count_col: str) -> float:
     """Calculates the case or death rate of a given entry and population
         mapping.
+
+    Args:
+        date_group_entry: A time series data set entry which contains at a
+            minimum: group identifier and case/death count.
+        population_map: A mapping between group identifier and population count.
+        group_col: The column in date_group_entry with the group identifier.
+        count_col: The column in date_group_entry with the statistic count.
+
+    Returns:
+        The case/death rate normalized at a population of 100,000.
     """
 
     group = date_group_entry[group_col]
@@ -150,6 +177,9 @@ def tidy_data(df: pd.DataFrame, var_desc: str, value_desc: str,
 
 def access_date(
         daily_pr: Dict[str, Any]) -> Dict[str, Union[int, pd.Timestamp]]:
+    """Convinient method to access the date entry from a news release JSON and
+        convert it to panda's DateTime object.
+    """
     return pd.to_datetime(daily_pr[DATE])
 
 
@@ -162,7 +192,13 @@ def make_section_ts(daily_pr: Dict, section: str) -> Dict[str, Any]:
 
 def create_main_stats(
         many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
-    """Time series of total cases, deaths, and hospitalizaitons."""
+    """Time series of aggregate data.
+
+    Returns:
+        Time series DataFrame with the entries: Date, New Cases, Cases,
+            New Deaths, Deaths, Hospitalizations, Test Results, % Positive
+            Tests.
+    """
 
     TEST_RESULTS = const.TEST_RESULTS
     PERCENT_POSITIVE = const.PERCENT_POSITIVE_TESTS
@@ -187,7 +223,12 @@ def create_main_stats(
 
 
 def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
-    """Time series of cases by age group"""
+    """Time series of cases by age group.
+
+    Returns:
+        Time series DataFrame with the entries: Date, Age Group, Cases, Case
+            Rate.
+    """
 
     AGE_GROUP = const.AGE_GROUP
 
@@ -202,7 +243,11 @@ def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
 
 
 def create_by_gender(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
-    """Time series of cases by gender."""
+    """Time series of cases by gender.
+
+    Returns:
+        Time series DataFrame with the entries: Date, Gender, Cases, Case Rate.
+    """
 
     GENDER = const.GENDER
     CASES_BY_GENDER = const.CASES_BY_GENDER
@@ -223,7 +268,12 @@ def create_by_gender(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
 
 
 def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
-    """Time series of cases and deaths by race."""
+    """Time series of cases and deaths by race.
+
+    Returns:
+        Time series DataFrame with the entries: Date, Race, Cases, Case Rate,
+            Deaths, Death Rate.
+    """
 
     RACE = const.RACE
 
@@ -258,7 +308,7 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
 
 
 def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
-    """Converts the area case count to a DataFrame and assigns a
+    """Converts the area case count from JSON to a DataFrame and assigns a
         Los Angeles County region.
     """
 
@@ -282,7 +332,11 @@ def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
 
 
 def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
-    """Time series of cases by area."""
+    """Time series of cases by area.
+
+    Returns:
+        Time series DataFrame with the entries: Date, Area, Region, Case Rate.
+    """
 
     all_dates = map(single_day_area, many_daily_pr)
     df = pd.concat(all_dates, ignore_index=True)
@@ -298,18 +352,41 @@ def aggregate_locations(
         exclude_date_area: Optional[Iterable[Tuple[str, str]]] = None
         ) -> pd.DataFrame:
     """Aggregates the individual areas to larger regions and computes the case
-        rate. exclude_date_area is of form (date, area) """
+        rate.
+
+    The countywide statistical areas are, relatively speaking in this context,
+        small. It has an unfortunate consequence of case count time series
+        being too noisy to tell COVID-19 case trends. This function seeks to
+        bundle the case count into larger regions in Los Angeles County to which
+        comparisions and trend inferences can be made.
+    Areas with correctional facility outbreaks at any way are handled in
+        different ways for case count and case rate. Areas with correctional
+        facility outbreaks are included in case count. This statistic is not
+        meant to be used to compare between regions. However, areas with
+        correctional facility outbreaks are excluded from case rate calcuations.
+
+    Args:
+        df_all_loc: A time series where each entry has date, area, region, and
+            case count information.
+        exclude_date_area removes erroneous area counts from the aggregate
+            location. Each value is of the form (date, area) to which a bad
+            count exists. Missing data will be forward filled from the area.
+
+    Returns:
+        Time series DataFrame with the entries: Date, Region, Cases, Case Rate,
+            dt[Cases], dt[Case Rate].
+     """
 
     area_population = read_csa_population()
     df_all_loc = df_all_loc.drop(columns=CASE_RATE)
     # Only keep areas assigned a region
     df_all_loc = df_all_loc[df_all_loc[REGION].notna()]
-    
+
     # Correct erroneous area records by using previous dates
     if exclude_date_area:
         drop_entry_mask = df_all_loc.apply(
             lambda x: (x[DATE].isoformat()[:10], x[AREA]) in exclude_date_area,
-            axis='columns') 
+            axis='columns')
         df_all_loc.loc[drop_entry_mask, CASES] = pd.NA
 
         # Isolate each area with bad data and forward fill cases
@@ -318,10 +395,10 @@ def aggregate_locations(
             area_cases = area_cases.fillna(method='pad')
             # Put area cases back into wider area time series
             df_all_loc.loc[area_cases.index, CASES] = area_cases
-    
+
     # Tally total cases including correctional facility outbreaks
     df_total_cases = (df_all_loc[[DATE, REGION, CASES]]
-                     .groupby([DATE, REGION]).sum().reset_index())
+                      .groupby([DATE, REGION]).sum().reset_index())
     df_total_cases[CASES] = df_total_cases[CASES].astype('int')
 
     # Drop areas with correctional facility outbreaks from case rate calculation
@@ -360,7 +437,7 @@ def aggregate_locations(
             day_over_day = region_ts[col_total[i]].diff()
             df_together.loc[
                 day_over_day.index, col_diff[i]] = day_over_day
-    
+
     for col in col_diff:
         df_together[col] = df_together[col].convert_dtypes()
 
@@ -369,7 +446,21 @@ def aggregate_locations(
 
 def create_custom_region(df_all_loc: pd.DataFrame,
                          areas: Iterable) -> pd.DataFrame:
-    """Tallies the cases and case rate of a custom defined region."""
+    """Tallies the cases and case rate of a custom defined region.
+
+    This is similar in essence to aggregate_locations(), but allows for a custom
+        definition of region.
+
+    Args:
+        df_all_loc: A time series where each entry has date, area, and case
+            count information.
+
+    Returns:
+        Time series DataFrame with Date, Cases, Case Rate. Unlike
+            aggregate_locations(), there is only one custom, parameterized
+            region, so area and region information are excluded from the
+            returned time series.
+    """
 
     area_population = read_csa_population()
     region_pop = 0

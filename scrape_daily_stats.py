@@ -1,6 +1,7 @@
 """Scrapes statistics from the daily COVID-19 briefing published by the Los
     Angeles County Department of Public Health.
 """
+
 import datetime as dt
 import json
 import os

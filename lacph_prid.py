@@ -1,3 +1,8 @@
+"""Every news release from Los Angeles County Public Health is identified by a
+    unique PRID. The maps associate a date and the corresponding COVID-19
+    daily news release.
+"""
+
 DAILY_STATS = {
     (2020, 3, 30): 2289,
     (2020, 3, 31): 2290,
@@ -84,4 +89,5 @@ DAILY_STATS = {
     (2020, 6, 20): 2455,
     (2020, 6, 21): 2456,
     (2020, 6, 22): 2458,
+    (2020, 6, 23): 2462,
 }
