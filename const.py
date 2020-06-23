@@ -9,6 +9,10 @@ HOSPITALIZATIONS = 'Hospitalizations'
 TEST_RESULTS = 'Test Results'
 PERCENT_POSITIVE_TESTS = '% Positive Tests'
 
+_NEW = 'New'
+NEW_CASES = ' '.join((_NEW, CASES))
+NEW_DEATHS = ' '.join((_NEW, DEATHS))
+
 OTHER = 'Other'
 
 AGE_GROUP = 'Age'
@@ -39,6 +43,9 @@ CITY_OF_PAS = '{}{}'.format(_CITY_PREFIX, PASADENA)
 CASE_RATE = 'Case Rate'
 DEATH_RATE = 'Death Rate'
 RATE_SCALE = 100_000
+
+_DT_COL = 'dt[{}]'
+DT_CASES, DT_CASE_RATE = [_DT_COL.format(x) for x in (CASES, CASE_RATE)]
 
 REGION = 'Region'
 AREA = 'Area'

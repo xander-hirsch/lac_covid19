@@ -25,7 +25,9 @@ CF_OUTBREAK = const.CF_OUTBREAK
 
 
 def demographic_table(table_dir: str, desc: str) -> str:
-    """Returns the file path of the passed demographic description."""
+    """Returns the file path of the population counts for the passed demographic
+    description.
+    """
     return os.path.join(table_dir, 'demographic_table_{}.csv'.format(desc))
 
 TABLE_DIR = os.path.join(os.path.dirname(__file__), 'lacph_import')
@@ -33,7 +35,7 @@ TABLE_DIR = os.path.join(os.path.dirname(__file__), 'lacph_import')
 
 def read_lacph_table(table_path: str,
                      indep_var: str, pop_var: str) -> pd.Series:
-    """Produces a mapping between groups and population size"""
+    """Produces a mapping between demographic groups and population size."""
 
     df = pd.read_csv(table_path)
     df = df[df[pop_var].notna()]
@@ -167,10 +169,12 @@ def create_main_stats(
 
     data = {
         DATE: map(access_date, many_daily_pr),
+        const.NEW_CASES: map(lambda x: x[const.NEW_CASES], many_daily_pr),
         CASES: map(lambda x: x[CASES], many_daily_pr),
+        const.NEW_DEATHS: map(lambda x: x[const.NEW_DEATHS], many_daily_pr),
+        DEATHS: map(lambda x: x[DEATHS], many_daily_pr),
         const.HOSPITALIZATIONS:
             map(lambda x: x[const.HOSPITALIZATIONS], many_daily_pr),
-        DEATHS: map(lambda x: x[DEATHS], many_daily_pr),
         TEST_RESULTS: map(lambda x: x[TEST_RESULTS], many_daily_pr),
         PERCENT_POSITIVE: map(lambda x: x[PERCENT_POSITIVE], many_daily_pr)
     }
@@ -318,6 +322,7 @@ def aggregate_locations(
     # Tally total cases including correctional facility outbreaks
     df_total_cases = (df_all_loc[[DATE, REGION, CASES]]
                      .groupby([DATE, REGION]).sum().reset_index())
+    df_total_cases[CASES] = df_total_cases[CASES].astype('int')
 
     # Drop areas with correctional facility outbreaks from case rate calculation
     df_all_loc[CF_OUTBREAK] = df_all_loc[CF_OUTBREAK].fillna(value=False)
@@ -339,6 +344,25 @@ def aggregate_locations(
 
     df_together = df_total_cases.merge(df_case_rate, how='outer',
                                        on=[DATE, REGION])
+
+    # Calculate day over day differences
+    col_total = (CASES, CASE_RATE)
+    col_diff = (const.DT_CASES, const.DT_CASE_RATE)
+    # Assign empty columns before adding data
+    for col in col_diff:
+        df_together[col] = pd.NA
+
+    # Isolate each region, use diff function, assign back to main dataframe
+    for region in lac_regions.REGIONS:
+        region_ts = df_together.loc[df_together[REGION] == region,
+                                    [CASES, CASE_RATE]]
+        for i in range(len(col_total)):
+            day_over_day = region_ts[col_total[i]].diff()
+            df_together.loc[
+                day_over_day.index, col_diff[i]] = day_over_day
+    
+    for col in col_diff:
+        df_together[col] = df_together[col].convert_dtypes()
 
     return df_together
 
@@ -415,10 +439,10 @@ if __name__ == "__main__":
     last_week = every_day[-7:]
     today = every_day[-1]
 
-    # df_summary = create_main_stats(every_day)
+    df_summary = create_main_stats(every_day)
     df_age = create_by_age(every_day)
-    df_gender = create_by_gender(every_day)
-    df_race = create_by_race(last_week)
+    # df_gender = create_by_gender(every_day)
+    # df_race = create_by_race(last_week)
 
     # df_area = create_by_area(every_day)
     # df_region = aggregate_locations(df_area)

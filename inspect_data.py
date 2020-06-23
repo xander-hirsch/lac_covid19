@@ -1,11 +1,15 @@
+import sys
+
+import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
 
 import lac_covid19.const as const
 import lac_covid19.lac_regions as lac_regions
 import lac_covid19.lacph_prid as lacph_prid
 import lac_covid19.scrape_daily_stats as scrape_daily_stats
 
-REGIONS = lac_regions._REGION
+REGIONS = lac_regions.REGIONS
 
 def isolate_area_interval(df_loc: pd.DataFrame, loc_col: str, loc_name: str,
                           start_date: str, end_date: str) -> pd.DataFrame:
@@ -27,8 +31,14 @@ def check_always_increasing(df_loc: pd.DataFrame, region: str):
     return [x[0] for x in test_areas if not x[1]]
 
 
-if __name__ == "__main__":
+def plot_area(df_area: pd.DataFrame, area_id: str) -> plt.Axes:
+    df_focus = df_area.loc[df_area[const.AREA] == area_id,
+                           [const.DATE, const.CASES]]
+    
+    fig.add_axes(sns.lineplot(x=const.DATE, y=const.CASES, data=df_focus))
 
+
+if __name__ == "__main__":
     raw_daily_pr = [scrape_daily_stats.fetch_press_release(x) for x in
                     lacph_prid.DAILY_STATS]
     today = raw_daily_pr[-1]

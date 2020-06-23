@@ -23,6 +23,10 @@ RE_DATE = re.compile('[A-Z][a-z]+ \d{2}, 20\d{2}')
 RE_TESTING = re.compile(
     'testing\s+results\s+available.+\s([\d,]{6,})\s+individuals.+\s(\d{1,2})%.+testing\s+positive')  # pylint: disable=line-too-long
 
+RE_NEW_DEATHS_CASES = re.compile(
+    '([\d,]+)\s+new\s+deaths\s+and\s+([\d,]+)\s+new\s+cases'
+)
+
 RE_UNDER_INVESTIGATION = re.compile('Under Investigation')
 
 HEADER_CASE_COUNT = re.compile(
@@ -266,6 +270,20 @@ def _get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
     return dt.datetime.strptime(date_text, '%B %d, %Y').date()
 
 
+def _get_new_cases_deaths(pr_html: bs4.BeautifulSoup) -> Tuple[int, int]:
+    """Extracts the daily new deaths and cases."""
+    date_tuple = _date_to_tuple(_get_date(pr_html))
+    if date_tuple in bad_data.HARDCODE_NEW_CASES_DEATHS.keys():
+        return bad_data.HARDCODE_NEW_CASES_DEATHS[date_tuple]
+
+    result = RE_NEW_DEATHS_CASES.search(pr_html.get_text())
+    deaths, cases = None, None
+    if result:
+        deaths = _str_to_int(result.group(1))
+        cases = _str_to_int(result.group(2))
+    return cases, deaths
+
+
 def _get_testing(pr_html: bs4.BeautifulSoup) -> Optional[Tuple[int, int]]:
     """Extacts the number of test results and percent of positive tests."""
     result = RE_TESTING.search(pr_html.get_text())
@@ -276,7 +294,7 @@ def _get_testing(pr_html: bs4.BeautifulSoup) -> Optional[Tuple[int, int]]:
     return num_tests, pos_rate
 
 
-def _get_html_general(
+def _isolate_html_general(
         daily_pr: bs4.Tag, header_pattern: re.Pattern, nested: bool) -> str:
     """Narrows down the section of HTML which must be parsed for data
         extraction.
@@ -305,32 +323,32 @@ def _get_html_general(
     return ''
 
 
-def _get_html_age_group(daily_pr: bs4.Tag) -> str:
+def _isolate_html_age_group(daily_pr: bs4.Tag) -> str:
     nested = _get_date(daily_pr) >= FORMAT_START_AGE_NESTED
-    return _get_html_general(daily_pr, HEADER_AGE_GROUP, nested)
+    return _isolate_html_general(daily_pr, HEADER_AGE_GROUP, nested)
 
 
-def _get_html_hospital(daily_pr: bs4.Tag) -> str:
+def _isolate_html_hospital(daily_pr: bs4.Tag) -> str:
     nested = _get_date(daily_pr) >= FORMAT_START_HOSPITAL_NESTED
-    return _get_html_general(daily_pr, HEADER_HOSPITAL, nested)
+    return _isolate_html_general(daily_pr, HEADER_HOSPITAL, nested)
 
 
-def _get_html_area(daily_pr: bs4.Tag) -> str:
+def _isolate_html_area(daily_pr: bs4.Tag) -> str:
     # The usage of location header is unpredictable, so just check against
     # the entire daily press release.
     return daily_pr.get_text()
 
 
-def _get_html_gender(daily_pr: bs4.Tag) -> str:
-    return _get_html_general(daily_pr, HEADER_GENDER, True)
+def _isolate_html_gender(daily_pr: bs4.Tag) -> str:
+    return _isolate_html_general(daily_pr, HEADER_GENDER, True)
 
 
-def _get_html_race_cases(daily_pr: bs4.Tag) -> str:
-    return _get_html_general(daily_pr, HEADER_RACE_CASE, True)
+def _isolate_html_race_cases(daily_pr: bs4.Tag) -> str:
+    return _isolate_html_general(daily_pr, HEADER_RACE_CASE, True)
 
 
-def _get_html_race_deaths(daily_pr: bs4.Tag) -> str:
-    return _get_html_general(daily_pr, HEADER_RACE_DEATH, True)
+def _isolate_html_race_deaths(daily_pr: bs4.Tag) -> str:
+    return _isolate_html_general(daily_pr, HEADER_RACE_DEATH, True)
 
 
 def _parse_list_entries_general(
@@ -374,7 +392,7 @@ def _parse_total_by_dept_general(
     See parse_cases and parse_deaths for examples.
     """
 
-    by_dept_raw = _get_html_general(daily_pr, header_pattern, True)
+    by_dept_raw = _isolate_html_general(daily_pr, header_pattern, True)
     # The per department breakdown statistics
     result = _parse_list_entries_general(by_dept_raw, ENTRY_BY_DEPT)
 
@@ -445,7 +463,7 @@ def _parse_hospital(daily_pr: bs4.Tag) -> Dict[str, int]:
     }
     """
 
-    return _parse_list_entries_general(_get_html_hospital(daily_pr),
+    return _parse_list_entries_general(_isolate_html_hospital(daily_pr),
                                        ENTRY_HOSPITAL)
 
 
@@ -467,7 +485,8 @@ def _parse_age_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
         "over 65": 8376
     }
     """
-    return _parse_list_entries_general(_get_html_age_group(daily_pr), ENTRY_AGE)
+    return _parse_list_entries_general(_isolate_html_age_group(daily_pr),
+                                       ENTRY_AGE)
 
 
 def _parse_gender(daily_pr: bs4.Tag) -> Dict[str, int]:
@@ -488,7 +507,7 @@ def _parse_gender(daily_pr: bs4.Tag) -> Dict[str, int]:
 
     """
 
-    result = _parse_list_entries_general(_get_html_gender(daily_pr),
+    result = _parse_list_entries_general(_isolate_html_gender(daily_pr),
                                          ENTRY_GENDER)
 
     # Correct spelling error on some releases
@@ -518,7 +537,7 @@ def _parse_race_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
         "Other": 8266
     }
     """
-    return _parse_list_entries_general(_get_html_race_cases(daily_pr),
+    return _parse_list_entries_general(_isolate_html_race_cases(daily_pr),
                                        ENTRY_RACE)
 
 
@@ -527,7 +546,7 @@ def _parse_race_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
 
     See parse_race_cases for an example.
     """
-    return _parse_list_entries_general(_get_html_race_deaths(daily_pr),
+    return _parse_list_entries_general(_isolate_html_race_deaths(daily_pr),
                                        ENTRY_RACE)
 
 
@@ -553,7 +572,7 @@ def _parse_area(daily_pr: bs4.Tag) -> Dict[str, int]:
     }
     """
 
-    areas_raw = _get_html_area(daily_pr)
+    areas_raw = _isolate_html_area(daily_pr)
     area_extracted = RE_LOC.findall(areas_raw)
     pr_date = _get_date(daily_pr)
 
@@ -589,6 +608,7 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
 
     cases_by_dept = _parse_cases(daily_pr)
     tests_available, positive_tests = _get_testing(daily_pr)
+    new_cases, new_deaths = _get_new_cases_deaths(daily_pr)
 
     cases_by_area = _parse_area(daily_pr)
 
@@ -609,6 +629,8 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
         const.DEATHS: _parse_deaths(daily_pr)[const.TOTAL],
         const.HOSPITALIZATIONS:
             _parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS],
+        const.NEW_CASES: new_cases,
+        const.NEW_DEATHS: new_deaths,
         const.TEST_RESULTS: tests_available,
         const.PERCENT_POSITIVE_TESTS: positive_tests,
         const.CASES_BY_AGE: _parse_age_cases(daily_pr),

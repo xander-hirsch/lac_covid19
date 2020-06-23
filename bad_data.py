@@ -23,3 +23,7 @@ BAD_HTML_FORMAT = (
     (2020, 6, 20),
     (2020, 6, 21),
 )
+
+HARDCODE_NEW_CASES_DEATHS = {
+    (2020, 3, 30): (7, 342),
+}
