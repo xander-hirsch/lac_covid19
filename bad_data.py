@@ -25,5 +25,5 @@ BAD_HTML_FORMAT = (
 )
 
 HARDCODE_NEW_CASES_DEATHS = {
-    (2020, 3, 30): (7, 342),
+    (2020, 3, 30): (342, 7),
 }
