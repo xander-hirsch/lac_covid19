@@ -7,6 +7,7 @@ parsed-daily-pr/*.json
 docs/*.pickle
 
 scratchpad.py
+import_html.sh
 
 lacph_graphs.ipynb
 *.pickle
