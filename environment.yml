@@ -7,5 +7,7 @@ dependencies:
   - beautifulsoup4
   - numpy
   - pandas
-  - notebook
+  - matplotlib
+  - seaborn
   - plotly
+  - notebook

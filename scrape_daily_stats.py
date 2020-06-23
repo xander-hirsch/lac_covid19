@@ -11,6 +11,7 @@ from typing import Any, Callable, Dict, List, Optional, Tuple
 import bs4
 import requests
 
+import lac_covid19.bad_data as bad_data
 import lac_covid19.const as const
 import lac_covid19.lacph_prid as lacph_prid
 
@@ -51,9 +52,7 @@ HEADER_LOC = re.compile('CITY / COMMUNITY\** \(Rate\**\)')
 RE_LOC = re.compile(
     '([A-Z][A-Za-z/\-\. ]+[a-z]\**)\s+([0-9]+|--)\s+\(\s+(--|[0-9]+|[0-9]+\.[0-9]+)\s\)')  # pylint: disable=line-too-long
 
-EXTENDED_HTML = (dt.date(2020, 4, 23), dt.date(2020, 6, 18),
-                 dt.date(2020, 6, 19), dt.date(2020, 6, 20),
-                 dt.date(2020, 6, 21))
+EXTENDED_HTML = tuple([dt.date(*x) for x in bad_data.BAD_HTML_FORMAT])
 FORMAT_START_HOSPITAL_NESTED = dt.date(2020, 4, 4)
 FORMAT_START_AGE_NESTED = dt.date(2020, 4, 4)
 CORR_FACILITY_RECORDED = dt.date(2020, 5, 14)
