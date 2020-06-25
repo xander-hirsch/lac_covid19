@@ -34,3 +34,12 @@ if __name__ == "__main__":
     for csv_file, pickle_file, df in location_export:
         df.to_csv(csv_file)
         df.to_pickle(pickle_file)
+
+    df_csa_ts = location_export[0][-1]
+    last_date = df_csa_ts[const.DATE].max()
+    df_csa_curr = df_csa_ts[df_csa_ts[const.DATE] == last_date]
+    df_csa_curr = df_csa_curr.drop(columns=[const.DATE, const.REGION])
+    df_csa_curr.reset_index(drop=True, inplace=True)
+
+    df_csa_curr.to_csv(const.FILE_CSA_CURR_CSV)
+    df_csa_curr.to_pickle(const.FILE_CSA_CURR_PICKLE)

@@ -68,7 +68,7 @@ CASES_BY_AGE = stat_by_group(CASES, AGE_GROUP)
 CASES_BY_GENDER = stat_by_group(CASES, GENDER)
 
 EXPORT_DIR = os.path.join(os.path.dirname(__file__), 'docs')
-EXPORT_PREFIX = 'lac-covid19'
+EXPORT_PREFIX = 'data'
 EXT_CSV = '.csv'
 EXT_PICKLE = '.pickle'
 
@@ -84,9 +84,10 @@ def make_filepath(description: str) -> str:
 
     return [os.path.join(EXPORT_DIR, x) for x in (file_csv, file_pickle)]
 
-FILE_MAIN_STATS_CSV, FILE_MAIN_STATS_PICKLE = make_filepath('main-stats')
+FILE_MAIN_STATS_CSV, FILE_MAIN_STATS_PICKLE = make_filepath('summary')
 FILE_AGE_CSV, FILE_AGE_PICKLE = make_filepath('age')
 FILE_GENDER_CSV, FILE_GENDER_PICKLE = make_filepath('gender')
 FILE_RACE_CSV, FILE_RACE_PICKLE = make_filepath('race')
-FILE_CSA_CSV, FILE_CSA_PICKLE = make_filepath('loc-csa')
-FILE_REGION_CSV, FILE_REGION_PICKLE = make_filepath('loc-region')
+FILE_CSA_CSV, FILE_CSA_PICKLE = make_filepath('csa-ts')
+FILE_REGION_CSV, FILE_REGION_PICKLE = make_filepath('region-ts')
+FILE_CSA_CURR_CSV, FILE_CSA_CURR_PICKLE = make_filepath('csa-current')
