@@ -530,15 +530,15 @@ if __name__ == "__main__":
     last_week = every_day[-7:]
     today = every_day[-1]
 
-    df_summary = create_main_stats(every_day)
-    df_age = create_by_age(every_day)
+    # df_summary = create_main_stats(every_day)
+    # df_age = create_by_age(every_day)
     # df_gender = create_by_gender(every_day)
     # df_race = create_by_race(last_week)
 
     # df_area = create_by_area(every_day)
     # df_region = aggregate_locations(df_area)
-    # df_area_recent = create_by_area(last_week)
-    # df_region_recent = aggregate_locations(df_area_recent)
+    df_area_recent = create_by_area(last_week)
+    df_region_recent = aggregate_locations(df_area_recent)
 
     # csa_pop = read_csa_population()
     # df_custom_region = create_custom_region(
