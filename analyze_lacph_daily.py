@@ -441,6 +441,8 @@ def aggregate_locations(
     for col in col_diff:
         df_together[col] = df_together[col].convert_dtypes()
 
+    df_together[col_diff[1]] = df_together[col_diff[1]].round()
+
     return df_together
 
 
