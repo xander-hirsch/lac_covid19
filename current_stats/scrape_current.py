@@ -1,6 +1,6 @@
 import csv
 import re
-from typing import List, Tuple
+from typing import Dict, List, Tuple
 
 import bs4
 import requests
@@ -55,7 +55,23 @@ def break_summary(summary_table: bs4.Tag) -> List[bs4.Tag]:
     return summary_table.find_all('tr', class_='blue text-white')
 
 
-def parse_areas(
+def parse_health_dept_count(count_header: bs4.Tag) -> Dict[str, int]:
+    """Parses the case count by health department"""
+
+    health_dept_count = {}
+    for i in range(3):
+        count_header = count_header.find_next('tr')
+        entries = [x.get_text(strip=True) for x in count_header.find_all('td')]
+        department = entries[0].lstrip('-- ')
+        count = int(entries[1])
+
+        health_dept_count[department] = count
+
+    
+    return health_dept_count
+
+
+def parse_csa(
         areas_header: bs4.Tag) -> List[Tuple[str, str, int, int, int, int]]:
     """Parses the cases and deaths by area."""
 
@@ -88,6 +104,46 @@ def parse_areas(
         writer.writerows(area_stats)
 
 
+def query_all_areas(
+        summary_table: bs4.Tag) -> List[Tuple[str, str, int, int, int, int]]:
+    """Queries the countywide statistical areas, but also the health departments
+        to account for all areas in Los Angeles County.
+    """
+
+    case_summary_headers = break_summary(summary_table)
+    health_dept_cases_header = case_summary_headers[0]
+    health_dept_deaths_header = case_summary_headers[1]
+    csa_header = case_summary_headers[-1]
+
+    hd_cases = parse_health_dept_count(health_dept_cases_header)
+    hd_deaths = parse_health_dept_count(health_dept_deaths_header)
+    csa_cases_deaths = parse_csa(csa_header)
+
+    lb_cases = hd_cases[const.LONG_BEACH]
+    lb_deaths = hd_deaths[const.LONG_BEACH]
+
+    lb_multiplier = const.RATE_SCALE / const.POPULATION_LONG_BEACH
+    lb_case_rate = round(lb_cases * lb_multiplier)
+    lb_death_rate = round(lb_deaths * lb_multiplier)
+
+    long_beach_entry = [(const.CITY_OF_LB, lac_regions.HARBOR,
+                         lb_cases, lb_case_rate, lb_deaths, lb_death_rate,
+                         False)]
+    
+    pas_cases = hd_cases[const.PASADENA]
+    pas_deaths = hd_deaths[const.PASADENA]
+
+    pas_multiplier = const.RATE_SCALE / const.POPULATION_PASADENA
+    pas_case_rate = round(pas_cases * pas_multiplier)
+    pas_death_rate = round(pas_deaths * pas_multiplier)
+
+    pasadena_entry = [(const.CITY_OF_PAS, lac_regions.VERDUGOS,
+                       pas_cases, pas_case_rate, pas_deaths, pas_death_rate,
+                       False)]
+    
+    return csa_cases_deaths + long_beach_entry + pasadena_entry
+
+
 def parse_residental(residential_table):
     """Parses the residential congregate cases and deaths"""
 
@@ -109,16 +165,14 @@ def parse_residental(residential_table):
 
 if __name__ == "__main__":
     all_tables = fetch_stats()
-    case_summary = break_summary(all_tables[0])
 
-    areas_header = case_summary[-1]
-    areas = parse_areas(areas_header)
+    area_cases_deaths = query_all_areas(all_tables[0])
     with open(const.FILE_CSA_CURR_CSV, 'w') as f:
         writer = csv.writer(f)
-        writer.writerows(areas)
+        writer.writerows(area_cases_deaths)
 
     residential_congregate = all_tables[1]
     residential_listings = parse_residental(residential_congregate)
-    with open(const.FILE_RESIDENTIAL_CSV, 'w') as f:
-        writer = csv.writer(f)
-        writer.writerows(residential_listings)
+    # with open(const.FILE_RESIDENTIAL_CSV, 'w') as f:
+    #     writer = csv.writer(f)
+    #     writer.writerows(residential_listings)

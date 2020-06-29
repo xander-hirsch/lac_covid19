@@ -1,12 +1,29 @@
+ANGELES_FOREST = 'Angeles Forest'
+ANTELOPE_VALLEY = 'Antelope Valley'
+CENTRAL_LA = 'Central LA'
+EASTSIDE = 'Eastside'
+HARBOR = 'Harbor'
+NORTHEAST_LA = 'Northeast LA'
+NORTHWEST_COUNTY = 'Northwest County'
+POMONA_VALLEY = 'Pomona Valley'
+SAN_FERNANDO_VALLEY = 'San Fernando Valley'
+SAN_GABRIEL_VALLEY = 'San Gabriel Valley'
+SANTA_MONICA_MOUNTAINS = 'Santa Monica Mountains'
+SOUTH_BAY = 'South Bay'
+SOUTH_LA = 'South LA'
+SOUTHEAST = 'Southeast'
+VERDUGOS = 'Verdugos'
+WESTSIDE = 'Westside'
+
 REGIONS = {
-    'Angeles Forest': (
+    ANGELES_FOREST: (
         'Los Angeles - Angeles National Forest',
         'Unincorporated - Angeles National Forest',
         'Unincorporated - Kagel/Lopez Canyons',
         'Unincorporated - Placerita Canyon',
         'Unincorporated - Sand Canyon',
     ),
-    'Antelope Valley': (
+    ANTELOPE_VALLEY: (
         'City of Lancaster',
         'City of Palmdale',
         'Unincorporated - Acton',
@@ -34,7 +51,7 @@ REGIONS = {
         'Unincorporated - West Antelope Valley',
         'Unincorporated - White Fence Farms',
     ),
-    'Central LA': (
+    CENTRAL_LA: (
         'City of West Hollywood',
         'Los Angeles - Angelino Heights',
         'Los Angeles - Brookside',
@@ -82,7 +99,7 @@ REGIONS = {
         'Unincorporated - Franklin Canyon',
         'Unincorporated - Miracle Mile',
     ),
-    'Eastside': (
+    EASTSIDE: (
         'Unincorporated - Bandini Islands',
         'Los Angeles - Boyle Heights',
         'Los Angeles - El Sereno',
@@ -90,7 +107,7 @@ REGIONS = {
         'Los Angeles - University Hills',
         'Unincorporated - East Los Angeles',
     ),
-    'Harbor': (
+    HARBOR: (
         'City of Avalon',
         'City of Carson',
         'City of Hawaiian Gardens',
@@ -112,7 +129,7 @@ REGIONS = {
         'Unincorporated - West Carson',
         'Unincorporated - West Rancho Dominguez',
     ),
-    'Northeast LA': (
+    NORTHEAST_LA: (
         'Los Angeles - Atwater Village',
         'Los Angeles - Eagle Rock',
         'Los Angeles - Elysian Valley',
@@ -120,7 +137,7 @@ REGIONS = {
         'Los Angeles - Highland Park',
         'Los Angeles - Mt. Washington',
     ),
-    'Northwest County': (
+    NORTHWEST_COUNTY: (
         'City of Santa Clarita',
         'Unincorporated - Agua Dulce',
         'Unincorporated - Bouquet Canyon',
@@ -136,7 +153,7 @@ REGIONS = {
         'Unincorporated - Val Verde',
         'Unincorporated - Valencia',
     ),
-    'Pomona Valley': (
+    POMONA_VALLEY: (
         'City of Claremont',
         'City of La Verne',
         'City of Pomona',
@@ -144,7 +161,7 @@ REGIONS = {
         'Unincorporated - La Verne',
         'Unincorporated - Padua Hills',
     ),
-    'San Fernando Valley': (
+    SAN_FERNANDO_VALLEY: (
         'City of Burbank',
         'City of San Fernando',
         'Los Angeles - Arleta',
@@ -183,7 +200,7 @@ REGIONS = {
         'Unincorporated - West Chatsworth',
         'Unincorporated - Westhills',
     ),
-    'San Gabriel Valley': (
+    SAN_GABRIEL_VALLEY: (
         'City of Alhambra',
         'City of Arcadia',
         'City of Azusa',
@@ -243,7 +260,7 @@ REGIONS = {
         'Unincorporated - Whittier',
         'Unincorporated - Whittier Narrows',
     ),
-    'Santa Monica Mountains': (
+    SANTA_MONICA_MOUNTAINS: (
         'City of Agoura Hills',
         'City of Calabasas',
         'City of Hidden Hills',
@@ -251,7 +268,7 @@ REGIONS = {
         'City of Westlake Village',
         'Unincorporated - Santa Monica Mountains',
     ),
-    'South Bay': (
+    SOUTH_BAY: (
         'City of El Segundo',
         'City of Gardena',
         'City of Hawthorne',
@@ -276,7 +293,7 @@ REGIONS = {
         'Unincorporated - Westfield/Academy Hills',
         'Unincorporated - Wiseburn',
     ),
-    'South LA': (
+    SOUTH_LA: (
         'Los Angeles - Adams-Normandie',
         'Los Angeles - Alsace',
         'Los Angeles - Baldwin Hills',
@@ -310,7 +327,7 @@ REGIONS = {
         'Unincorporated - View Park/Windsor Hills',
         'Unincorporated - Willowbrook',
     ),
-    'Southeast': (
+    SOUTHEAST: (
         'City of Artesia',
         'City of Bell',
         'City of Bell Gardens',
@@ -343,7 +360,7 @@ REGIONS = {
         'Unincorporated - Walnut Park',
         'Unincorporated - West Whittier/Los Nietos',
     ),
-    'Verdugos': (
+    VERDUGOS: (
         'City of Glendale',
         'City of La Canada Flintridge',
         'City of Sunland',
@@ -353,7 +370,7 @@ REGIONS = {
         'Unincorporated - Altadena',
         'Unincorporated - La Crescenta-Montrose',
     ),
-    'Westside': (
+    WESTSIDE: (
         'City of Beverly Hills',
         'City of Culver City',
         'City of Santa Monica',
