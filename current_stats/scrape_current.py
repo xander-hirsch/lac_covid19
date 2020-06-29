@@ -76,7 +76,7 @@ def parse_csa(
     """Parses the cases and deaths by area."""
 
     area_stats = [(const.AREA, const.REGION, const.CASES, const.CASE_RATE,
-                   const.DEATHS, const.DEATH_RATE)]
+                   const.DEATHS, const.DEATH_RATE, const.CF_OUTBREAK)]
 
     area_entry = areas_header.find_next('tr')
     while area_entry is not None:

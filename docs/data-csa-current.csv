@@ -1,4 +1,4 @@
-Area,Region,Cases,Case Rate,Deaths,Death Rate
+Area,Region,Cases,Case Rate,Deaths,Death Rate,CF Outbreak
 City of Agoura Hills,Santa Monica Mountains,52,249,1,5,False
 City of Alhambra,San Gabriel Valley,417,481,10,12,False
 City of Arcadia,San Gabriel Valley,162,281,8,14,False
