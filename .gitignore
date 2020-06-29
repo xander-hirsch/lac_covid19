@@ -6,6 +6,11 @@ cached-daily-pr/*.html
 parsed-daily-pr/*.json
 docs/*.pickle
 
+current_stats/__pycache__/*
+current_stats/addresses.csv
+current_stats/addresses.json
+current_stats/geocoderesult.csv
+
 scratchpad.py
 import_html.sh
 

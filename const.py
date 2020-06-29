@@ -57,6 +57,11 @@ POPULATION_LAC = 10_098_052
 POPULATION_LONG_BEACH = 468_883
 POPULATION_PASADENA = 141_246
 
+RESID_SETTING = 'Residential Setting'
+ADDRESS = 'Address'
+STAFF_CASES = 'Staff {}'.format(CASES)
+RESID_CASES = 'Resident {}'.format(CASES)
+
 
 def stat_by_group(stat: str, group: str) -> str:
     """Provides consistant naming to statistic descriptors"""
@@ -90,4 +95,8 @@ FILE_GENDER_CSV, FILE_GENDER_PICKLE = make_filepath('gender')
 FILE_RACE_CSV, FILE_RACE_PICKLE = make_filepath('race')
 FILE_CSA_CSV, FILE_CSA_PICKLE = make_filepath('csa-ts')
 FILE_REGION_CSV, FILE_REGION_PICKLE = make_filepath('region-ts')
+
 FILE_CSA_CURR_CSV, FILE_CSA_CURR_PICKLE = make_filepath('csa-current')
+FILE_RESIDENTIAL_CSV, FILE_RESIDENTIAL_PICKLE = make_filepath('residential')
+FILE_NON_RESIDENTIAL_CSV, FILE_NON_RESIDENTIAL_PICKLE = make_filepath(
+    'non-residential-outbreak')
