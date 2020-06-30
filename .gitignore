@@ -11,7 +11,9 @@ current_stats/addresses.csv
 current_stats/addresses.json
 current_stats/geocoderesult.csv
 
-geo/*.json
+geo/addresses.csv
+geo/address-todo.txt
+geo/geocoderesult.csv
 geo/*.geojson
 
 scratchpad.py
