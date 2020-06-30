@@ -74,29 +74,31 @@ CASES_BY_GENDER = stat_by_group(CASES, GENDER)
 
 EXPORT_DIR = os.path.join(os.path.dirname(__file__), 'docs')
 EXPORT_PREFIX = 'data'
-EXT_CSV = '.csv'
-EXT_PICKLE = '.pickle'
+EXT_CSV = 'csv'
+EXT_PICKLE = 'pickle'
+
+CSV_PICKLE = (EXT_CSV, EXT_PICKLE)
 
 FILE_ALL_DATA_RAW = os.path.join(EXPORT_DIR,
-                                 'all-data-raw{}'.format(EXT_PICKLE))
+                                 'all-data-raw.{}'.format(EXT_PICKLE))
 
 
-def make_filepath(description: str) -> str:
+def make_filepath(description: str, extension: str) -> str:
     """Creates the entire path for the output file"""
-    file_csv, file_pickle = [
-        '{}-{}{}'.format(EXPORT_PREFIX, description, x)
-        for x in (EXT_CSV, EXT_PICKLE)]
+    return os.path.join(
+        EXPORT_DIR, '{}-{}.{}'.format(EXPORT_PREFIX, description, extension))
 
-    return [os.path.join(EXPORT_DIR, x) for x in (file_csv, file_pickle)]
+FILE_MAIN_STATS_CSV, FILE_MAIN_STATS_PICKLE = [make_filepath('summary', x)
+                                               for x in CSV_PICKLE]
+FILE_AGE_CSV, FILE_AGE_PICKLE = [make_filepath('age', x) for x in CSV_PICKLE]
+FILE_GENDER_CSV, FILE_GENDER_PICKLE = [make_filepath('gender', x)
+                                       for x in CSV_PICKLE]
+FILE_RACE_CSV, FILE_RACE_PICKLE = [make_filepath('race', x) for x in CSV_PICKLE]
+FILE_CSA_CSV, FILE_CSA_PICKLE = [make_filepath('csa-ts', x) for x in CSV_PICKLE]
+FILE_REGION_CSV, FILE_REGION_PICKLE = [make_filepath('region-ts', x)
+                                       for x in CSV_PICKLE]
 
-FILE_MAIN_STATS_CSV, FILE_MAIN_STATS_PICKLE = make_filepath('summary')
-FILE_AGE_CSV, FILE_AGE_PICKLE = make_filepath('age')
-FILE_GENDER_CSV, FILE_GENDER_PICKLE = make_filepath('gender')
-FILE_RACE_CSV, FILE_RACE_PICKLE = make_filepath('race')
-FILE_CSA_CSV, FILE_CSA_PICKLE = make_filepath('csa-ts')
-FILE_REGION_CSV, FILE_REGION_PICKLE = make_filepath('region-ts')
-
-FILE_CSA_CURR_CSV, FILE_CSA_CURR_PICKLE = make_filepath('csa-current')
-FILE_RESIDENTIAL_CSV, FILE_RESIDENTIAL_PICKLE = make_filepath('residential')
-FILE_NON_RESIDENTIAL_CSV, FILE_NON_RESIDENTIAL_PICKLE = make_filepath(
-    'non-residential-outbreak')
+FILE_CSA_CURR_CSV = make_filepath('csa-current', EXT_CSV)
+FILE_RESIDENTIAL_CSV = make_filepath('residential', EXT_CSV)
+FILE_NON_RESIDENTIAL_CSV = make_filepath('non-residential-outbreak', EXT_CSV)
+FILE_GEO_STATS = make_filepath('geo-csa', 'geojson')

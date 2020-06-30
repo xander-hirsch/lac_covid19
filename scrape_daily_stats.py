@@ -21,8 +21,12 @@ DATE = const.DATE
 LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='  # pylint: disable=line-too-long
 RE_DATE = re.compile('[A-Z][a-z]+ \d{2}, 20\d{2}')
 
-RE_TESTING = re.compile(
+RE_TESTING_1 = re.compile(
     'testing\s+results\s+available.+\s([\d,]{6,})\s+individuals.+\s(\d{1,2})%.+testing\s+positive')  # pylint: disable=line-too-long
+
+RE_TESTING_2 = re.compile(
+    'Testing\s+results\s+are\s+available\s+for\s+over\s+([\d,]{6,})\s+individuals,\s+with\s+(\d{1,2})%\s+of\s+people\s+testing\s+positive'  # pylint: disable=line-too-long
+)
 
 RE_NEW_DEATHS_CASES = re.compile(
     '([\d,]+)\s+new\s+deaths\s+and\s+([\d,]+)\s+new\s+cases'
@@ -287,7 +291,13 @@ def _get_new_cases_deaths(pr_html: bs4.BeautifulSoup) -> Tuple[int, int]:
 
 def _get_testing(pr_html: bs4.BeautifulSoup) -> Optional[Tuple[int, int]]:
     """Extacts the number of test results and percent of positive tests."""
-    result = RE_TESTING.search(pr_html.get_text())
+
+    pr_text = pr_html.get_text()
+    # Try both testing patterns
+    result = RE_TESTING_1.search(pr_text)
+    if result is None:
+        result = RE_TESTING_2.search(pr_text)
+
     num_tests, pos_rate = None, None
     if result:
         num_tests = _str_to_int(result.group(1))

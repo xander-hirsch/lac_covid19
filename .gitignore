@@ -11,6 +11,9 @@ current_stats/addresses.csv
 current_stats/addresses.json
 current_stats/geocoderesult.csv
 
+geo/*.json
+geo/*.geojson
+
 scratchpad.py
 import_html.sh
 
