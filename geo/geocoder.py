@@ -12,7 +12,7 @@ MATCH = "Match"
 
 def prepare_census_geocode() -> None:
     address_map = None
-    with open(geo_files.FILE_RESID_ADDRESS, 'w') as f:
+    with open(geo_files.FILE_RESID_ADDRESS) as f:
         address_map = json.load(f)
 
     census_format = []
