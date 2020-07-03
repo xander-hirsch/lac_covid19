@@ -689,7 +689,7 @@ def query_all_dates(cached: bool = True) -> Tuple[Dict[str, Any], ...]:
 
 
 if __name__ == "__main__":
-    query_all_dates(False)
+    query_all_dates()
 
     # debug_raw_pr = tuple([fetch_press_release(x)
     #                       for x in lacph_prid.DAILY_STATS])

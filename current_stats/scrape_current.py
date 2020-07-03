@@ -7,7 +7,7 @@ import requests
 
 import lac_covid19.const as const
 import lac_covid19.lac_regions as lac_regions
-import lac_covid19.current_stats.addresses as addresses
+# import lac_covid19.current_stats.addresses as addresses
 
 STATS_URL = 'http://publichealth.lacounty.gov/media/Coronavirus/locations.htm'
 
@@ -144,23 +144,23 @@ def query_all_areas(
     return csa_cases_deaths + long_beach_entry + pasadena_entry
 
 
-def parse_residental(residential_table):
-    """Parses the residential congregate cases and deaths"""
+# def parse_residental(residential_table):
+#     """Parses the residential congregate cases and deaths"""
 
-    residential_settings = residential_table.find_all('tr')
-    residential_settings = residential_settings[1:-1]
+#     residential_settings = residential_table.find_all('tr')
+#     residential_settings = residential_settings[1:-1]
 
-    residential_list = [(const.RESID_SETTING, const.ADDRESS, const.STAFF_CASES,
-                         const.RESID_CASES, const.DEATHS)]
+#     residential_list = [(const.RESID_SETTING, const.ADDRESS, const.STAFF_CASES,
+#                          const.RESID_CASES, const.DEATHS)]
 
-    for setting in residential_settings:
-        text_list = [x.get_text(strip=True) for x in setting.find_all('td')]
-        id_, name, city, staff_cases, resid_cases, deaths = text_list
-        address = addresses.RESIDENTIAL.get(name)
-        residential_list += ((name, address, int(staff_cases), int(resid_cases),
-                              int(deaths)),)
+#     for setting in residential_settings:
+#         text_list = [x.get_text(strip=True) for x in setting.find_all('td')]
+#         id_, name, city, staff_cases, resid_cases, deaths = text_list
+#         address = addresses.RESIDENTIAL.get(name)
+#         residential_list += ((name, address, int(staff_cases), int(resid_cases),
+#                               int(deaths)),)
 
-    return residential_list
+#     return residential_list
 
 
 if __name__ == "__main__":
@@ -171,8 +171,8 @@ if __name__ == "__main__":
         writer = csv.writer(f)
         writer.writerows(area_cases_deaths)
 
-    residential_congregate = all_tables[1]
-    residential_listings = parse_residental(residential_congregate)
+    # residential_congregate = all_tables[1]
+    # residential_listings = parse_residental(residential_congregate)
     # with open(const.FILE_RESIDENTIAL_CSV, 'w') as f:
     #     writer = csv.writer(f)
     #     writer.writerows(residential_listings)
