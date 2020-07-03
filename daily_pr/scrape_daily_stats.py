@@ -12,9 +12,10 @@ from typing import Any, Callable, Dict, List, Optional, Tuple
 import bs4
 import requests
 
-import lac_covid19.bad_data as bad_data
-import lac_covid19.const as const
-import lac_covid19.lacph_prid as lacph_prid
+import lac_covid19.old_const as const
+import lac_covid19.const.paths as paths
+import lac_covid19.daily_pr.bad_data as bad_data
+import lac_covid19.daily_pr.lacph_prid as lacph_prid
 
 DATE = const.DATE
 
@@ -66,8 +67,8 @@ FORMAT_START_HOSPITAL_NESTED = dt.date(2020, 4, 4)
 FORMAT_START_AGE_NESTED = dt.date(2020, 4, 4)
 CORR_FACILITY_RECORDED = dt.date(2020, 5, 14)
 
-DIR_RESP_CACHE = 'cached-daily-pr'
-DIR_PARSED_PR = 'parsed-daily-pr'
+DIR_RESP_CACHE = paths.DIR_CACHED_HTML
+DIR_PARSED_PR = paths.DIR_PARSED_JSON
 LACPH = 'lacph'
 
 HTML = 'html'
@@ -689,6 +690,7 @@ def query_all_dates(cached: bool = True) -> Tuple[Dict[str, Any], ...]:
 
 
 if __name__ == "__main__":
+    pass
     query_all_dates()
 
     # debug_raw_pr = tuple([fetch_press_release(x)

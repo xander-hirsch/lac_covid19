@@ -1,7 +1,7 @@
-import lac_covid19.analyze_lacph_daily as analyze_lacph_daily
-import lac_covid19.bad_data as bad_data
-import lac_covid19.const as const
-import lac_covid19.scrape_daily_stats as scrape_daily_stats
+import lac_covid19.old_const as const
+import lac_covid19.daily_pr.analyze_lacph_daily as analyze_lacph_daily
+import lac_covid19.daily_pr.bad_data as bad_data
+import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats
 
 to_export = (
     (const.FILE_MAIN_STATS_CSV, const.FILE_MAIN_STATS_PICKLE,

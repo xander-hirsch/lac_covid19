@@ -9,9 +9,10 @@ from typing import Any, Dict, Iterable, Optional, Tuple, Union
 import numpy as np
 import pandas as pd
 
-import lac_covid19.const as const
+import lac_covid19.const.paths as paths
+import lac_covid19.old_const as const
 import lac_covid19.lac_regions as lac_regions
-import lac_covid19.scrape_daily_stats as scrape_daily_stats
+import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats
 
 DATE = const.DATE
 CASES = const.CASES
@@ -34,7 +35,7 @@ def demographic_table(table_dir: str, desc: str) -> str:
     """
     return os.path.join(table_dir, 'demographic_table_{}.csv'.format(desc))
 
-TABLE_DIR = os.path.join(os.path.dirname(__file__), 'lacph_import')
+TABLE_DIR = paths.DIR_POPULATION
 
 
 def read_lacph_table(table_path: str,

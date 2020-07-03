@@ -1,10 +1,9 @@
-.vscode/*
-__pycache__/*
-*/__pycache__/*
-.ipynb_checkpoints/*
+.vscode/**
+**/__pycache__
+.ipynb_checkpoints/**
 
-cached-daily-pr/*.html
-parsed-daily-pr/*.json
+daily_pr/cached-html/*.html
+daily_pr/parsed-json/*.json
 docs/*.pickle
 
 current_stats/addresses.csv
@@ -17,9 +16,4 @@ geo/geocoderesult.csv
 geo/*.geojson
 
 scratchpad.py
-import_html.sh
-
 lacph_graphs.ipynb
-*.pickle
-
-.DS_Store
