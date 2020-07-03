@@ -6,7 +6,7 @@ from typing import Dict, List
 import pandas as pd
 import requests
 
-import lac_covid19.const as const
+import lac_covid19.old_const as const
 
 URL_CSA_GEOJSON = 'https://opendata.arcgis.com/datasets/7b8a64cab4a44c0f86f12c909c5d7f1a_23.geojson'
 

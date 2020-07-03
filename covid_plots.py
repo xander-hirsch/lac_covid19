@@ -1,6 +1,6 @@
 import plotly.express as px
 
-import lac_covid19.const as const
+import lac_covid19.old_const as const
 
 region_geo_groups = {
     'Central': ('Central LA', 'Eastside', 'Northeast LA',

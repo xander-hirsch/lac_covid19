@@ -5,8 +5,8 @@ from typing import Dict, List, Tuple
 import bs4
 import requests
 
-import lac_covid19.const as const
-import lac_covid19.lac_regions as lac_regions
+import lac_covid19.old_const as const
+import lac_covid19.const.lac_regions as lac_regions
 # import lac_covid19.current_stats.addresses as addresses
 
 STATS_URL = 'http://publichealth.lacounty.gov/media/Coronavirus/locations.htm'
