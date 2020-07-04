@@ -41,6 +41,9 @@ CSA_CURRENT = os.path.join(DIR_DOCS, TEMPLATE_DATA.format('csa-current', CSV))
 CSA_GEO_STATS = os.path.join(DIR_DOCS, TEMPLATE_DATA.format('geo-csa', GEOJSON))
 RESIDENTIAL = os.path.join(DIR_DOCS, TEMPLATE_DATA.format('residential', CSV))
 
+RAW_DATA = os.path.join(DIR_PICKLED, TEMPLATE_DATA.format('raw', PICKLE))
+
+
 def pandas_export(title: str) -> Tuple[str, str]:
     """Generates paths for a pandas dataframe given a description.
 
