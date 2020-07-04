@@ -6,6 +6,7 @@ from typing import Dict, List
 import pandas as pd
 import requests
 
+import lac_covid19.const.paths as paths
 import lac_covid19.old_const as const
 
 URL_CSA_GEOJSON = 'https://opendata.arcgis.com/datasets/7b8a64cab4a44c0f86f12c909c5d7f1a_23.geojson'
@@ -60,7 +61,7 @@ def merge_csa_geo():
 
     csa_mapping = load_csa_mapping()
     csa_entries = None
-    with open(const.FILE_CSA_CURR_CSV) as f:
+    with open(paths.CSA_CURRENT) as f:
         reader = csv.reader(f)
         csa_entries = [x for x in reader][1:]
     
@@ -84,7 +85,7 @@ def merge_csa_geo():
             GEOMETRY: geometry
         },
     
-    with open(const.FILE_GEO_STATS, 'w') as f:
+    with open(paths.CSA_GEO_STATS, 'w') as f:
         json.dump(geo_csa_stats, f)
 
 

@@ -6,6 +6,7 @@ import bs4
 import requests
 
 import lac_covid19.old_const as const
+import lac_covid19.const.paths as paths
 import lac_covid19.const.lac_regions as lac_regions
 # import lac_covid19.current_stats.addresses as addresses
 
@@ -99,7 +100,7 @@ def parse_csa(
         area_entry = area_entry.find_next('tr')
 
     return area_stats
-    with open(const.FILE_CSA_CURR_CSV, 'w') as f:
+    with open(paths.CSA_CURR_CSV, 'w') as f:
         writer = csv.writer(f)
         writer.writerows(area_stats)
 
@@ -167,12 +168,12 @@ if __name__ == "__main__":
     all_tables = fetch_stats()
 
     area_cases_deaths = query_all_areas(all_tables[0])
-    with open(const.FILE_CSA_CURR_CSV, 'w') as f:
+    with open(paths.CSA_CURR_CSV, 'w') as f:
         writer = csv.writer(f)
         writer.writerows(area_cases_deaths)
 
     # residential_congregate = all_tables[1]
     # residential_listings = parse_residental(residential_congregate)
-    # with open(const.FILE_RESIDENTIAL_CSV, 'w') as f:
+    # with open(paths.RESIDENTIAL_CSV, 'w') as f:
     #     writer = csv.writer(f)
     #     writer.writerows(residential_listings)

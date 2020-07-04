@@ -15,5 +15,7 @@ geo/address-todo.txt
 geo/geocoderesult.csv
 geo/*.geojson
 
+pickled/*.pickle
+
 scratchpad.py
 lacph_graphs.ipynb
