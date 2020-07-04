@@ -12,12 +12,14 @@ from typing import Any, Callable, Dict, List, Optional, Tuple
 import bs4
 import requests
 
-import lac_covid19.old_const as const
+import lac_covid19.const.columns as col
+import lac_covid19.const.groups as group
+import lac_covid19.const.health_departments as health_dept
 import lac_covid19.const.paths as paths
 import lac_covid19.daily_pr.bad_data as bad_data
 import lac_covid19.daily_pr.lacph_prid as lacph_prid
 
-DATE = const.DATE
+DATE = col.DATE
 
 LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='  # pylint: disable=line-too-long
 RE_DATE = re.compile('[A-Z][a-z]+ \d{2}, 20\d{2}')
@@ -40,7 +42,7 @@ HEADER_CASE_COUNT = re.compile(
 HEADER_DEATH = re.compile('Deaths\s+([\d,]+)')
 ENTRY_BY_DEPT = re.compile(
     '(Los Angeles County \(excl\. LB and Pas\)|{}|{})[\s-]*(\d+)'
-    .format(const.LONG_BEACH, const.PASADENA))
+    .format(health_dept.LONG_BEACH, health_dept.PASADENA))
 
 LAC_ONLY = '\(Los Angeles County Cases Only-excl LB and Pas\)'
 
@@ -51,8 +53,8 @@ HEADER_HOSPITAL = re.compile('Hospitalization')
 ENTRY_HOSPITAL = re.compile('([A-Z][A-Za-z() ]+[)a-z])\s*(\d+)')
 
 HEADER_GENDER = re.compile('Gender {}'.format(LAC_ONLY))
-ENTRY_GENDER = re.compile('(Mm*ale|{}|{})\s+(\d+)'.format(const.FEMALE,
-                                                          const.OTHER))
+ENTRY_GENDER = re.compile('(Mm*ale|{}|{})\s+(\d+)'.format(group.FEMALE,
+                                                          group.OTHER))
 
 HEADER_RACE_CASE = re.compile('(?<!Deaths )Race/Ethnicity {}'.format(LAC_ONLY))
 HEADER_RACE_DEATH = re.compile('Deaths Race/Ethnicity {}'.format(LAC_ONLY))
@@ -181,7 +183,7 @@ def _json_import(dict_content: Dict) -> Dict[str, Any]:
     converted to tuples.
     """
     dict_content[DATE] = dt.date.fromisoformat(dict_content[DATE])
-    dict_content[const.AREA] = tuple(map(tuple, dict_content[const.AREA]))
+    dict_content[col.AREA] = tuple(map(tuple, dict_content[col.AREA]))
 
 
 def _json_export(dict_content: Dict) -> Dict[str, Any]:
@@ -415,7 +417,7 @@ def _parse_total_by_dept_general(
         if match_attempt:
             total = _str_to_int(match_attempt.group(1))
             break
-    result[const.TOTAL] = total
+    result[col.TOTAL] = total
 
     return result
 
@@ -526,7 +528,7 @@ def _parse_gender(daily_pr: bs4.Tag) -> Dict[str, int]:
     old_keys = list(result.keys())
     for key in old_keys:
         if key == 'Mmale':
-            result[const.MALE] = result.pop(key)
+            result[group.MALE] = result.pop(key)
 
     return result
 
@@ -624,32 +626,34 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
 
     cases_by_area = _parse_area(daily_pr)
 
-    long_beach_cases = cases_by_dept[const.LONG_BEACH]
+    long_beach_cases = cases_by_dept[health_dept.LONG_BEACH]
     long_beach_rate = round(
-        long_beach_cases / const.POPULATION_LONG_BEACH * const.RATE_SCALE, 2)  # pylint: disable=old-division
-    cases_by_area.append((const.CITY_OF_LB, long_beach_cases, long_beach_rate))
-    pasadena_cases = cases_by_dept[const.PASADENA]
+        long_beach_cases / health_dept.POPULATION_LONG_BEACH * col.RATE_SCALE,
+        2)  # pylint: disable=old-division
+    cases_by_area.append((health_dept.CSA_LB, long_beach_cases,
+                          long_beach_rate))
+    pasadena_cases = cases_by_dept[health_dept.PASADENA]
     pasadena_rate = round(
-        pasadena_cases / const.POPULATION_PASADENA * const.RATE_SCALE, 2)  # pylint: disable=old-division
-    cases_by_area.append((const.CITY_OF_PAS, pasadena_cases, pasadena_rate))
+        pasadena_cases / health_dept.POPULATION_PASADENA * col.RATE_SCALE, 2)  # pylint: disable=old-division
+    cases_by_area.append((health_dept.CSA_PAS, pasadena_cases, pasadena_rate))
 
     cases_by_area = tuple(cases_by_area)
 
     return {
         DATE: _get_date(daily_pr),
-        const.CASES: cases_by_dept[const.TOTAL],
-        const.DEATHS: _parse_deaths(daily_pr)[const.TOTAL],
-        const.HOSPITALIZATIONS:
+        col.CASES: cases_by_dept[col.TOTAL],
+        col.DEATHS: _parse_deaths(daily_pr)[col.TOTAL],
+        col.HOSPITALIZATIONS:
             _parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS],
-        const.NEW_CASES: new_cases,
-        const.NEW_DEATHS: new_deaths,
-        const.TEST_RESULTS: tests_available,
-        const.PERCENT_POSITIVE_TESTS: positive_tests,
-        const.CASES_BY_AGE: _parse_age_cases(daily_pr),
-        const.CASES_BY_GENDER: _parse_gender(daily_pr),
-        const.CASES_BY_RACE: _parse_race_cases(daily_pr),
-        const.DEATHS_BY_RACE: _parse_race_deaths(daily_pr),
-        const.AREA: cases_by_area
+        col.NEW_CASES: new_cases,
+        col.NEW_DEATHS: new_deaths,
+        col.TEST_RESULTS: tests_available,
+        col.PERCENT_POSITIVE_TESTS: positive_tests,
+        col.CASES_BY_AGE: _parse_age_cases(daily_pr),
+        col.CASES_BY_GENDER: _parse_gender(daily_pr),
+        col.CASES_BY_RACE: _parse_race_cases(daily_pr),
+        col.DEATHS_BY_RACE: _parse_race_deaths(daily_pr),
+        col.AREA: cases_by_area
     }
 
 
@@ -683,14 +687,13 @@ def query_all_dates(cached: bool = True) -> Tuple[Dict[str, Any], ...]:
     result = tuple(
         [query_single_date(x, cached) for x in lacph_prid.DAILY_STATS])
 
-    with open(const.FILE_ALL_DATA_RAW, 'wb') as f:
+    with open(paths.RAW_DATA, 'wb') as f:
         pickle.dump(result, f)
 
     return result
 
 
 if __name__ == "__main__":
-    pass
     query_all_dates()
 
     # debug_raw_pr = tuple([fetch_press_release(x)

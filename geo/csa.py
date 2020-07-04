@@ -6,8 +6,8 @@ from typing import Dict, List
 import pandas as pd
 import requests
 
+import lac_covid19.const.columns as col
 import lac_covid19.const.paths as paths
-import lac_covid19.old_const as const
 
 URL_CSA_GEOJSON = 'https://opendata.arcgis.com/datasets/7b8a64cab4a44c0f86f12c909c5d7f1a_23.geojson'
 
@@ -74,13 +74,13 @@ def merge_csa_geo():
         geo_csa_stats[FEATURES] += {
             TYPE: TYPE_FEATURE,
             PROPERTIES: {
-                const.AREA: area,
-                const.REGION: region,
-                const.CASES: cases,
-                const.CASE_RATE: case_rate,
-                const.DEATHS: deaths,
-                const.DEATH_RATE: death_rate,
-                const.CF_OUTBREAK: cf_outbreak
+                col.AREA: area,
+                col.REGION: region,
+                col.CASES: cases,
+                col.CASE_RATE: case_rate,
+                col.DEATHS: deaths,
+                col.DEATH_RATE: death_rate,
+                col.CF_OUTBREAK: cf_outbreak
             },
             GEOMETRY: geometry
         },

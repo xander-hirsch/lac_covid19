@@ -9,24 +9,25 @@ from typing import Any, Dict, Iterable, Optional, Tuple, Union
 import numpy as np
 import pandas as pd
 
+import lac_covid19.const.columns as col
+import lac_covid19.const.groups as group
 import lac_covid19.const.lac_regions as lac_regions
+import lac_covid19.const.health_departments as health_dept
 import lac_covid19.const.paths as paths
-import lac_covid19.old_const as const
 import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats
 
-DATE = const.DATE
-CASES = const.CASES
-DEATHS = const.DEATHS
+DATE = col.DATE
+CASES = col.CASES
+DEATHS = col.DEATHS
 
-RATE_SCALE = const.RATE_SCALE
-CASE_RATE = const.CASE_RATE
-DEATH_RATE = const.DEATH_RATE
-RATE_SCALE = const.RATE_SCALE
+RATE_SCALE = col.RATE_SCALE
+CASE_RATE = col.CASE_RATE
+DEATH_RATE = col.DEATH_RATE
 
-AREA = const.AREA
-REGION = const.REGION
-POPULATION = const.POPULATION
-CF_OUTBREAK = const.CF_OUTBREAK
+AREA = col.AREA
+REGION = col.REGION
+POPULATION = col.POPULATION
+CF_OUTBREAK = col.CF_OUTBREAK
 
 
 def demographic_table(table_dir: str, desc: str) -> str:
@@ -69,8 +70,9 @@ def read_csa_population() -> pd.Series:
     pop_var = 'population'
     lac_raw = read_lacph_table(table_path, indep_var, pop_var)
 
-    lb_pas = pd.Series((const.POPULATION_LONG_BEACH, const.POPULATION_PASADENA),
-                       index=(const.CITY_OF_LB, const.CITY_OF_PAS))
+    lb_pas = pd.Series((health_dept.POPULATION_LONG_BEACH,
+                        health_dept.POPULATION_PASADENA),
+                       index=(health_dept.CSA_LB, health_dept.CSA_PAS))
 
     return lac_raw.append(lb_pas)
 
@@ -90,10 +92,10 @@ def read_demographic_population(demographic: str) -> pd.Series:
 def read_age_population() -> pd.Series:
     raw_values = read_demographic_population('age')
     new_names = (
-        const.AGE_0_17,
-        const.AGE_18_40,
-        const.AGE_41_65,
-        const.AGE_OVER_65,
+        group.AGE_0_17,
+        group.AGE_18_40,
+        group.AGE_41_65,
+        group.AGE_OVER_65,
     )
     return pd.Series(raw_values.to_numpy('int'), index=new_names)
 
@@ -105,12 +107,12 @@ def read_gender_population() -> pd.Series:
 def read_race_population() -> pd.Series:
     raw_values = read_demographic_population('race')
     new_names = (
-        const.RACE_AI_AN,
-        const.RACE_ASIAN,
-        const.RACE_BLACK,
-        const.RACE_HL,
-        const.RACE_NH_PI,
-        const.RACE_WHITE,
+        group.RACE_AI_AN,
+        group.RACE_ASIAN,
+        group.RACE_BLACK,
+        group.RACE_HL,
+        group.RACE_NH_PI,
+        group.RACE_WHITE,
     )
     return pd.Series(raw_values.to_numpy('int'), index=new_names)
 
@@ -145,10 +147,10 @@ def query_all_dates() -> Tuple[Dict[str, Any]]:
         module scrape_daily_stats for more information.
     """
 
-    if not os.path.isfile(const.FILE_ALL_DATA_RAW):
+    if not os.path.isfile(paths.RAW_DATA):
         return scrape_daily_stats.query_all_dates()
 
-    with open(const.FILE_ALL_DATA_RAW, 'rb') as f:
+    with open(paths.RAW_DATA, 'rb') as f:
         return pickle.load(f)
 
 
@@ -201,17 +203,17 @@ def create_main_stats(
             Tests.
     """
 
-    TEST_RESULTS = const.TEST_RESULTS
-    PERCENT_POSITIVE = const.PERCENT_POSITIVE_TESTS
+    TEST_RESULTS = col.TEST_RESULTS
+    PERCENT_POSITIVE = col.PERCENT_POSITIVE_TESTS
 
     data = {
         DATE: map(access_date, many_daily_pr),
-        const.NEW_CASES: map(lambda x: x[const.NEW_CASES], many_daily_pr),
+        col.NEW_CASES: map(lambda x: x[col.NEW_CASES], many_daily_pr),
         CASES: map(lambda x: x[CASES], many_daily_pr),
-        const.NEW_DEATHS: map(lambda x: x[const.NEW_DEATHS], many_daily_pr),
+        col.NEW_DEATHS: map(lambda x: x[col.NEW_DEATHS], many_daily_pr),
         DEATHS: map(lambda x: x[DEATHS], many_daily_pr),
-        const.HOSPITALIZATIONS:
-            map(lambda x: x[const.HOSPITALIZATIONS], many_daily_pr),
+        col.HOSPITALIZATIONS:
+            map(lambda x: x[col.HOSPITALIZATIONS], many_daily_pr),
         TEST_RESULTS: map(lambda x: x[TEST_RESULTS], many_daily_pr),
         PERCENT_POSITIVE: map(lambda x: x[PERCENT_POSITIVE], many_daily_pr)
     }
@@ -231,10 +233,10 @@ def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
             Rate.
     """
 
-    AGE_GROUP = const.AGE_GROUP
+    AGE_GROUP = col.AGE_GROUP
 
-    data = map(lambda x: make_section_ts(x, const.CASES_BY_AGE), many_daily_pr)
-    df = tidy_data(pd.DataFrame(data), const.AGE_GROUP, CASES)
+    data = map(lambda x: make_section_ts(x, col.CASES_BY_AGE), many_daily_pr)
+    df = tidy_data(pd.DataFrame(data), AGE_GROUP, CASES)
 
     age_pop = read_age_population()
     df[CASE_RATE] = df.apply(
@@ -250,14 +252,14 @@ def create_by_gender(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
         Time series DataFrame with the entries: Date, Gender, Cases, Case Rate.
     """
 
-    GENDER = const.GENDER
-    CASES_BY_GENDER = const.CASES_BY_GENDER
+    GENDER = col.GENDER
+    CASES_BY_GENDER = col.CASES_BY_GENDER
 
     data = [make_section_ts(x, CASES_BY_GENDER)
             for x in many_daily_pr if x[CASES_BY_GENDER]]
 
     df = tidy_data(pd.DataFrame(data), GENDER, CASES, False)
-    df = df[df[GENDER] != const.OTHER]
+    df = df[df[GENDER] != col.OTHER]
     df[GENDER] = df[GENDER].astype('category')
     df[CASES] = df[CASES].astype('int')
 
@@ -276,12 +278,12 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
             Deaths, Death Rate.
     """
 
-    RACE = const.RACE
+    RACE = col.RACE
 
-    cases_raw = [make_section_ts(x, const.CASES_BY_RACE)
-                 for x in many_daily_pr if x[const.CASES_BY_RACE]]
-    deaths_raw = [make_section_ts(x, const.DEATHS_BY_RACE)
-                  for x in many_daily_pr if x[const.DEATHS_BY_RACE]]
+    cases_raw = [make_section_ts(x, col.CASES_BY_RACE)
+                 for x in many_daily_pr if x[col.CASES_BY_RACE]]
+    deaths_raw = [make_section_ts(x, col.DEATHS_BY_RACE)
+                  for x in many_daily_pr if x[col.DEATHS_BY_RACE]]
 
     # Create cases and deaths tables seperately
     df_cases = (pd.DataFrame(cases_raw)
@@ -425,10 +427,10 @@ def aggregate_locations(
 
     # Calculate day over day differences
     col_total = (CASES, CASE_RATE)
-    col_diff = (const.DT_CASES, const.DT_CASE_RATE)
+    col_diff = (col.DT_CASES, col.DT_CASE_RATE)
     # Assign empty columns before adding data
-    for col in col_diff:
-        df_together[col] = pd.NA
+    for column in col_diff:
+        df_together[column] = pd.NA
 
     # Isolate each region, use diff function, assign back to main dataframe
     for region in lac_regions.REGIONS:
@@ -439,8 +441,8 @@ def aggregate_locations(
             df_together.loc[
                 day_over_day.index, col_diff[i]] = day_over_day
 
-    for col in col_diff:
-        df_together[col] = df_together[col].convert_dtypes()
+    for column in col_diff:
+        df_together[column] = df_together[column].convert_dtypes()
 
     df_together[col_diff[1]] = df_together[col_diff[1]].round(2)
 

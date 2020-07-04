@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
-import lac_covid19.old_const as const
 import lac_covid19.const.lac_regions as lac_regions
+import lac_covid19.const.columns as col
 import lac_covid19.const.paths as paths
 import lac_covid19.daily_pr.lacph_prid as lacph_prid
 import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats
@@ -30,15 +30,15 @@ def isolate_area_interval(df_loc: pd.DataFrame, loc_col: str, loc_name: str,
     start_ts = pd.Timestamp(start_date)
     end_ts = pd.Timestamp(end_date)
     return df_loc[(df_loc[loc_col] == loc_name)
-                  & (df_loc[const.DATE] >= start_ts)
-                  & (df_loc[const.DATE] <= end_ts)]
+                  & (df_loc[col.DATE] >= start_ts)
+                  & (df_loc[col.DATE] <= end_ts)]
 
 
 def check_always_increasing(df_loc: pd.DataFrame, region: str):
     region_areas = REGIONS[region]
     test_areas = [
         (area,
-         df_loc.loc[df_loc[const.AREA] == area, const.CASES]
+         df_loc.loc[df_loc[col.AREA] == area, col.CASES]
          .is_monotonic_increasing)
         for area in region_areas
     ]
@@ -46,10 +46,10 @@ def check_always_increasing(df_loc: pd.DataFrame, region: str):
 
 
 def plot_area(df_area: pd.DataFrame, area_id: str) -> plt.Axes:
-    df_focus = df_area.loc[df_area[const.AREA] == area_id,
-                           [const.DATE, const.CASES]]
+    df_focus = df_area.loc[df_area[col.AREA] == area_id,
+                           [col.DATE, col.CASES]]
 
-    return sns.lineplot(x=const.DATE, y=const.CASES, data=df_focus)
+    return sns.lineplot(x=col.DATE, y=col.CASES, data=df_focus)
 
 
 if __name__ == "__main__":

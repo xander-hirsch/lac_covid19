@@ -5,7 +5,8 @@ from typing import Dict, List, Tuple
 import bs4
 import requests
 
-import lac_covid19.old_const as const
+import lac_covid19.const.columns as col
+import lac_covid19.const.health_departments as health_dept
 import lac_covid19.const.paths as paths
 import lac_covid19.const.lac_regions as lac_regions
 # import lac_covid19.current_stats.addresses as addresses
@@ -60,7 +61,7 @@ def parse_health_dept_count(count_header: bs4.Tag) -> Dict[str, int]:
     """Parses the case count by health department"""
 
     health_dept_count = {}
-    for i in range(3):
+    for _ in range(3):
         count_header = count_header.find_next('tr')
         entries = [x.get_text(strip=True) for x in count_header.find_all('td')]
         department = entries[0].lstrip('-- ')
@@ -76,8 +77,8 @@ def parse_csa(
         areas_header: bs4.Tag) -> List[Tuple[str, str, int, int, int, int]]:
     """Parses the cases and deaths by area."""
 
-    area_stats = [(const.AREA, const.REGION, const.CASES, const.CASE_RATE,
-                   const.DEATHS, const.DEATH_RATE, const.CF_OUTBREAK)]
+    area_stats = [(col.AREA, col.REGION, col.CASES, col.CASE_RATE,
+                   col.DEATHS, col.DEATH_RATE, col.CF_OUTBREAK)]
 
     area_entry = areas_header.find_next('tr')
     while area_entry is not None:
@@ -100,9 +101,9 @@ def parse_csa(
         area_entry = area_entry.find_next('tr')
 
     return area_stats
-    with open(paths.CSA_CURR_CSV, 'w') as f:
-        writer = csv.writer(f)
-        writer.writerows(area_stats)
+    # with open(paths.CSA_CURRENT, 'w') as f:
+    #     writer = csv.writer(f)
+    #     writer.writerows(area_stats)
 
 
 def query_all_areas(
@@ -120,25 +121,25 @@ def query_all_areas(
     hd_deaths = parse_health_dept_count(health_dept_deaths_header)
     csa_cases_deaths = parse_csa(csa_header)
 
-    lb_cases = hd_cases[const.LONG_BEACH]
-    lb_deaths = hd_deaths[const.LONG_BEACH]
+    lb_cases = hd_cases[health_dept.LONG_BEACH]
+    lb_deaths = hd_deaths[health_dept.LONG_BEACH]
 
-    lb_multiplier = const.RATE_SCALE / const.POPULATION_LONG_BEACH
+    lb_multiplier = col.RATE_SCALE / health_dept.POPULATION_LONG_BEACH
     lb_case_rate = round(lb_cases * lb_multiplier)
     lb_death_rate = round(lb_deaths * lb_multiplier)
 
-    long_beach_entry = [(const.CITY_OF_LB, lac_regions.HARBOR,
+    long_beach_entry = [(health_dept.CSA_LB, lac_regions.HARBOR,
                          lb_cases, lb_case_rate, lb_deaths, lb_death_rate,
                          False)]
     
-    pas_cases = hd_cases[const.PASADENA]
-    pas_deaths = hd_deaths[const.PASADENA]
+    pas_cases = hd_cases[health_dept.PASADENA]
+    pas_deaths = hd_deaths[health_dept.PASADENA]
 
-    pas_multiplier = const.RATE_SCALE / const.POPULATION_PASADENA
+    pas_multiplier = col.RATE_SCALE / health_dept.POPULATION_PASADENA
     pas_case_rate = round(pas_cases * pas_multiplier)
     pas_death_rate = round(pas_deaths * pas_multiplier)
 
-    pasadena_entry = [(const.CITY_OF_PAS, lac_regions.VERDUGOS,
+    pasadena_entry = [(health_dept.CSA_PAS, lac_regions.VERDUGOS,
                        pas_cases, pas_case_rate, pas_deaths, pas_death_rate,
                        False)]
     
@@ -151,8 +152,8 @@ def query_all_areas(
 #     residential_settings = residential_table.find_all('tr')
 #     residential_settings = residential_settings[1:-1]
 
-#     residential_list = [(const.RESID_SETTING, const.ADDRESS, const.STAFF_CASES,
-#                          const.RESID_CASES, const.DEATHS)]
+#     residential_list = [(col.RESID_SETTING, col.ADDRESS, col.STAFF_CASES,
+#                          col.RESID_CASES, col.DEATHS)]
 
 #     for setting in residential_settings:
 #         text_list = [x.get_text(strip=True) for x in setting.find_all('td')]
@@ -168,7 +169,7 @@ if __name__ == "__main__":
     all_tables = fetch_stats()
 
     area_cases_deaths = query_all_areas(all_tables[0])
-    with open(paths.CSA_CURR_CSV, 'w') as f:
+    with open(paths.CSA_CURRENT, 'w') as f:
         writer = csv.writer(f)
         writer.writerows(area_cases_deaths)
 

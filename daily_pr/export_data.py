@@ -1,5 +1,4 @@
 import lac_covid19.const.paths as paths
-import lac_covid19.old_const as const
 import lac_covid19.daily_pr.analyze_lacph_daily as analyze_lacph_daily
 import lac_covid19.daily_pr.bad_data as bad_data
 import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats

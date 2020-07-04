@@ -1,6 +1,6 @@
 import plotly.express as px
 
-import lac_covid19.old_const as const
+import lac_covid19.const.columns as col
 
 region_geo_groups = {
     'Central': ('Central LA', 'Eastside', 'Northeast LA',
@@ -32,8 +32,8 @@ for group in region_plot_groups:
         color_index += 1
 
 def plot_region(df_region):
-    return px.line(df_region, x=const.DATE, y=const.CASE_RATE,
-                   line_dash=const.REGION, line_dash_map=line_dash_map,
-                   color=const.REGION, color_discrete_map=color_discrete_map,
-                   hover_data=[const.CASES],
+    return px.line(df_region, x=col.DATE, y=col.CASE_RATE,
+                   line_dash=col.REGION, line_dash_map=line_dash_map,
+                   color=col.REGION, color_discrete_map=color_discrete_map,
+                   hover_data=[col.CASES],
                    title='COVID-19 Case Rate by County Region')
