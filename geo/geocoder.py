@@ -1,11 +1,12 @@
 import csv
 import json
-import os.path
 from typing import Any, Dict, List, Tuple, Optional
 
 import requests
 
-import lac_covid19.geo.geo_files as geo_files
+from lac_covid19.geo.residential_addresses import RESIDENTIAL_ADDRESSES
+from lac_covid19.geo.manual_geocodes import MANUAL_GEOCODES
+import lac_covid19.const.paths as paths
 
 
 URL_SINGLE_ADDRESS = 'https://geocoding.geo.census.gov/geocoder/locations/onelineaddress'
@@ -18,16 +19,12 @@ MATCH = 'Match'
 
 
 def prepare_census_geocode() -> None:
-    address_map = None
-    with open(geo_files.RESID_ADDRESS) as f:
-        address_map = json.load(f)
-
     census_format = []
-    for location_name in address_map:
-        street, city, state, zip_ = address_map[location_name].split(', ')
+    for location_name in RESIDENTIAL_ADDRESSES:
+        street, city, state, zip_ = RESIDENTIAL_ADDRESSES[location_name].split(', ')
         census_format += ((location_name, street, city, state, zip_),)
 
-    with open(geo_files.ADDRESS_LIST, 'w') as f:
+    with open(paths.ADDRESSES_REQUEST, 'w') as f:
         writer = csv.writer(f)
         writer.writerows(census_format)
 
@@ -70,7 +67,7 @@ def read_geocodes():
 
     raw_geocodes = []
     unsuccessful_geocodes = []
-    with open(geo_files.GEOCODE_RESULTS) as f:
+    with open(paths.ADDRESSES_RESPONSE) as f:
         reader = csv.reader(f)
         for row in reader:
             if row[MATCH_INDEX] == MATCH:
@@ -86,11 +83,6 @@ def read_geocodes():
                                in row[COORDINATE_INDEX].split(',')]
         address_coordinates[address] = (latitude, longitude)
 
-
-    manual_geocode = None
-    with open(geo_files.MANUAL_GEOCODE) as f:
-        manual_geocode = json.load(f)
-
     total_single_requests = len(unsuccessful_geocodes)
     current_request = 1
     for address in unsuccessful_geocodes:
@@ -105,8 +97,8 @@ def read_geocodes():
             latitude, longitude = new_request_coordinates
             result_msg = '({}, {})'.format(latitude, longitude)
         else:
-            if address in manual_geocode:
-                latitude, longitude = manual_geocode.get(address)
+            if address in MANUAL_GEOCODES:
+                latitude, longitude = MANUAL_GEOCODES[address]
             result_msg = ('Manual Entry')
 
         print(result_msg)
@@ -114,7 +106,7 @@ def read_geocodes():
 
         current_request += 1
 
-    with open(geo_files.ADDRESS_GEOCODE, 'w') as f:
+    with open(paths.ADDRESS_GEOCODES, 'w') as f:
         json.dump(address_coordinates, f)
 
 

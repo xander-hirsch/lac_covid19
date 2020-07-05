@@ -3,7 +3,6 @@ import json
 import os.path
 from typing import Dict, List
 
-import pandas as pd
 import requests
 
 import lac_covid19.const.columns as col
@@ -12,16 +11,18 @@ import lac_covid19.const.paths as paths
 URL_CSA_GEOJSON = 'https://opendata.arcgis.com/datasets/7b8a64cab4a44c0f86f12c909c5d7f1a_23.geojson'
 
 DIR_GEO = os.path.dirname(__file__)
-FILE_CSA_GEOJSON = os.path.join(DIR_GEO, 'countywide-statistical-areas.geojson')
-FILE_AREA_POLYGONS = os.path.join(DIR_GEO, 'csa-geometry.json')
 
 FEATURES = 'features'
 PROPERTIES = 'properties'
 GEOMETRY = 'geometry'
+OBJECTID = 'OBJECTID'
 CSA_LABEL = 'LABEL'
 TYPE = 'type'
 FEATURE_COLLECTION = 'FeatureCollection'
 TYPE_FEATURE = 'Feature'
+
+INDEX_ID = 0
+INDEX_GEOMETRY = 1
 
 
 def request_csa() -> Dict[str, Dict]:
@@ -29,18 +30,19 @@ def request_csa() -> Dict[str, Dict]:
 
     r = requests.get(URL_CSA_GEOJSON)
     if r.status_code == 200:
-        with open(FILE_CSA_GEOJSON, 'w') as f:
+        with open(paths.CSA_GEOJSON, 'w') as f:
             f.write(r.text)
-        
+
         raw_csa = json.loads(r.text)
         csa_geo_mapping = {}
         for item in raw_csa[FEATURES]:
             if item[TYPE] == TYPE_FEATURE:
+                obj_id = item[PROPERTIES][OBJECTID]
                 area = item[PROPERTIES][CSA_LABEL]
                 geometry = item[GEOMETRY]
-                csa_geo_mapping[area] = geometry
+                csa_geo_mapping[area] = obj_id, geometry
 
-        with open(FILE_AREA_POLYGONS, 'w') as f:
+        with open(paths.CSA_POLYGONS, 'w') as f:
             json.dump(csa_geo_mapping, f)
 
         return csa_geo_mapping
@@ -49,8 +51,8 @@ def request_csa() -> Dict[str, Dict]:
 def load_csa_mapping() -> Dict[str, Dict]:
     """Read in the CSA geometries or requests from online."""
 
-    if os.path.isfile(FILE_AREA_POLYGONS):
-        with open(FILE_AREA_POLYGONS) as f:
+    if os.path.isfile(paths.CSA_POLYGONS):
+        with open(paths.CSA_POLYGONS) as f:
             return json.load(f)
     else:
         return request_csa()
@@ -64,30 +66,32 @@ def merge_csa_geo():
     with open(paths.CSA_CURRENT) as f:
         reader = csv.reader(f)
         csa_entries = [x for x in reader][1:]
-    
+
     geo_csa_stats = {TYPE: FEATURE_COLLECTION, FEATURES: []}
     for csa_stats in csa_entries:
         area, region, cases, case_rate, deaths, death_rate, cf_outbreak = \
             csa_stats
-    
-        geometry = csa_mapping[area]
+
+        obj_id = csa_mapping[area][INDEX_ID]
+        geometry = csa_mapping[area][INDEX_GEOMETRY]
         geo_csa_stats[FEATURES] += {
             TYPE: TYPE_FEATURE,
             PROPERTIES: {
+                OBJECTID: obj_id,
                 col.AREA: area,
                 col.REGION: region,
                 col.CASES: cases,
                 col.CASE_RATE: case_rate,
                 col.DEATHS: deaths,
                 col.DEATH_RATE: death_rate,
-                col.CF_OUTBREAK: cf_outbreak
+                col.CF_OUTBREAK: cf_outbreak,
             },
-            GEOMETRY: geometry
+            GEOMETRY: geometry,
         },
-    
+
     with open(paths.CSA_GEO_STATS, 'w') as f:
         json.dump(geo_csa_stats, f)
 
 
-if __name__ == "__main__":
-    merge_csa_geo()
+# if __name__ == "__main__":
+#     merge_csa_geo()

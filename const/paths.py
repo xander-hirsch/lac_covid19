@@ -1,7 +1,7 @@
 import os.path
 from typing import Tuple
 
-DIR_PROJECT = (os.path.dirname(os.path.dirname(__file__)))
+DIR_PROJECT = os.path.realpath(os.path.dirname(os.path.dirname(__file__)))
 
 JSON = 'json'
 CSV = 'csv'
@@ -20,13 +20,13 @@ DIR_PARSED_JSON = os.path.join(DIR_DAILY_PR, 'parsed-json')
 TEMPLATE_DAILY_PR = '{}-{}-{}.{}'
 
 DIR_GEO = os.path.join(DIR_PROJECT, 'geo')
-DIR_CSA_MAP = os.path.join(DIR_GEO, 'csa-map')
-CSA_GEOJSON = os.path.join(DIR_CSA_MAP, 'csa.{}'.format(GEOJSON))
-CSA_POLYGONS = os.path.join(DIR_CSA_MAP, 'csa-polygons.{}'.format(JSON))
-DIR_GEOCODING = os.path.join(DIR_GEO, 'geocoding')
+DIR_CSA_MAP = os.path.join(DIR_GEO, 'csa')
+CSA_GEOJSON = os.path.join(DIR_CSA_MAP,
+                           'countywide-statistical-areas.{}'.format(GEOJSON))
+CSA_POLYGONS = os.path.join(DIR_CSA_MAP, 'csa-id-polygons.{}'.format(JSON))
+DIR_GEOCODING = os.path.join(DIR_GEO, 'geocode')
 ADDRESSES_REQUEST = os.path.join(DIR_GEOCODING, 'addresses.{}').format(CSV)
-ADDRESSES_RESPONSE = os.path.join(DIR_GEOCODING,
-                                  'geocoderesults.{}'.format(CSV))
+ADDRESSES_RESPONSE = os.path.join(DIR_GEOCODING, 'geocoderesult.{}'.format(CSV))
 
 DIR_POPULATION = os.path.join(DIR_PROJECT, 'lacph_population')
 POP_CSA = os.path.join(DIR_POPULATION, 'city_community_table.{}'.format(CSV))
@@ -42,6 +42,15 @@ CSA_GEO_STATS = os.path.join(DIR_DOCS, TEMPLATE_DATA.format('geo-csa', GEOJSON))
 RESIDENTIAL = os.path.join(DIR_DOCS, TEMPLATE_DATA.format('residential', CSV))
 
 RAW_DATA = os.path.join(DIR_PICKLED, TEMPLATE_DATA.format('raw', PICKLE))
+
+DIR_POPULATION = os.path.join(DIR_DOCS, 'population')
+_POPULATION_MAP = os.path.join(DIR_POPULATION, 'population-{{}}.{ext}'.format(ext=JSON))
+POPULATION_CSA = _POPULATION_MAP.format('csa')
+POPULATION_AGE = _POPULATION_MAP.format('age')
+POPULATION_GENDER = _POPULATION_MAP.format('gender')
+POPULATION_RACE = _POPULATION_MAP.format('race')
+
+ADDRESS_GEOCODES = os.path.join(DIR_DOCS, 'address-geocodes.{}'.format(JSON))
 
 
 def pandas_export(title: str) -> Tuple[str, str]:

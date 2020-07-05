@@ -4,16 +4,12 @@
 
 daily_pr/cached-html/*.html
 daily_pr/parsed-json/*.json
-docs/*.pickle
 
-current_stats/addresses.csv
-current_stats/addresses.json
-current_stats/geocoderesult.csv
+geo/csa/countywide-statistical-areas.geojson
+geo/csa/csa-id-polygons.json
 
-geo/addresses.csv
-geo/address-todo.txt
-geo/geocoderesult.csv
-geo/*.geojson
+geo/geocode/addresses.csv
+geo/geocode/geocoderesult.csv
 
 pickled/*.pickle
 
