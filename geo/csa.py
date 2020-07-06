@@ -5,6 +5,7 @@ from typing import Dict, List
 
 import requests
 
+import lac_covid19.const as const
 import lac_covid19.const.columns as col
 import lac_covid19.const.paths as paths
 
@@ -13,16 +14,13 @@ URL_CSA_GEOJSON = 'https://opendata.arcgis.com/datasets/7b8a64cab4a44c0f86f12c90
 DIR_GEO = os.path.dirname(__file__)
 
 FEATURES = 'features'
+ATTRIBUTES = 'attributes'
 PROPERTIES = 'properties'
 GEOMETRY = 'geometry'
-OBJECTID_LAC = 'OBJECTID'
 CSA_LABEL = 'LABEL'
 TYPE = 'type'
 FEATURE_COLLECTION = 'FeatureCollection'
 TYPE_FEATURE = 'Feature'
-
-INDEX_ID = 0
-INDEX_GEOMETRY = 1
 
 
 def request_csa() -> Dict[str, Dict]:
@@ -37,10 +35,9 @@ def request_csa() -> Dict[str, Dict]:
         csa_geo_mapping = {}
         for item in raw_csa[FEATURES]:
             if item[TYPE] == TYPE_FEATURE:
-                obj_id = item[PROPERTIES][OBJECTID_LAC]
                 area = item[PROPERTIES][CSA_LABEL]
                 geometry = item[GEOMETRY]
-                csa_geo_mapping[area] = obj_id, geometry
+                csa_geo_mapping[area] = geometry
 
         with open(paths.CSA_POLYGONS, 'w') as f:
             json.dump(csa_geo_mapping, f)
@@ -58,6 +55,25 @@ def load_csa_mapping() -> Dict[str, Dict]:
         return request_csa()
 
 
+def parse_csa_objectid() -> Dict[str, int]:
+    raw_data = None
+    with open(paths.CSA_ARCGIS_QUERY) as f:
+        raw_data = json.load(f)
+    
+    raw_data = raw_data[FEATURES]
+
+    objectid_mapping = {}
+    for entry in raw_data:
+        obj_id = entry[ATTRIBUTES][const.OBJECTID]
+        area = entry[ATTRIBUTES][const.AREA]
+        objectid_mapping[area] = obj_id
+    
+    with open(paths.CSA_OBJECTID, 'w') as f:
+        json.dump(objectid_mapping, f)
+    
+    return objectid_mapping
+
+
 def merge_csa_geo():
     """Merges the recent CSA cases and deaths with the geographic data."""
 
@@ -72,12 +88,10 @@ def merge_csa_geo():
         area, region, cases, case_rate, deaths, death_rate, cf_outbreak = \
             csa_stats
 
-        obj_id = csa_mapping[area][INDEX_ID]
-        geometry = csa_mapping[area][INDEX_GEOMETRY]
+        geometry = csa_mapping[area]
         geo_csa_stats[FEATURES] += {
             TYPE: TYPE_FEATURE,
             PROPERTIES: {
-                col.OBJECTID: obj_id,
                 col.AREA: area,
                 col.REGION: region,
                 col.CASES: cases,
