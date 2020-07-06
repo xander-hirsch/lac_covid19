@@ -1,0 +1,111 @@
+import csv
+import json
+from typing import Dict, Optional
+
+import lac_covid19.const.groups as group
+import lac_covid19.const.paths as paths
+
+def read_population_csv(table_path: str, key_index: int,
+                        value_index: int) -> Dict[str, int]:
+    """Imports a population mapping from the LA Public Health dashboard
+        downloads.
+    Args:
+        table_path: The path of the CSV table.
+        output_path: The path of the output mapping.
+        key_index: Which index provides the name of the population.
+        value_index: The key index of population counts.
+    Returns:
+        The population mapping.
+    """
+    raw_table = None
+    with open(table_path) as f:
+        reader = csv.reader(f)
+        raw_table = [x for x in reader][1:]
+
+    population_mapping = {}
+    for row in raw_table:
+        population_mapping[row[key_index]] = row[value_index]
+
+    return population_mapping
+
+
+def read_csa_table() -> Dict[str, int]:
+    csa_population = read_population_csv(paths.LACPH_CSA_RAW, 1, -1)
+
+    for csa in csa_population:
+        csa_population[csa] = int(csa_population[csa])
+
+    with open(paths.POPULATION_CSA, 'w') as f:
+        json.dump(csa_population, f)
+
+    return csa_population
+
+UNKOWN = 'Unknown/Missing'
+
+AGE_MAP = {'<18 years old': group.AGE_0_17,
+           '18 to 40 years old': group.AGE_18_40,
+           '41 to 65 years old': group.AGE_41_65,
+           'over 65 years old': group.AGE_OVER_65}
+
+RACE_MAP = {'American Indian or Alaska Native': group.RACE_AI_AN,
+            'Asian': group.RACE_ASIAN,
+            'Black/African American': group.RACE_BLACK,
+            'Latino/Hispanic': group.RACE_HL,
+            'Native Hawaiian or Other Pacific Islander': group.RACE_NH_PI,
+            'White': group.RACE_WHITE}
+
+
+def read_demographic_table(
+    table_path: str,
+    group_map: Optional[Dict[str, str]] = None) -> Dict[str, int]:
+
+    raw_table = read_population_csv(table_path, 1, -1)
+
+    del raw_table[UNKOWN]
+    if group.OTHER in raw_table:
+        del raw_table[group.OTHER]
+    
+    for key in raw_table:
+        raw_table[key] = int(raw_table[key])
+
+    if group_map is None:
+        return raw_table
+    
+    renamed_table = {}
+    for key in raw_table:
+        renamed_table[group_map[key]] = raw_table[key]
+
+    return renamed_table
+
+
+def read_age_table() -> Dict[str, int]:
+    age_map = read_demographic_table(paths.LACPH_AGE_RAW, AGE_MAP)
+
+    with open(paths.POPULATION_AGE, 'w') as f:
+        json.dump(age_map, f)
+
+    return age_map
+
+
+def read_gender_table() -> Dict[str, int]:
+    gender_map = read_demographic_table(paths.LACPH_GENDER_RAW)
+
+    with open(paths.POPULATION_GENDER, 'w') as f:
+        json.dump(gender_map, f)
+
+    return gender_map
+
+
+def read_race_table() -> Dict [str, int]:
+    race_map = read_demographic_table(paths.LACPH_RACE_RAW, RACE_MAP)
+
+    with open(paths.POPULATION_RACE, 'w') as f:
+        json.dump(race_map, f)
+
+    return race_map
+
+if __name__ == "__main__":
+    read_csa_table()
+    read_age_table()
+    read_gender_table()
+    read_race_table()

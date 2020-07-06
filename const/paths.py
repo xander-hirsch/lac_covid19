@@ -28,12 +28,15 @@ DIR_GEOCODING = os.path.join(DIR_GEO, 'geocode')
 ADDRESSES_REQUEST = os.path.join(DIR_GEOCODING, 'addresses.{}').format(CSV)
 ADDRESSES_RESPONSE = os.path.join(DIR_GEOCODING, 'geocoderesult.{}'.format(CSV))
 
-DIR_POPULATION = os.path.join(DIR_PROJECT, 'lacph_population')
-POP_CSA = os.path.join(DIR_POPULATION, 'city_community_table.{}'.format(CSV))
+DIR_LACPH_TABLES = os.path.join(DIR_PROJECT, 'population', 'lacph_import')
+LACPH_CSA_RAW = os.path.join(DIR_LACPH_TABLES,
+                       'city_community_table.{}'.format(CSV))
 _DEMOGRAPHIC_TABLE = 'demographic_table_{{}}.{csv}'.format(csv=CSV)
-POP_AGE = os.path.join(DIR_POPULATION, _DEMOGRAPHIC_TABLE.format('age'))
-POP_GENDER = os.path.join(DIR_POPULATION, _DEMOGRAPHIC_TABLE.format('gender'))
-POP_RACE = os.path.join(DIR_POPULATION, _DEMOGRAPHIC_TABLE.format('race'))
+LACPH_AGE_RAW = os.path.join(DIR_LACPH_TABLES, _DEMOGRAPHIC_TABLE.format('age'))
+LACPH_GENDER_RAW = os.path.join(DIR_LACPH_TABLES,
+                          _DEMOGRAPHIC_TABLE.format('gender'))
+LACPH_RACE_RAW = os.path.join(DIR_LACPH_TABLES,
+                              _DEMOGRAPHIC_TABLE.format('race'))
 
 TEMPLATE_DATA = 'data-{}.{}'
 
