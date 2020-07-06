@@ -2,6 +2,7 @@ import csv
 import json
 from typing import Dict, Optional
 
+import lac_covid19.const as const
 import lac_covid19.const.groups as group
 import lac_covid19.const.paths as paths
 
@@ -34,9 +35,12 @@ def read_csa_table() -> Dict[str, int]:
 
     for csa in csa_population:
         csa_population[csa] = int(csa_population[csa])
+    
+    csa_population[const.hd.CSA_LB] = const.hd.POPULATION_LONG_BEACH
+    csa_population[const.hd.CSA_PAS] = const.hd.POPULATION_PASADENA
 
     with open(paths.POPULATION_CSA, 'w') as f:
-        json.dump(csa_population, f)
+        json.dump(csa_population, f, indent=const.JSON_INDENT, sort_keys=True)
 
     return csa_population
 
