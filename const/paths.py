@@ -8,6 +8,16 @@ CSV = 'csv'
 PICKLE = 'pickle'
 GEOJSON = 'geojson'
 
+_SUMMARY = 'summary'
+_AGE = 'age'
+_GENDER = 'gender'
+_RACE = 'race'
+_TIME_SERIES = '{}-ts'
+_CSA = 'csa'
+_CSA_CURRENT = '{}-current'.format(_CSA)
+_CSA_TS = _TIME_SERIES.format(_CSA)
+_REGION_TS = _TIME_SERIES.format('region')
+
 DIR_DOCS = os.path.join(DIR_PROJECT, 'docs')
 DIR_PY_CACHE = os.path.join(DIR_DOCS, 'pickle')
 WEBPAGE = os.path.join(DIR_DOCS, 'index.html')
@@ -56,8 +66,12 @@ POPULATION_RACE = _POPULATION_MAP.format('race')
 ADDRESS_GEOCODES = os.path.join(DIR_DOCS, 'address-geocodes.{}'.format(JSON))
 
 DIR_APPEND = os.path.join(DIR_PROJECT, 'append-data')
-_APPEND_CSV = 'append-{{}}.{}'.format(CSV)
-APPEND_CSA_MAP = os.path.join(DIR_APPEND, _APPEND_CSV.format('csa-map'))
+_APPEND_CSV = os.path.join(DIR_APPEND, 'append-{{}}.{}'.format(CSV))
+APPEND_CSA_MAP = _APPEND_CSV.format('csa-map')
+APPEND_SUMMARY = _APPEND_CSV.format(_SUMMARY)
+APPEND_AGE = _APPEND_CSV.format(_AGE)
+APPEND_CSA_TS = _APPEND_CSV.format(_CSA_TS)
+APPEND_REGION_TS = _APPEND_CSV.format(_REGION_TS)
 
 
 def pandas_export(title: str) -> Tuple[str, str]:
@@ -77,6 +91,7 @@ def pandas_export(title: str) -> Tuple[str, str]:
 
     return (os.path.join(DIR_DOCS, csv_file),
             os.path.join(DIR_PICKLED, pickle_file))
+
 
 MAIN_STATS_CSV, MAIN_STATS_PICKLE = pandas_export('summary')
 AGE_CSV, AGE_PICKLE = pandas_export('age')
