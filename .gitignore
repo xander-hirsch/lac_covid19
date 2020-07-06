@@ -2,6 +2,8 @@
 **/__pycache__
 .ipynb_checkpoints/**
 
+append-data/*.csv
+
 daily_pr/cached-html/*.html
 daily_pr/parsed-json/*.json
 

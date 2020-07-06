@@ -55,6 +55,10 @@ POPULATION_RACE = _POPULATION_MAP.format('race')
 
 ADDRESS_GEOCODES = os.path.join(DIR_DOCS, 'address-geocodes.{}'.format(JSON))
 
+DIR_APPEND = os.path.join(DIR_PROJECT, 'append-data')
+_APPEND_CSV = 'append-{{}}.{}'.format(CSV)
+APPEND_CSA_MAP = os.path.join(DIR_APPEND, _APPEND_CSV.format('csa-map'))
+
 
 def pandas_export(title: str) -> Tuple[str, str]:
     """Generates paths for a pandas dataframe given a description.
@@ -80,3 +84,4 @@ GENDER_CSV, GENDER_PICKLE = pandas_export('gender')
 RACE_CSV, RACE_PICKLE = pandas_export('race')
 CSA_TS_CSV, CSA_TS_PICKLE = pandas_export('csa-ts')
 REGION_TS_CSV, REGION_TS_PICKLE = pandas_export('region-ts')
+CSA_CURRENT_CSV, CSA_CURRENT_PICKLE = pandas_export('csa-current')

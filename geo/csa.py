@@ -15,7 +15,7 @@ DIR_GEO = os.path.dirname(__file__)
 FEATURES = 'features'
 PROPERTIES = 'properties'
 GEOMETRY = 'geometry'
-OBJECTID = 'OBJECTID'
+OBJECTID_LAC = 'OBJECTID'
 CSA_LABEL = 'LABEL'
 TYPE = 'type'
 FEATURE_COLLECTION = 'FeatureCollection'
@@ -37,7 +37,7 @@ def request_csa() -> Dict[str, Dict]:
         csa_geo_mapping = {}
         for item in raw_csa[FEATURES]:
             if item[TYPE] == TYPE_FEATURE:
-                obj_id = item[PROPERTIES][OBJECTID]
+                obj_id = item[PROPERTIES][OBJECTID_LAC]
                 area = item[PROPERTIES][CSA_LABEL]
                 geometry = item[GEOMETRY]
                 csa_geo_mapping[area] = obj_id, geometry
@@ -77,7 +77,7 @@ def merge_csa_geo():
         geo_csa_stats[FEATURES] += {
             TYPE: TYPE_FEATURE,
             PROPERTIES: {
-                OBJECTID: obj_id,
+                col.OBJECTID: obj_id,
                 col.AREA: area,
                 col.REGION: region,
                 col.CASES: cases,

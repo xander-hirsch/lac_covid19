@@ -3,12 +3,16 @@ import re
 from typing import Dict, List, Tuple
 
 import bs4
+import pandas as pd
 import requests
 
+import lac_covid19.const as const
 import lac_covid19.const.columns as col
 import lac_covid19.const.health_departments as health_dept
 import lac_covid19.const.paths as paths
 import lac_covid19.const.lac_regions as lac_regions
+import lac_covid19.data_mgmt as data_mgmt
+import lac_covid19.geo as geo
 # import lac_covid19.current_stats.addresses as addresses
 
 STATS_URL = 'http://publichealth.lacounty.gov/media/Coronavirus/locations.htm'
@@ -21,7 +25,7 @@ RE_LOS_ANGELES = re.compile('^Los Angeles$')
 
 def fetch_stats() -> List[bs4.Tag]:
     """Fetches most recent COVID-19 counts from Los Angeles Public Health.
-    
+
     Returns:
         A list where each entry is a table from the website.
             0: Case summary
@@ -42,7 +46,7 @@ def fetch_stats() -> List[bs4.Tag]:
 
 def break_summary(summary_table: bs4.Tag) -> List[bs4.Tag]:
     """Breaks the summary table into its parts.
-    
+
     Returns:
         Header for each section.
         0: Laboratory confirmed cases
@@ -69,16 +73,28 @@ def parse_health_dept_count(count_header: bs4.Tag) -> Dict[str, int]:
 
         health_dept_count[department] = count
 
-    
+
     return health_dept_count
 
+def csa_index() -> pd.Index:
+    return pd.Index((const.AREA, const.REGION, const.CASES, const.CASE_RATE,
+                     const.DEATHS, const.DEATH_RATE, const.CF_OUTBREAK))
 
-def parse_csa(
-        areas_header: bs4.Tag) -> List[Tuple[str, str, int, int, int, int]]:
+
+def parse_csa(areas_header: bs4.Tag) -> pd.DataFrame:
     """Parses the cases and deaths by area."""
 
-    area_stats = [(col.AREA, col.REGION, col.CASES, col.CASE_RATE,
-                   col.DEATHS, col.DEATH_RATE, col.CF_OUTBREAK)]
+    df = pd.DataFrame(
+        {
+            const.AREA: pd.Series(dtype='string'),
+            const.REGION: pd.Series(dtype='string'),
+            const.CASES: pd.Series(dtype=int),
+            const.CASE_RATE: pd.Series(dtype=int),
+            const.DEATHS: pd.Series(dtype=int),
+            const.DEATH_RATE: pd.Series(dtype=int),
+            const.CF_OUTBREAK: pd.Series(dtype=bool)
+        }
+    )
 
     area_entry = areas_header.find_next('tr')
     while area_entry is not None:
@@ -94,16 +110,16 @@ def parse_csa(
             if csa[-1] == '*':
                 csa = csa[:-1]
                 cf_outbreak = True
-            area_stats += ((csa, lac_regions.REGION_MAP[csa], int(cases),
-                            int(case_rate), int(deaths), int(death_rate),
-                            cf_outbreak),)
+
+            table_row = pd.Series((csa, lac_regions.REGION_MAP[csa],
+                                   int(cases), int(case_rate),
+                                   int(deaths), int(death_rate),
+                                   cf_outbreak), index=csa_index())
+            df = df.append(table_row, ignore_index=True)
 
         area_entry = area_entry.find_next('tr')
 
-    return area_stats
-    # with open(paths.CSA_CURRENT, 'w') as f:
-    #     writer = csv.writer(f)
-    #     writer.writerows(area_stats)
+    return df
 
 
 def query_all_areas(
@@ -128,10 +144,10 @@ def query_all_areas(
     lb_case_rate = round(lb_cases * lb_multiplier)
     lb_death_rate = round(lb_deaths * lb_multiplier)
 
-    long_beach_entry = [(health_dept.CSA_LB, lac_regions.HARBOR,
-                         lb_cases, lb_case_rate, lb_deaths, lb_death_rate,
-                         False)]
-    
+    long_beach_entry = pd.Series(
+        (health_dept.CSA_LB, lac_regions.HARBOR, lb_cases, lb_case_rate,
+         lb_deaths, lb_death_rate, False), index=csa_index())
+
     pas_cases = hd_cases[health_dept.PASADENA]
     pas_deaths = hd_deaths[health_dept.PASADENA]
 
@@ -139,11 +155,18 @@ def query_all_areas(
     pas_case_rate = round(pas_cases * pas_multiplier)
     pas_death_rate = round(pas_deaths * pas_multiplier)
 
-    pasadena_entry = [(health_dept.CSA_PAS, lac_regions.VERDUGOS,
-                       pas_cases, pas_case_rate, pas_deaths, pas_death_rate,
-                       False)]
-    
-    return csa_cases_deaths + long_beach_entry + pasadena_entry
+    pasadena_entry = pd.Series(
+        (health_dept.CSA_PAS, lac_regions.VERDUGOS, pas_cases, pas_case_rate,
+         pas_deaths, pas_death_rate, False), index=csa_index())
+
+    all_csa = (csa_cases_deaths
+               .append(long_beach_entry, ignore_index=True)
+               .append(pasadena_entry, ignore_index=True))
+
+    all_csa[const.AREA] = all_csa[const.AREA].astype('string')
+    all_csa[const.REGION] = all_csa[const.REGION].astype('string')
+
+    return all_csa
 
 
 # def parse_residental(residential_table):
@@ -167,11 +190,17 @@ def query_all_areas(
 
 if __name__ == "__main__":
     all_tables = fetch_stats()
+    csa_table = break_summary(all_tables[0])[-1]
 
+    # area_cases_deaths = parse_csa(csa_table)
     area_cases_deaths = query_all_areas(all_tables[0])
-    with open(paths.CSA_CURRENT, 'w') as f:
-        writer = csv.writer(f)
-        writer.writerows(area_cases_deaths)
+    data_mgmt.write_dataframe(area_cases_deaths,
+                              paths.CSA_CURRENT_CSV, paths.CSA_CURRENT_PICKLE)
+    # area_cases_deaths.to_csv(paths.CSA_CURRENT_CSV, index=False)
+    # area_cases_deaths.to_pickle(paths.CSA_CURRENT_PICKLE)
+    # with open(paths.CSA_CURRENT, 'w') as f:
+    #     writer = csv.writer(f)
+    #     writer.writerows(area_cases_deaths)
 
     # residential_congregate = all_tables[1]
     # residential_listings = parse_residental(residential_congregate)

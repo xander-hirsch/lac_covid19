@@ -37,6 +37,8 @@ ADDRESS = 'Address'
 STAFF_CASES = 'Staff {}'.format(CASES)
 RESID_CASES = 'Resident {}'.format(CASES)
 
+OBJECTID = 'ObjectId'
+
 
 def stat_by_group(stat: str, group: str) -> str:
     """Provides consistant naming to statistic descriptors"""
