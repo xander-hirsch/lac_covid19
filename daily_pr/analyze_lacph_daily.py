@@ -10,11 +10,11 @@ import numpy as np
 import pandas as pd
 
 import lac_covid19.const.columns as col
-import lac_covid19.const.groups as group
 import lac_covid19.const.lac_regions as lac_regions
 import lac_covid19.const.health_departments as health_dept
 import lac_covid19.const.paths as paths
 import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats
+import lac_covid19.population as population
 
 DATE = col.DATE
 CASES = col.CASES
@@ -28,93 +28,6 @@ AREA = col.AREA
 REGION = col.REGION
 POPULATION = col.POPULATION
 CF_OUTBREAK = col.CF_OUTBREAK
-
-
-def demographic_table(table_dir: str, desc: str) -> str:
-    """Returns the file path of the population counts for the passed demographic
-        description. See lacph_import/README.md for more details.
-    """
-    return os.path.join(table_dir, 'demographic_table_{}.csv'.format(desc))
-
-TABLE_DIR = paths.DIR_POPULATION
-
-
-def read_lacph_table(table_path: str,
-                     indep_var: str, pop_var: str) -> pd.Series:
-    """Produces a mapping between demographic groups and population size.
-
-    Args:
-        table_path: The path of the CSV file to read.
-        indep_var: The column whose values identify the group to which a
-            population count referes.
-        pop_var: The column whose values are the population estimates for a
-            group.
-
-    Returns:
-        A pandas Series with the groups as indicies and population counts as
-            data.
-    """
-
-    df = pd.read_csv(table_path)
-    df = df[df[pop_var].notna()]
-    df[pop_var] = df[pop_var].convert_dtypes()
-
-    return pd.Series(df[pop_var].to_numpy('int'),
-                     index=df[indep_var].to_numpy('str'))
-
-
-def read_csa_population() -> pd.Series:
-    """Reads the population per countywide statistical area."""
-    table_path = os.path.join(TABLE_DIR, 'city_community_table.csv')
-    indep_var = 'geo_merge'
-    pop_var = 'population'
-    lac_raw = read_lacph_table(table_path, indep_var, pop_var)
-
-    lb_pas = pd.Series((health_dept.POPULATION_LONG_BEACH,
-                        health_dept.POPULATION_PASADENA),
-                       index=(health_dept.CSA_LB, health_dept.CSA_PAS))
-
-    return lac_raw.append(lb_pas)
-
-
-def read_demographic_population(demographic: str) -> pd.Series:
-    """Helper function to read in a demographic table for its population
-        entries.
-    """
-
-    table_path = demographic_table(TABLE_DIR, demographic)
-    characteristic = 'characteristic'
-    population = 'POP'
-
-    return read_lacph_table(table_path, characteristic, population)
-
-
-def read_age_population() -> pd.Series:
-    raw_values = read_demographic_population('age')
-    new_names = (
-        group.AGE_0_17,
-        group.AGE_18_40,
-        group.AGE_41_65,
-        group.AGE_OVER_65,
-    )
-    return pd.Series(raw_values.to_numpy('int'), index=new_names)
-
-
-def read_gender_population() -> pd.Series:
-    return read_demographic_population('gender')
-
-
-def read_race_population() -> pd.Series:
-    raw_values = read_demographic_population('race')
-    new_names = (
-        group.RACE_AI_AN,
-        group.RACE_ASIAN,
-        group.RACE_BLACK,
-        group.RACE_HL,
-        group.RACE_NH_PI,
-        group.RACE_WHITE,
-    )
-    return pd.Series(raw_values.to_numpy('int'), index=new_names)
 
 
 def calculate_rate(date_group_entry: pd.Series, population_map: pd.Series,
@@ -238,7 +151,7 @@ def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     data = map(lambda x: make_section_ts(x, col.CASES_BY_AGE), many_daily_pr)
     df = tidy_data(pd.DataFrame(data), AGE_GROUP, CASES)
 
-    age_pop = read_age_population()
+    age_pop = population.AGE
     df[CASE_RATE] = df.apply(
         lambda x: calculate_rate(x, age_pop, AGE_GROUP, CASES), axis='columns')
 
@@ -263,7 +176,7 @@ def create_by_gender(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     df[GENDER] = df[GENDER].astype('category')
     df[CASES] = df[CASES].astype('int')
 
-    gender_pop = read_gender_population()
+    gender_pop = population.GENDER
     df[CASE_RATE] = df.apply(
         lambda x: calculate_rate(x, gender_pop, GENDER, CASES), axis='columns')
 
@@ -299,7 +212,7 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
 
     df_all = df_all.sort_values(by=[DATE, RACE]).reset_index(drop=True)
 
-    race_pop = read_race_population()
+    race_pop = population.RACE
 
     df_all[CASE_RATE] = df_all.apply(
         lambda x: calculate_rate(x, race_pop, RACE, CASES), axis='columns')
@@ -380,7 +293,7 @@ def aggregate_locations(
             dt[Cases], dt[Case Rate].
      """
 
-    area_population = read_csa_population()
+    area_population = population.CSA
     df_all_loc = df_all_loc.drop(columns=CASE_RATE)
     # Only keep areas assigned a region
     df_all_loc = df_all_loc[df_all_loc[REGION].notna()]
@@ -467,7 +380,7 @@ def create_custom_region(df_all_loc: pd.DataFrame,
             returned time series.
     """
 
-    area_population = read_csa_population()
+    area_population = population.CSA
     region_pop = 0
     for area in areas:
         region_pop += area_population[area]

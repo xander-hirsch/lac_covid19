@@ -2,6 +2,7 @@ import lac_covid19.const.paths as paths
 import lac_covid19.daily_pr.analyze_lacph_daily as analyze_lacph_daily
 import lac_covid19.daily_pr.bad_data as bad_data
 import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats
+import lac_covid19.data_mgmt as data_mgmt
 
 to_export = (
     (paths.MAIN_STATS_CSV, paths.MAIN_STATS_PICKLE,
@@ -19,8 +20,7 @@ if __name__ == "__main__":
 
     for csv_file, pickle_file, function in to_export:
         df = function(all_dates)
-        df.to_csv(csv_file)
-        df.to_pickle(pickle_file)
+        data_mgmt.write_dataframe(df, csv_file, pickle_file)
 
     df_csa = analyze_lacph_daily.create_by_area(all_dates)
     df_region = analyze_lacph_daily.aggregate_locations(
@@ -32,5 +32,4 @@ if __name__ == "__main__":
     )
 
     for csv_file, pickle_file, df in location_export:
-        df.to_csv(csv_file)
-        df.to_pickle(pickle_file)
+        data_mgmt.write_dataframe(df, csv_file, pickle_file)
