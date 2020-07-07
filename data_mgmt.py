@@ -1,3 +1,4 @@
+import copy
 import datetime as dt
 import pprint
 
@@ -12,6 +13,8 @@ import lac_covid19.daily_pr.analyze_lacph_daily as analyze_lacph_daily
 import lac_covid19.geo as geo
 import lac_covid19.geo.csa as geo_csa
 
+tz_offset = pd.to_timedelta(7, unit='hours')
+
 
 def write_dataframe(df, csv_path: str, pickle_path: str) -> None:
     df.to_csv(csv_path, index=False)
@@ -22,7 +25,10 @@ def new_daily_pr(date_: str):
     year, month, day = [int(x) for x in date_.split('-')]
     daily_stats = scrape_daily_stats.query_single_date((year, month, day),
                                                        False)
-    pprint.pprint(daily_stats, sort_dicts=False)
+    stat_summary = copy.deepcopy(daily_stats)
+    stat_summary[const.AREA] = "**{} reported CSA's**".format(
+        len(stat_summary[const.AREA]))
+    pprint.pprint(stat_summary, sort_dicts=False)
 
 
 def export_time_series():
@@ -86,18 +92,22 @@ def append_time_series(date_: str):
 
     df_summary = pd.read_pickle(paths.MAIN_STATS_PICKLE)
     df_summary = df_summary[df_summary[DATE] == date_]
+    df_summary[DATE] = df_summary[DATE].apply(lambda x: x + tz_offset)
     df_summary.to_csv(paths.APPEND_SUMMARY, index=False)
 
-    df_age = pd.read_pickle(paths.MAIN_STATS_PICKLE)
+    df_age = pd.read_pickle(paths.AGE_PICKLE)
     df_age = df_age[df_age[DATE] == date_]
+    df_age[DATE] = df_age[DATE].apply(lambda x: x + tz_offset)
     df_age.to_csv(paths.APPEND_AGE, index=False)
 
     df_csa_ts = pd.read_pickle(paths.CSA_TS_PICKLE)
     df_csa_ts = df_csa_ts[df_csa_ts[DATE] == date_]
+    df_csa_ts[DATE] = df_csa_ts[DATE].apply(lambda x: x + tz_offset)
     df_csa_ts.to_csv(paths.APPEND_CSA_TS, index=False)
 
     df_region_ts = pd.read_pickle(paths.REGION_TS_PICKLE)
     df_region_ts = df_region_ts[df_region_ts[DATE] == date_]
+    df_region_ts[DATE] = df_region_ts[DATE].apply(lambda x: x + tz_offset)
     df_region_ts.to_csv(paths.APPEND_REGION_TS, index=False)
 
 

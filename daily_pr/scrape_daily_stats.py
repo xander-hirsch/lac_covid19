@@ -28,7 +28,7 @@ RE_TESTING_1 = re.compile(
     'testing\s+results\s+available.+\s([\d,]{6,})\s+individuals.+\s(\d{1,2})%.+testing\s+positive')  # pylint: disable=line-too-long
 
 RE_TESTING_2 = re.compile(
-    'Testing\s+results\s+are\s+available\s+for.+\s([\d,]{6,})\s+individuals,\s+with\s+(\d{1,2})%\s+of\s+people\s+testing\s+positive'  # pylint: disable=line-too-long
+    'Testing\s+results\s+are\s+available\s+for.+\s([\d,]{6,})\s+individuals,?\s+with\s+(\d{1,2})%\s+of\s+(all\s+)?people\s+testing\s+positive'  # pylint: disable=line-too-long
 )
 
 RE_NEW_DEATHS_CASES = re.compile(
