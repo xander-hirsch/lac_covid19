@@ -1,4 +1,3 @@
-import csv
 import re
 from typing import Dict, List, Tuple
 
@@ -9,11 +8,7 @@ import requests
 import lac_covid19.const as const
 import lac_covid19.const.columns as col
 import lac_covid19.const.health_departments as health_dept
-import lac_covid19.const.paths as paths
 import lac_covid19.const.lac_regions as lac_regions
-import lac_covid19.data_mgmt as data_mgmt
-import lac_covid19.geo as geo
-# import lac_covid19.current_stats.addresses as addresses
 
 STATS_URL = 'http://publichealth.lacounty.gov/media/Coronavirus/locations.htm'
 
@@ -193,9 +188,9 @@ if __name__ == "__main__":
     csa_table = break_summary(all_tables[0])[-1]
 
     # area_cases_deaths = parse_csa(csa_table)
-    area_cases_deaths = query_all_areas(all_tables[0])
-    data_mgmt.write_dataframe(area_cases_deaths,
-                              paths.CSA_CURRENT_CSV, paths.CSA_CURRENT_PICKLE)
+    # area_cases_deaths = query_all_areas(all_tables[0])
+    # data_mgmt.write_dataframe(area_cases_deaths,
+    #                           paths.CSA_CURRENT_CSV, paths.CSA_CURRENT_PICKLE)
     # area_cases_deaths.to_csv(paths.CSA_CURRENT_CSV, index=False)
     # area_cases_deaths.to_pickle(paths.CSA_CURRENT_PICKLE)
     # with open(paths.CSA_CURRENT, 'w') as f:

@@ -34,13 +34,13 @@ def new_daily_pr(date_: str):
 def export_time_series():
     to_export = (
         (paths.MAIN_STATS_CSV, paths.MAIN_STATS_PICKLE,
-        analyze_lacph_daily.create_main_stats),
+         analyze_lacph_daily.create_main_stats),
         (paths.AGE_CSV, paths.AGE_PICKLE,
-        analyze_lacph_daily.create_by_age),
+         analyze_lacph_daily.create_by_age),
         (paths.GENDER_CSV, paths.GENDER_PICKLE,
-        analyze_lacph_daily.create_by_gender),
+         analyze_lacph_daily.create_by_gender),
         (paths.RACE_CSV, paths.RACE_PICKLE,
-        analyze_lacph_daily.create_by_race),
+         analyze_lacph_daily.create_by_race),
     )
 
     all_dates = scrape_daily_stats.query_all_dates()
@@ -111,7 +111,7 @@ def append_time_series(date_: str):
     df_region_ts.to_csv(paths.APPEND_REGION_TS, index=False)
 
 
-def append_all(date_ = None):
+def append_all(date_=None):
     if date_ is None:
         date_ = dt.date.today()
 
@@ -119,17 +119,17 @@ def append_all(date_ = None):
     append_time_series(date_)
 
 
-def update_data(date_ = None):
+def update_data(date_=None):
     if date_ is None:
         date_ = dt.date.today()
-    
+
     export_time_series()
 
     request_current_csa()
     geo_csa.merge_csa_geo()
 
     append_all(date_)
-    
+
 
 
 # if __name__ == "__main__":

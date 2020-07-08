@@ -46,7 +46,7 @@ def _extract_coordinates(address_match: Dict[str, Any]) -> Tuple[float, float]:
 
 
 def _interpret_census_geocode(
-    query_reply: List[Dict[str, Any]]) -> Optional[Tuple[float, float]]:
+        query_reply: List[Dict[str, Any]]) -> Optional[Tuple[float, float]]:
 
     if len(query_reply) == 1:
         return _extract_coordinates(query_reply[0])
@@ -88,7 +88,7 @@ def read_geocodes():
     for address in unsuccessful_geocodes:
         print('{} of {}: {}'.format(current_request, total_single_requests,
                                     address),
-               end=' ')
+              end=' ')
 
         latitude, longitude = None, None
         result_msg = 'FAILED'

@@ -21,7 +21,7 @@ def read_population_csv(table_path: str, key_index: int,
     raw_table = None
     with open(table_path) as f:
         reader = csv.reader(f)
-        raw_table = [x for x in reader][1:]
+        raw_table = list(reader)[1:]
 
     population_mapping = {}
     for row in raw_table:
@@ -35,7 +35,7 @@ def read_csa_table() -> Dict[str, int]:
 
     for csa in csa_population:
         csa_population[csa] = int(csa_population[csa])
-    
+
     csa_population[const.hd.CSA_LB] = const.hd.POPULATION_LONG_BEACH
     csa_population[const.hd.CSA_PAS] = const.hd.POPULATION_PASADENA
 
@@ -60,21 +60,21 @@ RACE_MAP = {'American Indian or Alaska Native': group.RACE_AI_AN,
 
 
 def read_demographic_table(
-    table_path: str,
-    group_map: Optional[Dict[str, str]] = None) -> Dict[str, int]:
+        table_path: str,
+        group_map: Optional[Dict[str, str]] = None) -> Dict[str, int]:
 
     raw_table = read_population_csv(table_path, 1, -1)
 
     del raw_table[UNKOWN]
     if group.OTHER in raw_table:
         del raw_table[group.OTHER]
-    
+
     for key in raw_table:
         raw_table[key] = int(raw_table[key])
 
     if group_map is None:
         return raw_table
-    
+
     renamed_table = {}
     for key in raw_table:
         renamed_table[group_map[key]] = raw_table[key]
@@ -100,7 +100,7 @@ def read_gender_table() -> Dict[str, int]:
     return gender_map
 
 
-def read_race_table() -> Dict [str, int]:
+def read_race_table() -> Dict[str, int]:
     race_map = read_demographic_table(paths.LACPH_RACE_RAW, RACE_MAP)
 
     with open(paths.POPULATION_RACE, 'w') as f:

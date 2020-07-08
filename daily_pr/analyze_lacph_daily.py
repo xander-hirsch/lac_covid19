@@ -11,7 +11,6 @@ import pandas as pd
 
 import lac_covid19.const.columns as col
 import lac_covid19.const.lac_regions as lac_regions
-import lac_covid19.const.health_departments as health_dept
 import lac_covid19.const.paths as paths
 import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats
 import lac_covid19.population as population

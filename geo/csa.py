@@ -1,8 +1,8 @@
-import csv
 import json
 import os.path
-from typing import Dict, List
+from typing import Dict
 
+import pandas as pd
 import requests
 
 import lac_covid19.const as const
@@ -22,8 +22,10 @@ TYPE = 'type'
 FEATURE_COLLECTION = 'FeatureCollection'
 TYPE_FEATURE = 'Feature'
 
+COMPACT_SEPERATORS = ',', ':'
 
-def request_csa() -> Dict[str, Dict]:
+
+def _request_csa() -> Dict[str, Dict]:
     """Requests the countywide statistical areas geojson from online."""
 
     r = requests.get(URL_CSA_GEOJSON)
@@ -40,7 +42,7 @@ def request_csa() -> Dict[str, Dict]:
                 csa_geo_mapping[area] = geometry
 
         with open(paths.CSA_POLYGONS, 'w') as f:
-            json.dump(csa_geo_mapping, f)
+            json.dump(csa_geo_mapping, f, separators=COMPACT_SEPERATORS)
 
         return csa_geo_mapping
 
@@ -52,14 +54,14 @@ def load_csa_mapping() -> Dict[str, Dict]:
         with open(paths.CSA_POLYGONS) as f:
             return json.load(f)
     else:
-        return request_csa()
+        return _request_csa()
 
 
 def parse_csa_objectid() -> Dict[str, int]:
     raw_data = None
     with open(paths.CSA_ARCGIS_QUERY) as f:
         raw_data = json.load(f)
-    
+
     raw_data = raw_data[FEATURES]
 
     objectid_mapping = {}
@@ -67,10 +69,10 @@ def parse_csa_objectid() -> Dict[str, int]:
         obj_id = entry[ATTRIBUTES][const.OBJECTID]
         area = entry[ATTRIBUTES][const.AREA]
         objectid_mapping[area] = obj_id
-    
+
     with open(paths.CSA_OBJECTID, 'w') as f:
         json.dump(objectid_mapping, f)
-    
+
     return objectid_mapping
 
 
@@ -78,33 +80,30 @@ def merge_csa_geo():
     """Merges the recent CSA cases and deaths with the geographic data."""
 
     csa_mapping = load_csa_mapping()
-    csa_entries = None
-    with open(paths.CSA_CURRENT) as f:
-        reader = csv.reader(f)
-        csa_entries = [x for x in reader][1:]
+    csa_entries = pd.read_pickle(paths.CSA_CURRENT_PICKLE)
 
     geo_csa_stats = {TYPE: FEATURE_COLLECTION, FEATURES: []}
-    for csa_stats in csa_entries:
-        area, region, cases, case_rate, deaths, death_rate, cf_outbreak = \
-            csa_stats
-
+    for x in csa_entries.iterrows():
+        csa_entry = x[1]
+        area = csa_entry[const.AREA]
         geometry = csa_mapping[area]
-        geo_csa_stats[FEATURES] += {
+
+        geo_csa_stats[FEATURES] += ({
             TYPE: TYPE_FEATURE,
             PROPERTIES: {
                 col.AREA: area,
-                col.REGION: region,
-                col.CASES: cases,
-                col.CASE_RATE: case_rate,
-                col.DEATHS: deaths,
-                col.DEATH_RATE: death_rate,
-                col.CF_OUTBREAK: cf_outbreak,
+                col.REGION: csa_entry[const.REGION],
+                col.CASES: csa_entry[const.CASES],
+                col.CASE_RATE: csa_entry[const.CASE_RATE],
+                col.DEATHS: csa_entry[const.DEATHS],
+                col.DEATH_RATE: csa_entry[const.DEATH_RATE],
+                col.CF_OUTBREAK: csa_entry[const.CF_OUTBREAK],
             },
             GEOMETRY: geometry,
-        },
+        },)
 
     with open(paths.CSA_GEO_STATS, 'w') as f:
-        json.dump(geo_csa_stats, f)
+        json.dump(geo_csa_stats, f, separators=COMPACT_SEPERATORS)
 
 
 # if __name__ == "__main__":

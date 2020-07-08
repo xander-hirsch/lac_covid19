@@ -42,11 +42,11 @@ ADDRESSES_RESPONSE = os.path.join(DIR_GEOCODING, 'geocoderesult.{}'.format(CSV))
 
 DIR_LACPH_TABLES = os.path.join(DIR_PROJECT, 'population', 'lacph_import')
 LACPH_CSA_RAW = os.path.join(DIR_LACPH_TABLES,
-                       'city_community_table.{}'.format(CSV))
+                             'city_community_table.{}'.format(CSV))
 _DEMOGRAPHIC_TABLE = 'demographic_table_{{}}.{csv}'.format(csv=CSV)
 LACPH_AGE_RAW = os.path.join(DIR_LACPH_TABLES, _DEMOGRAPHIC_TABLE.format('age'))
 LACPH_GENDER_RAW = os.path.join(DIR_LACPH_TABLES,
-                          _DEMOGRAPHIC_TABLE.format('gender'))
+                                _DEMOGRAPHIC_TABLE.format('gender'))
 LACPH_RACE_RAW = os.path.join(DIR_LACPH_TABLES,
                               _DEMOGRAPHIC_TABLE.format('race'))
 
@@ -59,7 +59,8 @@ RESIDENTIAL = os.path.join(DIR_DOCS, TEMPLATE_DATA.format('residential', CSV))
 RAW_DATA = os.path.join(DIR_PICKLED, TEMPLATE_DATA.format('raw', PICKLE))
 
 DIR_POPULATION = os.path.join(DIR_DOCS, 'population')
-_POPULATION_MAP = os.path.join(DIR_POPULATION, 'population-{{}}.{ext}'.format(ext=JSON))
+_POPULATION_MAP = os.path.join(DIR_POPULATION,
+                               'population-{{}}.{ext}'.format(ext=JSON))
 POPULATION_CSA = _POPULATION_MAP.format('csa')
 POPULATION_AGE = _POPULATION_MAP.format('age')
 POPULATION_GENDER = _POPULATION_MAP.format('gender')
