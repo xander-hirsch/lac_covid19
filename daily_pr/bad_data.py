@@ -27,6 +27,7 @@ BAD_HTML_FORMAT = (
     (2020, 6, 20),
     (2020, 6, 21),
     (2020, 7, 1),
+    (2020, 7, 14),
 )
 
 HARDCODE_NEW_CASES_DEATHS = {
@@ -35,6 +36,7 @@ HARDCODE_NEW_CASES_DEATHS = {
     (2020, 7, 1): (2002, 35),
     (2020, 7, 2): (2204, 55),
     (2020, 7, 7): (4015, 46),
+    (2020, 7, 14): (4244, 73),
 }
 
 REPORTING_SYSTEM_UPDATE = pd.DataFrame(
