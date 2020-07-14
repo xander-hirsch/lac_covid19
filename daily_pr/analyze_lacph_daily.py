@@ -9,9 +9,11 @@ from typing import Any, Dict, Iterable, Optional, Tuple, Union
 import numpy as np
 import pandas as pd
 
+import lac_covid19.const as const
 import lac_covid19.const.columns as col
 import lac_covid19.const.lac_regions as lac_regions
 import lac_covid19.const.paths as paths
+import lac_covid19.daily_pr.bad_data as bad_data
 import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats
 import lac_covid19.population as population
 
@@ -131,8 +133,14 @@ def create_main_stats(
     }
 
     df = pd.DataFrame(data)
-    df[TEST_RESULTS] = df[TEST_RESULTS].convert_dtypes()
-    df[PERCENT_POSITIVE] = df[PERCENT_POSITIVE].convert_dtypes()
+    df = (df.append(bad_data.REPORTING_SYSTEM_UPDATE)
+          .sort_values(DATE)
+          .reset_index(drop=True))
+
+    has_missing_data = (CASES, DEATHS, const.NEW_DEATHS, const.HOSPITALIZATIONS,
+                        TEST_RESULTS, PERCENT_POSITIVE)
+    for column in has_missing_data:
+        df[column] = df[column].convert_dtypes()
 
     return df
 
@@ -454,8 +462,8 @@ if __name__ == "__main__":
 
     # df_area = create_by_area(every_day)
     # df_region = aggregate_locations(df_area)
-    df_area_recent = create_by_area(last_week)
-    df_region_recent = aggregate_locations(df_area_recent)
+    # df_area_recent = create_by_area(last_week)
+    # df_region_recent = aggregate_locations(df_area_recent)
 
     # csa_pop = read_csa_population()
     # df_custom_region = create_custom_region(

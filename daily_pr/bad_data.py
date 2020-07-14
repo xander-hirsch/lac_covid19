@@ -1,3 +1,7 @@
+import pandas as pd
+
+import lac_covid19.const as const
+
 _unic_val_verde = 'Unincorporated - Val Verde'
 BAD_DATE_AREA = (
     ('2020-04-26', _unic_val_verde),
@@ -32,3 +36,7 @@ HARDCODE_NEW_CASES_DEATHS = {
     (2020, 7, 2): (2204, 55),
     (2020, 7, 7): (4015, 46),
 }
+
+REPORTING_SYSTEM_UPDATE = pd.DataFrame(
+    {const.DATE: [pd.Timestamp(2020, 7, x) for x in (3, 4, 5)],
+     const.NEW_CASES: (2643, 3187, 1402)})
