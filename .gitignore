@@ -18,7 +18,8 @@ pickled/*.pickle
 scratchpad.py
 lacph_graphs.ipynb
 
+lacph-monitor/pushbullet-log/
 lacph-monitor/Guidance*.pdf
 lacph-monitor/pr-listing-previous.html
 lacph-monitor/target-date.txt
-lacph-monitor/*.log
+lacph-monitor/monitor.log

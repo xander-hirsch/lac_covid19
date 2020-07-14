@@ -1,14 +1,17 @@
 #!/bin/bash
 
 PROJECT_DIR=$(dirname $(readlink --canonicalize $0))
+source $PROJECT_DIR/helper.sh
+
+LOG_NAME='Press Release'
+ALERT_MSG='New press release'
+
 DATE_TARGET="$PROJECT_DIR/target-date.txt"
 PREVIOUS_HTML="$PROJECT_DIR/pr-listing-previous.html"
 CURRENT_HTML="$PROJECT_DIR/pr-listing-current.html"
 
 TOMORROW='tomorrow'
 LYNX_OPTS='-dump -nonumbers -nolist'
-
-cd $PROJECT_DIR
 
 request_page() {
     curl --compressed --silent \
@@ -36,6 +39,8 @@ initialize() {
     echo 'LACPH monitor initalized'
     exit
 }
+
+cd $PROJECT_DIR
 
 # Stop checking until tomorrow or reset
 if [ $# -eq 1 ]
@@ -69,11 +74,15 @@ request_page $CURRENT_HTML
 old_hash=($(lynx $LYNX_OPTS $PREVIOUS_HTML | sha1sum))
 new_hash=($(lynx $LYNX_OPTS $CURRENT_HTML | sha1sum))
 
+logreport=$NO_CHANGE
+
 if [ $old_hash != $new_hash ]
 then
-    ./alert-phone.sh 'New Press Release'
+    alert_phone "$ALERT_MSG"
     mv $CURRENT_HTML $PREVIOUS_HTML
+    logreport=$CHANGE
 else
     rm $CURRENT_HTML
-    echo "No changes"
 fi
+
+write_log "$LOG_NAME" "$logreport"

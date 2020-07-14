@@ -1,6 +1,7 @@
 #!/bin/bash
 
 PROJECT_DIR=$(dirname $(readlink --canonicalize $0))
+source $PROJECT_DIR/helper.sh
 
 SCHOOL_PDF='GuidanceSchoolAdministrators.pdf'
 COLLEGE_PDF='GuidanceCollegesUniversities.pdf'
@@ -15,14 +16,17 @@ COLLEGE_URL="${BASE_URL}/${COLLEGE_PDF}"
 RESP_FLAG='--silent'
 
 check_for_change() {
-    # First arg is file, Second arg is hash, Third arg is name
+    # First arg is file, Second arg is original hash, Third arg is name
     file_hash=($(sha1sum $1))
+    logreport=$NO_CHANGE
+
     if [ $file_hash != $2 ]
     then
         ./alert-phone.sh "Guidance update for $3"
-    else
-        echo "No Update for $3"
+        logreport=$CHANGE
     fi
+
+    write_log $3 "$logreport"
 }
 
 cd $PROJECT_DIR
