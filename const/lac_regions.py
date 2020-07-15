@@ -400,7 +400,12 @@ REGIONS = {
 }
 
 REGION_MAP = {}
+ALL_CSA = []
+
 for region in REGIONS:
     for area in REGIONS[region]:
+        ALL_CSA += area,
         REGION_MAP[area] = region
+
 REGION_MAP['Los Angeles'] = None
+ALL_CSA.sort()

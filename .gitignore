@@ -16,7 +16,8 @@ geo/geocode/geocoderesult.csv
 pickled/*.pickle
 
 scratchpad.py
-lacph_graphs.ipynb
+
+data_viz/*.ipynb
 
 lacph-monitor/pushbullet-log/
 lacph-monitor/Guidance*.pdf
