@@ -30,5 +30,5 @@ function alert_phone() {
         --form 'title=LA Public Health Update' \
         --form "body=$1"
 
-    write_log 'Pushbullet API' "Sent '$1'"
+    write_log 'Pushbullet API' "$1"
 }
