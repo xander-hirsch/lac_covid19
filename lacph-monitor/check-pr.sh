@@ -14,7 +14,7 @@ CURRENT_TXT="$PROJECT_DIR/pr-listing-current.txt"
 DIFF_TXT="$PROJECT_DIR/pr-listing-difference.txt"
 
 TOMORROW='tomorrow'
-LYNX_OPTS='-dump -nonumbers -nolist'
+LYNX_OPTS='-dump -nonumbers -nolist -display_charset=utf-8'
 
 USUAL_STATS_TILE='[[:digit:],]+ New Deaths and [[:digit:],]+ New Cases'
 
