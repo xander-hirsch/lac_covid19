@@ -3,22 +3,21 @@
 PROJECT_DIR=$(dirname $(readlink --canonicalize $0))
 source $PROJECT_DIR/helper.sh
 
+PR_URL='http://publichealth.lacounty.gov/phcommon/public/media/mediaCOVIDdisplay.cfm'
+
 LOG_NAME='Press Release'
-ALERT_MSG='New press release'
 
 DATE_TARGET="$PROJECT_DIR/target-date.txt"
-PREVIOUS_HTML="$PROJECT_DIR/pr-listing-previous.html"
-CURRENT_HTML="$PROJECT_DIR/pr-listing-current.html"
+
+PREVIOUS_TXT="$PROJECT_DIR/pr-listing-previous.txt"
+CURRENT_TXT="$PROJECT_DIR/pr-listing-current.txt"
+DIFF_TXT="$PROJECT_DIR/pr-listing-difference.txt"
 
 TOMORROW='tomorrow'
 LYNX_OPTS='-dump -nonumbers -nolist'
 
 request_page() {
-    curl --compressed --silent \
-        --header 'Accept: text/html' \
-        --header 'Accept-Language: en-US' \
-        --output $1 \
-        'http://publichealth.lacounty.gov/phcommon/public/media/mediaCOVIDdisplay.cfm'
+    lynx $LYNX_OPTS $PR_URL > $1        
 }
 
 monitor_suspend() {
@@ -34,7 +33,7 @@ monitor_reset() {
 }
 
 initialize() {
-    request_page $PREVIOUS_HTML
+    request_page $PREVIOUS_TXT
     date -I > $DATE_TARGET
     echo 'LACPH monitor initalized'
     exit
@@ -68,21 +67,26 @@ then
     exit
 fi
 
-# Download and compute hashes
-request_page $CURRENT_HTML
+# Check the current page
+request_page $CURRENT_TXT
 
-old_hash=($(lynx $LYNX_OPTS $PREVIOUS_HTML | sha1sum))
-new_hash=($(lynx $LYNX_OPTS $CURRENT_HTML | sha1sum))
+# Calculate differences
+diff --strip-trailing-cr $PREVIOUS_TXT $CURRENT_TXT > $DIFF_TXT
+diff_exit=$?
 
 logreport=$NO_CHANGE
 
-if [ $old_hash != $new_hash ]
+if [ $diff_exit -eq 1 ]
 then
-    alert_phone "$ALERT_MSG"
-    mv $CURRENT_HTML $PREVIOUS_HTML
+    new_headline=$(sed -e '1d' -e 's/>\s\+//' $DIFF_TXT | tr '\n' ' ')
+    new_headline=${new_headline/' View'}
+
+    alert_phone "$new_headline"
+    mv $CURRENT_TXT $PREVIOUS_TXT
     logreport=$CHANGE
 else
-    rm $CURRENT_HTML
+    rm $CURRENT_TXT
 fi
 
+rm $DIFF_TXT
 write_log "$LOG_NAME" "$logreport"
