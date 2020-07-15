@@ -16,6 +16,8 @@ DIFF_TXT="$PROJECT_DIR/pr-listing-difference.txt"
 TOMORROW='tomorrow'
 LYNX_OPTS='-dump -nonumbers -nolist'
 
+USUAL_STATS_TILE='[[:digit:],]+ New Deaths and [[:digit:],]+ New Cases'
+
 request_page() {
     lynx $LYNX_OPTS $PR_URL > $1        
 }
@@ -23,13 +25,13 @@ request_page() {
 monitor_suspend() {
     date -I --date=$TOMORROW > $DATE_TARGET
     echo 'LACPH press release monitor suspeneded until tomorrow'
-    exit
 
 }
 
 monitor_reset() {
     date -I > $DATE_TARGET
     echo 'LACPH press release monitor reset'
+    exit
 }
 
 initialize() {
@@ -45,13 +47,14 @@ cd $PROJECT_DIR
 if [ $# -eq 1 ]
 then
     case $1 in
-        "suspend")
+        'suspend')
             monitor_suspend
+            exit
             ;;
-        "reset")
+        'reset')
             monitor_reset
             ;;
-        "initialize")
+        'initialize')
             initialize
             ;;
         *)
@@ -84,6 +87,11 @@ then
     alert_phone "$new_headline"
     mv $CURRENT_TXT $PREVIOUS_TXT
     logreport=$CHANGE
+
+    if echo $new_headline | grep -i -E "$USUAL_STATS_TITLE" > /dev/null
+    then
+        monitor_suspend > /dev/null
+    fi
 else
     rm $CURRENT_TXT
 fi
