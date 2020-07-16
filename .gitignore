@@ -20,7 +20,6 @@ scratchpad.py
 data_viz/*.ipynb*
 
 lacph-monitor/pushbullet-log/
-lacph-monitor/*.txt
-lacph-monitor/target-date.txt
 lacph-monitor/monitor.log
+lacph-monitor/*.txt
 lacph-monitor/.suspend_*
