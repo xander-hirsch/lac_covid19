@@ -33,6 +33,7 @@ function cli_opts() {
     case $1 in
         'init')
             request_page $2 $3
+            rm $4
             msg='Monitor initialized'
             ;;
         'suspend')

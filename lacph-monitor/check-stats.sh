@@ -27,7 +27,7 @@ if [ $old_hash != $new_hash ]
 then
     mv $NEW_STATS $OLD_STATS
     logreport=$CHANGE
-    alert_phone 'Case stats'
+    alert_phone 'Case statistics'
     suspend_monitor $SUSPEND_STATS
 else
     rm $NEW_STATS
