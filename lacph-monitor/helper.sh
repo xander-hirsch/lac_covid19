@@ -16,10 +16,11 @@ function suspend_monitor() {
 }
 
 function check_monitor() {
-    if [ -f $1 ]
-    then
-        exit
-    fi
+    [ -f $1 ] && exit
+}
+
+function reset_monitor() {
+    [ -f $1 ] && rm $1
 }
 
 LYNX_OPTS='-dump -nonumbers -nolist -display_charset=utf-8'
@@ -33,7 +34,7 @@ function cli_opts() {
     case $1 in
         'init')
             request_page $2 $3
-            rm $4
+            reset_monitor $4
             msg='Monitor initialized'
             ;;
         'suspend')
@@ -41,7 +42,7 @@ function cli_opts() {
             msg='Monitor suspended'
             ;;
         'reset')
-            rm $4
+            reset_monitor $4
             msg='Monitor reset'
             ;;
         *)
