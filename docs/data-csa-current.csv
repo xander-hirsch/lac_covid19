@@ -1,293 +1,293 @@
 Area,Region,Cases,Case Rate,Deaths,Death Rate,CF Outbreak
-City of Agoura Hills,Santa Monica Mountains,78,374,1,5,False
-City of Alhambra,San Gabriel Valley,640,738,12,14,False
-City of Arcadia,San Gabriel Valley,234,405,11,19,False
-City of Artesia,Southeast,167,994,3,18,False
+City of Agoura Hills,Santa Monica Mountains,81,388,1,5,False
+City of Alhambra,San Gabriel Valley,650,750,13,15,False
+City of Arcadia,San Gabriel Valley,237,410,11,19,False
+City of Artesia,Southeast,172,1024,2,12,False
 City of Avalon,Harbor,5,129,0,0,False
-City of Azusa,San Gabriel Valley,713,1425,9,18,False
-City of Baldwin Park,San Gabriel Valley,1392,1813,33,43,False
-City of Bell,Southeast,840,2312,23,63,False
-City of Bell Gardens,Southeast,992,2303,12,28,False
-City of Bellflower,Southeast,1259,1620,37,48,False
-City of Beverly Hills,Westside,419,1214,8,23,False
+City of Azusa,San Gabriel Valley,733,1465,9,18,False
+City of Baldwin Park,San Gabriel Valley,1429,1861,35,46,False
+City of Bell,Southeast,857,2359,24,66,False
+City of Bell Gardens,Southeast,1019,2366,12,28,False
+City of Bellflower,Southeast,1279,1645,38,49,False
+City of Beverly Hills,Westside,425,1231,8,23,False
 City of Bradbury,San Gabriel Valley,7,655,0,0,False
-City of Burbank,San Fernando Valley,748,698,48,45,False
-City of Calabasas,Santa Monica Mountains,156,641,11,45,False
-City of Carson,Harbor,908,968,34,36,False
-City of Cerritos,Southeast,321,641,7,14,False
-City of Claremont,Pomona Valley,174,477,3,8,False
-City of Commerce,Southeast,290,2219,2,15,True
-City of Compton,Southeast,2049,2051,28,28,False
-City of Covina,San Gabriel Valley,686,1399,12,24,False
-City of Cudahy,Southeast,605,2485,10,41,False
-City of Culver City,Westside,261,655,27,68,False
-City of Diamond Bar,San Gabriel Valley,284,494,4,7,False
-City of Downey,Southeast,2349,2056,56,49,False
-City of Duarte,San Gabriel Valley,268,1217,23,104,False
-City of El Monte,San Gabriel Valley,2244,1914,68,58,False
-City of El Segundo,South Bay,79,471,0,0,False
-City of Gardena,South Bay,660,1076,34,55,False
-City of Glendale,Verdugos,1797,870,119,58,False
-City of Glendora,San Gabriel Valley,655,1241,15,28,False
-City of Hawaiian Gardens,Harbor,263,1792,1,7,False
-City of Hawthorne,South Bay,979,1103,26,29,False
-City of Hermosa Beach,South Bay,122,620,2,10,False
+City of Burbank,San Fernando Valley,763,712,49,46,False
+City of Calabasas,Santa Monica Mountains,159,654,11,45,False
+City of Carson,Harbor,925,986,33,35,False
+City of Cerritos,Southeast,330,659,7,14,False
+City of Claremont,Pomona Valley,180,493,3,8,False
+City of Commerce,Southeast,299,2288,2,15,True
+City of Compton,Southeast,2073,2075,26,26,False
+City of Covina,San Gabriel Valley,700,1428,12,24,False
+City of Cudahy,Southeast,613,2518,10,41,False
+City of Culver City,Westside,266,667,27,68,False
+City of Diamond Bar,San Gabriel Valley,289,502,4,7,False
+City of Downey,Southeast,2378,2081,55,48,False
+City of Duarte,San Gabriel Valley,270,1226,22,100,False
+City of El Monte,San Gabriel Valley,2296,1958,69,59,False
+City of El Segundo,South Bay,82,489,0,0,False
+City of Gardena,South Bay,666,1086,32,52,False
+City of Glendale,Verdugos,1821,882,120,58,False
+City of Glendora,San Gabriel Valley,671,1272,15,28,False
+City of Hawaiian Gardens,Harbor,271,1847,1,7,False
+City of Hawthorne,South Bay,1002,1129,27,30,False
+City of Hermosa Beach,South Bay,124,630,2,10,False
 City of Hidden Hills,Santa Monica Mountains,5,265,0,0,False
-City of Huntington Park,Southeast,1570,2639,24,40,False
-City of Industry,San Gabriel Valley,20,4577,2,458,False
-City of Inglewood,South Bay,1409,1241,67,59,False
-City of Irwindale,San Gabriel Valley,33,2262,0,0,False
-City of La Canada Flintridge,Verdugos,93,449,6,29,False
+City of Huntington Park,Southeast,1598,2686,25,42,False
+City of Industry,San Gabriel Valley,21,4805,2,458,False
+City of Inglewood,South Bay,1432,1261,68,60,False
+City of Irwindale,San Gabriel Valley,34,2330,0,0,False
+City of La Canada Flintridge,Verdugos,95,459,6,29,False
 City of La Habra Heights,San Gabriel Valley,19,348,0,0,False
-City of La Mirada,Southeast,482,972,21,42,False
-City of La Puente,San Gabriel Valley,719,1767,5,12,False
-City of La Verne,Pomona Valley,192,577,2,6,False
-City of Lakewood,Harbor,672,836,7,9,False
-City of Lancaster,Antelope Valley,1526,944,21,13,True
-City of Lawndale,South Bay,299,890,8,24,False
-City of Lomita,South Bay,116,560,7,34,False
-City of Lynwood,Southeast,1812,2515,65,90,True
-City of Malibu,Santa Monica Mountains,67,517,2,15,False
-City of Manhattan Beach,South Bay,208,578,4,11,False
-City of Maywood,Southeast,763,2720,23,82,False
-City of Monrovia,San Gabriel Valley,402,1036,30,77,False
-City of Montebello,Southeast,1230,1911,31,48,False
-City of Monterey Park,San Gabriel Valley,449,721,12,19,False
-City of Norwalk,Southeast,1693,1573,37,34,False
-City of Palmdale,Antelope Valley,1761,1108,25,16,False
+City of La Mirada,Southeast,487,982,21,42,False
+City of La Puente,San Gabriel Valley,740,1818,5,12,False
+City of La Verne,Pomona Valley,197,592,2,6,False
+City of Lakewood,Harbor,688,856,8,10,False
+City of Lancaster,Antelope Valley,1550,959,21,13,True
+City of Lawndale,South Bay,308,916,8,24,False
+City of Lomita,South Bay,117,564,7,34,False
+City of Lynwood,Southeast,1833,2544,66,92,True
+City of Malibu,Santa Monica Mountains,69,532,2,15,False
+City of Manhattan Beach,South Bay,213,592,4,11,False
+City of Maywood,Southeast,771,2749,22,78,False
+City of Monrovia,San Gabriel Valley,412,1062,30,77,False
+City of Montebello,Southeast,1245,1934,32,50,False
+City of Monterey Park,San Gabriel Valley,460,739,12,19,False
+City of Norwalk,Southeast,1747,1623,37,34,False
+City of Palmdale,Antelope Valley,1790,1126,25,16,False
 City of Palos Verdes Estates,South Bay,62,459,2,15,False
-City of Paramount,Southeast,1257,2244,15,27,False
-City of Pico Rivera,Southeast,1353,2105,45,70,False
-City of Pomona,Pomona Valley,2292,1470,36,23,False
-City of Rancho Palos Verdes,South Bay,179,419,12,28,False
-City of Redondo Beach,South Bay,308,448,9,13,False
+City of Paramount,Southeast,1279,2283,15,27,False
+City of Pico Rivera,Southeast,1379,2145,44,68,False
+City of Pomona,Pomona Valley,2345,1504,37,24,False
+City of Rancho Palos Verdes,South Bay,185,433,12,28,False
+City of Redondo Beach,South Bay,318,463,9,13,False
 City of Rolling Hills,South Bay,4,206,0,0,False
 City of Rolling Hills Estates,South Bay,30,370,2,25,False
-City of Rosemead,San Gabriel Valley,396,715,11,20,False
-City of San Dimas,San Gabriel Valley,262,759,2,6,True
-City of San Fernando,San Fernando Valley,400,1625,12,49,False
-City of San Gabriel,San Gabriel Valley,321,784,25,61,False
-City of San Marino,San Gabriel Valley,35,264,1,8,False
-City of Santa Clarita,Northwest County,1622,736,32,15,False
-City of Santa Fe Springs,Southeast,273,1487,1,5,False
-City of Santa Monica,Westside,521,564,36,39,False
+City of Rosemead,San Gabriel Valley,401,724,11,20,False
+City of San Dimas,San Gabriel Valley,264,765,2,6,True
+City of San Fernando,San Fernando Valley,413,1678,12,49,False
+City of San Gabriel,San Gabriel Valley,323,789,25,61,False
+City of San Marino,San Gabriel Valley,36,271,1,8,False
+City of Santa Clarita,Northwest County,1676,760,34,15,False
+City of Santa Fe Springs,Southeast,282,1536,1,5,False
+City of Santa Monica,Westside,535,579,37,40,False
 City of Sierra Madre,San Gabriel Valley,44,400,3,27,False
-City of Signal Hill,Harbor,136,1153,0,0,False
-City of South El Monte,San Gabriel Valley,398,1906,12,57,False
-City of South Gate,Southeast,2432,2478,38,39,False
+City of Signal Hill,Harbor,138,1170,0,0,False
+City of South El Monte,San Gabriel Valley,404,1934,11,53,False
+City of South Gate,Southeast,2476,2523,40,41,False
 City of South Pasadena,San Gabriel Valley,192,737,23,88,False
-City of Temple City,San Gabriel Valley,317,870,34,93,False
-City of Torrance,South Bay,770,516,51,34,False
+City of Temple City,San Gabriel Valley,325,892,34,93,False
+City of Torrance,South Bay,792,531,51,34,False
 City of Vernon,Southeast,14,6699,0,0,False
-City of Walnut,San Gabriel Valley,147,481,1,3,False
-City of West Covina,San Gabriel Valley,1537,1420,20,18,False
-City of West Hollywood,Central LA,351,950,4,11,False
+City of Walnut,San Gabriel Valley,150,491,1,3,False
+City of West Covina,San Gabriel Valley,1577,1457,19,18,False
+City of West Hollywood,Central LA,354,958,4,11,False
 City of Westlake Village,Santa Monica Mountains,14,167,0,0,False
-City of Whittier,San Gabriel Valley,1133,1296,15,17,False
-Los Angeles - Adams-Normandie,South LA,131,1597,3,37,False
-Los Angeles - Alsace,South LA,210,1687,0,0,False
+City of Whittier,San Gabriel Valley,1151,1316,15,17,False
+Los Angeles - Adams-Normandie,South LA,133,1622,3,37,False
+Los Angeles - Alsace,South LA,213,1712,0,0,False
 Los Angeles - Angeles National Forest,Angeles Forest,2,5000,0,0,False
-Los Angeles - Angelino Heights,Central LA,32,1279,1,40,False
-Los Angeles - Arleta,San Fernando Valley,674,1961,11,32,False
-Los Angeles - Atwater Village,Northeast LA,122,832,4,27,False
-Los Angeles - Baldwin Hills,South LA,348,1118,23,74,False
-Los Angeles - Bel Air,Westside,52,617,0,0,False
+Los Angeles - Angelino Heights,Central LA,33,1319,1,40,False
+Los Angeles - Arleta,San Fernando Valley,685,1993,11,32,False
+Los Angeles - Atwater Village,Northeast LA,125,852,4,27,False
+Los Angeles - Baldwin Hills,South LA,353,1134,23,74,False
+Los Angeles - Bel Air,Westside,53,629,0,0,False
 Los Angeles - Beverly Crest,Westside,64,511,2,16,False
-Los Angeles - Beverlywood,Westside,90,683,0,0,False
-Los Angeles - Boyle Heights,Eastside,2375,2734,36,41,True
-Los Angeles - Brentwood,Westside,153,494,2,6,False
+Los Angeles - Beverlywood,Westside,91,691,0,0,False
+Los Angeles - Boyle Heights,Eastside,2402,2765,35,40,True
+Los Angeles - Brentwood,Westside,159,514,2,6,False
 Los Angeles - Brookside,Central LA,1,172,0,0,False
-Los Angeles - Cadillac-Corning,Central LA,63,885,1,14,False
-Los Angeles - Canoga Park,San Fernando Valley,947,1450,45,69,False
-Los Angeles - Carthay,Central LA,146,1017,10,70,False
-Los Angeles - Central,South LA,1251,3208,24,62,False
-Los Angeles - Century City,Westside,71,555,0,0,False
-Los Angeles - Century Palms/Cove,South LA,843,2497,6,18,False
-Los Angeles - Chatsworth,San Fernando Valley,362,977,32,86,False
+Los Angeles - Cadillac-Corning,Central LA,64,899,1,14,False
+Los Angeles - Canoga Park,San Fernando Valley,956,1464,43,66,False
+Los Angeles - Carthay,Central LA,147,1023,10,70,False
+Los Angeles - Central,South LA,1270,3257,25,64,False
+Los Angeles - Century City,Westside,75,586,0,0,False
+Los Angeles - Century Palms/Cove,South LA,849,2514,8,24,False
+Los Angeles - Chatsworth,San Fernando Valley,368,993,33,89,False
 Los Angeles - Cheviot Hills,Westside,41,447,2,22,False
-Los Angeles - Chinatown,Central LA,54,673,1,12,False
+Los Angeles - Chinatown,Central LA,55,686,1,12,False
 Los Angeles - Cloverdale/Cochran,Central LA,185,1271,5,34,False
-Los Angeles - Country Club Park,Central LA,191,1260,20,132,False
-Los Angeles - Crenshaw District,South LA,167,1208,2,14,False
-Los Angeles - Crestview,Central LA,132,1161,17,150,False
-Los Angeles - Del Rey,Westside,189,631,6,20,False
-Los Angeles - Downtown,Central LA,420,1527,10,36,True
-Los Angeles - Eagle Rock,Northeast LA,400,1010,16,40,False
-Los Angeles - East Hollywood,Central LA,399,1362,41,140,False
-Los Angeles - Echo Park,Central LA,108,758,2,14,False
-Los Angeles - El Sereno,Eastside,593,1418,23,55,False
-Los Angeles - Elysian Park,Central LA,48,840,0,0,False
-Los Angeles - Elysian Valley,Northeast LA,146,1435,1,10,False
-Los Angeles - Encino,San Fernando Valley,285,631,14,31,False
-Los Angeles - Exposition,South LA,47,1413,0,0,False
-Los Angeles - Exposition Park,South LA,676,1505,16,36,False
-Los Angeles - Faircrest Heights,Central LA,19,528,1,28,False
-Los Angeles - Figueroa Park Square,South LA,154,1766,0,0,False
-Los Angeles - Florence-Firestone,South LA,1233,2599,18,38,False
-Los Angeles - Glassell Park,Northeast LA,361,1142,9,28,False
-Los Angeles - Gramercy Place,South LA,129,1198,3,28,False
-Los Angeles - Granada Hills,San Fernando Valley,641,1102,56,96,False
-Los Angeles - Green Meadows,South LA,483,2246,6,28,False
+Los Angeles - Country Club Park,Central LA,194,1280,20,132,False
+Los Angeles - Crenshaw District,South LA,168,1215,2,14,False
+Los Angeles - Crestview,Central LA,133,1170,17,150,False
+Los Angeles - Del Rey,Westside,192,641,6,20,False
+Los Angeles - Downtown,Central LA,429,1560,10,36,True
+Los Angeles - Eagle Rock,Northeast LA,402,1015,16,40,False
+Los Angeles - East Hollywood,Central LA,403,1376,41,140,False
+Los Angeles - Echo Park,Central LA,112,786,3,21,False
+Los Angeles - El Sereno,Eastside,599,1433,23,55,False
+Los Angeles - Elysian Park,Central LA,50,875,0,0,False
+Los Angeles - Elysian Valley,Northeast LA,147,1445,1,10,False
+Los Angeles - Encino,San Fernando Valley,287,635,14,31,False
+Los Angeles - Exposition,South LA,49,1473,0,0,False
+Los Angeles - Exposition Park,South LA,689,1534,16,36,False
+Los Angeles - Faircrest Heights,Central LA,20,556,1,28,False
+Los Angeles - Figueroa Park Square,South LA,158,1812,0,0,False
+Los Angeles - Florence-Firestone,South LA,1250,2635,18,38,False
+Los Angeles - Glassell Park,Northeast LA,365,1155,8,25,False
+Los Angeles - Gramercy Place,South LA,132,1226,3,28,False
+Los Angeles - Granada Hills,San Fernando Valley,654,1124,56,96,False
+Los Angeles - Green Meadows,South LA,492,2288,6,28,False
 Los Angeles - Hancock Park,Central LA,150,880,2,12,False
-Los Angeles - Harbor City,Harbor,285,980,9,31,False
-Los Angeles - Harbor Gateway,Harbor,456,1046,8,18,False
+Los Angeles - Harbor City,Harbor,288,991,9,31,False
+Los Angeles - Harbor Gateway,Harbor,462,1060,8,18,False
 Los Angeles - Harbor Pines,Harbor,10,415,0,0,False
-Los Angeles - Harvard Heights,Central LA,315,1747,18,100,False
-Los Angeles - Harvard Park,South LA,828,2183,12,32,False
-Los Angeles - Highland Park,Northeast LA,581,1201,13,27,False
-Los Angeles - Historic Filipinotown,Central LA,256,1846,8,58,False
-Los Angeles - Hollywood,Central LA,635,930,6,9,False
-Los Angeles - Hollywood Hills,Central LA,168,571,6,20,False
-Los Angeles - Hyde Park,South LA,410,1437,8,28,False
+Los Angeles - Harvard Heights,Central LA,317,1758,18,100,False
+Los Angeles - Harvard Park,South LA,843,2222,12,32,False
+Los Angeles - Highland Park,Northeast LA,608,1256,16,33,False
+Los Angeles - Historic Filipinotown,Central LA,259,1867,8,58,False
+Los Angeles - Hollywood,Central LA,644,944,6,9,False
+Los Angeles - Hollywood Hills,Central LA,174,591,6,20,False
+Los Angeles - Hyde Park,South LA,411,1440,8,28,False
 Los Angeles - Jefferson Park,South LA,155,1920,0,0,False
-Los Angeles - Koreatown,Central LA,613,1186,20,39,False
-Los Angeles - Lafayette Square,Central LA,43,943,1,22,False
-Los Angeles - Lake Balboa,San Fernando Valley,446,1057,11,26,False
-Los Angeles - Lakeview Terrace,San Fernando Valley,329,2505,16,122,False
-Los Angeles - Leimert Park,South LA,157,1031,3,20,False
-Los Angeles - Lincoln Heights,Eastside,646,1982,36,110,False
-Los Angeles - Little Armenia,Central LA,274,3414,43,536,False
-Los Angeles - Little Bangladesh,Central LA,288,1016,4,14,False
+Los Angeles - Koreatown,Central LA,617,1194,20,39,False
+Los Angeles - Lafayette Square,Central LA,47,1031,1,22,False
+Los Angeles - Lake Balboa,San Fernando Valley,453,1073,11,26,False
+Los Angeles - Lakeview Terrace,San Fernando Valley,331,2520,16,122,False
+Los Angeles - Leimert Park,South LA,165,1083,3,20,False
+Los Angeles - Lincoln Heights,Eastside,655,2009,36,110,False
+Los Angeles - Little Armenia,Central LA,277,3452,43,536,False
+Los Angeles - Little Bangladesh,Central LA,289,1020,4,14,False
 Los Angeles - Little Tokyo,Central LA,42,1341,2,64,False
 Los Angeles - Longwood,Central LA,67,1557,0,0,False
-Los Angeles - Los Feliz,Central LA,111,514,2,9,False
-Los Angeles - Manchester Square,South LA,70,820,1,12,False
+Los Angeles - Los Feliz,Central LA,112,518,2,9,False
+Los Angeles - Manchester Square,South LA,72,843,1,12,False
 Los Angeles - Mandeville Canyon,Westside,5,160,0,0,False
-Los Angeles - Mar Vista,Westside,178,419,5,12,False
-Los Angeles - Marina Peninsula,Westside,21,482,0,0,False
-Los Angeles - Melrose,Central LA,1100,1416,46,59,False
+Los Angeles - Mar Vista,Westside,181,426,5,12,False
+Los Angeles - Marina Peninsula,Westside,22,505,0,0,False
+Los Angeles - Melrose,Central LA,1116,1436,47,60,False
 Los Angeles - Mid-city,Central LA,192,1277,20,133,False
-Los Angeles - Miracle Mile,Central LA,97,539,5,28,False
-Los Angeles - Mission Hills,San Fernando Valley,373,1546,14,58,False
-Los Angeles - Mt. Washington,Northeast LA,252,1044,6,25,False
-Los Angeles - North Hills,San Fernando Valley,929,1509,33,54,False
-Los Angeles - North Hollywood,San Fernando Valley,1671,1104,41,27,False
-Los Angeles - Northridge,San Fernando Valley,738,1057,36,52,False
+Los Angeles - Miracle Mile,Central LA,98,545,5,28,False
+Los Angeles - Mission Hills,San Fernando Valley,377,1563,14,58,False
+Los Angeles - Mt. Washington,Northeast LA,251,1040,6,25,False
+Los Angeles - North Hills,San Fernando Valley,943,1531,33,54,False
+Los Angeles - North Hollywood,San Fernando Valley,1690,1116,41,27,False
+Los Angeles - Northridge,San Fernando Valley,746,1069,36,52,False
 Los Angeles - Pacific Palisades,Westside,88,413,3,14,False
-Los Angeles - Pacoima,San Fernando Valley,1635,2124,25,32,False
+Los Angeles - Pacoima,San Fernando Valley,1662,2159,25,32,False
 Los Angeles - Palisades Highlands,Westside,15,390,0,0,False
-Los Angeles - Palms,Westside,350,798,26,59,False
-Los Angeles - Panorama City,San Fernando Valley,1449,1926,63,84,False
-Los Angeles - Park La Brea,Central LA,58,427,1,7,False
-Los Angeles - Pico-Union,Central LA,1137,2717,70,167,False
+Los Angeles - Palms,Westside,351,800,26,59,False
+Los Angeles - Panorama City,San Fernando Valley,1464,1946,65,86,False
+Los Angeles - Park La Brea,Central LA,59,434,1,7,False
+Los Angeles - Pico-Union,Central LA,1149,2746,71,170,False
 Los Angeles - Playa Del Rey,South Bay,16,501,0,0,False
-Los Angeles - Playa Vista,Westside,70,639,0,0,False
-Los Angeles - Porter Ranch,San Fernando Valley,175,492,6,17,False
-Los Angeles - Rancho Park,Westside,45,686,1,15,False
-Los Angeles - Regent Square,Central LA,16,576,0,0,False
-Los Angeles - Reseda,San Fernando Valley,1199,1565,53,69,False
+Los Angeles - Playa Vista,Westside,71,649,0,0,False
+Los Angeles - Porter Ranch,San Fernando Valley,179,503,6,17,False
+Los Angeles - Rancho Park,Westside,46,701,1,15,False
+Los Angeles - Regent Square,Central LA,18,647,0,0,False
+Los Angeles - Reseda,San Fernando Valley,1220,1592,53,69,False
 Los Angeles - Reseda Ranch,San Fernando Valley,43,928,0,0,False
-Los Angeles - Reynier Village,Central LA,23,544,0,0,False
-Los Angeles - San Pedro,Harbor,1354,1735,22,28,True
+Los Angeles - Reynier Village,Central LA,24,568,0,0,False
+Los Angeles - San Pedro,Harbor,1363,1747,22,28,True
 Los Angeles - Shadow Hills,San Fernando Valley,26,585,0,0,False
-Los Angeles - Sherman Oaks,San Fernando Valley,520,596,14,16,False
-Los Angeles - Silverlake,Central LA,378,857,14,32,False
-Los Angeles - South Carthay,Central LA,61,576,1,9,False
-Los Angeles - South Park,South LA,1137,2995,16,42,False
-Los Angeles - St Elmo Village,Central LA,76,1658,7,153,False
-Los Angeles - Studio City,San Fernando Valley,149,664,9,40,False
-Los Angeles - Sun Valley,San Fernando Valley,728,1387,13,25,False
-Los Angeles - Sunland,Verdugos,273,1338,24,118,False
+Los Angeles - Sherman Oaks,San Fernando Valley,529,606,13,15,False
+Los Angeles - Silverlake,Central LA,382,867,14,32,False
+Los Angeles - South Carthay,Central LA,63,595,1,9,False
+Los Angeles - South Park,South LA,1151,3032,16,42,False
+Los Angeles - St Elmo Village,Central LA,80,1745,7,153,False
+Los Angeles - Studio City,San Fernando Valley,150,668,9,40,False
+Los Angeles - Sun Valley,San Fernando Valley,733,1397,13,25,False
+Los Angeles - Sunland,Verdugos,276,1352,23,113,False
 Los Angeles - Sycamore Square,Central LA,1,155,0,0,False
-Los Angeles - Sylmar,San Fernando Valley,1672,2029,56,68,True
-Los Angeles - Tarzana,San Fernando Valley,416,1347,30,97,False
-Los Angeles - Temple-Beaudry,Central LA,711,1801,16,41,False
-Los Angeles - Thai Town,Central LA,79,805,0,0,False
-Los Angeles - Toluca Lake,San Fernando Valley,47,540,0,0,False
+Los Angeles - Sylmar,San Fernando Valley,1700,2063,56,68,True
+Los Angeles - Tarzana,San Fernando Valley,425,1376,30,97,False
+Los Angeles - Temple-Beaudry,Central LA,722,1829,17,43,False
+Los Angeles - Thai Town,Central LA,81,826,0,0,False
+Los Angeles - Toluca Lake,San Fernando Valley,51,586,0,0,False
 Los Angeles - Toluca Terrace,San Fernando Valley,13,995,1,77,False
 Los Angeles - Toluca Woods,San Fernando Valley,9,484,0,0,False
-Los Angeles - Tujunga,Verdugos,215,773,11,40,False
+Los Angeles - Tujunga,Verdugos,217,780,11,40,False
 Los Angeles - University Hills,Eastside,33,962,1,29,False
-Los Angeles - University Park,South LA,454,1654,12,44,False
-Los Angeles - Valley Glen,San Fernando Valley,286,953,11,37,False
-Los Angeles - Valley Village,San Fernando Valley,334,1351,22,89,False
-Los Angeles - Van Nuys,San Fernando Valley,1499,1608,49,53,False
-Los Angeles - Venice,Westside,135,398,2,6,False
-Los Angeles - Vermont Knolls,South LA,439,2552,8,47,False
-Los Angeles - Vermont Square,South LA,193,2521,2,26,False
-Los Angeles - Vermont Vista,South LA,1026,2491,15,36,False
-Los Angeles - Vernon Central,South LA,1707,3283,24,46,False
+Los Angeles - University Park,South LA,457,1664,14,51,False
+Los Angeles - Valley Glen,San Fernando Valley,294,979,11,37,False
+Los Angeles - Valley Village,San Fernando Valley,339,1371,22,89,False
+Los Angeles - Van Nuys,San Fernando Valley,1510,1620,50,54,False
+Los Angeles - Venice,Westside,139,410,2,6,False
+Los Angeles - Vermont Knolls,South LA,440,2558,8,47,False
+Los Angeles - Vermont Square,South LA,197,2573,2,26,False
+Los Angeles - Vermont Vista,South LA,1043,2532,16,39,False
+Los Angeles - Vernon Central,South LA,1725,3317,25,48,False
 Los Angeles - Victoria Park,Central LA,109,1298,2,24,False
 Los Angeles - View Heights,South LA,21,568,2,54,False
-Los Angeles - Watts,South LA,967,2266,14,33,False
-Los Angeles - Wellington Square,Central LA,64,1302,0,0,False
-Los Angeles - West Adams,South LA,522,1889,29,105,False
-Los Angeles - West Hills,San Fernando Valley,278,686,25,62,False
-Los Angeles - West Los Angeles,Westside,282,749,9,24,False
-Los Angeles - West Vernon,South LA,1248,2326,30,56,False
-Los Angeles - Westchester,South Bay,236,457,12,23,False
-Los Angeles - Westlake,Central LA,1576,2655,110,185,False
-Los Angeles - Westwood,Westside,177,327,5,9,False
-Los Angeles - Wholesale District,Central LA,1621,4487,17,47,True
-Los Angeles - Wilmington,Harbor,844,1494,8,14,False
-Los Angeles - Wilshire Center,Central LA,607,1210,25,50,False
-Los Angeles - Winnetka,San Fernando Valley,632,1220,8,15,False
-Los Angeles - Woodland Hills,San Fernando Valley,426,626,19,28,False
-Unincorporated - Acton,Antelope Valley,34,427,2,25,False
+Los Angeles - Watts,South LA,980,2296,13,30,False
+Los Angeles - Wellington Square,Central LA,65,1322,0,0,False
+Los Angeles - West Adams,South LA,529,1915,28,101,False
+Los Angeles - West Hills,San Fernando Valley,279,688,26,64,False
+Los Angeles - West Los Angeles,Westside,296,786,10,27,False
+Los Angeles - West Vernon,South LA,1253,2336,30,56,False
+Los Angeles - Westchester,South Bay,239,463,11,21,False
+Los Angeles - Westlake,Central LA,1583,2667,112,189,False
+Los Angeles - Westwood,Westside,182,336,5,9,False
+Los Angeles - Wholesale District,Central LA,1670,4622,17,47,True
+Los Angeles - Wilmington,Harbor,868,1537,8,14,False
+Los Angeles - Wilshire Center,Central LA,613,1222,26,52,False
+Los Angeles - Winnetka,San Fernando Valley,640,1236,9,17,False
+Los Angeles - Woodland Hills,San Fernando Valley,437,642,20,29,False
+Unincorporated - Acton,Antelope Valley,37,464,2,25,False
 Unincorporated - Agua Dulce,Northwest County,15,361,0,0,False
-Unincorporated - Altadena,Verdugos,323,740,11,25,False
+Unincorporated - Altadena,Verdugos,330,757,11,25,False
 Unincorporated - Anaverde,Antelope Valley,5,332,0,0,False
 Unincorporated - Angeles National Forest,Angeles Forest,3,241,0,0,False
-Unincorporated - Arcadia,San Gabriel Valley,42,526,0,0,False
-Unincorporated - Athens-Westmont,South LA,755,1779,12,28,False
-Unincorporated - Athens Village,South LA,106,2165,5,102,False
-Unincorporated - Avocado Heights,San Gabriel Valley,113,1668,1,15,False
-Unincorporated - Azusa,San Gabriel Valley,243,1526,2,13,False
-Unincorporated - Bassett,San Gabriel Valley,363,2450,7,47,False
+Unincorporated - Arcadia,San Gabriel Valley,48,601,0,0,False
+Unincorporated - Athens-Westmont,South LA,772,1819,12,28,False
+Unincorporated - Athens Village,South LA,109,2226,5,102,False
+Unincorporated - Avocado Heights,San Gabriel Valley,116,1712,1,15,False
+Unincorporated - Azusa,San Gabriel Valley,248,1557,2,13,False
+Unincorporated - Bassett,San Gabriel Valley,367,2477,7,47,False
 Unincorporated - Bouquet Canyon,Northwest County,1,93,1,93,False
 Unincorporated - Bradbury,San Gabriel Valley,3,2778,0,0,False
-Unincorporated - Canyon Country,Northwest County,57,738,0,0,False
-Unincorporated - Castaic,Northwest County,1822,6701,2,7,True
+Unincorporated - Canyon Country,Northwest County,58,751,0,0,False
+Unincorporated - Castaic,Northwest County,1825,6712,2,7,True
 Unincorporated - Cerritos,Southeast,4,681,0,0,False
 Unincorporated - Charter Oak,San Gabriel Valley,0,0,0,0,False
 Unincorporated - Claremont,Pomona Valley,3,427,0,0,False
-Unincorporated - Covina,San Gabriel Valley,216,1284,2,12,False
-Unincorporated - Covina (Charter Oak),San Gabriel Valley,157,1194,0,0,False
+Unincorporated - Covina,San Gabriel Valley,218,1296,2,12,False
+Unincorporated - Covina (Charter Oak),San Gabriel Valley,162,1233,0,0,False
 Unincorporated - Del Aire,South Bay,36,819,1,23,False
 Unincorporated - Del Rey,Westside,1,314,0,0,False
 Unincorporated - Del Sur,Antelope Valley,3,124,1,41,False
 Unincorporated - Desert View Highlands,Antelope Valley,11,441,1,40,False
-Unincorporated - Duarte,San Gabriel Valley,58,1310,1,23,False
+Unincorporated - Duarte,San Gabriel Valley,60,1355,1,23,False
 Unincorporated - East Covina,San Gabriel Valley,1,304,0,0,False
-Unincorporated - East La Mirada,Southeast,59,1115,0,0,False
+Unincorporated - East La Mirada,Southeast,61,1153,0,0,False
 Unincorporated - East Lancaster,Antelope Valley,0,0,0,0,False
-Unincorporated - East Los Angeles,Eastside,3327,2656,67,53,False
-Unincorporated - East Pasadena,San Gabriel Valley,19,297,1,16,False
-Unincorporated - East Rancho Dominguez,Southeast,307,2005,6,39,False
-Unincorporated - East Whittier,Southeast,48,905,0,0,False
-Unincorporated - El Camino Village,South Bay,90,1024,2,23,False
+Unincorporated - East Los Angeles,Eastside,3388,2705,67,53,False
+Unincorporated - East Pasadena,San Gabriel Valley,18,281,1,16,False
+Unincorporated - East Rancho Dominguez,Southeast,309,2019,6,39,False
+Unincorporated - East Whittier,Southeast,49,923,0,0,False
+Unincorporated - El Camino Village,South Bay,91,1035,2,23,False
 Unincorporated - El Monte,San Gabriel Valley,4,2759,0,0,False
 Unincorporated - Elizabeth Lake,Antelope Valley,5,301,0,0,False
-Unincorporated - Florence-Firestone,South LA,1804,2788,28,43,False
+Unincorporated - Florence-Firestone,South LA,1824,2819,28,43,False
 Unincorporated - Franklin Canyon,Central LA,0,0,0,0,False
 Unincorporated - Glendora,San Gabriel Valley,4,606,0,0,False
-Unincorporated - Hacienda Heights,San Gabriel Valley,546,976,4,7,False
+Unincorporated - Hacienda Heights,San Gabriel Valley,562,1005,4,7,False
 Unincorporated - Harbor Gateway,Harbor,0,0,0,0,False
-Unincorporated - Hawthorne,South Bay,27,1074,0,0,False
+Unincorporated - Hawthorne,South Bay,28,1114,0,0,False
 Unincorporated - Hi Vista,Antelope Valley,1,91,0,0,False
 Unincorporated - Kagel/Lopez Canyons,Angeles Forest,12,850,1,71,False
-Unincorporated - La Crescenta-Montrose,Verdugos,74,374,1,5,False
+Unincorporated - La Crescenta-Montrose,Verdugos,75,379,1,5,False
 Unincorporated - La Habra Heights,San Gabriel Valley,0,0,0,0,False
 Unincorporated - La Rambla,Harbor,69,3325,6,289,False
 Unincorporated - La Verne,Pomona Valley,15,735,0,0,True
 Unincorporated - Ladera Heights,Westside,43,608,1,14,False
 Unincorporated - Lake Hughes,Northwest County,1,150,0,0,False
-Unincorporated - Lake Los Angeles,Antelope Valley,92,708,2,15,False
+Unincorporated - Lake Los Angeles,Antelope Valley,93,716,2,15,False
 Unincorporated - Lake Manor,San Fernando Valley,12,730,0,0,False
 Unincorporated - Lakewood,Harbor,0,0,0,0,False
-Unincorporated - Lennox,South Bay,325,1442,3,13,False
+Unincorporated - Lennox,South Bay,330,1464,3,13,False
 Unincorporated - Leona Valley,Antelope Valley,14,800,0,0,False
-Unincorporated - Littlerock,Antelope Valley,34,846,0,0,False
+Unincorporated - Littlerock,Antelope Valley,36,895,0,0,False
 Unincorporated - Littlerock/Juniper Hills,Antelope Valley,4,308,0,0,False
 Unincorporated - Littlerock/Pearblossom,Antelope Valley,43,1205,0,0,False
 Unincorporated - Llano,Antelope Valley,2,228,0,0,False
-Unincorporated - Marina del Rey,Westside,37,393,1,11,False
+Unincorporated - Marina del Rey,Westside,39,414,1,11,False
 Unincorporated - Miracle Mile,Central LA,0,0,0,0,False
 Unincorporated - Monrovia,San Gabriel Valley,50,1288,0,0,False
-Unincorporated - Newhall,Northwest County,3,1364,0,0,False
-Unincorporated - North Lancaster,Antelope Valley,8,668,0,0,False
-Unincorporated - North Whittier,San Gabriel Valley,98,1172,2,24,False
-Unincorporated - Northeast San Gabriel,San Gabriel Valley,169,703,4,17,False
+Unincorporated - Newhall,Northwest County,4,1818,0,0,False
+Unincorporated - North Lancaster,Antelope Valley,7,584,0,0,False
+Unincorporated - North Whittier,San Gabriel Valley,100,1196,2,24,False
+Unincorporated - Northeast San Gabriel,San Gabriel Valley,171,711,4,17,False
 Unincorporated - Padua Hills,Pomona Valley,1,465,0,0,False
 Unincorporated - Palmdale,Antelope Valley,13,1544,0,0,False
 Unincorporated - Palos Verdes Peninsula,South Bay,1,161,0,0,False
@@ -295,49 +295,49 @@ Unincorporated - Pearblossom/Llano,Antelope Valley,12,613,1,51,False
 Unincorporated - Pellissier Village,San Gabriel Valley,10,1616,0,0,False
 Unincorporated - Placerita Canyon,Angeles Forest,0,0,0,0,False
 Unincorporated - Pomona,San Gabriel Valley,8,413,1,52,False
-Unincorporated - Quartz Hill,Antelope Valley,90,697,9,70,False
-Unincorporated - Rancho Dominguez,Harbor,43,1616,1,38,False
-Unincorporated - Roosevelt,Antelope Valley,4,430,0,0,False
-Unincorporated - Rosewood,Southeast,10,778,0,0,False
+Unincorporated - Quartz Hill,Antelope Valley,92,713,10,77,False
+Unincorporated - Rancho Dominguez,Harbor,44,1654,1,38,False
+Unincorporated - Roosevelt,Antelope Valley,3,322,0,0,False
+Unincorporated - Rosewood,Southeast,12,933,0,0,False
 Unincorporated - Rosewood/East Gardena,Southeast,11,922,0,0,False
-Unincorporated - Rosewood/West Rancho Dominguez,Southeast,0,0,0,0,False
-Unincorporated - Rowland Heights,San Gabriel Valley,369,723,6,12,False
+Unincorporated - Rosewood/West Rancho Dominguez,Southeast,47,1398,0,0,False
+Unincorporated - Rowland Heights,San Gabriel Valley,374,733,7,14,False
 Unincorporated - San Clemente Island,Harbor,0,0,0,0,False
 Unincorporated - San Francisquito Canyon/Bouquet Canyon,Northwest County,0,0,0,0,False
-Unincorporated - San Jose Hills,San Gabriel Valley,317,1568,5,25,False
-Unincorporated - San Pasqual,San Gabriel Valley,6,295,0,0,False
+Unincorporated - San Jose Hills,San Gabriel Valley,323,1597,5,25,False
+Unincorporated - San Pasqual,San Gabriel Valley,5,246,0,0,False
 Unincorporated - Sand Canyon,Angeles Forest,2,649,0,0,False
 Unincorporated - Santa Catalina Island,Harbor,6,2247,0,0,False
-Unincorporated - Santa Monica Mountains,Santa Monica Mountains,66,354,1,5,True
+Unincorporated - Santa Monica Mountains,Santa Monica Mountains,65,349,1,5,True
 Unincorporated - Saugus,Northwest County,11,7097,0,0,False
-Unincorporated - Saugus/Canyon Country,Northwest County,0,0,0,0,False
+Unincorporated - Saugus/Canyon Country,Northwest County,1,281,0,0,False
 Unincorporated - South Antelope Valley,Antelope Valley,1,220,0,0,False
-Unincorporated - South El Monte,San Gabriel Valley,30,1671,0,0,False
-Unincorporated - South San Gabriel,San Gabriel Valley,107,1209,5,57,False
-Unincorporated - South Whittier,Southeast,844,1425,11,19,False
+Unincorporated - South El Monte,San Gabriel Valley,34,1894,0,0,False
+Unincorporated - South San Gabriel,San Gabriel Valley,108,1221,5,57,False
+Unincorporated - South Whittier,Southeast,869,1467,11,19,False
 Unincorporated - Southeast Antelope Valley,Antelope Valley,8,1024,0,0,False
-Unincorporated - Stevenson Ranch,Northwest County,82,391,0,0,False
-Unincorporated - Sun Village,Antelope Valley,71,1176,0,0,False
+Unincorporated - Stevenson Ranch,Northwest County,87,415,0,0,False
+Unincorporated - Sun Village,Antelope Valley,74,1226,0,0,False
 Unincorporated - Sunrise Village,San Gabriel Valley,22,1698,0,0,False
 Unincorporated - Twin Lakes/Oat Mountain,Northwest County,8,483,1,60,False
-Unincorporated - Val Verde,Northwest County,34,1028,1,30,False
-Unincorporated - Valencia,Northwest County,24,781,1,33,False
-Unincorporated - Valinda,San Gabriel Valley,384,1643,2,9,False
-Unincorporated - View Park/Windsor Hills,South LA,85,731,2,17,False
-Unincorporated - Walnut Park,Southeast,395,2447,5,31,False
+Unincorporated - Val Verde,Northwest County,33,997,1,30,False
+Unincorporated - Valencia,Northwest County,26,846,1,33,False
+Unincorporated - Valinda,San Gabriel Valley,392,1677,2,9,False
+Unincorporated - View Park/Windsor Hills,South LA,88,756,2,17,False
+Unincorporated - Walnut Park,Southeast,402,2490,5,31,False
 Unincorporated - West Antelope Valley,Antelope Valley,3,199,0,0,False
-Unincorporated - West Carson,Harbor,210,951,11,50,False
+Unincorporated - West Carson,Harbor,214,969,11,50,False
 Unincorporated - West Chatsworth,San Fernando Valley,0,0,0,0,False
-Unincorporated - West LA,Westside,29,3046,2,210,False
-Unincorporated - West Puente Valley,San Gabriel Valley,214,2176,0,0,False
-Unincorporated - West Rancho Dominguez,Harbor,15,1104,1,74,False
-Unincorporated - West Whittier/Los Nietos,Southeast,487,1809,7,26,False
-Unincorporated - Westfield/Academy Hills,South Bay,2,154,0,0,False
+Unincorporated - West LA,Westside,30,3151,2,210,False
+Unincorporated - West Puente Valley,San Gabriel Valley,217,2206,0,0,False
+Unincorporated - West Rancho Dominguez,Harbor,16,1177,1,74,False
+Unincorporated - West Whittier/Los Nietos,Southeast,491,1824,7,26,False
+Unincorporated - Westfield/Academy Hills,South Bay,3,231,0,0,False
 Unincorporated - Westhills,San Fernando Valley,6,715,0,0,False
-Unincorporated - White Fence Farms,Antelope Valley,24,652,0,0,False
-Unincorporated - Whittier,San Gabriel Valley,43,1136,0,0,False
+Unincorporated - White Fence Farms,Antelope Valley,25,679,0,0,False
+Unincorporated - Whittier,San Gabriel Valley,44,1163,0,0,False
 Unincorporated - Whittier Narrows,San Gabriel Valley,0,0,0,0,False
-Unincorporated - Willowbrook,South LA,795,2277,12,34,False
-Unincorporated - Wiseburn,South Bay,60,996,0,0,False
-City of Long Beach,Harbor,5616,1198,149,32,False
-City of Pasadena,Verdugos,1544,1093,100,71,False
+Unincorporated - Willowbrook,South LA,797,2283,12,34,False
+Unincorporated - Wiseburn,South Bay,64,1062,0,0,False
+City of Long Beach,Harbor,5849,1247,151,32,False
+City of Pasadena,Verdugos,1580,1119,101,72,False
