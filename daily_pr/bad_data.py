@@ -20,6 +20,11 @@ BAD_DATE_AREA = (
     ('2020-06-10', _unic_val_verde),
 )
 
+CSA_CF_OUTLIER = (
+    'Los Angeles - Wholesale District',
+    'Unincorporated - Castaic',
+)
+
 BAD_HTML_FORMAT = (
     (2020, 4, 23),
     (2020, 6, 18),
