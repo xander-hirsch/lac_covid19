@@ -21,7 +21,11 @@ def write_dataframe(df, csv_path: str, pickle_path: str) -> None:
     df.to_pickle(pickle_path)
 
 
-def new_daily_pr(date_: str):
+def new_daily_pr(date_: str = None):
+    if date_ is None:
+        date_ = dt.date.today().isoformat()
+    else:
+        dt.date.fromisoformat(date_)
     year, month, day = [int(x) for x in date_.split('-')]
     daily_stats = scrape_daily_stats.query_single_date((year, month, day),
                                                        False)
@@ -117,6 +121,21 @@ def append_all(date_=None):
 
     append_csa_map()
     append_time_series(date_)
+
+
+def update_press_release(date_=None):
+    if date_ is None:
+        date_ = dt.date.today()
+
+    export_time_series()
+
+    append_time_series(date_)
+
+
+def update_current():
+    request_current_csa()
+    geo_csa.merge_csa_geo()
+    append_csa_map()
 
 
 def update_data(date_=None):

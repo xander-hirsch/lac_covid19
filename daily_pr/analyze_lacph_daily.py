@@ -300,13 +300,12 @@ def aggregate_locations(
             dt[Cases], dt[Case Rate].
      """
 
-    area_population = population.CSA
     df_all_loc = df_all_loc.drop(columns=CASE_RATE)
     # Only keep areas assigned a region
     df_all_loc = df_all_loc[df_all_loc[REGION].notna()]
 
     # Correct erroneous area records by using previous dates
-    if exclude_date_area:
+    if exclude_date_area is not None:
         drop_entry_mask = df_all_loc.apply(
             lambda x: (x[DATE].isoformat()[:10], x[AREA]) in exclude_date_area,
             axis='columns')
@@ -325,13 +324,12 @@ def aggregate_locations(
     df_total_cases[CASES] = df_total_cases[CASES].astype('int')
 
     # Drop areas with correctional facility outbreaks from case rate calculation
-    df_all_loc[CF_OUTBREAK] = df_all_loc[CF_OUTBREAK].fillna(value=False)
-    has_cf_outbreak = df_all_loc.loc[df_all_loc[CF_OUTBREAK], AREA].unique()
-    df_case_rate = df_all_loc.loc[~df_all_loc[AREA].isin(has_cf_outbreak),
-                                  [DATE, REGION, AREA, CASES]]
+    df_case_rate = df_all_loc.loc[
+        ~df_all_loc[AREA].isin(bad_data.CSA_CF_OUTLIER),
+        [DATE, REGION, AREA, CASES]]
 
     # Assign populations
-    df_case_rate[POPULATION] = (df_case_rate[AREA].apply(area_population.get)
+    df_case_rate[POPULATION] = (df_case_rate[AREA].apply(population.CSA.get)
                                 .convert_dtypes())
     # Group into regional totals
     df_case_rate = df_case_rate.groupby([DATE, REGION]).sum().reset_index()
