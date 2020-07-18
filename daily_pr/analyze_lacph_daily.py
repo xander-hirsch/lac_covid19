@@ -251,7 +251,7 @@ def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
         lambda x: lac_regions.REGION_MAP.get(x[AREA], pd.NA),
         axis='columns').astype('string')
 
-    return df[[DATE, REGION, AREA, CASES, CASE_RATE, CF_OUTBREAK]]
+    return df[[DATE, AREA, REGION, CASES, CASE_RATE, CF_OUTBREAK]]
 
 
 def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
@@ -342,27 +342,6 @@ def aggregate_locations(
 
     df_together = df_total_cases.merge(df_case_rate, how='outer',
                                        on=[DATE, REGION])
-
-    # Calculate day over day differences
-    col_total = (CASES, CASE_RATE)
-    col_diff = (col.DT_CASES, col.DT_CASE_RATE)
-    # Assign empty columns before adding data
-    for column in col_diff:
-        df_together[column] = pd.NA
-
-    # Isolate each region, use diff function, assign back to main dataframe
-    for region in lac_regions.REGIONS:
-        region_ts = df_together.loc[df_together[REGION] == region,
-                                    [CASES, CASE_RATE]]
-        for i in range(len(col_total)):
-            day_over_day = region_ts[col_total[i]].diff()
-            df_together.loc[
-                day_over_day.index, col_diff[i]] = day_over_day
-
-    for column in col_diff:
-        df_together[column] = df_together[column].convert_dtypes()
-
-    df_together[col_diff[1]] = df_together[col_diff[1]].round(2)
 
     return df_together
 

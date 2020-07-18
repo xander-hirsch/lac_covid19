@@ -626,21 +626,26 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
 
     cases_by_area = _parse_area(daily_pr)
 
+    date_ = _get_date(daily_pr)
+
+    lb_pas_cf = False if date_ >= CORR_FACILITY_RECORDED else None
+
     long_beach_cases = cases_by_dept[health_dept.LONG_BEACH]
     long_beach_rate = round(
         long_beach_cases / health_dept.POPULATION_LONG_BEACH * col.RATE_SCALE,
         2)  # pylint: disable=old-division
     cases_by_area.append((health_dept.CSA_LB, long_beach_cases,
-                          long_beach_rate))
+                          long_beach_rate, lb_pas_cf))
     pasadena_cases = cases_by_dept[health_dept.PASADENA]
     pasadena_rate = round(
         pasadena_cases / health_dept.POPULATION_PASADENA * col.RATE_SCALE, 2)  # pylint: disable=old-division
-    cases_by_area.append((health_dept.CSA_PAS, pasadena_cases, pasadena_rate))
+    cases_by_area.append((health_dept.CSA_PAS, pasadena_cases, pasadena_rate,
+                          lb_pas_cf))
 
     cases_by_area = tuple(cases_by_area)
 
     return {
-        DATE: _get_date(daily_pr),
+        DATE: date_,
         col.CASES: cases_by_dept[col.TOTAL],
         col.DEATHS: _parse_deaths(daily_pr)[col.TOTAL],
         col.HOSPITALIZATIONS:
