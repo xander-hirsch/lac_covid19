@@ -86,7 +86,7 @@ def read_age_table() -> Dict[str, int]:
     age_map = read_demographic_table(paths.LACPH_AGE_RAW, AGE_MAP)
 
     with open(paths.POPULATION_AGE, 'w') as f:
-        json.dump(age_map, f)
+        json.dump(age_map, f, indent=const.JSON_INDENT)
 
     return age_map
 
@@ -95,7 +95,7 @@ def read_gender_table() -> Dict[str, int]:
     gender_map = read_demographic_table(paths.LACPH_GENDER_RAW)
 
     with open(paths.POPULATION_GENDER, 'w') as f:
-        json.dump(gender_map, f)
+        json.dump(gender_map, f, indent=const.JSON_INDENT)
 
     return gender_map
 
@@ -104,7 +104,7 @@ def read_race_table() -> Dict[str, int]:
     race_map = read_demographic_table(paths.LACPH_RACE_RAW, RACE_MAP)
 
     with open(paths.POPULATION_RACE, 'w') as f:
-        json.dump(race_map, f)
+        json.dump(race_map, f, indent=const.JSON_INDENT)
 
     return race_map
 
