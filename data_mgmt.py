@@ -4,6 +4,7 @@ import pprint
 
 import pandas as pd
 
+import lac_covid19.analysis as analysis
 import lac_covid19.const as const
 import lac_covid19.const.paths as paths
 import lac_covid19.current_stats.scrape_current as scrape_current
@@ -65,13 +66,27 @@ def export_time_series():
     for csv_file, pickle_file, df in location_export:
         write_dataframe(df, csv_file, pickle_file)
 
+def calc_deltas():
+    durations = 7, 14, 30
+
+    df_age_ts = pd.read_pickle(paths.AGE_PICKLE)
+    df_region_ts = pd.read_pickle(paths.REGION_TS_PICKLE)
+
+    df_age_delta = analysis.deltas.time_series_delta(df_age_ts, const.AGE_GROUP,
+                                                     durations)
+    df_region_delta = analysis.deltas.time_series_delta(df_region_ts,
+                                                        const.REGION,
+                                                        durations)
+
+    df_age_delta.to_csv(paths.AGE_DELTA, index=False)
+    df_region_delta.to_csv(paths.REGION_DELTA, index=False)
+
 
 def request_current_csa():
     all_tables = scrape_current.fetch_stats()
     area_cases_deaths = scrape_current.query_all_areas(all_tables[0])
     write_dataframe(area_cases_deaths,
                     paths.CSA_CURRENT_CSV, paths.CSA_CURRENT_PICKLE)
-
 
 
 def append_csa_map():
@@ -128,6 +143,7 @@ def update_press_release(date_=None):
         date_ = dt.date.today()
 
     export_time_series()
+    calc_deltas()
 
     append_time_series(date_)
 

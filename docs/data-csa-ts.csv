@@ -15799,8 +15799,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-14,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-14,South LA,Unincorporated - Willowbrook,101,289.29,False
 2020-05-14,South Bay,Unincorporated - Wiseburn,9,149.33,False
-2020-05-14,Harbor,City of Long Beach,1094,233.32,
-2020-05-14,Verdugos,City of Pasadena,607,429.75,
+2020-05-14,Harbor,City of Long Beach,1094,233.32,False
+2020-05-14,Verdugos,City of Pasadena,607,429.75,False
 2020-05-15,Santa Monica Mountains,City of Agoura Hills,33,158.02,False
 2020-05-15,San Gabriel Valley,City of Alhambra,143,164.89,False
 2020-05-15,San Gabriel Valley,City of Arcadia,65,112.55,False
@@ -16139,8 +16139,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-15,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-15,South LA,Unincorporated - Willowbrook,107,306.48,False
 2020-05-15,South Bay,Unincorporated - Wiseburn,9,149.33,False
-2020-05-15,Harbor,City of Long Beach,1157,246.76,
-2020-05-15,Verdugos,City of Pasadena,662,468.69,
+2020-05-15,Harbor,City of Long Beach,1157,246.76,False
+2020-05-15,Verdugos,City of Pasadena,662,468.69,False
 2020-05-16,Santa Monica Mountains,City of Agoura Hills,33,158.02,False
 2020-05-16,San Gabriel Valley,City of Alhambra,148,170.66,False
 2020-05-16,San Gabriel Valley,City of Arcadia,65,112.55,False
@@ -16479,8 +16479,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-16,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-16,South LA,Unincorporated - Willowbrook,113,323.66,False
 2020-05-16,South Bay,Unincorporated - Wiseburn,9,149.33,False
-2020-05-16,Harbor,City of Long Beach,1214,258.91,
-2020-05-16,Verdugos,City of Pasadena,670,474.35,
+2020-05-16,Harbor,City of Long Beach,1214,258.91,False
+2020-05-16,Verdugos,City of Pasadena,670,474.35,False
 2020-05-17,Santa Monica Mountains,City of Agoura Hills,33,158.02,False
 2020-05-17,San Gabriel Valley,City of Alhambra,149,171.81,False
 2020-05-17,San Gabriel Valley,City of Arcadia,65,112.55,False
@@ -16819,8 +16819,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-17,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-17,South LA,Unincorporated - Willowbrook,116,332.25,False
 2020-05-17,South Bay,Unincorporated - Wiseburn,10,165.92,False
-2020-05-17,Harbor,City of Long Beach,1271,271.07,
-2020-05-17,Verdugos,City of Pasadena,684,484.26,
+2020-05-17,Harbor,City of Long Beach,1271,271.07,False
+2020-05-17,Verdugos,City of Pasadena,684,484.26,False
 2020-05-18,Santa Monica Mountains,City of Agoura Hills,33,158.02,False
 2020-05-18,San Gabriel Valley,City of Alhambra,149,171.81,False
 2020-05-18,San Gabriel Valley,City of Arcadia,65,112.55,False
@@ -17159,8 +17159,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-18,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-18,South LA,Unincorporated - Willowbrook,121,346.58,False
 2020-05-18,South Bay,Unincorporated - Wiseburn,10,165.92,False
-2020-05-18,Harbor,City of Long Beach,1298,276.83,
-2020-05-18,Verdugos,City of Pasadena,694,491.34,
+2020-05-18,Harbor,City of Long Beach,1298,276.83,False
+2020-05-18,Verdugos,City of Pasadena,694,491.34,False
 2020-05-19,Santa Monica Mountains,City of Agoura Hills,33,158.02,False
 2020-05-19,San Gabriel Valley,City of Alhambra,153,176.42,False
 2020-05-19,San Gabriel Valley,City of Arcadia,66,114.28,False
@@ -17499,8 +17499,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-19,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-19,South LA,Unincorporated - Willowbrook,124,355.17,False
 2020-05-19,South Bay,Unincorporated - Wiseburn,11,182.51,False
-2020-05-19,Harbor,City of Long Beach,1305,278.32,
-2020-05-19,Verdugos,City of Pasadena,702,497.01,
+2020-05-19,Harbor,City of Long Beach,1305,278.32,False
+2020-05-19,Verdugos,City of Pasadena,702,497.01,False
 2020-05-20,Santa Monica Mountains,City of Agoura Hills,33,158.02,False
 2020-05-20,San Gabriel Valley,City of Alhambra,158,182.19,False
 2020-05-20,San Gabriel Valley,City of Arcadia,68,117.74,False
@@ -17839,8 +17839,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-20,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-20,South LA,Unincorporated - Willowbrook,126,360.9,False
 2020-05-20,South Bay,Unincorporated - Wiseburn,12,199.1,False
-2020-05-20,Harbor,City of Long Beach,1362,290.48,
-2020-05-20,Verdugos,City of Pasadena,704,498.42,
+2020-05-20,Harbor,City of Long Beach,1362,290.48,False
+2020-05-20,Verdugos,City of Pasadena,704,498.42,False
 2020-05-21,Santa Monica Mountains,City of Agoura Hills,33,158.02,False
 2020-05-21,San Gabriel Valley,City of Alhambra,163,187.95,False
 2020-05-21,Southeast,City of Artesia,22,130.99,False
@@ -18178,8 +18178,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-21,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-21,South LA,Unincorporated - Willowbrook,133,380.95,False
 2020-05-21,South Bay,Unincorporated - Wiseburn,13,215.7,False
-2020-05-21,Harbor,City of Long Beach,1400,298.58,
-2020-05-21,Verdugos,City of Pasadena,784,555.06,
+2020-05-21,Harbor,City of Long Beach,1400,298.58,False
+2020-05-21,Verdugos,City of Pasadena,784,555.06,False
 2020-05-22,Santa Monica Mountains,City of Agoura Hills,33,158.02,False
 2020-05-22,San Gabriel Valley,City of Alhambra,170,196.02,False
 2020-05-22,San Gabriel Valley,City of Arcadia,70,121.2,False
@@ -18518,8 +18518,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-22,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-22,South LA,Unincorporated - Willowbrook,140,401.0,False
 2020-05-22,South Bay,Unincorporated - Wiseburn,13,215.7,False
-2020-05-22,Harbor,City of Long Beach,1495,318.84,
-2020-05-22,Verdugos,City of Pasadena,790,559.31,
+2020-05-22,Harbor,City of Long Beach,1495,318.84,False
+2020-05-22,Verdugos,City of Pasadena,790,559.31,False
 2020-05-23,Santa Monica Mountains,City of Agoura Hills,33,158.02,False
 2020-05-23,San Gabriel Valley,City of Alhambra,172,198.33,False
 2020-05-23,San Gabriel Valley,City of Arcadia,72,124.67,False
@@ -18858,8 +18858,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-23,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-23,South LA,Unincorporated - Willowbrook,152,435.37,False
 2020-05-23,South Bay,Unincorporated - Wiseburn,14,232.29,False
-2020-05-23,Harbor,City of Long Beach,1513,322.68,
-2020-05-23,Verdugos,City of Pasadena,805,569.93,
+2020-05-23,Harbor,City of Long Beach,1513,322.68,False
+2020-05-23,Verdugos,City of Pasadena,805,569.93,False
 2020-05-24,Santa Monica Mountains,City of Agoura Hills,33,158.02,False
 2020-05-24,San Gabriel Valley,City of Alhambra,173,199.48,False
 2020-05-24,San Gabriel Valley,City of Arcadia,72,124.67,False
@@ -19198,8 +19198,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-24,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-24,South LA,Unincorporated - Willowbrook,155,443.96,False
 2020-05-24,South Bay,Unincorporated - Wiseburn,14,232.29,False
-2020-05-24,Harbor,City of Long Beach,1553,331.21,
-2020-05-24,Verdugos,City of Pasadena,831,588.34,
+2020-05-24,Harbor,City of Long Beach,1553,331.21,False
+2020-05-24,Verdugos,City of Pasadena,831,588.34,False
 2020-05-25,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-05-25,San Gabriel Valley,City of Alhambra,173,199.48,False
 2020-05-25,San Gabriel Valley,City of Arcadia,75,129.86,False
@@ -19538,8 +19538,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-25,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-25,South LA,Unincorporated - Willowbrook,175,501.25,False
 2020-05-25,South Bay,Unincorporated - Wiseburn,15,248.88,False
-2020-05-25,Harbor,City of Long Beach,1582,337.4,
-2020-05-25,Verdugos,City of Pasadena,848,600.37,
+2020-05-25,Harbor,City of Long Beach,1582,337.4,False
+2020-05-25,Verdugos,City of Pasadena,848,600.37,False
 2020-05-26,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-05-26,San Gabriel Valley,City of Alhambra,182,209.86,False
 2020-05-26,San Gabriel Valley,City of Arcadia,80,138.52,False
@@ -19878,8 +19878,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-26,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-26,South LA,Unincorporated - Willowbrook,185,529.89,False
 2020-05-26,South Bay,Unincorporated - Wiseburn,15,248.88,False
-2020-05-26,Harbor,City of Long Beach,1582,337.4,
-2020-05-26,Verdugos,City of Pasadena,853,603.91,
+2020-05-26,Harbor,City of Long Beach,1582,337.4,False
+2020-05-26,Verdugos,City of Pasadena,853,603.91,False
 2020-05-27,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-05-27,San Gabriel Valley,City of Alhambra,186,214.47,False
 2020-05-27,San Gabriel Valley,City of Arcadia,80,138.52,False
@@ -20218,8 +20218,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-27,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-27,South LA,Unincorporated - Willowbrook,193,552.8,False
 2020-05-27,South Bay,Unincorporated - Wiseburn,16,265.47,False
-2020-05-27,Harbor,City of Long Beach,1605,342.3,
-2020-05-27,Verdugos,City of Pasadena,883,625.15,
+2020-05-27,Harbor,City of Long Beach,1605,342.3,False
+2020-05-27,Verdugos,City of Pasadena,883,625.15,False
 2020-05-28,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-05-28,San Gabriel Valley,City of Alhambra,191,220.24,False
 2020-05-28,San Gabriel Valley,City of Arcadia,80,138.52,False
@@ -20558,8 +20558,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-28,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-28,South LA,Unincorporated - Willowbrook,200,572.85,False
 2020-05-28,South Bay,Unincorporated - Wiseburn,16,265.47,False
-2020-05-28,Harbor,City of Long Beach,1666,355.31,
-2020-05-28,Verdugos,City of Pasadena,900,637.19,
+2020-05-28,Harbor,City of Long Beach,1666,355.31,False
+2020-05-28,Verdugos,City of Pasadena,900,637.19,False
 2020-05-29,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-05-29,San Gabriel Valley,City of Alhambra,195,224.85,False
 2020-05-29,San Gabriel Valley,City of Arcadia,82,141.98,False
@@ -20898,8 +20898,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-29,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-29,South LA,Unincorporated - Willowbrook,208,595.77,False
 2020-05-29,South Bay,Unincorporated - Wiseburn,18,298.66,False
-2020-05-29,Harbor,City of Long Beach,1741,371.31,
-2020-05-29,Verdugos,City of Pasadena,911,644.97,
+2020-05-29,Harbor,City of Long Beach,1741,371.31,False
+2020-05-29,Verdugos,City of Pasadena,911,644.97,False
 2020-05-30,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-05-30,San Gabriel Valley,City of Alhambra,204,235.23,False
 2020-05-30,San Gabriel Valley,City of Arcadia,83,143.71,False
@@ -21238,8 +21238,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-30,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-30,South LA,Unincorporated - Willowbrook,217,621.54,False
 2020-05-30,South Bay,Unincorporated - Wiseburn,18,298.66,False
-2020-05-30,Harbor,City of Long Beach,1857,396.05,
-2020-05-30,Verdugos,City of Pasadena,918,649.93,
+2020-05-30,Harbor,City of Long Beach,1857,396.05,False
+2020-05-30,Verdugos,City of Pasadena,918,649.93,False
 2020-05-31,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-05-31,San Gabriel Valley,City of Alhambra,215,247.91,False
 2020-05-31,San Gabriel Valley,City of Arcadia,87,150.64,False
@@ -21578,8 +21578,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-05-31,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-05-31,South LA,Unincorporated - Willowbrook,228,653.05,False
 2020-05-31,South Bay,Unincorporated - Wiseburn,18,298.66,False
-2020-05-31,Harbor,City of Long Beach,1947,415.24,
-2020-05-31,Verdugos,City of Pasadena,923,653.47,
+2020-05-31,Harbor,City of Long Beach,1947,415.24,False
+2020-05-31,Verdugos,City of Pasadena,923,653.47,False
 2020-06-01,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-06-01,San Gabriel Valley,City of Alhambra,220,253.68,False
 2020-06-01,San Gabriel Valley,City of Arcadia,88,152.37,False
@@ -21918,8 +21918,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-01,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-01,South LA,Unincorporated - Willowbrook,239,684.56,False
 2020-06-01,South Bay,Unincorporated - Wiseburn,18,298.66,False
-2020-06-01,Harbor,City of Long Beach,1947,415.24,
-2020-06-01,Verdugos,City of Pasadena,928,657.01,
+2020-06-01,Harbor,City of Long Beach,1947,415.24,False
+2020-06-01,Verdugos,City of Pasadena,928,657.01,False
 2020-06-02,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-06-02,San Gabriel Valley,City of Alhambra,226,260.6,False
 2020-06-02,San Gabriel Valley,City of Arcadia,91,157.56,False
@@ -22258,8 +22258,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-02,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-02,South LA,Unincorporated - Willowbrook,252,721.79,False
 2020-06-02,South Bay,Unincorporated - Wiseburn,18,298.66,False
-2020-06-02,Harbor,City of Long Beach,1990,424.41,
-2020-06-02,Verdugos,City of Pasadena,934,661.26,
+2020-06-02,Harbor,City of Long Beach,1990,424.41,False
+2020-06-02,Verdugos,City of Pasadena,934,661.26,False
 2020-06-03,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-06-03,San Gabriel Valley,City of Alhambra,226,260.6,False
 2020-06-03,San Gabriel Valley,City of Arcadia,94,162.76,False
@@ -22598,8 +22598,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-03,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-03,South LA,Unincorporated - Willowbrook,267,764.76,False
 2020-06-03,South Bay,Unincorporated - Wiseburn,19,315.25,False
-2020-06-03,Harbor,City of Long Beach,2091,445.95,
-2020-06-03,Verdugos,City of Pasadena,937,663.38,
+2020-06-03,Harbor,City of Long Beach,2091,445.95,False
+2020-06-03,Verdugos,City of Pasadena,937,663.38,False
 2020-06-04,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-06-04,San Gabriel Valley,City of Alhambra,228,262.9,False
 2020-06-04,San Gabriel Valley,City of Arcadia,94,162.76,False
@@ -22938,8 +22938,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-04,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-04,South LA,Unincorporated - Willowbrook,273,781.94,False
 2020-06-04,South Bay,Unincorporated - Wiseburn,19,315.25,False
-2020-06-04,Harbor,City of Long Beach,2118,451.71,
-2020-06-04,Verdugos,City of Pasadena,943,667.63,
+2020-06-04,Harbor,City of Long Beach,2118,451.71,False
+2020-06-04,Verdugos,City of Pasadena,943,667.63,False
 2020-06-05,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-06-05,San Gabriel Valley,City of Alhambra,231,266.36,False
 2020-06-05,San Gabriel Valley,City of Arcadia,95,164.49,False
@@ -23278,8 +23278,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-05,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-05,South LA,Unincorporated - Willowbrook,288,824.91,False
 2020-06-05,South Bay,Unincorporated - Wiseburn,19,315.25,False
-2020-06-05,Harbor,City of Long Beach,2160,460.67,
-2020-06-05,Verdugos,City of Pasadena,968,685.33,
+2020-06-05,Harbor,City of Long Beach,2160,460.67,False
+2020-06-05,Verdugos,City of Pasadena,968,685.33,False
 2020-06-06,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-06-06,San Gabriel Valley,City of Alhambra,238,274.43,False
 2020-06-06,San Gabriel Valley,City of Arcadia,97,167.95,False
@@ -23618,8 +23618,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-06,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-06,South LA,Unincorporated - Willowbrook,297,850.69,False
 2020-06-06,South Bay,Unincorporated - Wiseburn,20,331.84,False
-2020-06-06,Harbor,City of Long Beach,2180,464.93,
-2020-06-06,Verdugos,City of Pasadena,974,689.58,
+2020-06-06,Harbor,City of Long Beach,2180,464.93,False
+2020-06-06,Verdugos,City of Pasadena,974,689.58,False
 2020-06-07,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-06-07,San Gabriel Valley,City of Alhambra,248,285.96,False
 2020-06-07,San Gabriel Valley,City of Arcadia,99,171.42,False
@@ -23958,8 +23958,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-07,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-07,South LA,Unincorporated - Willowbrook,304,870.74,False
 2020-06-07,South Bay,Unincorporated - Wiseburn,20,331.84,False
-2020-06-07,Harbor,City of Long Beach,2227,474.96,
-2020-06-07,Verdugos,City of Pasadena,981,694.53,
+2020-06-07,Harbor,City of Long Beach,2227,474.96,False
+2020-06-07,Verdugos,City of Pasadena,981,694.53,False
 2020-06-08,Santa Monica Mountains,City of Agoura Hills,35,167.6,False
 2020-06-08,San Gabriel Valley,City of Alhambra,249,287.12,False
 2020-06-08,San Gabriel Valley,City of Arcadia,100,173.15,False
@@ -24298,8 +24298,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-08,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-08,South LA,Unincorporated - Willowbrook,311,890.79,False
 2020-06-08,South Bay,Unincorporated - Wiseburn,20,331.84,False
-2020-06-08,Harbor,City of Long Beach,2227,474.96,
-2020-06-08,Verdugos,City of Pasadena,987,698.78,
+2020-06-08,Harbor,City of Long Beach,2227,474.96,False
+2020-06-08,Verdugos,City of Pasadena,987,698.78,False
 2020-06-09,Santa Monica Mountains,City of Agoura Hills,36,172.39,False
 2020-06-09,San Gabriel Valley,City of Alhambra,252,290.58,False
 2020-06-09,San Gabriel Valley,City of Arcadia,102,176.61,False
@@ -24638,8 +24638,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-09,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-09,South LA,Unincorporated - Willowbrook,316,905.11,False
 2020-06-09,South Bay,Unincorporated - Wiseburn,21,348.43,False
-2020-06-09,Harbor,City of Long Beach,2273,484.77,
-2020-06-09,Verdugos,City of Pasadena,996,705.15,
+2020-06-09,Harbor,City of Long Beach,2273,484.77,False
+2020-06-09,Verdugos,City of Pasadena,996,705.15,False
 2020-06-10,Santa Monica Mountains,City of Agoura Hills,36,172.39,False
 2020-06-10,San Gabriel Valley,City of Alhambra,256,295.19,False
 2020-06-10,San Gabriel Valley,City of Arcadia,102,176.61,False
@@ -24978,8 +24978,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-10,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-10,South LA,Unincorporated - Willowbrook,327,936.61,False
 2020-06-10,South Bay,Unincorporated - Wiseburn,21,348.43,False
-2020-06-10,Harbor,City of Long Beach,2396,511.0,
-2020-06-10,Verdugos,City of Pasadena,1008,713.65,
+2020-06-10,Harbor,City of Long Beach,2396,511.0,False
+2020-06-10,Verdugos,City of Pasadena,1008,713.65,False
 2020-06-11,Santa Monica Mountains,City of Agoura Hills,36,172.39,False
 2020-06-11,San Gabriel Valley,City of Alhambra,266,306.72,False
 2020-06-11,San Gabriel Valley,City of Arcadia,104,180.07,False
@@ -25318,8 +25318,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-11,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-11,South LA,Unincorporated - Willowbrook,342,979.58,False
 2020-06-11,South Bay,Unincorporated - Wiseburn,21,348.43,False
-2020-06-11,Harbor,City of Long Beach,2436,519.53,
-2020-06-11,Verdugos,City of Pasadena,1015,718.6,
+2020-06-11,Harbor,City of Long Beach,2436,519.53,False
+2020-06-11,Verdugos,City of Pasadena,1015,718.6,False
 2020-06-12,Santa Monica Mountains,City of Agoura Hills,37,177.18,False
 2020-06-12,San Gabriel Valley,City of Alhambra,276,318.25,False
 2020-06-12,San Gabriel Valley,City of Arcadia,105,181.81,False
@@ -25658,8 +25658,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-12,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-12,South LA,Unincorporated - Willowbrook,347,993.9,False
 2020-06-12,South Bay,Unincorporated - Wiseburn,21,348.43,False
-2020-06-12,Harbor,City of Long Beach,2512,535.74,
-2020-06-12,Verdugos,City of Pasadena,1023,724.27,
+2020-06-12,Harbor,City of Long Beach,2512,535.74,False
+2020-06-12,Verdugos,City of Pasadena,1023,724.27,False
 2020-06-13,Santa Monica Mountains,City of Agoura Hills,38,182.0,False
 2020-06-13,San Gabriel Valley,City of Alhambra,282,325.0,False
 2020-06-13,San Gabriel Valley,City of Arcadia,106,184.0,False
@@ -25998,8 +25998,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-13,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-13,South LA,Unincorporated - Willowbrook,359,1028.0,False
 2020-06-13,South Bay,Unincorporated - Wiseburn,22,365.0,False
-2020-06-13,Harbor,City of Long Beach,2565,547.04,
-2020-06-13,Verdugos,City of Pasadena,1028,727.81,
+2020-06-13,Harbor,City of Long Beach,2565,547.04,False
+2020-06-13,Verdugos,City of Pasadena,1028,727.81,False
 2020-06-14,Santa Monica Mountains,City of Agoura Hills,38,182.0,False
 2020-06-14,San Gabriel Valley,City of Alhambra,286,330.0,False
 2020-06-14,San Gabriel Valley,City of Arcadia,106,184.0,False
@@ -26338,8 +26338,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-14,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-14,South LA,Unincorporated - Willowbrook,363,1040.0,False
 2020-06-14,South Bay,Unincorporated - Wiseburn,22,365.0,False
-2020-06-14,Harbor,City of Long Beach,2599,554.3,
-2020-06-14,Verdugos,City of Pasadena,1037,734.18,
+2020-06-14,Harbor,City of Long Beach,2599,554.3,False
+2020-06-14,Verdugos,City of Pasadena,1037,734.18,False
 2020-06-15,Santa Monica Mountains,City of Agoura Hills,38,182.0,False
 2020-06-15,San Gabriel Valley,City of Alhambra,289,333.0,False
 2020-06-15,San Gabriel Valley,City of Arcadia,107,185.0,False
@@ -26678,8 +26678,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-15,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-15,South LA,Unincorporated - Willowbrook,371,1063.0,False
 2020-06-15,South Bay,Unincorporated - Wiseburn,22,365.0,False
-2020-06-15,Harbor,City of Long Beach,2599,554.3,
-2020-06-15,Verdugos,City of Pasadena,1042,737.72,
+2020-06-15,Harbor,City of Long Beach,2599,554.3,False
+2020-06-15,Verdugos,City of Pasadena,1042,737.72,False
 2020-06-16,Santa Monica Mountains,City of Agoura Hills,39,187.0,False
 2020-06-16,San Gabriel Valley,City of Alhambra,292,337.0,False
 2020-06-16,San Gabriel Valley,City of Arcadia,110,190.0,False
@@ -27018,8 +27018,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-16,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-16,South LA,Unincorporated - Willowbrook,378,1083.0,False
 2020-06-16,South Bay,Unincorporated - Wiseburn,21,348.0,False
-2020-06-16,Harbor,City of Long Beach,2634,561.76,
-2020-06-16,Verdugos,City of Pasadena,1048,741.97,
+2020-06-16,Harbor,City of Long Beach,2634,561.76,False
+2020-06-16,Verdugos,City of Pasadena,1048,741.97,False
 2020-06-17,Santa Monica Mountains,City of Agoura Hills,39,187.0,False
 2020-06-17,San Gabriel Valley,City of Alhambra,309,356.0,False
 2020-06-17,San Gabriel Valley,City of Arcadia,114,197.0,False
@@ -27358,8 +27358,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-17,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-17,South LA,Unincorporated - Willowbrook,392,1123.0,False
 2020-06-17,South Bay,Unincorporated - Wiseburn,23,382.0,False
-2020-06-17,Harbor,City of Long Beach,2712,578.4,
-2020-06-17,Verdugos,City of Pasadena,1058,749.05,
+2020-06-17,Harbor,City of Long Beach,2712,578.4,False
+2020-06-17,Verdugos,City of Pasadena,1058,749.05,False
 2020-06-18,Santa Monica Mountains,City of Agoura Hills,43,206.0,False
 2020-06-18,San Gabriel Valley,City of Alhambra,311,359.0,False
 2020-06-18,San Gabriel Valley,City of Arcadia,124,215.0,False
@@ -27698,8 +27698,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-18,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-18,South LA,Unincorporated - Willowbrook,400,1146.0,False
 2020-06-18,South Bay,Unincorporated - Wiseburn,24,398.0,False
-2020-06-18,Harbor,City of Long Beach,2783,593.54,
-2020-06-18,Verdugos,City of Pasadena,1083,766.75,
+2020-06-18,Harbor,City of Long Beach,2783,593.54,False
+2020-06-18,Verdugos,City of Pasadena,1083,766.75,False
 2020-06-19,Santa Monica Mountains,City of Agoura Hills,43,206.0,False
 2020-06-19,San Gabriel Valley,City of Alhambra,319,368.0,False
 2020-06-19,San Gabriel Valley,City of Arcadia,125,216.0,False
@@ -28038,8 +28038,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-19,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-19,South LA,Unincorporated - Willowbrook,402,1151.0,False
 2020-06-19,South Bay,Unincorporated - Wiseburn,26,431.0,False
-2020-06-19,Harbor,City of Long Beach,2888,615.93,
-2020-06-19,Verdugos,City of Pasadena,1099,778.08,
+2020-06-19,Harbor,City of Long Beach,2888,615.93,False
+2020-06-19,Verdugos,City of Pasadena,1099,778.08,False
 2020-06-20,Santa Monica Mountains,City of Agoura Hills,45,215.0,False
 2020-06-20,San Gabriel Valley,City of Alhambra,328,378.0,False
 2020-06-20,San Gabriel Valley,City of Arcadia,127,220.0,False
@@ -28378,8 +28378,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-20,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-20,South LA,Unincorporated - Willowbrook,416,1192.0,False
 2020-06-20,South Bay,Unincorporated - Wiseburn,27,448.0,False
-2020-06-20,Harbor,City of Long Beach,2934,625.74,
-2020-06-20,Verdugos,City of Pasadena,1120,792.94,
+2020-06-20,Harbor,City of Long Beach,2934,625.74,False
+2020-06-20,Verdugos,City of Pasadena,1120,792.94,False
 2020-06-21,Santa Monica Mountains,City of Agoura Hills,47,225.0,False
 2020-06-21,San Gabriel Valley,City of Alhambra,337,389.0,False
 2020-06-21,San Gabriel Valley,City of Arcadia,130,225.0,False
@@ -28718,8 +28718,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-21,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-21,South LA,Unincorporated - Willowbrook,429,1229.0,False
 2020-06-21,South Bay,Unincorporated - Wiseburn,29,481.0,False
-2020-06-21,Harbor,City of Long Beach,2982,635.98,
-2020-06-21,Verdugos,City of Pasadena,1145,810.64,
+2020-06-21,Harbor,City of Long Beach,2982,635.98,False
+2020-06-21,Verdugos,City of Pasadena,1145,810.64,False
 2020-06-22,Santa Monica Mountains,City of Agoura Hills,47,225.0,False
 2020-06-22,San Gabriel Valley,City of Alhambra,351,405.0,False
 2020-06-22,San Gabriel Valley,City of Arcadia,134,232.0,False
@@ -29054,8 +29054,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-22,South Bay,Unincorporated - Westfield/Academy Hills,0,0.0,False
 2020-06-22,San Fernando Valley,Unincorporated - Westhills,1,119.0,False
 2020-06-22,Antelope Valley,Unincorporated - White Fence Farms,17,462.0,False
-2020-06-22,Harbor,City of Long Beach,2982,635.98,
-2020-06-22,Verdugos,City of Pasadena,1162,822.68,
+2020-06-22,Harbor,City of Long Beach,2982,635.98,False
+2020-06-22,Verdugos,City of Pasadena,1162,822.68,False
 2020-06-23,Santa Monica Mountains,City of Agoura Hills,48,230.0,False
 2020-06-23,San Gabriel Valley,City of Alhambra,363,419.0,False
 2020-06-23,San Gabriel Valley,City of Arcadia,138,239.0,False
@@ -29394,8 +29394,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-23,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-23,South LA,Unincorporated - Willowbrook,471,1349.0,False
 2020-06-23,South Bay,Unincorporated - Wiseburn,32,531.0,False
-2020-06-23,Harbor,City of Long Beach,3042,648.78,
-2020-06-23,Verdugos,City of Pasadena,1177,833.3,
+2020-06-23,Harbor,City of Long Beach,3042,648.78,False
+2020-06-23,Verdugos,City of Pasadena,1177,833.3,False
 2020-06-24,Santa Monica Mountains,City of Agoura Hills,49,235.0,False
 2020-06-24,San Gabriel Valley,City of Alhambra,369,425.0,False
 2020-06-24,San Gabriel Valley,City of Arcadia,141,244.0,False
@@ -29734,8 +29734,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-24,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-24,South LA,Unincorporated - Willowbrook,478,1369.0,False
 2020-06-24,South Bay,Unincorporated - Wiseburn,33,548.0,False
-2020-06-24,Harbor,City of Long Beach,3273,698.04,
-2020-06-24,Verdugos,City of Pasadena,1196,846.75,
+2020-06-24,Harbor,City of Long Beach,3273,698.04,False
+2020-06-24,Verdugos,City of Pasadena,1196,846.75,False
 2020-06-25,Santa Monica Mountains,City of Agoura Hills,50,239.0,False
 2020-06-25,San Gabriel Valley,City of Alhambra,381,439.0,False
 2020-06-25,San Gabriel Valley,City of Arcadia,145,251.0,False
@@ -30074,8 +30074,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-25,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-25,South LA,Unincorporated - Willowbrook,493,1412.0,False
 2020-06-25,South Bay,Unincorporated - Wiseburn,34,564.0,False
-2020-06-25,Harbor,City of Long Beach,3405,726.19,
-2020-06-25,Verdugos,City of Pasadena,1207,854.54,
+2020-06-25,Harbor,City of Long Beach,3405,726.19,False
+2020-06-25,Verdugos,City of Pasadena,1207,854.54,False
 2020-06-26,Santa Monica Mountains,City of Agoura Hills,50,239.0,False
 2020-06-26,San Gabriel Valley,City of Alhambra,392,452.0,False
 2020-06-26,San Gabriel Valley,City of Arcadia,147,255.0,False
@@ -30414,8 +30414,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-26,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-26,South LA,Unincorporated - Willowbrook,508,1455.0,False
 2020-06-26,South Bay,Unincorporated - Wiseburn,35,581.0,False
-2020-06-26,Harbor,City of Long Beach,3509,748.37,
-2020-06-26,Verdugos,City of Pasadena,1213,858.79,
+2020-06-26,Harbor,City of Long Beach,3509,748.37,False
+2020-06-26,Verdugos,City of Pasadena,1213,858.79,False
 2020-06-27,Santa Monica Mountains,City of Agoura Hills,51,244.0,False
 2020-06-27,San Gabriel Valley,City of Alhambra,405,467.0,False
 2020-06-27,San Gabriel Valley,City of Arcadia,154,267.0,False
@@ -30754,8 +30754,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-27,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-27,South LA,Unincorporated - Willowbrook,522,1495.0,False
 2020-06-27,South Bay,Unincorporated - Wiseburn,38,630.0,False
-2020-06-27,Harbor,City of Long Beach,3643,776.95,
-2020-06-27,Verdugos,City of Pasadena,1238,876.48,
+2020-06-27,Harbor,City of Long Beach,3643,776.95,False
+2020-06-27,Verdugos,City of Pasadena,1238,876.48,False
 2020-06-28,Santa Monica Mountains,City of Agoura Hills,52,249.0,False
 2020-06-28,San Gabriel Valley,City of Alhambra,417,481.0,False
 2020-06-28,San Gabriel Valley,City of Arcadia,162,281.0,False
@@ -31094,8 +31094,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-28,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-28,South LA,Unincorporated - Willowbrook,544,1558.0,False
 2020-06-28,South Bay,Unincorporated - Wiseburn,40,664.0,False
-2020-06-28,Harbor,City of Long Beach,3643,776.95,
-2020-06-28,Verdugos,City of Pasadena,1252,886.4,
+2020-06-28,Harbor,City of Long Beach,3643,776.95,False
+2020-06-28,Verdugos,City of Pasadena,1252,886.4,False
 2020-06-29,Santa Monica Mountains,City of Agoura Hills,54,259.0,False
 2020-06-29,San Gabriel Valley,City of Alhambra,440,507.0,False
 2020-06-29,San Gabriel Valley,City of Arcadia,164,284.0,False
@@ -31434,8 +31434,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-29,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-29,South LA,Unincorporated - Willowbrook,554,1587.0,False
 2020-06-29,South Bay,Unincorporated - Wiseburn,41,680.0,False
-2020-06-29,Harbor,City of Long Beach,3643,776.95,
-2020-06-29,Verdugos,City of Pasadena,1276,903.39,
+2020-06-29,Harbor,City of Long Beach,3643,776.95,False
+2020-06-29,Verdugos,City of Pasadena,1276,903.39,False
 2020-06-30,Santa Monica Mountains,City of Agoura Hills,58,278.0,False
 2020-06-30,San Gabriel Valley,City of Alhambra,450,519.0,False
 2020-06-30,San Gabriel Valley,City of Arcadia,168,291.0,False
@@ -31774,8 +31774,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-06-30,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-06-30,South LA,Unincorporated - Willowbrook,570,1633.0,False
 2020-06-30,South Bay,Unincorporated - Wiseburn,43,713.0,False
-2020-06-30,Harbor,City of Long Beach,3799,810.22,
-2020-06-30,Verdugos,City of Pasadena,1306,924.63,
+2020-06-30,Harbor,City of Long Beach,3799,810.22,False
+2020-06-30,Verdugos,City of Pasadena,1306,924.63,False
 2020-07-01,Santa Monica Mountains,City of Agoura Hills,61,292.0,False
 2020-07-01,San Gabriel Valley,City of Alhambra,457,527.0,False
 2020-07-01,San Gabriel Valley,City of Arcadia,173,300.0,False
@@ -32114,8 +32114,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-07-01,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-07-01,South LA,Unincorporated - Willowbrook,585,1676.0,False
 2020-07-01,South Bay,Unincorporated - Wiseburn,43,713.0,False
-2020-07-01,Harbor,City of Long Beach,4120,878.68,
-2020-07-01,Verdugos,City of Pasadena,1328,940.2,
+2020-07-01,Harbor,City of Long Beach,4120,878.68,False
+2020-07-01,Verdugos,City of Pasadena,1328,940.2,False
 2020-07-02,Santa Monica Mountains,City of Agoura Hills,62,297.0,False
 2020-07-02,San Gabriel Valley,City of Alhambra,474,547.0,False
 2020-07-02,San Gabriel Valley,City of Arcadia,177,306.0,False
@@ -32454,8 +32454,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-07-02,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-07-02,South LA,Unincorporated - Willowbrook,594,1701.0,False
 2020-07-02,South Bay,Unincorporated - Wiseburn,43,713.0,False
-2020-07-02,Harbor,City of Long Beach,4265,909.61,
-2020-07-02,Verdugos,City of Pasadena,1341,949.41,
+2020-07-02,Harbor,City of Long Beach,4265,909.61,False
+2020-07-02,Verdugos,City of Pasadena,1341,949.41,False
 2020-07-06,Santa Monica Mountains,City of Agoura Hills,65,311.0,False
 2020-07-06,San Gabriel Valley,City of Alhambra,523,603.0,False
 2020-07-06,San Gabriel Valley,City of Arcadia,194,336.0,False
@@ -32794,8 +32794,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-07-06,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-07-06,South LA,Unincorporated - Willowbrook,655,1876.0,False
 2020-07-06,South Bay,Unincorporated - Wiseburn,47,780.0,False
-2020-07-06,Harbor,City of Long Beach,4379,933.92,
-2020-07-06,Verdugos,City of Pasadena,1401,991.89,
+2020-07-06,Harbor,City of Long Beach,4379,933.92,False
+2020-07-06,Verdugos,City of Pasadena,1401,991.89,False
 2020-07-07,Santa Monica Mountains,City of Agoura Hills,68,326.0,False
 2020-07-07,San Gabriel Valley,City of Alhambra,549,633.0,False
 2020-07-07,San Gabriel Valley,City of Arcadia,203,351.0,False
@@ -33135,8 +33135,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-07-07,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-07-07,South LA,Unincorporated - Willowbrook,680,1948.0,False
 2020-07-07,South Bay,Unincorporated - Wiseburn,49,813.0,False
-2020-07-07,Harbor,City of Long Beach,4472,953.76,
-2020-07-07,Verdugos,City of Pasadena,1408,996.84,
+2020-07-07,Harbor,City of Long Beach,4472,953.76,False
+2020-07-07,Verdugos,City of Pasadena,1408,996.84,False
 2020-07-08,Santa Monica Mountains,City of Agoura Hills,69,330.0,False
 2020-07-08,San Gabriel Valley,City of Alhambra,559,645.0,False
 2020-07-08,San Gabriel Valley,City of Arcadia,207,358.0,False
@@ -33476,8 +33476,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-07-08,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-07-08,South LA,Unincorporated - Willowbrook,688,1971.0,False
 2020-07-08,South Bay,Unincorporated - Wiseburn,50,830.0,False
-2020-07-08,Harbor,City of Long Beach,4690,1000.25,
-2020-07-08,Verdugos,City of Pasadena,1415,1001.8,
+2020-07-08,Harbor,City of Long Beach,4690,1000.25,False
+2020-07-08,Verdugos,City of Pasadena,1415,1001.8,False
 2020-07-09,Santa Monica Mountains,City of Agoura Hills,69,330.0,False
 2020-07-09,San Gabriel Valley,City of Alhambra,569,656.0,False
 2020-07-09,San Gabriel Valley,City of Arcadia,211,365.0,False
@@ -33817,8 +33817,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-07-09,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-07-09,South LA,Unincorporated - Willowbrook,699,2002.0,False
 2020-07-09,South Bay,Unincorporated - Wiseburn,51,846.0,False
-2020-07-09,Harbor,City of Long Beach,4918,1048.88,
-2020-07-09,Verdugos,City of Pasadena,1439,1018.79,
+2020-07-09,Harbor,City of Long Beach,4918,1048.88,False
+2020-07-09,Verdugos,City of Pasadena,1439,1018.79,False
 2020-07-10,Santa Monica Mountains,City of Agoura Hills,73,350.0,False
 2020-07-10,San Gabriel Valley,City of Alhambra,572,660.0,False
 2020-07-10,San Gabriel Valley,City of Arcadia,215,372.0,False
@@ -34158,8 +34158,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-07-10,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-07-10,South LA,Unincorporated - Willowbrook,717,2054.0,False
 2020-07-10,South Bay,Unincorporated - Wiseburn,53,879.0,False
-2020-07-10,Harbor,City of Long Beach,5172,1103.05,
-2020-07-10,Verdugos,City of Pasadena,1453,1028.7,
+2020-07-10,Harbor,City of Long Beach,5172,1103.05,False
+2020-07-10,Verdugos,City of Pasadena,1453,1028.7,False
 2020-07-11,Santa Monica Mountains,City of Agoura Hills,73,350.0,False
 2020-07-11,San Gabriel Valley,City of Alhambra,590,680.0,False
 2020-07-11,San Gabriel Valley,City of Arcadia,222,384.0,False
@@ -34499,8 +34499,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-07-11,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-07-11,South LA,Unincorporated - Willowbrook,737,2111.0,False
 2020-07-11,South Bay,Unincorporated - Wiseburn,54,896.0,False
-2020-07-11,Harbor,City of Long Beach,5246,1118.83,
-2020-07-11,Verdugos,City of Pasadena,1460,1033.66,
+2020-07-11,Harbor,City of Long Beach,5246,1118.83,False
+2020-07-11,Verdugos,City of Pasadena,1460,1033.66,False
 2020-07-12,Santa Monica Mountains,City of Agoura Hills,74,354.0,False
 2020-07-12,San Gabriel Valley,City of Alhambra,603,695.0,False
 2020-07-12,San Gabriel Valley,City of Arcadia,230,398.0,False
@@ -34840,8 +34840,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-07-12,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-07-12,South LA,Unincorporated - Willowbrook,754,2160.0,False
 2020-07-12,South Bay,Unincorporated - Wiseburn,56,929.0,False
-2020-07-12,Harbor,City of Long Beach,5388,1149.11,
-2020-07-12,Verdugos,City of Pasadena,1470,1040.74,
+2020-07-12,Harbor,City of Long Beach,5388,1149.11,False
+2020-07-12,Verdugos,City of Pasadena,1470,1040.74,False
 2020-07-13,Santa Monica Mountains,City of Agoura Hills,76,364.0,False
 2020-07-13,San Gabriel Valley,City of Alhambra,616,710.0,False
 2020-07-13,San Gabriel Valley,City of Arcadia,234,405.0,False
@@ -35181,8 +35181,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-07-13,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-07-13,South LA,Unincorporated - Willowbrook,774,2217.0,False
 2020-07-13,South Bay,Unincorporated - Wiseburn,57,946.0,False
-2020-07-13,Harbor,City of Long Beach,5388,1149.11,
-2020-07-13,Verdugos,City of Pasadena,1517,1074.01,
+2020-07-13,Harbor,City of Long Beach,5388,1149.11,False
+2020-07-13,Verdugos,City of Pasadena,1517,1074.01,False
 2020-07-14,Santa Monica Mountains,City of Agoura Hills,78,374.0,False
 2020-07-14,San Gabriel Valley,City of Alhambra,640,738.0,False
 2020-07-14,San Gabriel Valley,City of Arcadia,234,405.0,False
@@ -35522,8 +35522,8 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-07-14,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-07-14,South LA,Unincorporated - Willowbrook,795,2277.0,False
 2020-07-14,South Bay,Unincorporated - Wiseburn,60,996.0,False
-2020-07-14,Harbor,City of Long Beach,5616,1197.74,
-2020-07-14,Verdugos,City of Pasadena,1544,1093.13,
+2020-07-14,Harbor,City of Long Beach,5616,1197.74,False
+2020-07-14,Verdugos,City of Pasadena,1544,1093.13,False
 2020-07-15,Santa Monica Mountains,City of Agoura Hills,81,388.0,False
 2020-07-15,San Gabriel Valley,City of Alhambra,650,750.0,False
 2020-07-15,San Gabriel Valley,City of Arcadia,237,410.0,False
@@ -35863,5 +35863,5 @@ Date,Region,Area,Cases,Case Rate,CF Outbreak
 2020-07-15,San Gabriel Valley,Unincorporated - Whittier Narrows,0,0.0,False
 2020-07-15,South LA,Unincorporated - Willowbrook,797,2283.0,False
 2020-07-15,South Bay,Unincorporated - Wiseburn,64,1062.0,False
-2020-07-15,Harbor,City of Long Beach,5849,1247.43,
-2020-07-15,Verdugos,City of Pasadena,1580,1118.62,
+2020-07-15,Harbor,City of Long Beach,5849,1247.43,False
+2020-07-15,Verdugos,City of Pasadena,1580,1118.62,False

@@ -76,6 +76,11 @@ APPEND_AGE = _APPEND_CSV.format(_AGE)
 APPEND_CSA_TS = _APPEND_CSV.format(_CSA_TS)
 APPEND_REGION_TS = _APPEND_CSV.format(_REGION_TS)
 
+DIR_DELTAS = os.path.join(DIR_DOCS, 'deltas')
+_DELTA_CSV = 'delta-{{}}.{}'.format(CSV)
+AGE_DELTA = os.path.join(DIR_DELTAS, _DELTA_CSV.format('age'))
+REGION_DELTA = os.path.join(DIR_DELTAS, _DELTA_CSV.format('region'))
+
 
 def pandas_export(title: str) -> Tuple[str, str]:
     """Generates paths for a pandas dataframe given a description.
