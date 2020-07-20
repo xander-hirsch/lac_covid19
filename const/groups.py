@@ -14,3 +14,5 @@ RACE_NH_PI = 'Native Hawaiian/Pacific Islander'
 RACE_WHITE = 'White'
 
 OTHER = 'Other'
+
+LOS_ANGELES = 'Los Angeles'
