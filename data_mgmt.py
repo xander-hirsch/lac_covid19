@@ -7,6 +7,7 @@ import pandas as pd
 import lac_covid19.analysis as analysis
 import lac_covid19.const as const
 import lac_covid19.const.paths as paths
+import lac_covid19.covid_plots as covid_plots
 import lac_covid19.current_stats.scrape_current as scrape_current
 import lac_covid19.daily_pr.bad_data as bad_data
 import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats
@@ -130,6 +131,14 @@ def append_time_series(date_: str):
     df_region_ts.to_csv(paths.APPEND_REGION_TS, index=False)
 
 
+def check_csa_outliers():
+    df_csa_curr = pd.read_pickle(paths.CSA_CURRENT_PICKLE)
+    case_rate_high = covid_plots.calc_high_outlier(df_csa_curr[const.CASE_RATE])
+    death_rate_high = covid_plots.calc_high_outlier(df_csa_curr[const.DEATH_RATE])
+    print(' Case rate outlier: {}'.format(case_rate_high))
+    print('Death rate outlier: {}'.format(death_rate_high))
+
+
 def append_all(date_=None):
     if date_ is None:
         date_ = dt.date.today()
@@ -152,6 +161,7 @@ def update_current():
     request_current_csa()
     geo_csa.merge_csa_geo()
     append_csa_map()
+    check_csa_outliers()
 
 
 def update_data(date_=None):
