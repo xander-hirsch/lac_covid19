@@ -27,7 +27,7 @@ df_csa_curr = pd.read_pickle(paths.CSA_CURRENT_PICKLE)
 covid_plots.csa_distribution(df_csa_curr, lac_regions.ALL_CSA, const.CASE_RATE)
 
 
-# In[3]:
+# In[11]:
 
 
 covid_plots.csa_distribution(df_csa_curr, lac_regions.ALL_CSA, const.DEATH_RATE, 20)
@@ -68,7 +68,7 @@ df_csa_ts = pd.read_pickle(paths.CSA_TS_PICKLE)
 
 
 area = lac_regions.ALL_CSA[25]
-covid_plots.csa_ts(df_csa_ts, area)
+# covid_plots.csa_ts(df_csa_ts, area)
 
 
 # ## Rolling Average
