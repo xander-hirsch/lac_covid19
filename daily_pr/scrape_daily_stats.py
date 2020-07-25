@@ -47,7 +47,7 @@ ENTRY_BY_DEPT = re.compile(
 LAC_ONLY = '\(Los Angeles County Cases Only-excl LB and Pas\)'
 
 HEADER_AGE_GROUP = re.compile('Age Group {}'.format(LAC_ONLY))
-ENTRY_AGE = re.compile('(\d+ to \d+|over \d+)\s*--\s*(\d+)')
+ENTRY_AGE = re.compile('(\d+ to \d+|over \d+)(\s*--\s*|\s+)(\d+)')
 
 HEADER_HOSPITAL = re.compile('Hospitalization')
 ENTRY_HOSPITAL = re.compile('([A-Z][A-Za-z() ]+[)a-z])\s*(\d+)')
