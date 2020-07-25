@@ -79,7 +79,7 @@ def calc_deltas():
                                                         const.REGION,
                                                         durations)
 
-    df_age_delta.to_csv(paths.AGE_DELTA, index=False)
+    # df_age_delta.to_csv(paths.AGE_DELTA, index=False)
     df_region_delta.to_csv(paths.REGION_DELTA, index=False)
 
 
