@@ -46,10 +46,20 @@ def read_csa_table() -> Dict[str, int]:
 
 UNKOWN = 'Unknown/Missing'
 
-AGE_MAP = {'<18 years old': group.AGE_0_17,
-           '18 to 40 years old': group.AGE_18_40,
-           '41 to 65 years old': group.AGE_41_65,
-           'over 65 years old': group.AGE_OVER_65}
+AGE_MAP = {
+    '<18 years old': const.AGE_0_17,
+    '18 to 40 years old': const.AGE_18_40,
+    '41 to 65 years old': const.AGE_41_65,
+    'over 65 years old': const.AGE_OVER_65,
+    '<5 years old': const.AGE_0_4,
+    '5 to 11 years old': const.AGE_5_11,
+    '12 to 17 years old': const.AGE_12_17,
+    '18 to 29 years old': const.AGE_18_29,
+    '30 to 49 years old': const.AGE_30_49,
+    '50 to 64 years old': const.AGE_50_64,
+    '65 to 79 years old': const.AGE_65_79,
+    '80+ years old': const.AGE_OVER_80,
+}
 
 RACE_MAP = {'American Indian or Alaska Native': group.RACE_AI_AN,
             'Asian': group.RACE_ASIAN,
@@ -86,7 +96,7 @@ def read_age_table() -> Dict[str, int]:
     age_map = read_demographic_table(paths.LACPH_AGE_RAW, AGE_MAP)
 
     with open(paths.POPULATION_AGE, 'w') as f:
-        json.dump(age_map, f)
+        json.dump(age_map, f, indent=const.JSON_INDENT)
 
     return age_map
 
@@ -109,7 +119,8 @@ def read_race_table() -> Dict[str, int]:
     return race_map
 
 if __name__ == "__main__":
-    read_csa_table()
-    read_age_table()
-    read_gender_table()
-    read_race_table()
+    pass
+    # read_csa_table()
+    # read_age_table()
+    # read_gender_table()
+    # read_race_table()
