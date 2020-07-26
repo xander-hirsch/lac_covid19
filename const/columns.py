@@ -39,6 +39,10 @@ RESID_CASES = 'Resident {}'.format(CASES)
 
 OBJECTID = 'ObjectId'
 
+_CHANGE_IN = 'Change in {}'
+CHANGE_DATE = _CHANGE_IN.format(DATE)
+CHANGE_CASES = _CHANGE_IN.format(CASES)
+
 
 def stat_by_group(stat: str, group: str) -> str:
     """Provides consistant naming to statistic descriptors"""

@@ -36888,3 +36888,2731 @@ Date,Area,Region,Cases,Case Rate,CF Outbreak
 2020-07-18,Unincorporated - Wiseburn,South Bay,72,1195.0,False
 2020-07-18,City of Long Beach,Harbor,6334,1350.87,
 2020-07-18,City of Pasadena,Verdugos,1643,1163.22,
+2020-07-19,City of Agoura Hills,Santa Monica Mountains,89,426.0,False
+2020-07-19,City of Alhambra,San Gabriel Valley,711,820.0,False
+2020-07-19,City of Arcadia,San Gabriel Valley,265,459.0,False
+2020-07-19,City of Artesia,Southeast,184,1096.0,False
+2020-07-19,City of Avalon,Harbor,5,129.0,False
+2020-07-19,City of Azusa,San Gabriel Valley,808,1615.0,False
+2020-07-19,City of Baldwin Park,San Gabriel Valley,1601,2085.0,False
+2020-07-19,City of Bell,Southeast,931,2562.0,False
+2020-07-19,City of Bell Gardens,Southeast,1106,2568.0,False
+2020-07-19,City of Bellflower,Southeast,1397,1797.0,False
+2020-07-19,City of Beverly Hills,Westside,496,1437.0,False
+2020-07-19,City of Bradbury,San Gabriel Valley,7,655.0,False
+2020-07-19,City of Burbank,San Fernando Valley,813,759.0,False
+2020-07-19,City of Calabasas,Santa Monica Mountains,170,699.0,False
+2020-07-19,City of Carson,Harbor,1012,1078.0,False
+2020-07-19,City of Cerritos,Southeast,356,711.0,False
+2020-07-19,City of Claremont,Pomona Valley,204,559.0,False
+2020-07-19,City of Commerce,Southeast,327,2502.0,True
+2020-07-19,City of Compton,Southeast,2292,2294.0,False
+2020-07-19,City of Covina,San Gabriel Valley,761,1552.0,False
+2020-07-19,City of Cudahy,Southeast,678,2785.0,False
+2020-07-19,City of Culver City,Westside,284,712.0,False
+2020-07-19,City of Diamond Bar,San Gabriel Valley,327,569.0,False
+2020-07-19,City of Downey,Southeast,2595,2271.0,False
+2020-07-19,City of Duarte,San Gabriel Valley,287,1304.0,False
+2020-07-19,City of El Monte,San Gabriel Valley,2515,2145.0,False
+2020-07-19,City of El Segundo,South Bay,87,518.0,False
+2020-07-19,City of Gardena,South Bay,724,1181.0,False
+2020-07-19,City of Glendale,Verdugos,1951,945.0,False
+2020-07-19,City of Glendora,San Gabriel Valley,751,1423.0,False
+2020-07-19,City of Hawaiian Gardens,Harbor,297,2024.0,False
+2020-07-19,City of Hawthorne,South Bay,1119,1260.0,False
+2020-07-19,City of Hermosa Beach,South Bay,134,681.0,False
+2020-07-19,City of Hidden Hills,Santa Monica Mountains,5,265.0,False
+2020-07-19,City of Huntington Park,Southeast,1716,2885.0,False
+2020-07-19,City of Industry,San Gabriel Valley,20,4577.0,False
+2020-07-19,City of Inglewood,South Bay,1586,1396.0,False
+2020-07-19,City of Irwindale,San Gabriel Valley,42,2879.0,False
+2020-07-19,City of La Canada Flintridge,Verdugos,104,503.0,False
+2020-07-19,City of La Habra Heights,San Gabriel Valley,20,367.0,False
+2020-07-19,City of La Mirada,Southeast,525,1058.0,False
+2020-07-19,City of La Puente,San Gabriel Valley,842,2069.0,False
+2020-07-19,City of La Verne,Pomona Valley,237,712.0,False
+2020-07-19,City of Lakewood,Harbor,758,943.0,False
+2020-07-19,City of Lancaster,Antelope Valley,1684,1042.0,True
+2020-07-19,City of Lawndale,South Bay,373,1110.0,False
+2020-07-19,City of Lomita,South Bay,149,719.0,False
+2020-07-19,City of Lynwood,Southeast,2020,2804.0,True
+2020-07-19,City of Malibu,Santa Monica Mountains,71,548.0,False
+2020-07-19,City of Manhattan Beach,South Bay,225,625.0,False
+2020-07-19,City of Maywood,Southeast,835,2977.0,False
+2020-07-19,City of Monrovia,San Gabriel Valley,441,1137.0,False
+2020-07-19,City of Montebello,Southeast,1361,2114.0,False
+2020-07-19,City of Monterey Park,San Gabriel Valley,505,811.0,False
+2020-07-19,City of Norwalk,Southeast,1941,1804.0,False
+2020-07-19,City of Palmdale,Antelope Valley,1953,1229.0,False
+2020-07-19,City of Palos Verdes Estates,South Bay,63,466.0,False
+2020-07-19,City of Paramount,Southeast,1433,2558.0,False
+2020-07-19,City of Pico Rivera,Southeast,1496,2327.0,False
+2020-07-19,City of Pomona,Pomona Valley,2701,1732.0,False
+2020-07-19,City of Rancho Palos Verdes,South Bay,195,456.0,False
+2020-07-19,City of Redondo Beach,South Bay,345,502.0,False
+2020-07-19,City of Rolling Hills,South Bay,4,206.0,False
+2020-07-19,City of Rolling Hills Estates,South Bay,30,370.0,False
+2020-07-19,City of Rosemead,San Gabriel Valley,451,815.0,False
+2020-07-19,City of San Dimas,San Gabriel Valley,293,849.0,True
+2020-07-19,City of San Fernando,San Fernando Valley,471,1914.0,False
+2020-07-19,City of San Gabriel,San Gabriel Valley,344,840.0,False
+2020-07-19,City of San Marino,San Gabriel Valley,43,324.0,False
+2020-07-19,City of Santa Clarita,Northwest County,1788,811.0,False
+2020-07-19,City of Santa Fe Springs,Southeast,313,1704.0,False
+2020-07-19,City of Santa Monica,Westside,551,596.0,False
+2020-07-19,City of Sierra Madre,San Gabriel Valley,45,410.0,False
+2020-07-19,City of Signal Hill,Harbor,156,1322.0,False
+2020-07-19,City of South El Monte,San Gabriel Valley,446,2136.0,False
+2020-07-19,City of South Gate,Southeast,2739,2790.0,False
+2020-07-19,City of South Pasadena,San Gabriel Valley,201,772.0,False
+2020-07-19,City of Temple City,San Gabriel Valley,352,966.0,False
+2020-07-19,City of Torrance,South Bay,858,575.0,False
+2020-07-19,City of Vernon,Southeast,17,8134.0,False
+2020-07-19,City of Walnut,San Gabriel Valley,162,531.0,False
+2020-07-19,City of West Covina,San Gabriel Valley,1737,1605.0,False
+2020-07-19,City of West Hollywood,Central LA,380,1028.0,False
+2020-07-19,City of Westlake Village,Santa Monica Mountains,17,203.0,False
+2020-07-19,City of Whittier,San Gabriel Valley,1276,1459.0,False
+2020-07-19,Los Angeles,,63723,1576.0,False
+2020-07-19,Los Angeles - Adams-Normandie,South LA,143,1743.0,False
+2020-07-19,Los Angeles - Alsace,South LA,228,1832.0,False
+2020-07-19,Los Angeles - Angeles National Forest,Angeles Forest,2,5000.0,False
+2020-07-19,Los Angeles - Angelino Heights,Central LA,34,1359.0,False
+2020-07-19,Los Angeles - Arleta,San Fernando Valley,746,2170.0,False
+2020-07-19,Los Angeles - Atwater Village,Northeast LA,132,900.0,False
+2020-07-19,Los Angeles - Baldwin Hills,South LA,382,1227.0,False
+2020-07-19,Los Angeles - Bel Air,Westside,56,664.0,False
+2020-07-19,Los Angeles - Beverly Crest,Westside,67,535.0,False
+2020-07-19,Los Angeles - Beverlywood,Westside,96,729.0,False
+2020-07-19,Los Angeles - Boyle Heights,Eastside,2622,3018.0,True
+2020-07-19,Los Angeles - Brentwood,Westside,175,565.0,False
+2020-07-19,Los Angeles - Brookside,Central LA,1,172.0,False
+2020-07-19,Los Angeles - Cadillac-Corning,Central LA,71,997.0,False
+2020-07-19,Los Angeles - Canoga Park,San Fernando Valley,1057,1619.0,False
+2020-07-19,Los Angeles - Carthay,Central LA,158,1100.0,False
+2020-07-19,Los Angeles - Central,South LA,1376,3529.0,False
+2020-07-19,Los Angeles - Century City,Westside,81,633.0,False
+2020-07-19,Los Angeles - Century Palms/Cove,South LA,917,2716.0,False
+2020-07-19,Los Angeles - Chatsworth,San Fernando Valley,396,1069.0,False
+2020-07-19,Los Angeles - Cheviot Hills,Westside,45,491.0,False
+2020-07-19,Los Angeles - Chinatown,Central LA,65,810.0,False
+2020-07-19,Los Angeles - Cloverdale/Cochran,Central LA,200,1374.0,False
+2020-07-19,Los Angeles - Country Club Park,Central LA,204,1346.0,False
+2020-07-19,Los Angeles - Crenshaw District,South LA,181,1309.0,False
+2020-07-19,Los Angeles - Crestview,Central LA,139,1223.0,False
+2020-07-19,Los Angeles - Del Rey,Westside,203,678.0,False
+2020-07-19,Los Angeles - Downtown,Central LA,471,1712.0,True
+2020-07-19,Los Angeles - Eagle Rock,Northeast LA,419,1058.0,False
+2020-07-19,Los Angeles - East Hollywood,Central LA,422,1441.0,False
+2020-07-19,Los Angeles - Echo Park,Central LA,121,849.0,False
+2020-07-19,Los Angeles - El Sereno,Eastside,677,1619.0,False
+2020-07-19,Los Angeles - Elysian Park,Central LA,56,980.0,False
+2020-07-19,Los Angeles - Elysian Valley,Northeast LA,156,1534.0,False
+2020-07-19,Los Angeles - Encino,San Fernando Valley,333,737.0,False
+2020-07-19,Los Angeles - Exposition,South LA,50,1503.0,False
+2020-07-19,Los Angeles - Exposition Park,South LA,768,1710.0,False
+2020-07-19,Los Angeles - Faircrest Heights,Central LA,22,611.0,False
+2020-07-19,Los Angeles - Figueroa Park Square,South LA,180,2064.0,False
+2020-07-19,Los Angeles - Florence-Firestone,South LA,1376,2900.0,False
+2020-07-19,Los Angeles - Glassell Park,Northeast LA,387,1225.0,False
+2020-07-19,Los Angeles - Gramercy Place,South LA,147,1366.0,False
+2020-07-19,Los Angeles - Granada Hills,San Fernando Valley,705,1212.0,False
+2020-07-19,Los Angeles - Green Meadows,South LA,537,2497.0,False
+2020-07-19,Los Angeles - Hancock Park,Central LA,156,916.0,False
+2020-07-19,Los Angeles - Harbor City,Harbor,312,1073.0,False
+2020-07-19,Los Angeles - Harbor Gateway,Harbor,515,1181.0,False
+2020-07-19,Los Angeles - Harbor Pines,Harbor,10,415.0,False
+2020-07-19,Los Angeles - Harvard Heights,Central LA,352,1952.0,False
+2020-07-19,Los Angeles - Harvard Park,South LA,930,2452.0,False
+2020-07-19,Los Angeles - Highland Park,Northeast LA,667,1378.0,False
+2020-07-19,Los Angeles - Historic Filipinotown,Central LA,272,1961.0,False
+2020-07-19,Los Angeles - Hollywood,Central LA,711,1042.0,False
+2020-07-19,Los Angeles - Hollywood Hills,Central LA,188,639.0,False
+2020-07-19,Los Angeles - Hyde Park,South LA,469,1643.0,False
+2020-07-19,Los Angeles - Jefferson Park,South LA,165,2044.0,False
+2020-07-19,Los Angeles - Koreatown,Central LA,670,1296.0,False
+2020-07-19,Los Angeles - Lafayette Square,Central LA,50,1097.0,False
+2020-07-19,Los Angeles - Lake Balboa,San Fernando Valley,504,1194.0,False
+2020-07-19,Los Angeles - Lakeview Terrace,San Fernando Valley,359,2734.0,False
+2020-07-19,Los Angeles - Leimert Park,South LA,191,1254.0,False
+2020-07-19,Los Angeles - Lincoln Heights,Eastside,689,2114.0,False
+2020-07-19,Los Angeles - Little Armenia,Central LA,281,3502.0,False
+2020-07-19,Los Angeles - Little Bangladesh,Central LA,306,1080.0,False
+2020-07-19,Los Angeles - Little Tokyo,Central LA,44,1404.0,False
+2020-07-19,Los Angeles - Longwood,Central LA,72,1673.0,False
+2020-07-19,Los Angeles - Los Feliz,Central LA,121,560.0,False
+2020-07-19,Los Angeles - Manchester Square,South LA,83,972.0,False
+2020-07-19,Los Angeles - Mandeville Canyon,Westside,8,256.0,False
+2020-07-19,Los Angeles - Mar Vista,Westside,199,469.0,False
+2020-07-19,Los Angeles - Marina Peninsula,Westside,22,505.0,False
+2020-07-19,Los Angeles - Melrose,Central LA,1195,1538.0,False
+2020-07-19,Los Angeles - Mid-city,Central LA,201,1337.0,False
+2020-07-19,Los Angeles - Miracle Mile,Central LA,104,578.0,False
+2020-07-19,Los Angeles - Mission Hills,San Fernando Valley,416,1724.0,False
+2020-07-19,Los Angeles - Mt. Washington,Northeast LA,287,1189.0,False
+2020-07-19,Los Angeles - North Hills,San Fernando Valley,1018,1653.0,False
+2020-07-19,Los Angeles - North Hollywood,San Fernando Valley,1849,1221.0,False
+2020-07-19,Los Angeles - Northridge,San Fernando Valley,808,1158.0,False
+2020-07-19,Los Angeles - Pacific Palisades,Westside,89,418.0,False
+2020-07-19,Los Angeles - Pacoima,San Fernando Valley,1813,2355.0,False
+2020-07-19,Los Angeles - Palisades Highlands,Westside,17,442.0,False
+2020-07-19,Los Angeles - Palms,Westside,369,841.0,False
+2020-07-19,Los Angeles - Panorama City,San Fernando Valley,1569,2085.0,False
+2020-07-19,Los Angeles - Park La Brea,Central LA,61,449.0,False
+2020-07-19,Los Angeles - Pico-Union,Central LA,1217,2909.0,False
+2020-07-19,Los Angeles - Playa Del Rey,South Bay,16,501.0,False
+2020-07-19,Los Angeles - Playa Vista,Westside,79,722.0,False
+2020-07-19,Los Angeles - Porter Ranch,San Fernando Valley,196,551.0,False
+2020-07-19,Los Angeles - Rancho Park,Westside,56,854.0,False
+2020-07-19,Los Angeles - Regent Square,Central LA,21,755.0,False
+2020-07-19,Los Angeles - Reseda,San Fernando Valley,1305,1703.0,False
+2020-07-19,Los Angeles - Reseda Ranch,San Fernando Valley,48,1035.0,False
+2020-07-19,Los Angeles - Reynier Village,Central LA,26,615.0,False
+2020-07-19,Los Angeles - San Pedro,Harbor,1410,1807.0,True
+2020-07-19,Los Angeles - Shadow Hills,San Fernando Valley,28,630.0,False
+2020-07-19,Los Angeles - Sherman Oaks,San Fernando Valley,581,666.0,False
+2020-07-19,Los Angeles - Silverlake,Central LA,408,926.0,False
+2020-07-19,Los Angeles - South Carthay,Central LA,71,670.0,False
+2020-07-19,Los Angeles - South Park,South LA,1248,3288.0,False
+2020-07-19,Los Angeles - St Elmo Village,Central LA,88,1920.0,False
+2020-07-19,Los Angeles - Studio City,San Fernando Valley,164,731.0,False
+2020-07-19,Los Angeles - Sun Valley,San Fernando Valley,802,1528.0,False
+2020-07-19,Los Angeles - Sunland,Verdugos,287,1406.0,False
+2020-07-19,Los Angeles - Sycamore Square,Central LA,3,464.0,False
+2020-07-19,Los Angeles - Sylmar,San Fernando Valley,1849,2244.0,True
+2020-07-19,Los Angeles - Tarzana,San Fernando Valley,447,1448.0,False
+2020-07-19,Los Angeles - Temple-Beaudry,Central LA,768,1945.0,False
+2020-07-19,Los Angeles - Thai Town,Central LA,91,928.0,False
+2020-07-19,Los Angeles - Toluca Lake,San Fernando Valley,61,701.0,False
+2020-07-19,Los Angeles - Toluca Terrace,San Fernando Valley,14,1072.0,False
+2020-07-19,Los Angeles - Toluca Woods,San Fernando Valley,11,592.0,False
+2020-07-19,Los Angeles - Tujunga,Verdugos,231,831.0,False
+2020-07-19,Los Angeles - University Hills,Eastside,40,1167.0,False
+2020-07-19,Los Angeles - University Park,South LA,490,1785.0,False
+2020-07-19,Los Angeles - Valley Glen,San Fernando Valley,315,1049.0,False
+2020-07-19,Los Angeles - Valley Village,San Fernando Valley,356,1440.0,False
+2020-07-19,Los Angeles - Van Nuys,San Fernando Valley,1590,1706.0,False
+2020-07-19,Los Angeles - Venice,Westside,158,466.0,False
+2020-07-19,Los Angeles - Vermont Knolls,South LA,465,2703.0,False
+2020-07-19,Los Angeles - Vermont Square,South LA,212,2769.0,False
+2020-07-19,Los Angeles - Vermont Vista,South LA,1127,2736.0,False
+2020-07-19,Los Angeles - Vernon Central,South LA,1854,3566.0,False
+2020-07-19,Los Angeles - Victoria Park,Central LA,119,1417.0,False
+2020-07-19,Los Angeles - View Heights,South LA,22,596.0,False
+2020-07-19,Los Angeles - Watts,South LA,1091,2557.0,False
+2020-07-19,Los Angeles - Wellington Square,Central LA,70,1424.0,False
+2020-07-19,Los Angeles - West Adams,South LA,558,2020.0,False
+2020-07-19,Los Angeles - West Hills,San Fernando Valley,303,747.0,False
+2020-07-19,Los Angeles - West Los Angeles,Westside,318,845.0,False
+2020-07-19,Los Angeles - West Vernon,South LA,1347,2511.0,False
+2020-07-19,Los Angeles - Westchester,South Bay,254,492.0,False
+2020-07-19,Los Angeles - Westlake,Central LA,1656,2790.0,False
+2020-07-19,Los Angeles - Westwood,Westside,202,373.0,False
+2020-07-19,Los Angeles - Wholesale District,Central LA,1753,4852.0,True
+2020-07-19,Los Angeles - Wilmington,Harbor,949,1680.0,False
+2020-07-19,Los Angeles - Wilshire Center,Central LA,660,1316.0,False
+2020-07-19,Los Angeles - Winnetka,San Fernando Valley,711,1373.0,False
+2020-07-19,Los Angeles - Woodland Hills,San Fernando Valley,506,744.0,False
+2020-07-19,Unincorporated - Acton,Antelope Valley,38,477.0,False
+2020-07-19,Unincorporated - Agua Dulce,Northwest County,15,361.0,False
+2020-07-19,Unincorporated - Altadena,Verdugos,352,807.0,False
+2020-07-19,Unincorporated - Anaverde,Antelope Valley,5,332.0,False
+2020-07-19,Unincorporated - Angeles National Forest,Angeles Forest,3,241.0,False
+2020-07-19,Unincorporated - Arcadia,San Gabriel Valley,54,677.0,False
+2020-07-19,Unincorporated - Athens-Westmont,South LA,870,2050.0,False
+2020-07-19,Unincorporated - Athens Village,South LA,122,2491.0,False
+2020-07-19,Unincorporated - Avocado Heights,San Gabriel Valley,145,2140.0,False
+2020-07-19,Unincorporated - Azusa,San Gabriel Valley,289,1815.0,False
+2020-07-19,Unincorporated - Bassett,San Gabriel Valley,403,2720.0,False
+2020-07-19,Unincorporated - Bouquet Canyon,Northwest County,1,93.0,False
+2020-07-19,Unincorporated - Bradbury,San Gabriel Valley,4,3704.0,False
+2020-07-19,Unincorporated - Canyon Country,Northwest County,63,815.0,False
+2020-07-19,Unincorporated - Castaic,Northwest County,1835,6749.0,True
+2020-07-19,Unincorporated - Cerritos,Southeast,7,1193.0,False
+2020-07-19,Unincorporated - Charter Oak,San Gabriel Valley,0,0.0,False
+2020-07-19,Unincorporated - Claremont,Pomona Valley,3,427.0,False
+2020-07-19,Unincorporated - Covina,San Gabriel Valley,246,1463.0,False
+2020-07-19,Unincorporated - Del Aire,South Bay,37,842.0,False
+2020-07-19,Unincorporated - Del Rey,Westside,1,314.0,False
+2020-07-19,Unincorporated - Del Sur,Antelope Valley,3,124.0,False
+2020-07-19,Unincorporated - Desert View Highlands,Antelope Valley,13,521.0,False
+2020-07-19,Unincorporated - Duarte,San Gabriel Valley,73,1649.0,False
+2020-07-19,Unincorporated - East Covina,San Gabriel Valley,3,912.0,False
+2020-07-19,Unincorporated - East La Mirada,Southeast,68,1285.0,False
+2020-07-19,Unincorporated - East Lancaster,Antelope Valley,0,0.0,False
+2020-07-19,Unincorporated - East Los Angeles,Eastside,3689,2945.0,False
+2020-07-19,Unincorporated - East Pasadena,San Gabriel Valley,22,344.0,False
+2020-07-19,Unincorporated - East Rancho Dominguez,Southeast,352,2299.0,False
+2020-07-19,Unincorporated - East Whittier,Southeast,50,942.0,False
+2020-07-19,Unincorporated - El Camino Village,South Bay,96,1092.0,False
+2020-07-19,Unincorporated - El Monte,San Gabriel Valley,4,2759.0,False
+2020-07-19,Unincorporated - Elizabeth Lake,Antelope Valley,5,301.0,False
+2020-07-19,Unincorporated - Florence-Firestone,South LA,1995,3083.0,False
+2020-07-19,Unincorporated - Franklin Canyon,Central LA,0,0.0,False
+2020-07-19,Unincorporated - Glendora,San Gabriel Valley,4,606.0,False
+2020-07-19,Unincorporated - Hacienda Heights,San Gabriel Valley,607,1085.0,False
+2020-07-19,Unincorporated - Harbor Gateway,Harbor,0,0.0,False
+2020-07-19,Unincorporated - Hawthorne,South Bay,31,1233.0,False
+2020-07-19,Unincorporated - Hi Vista,Antelope Valley,1,91.0,False
+2020-07-19,Unincorporated - Kagel/Lopez Canyons,Angeles Forest,13,921.0,False
+2020-07-19,Unincorporated - La Crescenta-Montrose,Verdugos,85,429.0,False
+2020-07-19,Unincorporated - La Habra Heights,San Gabriel Valley,0,0.0,False
+2020-07-19,Unincorporated - La Rambla,Harbor,69,3325.0,False
+2020-07-19,Unincorporated - La Verne,Pomona Valley,16,784.0,True
+2020-07-19,Unincorporated - Ladera Heights,Westside,49,693.0,False
+2020-07-19,Unincorporated - Lake Hughes,Northwest County,1,150.0,False
+2020-07-19,Unincorporated - Lake Los Angeles,Antelope Valley,104,800.0,False
+2020-07-19,Unincorporated - Lake Manor,San Fernando Valley,13,791.0,False
+2020-07-19,Unincorporated - Lakewood,Harbor,0,0.0,False
+2020-07-19,Unincorporated - Lennox,South Bay,365,1619.0,False
+2020-07-19,Unincorporated - Leona Valley,Antelope Valley,14,800.0,False
+2020-07-19,Unincorporated - Littlerock,Antelope Valley,42,1045.0,False
+2020-07-19,Unincorporated - Littlerock/Juniper Hills,Antelope Valley,4,308.0,False
+2020-07-19,Unincorporated - Littlerock/Pearblossom,Antelope Valley,46,1289.0,False
+2020-07-19,Unincorporated - Llano,Antelope Valley,2,228.0,False
+2020-07-19,Unincorporated - Marina del Rey,Westside,45,478.0,False
+2020-07-19,Unincorporated - Miracle Mile,Central LA,0,0.0,False
+2020-07-19,Unincorporated - Monrovia,San Gabriel Valley,51,1314.0,False
+2020-07-19,Unincorporated - Newhall,Northwest County,4,1818.0,False
+2020-07-19,Unincorporated - North Lancaster,Antelope Valley,8,668.0,False
+2020-07-19,Unincorporated - North Whittier,San Gabriel Valley,114,1364.0,False
+2020-07-19,Unincorporated - Northeast San Gabriel,San Gabriel Valley,196,815.0,False
+2020-07-19,Unincorporated - Padua Hills,Pomona Valley,1,465.0,False
+2020-07-19,Unincorporated - Palmdale,Antelope Valley,15,1781.0,False
+2020-07-19,Unincorporated - Palos Verdes Peninsula,South Bay,1,161.0,False
+2020-07-19,Unincorporated - Pearblossom/Llano,Antelope Valley,13,665.0,False
+2020-07-19,Unincorporated - Pellissier Village,San Gabriel Valley,15,2423.0,False
+2020-07-19,Unincorporated - Placerita Canyon,Angeles Forest,0,0.0,False
+2020-07-19,Unincorporated - Pomona,San Gabriel Valley,8,413.0,False
+2020-07-19,Unincorporated - Quartz Hill,Antelope Valley,102,790.0,False
+2020-07-19,Unincorporated - Rancho Dominguez,Harbor,51,1917.0,False
+2020-07-19,Unincorporated - Roosevelt,Antelope Valley,3,322.0,False
+2020-07-19,Unincorporated - Rosewood,Southeast,15,1166.0,False
+2020-07-19,Unincorporated - Rosewood/East Gardena,Southeast,12,1006.0,False
+2020-07-19,Unincorporated - Rosewood/West Rancho Dominguez,Southeast,55,1636.0,False
+2020-07-19,Unincorporated - Rowland Heights,San Gabriel Valley,395,774.0,False
+2020-07-19,Unincorporated - San Clemente Island,Harbor,0,0.0,False
+2020-07-19,Unincorporated - San Francisquito Canyon/Bouquet Canyon,Northwest County,0,0.0,False
+2020-07-19,Unincorporated - San Jose Hills,San Gabriel Valley,381,1884.0,False
+2020-07-19,Unincorporated - San Pasqual,San Gabriel Valley,6,295.0,False
+2020-07-19,Unincorporated - Sand Canyon,Angeles Forest,2,649.0,False
+2020-07-19,Unincorporated - Santa Catalina Island,Harbor,6,2247.0,False
+2020-07-19,Unincorporated - Santa Monica Mountains,Santa Monica Mountains,70,376.0,True
+2020-07-19,Unincorporated - Saugus,Northwest County,11,7097.0,False
+2020-07-19,Unincorporated - Saugus/Canyon Country,Northwest County,1,281.0,False
+2020-07-19,Unincorporated - South Antelope Valley,Antelope Valley,1,220.0,False
+2020-07-19,Unincorporated - South El Monte,San Gabriel Valley,38,2117.0,False
+2020-07-19,Unincorporated - South San Gabriel,San Gabriel Valley,116,1311.0,False
+2020-07-19,Unincorporated - South Whittier,Southeast,978,1651.0,False
+2020-07-19,Unincorporated - Southeast Antelope Valley,Antelope Valley,8,1024.0,False
+2020-07-19,Unincorporated - Stevenson Ranch,Northwest County,91,434.0,False
+2020-07-19,Unincorporated - Sun Village,Antelope Valley,81,1342.0,False
+2020-07-19,Unincorporated - Sunrise Village,San Gabriel Valley,24,1852.0,False
+2020-07-19,Unincorporated - Twin Lakes/Oat Mountain,Northwest County,9,543.0,False
+2020-07-19,Unincorporated - Val Verde,Northwest County,37,1118.0,False
+2020-07-19,Unincorporated - Valencia,Northwest County,29,944.0,False
+2020-07-19,Unincorporated - Valinda,San Gabriel Valley,435,1861.0,False
+2020-07-19,Unincorporated - View Park/Windsor Hills,South LA,93,799.0,False
+2020-07-19,Unincorporated - Walnut Park,Southeast,446,2763.0,False
+2020-07-19,Unincorporated - West Antelope Valley,Antelope Valley,3,199.0,False
+2020-07-19,Unincorporated - West Carson,Harbor,228,1032.0,False
+2020-07-19,Unincorporated - West Chatsworth,San Fernando Valley,0,0.0,False
+2020-07-19,Unincorporated - West Puente Valley,San Gabriel Valley,235,2389.0,False
+2020-07-19,Unincorporated - West Rancho Dominguez,Harbor,17,1251.0,False
+2020-07-19,Unincorporated - West Whittier/Los Nietos,Southeast,554,2058.0,False
+2020-07-19,Unincorporated - Westfield/Academy Hills,South Bay,3,231.0,False
+2020-07-19,Unincorporated - Westhills,San Fernando Valley,7,834.0,False
+2020-07-19,Unincorporated - White Fence Farms,Antelope Valley,27,733.0,False
+2020-07-19,Unincorporated - Whittier,San Gabriel Valley,48,1268.0,False
+2020-07-19,Unincorporated - Whittier Narrows,San Gabriel Valley,0,0.0,False
+2020-07-19,Unincorporated - Willowbrook,South LA,878,2515.0,False
+2020-07-19,Unincorporated - Wiseburn,South Bay,74,1228.0,False
+2020-07-19,City of Long Beach,Harbor,6445,1374.54,
+2020-07-19,City of Pasadena,Verdugos,1670,1182.33,
+2020-07-20,City of Agoura Hills,Santa Monica Mountains,89,426.0,False
+2020-07-20,City of Alhambra,San Gabriel Valley,736,849.0,False
+2020-07-20,City of Arcadia,San Gabriel Valley,269,466.0,False
+2020-07-20,City of Artesia,Southeast,187,1113.0,False
+2020-07-20,City of Avalon,Harbor,5,129.0,False
+2020-07-20,City of Azusa,San Gabriel Valley,828,1655.0,False
+2020-07-20,City of Baldwin Park,San Gabriel Valley,1648,2147.0,False
+2020-07-20,City of Bell,Southeast,956,2631.0,False
+2020-07-20,City of Bell Gardens,Southeast,1143,2654.0,False
+2020-07-20,City of Bellflower,Southeast,1439,1851.0,False
+2020-07-20,City of Beverly Hills,Westside,496,1437.0,False
+2020-07-20,City of Bradbury,San Gabriel Valley,7,655.0,False
+2020-07-20,City of Burbank,San Fernando Valley,823,768.0,False
+2020-07-20,City of Calabasas,Santa Monica Mountains,174,715.0,False
+2020-07-20,City of Carson,Harbor,1033,1101.0,False
+2020-07-20,City of Cerritos,Southeast,357,713.0,False
+2020-07-20,City of Claremont,Pomona Valley,206,565.0,False
+2020-07-20,City of Commerce,Southeast,341,2609.0,True
+2020-07-20,City of Compton,Southeast,2335,2337.0,False
+2020-07-20,City of Covina,San Gabriel Valley,787,1605.0,False
+2020-07-20,City of Cudahy,Southeast,695,2855.0,False
+2020-07-20,City of Culver City,Westside,287,720.0,False
+2020-07-20,City of Diamond Bar,San Gabriel Valley,332,577.0,False
+2020-07-20,City of Downey,Southeast,2653,2322.0,False
+2020-07-20,City of Duarte,San Gabriel Valley,311,1413.0,False
+2020-07-20,City of El Monte,San Gabriel Valley,2578,2198.0,False
+2020-07-20,City of El Segundo,South Bay,87,518.0,False
+2020-07-20,City of Gardena,South Bay,728,1187.0,False
+2020-07-20,City of Glendale,Verdugos,1982,960.0,False
+2020-07-20,City of Glendora,San Gabriel Valley,763,1446.0,False
+2020-07-20,City of Hawaiian Gardens,Harbor,306,2085.0,False
+2020-07-20,City of Hawthorne,South Bay,1144,1288.0,False
+2020-07-20,City of Hermosa Beach,South Bay,134,681.0,False
+2020-07-20,City of Hidden Hills,Santa Monica Mountains,5,265.0,False
+2020-07-20,City of Huntington Park,Southeast,1745,2934.0,False
+2020-07-20,City of Industry,San Gabriel Valley,20,4577.0,False
+2020-07-20,City of Inglewood,South Bay,1628,1433.0,False
+2020-07-20,City of Irwindale,San Gabriel Valley,42,2879.0,False
+2020-07-20,City of La Canada Flintridge,Verdugos,104,503.0,False
+2020-07-20,City of La Habra Heights,San Gabriel Valley,20,367.0,False
+2020-07-20,City of La Mirada,Southeast,537,1083.0,False
+2020-07-20,City of La Puente,San Gabriel Valley,865,2125.0,False
+2020-07-20,City of La Verne,Pomona Valley,242,727.0,False
+2020-07-20,City of Lakewood,Harbor,776,966.0,False
+2020-07-20,City of Lancaster,Antelope Valley,1716,1062.0,True
+2020-07-20,City of Lawndale,South Bay,377,1122.0,False
+2020-07-20,City of Lomita,South Bay,151,728.0,False
+2020-07-20,City of Lynwood,Southeast,2051,2847.0,True
+2020-07-20,City of Malibu,Santa Monica Mountains,71,548.0,False
+2020-07-20,City of Manhattan Beach,South Bay,228,633.0,False
+2020-07-20,City of Maywood,Southeast,851,3034.0,False
+2020-07-20,City of Monrovia,San Gabriel Valley,446,1149.0,False
+2020-07-20,City of Montebello,Southeast,1392,2162.0,False
+2020-07-20,City of Monterey Park,San Gabriel Valley,516,829.0,False
+2020-07-20,City of Norwalk,Southeast,1979,1839.0,False
+2020-07-20,City of Palmdale,Antelope Valley,1992,1253.0,False
+2020-07-20,City of Palos Verdes Estates,South Bay,63,466.0,False
+2020-07-20,City of Paramount,Southeast,1467,2619.0,False
+2020-07-20,City of Pico Rivera,Southeast,1521,2366.0,False
+2020-07-20,City of Pomona,Pomona Valley,2763,1772.0,False
+2020-07-20,City of Rancho Palos Verdes,South Bay,200,468.0,False
+2020-07-20,City of Redondo Beach,South Bay,349,508.0,False
+2020-07-20,City of Rolling Hills,South Bay,4,206.0,False
+2020-07-20,City of Rolling Hills Estates,South Bay,30,370.0,False
+2020-07-20,City of Rosemead,San Gabriel Valley,460,831.0,False
+2020-07-20,City of San Dimas,San Gabriel Valley,298,863.0,True
+2020-07-20,City of San Fernando,San Fernando Valley,484,1967.0,False
+2020-07-20,City of San Gabriel,San Gabriel Valley,351,857.0,False
+2020-07-20,City of San Marino,San Gabriel Valley,43,324.0,False
+2020-07-20,City of Santa Clarita,Northwest County,1808,820.0,False
+2020-07-20,City of Santa Fe Springs,Southeast,318,1732.0,False
+2020-07-20,City of Santa Monica,Westside,554,599.0,False
+2020-07-20,City of Sierra Madre,San Gabriel Valley,45,410.0,False
+2020-07-20,City of Signal Hill,Harbor,156,1322.0,False
+2020-07-20,City of South El Monte,San Gabriel Valley,461,2207.0,False
+2020-07-20,City of South Gate,Southeast,2797,2850.0,False
+2020-07-20,City of South Pasadena,San Gabriel Valley,202,775.0,False
+2020-07-20,City of Temple City,San Gabriel Valley,357,979.0,False
+2020-07-20,City of Torrance,South Bay,865,579.0,False
+2020-07-20,City of Vernon,Southeast,18,8612.0,False
+2020-07-20,City of Walnut,San Gabriel Valley,165,540.0,False
+2020-07-20,City of West Covina,San Gabriel Valley,1758,1624.0,False
+2020-07-20,City of West Hollywood,Central LA,389,1053.0,False
+2020-07-20,City of Westlake Village,Santa Monica Mountains,17,203.0,False
+2020-07-20,City of Whittier,San Gabriel Valley,1312,1501.0,False
+2020-07-20,Los Angeles,,65145,1611.0,False
+2020-07-20,Los Angeles - Adams-Normandie,South LA,144,1756.0,False
+2020-07-20,Los Angeles - Alsace,South LA,229,1840.0,False
+2020-07-20,Los Angeles - Angeles National Forest,Angeles Forest,2,5000.0,False
+2020-07-20,Los Angeles - Angelino Heights,Central LA,38,1519.0,False
+2020-07-20,Los Angeles - Arleta,San Fernando Valley,772,2246.0,False
+2020-07-20,Los Angeles - Atwater Village,Northeast LA,135,920.0,False
+2020-07-20,Los Angeles - Baldwin Hills,South LA,384,1234.0,False
+2020-07-20,Los Angeles - Bel Air,Westside,56,664.0,False
+2020-07-20,Los Angeles - Beverly Crest,Westside,69,551.0,False
+2020-07-20,Los Angeles - Beverlywood,Westside,99,752.0,False
+2020-07-20,Los Angeles - Boyle Heights,Eastside,2688,3094.0,True
+2020-07-20,Los Angeles - Brentwood,Westside,177,572.0,False
+2020-07-20,Los Angeles - Brookside,Central LA,1,172.0,False
+2020-07-20,Los Angeles - Cadillac-Corning,Central LA,74,1039.0,False
+2020-07-20,Los Angeles - Canoga Park,San Fernando Valley,1100,1685.0,False
+2020-07-20,Los Angeles - Carthay,Central LA,161,1121.0,False
+2020-07-20,Los Angeles - Central,South LA,1406,3606.0,False
+2020-07-20,Los Angeles - Century City,Westside,84,657.0,False
+2020-07-20,Los Angeles - Century Palms/Cove,South LA,947,2805.0,False
+2020-07-20,Los Angeles - Chatsworth,San Fernando Valley,407,1098.0,False
+2020-07-20,Los Angeles - Cheviot Hills,Westside,45,491.0,False
+2020-07-20,Los Angeles - Chinatown,Central LA,66,823.0,False
+2020-07-20,Los Angeles - Cloverdale/Cochran,Central LA,202,1388.0,False
+2020-07-20,Los Angeles - Country Club Park,Central LA,204,1346.0,False
+2020-07-20,Los Angeles - Crenshaw District,South LA,182,1316.0,False
+2020-07-20,Los Angeles - Crestview,Central LA,141,1240.0,False
+2020-07-20,Los Angeles - Del Rey,Westside,209,698.0,False
+2020-07-20,Los Angeles - Downtown,Central LA,481,1749.0,True
+2020-07-20,Los Angeles - Eagle Rock,Northeast LA,422,1066.0,False
+2020-07-20,Los Angeles - East Hollywood,Central LA,428,1461.0,False
+2020-07-20,Los Angeles - Echo Park,Central LA,128,898.0,False
+2020-07-20,Los Angeles - El Sereno,Eastside,700,1674.0,False
+2020-07-20,Los Angeles - Elysian Park,Central LA,60,1050.0,False
+2020-07-20,Los Angeles - Elysian Valley,Northeast LA,156,1534.0,False
+2020-07-20,Los Angeles - Encino,San Fernando Valley,338,748.0,False
+2020-07-20,Los Angeles - Exposition,South LA,50,1503.0,False
+2020-07-20,Los Angeles - Exposition Park,South LA,787,1752.0,False
+2020-07-20,Los Angeles - Faircrest Heights,Central LA,23,639.0,False
+2020-07-20,Los Angeles - Figueroa Park Square,South LA,184,2110.0,False
+2020-07-20,Los Angeles - Florence-Firestone,South LA,1411,2974.0,False
+2020-07-20,Los Angeles - Glassell Park,Northeast LA,406,1285.0,False
+2020-07-20,Los Angeles - Gramercy Place,South LA,149,1384.0,False
+2020-07-20,Los Angeles - Granada Hills,San Fernando Valley,715,1229.0,False
+2020-07-20,Los Angeles - Green Meadows,South LA,552,2567.0,False
+2020-07-20,Los Angeles - Hancock Park,Central LA,158,927.0,False
+2020-07-20,Los Angeles - Harbor City,Harbor,315,1084.0,False
+2020-07-20,Los Angeles - Harbor Gateway,Harbor,526,1206.0,False
+2020-07-20,Los Angeles - Harbor Pines,Harbor,11,457.0,False
+2020-07-20,Los Angeles - Harvard Heights,Central LA,358,1985.0,False
+2020-07-20,Los Angeles - Harvard Park,South LA,947,2496.0,False
+2020-07-20,Los Angeles - Highland Park,Northeast LA,686,1418.0,False
+2020-07-20,Los Angeles - Historic Filipinotown,Central LA,278,2004.0,False
+2020-07-20,Los Angeles - Hollywood,Central LA,721,1056.0,False
+2020-07-20,Los Angeles - Hollywood Hills,Central LA,191,649.0,False
+2020-07-20,Los Angeles - Hyde Park,South LA,480,1682.0,False
+2020-07-20,Los Angeles - Jefferson Park,South LA,167,2069.0,False
+2020-07-20,Los Angeles - Koreatown,Central LA,694,1343.0,False
+2020-07-20,Los Angeles - Lafayette Square,Central LA,50,1097.0,False
+2020-07-20,Los Angeles - Lake Balboa,San Fernando Valley,520,1232.0,False
+2020-07-20,Los Angeles - Lakeview Terrace,San Fernando Valley,368,2802.0,False
+2020-07-20,Los Angeles - Leimert Park,South LA,195,1280.0,False
+2020-07-20,Los Angeles - Lincoln Heights,Eastside,705,2163.0,False
+2020-07-20,Los Angeles - Little Armenia,Central LA,281,3502.0,False
+2020-07-20,Los Angeles - Little Bangladesh,Central LA,316,1115.0,False
+2020-07-20,Los Angeles - Little Tokyo,Central LA,45,1436.0,False
+2020-07-20,Los Angeles - Longwood,Central LA,74,1719.0,False
+2020-07-20,Los Angeles - Los Feliz,Central LA,128,592.0,False
+2020-07-20,Los Angeles - Manchester Square,South LA,84,984.0,False
+2020-07-20,Los Angeles - Mandeville Canyon,Westside,9,288.0,False
+2020-07-20,Los Angeles - Mar Vista,Westside,202,476.0,False
+2020-07-20,Los Angeles - Marina Peninsula,Westside,22,505.0,False
+2020-07-20,Los Angeles - Melrose,Central LA,1214,1562.0,False
+2020-07-20,Los Angeles - Mid-city,Central LA,205,1364.0,False
+2020-07-20,Los Angeles - Miracle Mile,Central LA,105,584.0,False
+2020-07-20,Los Angeles - Mission Hills,San Fernando Valley,423,1753.0,False
+2020-07-20,Los Angeles - Mt. Washington,Northeast LA,294,1218.0,False
+2020-07-20,Los Angeles - North Hills,San Fernando Valley,1044,1695.0,False
+2020-07-20,Los Angeles - North Hollywood,San Fernando Valley,1908,1260.0,False
+2020-07-20,Los Angeles - Northridge,San Fernando Valley,827,1185.0,False
+2020-07-20,Los Angeles - Pacific Palisades,Westside,89,418.0,False
+2020-07-20,Los Angeles - Pacoima,San Fernando Valley,1860,2416.0,False
+2020-07-20,Los Angeles - Palisades Highlands,Westside,17,442.0,False
+2020-07-20,Los Angeles - Palms,Westside,377,859.0,False
+2020-07-20,Los Angeles - Panorama City,San Fernando Valley,1614,2145.0,False
+2020-07-20,Los Angeles - Park La Brea,Central LA,62,457.0,False
+2020-07-20,Los Angeles - Pico-Union,Central LA,1239,2961.0,False
+2020-07-20,Los Angeles - Playa Del Rey,South Bay,16,501.0,False
+2020-07-20,Los Angeles - Playa Vista,Westside,81,740.0,False
+2020-07-20,Los Angeles - Porter Ranch,San Fernando Valley,205,576.0,False
+2020-07-20,Los Angeles - Rancho Park,Westside,57,869.0,False
+2020-07-20,Los Angeles - Regent Square,Central LA,21,755.0,False
+2020-07-20,Los Angeles - Reseda,San Fernando Valley,1331,1737.0,False
+2020-07-20,Los Angeles - Reseda Ranch,San Fernando Valley,52,1122.0,False
+2020-07-20,Los Angeles - Reynier Village,Central LA,26,615.0,False
+2020-07-20,Los Angeles - San Pedro,Harbor,1426,1827.0,True
+2020-07-20,Los Angeles - Shadow Hills,San Fernando Valley,28,630.0,False
+2020-07-20,Los Angeles - Sherman Oaks,San Fernando Valley,592,678.0,False
+2020-07-20,Los Angeles - Silverlake,Central LA,417,946.0,False
+2020-07-20,Los Angeles - South Carthay,Central LA,71,670.0,False
+2020-07-20,Los Angeles - South Park,South LA,1276,3361.0,False
+2020-07-20,Los Angeles - St Elmo Village,Central LA,91,1985.0,False
+2020-07-20,Los Angeles - Studio City,San Fernando Valley,165,735.0,False
+2020-07-20,Los Angeles - Sun Valley,San Fernando Valley,824,1570.0,False
+2020-07-20,Los Angeles - Sunland,Verdugos,294,1441.0,False
+2020-07-20,Los Angeles - Sycamore Square,Central LA,3,464.0,False
+2020-07-20,Los Angeles - Sylmar,San Fernando Valley,1878,2279.0,True
+2020-07-20,Los Angeles - Tarzana,San Fernando Valley,451,1461.0,False
+2020-07-20,Los Angeles - Temple-Beaudry,Central LA,786,1991.0,False
+2020-07-20,Los Angeles - Thai Town,Central LA,94,958.0,False
+2020-07-20,Los Angeles - Toluca Lake,San Fernando Valley,65,747.0,False
+2020-07-20,Los Angeles - Toluca Terrace,San Fernando Valley,14,1072.0,False
+2020-07-20,Los Angeles - Toluca Woods,San Fernando Valley,11,592.0,False
+2020-07-20,Los Angeles - Tujunga,Verdugos,234,841.0,False
+2020-07-20,Los Angeles - University Hills,Eastside,41,1196.0,False
+2020-07-20,Los Angeles - University Park,South LA,495,1803.0,False
+2020-07-20,Los Angeles - Valley Glen,San Fernando Valley,319,1063.0,False
+2020-07-20,Los Angeles - Valley Village,San Fernando Valley,359,1452.0,False
+2020-07-20,Los Angeles - Van Nuys,San Fernando Valley,1622,1740.0,False
+2020-07-20,Los Angeles - Venice,Westside,159,469.0,False
+2020-07-20,Los Angeles - Vermont Knolls,South LA,476,2767.0,False
+2020-07-20,Los Angeles - Vermont Square,South LA,215,2808.0,False
+2020-07-20,Los Angeles - Vermont Vista,South LA,1156,2807.0,False
+2020-07-20,Los Angeles - Vernon Central,South LA,1887,3629.0,False
+2020-07-20,Los Angeles - Victoria Park,Central LA,124,1476.0,False
+2020-07-20,Los Angeles - View Heights,South LA,22,596.0,False
+2020-07-20,Los Angeles - Watts,South LA,1111,2603.0,False
+2020-07-20,Los Angeles - Wellington Square,Central LA,71,1445.0,False
+2020-07-20,Los Angeles - West Adams,South LA,568,2056.0,False
+2020-07-20,Los Angeles - West Hills,San Fernando Valley,315,777.0,False
+2020-07-20,Los Angeles - West Los Angeles,Westside,322,856.0,False
+2020-07-20,Los Angeles - West Vernon,South LA,1383,2578.0,False
+2020-07-20,Los Angeles - Westchester,South Bay,254,492.0,False
+2020-07-20,Los Angeles - Westlake,Central LA,1690,2847.0,False
+2020-07-20,Los Angeles - Westwood,Westside,202,373.0,False
+2020-07-20,Los Angeles - Wholesale District,Central LA,1772,4905.0,True
+2020-07-20,Los Angeles - Wilmington,Harbor,972,1721.0,False
+2020-07-20,Los Angeles - Wilshire Center,Central LA,676,1347.0,False
+2020-07-20,Los Angeles - Winnetka,San Fernando Valley,740,1429.0,False
+2020-07-20,Los Angeles - Woodland Hills,San Fernando Valley,524,770.0,False
+2020-07-20,Unincorporated - Acton,Antelope Valley,40,502.0,False
+2020-07-20,Unincorporated - Agua Dulce,Northwest County,15,361.0,False
+2020-07-20,Unincorporated - Altadena,Verdugos,362,830.0,False
+2020-07-20,Unincorporated - Anaverde,Antelope Valley,5,332.0,False
+2020-07-20,Unincorporated - Angeles National Forest,Angeles Forest,3,241.0,False
+2020-07-20,Unincorporated - Arcadia,San Gabriel Valley,54,677.0,False
+2020-07-20,Unincorporated - Athens-Westmont,South LA,895,2109.0,False
+2020-07-20,Unincorporated - Athens Village,South LA,124,2532.0,False
+2020-07-20,Unincorporated - Avocado Heights,San Gabriel Valley,150,2214.0,False
+2020-07-20,Unincorporated - Azusa,San Gabriel Valley,293,1840.0,False
+2020-07-20,Unincorporated - Bassett,San Gabriel Valley,412,2781.0,False
+2020-07-20,Unincorporated - Bouquet Canyon,Northwest County,1,93.0,False
+2020-07-20,Unincorporated - Bradbury,San Gabriel Valley,4,3704.0,False
+2020-07-20,Unincorporated - Canyon Country,Northwest County,65,841.0,False
+2020-07-20,Unincorporated - Castaic,Northwest County,1836,6752.0,True
+2020-07-20,Unincorporated - Cerritos,Southeast,7,1193.0,False
+2020-07-20,Unincorporated - Charter Oak,San Gabriel Valley,0,0.0,False
+2020-07-20,Unincorporated - Claremont,Pomona Valley,3,427.0,False
+2020-07-20,Unincorporated - Covina,San Gabriel Valley,250,1486.0,False
+2020-07-20,Unincorporated - Del Aire,South Bay,39,888.0,False
+2020-07-20,Unincorporated - Del Rey,Westside,1,314.0,False
+2020-07-20,Unincorporated - Del Sur,Antelope Valley,3,124.0,False
+2020-07-20,Unincorporated - Desert View Highlands,Antelope Valley,14,562.0,False
+2020-07-20,Unincorporated - Duarte,San Gabriel Valley,75,1694.0,False
+2020-07-20,Unincorporated - East Covina,San Gabriel Valley,3,912.0,False
+2020-07-20,Unincorporated - East La Mirada,Southeast,68,1285.0,False
+2020-07-20,Unincorporated - East Lancaster,Antelope Valley,0,0.0,False
+2020-07-20,Unincorporated - East Los Angeles,Eastside,3790,3025.0,False
+2020-07-20,Unincorporated - East Pasadena,San Gabriel Valley,22,344.0,False
+2020-07-20,Unincorporated - East Rancho Dominguez,Southeast,364,2378.0,False
+2020-07-20,Unincorporated - East Whittier,Southeast,50,942.0,False
+2020-07-20,Unincorporated - El Camino Village,South Bay,97,1103.0,False
+2020-07-20,Unincorporated - El Monte,San Gabriel Valley,5,3448.0,False
+2020-07-20,Unincorporated - Elizabeth Lake,Antelope Valley,5,301.0,False
+2020-07-20,Unincorporated - Florence-Firestone,South LA,2045,3160.0,False
+2020-07-20,Unincorporated - Franklin Canyon,Central LA,0,0.0,False
+2020-07-20,Unincorporated - Glendora,San Gabriel Valley,4,606.0,False
+2020-07-20,Unincorporated - Hacienda Heights,San Gabriel Valley,615,1100.0,False
+2020-07-20,Unincorporated - Harbor Gateway,Harbor,0,0.0,False
+2020-07-20,Unincorporated - Hawthorne,South Bay,31,1233.0,False
+2020-07-20,Unincorporated - Hi Vista,Antelope Valley,1,91.0,False
+2020-07-20,Unincorporated - Kagel/Lopez Canyons,Angeles Forest,13,921.0,False
+2020-07-20,Unincorporated - La Crescenta-Montrose,Verdugos,89,449.0,False
+2020-07-20,Unincorporated - La Habra Heights,San Gabriel Valley,0,0.0,False
+2020-07-20,Unincorporated - La Rambla,Harbor,69,3325.0,False
+2020-07-20,Unincorporated - La Verne,Pomona Valley,16,784.0,True
+2020-07-20,Unincorporated - Ladera Heights,Westside,49,693.0,False
+2020-07-20,Unincorporated - Lake Hughes,Northwest County,1,150.0,False
+2020-07-20,Unincorporated - Lake Los Angeles,Antelope Valley,106,816.0,False
+2020-07-20,Unincorporated - Lake Manor,San Fernando Valley,13,791.0,False
+2020-07-20,Unincorporated - Lakewood,Harbor,0,0.0,False
+2020-07-20,Unincorporated - Lennox,South Bay,377,1672.0,False
+2020-07-20,Unincorporated - Leona Valley,Antelope Valley,14,800.0,False
+2020-07-20,Unincorporated - Littlerock,Antelope Valley,43,1069.0,False
+2020-07-20,Unincorporated - Littlerock/Juniper Hills,Antelope Valley,4,308.0,False
+2020-07-20,Unincorporated - Littlerock/Pearblossom,Antelope Valley,47,1317.0,False
+2020-07-20,Unincorporated - Llano,Antelope Valley,2,228.0,False
+2020-07-20,Unincorporated - Marina del Rey,Westside,45,478.0,False
+2020-07-20,Unincorporated - Miracle Mile,Central LA,0,0.0,False
+2020-07-20,Unincorporated - Monrovia,San Gabriel Valley,51,1314.0,False
+2020-07-20,Unincorporated - Newhall,Northwest County,4,1818.0,False
+2020-07-20,Unincorporated - North Lancaster,Antelope Valley,9,751.0,False
+2020-07-20,Unincorporated - North Whittier,San Gabriel Valley,118,1411.0,False
+2020-07-20,Unincorporated - Northeast San Gabriel,San Gabriel Valley,202,840.0,False
+2020-07-20,Unincorporated - Padua Hills,Pomona Valley,1,465.0,False
+2020-07-20,Unincorporated - Palmdale,Antelope Valley,15,1781.0,False
+2020-07-20,Unincorporated - Palos Verdes Peninsula,South Bay,1,161.0,False
+2020-07-20,Unincorporated - Pearblossom/Llano,Antelope Valley,13,665.0,False
+2020-07-20,Unincorporated - Pellissier Village,San Gabriel Valley,15,2423.0,False
+2020-07-20,Unincorporated - Placerita Canyon,Angeles Forest,0,0.0,False
+2020-07-20,Unincorporated - Pomona,San Gabriel Valley,8,413.0,False
+2020-07-20,Unincorporated - Quartz Hill,Antelope Valley,103,798.0,False
+2020-07-20,Unincorporated - Rancho Dominguez,Harbor,51,1917.0,False
+2020-07-20,Unincorporated - Roosevelt,Antelope Valley,3,322.0,False
+2020-07-20,Unincorporated - Rosewood,Southeast,15,1166.0,False
+2020-07-20,Unincorporated - Rosewood/East Gardena,Southeast,12,1006.0,False
+2020-07-20,Unincorporated - Rosewood/West Rancho Dominguez,Southeast,55,1636.0,False
+2020-07-20,Unincorporated - Rowland Heights,San Gabriel Valley,406,796.0,False
+2020-07-20,Unincorporated - San Clemente Island,Harbor,0,0.0,False
+2020-07-20,Unincorporated - San Francisquito Canyon/Bouquet Canyon,Northwest County,0,0.0,False
+2020-07-20,Unincorporated - San Jose Hills,San Gabriel Valley,392,1939.0,False
+2020-07-20,Unincorporated - San Pasqual,San Gabriel Valley,6,295.0,False
+2020-07-20,Unincorporated - Sand Canyon,Angeles Forest,2,649.0,False
+2020-07-20,Unincorporated - Santa Catalina Island,Harbor,6,2247.0,False
+2020-07-20,Unincorporated - Santa Monica Mountains,Santa Monica Mountains,71,381.0,True
+2020-07-20,Unincorporated - Saugus,Northwest County,11,7097.0,False
+2020-07-20,Unincorporated - Saugus/Canyon Country,Northwest County,1,281.0,False
+2020-07-20,Unincorporated - South Antelope Valley,Antelope Valley,1,220.0,False
+2020-07-20,Unincorporated - South El Monte,San Gabriel Valley,38,2117.0,False
+2020-07-20,Unincorporated - South San Gabriel,San Gabriel Valley,117,1322.0,False
+2020-07-20,Unincorporated - South Whittier,Southeast,993,1677.0,False
+2020-07-20,Unincorporated - Southeast Antelope Valley,Antelope Valley,8,1024.0,False
+2020-07-20,Unincorporated - Stevenson Ranch,Northwest County,92,439.0,False
+2020-07-20,Unincorporated - Sun Village,Antelope Valley,81,1342.0,False
+2020-07-20,Unincorporated - Sunrise Village,San Gabriel Valley,24,1852.0,False
+2020-07-20,Unincorporated - Twin Lakes/Oat Mountain,Northwest County,9,543.0,False
+2020-07-20,Unincorporated - Val Verde,Northwest County,37,1118.0,False
+2020-07-20,Unincorporated - Valencia,Northwest County,29,944.0,False
+2020-07-20,Unincorporated - Valinda,San Gabriel Valley,447,1913.0,False
+2020-07-20,Unincorporated - View Park/Windsor Hills,South LA,93,799.0,False
+2020-07-20,Unincorporated - Walnut Park,Southeast,455,2819.0,False
+2020-07-20,Unincorporated - West Antelope Valley,Antelope Valley,3,199.0,False
+2020-07-20,Unincorporated - West Carson,Harbor,235,1064.0,False
+2020-07-20,Unincorporated - West Chatsworth,San Fernando Valley,0,0.0,False
+2020-07-20,Unincorporated - West Puente Valley,San Gabriel Valley,240,2440.0,False
+2020-07-20,Unincorporated - West Rancho Dominguez,Harbor,18,1325.0,False
+2020-07-20,Unincorporated - West Whittier/Los Nietos,Southeast,568,2110.0,False
+2020-07-20,Unincorporated - Westfield/Academy Hills,South Bay,3,231.0,False
+2020-07-20,Unincorporated - Westhills,San Fernando Valley,7,834.0,False
+2020-07-20,Unincorporated - White Fence Farms,Antelope Valley,29,787.0,False
+2020-07-20,Unincorporated - Whittier,San Gabriel Valley,49,1295.0,False
+2020-07-20,Unincorporated - Whittier Narrows,San Gabriel Valley,0,0.0,False
+2020-07-20,Unincorporated - Willowbrook,South LA,890,2549.0,False
+2020-07-20,Unincorporated - Wiseburn,South Bay,79,1311.0,False
+2020-07-20,City of Long Beach,Harbor,6445,1374.54,
+2020-07-20,City of Pasadena,Verdugos,1700,1203.57,
+2020-07-21,City of Agoura Hills,Santa Monica Mountains,90,431.0,False
+2020-07-21,City of Alhambra,San Gabriel Valley,746,860.0,False
+2020-07-21,City of Arcadia,San Gabriel Valley,274,474.0,False
+2020-07-21,City of Artesia,Southeast,193,1149.0,False
+2020-07-21,City of Avalon,Harbor,5,129.0,False
+2020-07-21,City of Azusa,San Gabriel Valley,852,1703.0,False
+2020-07-21,City of Baldwin Park,San Gabriel Valley,1685,2195.0,False
+2020-07-21,City of Bell,Southeast,966,2659.0,False
+2020-07-21,City of Bell Gardens,Southeast,1166,2707.0,False
+2020-07-21,City of Bellflower,Southeast,1469,1890.0,False
+2020-07-21,City of Beverly Hills,Westside,502,1454.0,False
+2020-07-21,City of Bradbury,San Gabriel Valley,7,655.0,False
+2020-07-21,City of Burbank,San Fernando Valley,835,779.0,False
+2020-07-21,City of Calabasas,Santa Monica Mountains,176,724.0,False
+2020-07-21,City of Carson,Harbor,1061,1131.0,False
+2020-07-21,City of Cerritos,Southeast,361,721.0,False
+2020-07-21,City of Claremont,Pomona Valley,208,570.0,False
+2020-07-21,City of Commerce,Southeast,345,2640.0,True
+2020-07-21,City of Compton,Southeast,2380,2382.0,False
+2020-07-21,City of Covina,San Gabriel Valley,805,1642.0,False
+2020-07-21,City of Cudahy,Southeast,705,2896.0,False
+2020-07-21,City of Culver City,Westside,293,735.0,False
+2020-07-21,City of Diamond Bar,San Gabriel Valley,337,586.0,False
+2020-07-21,City of Downey,Southeast,2685,2350.0,False
+2020-07-21,City of Duarte,San Gabriel Valley,316,1435.0,False
+2020-07-21,City of El Monte,San Gabriel Valley,2618,2232.0,False
+2020-07-21,City of El Segundo,South Bay,89,530.0,False
+2020-07-21,City of Gardena,South Bay,734,1197.0,False
+2020-07-21,City of Glendale,Verdugos,2001,969.0,False
+2020-07-21,City of Glendora,San Gabriel Valley,784,1486.0,False
+2020-07-21,City of Hawaiian Gardens,Harbor,311,2119.0,False
+2020-07-21,City of Hawthorne,South Bay,1160,1306.0,False
+2020-07-21,City of Hermosa Beach,South Bay,135,686.0,False
+2020-07-21,City of Hidden Hills,Santa Monica Mountains,5,265.0,False
+2020-07-21,City of Huntington Park,Southeast,1769,2974.0,False
+2020-07-21,City of Industry,San Gabriel Valley,20,4577.0,False
+2020-07-21,City of Inglewood,South Bay,1654,1456.0,False
+2020-07-21,City of Irwindale,San Gabriel Valley,43,2947.0,False
+2020-07-21,City of La Canada Flintridge,Verdugos,107,517.0,False
+2020-07-21,City of La Habra Heights,San Gabriel Valley,23,422.0,False
+2020-07-21,City of La Mirada,Southeast,547,1103.0,False
+2020-07-21,City of La Puente,San Gabriel Valley,875,2150.0,False
+2020-07-21,City of La Verne,Pomona Valley,247,742.0,False
+2020-07-21,City of Lakewood,Harbor,784,976.0,False
+2020-07-21,City of Lancaster,Antelope Valley,1745,1080.0,True
+2020-07-21,City of Lawndale,South Bay,392,1166.0,False
+2020-07-21,City of Lomita,South Bay,153,738.0,False
+2020-07-21,City of Lynwood,Southeast,2078,2884.0,True
+2020-07-21,City of Malibu,Santa Monica Mountains,71,548.0,False
+2020-07-21,City of Manhattan Beach,South Bay,230,639.0,False
+2020-07-21,City of Maywood,Southeast,865,3084.0,False
+2020-07-21,City of Monrovia,San Gabriel Valley,449,1157.0,False
+2020-07-21,City of Montebello,Southeast,1409,2189.0,False
+2020-07-21,City of Monterey Park,San Gabriel Valley,524,842.0,False
+2020-07-21,City of Norwalk,Southeast,2016,1873.0,False
+2020-07-21,City of Palmdale,Antelope Valley,2028,1276.0,False
+2020-07-21,City of Palos Verdes Estates,South Bay,63,466.0,False
+2020-07-21,City of Paramount,Southeast,1493,2665.0,False
+2020-07-21,City of Pico Rivera,Southeast,1547,2407.0,False
+2020-07-21,City of Pomona,Pomona Valley,2833,1817.0,False
+2020-07-21,City of Rancho Palos Verdes,South Bay,204,477.0,False
+2020-07-21,City of Redondo Beach,South Bay,353,514.0,False
+2020-07-21,City of Rolling Hills,South Bay,4,206.0,False
+2020-07-21,City of Rolling Hills Estates,South Bay,30,370.0,False
+2020-07-21,City of Rosemead,San Gabriel Valley,475,858.0,False
+2020-07-21,City of San Dimas,San Gabriel Valley,306,887.0,True
+2020-07-21,City of San Fernando,San Fernando Valley,496,2015.0,False
+2020-07-21,City of San Gabriel,San Gabriel Valley,358,874.0,False
+2020-07-21,City of San Marino,San Gabriel Valley,44,331.0,False
+2020-07-21,City of Santa Clarita,Northwest County,1839,834.0,False
+2020-07-21,City of Santa Fe Springs,Southeast,318,1732.0,False
+2020-07-21,City of Santa Monica,Westside,560,606.0,False
+2020-07-21,City of Sierra Madre,San Gabriel Valley,45,410.0,False
+2020-07-21,City of Signal Hill,Harbor,159,1348.0,False
+2020-07-21,City of South El Monte,San Gabriel Valley,470,2250.0,False
+2020-07-21,City of South Gate,Southeast,2840,2893.0,False
+2020-07-21,City of South Pasadena,San Gabriel Valley,204,783.0,False
+2020-07-21,City of Temple City,San Gabriel Valley,360,988.0,False
+2020-07-21,City of Torrance,South Bay,885,593.0,False
+2020-07-21,City of Vernon,Southeast,20,9569.0,False
+2020-07-21,City of Walnut,San Gabriel Valley,171,560.0,False
+2020-07-21,City of West Covina,San Gabriel Valley,1795,1658.0,False
+2020-07-21,City of West Hollywood,Central LA,394,1066.0,False
+2020-07-21,City of Westlake Village,Santa Monica Mountains,19,227.0,False
+2020-07-21,City of Whittier,San Gabriel Valley,1332,1523.0,False
+2020-07-21,Los Angeles,,66099,1634.0,False
+2020-07-21,Los Angeles - Adams-Normandie,South LA,144,1756.0,False
+2020-07-21,Los Angeles - Alsace,South LA,231,1856.0,False
+2020-07-21,Los Angeles - Angeles National Forest,Angeles Forest,2,5000.0,False
+2020-07-21,Los Angeles - Angelino Heights,Central LA,40,1599.0,False
+2020-07-21,Los Angeles - Arleta,San Fernando Valley,785,2284.0,False
+2020-07-21,Los Angeles - Atwater Village,Northeast LA,139,948.0,False
+2020-07-21,Los Angeles - Baldwin Hills,South LA,388,1247.0,False
+2020-07-21,Los Angeles - Bel Air,Westside,56,664.0,False
+2020-07-21,Los Angeles - Beverly Crest,Westside,72,575.0,False
+2020-07-21,Los Angeles - Beverlywood,Westside,100,759.0,False
+2020-07-21,Los Angeles - Boyle Heights,Eastside,2722,3133.0,True
+2020-07-21,Los Angeles - Brentwood,Westside,181,585.0,False
+2020-07-21,Los Angeles - Brookside,Central LA,1,172.0,False
+2020-07-21,Los Angeles - Cadillac-Corning,Central LA,75,1053.0,False
+2020-07-21,Los Angeles - Canoga Park,San Fernando Valley,1107,1696.0,False
+2020-07-21,Los Angeles - Carthay,Central LA,164,1142.0,False
+2020-07-21,Los Angeles - Central,South LA,1428,3662.0,False
+2020-07-21,Los Angeles - Century City,Westside,88,688.0,False
+2020-07-21,Los Angeles - Century Palms/Cove,South LA,961,2846.0,False
+2020-07-21,Los Angeles - Chatsworth,San Fernando Valley,411,1109.0,False
+2020-07-21,Los Angeles - Cheviot Hills,Westside,45,491.0,False
+2020-07-21,Los Angeles - Chinatown,Central LA,67,835.0,False
+2020-07-21,Los Angeles - Cloverdale/Cochran,Central LA,202,1388.0,False
+2020-07-21,Los Angeles - Country Club Park,Central LA,206,1359.0,False
+2020-07-21,Los Angeles - Crenshaw District,South LA,182,1316.0,False
+2020-07-21,Los Angeles - Crestview,Central LA,141,1240.0,False
+2020-07-21,Los Angeles - Del Rey,Westside,214,715.0,False
+2020-07-21,Los Angeles - Downtown,Central LA,490,1781.0,True
+2020-07-21,Los Angeles - Eagle Rock,Northeast LA,425,1074.0,False
+2020-07-21,Los Angeles - East Hollywood,Central LA,432,1475.0,False
+2020-07-21,Los Angeles - Echo Park,Central LA,132,926.0,False
+2020-07-21,Los Angeles - El Sereno,Eastside,707,1691.0,False
+2020-07-21,Los Angeles - Elysian Park,Central LA,60,1050.0,False
+2020-07-21,Los Angeles - Elysian Valley,Northeast LA,158,1553.0,False
+2020-07-21,Los Angeles - Encino,San Fernando Valley,343,759.0,False
+2020-07-21,Los Angeles - Exposition,South LA,52,1563.0,False
+2020-07-21,Los Angeles - Exposition Park,South LA,806,1794.0,False
+2020-07-21,Los Angeles - Faircrest Heights,Central LA,23,639.0,False
+2020-07-21,Los Angeles - Figueroa Park Square,South LA,188,2156.0,False
+2020-07-21,Los Angeles - Florence-Firestone,South LA,1435,3025.0,False
+2020-07-21,Los Angeles - Glassell Park,Northeast LA,410,1297.0,False
+2020-07-21,Los Angeles - Gramercy Place,South LA,154,1431.0,False
+2020-07-21,Los Angeles - Granada Hills,San Fernando Valley,724,1244.0,False
+2020-07-21,Los Angeles - Green Meadows,South LA,563,2618.0,False
+2020-07-21,Los Angeles - Hancock Park,Central LA,158,927.0,False
+2020-07-21,Los Angeles - Harbor City,Harbor,325,1118.0,False
+2020-07-21,Los Angeles - Harbor Gateway,Harbor,538,1234.0,False
+2020-07-21,Los Angeles - Harbor Pines,Harbor,11,457.0,False
+2020-07-21,Los Angeles - Harvard Heights,Central LA,366,2029.0,False
+2020-07-21,Los Angeles - Harvard Park,South LA,960,2531.0,False
+2020-07-21,Los Angeles - Highland Park,Northeast LA,693,1432.0,False
+2020-07-21,Los Angeles - Historic Filipinotown,Central LA,278,2004.0,False
+2020-07-21,Los Angeles - Hollywood,Central LA,738,1081.0,False
+2020-07-21,Los Angeles - Hollywood Hills,Central LA,194,659.0,False
+2020-07-21,Los Angeles - Hyde Park,South LA,485,1699.0,False
+2020-07-21,Los Angeles - Jefferson Park,South LA,170,2106.0,False
+2020-07-21,Los Angeles - Koreatown,Central LA,705,1364.0,False
+2020-07-21,Los Angeles - Lafayette Square,Central LA,52,1141.0,False
+2020-07-21,Los Angeles - Lake Balboa,San Fernando Valley,523,1239.0,False
+2020-07-21,Los Angeles - Lakeview Terrace,San Fernando Valley,373,2840.0,False
+2020-07-21,Los Angeles - Leimert Park,South LA,197,1293.0,False
+2020-07-21,Los Angeles - Lincoln Heights,Eastside,714,2190.0,False
+2020-07-21,Los Angeles - Little Armenia,Central LA,282,3514.0,False
+2020-07-21,Los Angeles - Little Bangladesh,Central LA,320,1129.0,False
+2020-07-21,Los Angeles - Little Tokyo,Central LA,45,1436.0,False
+2020-07-21,Los Angeles - Longwood,Central LA,74,1719.0,False
+2020-07-21,Los Angeles - Los Feliz,Central LA,127,588.0,False
+2020-07-21,Los Angeles - Manchester Square,South LA,86,1007.0,False
+2020-07-21,Los Angeles - Mandeville Canyon,Westside,10,320.0,False
+2020-07-21,Los Angeles - Mar Vista,Westside,210,494.0,False
+2020-07-21,Los Angeles - Marina Peninsula,Westside,23,528.0,False
+2020-07-21,Los Angeles - Melrose,Central LA,1230,1583.0,False
+2020-07-21,Los Angeles - Mid-city,Central LA,208,1384.0,False
+2020-07-21,Los Angeles - Miracle Mile,Central LA,106,589.0,False
+2020-07-21,Los Angeles - Mission Hills,San Fernando Valley,430,1782.0,False
+2020-07-21,Los Angeles - Mt. Washington,Northeast LA,299,1238.0,False
+2020-07-21,Los Angeles - North Hills,San Fernando Valley,1063,1726.0,False
+2020-07-21,Los Angeles - North Hollywood,San Fernando Valley,1935,1278.0,False
+2020-07-21,Los Angeles - Northridge,San Fernando Valley,845,1211.0,False
+2020-07-21,Los Angeles - Pacific Palisades,Westside,90,423.0,False
+2020-07-21,Los Angeles - Pacoima,San Fernando Valley,1900,2468.0,False
+2020-07-21,Los Angeles - Palisades Highlands,Westside,17,442.0,False
+2020-07-21,Los Angeles - Palms,Westside,379,864.0,False
+2020-07-21,Los Angeles - Panorama City,San Fernando Valley,1642,2182.0,False
+2020-07-21,Los Angeles - Park La Brea,Central LA,64,471.0,False
+2020-07-21,Los Angeles - Pico-Union,Central LA,1253,2995.0,False
+2020-07-21,Los Angeles - Playa Del Rey,South Bay,16,501.0,False
+2020-07-21,Los Angeles - Playa Vista,Westside,82,749.0,False
+2020-07-21,Los Angeles - Porter Ranch,San Fernando Valley,206,579.0,False
+2020-07-21,Los Angeles - Rancho Park,Westside,57,869.0,False
+2020-07-21,Los Angeles - Regent Square,Central LA,21,755.0,False
+2020-07-21,Los Angeles - Reseda,San Fernando Valley,1348,1759.0,False
+2020-07-21,Los Angeles - Reseda Ranch,San Fernando Valley,57,1230.0,False
+2020-07-21,Los Angeles - Reynier Village,Central LA,26,615.0,False
+2020-07-21,Los Angeles - San Pedro,Harbor,1445,1852.0,True
+2020-07-21,Los Angeles - Shadow Hills,San Fernando Valley,29,653.0,False
+2020-07-21,Los Angeles - Sherman Oaks,San Fernando Valley,604,692.0,False
+2020-07-21,Los Angeles - Silverlake,Central LA,419,950.0,False
+2020-07-21,Los Angeles - South Carthay,Central LA,72,680.0,False
+2020-07-21,Los Angeles - South Park,South LA,1295,3411.0,False
+2020-07-21,Los Angeles - St Elmo Village,Central LA,91,1985.0,False
+2020-07-21,Los Angeles - Studio City,San Fernando Valley,166,740.0,False
+2020-07-21,Los Angeles - Sun Valley,San Fernando Valley,831,1583.0,False
+2020-07-21,Los Angeles - Sunland,Verdugos,297,1455.0,False
+2020-07-21,Los Angeles - Sycamore Square,Central LA,3,464.0,False
+2020-07-21,Los Angeles - Sylmar,San Fernando Valley,1902,2308.0,True
+2020-07-21,Los Angeles - Tarzana,San Fernando Valley,453,1467.0,False
+2020-07-21,Los Angeles - Temple-Beaudry,Central LA,800,2026.0,False
+2020-07-21,Los Angeles - Thai Town,Central LA,92,938.0,False
+2020-07-21,Los Angeles - Toluca Lake,San Fernando Valley,67,770.0,False
+2020-07-21,Los Angeles - Toluca Terrace,San Fernando Valley,17,1302.0,False
+2020-07-21,Los Angeles - Toluca Woods,San Fernando Valley,11,592.0,False
+2020-07-21,Los Angeles - Tujunga,Verdugos,242,870.0,False
+2020-07-21,Los Angeles - University Hills,Eastside,42,1225.0,False
+2020-07-21,Los Angeles - University Park,South LA,504,1836.0,False
+2020-07-21,Los Angeles - Valley Glen,San Fernando Valley,324,1079.0,False
+2020-07-21,Los Angeles - Valley Village,San Fernando Valley,360,1456.0,False
+2020-07-21,Los Angeles - Van Nuys,San Fernando Valley,1632,1751.0,False
+2020-07-21,Los Angeles - Venice,Westside,164,484.0,False
+2020-07-21,Los Angeles - Vermont Knolls,South LA,485,2820.0,False
+2020-07-21,Los Angeles - Vermont Square,South LA,219,2860.0,False
+2020-07-21,Los Angeles - Vermont Vista,South LA,1175,2853.0,False
+2020-07-21,Los Angeles - Vernon Central,South LA,1920,3692.0,False
+2020-07-21,Los Angeles - Victoria Park,Central LA,125,1488.0,False
+2020-07-21,Los Angeles - View Heights,South LA,22,596.0,False
+2020-07-21,Los Angeles - Watts,South LA,1135,2660.0,False
+2020-07-21,Los Angeles - Wellington Square,Central LA,73,1485.0,False
+2020-07-21,Los Angeles - West Adams,South LA,574,2077.0,False
+2020-07-21,Los Angeles - West Hills,San Fernando Valley,320,789.0,False
+2020-07-21,Los Angeles - West Los Angeles,Westside,327,869.0,False
+2020-07-21,Los Angeles - West Vernon,South LA,1413,2634.0,False
+2020-07-21,Los Angeles - Westchester,South Bay,258,500.0,False
+2020-07-21,Los Angeles - Westlake,Central LA,1717,2893.0,False
+2020-07-21,Los Angeles - Westwood,Westside,208,384.0,False
+2020-07-21,Los Angeles - Wholesale District,Central LA,1775,4913.0,True
+2020-07-21,Los Angeles - Wilmington,Harbor,995,1761.0,False
+2020-07-21,Los Angeles - Wilshire Center,Central LA,689,1373.0,False
+2020-07-21,Los Angeles - Winnetka,San Fernando Valley,746,1441.0,False
+2020-07-21,Los Angeles - Woodland Hills,San Fernando Valley,532,782.0,False
+2020-07-21,Unincorporated - Acton,Antelope Valley,40,502.0,False
+2020-07-21,Unincorporated - Agua Dulce,Northwest County,17,409.0,False
+2020-07-21,Unincorporated - Altadena,Verdugos,375,860.0,False
+2020-07-21,Unincorporated - Anaverde,Antelope Valley,5,332.0,False
+2020-07-21,Unincorporated - Angeles National Forest,Angeles Forest,3,241.0,False
+2020-07-21,Unincorporated - Arcadia,San Gabriel Valley,57,714.0,False
+2020-07-21,Unincorporated - Athens-Westmont,South LA,914,2154.0,False
+2020-07-21,Unincorporated - Athens Village,South LA,129,2634.0,False
+2020-07-21,Unincorporated - Avocado Heights,San Gabriel Valley,157,2317.0,False
+2020-07-21,Unincorporated - Azusa,San Gabriel Valley,296,1859.0,False
+2020-07-21,Unincorporated - Bassett,San Gabriel Valley,415,2801.0,False
+2020-07-21,Unincorporated - Bouquet Canyon,Northwest County,1,93.0,False
+2020-07-21,Unincorporated - Bradbury,San Gabriel Valley,4,3704.0,False
+2020-07-21,Unincorporated - Canyon Country,Northwest County,69,893.0,False
+2020-07-21,Unincorporated - Castaic,Northwest County,1839,6763.0,True
+2020-07-21,Unincorporated - Cerritos,Southeast,7,1193.0,False
+2020-07-21,Unincorporated - Charter Oak,San Gabriel Valley,0,0.0,False
+2020-07-21,Unincorporated - Claremont,Pomona Valley,3,427.0,False
+2020-07-21,Unincorporated - Covina,San Gabriel Valley,254,1510.0,False
+2020-07-21,Unincorporated - Del Aire,South Bay,42,956.0,False
+2020-07-21,Unincorporated - Del Rey,Westside,1,314.0,False
+2020-07-21,Unincorporated - Del Sur,Antelope Valley,3,124.0,False
+2020-07-21,Unincorporated - Desert View Highlands,Antelope Valley,16,642.0,False
+2020-07-21,Unincorporated - Duarte,San Gabriel Valley,75,1694.0,False
+2020-07-21,Unincorporated - East Covina,San Gabriel Valley,3,912.0,False
+2020-07-21,Unincorporated - East La Mirada,Southeast,70,1323.0,False
+2020-07-21,Unincorporated - East Lancaster,Antelope Valley,0,0.0,False
+2020-07-21,Unincorporated - East Los Angeles,Eastside,3845,3069.0,False
+2020-07-21,Unincorporated - East Pasadena,San Gabriel Valley,26,406.0,False
+2020-07-21,Unincorporated - East Rancho Dominguez,Southeast,374,2443.0,False
+2020-07-21,Unincorporated - East Whittier,Southeast,50,942.0,False
+2020-07-21,Unincorporated - El Camino Village,South Bay,99,1126.0,False
+2020-07-21,Unincorporated - El Monte,San Gabriel Valley,5,3448.0,False
+2020-07-21,Unincorporated - Elizabeth Lake,Antelope Valley,5,301.0,False
+2020-07-21,Unincorporated - Florence-Firestone,South LA,2079,3213.0,False
+2020-07-21,Unincorporated - Franklin Canyon,Central LA,0,0.0,False
+2020-07-21,Unincorporated - Glendora,San Gabriel Valley,4,606.0,False
+2020-07-21,Unincorporated - Hacienda Heights,San Gabriel Valley,624,1116.0,False
+2020-07-21,Unincorporated - Harbor Gateway,Harbor,0,0.0,False
+2020-07-21,Unincorporated - Hawthorne,South Bay,32,1273.0,False
+2020-07-21,Unincorporated - Hi Vista,Antelope Valley,1,91.0,False
+2020-07-21,Unincorporated - Kagel/Lopez Canyons,Angeles Forest,14,992.0,False
+2020-07-21,Unincorporated - La Crescenta-Montrose,Verdugos,91,460.0,False
+2020-07-21,Unincorporated - La Habra Heights,San Gabriel Valley,0,0.0,False
+2020-07-21,Unincorporated - La Rambla,Harbor,69,3325.0,False
+2020-07-21,Unincorporated - La Verne,Pomona Valley,18,882.0,True
+2020-07-21,Unincorporated - Ladera Heights,Westside,50,707.0,False
+2020-07-21,Unincorporated - Lake Hughes,Northwest County,1,150.0,False
+2020-07-21,Unincorporated - Lake Los Angeles,Antelope Valley,111,854.0,False
+2020-07-21,Unincorporated - Lake Manor,San Fernando Valley,13,791.0,False
+2020-07-21,Unincorporated - Lakewood,Harbor,0,0.0,False
+2020-07-21,Unincorporated - Lennox,South Bay,381,1690.0,False
+2020-07-21,Unincorporated - Leona Valley,Antelope Valley,15,857.0,False
+2020-07-21,Unincorporated - Littlerock,Antelope Valley,43,1069.0,False
+2020-07-21,Unincorporated - Littlerock/Juniper Hills,Antelope Valley,4,308.0,False
+2020-07-21,Unincorporated - Littlerock/Pearblossom,Antelope Valley,48,1345.0,False
+2020-07-21,Unincorporated - Llano,Antelope Valley,2,228.0,False
+2020-07-21,Unincorporated - Marina del Rey,Westside,46,489.0,False
+2020-07-21,Unincorporated - Miracle Mile,Central LA,0,0.0,False
+2020-07-21,Unincorporated - Monrovia,San Gabriel Valley,52,1340.0,False
+2020-07-21,Unincorporated - Newhall,Northwest County,4,1818.0,False
+2020-07-21,Unincorporated - North Lancaster,Antelope Valley,11,918.0,False
+2020-07-21,Unincorporated - North Whittier,San Gabriel Valley,124,1483.0,False
+2020-07-21,Unincorporated - Northeast San Gabriel,San Gabriel Valley,209,870.0,False
+2020-07-21,Unincorporated - Padua Hills,Pomona Valley,1,465.0,False
+2020-07-21,Unincorporated - Palmdale,Antelope Valley,15,1781.0,False
+2020-07-21,Unincorporated - Palos Verdes Peninsula,South Bay,2,322.0,False
+2020-07-21,Unincorporated - Pearblossom/Llano,Antelope Valley,13,665.0,False
+2020-07-21,Unincorporated - Pellissier Village,San Gabriel Valley,15,2423.0,False
+2020-07-21,Unincorporated - Placerita Canyon,Angeles Forest,0,0.0,False
+2020-07-21,Unincorporated - Pomona,San Gabriel Valley,8,413.0,False
+2020-07-21,Unincorporated - Quartz Hill,Antelope Valley,107,829.0,False
+2020-07-21,Unincorporated - Rancho Dominguez,Harbor,53,1992.0,False
+2020-07-21,Unincorporated - Roosevelt,Antelope Valley,3,322.0,False
+2020-07-21,Unincorporated - Rosewood,Southeast,15,1166.0,False
+2020-07-21,Unincorporated - Rosewood/East Gardena,Southeast,13,1090.0,False
+2020-07-21,Unincorporated - Rosewood/West Rancho Dominguez,Southeast,55,1636.0,False
+2020-07-21,Unincorporated - Rowland Heights,San Gabriel Valley,411,806.0,False
+2020-07-21,Unincorporated - San Clemente Island,Harbor,0,0.0,False
+2020-07-21,Unincorporated - San Francisquito Canyon/Bouquet Canyon,Northwest County,0,0.0,False
+2020-07-21,Unincorporated - San Jose Hills,San Gabriel Valley,402,1988.0,False
+2020-07-21,Unincorporated - San Pasqual,San Gabriel Valley,7,344.0,False
+2020-07-21,Unincorporated - Sand Canyon,Angeles Forest,2,649.0,False
+2020-07-21,Unincorporated - Santa Catalina Island,Harbor,6,2247.0,False
+2020-07-21,Unincorporated - Santa Monica Mountains,Santa Monica Mountains,72,387.0,True
+2020-07-21,Unincorporated - Saugus,Northwest County,12,7742.0,False
+2020-07-21,Unincorporated - Saugus/Canyon Country,Northwest County,1,281.0,False
+2020-07-21,Unincorporated - South Antelope Valley,Antelope Valley,1,220.0,False
+2020-07-21,Unincorporated - South El Monte,San Gabriel Valley,39,2173.0,False
+2020-07-21,Unincorporated - South San Gabriel,San Gabriel Valley,119,1345.0,False
+2020-07-21,Unincorporated - South Whittier,Southeast,1011,1707.0,False
+2020-07-21,Unincorporated - Southeast Antelope Valley,Antelope Valley,8,1024.0,False
+2020-07-21,Unincorporated - Stevenson Ranch,Northwest County,94,448.0,False
+2020-07-21,Unincorporated - Sun Village,Antelope Valley,82,1359.0,False
+2020-07-21,Unincorporated - Sunrise Village,San Gabriel Valley,25,1929.0,False
+2020-07-21,Unincorporated - Twin Lakes/Oat Mountain,Northwest County,9,543.0,False
+2020-07-21,Unincorporated - Val Verde,Northwest County,37,1118.0,False
+2020-07-21,Unincorporated - Valencia,Northwest County,30,977.0,False
+2020-07-21,Unincorporated - Valinda,San Gabriel Valley,466,1994.0,False
+2020-07-21,Unincorporated - View Park/Windsor Hills,South LA,93,799.0,False
+2020-07-21,Unincorporated - Walnut Park,Southeast,460,2850.0,False
+2020-07-21,Unincorporated - West Antelope Valley,Antelope Valley,3,199.0,False
+2020-07-21,Unincorporated - West Carson,Harbor,238,1078.0,False
+2020-07-21,Unincorporated - West Chatsworth,San Fernando Valley,0,0.0,False
+2020-07-21,Unincorporated - West Puente Valley,San Gabriel Valley,247,2511.0,False
+2020-07-21,Unincorporated - West Rancho Dominguez,Harbor,18,1325.0,False
+2020-07-21,Unincorporated - West Whittier/Los Nietos,Southeast,576,2139.0,False
+2020-07-21,Unincorporated - Westfield/Academy Hills,South Bay,3,231.0,False
+2020-07-21,Unincorporated - Westhills,San Fernando Valley,7,834.0,False
+2020-07-21,Unincorporated - White Fence Farms,Antelope Valley,30,815.0,False
+2020-07-21,Unincorporated - Whittier,San Gabriel Valley,49,1295.0,False
+2020-07-21,Unincorporated - Whittier Narrows,San Gabriel Valley,0,0.0,False
+2020-07-21,Unincorporated - Willowbrook,South LA,913,2615.0,False
+2020-07-21,Unincorporated - Wiseburn,South Bay,80,1327.0,False
+2020-07-21,City of Long Beach,Harbor,6522,1390.97,
+2020-07-21,City of Pasadena,Verdugos,1727,1222.69,
+2020-07-22,City of Agoura Hills,Santa Monica Mountains,92,441.0,False
+2020-07-22,City of Alhambra,San Gabriel Valley,760,876.0,False
+2020-07-22,City of Arcadia,San Gabriel Valley,277,480.0,False
+2020-07-22,City of Artesia,Southeast,200,1191.0,False
+2020-07-22,City of Avalon,Harbor,5,129.0,False
+2020-07-22,City of Azusa,San Gabriel Valley,872,1743.0,False
+2020-07-22,City of Baldwin Park,San Gabriel Valley,1714,2233.0,False
+2020-07-22,City of Bell,Southeast,980,2697.0,False
+2020-07-22,City of Bell Gardens,Southeast,1191,2765.0,False
+2020-07-22,City of Bellflower,Southeast,1489,1915.0,False
+2020-07-22,City of Beverly Hills,Westside,517,1498.0,False
+2020-07-22,City of Bradbury,San Gabriel Valley,7,655.0,False
+2020-07-22,City of Burbank,San Fernando Valley,856,799.0,False
+2020-07-22,City of Calabasas,Santa Monica Mountains,183,752.0,False
+2020-07-22,City of Carson,Harbor,1083,1154.0,False
+2020-07-22,City of Cerritos,Southeast,367,733.0,False
+2020-07-22,City of Claremont,Pomona Valley,211,578.0,False
+2020-07-22,City of Commerce,Southeast,355,2716.0,True
+2020-07-22,City of Compton,Southeast,2429,2431.0,False
+2020-07-22,City of Covina,San Gabriel Valley,822,1676.0,False
+2020-07-22,City of Cudahy,Southeast,723,2970.0,False
+2020-07-22,City of Culver City,Westside,299,750.0,False
+2020-07-22,City of Diamond Bar,San Gabriel Valley,341,593.0,False
+2020-07-22,City of Downey,Southeast,2720,2380.0,False
+2020-07-22,City of Duarte,San Gabriel Valley,320,1453.0,False
+2020-07-22,City of El Monte,San Gabriel Valley,2675,2281.0,False
+2020-07-22,City of El Segundo,South Bay,92,548.0,False
+2020-07-22,City of Gardena,South Bay,745,1215.0,False
+2020-07-22,City of Glendale,Verdugos,2060,998.0,False
+2020-07-22,City of Glendora,San Gabriel Valley,797,1510.0,False
+2020-07-22,City of Hawaiian Gardens,Harbor,320,2180.0,False
+2020-07-22,City of Hawthorne,South Bay,1185,1335.0,False
+2020-07-22,City of Hermosa Beach,South Bay,138,702.0,False
+2020-07-22,City of Hidden Hills,Santa Monica Mountains,5,265.0,False
+2020-07-22,City of Huntington Park,Southeast,1806,3036.0,False
+2020-07-22,City of Industry,San Gabriel Valley,20,4577.0,False
+2020-07-22,City of Inglewood,South Bay,1700,1497.0,False
+2020-07-22,City of Irwindale,San Gabriel Valley,45,3084.0,False
+2020-07-22,City of La Canada Flintridge,Verdugos,109,527.0,False
+2020-07-22,City of La Habra Heights,San Gabriel Valley,24,440.0,False
+2020-07-22,City of La Mirada,Southeast,551,1111.0,False
+2020-07-22,City of La Puente,San Gabriel Valley,902,2216.0,False
+2020-07-22,City of La Verne,Pomona Valley,256,769.0,False
+2020-07-22,City of Lakewood,Harbor,806,1003.0,False
+2020-07-22,City of Lancaster,Antelope Valley,1775,1099.0,True
+2020-07-22,City of Lawndale,South Bay,403,1199.0,False
+2020-07-22,City of Lomita,South Bay,155,748.0,False
+2020-07-22,City of Lynwood,Southeast,2113,2933.0,True
+2020-07-22,City of Malibu,Santa Monica Mountains,73,563.0,False
+2020-07-22,City of Manhattan Beach,South Bay,238,661.0,False
+2020-07-22,City of Maywood,Southeast,878,3130.0,False
+2020-07-22,City of Monrovia,San Gabriel Valley,461,1188.0,False
+2020-07-22,City of Montebello,Southeast,1438,2234.0,False
+2020-07-22,City of Monterey Park,San Gabriel Valley,535,859.0,False
+2020-07-22,City of Norwalk,Southeast,2056,1910.0,False
+2020-07-22,City of Palmdale,Antelope Valley,2082,1310.0,False
+2020-07-22,City of Palos Verdes Estates,South Bay,65,481.0,False
+2020-07-22,City of Paramount,Southeast,1527,2726.0,False
+2020-07-22,City of Pico Rivera,Southeast,1571,2444.0,False
+2020-07-22,City of Pomona,Pomona Valley,2928,1878.0,False
+2020-07-22,City of Rancho Palos Verdes,South Bay,205,480.0,False
+2020-07-22,City of Redondo Beach,South Bay,359,523.0,False
+2020-07-22,City of Rolling Hills,South Bay,4,206.0,False
+2020-07-22,City of Rolling Hills Estates,South Bay,30,370.0,False
+2020-07-22,City of Rosemead,San Gabriel Valley,483,873.0,False
+2020-07-22,City of San Dimas,San Gabriel Valley,318,921.0,True
+2020-07-22,City of San Fernando,San Fernando Valley,506,2056.0,False
+2020-07-22,City of San Gabriel,San Gabriel Valley,363,886.0,False
+2020-07-22,City of San Marino,San Gabriel Valley,44,331.0,False
+2020-07-22,City of Santa Clarita,Northwest County,1878,852.0,False
+2020-07-22,City of Santa Fe Springs,Southeast,322,1753.0,False
+2020-07-22,City of Santa Monica,Westside,571,618.0,False
+2020-07-22,City of Sierra Madre,San Gabriel Valley,45,410.0,False
+2020-07-22,City of Signal Hill,Harbor,159,1348.0,False
+2020-07-22,City of South El Monte,San Gabriel Valley,478,2289.0,False
+2020-07-22,City of South Gate,Southeast,2900,2955.0,False
+2020-07-22,City of South Pasadena,San Gabriel Valley,207,795.0,False
+2020-07-22,City of Temple City,San Gabriel Valley,367,1007.0,False
+2020-07-22,City of Torrance,South Bay,908,608.0,False
+2020-07-22,City of Vernon,Southeast,20,9569.0,False
+2020-07-22,City of Walnut,San Gabriel Valley,174,570.0,False
+2020-07-22,City of West Covina,San Gabriel Valley,1834,1694.0,False
+2020-07-22,City of West Hollywood,Central LA,399,1080.0,False
+2020-07-22,City of Westlake Village,Santa Monica Mountains,20,239.0,False
+2020-07-22,City of Whittier,San Gabriel Valley,1376,1574.0,False
+2020-07-22,Los Angeles,,67232,1662.0,False
+2020-07-22,Los Angeles - Adams-Normandie,South LA,148,1804.0,False
+2020-07-22,Los Angeles - Alsace,South LA,236,1896.0,False
+2020-07-22,Los Angeles - Angeles National Forest,Angeles Forest,2,5000.0,False
+2020-07-22,Los Angeles - Angelino Heights,Central LA,41,1639.0,False
+2020-07-22,Los Angeles - Arleta,San Fernando Valley,800,2328.0,False
+2020-07-22,Los Angeles - Atwater Village,Northeast LA,141,961.0,False
+2020-07-22,Los Angeles - Baldwin Hills,South LA,393,1263.0,False
+2020-07-22,Los Angeles - Bel Air,Westside,57,676.0,False
+2020-07-22,Los Angeles - Beverly Crest,Westside,73,583.0,False
+2020-07-22,Los Angeles - Beverlywood,Westside,102,774.0,False
+2020-07-22,Los Angeles - Boyle Heights,Eastside,2777,3196.0,True
+2020-07-22,Los Angeles - Brentwood,Westside,190,614.0,False
+2020-07-22,Los Angeles - Brookside,Central LA,1,172.0,False
+2020-07-22,Los Angeles - Cadillac-Corning,Central LA,80,1123.0,False
+2020-07-22,Los Angeles - Canoga Park,San Fernando Valley,1125,1723.0,False
+2020-07-22,Los Angeles - Carthay,Central LA,165,1149.0,False
+2020-07-22,Los Angeles - Central,South LA,1451,3721.0,False
+2020-07-22,Los Angeles - Century City,Westside,91,711.0,False
+2020-07-22,Los Angeles - Century Palms/Cove,South LA,984,2914.0,False
+2020-07-22,Los Angeles - Chatsworth,San Fernando Valley,416,1122.0,False
+2020-07-22,Los Angeles - Cheviot Hills,Westside,45,491.0,False
+2020-07-22,Los Angeles - Chinatown,Central LA,68,848.0,False
+2020-07-22,Los Angeles - Cloverdale/Cochran,Central LA,202,1388.0,False
+2020-07-22,Los Angeles - Country Club Park,Central LA,208,1373.0,False
+2020-07-22,Los Angeles - Crenshaw District,South LA,186,1345.0,False
+2020-07-22,Los Angeles - Crestview,Central LA,141,1240.0,False
+2020-07-22,Los Angeles - Del Rey,Westside,220,735.0,False
+2020-07-22,Los Angeles - Downtown,Central LA,498,1810.0,True
+2020-07-22,Los Angeles - Eagle Rock,Northeast LA,434,1096.0,False
+2020-07-22,Los Angeles - East Hollywood,Central LA,435,1485.0,False
+2020-07-22,Los Angeles - Echo Park,Central LA,132,926.0,False
+2020-07-22,Los Angeles - El Sereno,Eastside,723,1729.0,False
+2020-07-22,Los Angeles - Elysian Park,Central LA,61,1068.0,False
+2020-07-22,Los Angeles - Elysian Valley,Northeast LA,158,1553.0,False
+2020-07-22,Los Angeles - Encino,San Fernando Valley,348,770.0,False
+2020-07-22,Los Angeles - Exposition,South LA,51,1533.0,False
+2020-07-22,Los Angeles - Exposition Park,South LA,827,1841.0,False
+2020-07-22,Los Angeles - Faircrest Heights,Central LA,23,639.0,False
+2020-07-22,Los Angeles - Figueroa Park Square,South LA,191,2190.0,False
+2020-07-22,Los Angeles - Florence-Firestone,South LA,1470,3098.0,False
+2020-07-22,Los Angeles - Glassell Park,Northeast LA,423,1338.0,False
+2020-07-22,Los Angeles - Gramercy Place,South LA,155,1440.0,False
+2020-07-22,Los Angeles - Granada Hills,San Fernando Valley,733,1260.0,False
+2020-07-22,Los Angeles - Green Meadows,South LA,575,2674.0,False
+2020-07-22,Los Angeles - Hancock Park,Central LA,160,939.0,False
+2020-07-22,Los Angeles - Harbor City,Harbor,332,1142.0,False
+2020-07-22,Los Angeles - Harbor Gateway,Harbor,558,1280.0,False
+2020-07-22,Los Angeles - Harbor Pines,Harbor,12,498.0,False
+2020-07-22,Los Angeles - Harvard Heights,Central LA,371,2057.0,False
+2020-07-22,Los Angeles - Harvard Park,South LA,980,2583.0,False
+2020-07-22,Los Angeles - Highland Park,Northeast LA,696,1438.0,False
+2020-07-22,Los Angeles - Historic Filipinotown,Central LA,281,2026.0,False
+2020-07-22,Los Angeles - Hollywood,Central LA,750,1099.0,False
+2020-07-22,Los Angeles - Hollywood Hills,Central LA,196,666.0,False
+2020-07-22,Los Angeles - Hyde Park,South LA,496,1738.0,False
+2020-07-22,Los Angeles - Jefferson Park,South LA,172,2131.0,False
+2020-07-22,Los Angeles - Koreatown,Central LA,718,1389.0,False
+2020-07-22,Los Angeles - Lafayette Square,Central LA,52,1141.0,False
+2020-07-22,Los Angeles - Lake Balboa,San Fernando Valley,542,1284.0,False
+2020-07-22,Los Angeles - Lakeview Terrace,San Fernando Valley,376,2863.0,False
+2020-07-22,Los Angeles - Leimert Park,South LA,199,1306.0,False
+2020-07-22,Los Angeles - Lincoln Heights,Eastside,724,2221.0,False
+2020-07-22,Los Angeles - Little Armenia,Central LA,285,3551.0,False
+2020-07-22,Los Angeles - Little Bangladesh,Central LA,328,1157.0,False
+2020-07-22,Los Angeles - Little Tokyo,Central LA,46,1468.0,False
+2020-07-22,Los Angeles - Longwood,Central LA,75,1743.0,False
+2020-07-22,Los Angeles - Los Feliz,Central LA,126,583.0,False
+2020-07-22,Los Angeles - Manchester Square,South LA,92,1078.0,False
+2020-07-22,Los Angeles - Mandeville Canyon,Westside,12,384.0,False
+2020-07-22,Los Angeles - Mar Vista,Westside,215,506.0,False
+2020-07-22,Los Angeles - Marina Peninsula,Westside,23,528.0,False
+2020-07-22,Los Angeles - Melrose,Central LA,1245,1602.0,False
+2020-07-22,Los Angeles - Mid-city,Central LA,211,1404.0,False
+2020-07-22,Los Angeles - Miracle Mile,Central LA,107,595.0,False
+2020-07-22,Los Angeles - Mission Hills,San Fernando Valley,434,1799.0,False
+2020-07-22,Los Angeles - Mt. Washington,Northeast LA,311,1288.0,False
+2020-07-22,Los Angeles - North Hills,San Fernando Valley,1084,1760.0,False
+2020-07-22,Los Angeles - North Hollywood,San Fernando Valley,1974,1304.0,False
+2020-07-22,Los Angeles - Northridge,San Fernando Valley,858,1229.0,False
+2020-07-22,Los Angeles - Pacific Palisades,Westside,90,423.0,False
+2020-07-22,Los Angeles - Pacoima,San Fernando Valley,1926,2502.0,False
+2020-07-22,Los Angeles - Palisades Highlands,Westside,18,468.0,False
+2020-07-22,Los Angeles - Palms,Westside,384,875.0,False
+2020-07-22,Los Angeles - Panorama City,San Fernando Valley,1665,2213.0,False
+2020-07-22,Los Angeles - Park La Brea,Central LA,65,479.0,False
+2020-07-22,Los Angeles - Pico-Union,Central LA,1286,3073.0,False
+2020-07-22,Los Angeles - Playa Del Rey,South Bay,16,501.0,False
+2020-07-22,Los Angeles - Playa Vista,Westside,86,786.0,False
+2020-07-22,Los Angeles - Porter Ranch,San Fernando Valley,208,584.0,False
+2020-07-22,Los Angeles - Rancho Park,Westside,57,869.0,False
+2020-07-22,Los Angeles - Regent Square,Central LA,21,755.0,False
+2020-07-22,Los Angeles - Reseda,San Fernando Valley,1368,1786.0,False
+2020-07-22,Los Angeles - Reseda Ranch,San Fernando Valley,57,1230.0,False
+2020-07-22,Los Angeles - Reynier Village,Central LA,27,639.0,False
+2020-07-22,Los Angeles - San Pedro,Harbor,1454,1863.0,True
+2020-07-22,Los Angeles - Shadow Hills,San Fernando Valley,29,653.0,False
+2020-07-22,Los Angeles - Sherman Oaks,San Fernando Valley,616,706.0,False
+2020-07-22,Los Angeles - Silverlake,Central LA,424,962.0,False
+2020-07-22,Los Angeles - South Carthay,Central LA,74,698.0,False
+2020-07-22,Los Angeles - South Park,South LA,1318,3472.0,False
+2020-07-22,Los Angeles - St Elmo Village,Central LA,95,2072.0,False
+2020-07-22,Los Angeles - Studio City,San Fernando Valley,168,749.0,False
+2020-07-22,Los Angeles - Sun Valley,San Fernando Valley,837,1595.0,False
+2020-07-22,Los Angeles - Sunland,Verdugos,299,1465.0,False
+2020-07-22,Los Angeles - Sycamore Square,Central LA,4,618.0,False
+2020-07-22,Los Angeles - Sylmar,San Fernando Valley,1933,2346.0,True
+2020-07-22,Los Angeles - Tarzana,San Fernando Valley,458,1483.0,False
+2020-07-22,Los Angeles - Temple-Beaudry,Central LA,816,2067.0,False
+2020-07-22,Los Angeles - Thai Town,Central LA,94,958.0,False
+2020-07-22,Los Angeles - Toluca Lake,San Fernando Valley,66,758.0,False
+2020-07-22,Los Angeles - Toluca Terrace,San Fernando Valley,17,1302.0,False
+2020-07-22,Los Angeles - Toluca Woods,San Fernando Valley,11,592.0,False
+2020-07-22,Los Angeles - Tujunga,Verdugos,244,877.0,False
+2020-07-22,Los Angeles - University Hills,Eastside,42,1225.0,False
+2020-07-22,Los Angeles - University Park,South LA,518,1887.0,False
+2020-07-22,Los Angeles - Valley Glen,San Fernando Valley,326,1086.0,False
+2020-07-22,Los Angeles - Valley Village,San Fernando Valley,366,1481.0,False
+2020-07-22,Los Angeles - Van Nuys,San Fernando Valley,1662,1783.0,False
+2020-07-22,Los Angeles - Venice,Westside,172,508.0,False
+2020-07-22,Los Angeles - Vermont Knolls,South LA,490,2849.0,False
+2020-07-22,Los Angeles - Vermont Square,South LA,220,2873.0,False
+2020-07-22,Los Angeles - Vermont Vista,South LA,1203,2921.0,False
+2020-07-22,Los Angeles - Vernon Central,South LA,1949,3748.0,False
+2020-07-22,Los Angeles - Victoria Park,Central LA,125,1488.0,False
+2020-07-22,Los Angeles - View Heights,South LA,22,596.0,False
+2020-07-22,Los Angeles - Watts,South LA,1149,2693.0,False
+2020-07-22,Los Angeles - Wellington Square,Central LA,75,1526.0,False
+2020-07-22,Los Angeles - West Adams,South LA,587,2125.0,False
+2020-07-22,Los Angeles - West Hills,San Fernando Valley,326,804.0,False
+2020-07-22,Los Angeles - West Los Angeles,Westside,334,887.0,False
+2020-07-22,Los Angeles - West Vernon,South LA,1436,2677.0,False
+2020-07-22,Los Angeles - Westchester,South Bay,262,508.0,False
+2020-07-22,Los Angeles - Westlake,Central LA,1750,2948.0,False
+2020-07-22,Los Angeles - Westwood,Westside,215,397.0,False
+2020-07-22,Los Angeles - Wholesale District,Central LA,1797,4974.0,True
+2020-07-22,Los Angeles - Wilmington,Harbor,1016,1799.0,False
+2020-07-22,Los Angeles - Wilshire Center,Central LA,701,1397.0,False
+2020-07-22,Los Angeles - Winnetka,San Fernando Valley,757,1462.0,False
+2020-07-22,Los Angeles - Woodland Hills,San Fernando Valley,546,802.0,False
+2020-07-22,Unincorporated - Acton,Antelope Valley,40,502.0,False
+2020-07-22,Unincorporated - Agua Dulce,Northwest County,17,409.0,False
+2020-07-22,Unincorporated - Altadena,Verdugos,388,890.0,False
+2020-07-22,Unincorporated - Anaverde,Antelope Valley,5,332.0,False
+2020-07-22,Unincorporated - Angeles National Forest,Angeles Forest,3,241.0,False
+2020-07-22,Unincorporated - Arcadia,San Gabriel Valley,60,752.0,False
+2020-07-22,Unincorporated - Athens-Westmont,South LA,927,2184.0,False
+2020-07-22,Unincorporated - Athens Village,South LA,130,2655.0,False
+2020-07-22,Unincorporated - Avocado Heights,San Gabriel Valley,161,2376.0,False
+2020-07-22,Unincorporated - Azusa,San Gabriel Valley,305,1915.0,False
+2020-07-22,Unincorporated - Bassett,San Gabriel Valley,428,2889.0,False
+2020-07-22,Unincorporated - Bouquet Canyon,Northwest County,1,93.0,False
+2020-07-22,Unincorporated - Bradbury,San Gabriel Valley,4,3704.0,False
+2020-07-22,Unincorporated - Canyon Country,Northwest County,69,893.0,False
+2020-07-22,Unincorporated - Castaic,Northwest County,1840,6767.0,True
+2020-07-22,Unincorporated - Cerritos,Southeast,8,1363.0,False
+2020-07-22,Unincorporated - Charter Oak,San Gabriel Valley,0,0.0,False
+2020-07-22,Unincorporated - Claremont,Pomona Valley,3,427.0,False
+2020-07-22,Unincorporated - Covina,San Gabriel Valley,264,1570.0,False
+2020-07-22,Unincorporated - Del Aire,South Bay,43,979.0,False
+2020-07-22,Unincorporated - Del Rey,Westside,1,314.0,False
+2020-07-22,Unincorporated - Del Sur,Antelope Valley,5,207.0,False
+2020-07-22,Unincorporated - Desert View Highlands,Antelope Valley,18,722.0,False
+2020-07-22,Unincorporated - Duarte,San Gabriel Valley,78,1762.0,False
+2020-07-22,Unincorporated - East Covina,San Gabriel Valley,3,912.0,False
+2020-07-22,Unincorporated - East La Mirada,Southeast,73,1379.0,False
+2020-07-22,Unincorporated - East Lancaster,Antelope Valley,0,0.0,False
+2020-07-22,Unincorporated - East Los Angeles,Eastside,3943,3148.0,False
+2020-07-22,Unincorporated - East Pasadena,San Gabriel Valley,26,406.0,False
+2020-07-22,Unincorporated - East Rancho Dominguez,Southeast,387,2528.0,False
+2020-07-22,Unincorporated - East Whittier,Southeast,51,961.0,False
+2020-07-22,Unincorporated - El Camino Village,South Bay,101,1149.0,False
+2020-07-22,Unincorporated - El Monte,San Gabriel Valley,5,3448.0,False
+2020-07-22,Unincorporated - Elizabeth Lake,Antelope Valley,5,301.0,False
+2020-07-22,Unincorporated - Florence-Firestone,South LA,2126,3286.0,False
+2020-07-22,Unincorporated - Franklin Canyon,Central LA,0,0.0,False
+2020-07-22,Unincorporated - Glendora,San Gabriel Valley,4,606.0,False
+2020-07-22,Unincorporated - Hacienda Heights,San Gabriel Valley,639,1143.0,False
+2020-07-22,Unincorporated - Harbor Gateway,Harbor,0,0.0,False
+2020-07-22,Unincorporated - Hawthorne,South Bay,32,1273.0,False
+2020-07-22,Unincorporated - Hi Vista,Antelope Valley,1,91.0,False
+2020-07-22,Unincorporated - Kagel/Lopez Canyons,Angeles Forest,14,992.0,False
+2020-07-22,Unincorporated - La Crescenta-Montrose,Verdugos,98,495.0,False
+2020-07-22,Unincorporated - La Habra Heights,San Gabriel Valley,0,0.0,False
+2020-07-22,Unincorporated - La Rambla,Harbor,69,3325.0,False
+2020-07-22,Unincorporated - La Verne,Pomona Valley,19,931.0,True
+2020-07-22,Unincorporated - Ladera Heights,Westside,52,735.0,False
+2020-07-22,Unincorporated - Lake Hughes,Northwest County,1,150.0,False
+2020-07-22,Unincorporated - Lake Los Angeles,Antelope Valley,113,870.0,False
+2020-07-22,Unincorporated - Lake Manor,San Fernando Valley,13,791.0,False
+2020-07-22,Unincorporated - Lakewood,Harbor,0,0.0,False
+2020-07-22,Unincorporated - Lennox,South Bay,390,1730.0,False
+2020-07-22,Unincorporated - Leona Valley,Antelope Valley,15,857.0,False
+2020-07-22,Unincorporated - Littlerock,Antelope Valley,43,1069.0,False
+2020-07-22,Unincorporated - Littlerock/Juniper Hills,Antelope Valley,4,308.0,False
+2020-07-22,Unincorporated - Littlerock/Pearblossom,Antelope Valley,51,1429.0,False
+2020-07-22,Unincorporated - Llano,Antelope Valley,2,228.0,False
+2020-07-22,Unincorporated - Marina del Rey,Westside,46,489.0,False
+2020-07-22,Unincorporated - Miracle Mile,Central LA,0,0.0,False
+2020-07-22,Unincorporated - Monrovia,San Gabriel Valley,53,1366.0,False
+2020-07-22,Unincorporated - Newhall,Northwest County,4,1818.0,False
+2020-07-22,Unincorporated - North Lancaster,Antelope Valley,11,918.0,False
+2020-07-22,Unincorporated - North Whittier,San Gabriel Valley,128,1531.0,False
+2020-07-22,Unincorporated - Northeast San Gabriel,San Gabriel Valley,212,882.0,False
+2020-07-22,Unincorporated - Padua Hills,Pomona Valley,1,465.0,False
+2020-07-22,Unincorporated - Palmdale,Antelope Valley,15,1781.0,False
+2020-07-22,Unincorporated - Palos Verdes Peninsula,South Bay,2,322.0,False
+2020-07-22,Unincorporated - Pearblossom/Llano,Antelope Valley,13,665.0,False
+2020-07-22,Unincorporated - Pellissier Village,San Gabriel Valley,15,2423.0,False
+2020-07-22,Unincorporated - Placerita Canyon,Angeles Forest,0,0.0,False
+2020-07-22,Unincorporated - Pomona,San Gabriel Valley,9,464.0,False
+2020-07-22,Unincorporated - Quartz Hill,Antelope Valley,108,837.0,False
+2020-07-22,Unincorporated - Rancho Dominguez,Harbor,53,1992.0,False
+2020-07-22,Unincorporated - Roosevelt,Antelope Valley,4,430.0,False
+2020-07-22,Unincorporated - Rosewood,Southeast,16,1244.0,False
+2020-07-22,Unincorporated - Rosewood/East Gardena,Southeast,14,1174.0,False
+2020-07-22,Unincorporated - Rosewood/West Rancho Dominguez,Southeast,54,1607.0,False
+2020-07-22,Unincorporated - Rowland Heights,San Gabriel Valley,417,817.0,False
+2020-07-22,Unincorporated - San Clemente Island,Harbor,0,0.0,False
+2020-07-22,Unincorporated - San Francisquito Canyon/Bouquet Canyon,Northwest County,0,0.0,False
+2020-07-22,Unincorporated - San Jose Hills,San Gabriel Valley,416,2057.0,False
+2020-07-22,Unincorporated - San Pasqual,San Gabriel Valley,7,344.0,False
+2020-07-22,Unincorporated - Sand Canyon,Angeles Forest,3,974.0,False
+2020-07-22,Unincorporated - Santa Catalina Island,Harbor,6,2247.0,False
+2020-07-22,Unincorporated - Santa Monica Mountains,Santa Monica Mountains,73,392.0,True
+2020-07-22,Unincorporated - Saugus,Northwest County,12,7742.0,False
+2020-07-22,Unincorporated - Saugus/Canyon Country,Northwest County,1,281.0,False
+2020-07-22,Unincorporated - South Antelope Valley,Antelope Valley,1,220.0,False
+2020-07-22,Unincorporated - South El Monte,San Gabriel Valley,44,2451.0,False
+2020-07-22,Unincorporated - South San Gabriel,San Gabriel Valley,120,1356.0,False
+2020-07-22,Unincorporated - South Whittier,Southeast,1031,1741.0,False
+2020-07-22,Unincorporated - Southeast Antelope Valley,Antelope Valley,8,1024.0,False
+2020-07-22,Unincorporated - Stevenson Ranch,Northwest County,97,463.0,False
+2020-07-22,Unincorporated - Sun Village,Antelope Valley,82,1359.0,False
+2020-07-22,Unincorporated - Sunrise Village,San Gabriel Valley,25,1929.0,False
+2020-07-22,Unincorporated - Twin Lakes/Oat Mountain,Northwest County,9,543.0,False
+2020-07-22,Unincorporated - Val Verde,Northwest County,39,1179.0,False
+2020-07-22,Unincorporated - Valencia,Northwest County,31,1009.0,False
+2020-07-22,Unincorporated - Valinda,San Gabriel Valley,484,2071.0,False
+2020-07-22,Unincorporated - View Park/Windsor Hills,South LA,95,817.0,False
+2020-07-22,Unincorporated - Walnut Park,Southeast,472,2924.0,False
+2020-07-22,Unincorporated - West Antelope Valley,Antelope Valley,3,199.0,False
+2020-07-22,Unincorporated - West Carson,Harbor,241,1091.0,False
+2020-07-22,Unincorporated - West Chatsworth,San Fernando Valley,0,0.0,False
+2020-07-22,Unincorporated - West Puente Valley,San Gabriel Valley,249,2532.0,False
+2020-07-22,Unincorporated - West Rancho Dominguez,Harbor,18,1325.0,False
+2020-07-22,Unincorporated - West Whittier/Los Nietos,Southeast,593,2202.0,False
+2020-07-22,Unincorporated - Westfield/Academy Hills,South Bay,4,308.0,False
+2020-07-22,Unincorporated - Westhills,San Fernando Valley,7,834.0,False
+2020-07-22,Unincorporated - White Fence Farms,Antelope Valley,31,842.0,False
+2020-07-22,Unincorporated - Whittier,San Gabriel Valley,49,1295.0,False
+2020-07-22,Unincorporated - Whittier Narrows,San Gabriel Valley,0,0.0,False
+2020-07-22,Unincorporated - Willowbrook,South LA,931,2667.0,False
+2020-07-22,Unincorporated - Wiseburn,South Bay,86,1427.0,False
+2020-07-22,City of Long Beach,Harbor,6843,1459.43,
+2020-07-22,City of Pasadena,Verdugos,1758,1244.64,
+2020-07-23,CCity of Agoura Hills,,96,460.0,False
+2020-07-23,City of Alhambra,San Gabriel Valley,765,882.0,False
+2020-07-23,City of Arcadia,San Gabriel Valley,281,487.0,False
+2020-07-23,City of Artesia,Southeast,204,1215.0,False
+2020-07-23,City of Avalon,Harbor,5,129.0,False
+2020-07-23,City of Azusa,San Gabriel Valley,878,1755.0,False
+2020-07-23,City of Baldwin Park,San Gabriel Valley,1729,2252.0,False
+2020-07-23,City of Bell,Southeast,984,2708.0,False
+2020-07-23,City of Bell Gardens,Southeast,1198,2781.0,False
+2020-07-23,City of Bellflower,Southeast,1508,1940.0,False
+2020-07-23,City of Beverly Hills,Westside,523,1515.0,False
+2020-07-23,City of Bradbury,San Gabriel Valley,7,655.0,False
+2020-07-23,City of Burbank,San Fernando Valley,869,811.0,False
+2020-07-23,City of Calabasas,Santa Monica Mountains,185,761.0,False
+2020-07-23,City of Carson,Harbor,1094,1166.0,False
+2020-07-23,City of Cerritos,Southeast,371,741.0,False
+2020-07-23,City of Claremont,Pomona Valley,214,587.0,False
+2020-07-23,City of Commerce,Southeast,360,2755.0,True
+2020-07-23,City of Compton,Southeast,2454,2456.0,False
+2020-07-23,City of Covina,San Gabriel Valley,837,1707.0,False
+2020-07-23,City of Cudahy,Southeast,734,3015.0,False
+2020-07-23,City of Culver City,Westside,301,755.0,False
+2020-07-23,City of Diamond Bar,San Gabriel Valley,341,593.0,False
+2020-07-23,City of Downey,Southeast,2748,2405.0,False
+2020-07-23,City of Duarte,San Gabriel Valley,322,1463.0,False
+2020-07-23,City of El Monte,San Gabriel Valley,2691,2295.0,False
+2020-07-23,City of El Segundo,South Bay,94,560.0,False
+2020-07-23,City of Gardena,South Bay,754,1230.0,False
+2020-07-23,City of Glendale,Verdugos,2081,1008.0,False
+2020-07-23,City of Glendora,San Gabriel Valley,811,1537.0,False
+2020-07-23,City of Hawaiian Gardens,Harbor,322,2194.0,False
+2020-07-23,City of Hawthorne,South Bay,1202,1354.0,False
+2020-07-23,City of Hermosa Beach,South Bay,139,707.0,False
+2020-07-23,City of Hidden Hills,Santa Monica Mountains,5,265.0,False
+2020-07-23,City of Huntington Park,Southeast,1815,3051.0,False
+2020-07-23,City of Industry,San Gabriel Valley,20,4577.0,False
+2020-07-23,City of Inglewood,South Bay,1717,1512.0,False
+2020-07-23,City of Irwindale,San Gabriel Valley,45,3084.0,False
+2020-07-23,City of La Canada Flintridge,Verdugos,109,527.0,False
+2020-07-23,City of La Habra Heights,San Gabriel Valley,24,440.0,False
+2020-07-23,City of La Mirada,Southeast,563,1135.0,False
+2020-07-23,City of La Puente,San Gabriel Valley,911,2238.0,False
+2020-07-23,City of La Verne,Pomona Valley,259,778.0,False
+2020-07-23,City of Lakewood,Harbor,815,1014.0,False
+2020-07-23,City of Lancaster,Antelope Valley,1803,1116.0,True
+2020-07-23,City of Lawndale,South Bay,407,1211.0,False
+2020-07-23,City of Lomita,South Bay,156,753.0,False
+2020-07-23,City of Lynwood,Southeast,2144,2976.0,True
+2020-07-23,City of Malibu,Santa Monica Mountains,73,563.0,False
+2020-07-23,City of Manhattan Beach,South Bay,242,672.0,False
+2020-07-23,City of Maywood,Southeast,886,3159.0,False
+2020-07-23,City of Monrovia,San Gabriel Valley,466,1201.0,False
+2020-07-23,City of Montebello,Southeast,1458,2265.0,False
+2020-07-23,City of Monterey Park,San Gabriel Valley,540,867.0,False
+2020-07-23,City of Norwalk,Southeast,2078,1931.0,False
+2020-07-23,City of Palmdale,Antelope Valley,2121,1334.0,False
+2020-07-23,City of Palos Verdes Estates,South Bay,65,481.0,False
+2020-07-23,City of Paramount,Southeast,1536,2742.0,False
+2020-07-23,City of Pico Rivera,Southeast,1592,2477.0,False
+2020-07-23,City of Pomona,Pomona Valley,2957,1896.0,False
+2020-07-23,City of Rancho Palos Verdes,South Bay,207,484.0,False
+2020-07-23,City of Redondo Beach,South Bay,365,531.0,False
+2020-07-23,City of Rolling Hills,South Bay,5,258.0,False
+2020-07-23,City of Rolling Hills Estates,South Bay,30,370.0,False
+2020-07-23,City of Rosemead,San Gabriel Valley,485,876.0,False
+2020-07-23,City of San Dimas,San Gabriel Valley,323,936.0,True
+2020-07-23,City of San Fernando,San Fernando Valley,513,2084.0,False
+2020-07-23,City of San Gabriel,San Gabriel Valley,363,886.0,False
+2020-07-23,City of San Marino,San Gabriel Valley,44,331.0,False
+2020-07-23,City of Santa Clarita,Northwest County,1903,863.0,False
+2020-07-23,City of Santa Fe Springs,Southeast,326,1775.0,False
+2020-07-23,City of Santa Monica,Westside,574,621.0,False
+2020-07-23,City of Sierra Madre,San Gabriel Valley,45,410.0,False
+2020-07-23,City of Signal Hill,Harbor,160,1356.0,False
+2020-07-23,City of South El Monte,San Gabriel Valley,480,2298.0,False
+2020-07-23,City of South Gate,Southeast,2929,2984.0,False
+2020-07-23,City of South Pasadena,San Gabriel Valley,205,787.0,False
+2020-07-23,City of Temple City,San Gabriel Valley,369,1012.0,False
+2020-07-23,City of Torrance,South Bay,919,616.0,False
+2020-07-23,City of Vernon,Southeast,20,9569.0,False
+2020-07-23,City of Walnut,San Gabriel Valley,178,583.0,False
+2020-07-23,City of West Covina,San Gabriel Valley,1852,1711.0,False
+2020-07-23,City of West Hollywood,Central LA,400,1083.0,False
+2020-07-23,City of Westlake Village,Santa Monica Mountains,21,251.0,False
+2020-07-23,City of Whittier,San Gabriel Valley,1394,1594.0,False
+2020-07-23,Los Angeles,,67894,1679.0,False
+2020-07-23,Los Angeles - Adams-Normandie,South LA,148,1804.0,False
+2020-07-23,Los Angeles - Alsace,South LA,240,1928.0,False
+2020-07-23,Los Angeles - Angeles National Forest,Angeles Forest,2,5000.0,False
+2020-07-23,Los Angeles - Angelino Heights,Central LA,42,1679.0,False
+2020-07-23,Los Angeles - Arleta,San Fernando Valley,810,2357.0,False
+2020-07-23,Los Angeles - Atwater Village,Northeast LA,143,975.0,False
+2020-07-23,Los Angeles - Baldwin Hills,South LA,394,1266.0,False
+2020-07-23,Los Angeles - Bel Air,Westside,57,676.0,False
+2020-07-23,Los Angeles - Beverly Crest,Westside,74,591.0,False
+2020-07-23,Los Angeles - Beverlywood,Westside,102,774.0,False
+2020-07-23,Los Angeles - Boyle Heights,Eastside,2793,3215.0,True
+2020-07-23,Los Angeles - Brentwood,Westside,193,623.0,False
+2020-07-23,Los Angeles - Brookside,Central LA,1,172.0,False
+2020-07-23,Los Angeles - Cadillac-Corning,Central LA,86,1208.0,False
+2020-07-23,Los Angeles - Canoga Park,San Fernando Valley,1138,1743.0,False
+2020-07-23,Los Angeles - Carthay,Central LA,166,1156.0,False
+2020-07-23,Los Angeles - Central,South LA,1458,3739.0,False
+2020-07-23,Los Angeles - Century City,Westside,91,711.0,False
+2020-07-23,Los Angeles - Century Palms/Cove,South LA,989,2929.0,False
+2020-07-23,Los Angeles - Chatsworth,San Fernando Valley,428,1155.0,False
+2020-07-23,Los Angeles - Cheviot Hills,Westside,45,491.0,False
+2020-07-23,Los Angeles - Chinatown,Central LA,68,848.0,False
+2020-07-23,Los Angeles - Cloverdale/Cochran,Central LA,206,1416.0,False
+2020-07-23,Los Angeles - Country Club Park,Central LA,208,1373.0,False
+2020-07-23,Los Angeles - Crenshaw District,South LA,188,1359.0,False
+2020-07-23,Los Angeles - Crestview,Central LA,141,1240.0,False
+2020-07-23,Los Angeles - Del Rey,Westside,225,752.0,False
+2020-07-23,Los Angeles - Downtown,Central LA,504,1832.0,True
+2020-07-23,Los Angeles - Eagle Rock,Northeast LA,435,1099.0,False
+2020-07-23,Los Angeles - East Hollywood,Central LA,436,1489.0,False
+2020-07-23,Los Angeles - Echo Park,Central LA,133,933.0,False
+2020-07-23,Los Angeles - El Sereno,Eastside,730,1746.0,False
+2020-07-23,Los Angeles - Elysian Park,Central LA,61,1068.0,False
+2020-07-23,Los Angeles - Elysian Valley,Northeast LA,158,1553.0,False
+2020-07-23,Los Angeles - Encino,San Fernando Valley,353,781.0,False
+2020-07-23,Los Angeles - Exposition,South LA,51,1533.0,False
+2020-07-23,Los Angeles - Exposition Park,South LA,835,1859.0,False
+2020-07-23,Los Angeles - Faircrest Heights,Central LA,24,667.0,False
+2020-07-23,Los Angeles - Figueroa Park Square,South LA,193,2213.0,False
+2020-07-23,Los Angeles - Florence-Firestone,South LA,1497,3155.0,False
+2020-07-23,Los Angeles - Glassell Park,Northeast LA,429,1357.0,False
+2020-07-23,Los Angeles - Gramercy Place,South LA,156,1449.0,False
+2020-07-23,Los Angeles - Granada Hills,San Fernando Valley,745,1280.0,False
+2020-07-23,Los Angeles - Green Meadows,South LA,579,2692.0,False
+2020-07-23,Los Angeles - Hancock Park,Central LA,159,933.0,False
+2020-07-23,Los Angeles - Harbor City,Harbor,334,1149.0,False
+2020-07-23,Los Angeles - Harbor Gateway,Harbor,562,1289.0,False
+2020-07-23,Los Angeles - Harbor Pines,Harbor,12,498.0,False
+2020-07-23,Los Angeles - Harvard Heights,Central LA,374,2074.0,False
+2020-07-23,Los Angeles - Harvard Park,South LA,992,2615.0,False
+2020-07-23,Los Angeles - Highland Park,Northeast LA,701,1449.0,False
+2020-07-23,Los Angeles - Historic Filipinotown,Central LA,283,2040.0,False
+2020-07-23,Los Angeles - Hollywood,Central LA,757,1109.0,False
+2020-07-23,Los Angeles - Hollywood Hills,Central LA,197,669.0,False
+2020-07-23,Los Angeles - Hyde Park,South LA,507,1776.0,False
+2020-07-23,Los Angeles - Jefferson Park,South LA,172,2131.0,False
+2020-07-23,Los Angeles - Koreatown,Central LA,724,1401.0,False
+2020-07-23,Los Angeles - Lafayette Square,Central LA,52,1141.0,False
+2020-07-23,Los Angeles - Lake Balboa,San Fernando Valley,551,1306.0,False
+2020-07-23,Los Angeles - Lakeview Terrace,San Fernando Valley,379,2886.0,False
+2020-07-23,Los Angeles - Leimert Park,South LA,202,1326.0,False
+2020-07-23,Los Angeles - Lincoln Heights,Eastside,732,2246.0,False
+2020-07-23,Los Angeles - Little Armenia,Central LA,292,3639.0,False
+2020-07-23,Los Angeles - Little Bangladesh,Central LA,332,1171.0,False
+2020-07-23,Los Angeles - Little Tokyo,Central LA,45,1436.0,False
+2020-07-23,Los Angeles - Longwood,Central LA,75,1743.0,False
+2020-07-23,Los Angeles - Los Feliz,Central LA,126,583.0,False
+2020-07-23,Los Angeles - Manchester Square,South LA,96,1125.0,False
+2020-07-23,Los Angeles - Mandeville Canyon,Westside,12,384.0,False
+2020-07-23,Los Angeles - Mar Vista,Westside,216,509.0,False
+2020-07-23,Los Angeles - Marina Peninsula,Westside,23,528.0,False
+2020-07-23,Los Angeles - Melrose,Central LA,1255,1615.0,False
+2020-07-23,Los Angeles - Mid-city,Central LA,211,1404.0,False
+2020-07-23,Los Angeles - Miracle Mile,Central LA,109,606.0,False
+2020-07-23,Los Angeles - Mission Hills,San Fernando Valley,440,1824.0,False
+2020-07-23,Los Angeles - Mt. Washington,Northeast LA,313,1296.0,False
+2020-07-23,Los Angeles - North Hills,San Fernando Valley,1096,1780.0,False
+2020-07-23,Los Angeles - North Hollywood,San Fernando Valley,2001,1321.0,False
+2020-07-23,Los Angeles - Northridge,San Fernando Valley,868,1244.0,False
+2020-07-23,Los Angeles - Pacific Palisades,Westside,92,432.0,False
+2020-07-23,Los Angeles - Pacoima,San Fernando Valley,1959,2545.0,False
+2020-07-23,Los Angeles - Palisades Highlands,Westside,18,468.0,False
+2020-07-23,Los Angeles - Palms,Westside,385,877.0,False
+2020-07-23,Los Angeles - Panorama City,San Fernando Valley,1692,2249.0,False
+2020-07-23,Los Angeles - Park La Brea,Central LA,65,479.0,False
+2020-07-23,Los Angeles - Pico-Union,Central LA,1293,3090.0,False
+2020-07-23,Los Angeles - Playa Del Rey,South Bay,16,501.0,False
+2020-07-23,Los Angeles - Playa Vista,Westside,87,795.0,False
+2020-07-23,Los Angeles - Porter Ranch,San Fernando Valley,209,587.0,False
+2020-07-23,Los Angeles - Rancho Park,Westside,57,869.0,False
+2020-07-23,Los Angeles - Regent Square,Central LA,21,755.0,False
+2020-07-23,Los Angeles - Reseda,San Fernando Valley,1389,1813.0,False
+2020-07-23,Los Angeles - Reseda Ranch,San Fernando Valley,58,1251.0,False
+2020-07-23,Los Angeles - Reynier Village,Central LA,27,639.0,False
+2020-07-23,Los Angeles - San Pedro,Harbor,1463,1875.0,True
+2020-07-23,Los Angeles - Shadow Hills,San Fernando Valley,30,675.0,False
+2020-07-23,Los Angeles - Sherman Oaks,San Fernando Valley,625,716.0,False
+2020-07-23,Los Angeles - Silverlake,Central LA,426,966.0,False
+2020-07-23,Los Angeles - South Carthay,Central LA,76,717.0,False
+2020-07-23,Los Angeles - South Park,South LA,1331,3506.0,False
+2020-07-23,Los Angeles - St Elmo Village,Central LA,96,2094.0,False
+2020-07-23,Los Angeles - Studio City,San Fernando Valley,171,762.0,False
+2020-07-23,Los Angeles - Sun Valley,San Fernando Valley,844,1608.0,False
+2020-07-23,Los Angeles - Sunland,Verdugos,300,1470.0,False
+2020-07-23,Los Angeles - Sycamore Square,Central LA,4,618.0,False
+2020-07-23,Los Angeles - Sylmar,San Fernando Valley,1965,2385.0,True
+2020-07-23,Los Angeles - Tarzana,San Fernando Valley,459,1487.0,False
+2020-07-23,Los Angeles - Temple-Beaudry,Central LA,821,2079.0,False
+2020-07-23,Los Angeles - Thai Town,Central LA,96,979.0,False
+2020-07-23,Los Angeles - Toluca Lake,San Fernando Valley,68,781.0,False
+2020-07-23,Los Angeles - Toluca Terrace,San Fernando Valley,17,1302.0,False
+2020-07-23,Los Angeles - Toluca Woods,San Fernando Valley,11,592.0,False
+2020-07-23,Los Angeles - Tujunga,Verdugos,246,885.0,False
+2020-07-23,Los Angeles - University Hills,Eastside,42,1225.0,False
+2020-07-23,Los Angeles - University Park,South LA,519,1890.0,False
+2020-07-23,Los Angeles - Valley Glen,San Fernando Valley,329,1096.0,False
+2020-07-23,Los Angeles - Valley Village,San Fernando Valley,369,1493.0,False
+2020-07-23,Los Angeles - Van Nuys,San Fernando Valley,1684,1807.0,False
+2020-07-23,Los Angeles - Venice,Westside,173,511.0,False
+2020-07-23,Los Angeles - Vermont Knolls,South LA,494,2872.0,False
+2020-07-23,Los Angeles - Vermont Square,South LA,222,2899.0,False
+2020-07-23,Los Angeles - Vermont Vista,South LA,1211,2940.0,False
+2020-07-23,Los Angeles - Vernon Central,South LA,1970,3789.0,False
+2020-07-23,Los Angeles - Victoria Park,Central LA,125,1488.0,False
+2020-07-23,Los Angeles - View Heights,South LA,23,623.0,False
+2020-07-23,Los Angeles - Watts,South LA,1158,2714.0,False
+2020-07-23,Los Angeles - Wellington Square,Central LA,76,1546.0,False
+2020-07-23,Los Angeles - West Adams,South LA,591,2139.0,False
+2020-07-23,Los Angeles - West Hills,San Fernando Valley,328,809.0,False
+2020-07-23,Los Angeles - West Los Angeles,Westside,337,895.0,False
+2020-07-23,Los Angeles - West Vernon,South LA,1455,2712.0,False
+2020-07-23,Los Angeles - Westchester,South Bay,261,506.0,False
+2020-07-23,Los Angeles - Westlake,Central LA,1761,2967.0,False
+2020-07-23,Los Angeles - Westwood,Westside,217,401.0,False
+2020-07-23,Los Angeles - Wholesale District,Central LA,1800,4982.0,True
+2020-07-23,Los Angeles - Wilmington,Harbor,1021,1807.0,False
+2020-07-23,Los Angeles - Wilshire Center,Central LA,703,1401.0,False
+2020-07-23,Los Angeles - Winnetka,San Fernando Valley,761,1470.0,False
+2020-07-23,Los Angeles - Woodland Hills,San Fernando Valley,557,818.0,False
+2020-07-23,Unincorporated - Acton,Antelope Valley,40,502.0,False
+2020-07-23,Unincorporated - Agua Dulce,Northwest County,17,409.0,False
+2020-07-23,Unincorporated - Altadena,Verdugos,391,896.0,False
+2020-07-23,Unincorporated - Anaverde,Antelope Valley,5,332.0,False
+2020-07-23,Unincorporated - Angeles National Forest,Angeles Forest,3,241.0,False
+2020-07-23,Unincorporated - Arcadia,San Gabriel Valley,60,752.0,False
+2020-07-23,Unincorporated - Athens-Westmont,South LA,939,2212.0,False
+2020-07-23,Unincorporated - Athens Village,South LA,130,2655.0,False
+2020-07-23,Unincorporated - Avocado Heights,San Gabriel Valley,162,2391.0,False
+2020-07-23,Unincorporated - Azusa,San Gabriel Valley,311,1953.0,False
+2020-07-23,Unincorporated - Bassett,San Gabriel Valley,432,2916.0,False
+2020-07-23,Unincorporated - Bouquet Canyon,Northwest County,1,93.0,False
+2020-07-23,Unincorporated - Bradbury,San Gabriel Valley,4,3704.0,False
+2020-07-23,Unincorporated - Canyon Country,Northwest County,69,893.0,False
+2020-07-23,Unincorporated - Castaic,Northwest County,1842,6774.0,True
+2020-07-23,Unincorporated - Cerritos,Southeast,8,1363.0,False
+2020-07-23,Unincorporated - Charter Oak,San Gabriel Valley,0,0.0,False
+2020-07-23,Unincorporated - Claremont,Pomona Valley,3,427.0,False
+2020-07-23,Unincorporated - Covina,San Gabriel Valley,266,1582.0,False
+2020-07-23,Unincorporated - Del Aire,South Bay,45,1024.0,False
+2020-07-23,Unincorporated - Del Rey,Westside,1,314.0,False
+2020-07-23,Unincorporated - Del Sur,Antelope Valley,5,207.0,False
+2020-07-23,Unincorporated - Desert View Highlands,Antelope Valley,20,802.0,False
+2020-07-23,Unincorporated - Duarte,San Gabriel Valley,78,1762.0,False
+2020-07-23,Unincorporated - East Covina,San Gabriel Valley,3,912.0,False
+2020-07-23,Unincorporated - East La Mirada,Southeast,73,1379.0,False
+2020-07-23,Unincorporated - East Lancaster,Antelope Valley,0,0.0,False
+2020-07-23,Unincorporated - East Los Angeles,Eastside,3966,3166.0,False
+2020-07-23,Unincorporated - East Pasadena,San Gabriel Valley,27,422.0,False
+2020-07-23,Unincorporated - East Rancho Dominguez,Southeast,397,2593.0,False
+2020-07-23,Unincorporated - East Whittier,Southeast,51,961.0,False
+2020-07-23,Unincorporated - El Camino Village,South Bay,101,1149.0,False
+2020-07-23,Unincorporated - El Monte,San Gabriel Valley,5,3448.0,False
+2020-07-23,Unincorporated - Elizabeth Lake,Antelope Valley,5,301.0,False
+2020-07-23,Unincorporated - Florence-Firestone,South LA,2144,3313.0,False
+2020-07-23,Unincorporated - Franklin Canyon,Central LA,0,0.0,False
+2020-07-23,Unincorporated - Glendora,San Gabriel Valley,4,606.0,False
+2020-07-23,Unincorporated - Hacienda Heights,San Gabriel Valley,644,1152.0,False
+2020-07-23,Unincorporated - Harbor Gateway,Harbor,0,0.0,False
+2020-07-23,Unincorporated - Hawthorne,South Bay,34,1352.0,False
+2020-07-23,Unincorporated - Hi Vista,Antelope Valley,1,91.0,False
+2020-07-23,Unincorporated - Kagel/Lopez Canyons,Angeles Forest,15,1062.0,False
+2020-07-23,Unincorporated - La Crescenta-Montrose,Verdugos,99,500.0,False
+2020-07-23,Unincorporated - La Habra Heights,San Gabriel Valley,0,0.0,False
+2020-07-23,Unincorporated - La Rambla,Harbor,70,3373.0,False
+2020-07-23,Unincorporated - La Verne,Pomona Valley,19,931.0,True
+2020-07-23,Unincorporated - Ladera Heights,Westside,53,750.0,False
+2020-07-23,Unincorporated - Lake Hughes,Northwest County,1,150.0,False
+2020-07-23,Unincorporated - Lake Los Angeles,Antelope Valley,113,870.0,False
+2020-07-23,Unincorporated - Lake Manor,San Fernando Valley,13,791.0,False
+2020-07-23,Unincorporated - Lakewood,Harbor,0,0.0,False
+2020-07-23,Unincorporated - Lennox,South Bay,394,1748.0,False
+2020-07-23,Unincorporated - Leona Valley,Antelope Valley,15,857.0,False
+2020-07-23,Unincorporated - Littlerock,Antelope Valley,43,1069.0,False
+2020-07-23,Unincorporated - Littlerock/Juniper Hills,Antelope Valley,4,308.0,False
+2020-07-23,Unincorporated - Littlerock/Pearblossom,Antelope Valley,51,1429.0,False
+2020-07-23,Unincorporated - Llano,Antelope Valley,2,228.0,False
+2020-07-23,Unincorporated - Marina del Rey,Westside,48,510.0,False
+2020-07-23,Unincorporated - Miracle Mile,Central LA,0,0.0,False
+2020-07-23,Unincorporated - Monrovia,San Gabriel Valley,53,1366.0,False
+2020-07-23,Unincorporated - Newhall,Northwest County,4,1818.0,False
+2020-07-23,Unincorporated - North Lancaster,Antelope Valley,11,918.0,False
+2020-07-23,Unincorporated - North Whittier,San Gabriel Valley,127,1519.0,False
+2020-07-23,Unincorporated - Northeast San Gabriel,San Gabriel Valley,214,890.0,False
+2020-07-23,Unincorporated - Padua Hills,Pomona Valley,1,465.0,False
+2020-07-23,Unincorporated - Palmdale,Antelope Valley,15,1781.0,False
+2020-07-23,Unincorporated - Palos Verdes Peninsula,South Bay,2,322.0,False
+2020-07-23,Unincorporated - Pearblossom/Llano,Antelope Valley,14,716.0,False
+2020-07-23,Unincorporated - Pellissier Village,San Gabriel Valley,15,2423.0,False
+2020-07-23,Unincorporated - Placerita Canyon,Angeles Forest,0,0.0,False
+2020-07-23,Unincorporated - Pomona,San Gabriel Valley,9,464.0,False
+2020-07-23,Unincorporated - Quartz Hill,Antelope Valley,109,845.0,False
+2020-07-23,Unincorporated - Rancho Dominguez,Harbor,53,1992.0,False
+2020-07-23,Unincorporated - Roosevelt,Antelope Valley,4,430.0,False
+2020-07-23,Unincorporated - Rosewood,Southeast,16,1244.0,False
+2020-07-23,Unincorporated - Rosewood/East Gardena,Southeast,14,1174.0,False
+2020-07-23,Unincorporated - Rosewood/West Rancho Dominguez,Southeast,55,1636.0,False
+2020-07-23,Unincorporated - Rowland Heights,San Gabriel Valley,417,817.0,False
+2020-07-23,Unincorporated - San Clemente Island,Harbor,0,0.0,False
+2020-07-23,Unincorporated - San Francisquito Canyon/Bouquet Canyon,Northwest County,0,0.0,False
+2020-07-23,Unincorporated - San Jose Hills,San Gabriel Valley,420,2077.0,False
+2020-07-23,Unincorporated - San Pasqual,San Gabriel Valley,7,344.0,False
+2020-07-23,Unincorporated - Sand Canyon,Angeles Forest,3,974.0,False
+2020-07-23,Unincorporated - Santa Catalina Island,Harbor,6,2247.0,False
+2020-07-23,Unincorporated - Santa Monica Mountains,Santa Monica Mountains,73,392.0,True
+2020-07-23,Unincorporated - Saugus,Northwest County,12,7742.0,False
+2020-07-23,Unincorporated - Saugus/Canyon Country,Northwest County,1,281.0,False
+2020-07-23,Unincorporated - South Antelope Valley,Antelope Valley,1,220.0,False
+2020-07-23,Unincorporated - South El Monte,San Gabriel Valley,45,2507.0,False
+2020-07-23,Unincorporated - South San Gabriel,San Gabriel Valley,120,1356.0,False
+2020-07-23,Unincorporated - South Whittier,Southeast,1043,1761.0,False
+2020-07-23,Unincorporated - Southeast Antelope Valley,Antelope Valley,8,1024.0,False
+2020-07-23,Unincorporated - Stevenson Ranch,Northwest County,99,472.0,False
+2020-07-23,Unincorporated - Sun Village,Antelope Valley,83,1375.0,False
+2020-07-23,Unincorporated - Sunrise Village,San Gabriel Valley,27,2083.0,False
+2020-07-23,Unincorporated - Twin Lakes/Oat Mountain,Northwest County,9,543.0,False
+2020-07-23,Unincorporated - Val Verde,Northwest County,39,1179.0,False
+2020-07-23,Unincorporated - Valencia,Northwest County,31,1009.0,False
+2020-07-23,Unincorporated - Valinda,San Gabriel Valley,487,2084.0,False
+2020-07-23,Unincorporated - View Park/Windsor Hills,South LA,96,825.0,False
+2020-07-23,Unincorporated - Walnut Park,Southeast,475,2942.0,False
+2020-07-23,Unincorporated - West Antelope Valley,Antelope Valley,3,199.0,False
+2020-07-23,Unincorporated - West Carson,Harbor,244,1105.0,False
+2020-07-23,Unincorporated - West Chatsworth,San Fernando Valley,0,0.0,False
+2020-07-23,Unincorporated - West Puente Valley,San Gabriel Valley,251,2552.0,False
+2020-07-23,Unincorporated - West Rancho Dominguez,Harbor,18,1325.0,False
+2020-07-23,Unincorporated - West Whittier/Los Nietos,Southeast,602,2236.0,False
+2020-07-23,Unincorporated - Westfield/Academy Hills,South Bay,4,308.0,False
+2020-07-23,Unincorporated - Westhills,San Fernando Valley,7,834.0,False
+2020-07-23,Unincorporated - White Fence Farms,Antelope Valley,31,842.0,False
+2020-07-23,Unincorporated - Whittier,San Gabriel Valley,49,1295.0,False
+2020-07-23,Unincorporated - Whittier Narrows,San Gabriel Valley,0,0.0,False
+2020-07-23,Unincorporated - Willowbrook,South LA,937,2684.0,False
+2020-07-23,Unincorporated - Wiseburn,South Bay,87,1444.0,False
+2020-07-23,City of Long Beach,Harbor,7063,1506.35,
+2020-07-23,City of Pasadena,Verdugos,1802,1275.79,
+2020-07-24,City of Agoura Hills,Santa Monica Mountains,98,469.0,False
+2020-07-24,City of Alhambra,San Gabriel Valley,776,895.0,False
+2020-07-24,City of Arcadia,San Gabriel Valley,284,492.0,False
+2020-07-24,City of Artesia,Southeast,209,1244.0,False
+2020-07-24,City of Avalon,Harbor,5,129.0,False
+2020-07-24,City of Azusa,San Gabriel Valley,890,1779.0,False
+2020-07-24,City of Baldwin Park,San Gabriel Valley,1755,2286.0,False
+2020-07-24,City of Bell,Southeast,994,2736.0,False
+2020-07-24,City of Bell Gardens,Southeast,1211,2812.0,False
+2020-07-24,City of Bellflower,Southeast,1527,1964.0,False
+2020-07-24,City of Beverly Hills,Westside,522,1512.0,False
+2020-07-24,City of Bradbury,San Gabriel Valley,7,655.0,False
+2020-07-24,City of Burbank,San Fernando Valley,882,823.0,False
+2020-07-24,City of Calabasas,Santa Monica Mountains,187,769.0,False
+2020-07-24,City of Carson,Harbor,1112,1185.0,False
+2020-07-24,City of Cerritos,Southeast,374,747.0,False
+2020-07-24,City of Claremont,Pomona Valley,215,589.0,False
+2020-07-24,City of Commerce,Southeast,364,2785.0,True
+2020-07-24,City of Compton,Southeast,2482,2484.0,False
+2020-07-24,City of Covina,San Gabriel Valley,846,1725.0,False
+2020-07-24,City of Cudahy,Southeast,740,3039.0,False
+2020-07-24,City of Culver City,Westside,303,760.0,False
+2020-07-24,City of Diamond Bar,San Gabriel Valley,341,593.0,False
+2020-07-24,City of Downey,Southeast,2778,2431.0,False
+2020-07-24,City of Duarte,San Gabriel Valley,329,1494.0,False
+2020-07-24,City of El Monte,San Gabriel Valley,2730,2328.0,False
+2020-07-24,City of El Segundo,South Bay,94,560.0,False
+2020-07-24,City of Gardena,South Bay,760,1240.0,False
+2020-07-24,City of Glendale,Verdugos,2105,1019.0,False
+2020-07-24,City of Glendora,San Gabriel Valley,828,1569.0,False
+2020-07-24,City of Hawaiian Gardens,Harbor,326,2221.0,False
+2020-07-24,City of Hawthorne,South Bay,1209,1362.0,False
+2020-07-24,City of Hermosa Beach,South Bay,141,717.0,False
+2020-07-24,City of Hidden Hills,Santa Monica Mountains,5,265.0,False
+2020-07-24,City of Huntington Park,Southeast,1838,3090.0,False
+2020-07-24,City of Industry,San Gabriel Valley,20,4577.0,False
+2020-07-24,City of Inglewood,South Bay,1739,1531.0,False
+2020-07-24,City of Irwindale,San Gabriel Valley,45,3084.0,False
+2020-07-24,City of La Canada Flintridge,Verdugos,111,536.0,False
+2020-07-24,City of La Habra Heights,San Gabriel Valley,25,458.0,False
+2020-07-24,City of La Mirada,Southeast,566,1141.0,False
+2020-07-24,City of La Puente,San Gabriel Valley,929,2283.0,False
+2020-07-24,City of La Verne,Pomona Valley,262,787.0,False
+2020-07-24,City of Lakewood,Harbor,818,1018.0,False
+2020-07-24,City of Lancaster,Antelope Valley,1827,1131.0,True
+2020-07-24,City of Lawndale,South Bay,413,1229.0,False
+2020-07-24,City of Lomita,South Bay,158,762.0,False
+2020-07-24,City of Lynwood,Southeast,2158,2995.0,True
+2020-07-24,City of Malibu,Santa Monica Mountains,73,563.0,False
+2020-07-24,City of Manhattan Beach,South Bay,246,683.0,False
+2020-07-24,City of Maywood,Southeast,898,3202.0,False
+2020-07-24,City of Monrovia,San Gabriel Valley,474,1222.0,False
+2020-07-24,City of Montebello,Southeast,1477,2294.0,False
+2020-07-24,City of Monterey Park,San Gabriel Valley,545,875.0,False
+2020-07-24,City of Norwalk,Southeast,2094,1946.0,False
+2020-07-24,City of Palmdale,Antelope Valley,2151,1353.0,False
+2020-07-24,City of Palos Verdes Estates,South Bay,67,495.0,False
+2020-07-24,City of Paramount,Southeast,1546,2760.0,False
+2020-07-24,City of Pico Rivera,Southeast,1606,2498.0,False
+2020-07-24,City of Pomona,Pomona Valley,2993,1919.0,False
+2020-07-24,City of Rancho Palos Verdes,South Bay,208,487.0,False
+2020-07-24,City of Redondo Beach,South Bay,366,533.0,False
+2020-07-24,City of Rolling Hills,South Bay,5,258.0,False
+2020-07-24,City of Rolling Hills Estates,South Bay,30,370.0,False
+2020-07-24,City of Rosemead,San Gabriel Valley,488,882.0,False
+2020-07-24,City of San Dimas,San Gabriel Valley,325,942.0,True
+2020-07-24,City of San Fernando,San Fernando Valley,518,2105.0,False
+2020-07-24,City of San Gabriel,San Gabriel Valley,363,886.0,False
+2020-07-24,City of San Marino,San Gabriel Valley,44,331.0,False
+2020-07-24,City of Santa Clarita,Northwest County,1928,875.0,False
+2020-07-24,City of Santa Fe Springs,Southeast,330,1797.0,False
+2020-07-24,City of Santa Monica,Westside,578,625.0,False
+2020-07-24,City of Sierra Madre,San Gabriel Valley,47,428.0,False
+2020-07-24,City of Signal Hill,Harbor,160,1356.0,False
+2020-07-24,City of South El Monte,San Gabriel Valley,486,2327.0,False
+2020-07-24,City of South Gate,Southeast,2961,3017.0,False
+2020-07-24,City of South Pasadena,San Gabriel Valley,206,791.0,False
+2020-07-24,City of Temple City,San Gabriel Valley,370,1015.0,False
+2020-07-24,City of Torrance,South Bay,928,622.0,False
+2020-07-24,City of Vernon,Southeast,8,3828.0,False
+2020-07-24,City of Walnut,San Gabriel Valley,181,593.0,False
+2020-07-24,City of West Covina,San Gabriel Valley,1878,1735.0,False
+2020-07-24,City of West Hollywood,Central LA,403,1091.0,False
+2020-07-24,City of Westlake Village,Santa Monica Mountains,21,251.0,False
+2020-07-24,City of Whittier,San Gabriel Valley,1410,1613.0,False
+2020-07-24,Los Angeles,,68624,1697.0,False
+2020-07-24,Los Angeles - Adams-Normandie,South LA,150,1829.0,False
+2020-07-24,Los Angeles - Alsace,South LA,245,1969.0,False
+2020-07-24,Los Angeles - Angeles National Forest,Angeles Forest,2,5000.0,False
+2020-07-24,Los Angeles - Angelino Heights,Central LA,42,1679.0,False
+2020-07-24,Los Angeles - Arleta,San Fernando Valley,821,2389.0,False
+2020-07-24,Los Angeles - Atwater Village,Northeast LA,143,975.0,False
+2020-07-24,Los Angeles - Baldwin Hills,South LA,397,1276.0,False
+2020-07-24,Los Angeles - Bel Air,Westside,57,676.0,False
+2020-07-24,Los Angeles - Beverly Crest,Westside,74,591.0,False
+2020-07-24,Los Angeles - Beverlywood,Westside,102,774.0,False
+2020-07-24,Los Angeles - Boyle Heights,Eastside,2839,3268.0,True
+2020-07-24,Los Angeles - Brentwood,Westside,196,633.0,False
+2020-07-24,Los Angeles - Brookside,Central LA,1,172.0,False
+2020-07-24,Los Angeles - Cadillac-Corning,Central LA,87,1222.0,False
+2020-07-24,Los Angeles - Canoga Park,San Fernando Valley,1145,1754.0,False
+2020-07-24,Los Angeles - Carthay,Central LA,165,1149.0,False
+2020-07-24,Los Angeles - Central,South LA,1467,3762.0,False
+2020-07-24,Los Angeles - Century City,Westside,90,704.0,False
+2020-07-24,Los Angeles - Century Palms/Cove,South LA,999,2959.0,False
+2020-07-24,Los Angeles - Chatsworth,San Fernando Valley,429,1158.0,False
+2020-07-24,Los Angeles - Cheviot Hills,Westside,46,502.0,False
+2020-07-24,Los Angeles - Chinatown,Central LA,70,873.0,False
+2020-07-24,Los Angeles - Cloverdale/Cochran,Central LA,205,1409.0,False
+2020-07-24,Los Angeles - Country Club Park,Central LA,207,1366.0,False
+2020-07-24,Los Angeles - Crenshaw District,South LA,190,1374.0,False
+2020-07-24,Los Angeles - Crestview,Central LA,140,1232.0,False
+2020-07-24,Los Angeles - Del Rey,Westside,229,765.0,False
+2020-07-24,Los Angeles - Downtown,Central LA,506,1840.0,True
+2020-07-24,Los Angeles - Eagle Rock,Northeast LA,437,1104.0,False
+2020-07-24,Los Angeles - East Hollywood,Central LA,442,1509.0,False
+2020-07-24,Los Angeles - Echo Park,Central LA,141,989.0,False
+2020-07-24,Los Angeles - El Sereno,Eastside,737,1763.0,False
+2020-07-24,Los Angeles - Elysian Park,Central LA,63,1103.0,False
+2020-07-24,Los Angeles - Elysian Valley,Northeast LA,159,1563.0,False
+2020-07-24,Los Angeles - Encino,San Fernando Valley,355,786.0,False
+2020-07-24,Los Angeles - Exposition,South LA,52,1563.0,False
+2020-07-24,Los Angeles - Exposition Park,South LA,841,1872.0,False
+2020-07-24,Los Angeles - Faircrest Heights,Central LA,25,694.0,False
+2020-07-24,Los Angeles - Figueroa Park Square,South LA,197,2259.0,False
+2020-07-24,Los Angeles - Florence-Firestone,South LA,1512,3187.0,False
+2020-07-24,Los Angeles - Glassell Park,Northeast LA,435,1376.0,False
+2020-07-24,Los Angeles - Gramercy Place,South LA,157,1459.0,False
+2020-07-24,Los Angeles - Granada Hills,San Fernando Valley,755,1297.0,False
+2020-07-24,Los Angeles - Green Meadows,South LA,587,2730.0,False
+2020-07-24,Los Angeles - Hancock Park,Central LA,162,951.0,False
+2020-07-24,Los Angeles - Harbor City,Harbor,336,1156.0,False
+2020-07-24,Los Angeles - Harbor Gateway,Harbor,569,1305.0,False
+2020-07-24,Los Angeles - Harbor Pines,Harbor,12,498.0,False
+2020-07-24,Los Angeles - Harvard Heights,Central LA,376,2085.0,False
+2020-07-24,Los Angeles - Harvard Park,South LA,1007,2655.0,False
+2020-07-24,Los Angeles - Highland Park,Northeast LA,709,1465.0,False
+2020-07-24,Los Angeles - Historic Filipinotown,Central LA,288,2076.0,False
+2020-07-24,Los Angeles - Hollywood,Central LA,773,1133.0,False
+2020-07-24,Los Angeles - Hollywood Hills,Central LA,200,679.0,False
+2020-07-24,Los Angeles - Hyde Park,South LA,517,1811.0,False
+2020-07-24,Los Angeles - Jefferson Park,South LA,173,2143.0,False
+2020-07-24,Los Angeles - Koreatown,Central LA,739,1430.0,False
+2020-07-24,Los Angeles - Lafayette Square,Central LA,53,1163.0,False
+2020-07-24,Los Angeles - Lake Balboa,San Fernando Valley,560,1327.0,False
+2020-07-24,Los Angeles - Lakeview Terrace,San Fernando Valley,382,2909.0,False
+2020-07-24,Los Angeles - Leimert Park,South LA,205,1346.0,False
+2020-07-24,Los Angeles - Lincoln Heights,Eastside,744,2282.0,False
+2020-07-24,Los Angeles - Little Armenia,Central LA,293,3651.0,False
+2020-07-24,Los Angeles - Little Bangladesh,Central LA,338,1193.0,False
+2020-07-24,Los Angeles - Little Tokyo,Central LA,46,1468.0,False
+2020-07-24,Los Angeles - Longwood,Central LA,76,1766.0,False
+2020-07-24,Los Angeles - Los Feliz,Central LA,127,588.0,False
+2020-07-24,Los Angeles - Manchester Square,South LA,99,1160.0,False
+2020-07-24,Los Angeles - Mandeville Canyon,Westside,12,384.0,False
+2020-07-24,Los Angeles - Mar Vista,Westside,217,511.0,False
+2020-07-24,Los Angeles - Marina Peninsula,Westside,24,550.0,False
+2020-07-24,Los Angeles - Melrose,Central LA,1269,1633.0,False
+2020-07-24,Los Angeles - Mid-city,Central LA,214,1424.0,False
+2020-07-24,Los Angeles - Miracle Mile,Central LA,111,617.0,False
+2020-07-24,Los Angeles - Mission Hills,San Fernando Valley,441,1828.0,False
+2020-07-24,Los Angeles - Mt. Washington,Northeast LA,321,1329.0,False
+2020-07-24,Los Angeles - North Hills,San Fernando Valley,1102,1790.0,False
+2020-07-24,Los Angeles - North Hollywood,San Fernando Valley,2029,1340.0,False
+2020-07-24,Los Angeles - Northridge,San Fernando Valley,881,1262.0,False
+2020-07-24,Los Angeles - Pacific Palisades,Westside,93,437.0,False
+2020-07-24,Los Angeles - Pacoima,San Fernando Valley,1975,2566.0,False
+2020-07-24,Los Angeles - Palisades Highlands,Westside,18,468.0,False
+2020-07-24,Los Angeles - Palms,Westside,390,889.0,False
+2020-07-24,Los Angeles - Panorama City,San Fernando Valley,1704,2264.0,False
+2020-07-24,Los Angeles - Park La Brea,Central LA,65,479.0,False
+2020-07-24,Los Angeles - Pico-Union,Central LA,1309,3128.0,False
+2020-07-24,Los Angeles - Playa Del Rey,South Bay,16,501.0,False
+2020-07-24,Los Angeles - Playa Vista,Westside,91,831.0,False
+2020-07-24,Los Angeles - Porter Ranch,San Fernando Valley,214,601.0,False
+2020-07-24,Los Angeles - Rancho Park,Westside,57,869.0,False
+2020-07-24,Los Angeles - Regent Square,Central LA,21,755.0,False
+2020-07-24,Los Angeles - Reseda,San Fernando Valley,1406,1835.0,False
+2020-07-24,Los Angeles - Reseda Ranch,San Fernando Valley,59,1273.0,False
+2020-07-24,Los Angeles - Reynier Village,Central LA,27,639.0,False
+2020-07-24,Los Angeles - San Pedro,Harbor,1467,1880.0,True
+2020-07-24,Los Angeles - Shadow Hills,San Fernando Valley,30,675.0,False
+2020-07-24,Los Angeles - Sherman Oaks,San Fernando Valley,628,720.0,False
+2020-07-24,Los Angeles - Silverlake,Central LA,429,973.0,False
+2020-07-24,Los Angeles - South Carthay,Central LA,77,727.0,False
+2020-07-24,Los Angeles - South Park,South LA,1340,3530.0,False
+2020-07-24,Los Angeles - St Elmo Village,Central LA,96,2094.0,False
+2020-07-24,Los Angeles - Studio City,San Fernando Valley,175,780.0,False
+2020-07-24,Los Angeles - Sun Valley,San Fernando Valley,852,1623.0,False
+2020-07-24,Los Angeles - Sunland,Verdugos,307,1504.0,False
+2020-07-24,Los Angeles - Sycamore Square,Central LA,4,618.0,False
+2020-07-24,Los Angeles - Sylmar,San Fernando Valley,1981,2404.0,True
+2020-07-24,Los Angeles - Tarzana,San Fernando Valley,463,1500.0,False
+2020-07-24,Los Angeles - Temple-Beaudry,Central LA,835,2115.0,False
+2020-07-24,Los Angeles - Thai Town,Central LA,98,999.0,False
+2020-07-24,Los Angeles - Toluca Lake,San Fernando Valley,70,804.0,False
+2020-07-24,Los Angeles - Toluca Terrace,San Fernando Valley,17,1302.0,False
+2020-07-24,Los Angeles - Toluca Woods,San Fernando Valley,11,592.0,False
+2020-07-24,Los Angeles - Tujunga,Verdugos,248,892.0,False
+2020-07-24,Los Angeles - University Hills,Eastside,42,1225.0,False
+2020-07-24,Los Angeles - University Park,South LA,521,1898.0,False
+2020-07-24,Los Angeles - Valley Glen,San Fernando Valley,335,1116.0,False
+2020-07-24,Los Angeles - Valley Village,San Fernando Valley,375,1517.0,False
+2020-07-24,Los Angeles - Van Nuys,San Fernando Valley,1693,1817.0,False
+2020-07-24,Los Angeles - Venice,Westside,176,519.0,False
+2020-07-24,Los Angeles - Vermont Knolls,South LA,499,2901.0,False
+2020-07-24,Los Angeles - Vermont Square,South LA,228,2978.0,False
+2020-07-24,Los Angeles - Vermont Vista,South LA,1223,2969.0,False
+2020-07-24,Los Angeles - Vernon Central,South LA,1992,3831.0,False
+2020-07-24,Los Angeles - Victoria Park,Central LA,126,1500.0,False
+2020-07-24,Los Angeles - View Heights,South LA,23,623.0,False
+2020-07-24,Los Angeles - Watts,South LA,1164,2728.0,False
+2020-07-24,Los Angeles - Wellington Square,Central LA,79,1607.0,False
+2020-07-24,Los Angeles - West Adams,South LA,599,2168.0,False
+2020-07-24,Los Angeles - West Hills,San Fernando Valley,333,821.0,False
+2020-07-24,Los Angeles - West Los Angeles,Westside,340,903.0,False
+2020-07-24,Los Angeles - West Vernon,South LA,1480,2759.0,False
+2020-07-24,Los Angeles - Westchester,South Bay,264,512.0,False
+2020-07-24,Los Angeles - Westlake,Central LA,1780,2999.0,False
+2020-07-24,Los Angeles - Westwood,Westside,219,405.0,False
+2020-07-24,Los Angeles - Wholesale District,Central LA,1806,4999.0,True
+2020-07-24,Los Angeles - Wilmington,Harbor,1032,1827.0,False
+2020-07-24,Los Angeles - Wilshire Center,Central LA,711,1417.0,False
+2020-07-24,Los Angeles - Winnetka,San Fernando Valley,765,1477.0,False
+2020-07-24,Los Angeles - Woodland Hills,San Fernando Valley,563,827.0,False
+2020-07-24,Unincorporated - Acton,Antelope Valley,40,502.0,False
+2020-07-24,Unincorporated - Agua Dulce,Northwest County,17,409.0,False
+2020-07-24,Unincorporated - Altadena,Verdugos,397,910.0,False
+2020-07-24,Unincorporated - Anaverde,Antelope Valley,5,332.0,False
+2020-07-24,Unincorporated - Angeles National Forest,Angeles Forest,3,241.0,False
+2020-07-24,Unincorporated - Arcadia,San Gabriel Valley,63,789.0,False
+2020-07-24,Unincorporated - Athens-Westmont,South LA,954,2248.0,False
+2020-07-24,Unincorporated - Athens Village,South LA,130,2655.0,False
+2020-07-24,Unincorporated - Avocado Heights,San Gabriel Valley,164,2421.0,False
+2020-07-24,Unincorporated - Azusa,San Gabriel Valley,315,1978.0,False
+2020-07-24,Unincorporated - Bassett,San Gabriel Valley,435,2936.0,False
+2020-07-24,Unincorporated - Bouquet Canyon,Northwest County,1,93.0,False
+2020-07-24,Unincorporated - Bradbury,San Gabriel Valley,4,3704.0,False
+2020-07-24,Unincorporated - Canyon Country,Northwest County,71,919.0,False
+2020-07-24,Unincorporated - Castaic,Northwest County,1846,6789.0,True
+2020-07-24,Unincorporated - Cerritos,Southeast,8,1363.0,False
+2020-07-24,Unincorporated - Charter Oak,San Gabriel Valley,0,0.0,False
+2020-07-24,Unincorporated - Claremont,Pomona Valley,3,427.0,False
+2020-07-24,Unincorporated - Covina,San Gabriel Valley,269,1599.0,False
+2020-07-24,Unincorporated - Del Aire,South Bay,45,1024.0,False
+2020-07-24,Unincorporated - Del Rey,Westside,1,314.0,False
+2020-07-24,Unincorporated - Del Sur,Antelope Valley,6,248.0,False
+2020-07-24,Unincorporated - Desert View Highlands,Antelope Valley,21,842.0,False
+2020-07-24,Unincorporated - Duarte,San Gabriel Valley,78,1762.0,False
+2020-07-24,Unincorporated - East Covina,San Gabriel Valley,3,912.0,False
+2020-07-24,Unincorporated - East La Mirada,Southeast,73,1379.0,False
+2020-07-24,Unincorporated - East Lancaster,Antelope Valley,0,0.0,False
+2020-07-24,Unincorporated - East Los Angeles,Eastside,4018,3207.0,False
+2020-07-24,Unincorporated - East Pasadena,San Gabriel Valley,27,422.0,False
+2020-07-24,Unincorporated - East Rancho Dominguez,Southeast,412,2691.0,False
+2020-07-24,Unincorporated - East Whittier,Southeast,51,961.0,False
+2020-07-24,Unincorporated - El Camino Village,South Bay,99,1126.0,False
+2020-07-24,Unincorporated - El Monte,San Gabriel Valley,5,3448.0,False
+2020-07-24,Unincorporated - Elizabeth Lake,Antelope Valley,5,301.0,False
+2020-07-24,Unincorporated - Florence-Firestone,South LA,2168,3351.0,False
+2020-07-24,Unincorporated - Franklin Canyon,Central LA,0,0.0,False
+2020-07-24,Unincorporated - Glendora,San Gabriel Valley,4,606.0,False
+2020-07-24,Unincorporated - Hacienda Heights,San Gabriel Valley,655,1171.0,False
+2020-07-24,Unincorporated - Harbor Gateway,Harbor,0,0.0,False
+2020-07-24,Unincorporated - Hawthorne,South Bay,34,1352.0,False
+2020-07-24,Unincorporated - Hi Vista,Antelope Valley,1,91.0,False
+2020-07-24,Unincorporated - Kagel/Lopez Canyons,Angeles Forest,15,1062.0,False
+2020-07-24,Unincorporated - La Crescenta-Montrose,Verdugos,99,500.0,False
+2020-07-24,Unincorporated - La Habra Heights,San Gabriel Valley,0,0.0,False
+2020-07-24,Unincorporated - La Rambla,Harbor,69,3325.0,False
+2020-07-24,Unincorporated - La Verne,Pomona Valley,19,931.0,True
+2020-07-24,Unincorporated - Ladera Heights,Westside,53,750.0,False
+2020-07-24,Unincorporated - Lake Hughes,Northwest County,1,150.0,False
+2020-07-24,Unincorporated - Lake Los Angeles,Antelope Valley,113,870.0,False
+2020-07-24,Unincorporated - Lake Manor,San Fernando Valley,13,791.0,False
+2020-07-24,Unincorporated - Lakewood,Harbor,0,0.0,False
+2020-07-24,Unincorporated - Lennox,South Bay,402,1783.0,False
+2020-07-24,Unincorporated - Leona Valley,Antelope Valley,15,857.0,False
+2020-07-24,Unincorporated - Littlerock,Antelope Valley,43,1069.0,False
+2020-07-24,Unincorporated - Littlerock/Juniper Hills,Antelope Valley,4,308.0,False
+2020-07-24,Unincorporated - Littlerock/Pearblossom,Antelope Valley,52,1457.0,False
+2020-07-24,Unincorporated - Llano,Antelope Valley,2,228.0,False
+2020-07-24,Unincorporated - Marina del Rey,Westside,48,510.0,False
+2020-07-24,Unincorporated - Miracle Mile,Central LA,0,0.0,False
+2020-07-24,Unincorporated - Monrovia,San Gabriel Valley,56,1443.0,False
+2020-07-24,Unincorporated - Newhall,Northwest County,4,1818.0,False
+2020-07-24,Unincorporated - North Lancaster,Antelope Valley,13,1085.0,False
+2020-07-24,Unincorporated - North Whittier,San Gabriel Valley,129,1543.0,False
+2020-07-24,Unincorporated - Northeast San Gabriel,San Gabriel Valley,214,890.0,False
+2020-07-24,Unincorporated - Padua Hills,Pomona Valley,1,465.0,False
+2020-07-24,Unincorporated - Palmdale,Antelope Valley,15,1781.0,False
+2020-07-24,Unincorporated - Palos Verdes Peninsula,South Bay,2,322.0,False
+2020-07-24,Unincorporated - Pearblossom/Llano,Antelope Valley,14,716.0,False
+2020-07-24,Unincorporated - Pellissier Village,San Gabriel Valley,15,2423.0,False
+2020-07-24,Unincorporated - Placerita Canyon,Angeles Forest,0,0.0,False
+2020-07-24,Unincorporated - Pomona,San Gabriel Valley,9,464.0,False
+2020-07-24,Unincorporated - Quartz Hill,Antelope Valley,110,852.0,False
+2020-07-24,Unincorporated - Rancho Dominguez,Harbor,53,1992.0,False
+2020-07-24,Unincorporated - Roosevelt,Antelope Valley,4,430.0,False
+2020-07-24,Unincorporated - Rosewood,Southeast,16,1244.0,False
+2020-07-24,Unincorporated - Rosewood/East Gardena,Southeast,14,1174.0,False
+2020-07-24,Unincorporated - Rosewood/West Rancho Dominguez,Southeast,59,1755.0,False
+2020-07-24,Unincorporated - Rowland Heights,San Gabriel Valley,420,823.0,False
+2020-07-24,Unincorporated - San Clemente Island,Harbor,0,0.0,False
+2020-07-24,Unincorporated - San Francisquito Canyon/Bouquet Canyon,Northwest County,0,0.0,False
+2020-07-24,Unincorporated - San Jose Hills,San Gabriel Valley,427,2112.0,False
+2020-07-24,Unincorporated - San Pasqual,San Gabriel Valley,7,344.0,False
+2020-07-24,Unincorporated - Sand Canyon,Angeles Forest,3,974.0,False
+2020-07-24,Unincorporated - Santa Catalina Island,Harbor,6,2247.0,False
+2020-07-24,Unincorporated - Santa Monica Mountains,Santa Monica Mountains,74,397.0,True
+2020-07-24,Unincorporated - Saugus,Northwest County,12,7742.0,False
+2020-07-24,Unincorporated - Saugus/Canyon Country,Northwest County,1,281.0,False
+2020-07-24,Unincorporated - South Antelope Valley,Antelope Valley,1,220.0,False
+2020-07-24,Unincorporated - South El Monte,San Gabriel Valley,45,2507.0,False
+2020-07-24,Unincorporated - South San Gabriel,San Gabriel Valley,122,1379.0,False
+2020-07-24,Unincorporated - South Whittier,Southeast,1056,1783.0,False
+2020-07-24,Unincorporated - Southeast Antelope Valley,Antelope Valley,8,1024.0,False
+2020-07-24,Unincorporated - Stevenson Ranch,Northwest County,100,477.0,False
+2020-07-24,Unincorporated - Sun Village,Antelope Valley,84,1392.0,False
+2020-07-24,Unincorporated - Sunrise Village,San Gabriel Valley,27,2083.0,False
+2020-07-24,Unincorporated - Twin Lakes/Oat Mountain,Northwest County,9,543.0,False
+2020-07-24,Unincorporated - Val Verde,Northwest County,39,1179.0,False
+2020-07-24,Unincorporated - Valencia,Northwest County,31,1009.0,False
+2020-07-24,Unincorporated - Valinda,San Gabriel Valley,492,2105.0,False
+2020-07-24,Unincorporated - View Park/Windsor Hills,South LA,98,842.0,False
+2020-07-24,Unincorporated - Walnut Park,Southeast,479,2967.0,False
+2020-07-24,Unincorporated - West Antelope Valley,Antelope Valley,3,199.0,False
+2020-07-24,Unincorporated - West Carson,Harbor,248,1123.0,False
+2020-07-24,Unincorporated - West Chatsworth,San Fernando Valley,0,0.0,False
+2020-07-24,Unincorporated - West Puente Valley,San Gabriel Valley,253,2572.0,False
+2020-07-24,Unincorporated - West Rancho Dominguez,Harbor,18,1325.0,False
+2020-07-24,Unincorporated - West Whittier/Los Nietos,Southeast,612,2273.0,False
+2020-07-24,Unincorporated - Westfield/Academy Hills,South Bay,4,308.0,False
+2020-07-24,Unincorporated - Westhills,San Fernando Valley,7,834.0,False
+2020-07-24,Unincorporated - White Fence Farms,Antelope Valley,33,896.0,False
+2020-07-24,Unincorporated - Whittier,San Gabriel Valley,50,1321.0,False
+2020-07-24,Unincorporated - Whittier Narrows,San Gabriel Valley,0,0.0,False
+2020-07-24,Unincorporated - Willowbrook,South LA,948,2715.0,False
+2020-07-24,Unincorporated - Wiseburn,South Bay,87,1444.0,False
+2020-07-24,City of Long Beach,Harbor,7225,1540.9,
+2020-07-24,City of Pasadena,Verdugos,1822,1289.95,
+2020-07-25,City of Agoura Hills,Santa Monica Mountains,99,474.0,False
+2020-07-25,City of Alhambra,San Gabriel Valley,801,924.0,False
+2020-07-25,City of Arcadia,San Gabriel Valley,291,504.0,False
+2020-07-25,City of Artesia,Southeast,214,1274.0,False
+2020-07-25,City of Avalon,Harbor,5,129.0,False
+2020-07-25,City of Azusa,San Gabriel Valley,920,1839.0,False
+2020-07-25,City of Baldwin Park,San Gabriel Valley,1787,2328.0,False
+2020-07-25,City of Bell,Southeast,1016,2796.0,False
+2020-07-25,City of Bell Gardens,Southeast,1242,2884.0,False
+2020-07-25,City of Bellflower,Southeast,1566,2015.0,False
+2020-07-25,City of Beverly Hills,Westside,527,1527.0,False
+2020-07-25,City of Bradbury,San Gabriel Valley,8,748.0,False
+2020-07-25,City of Burbank,San Fernando Valley,905,844.0,False
+2020-07-25,City of Calabasas,Santa Monica Mountains,190,781.0,False
+2020-07-25,City of Carson,Harbor,1145,1220.0,False
+2020-07-25,City of Cerritos,Southeast,384,767.0,False
+2020-07-25,City of Claremont,Pomona Valley,219,600.0,False
+2020-07-25,City of Commerce,Southeast,372,2846.0,True
+2020-07-25,City of Compton,Southeast,2558,2560.0,False
+2020-07-25,City of Covina,San Gabriel Valley,858,1750.0,False
+2020-07-25,City of Cudahy,Southeast,751,3085.0,False
+2020-07-25,City of Culver City,Westside,306,768.0,False
+2020-07-25,City of Diamond Bar,San Gabriel Valley,349,607.0,False
+2020-07-25,City of Downey,Southeast,2807,2457.0,False
+2020-07-25,City of Duarte,San Gabriel Valley,335,1522.0,False
+2020-07-25,City of El Monte,San Gabriel Valley,2796,2384.0,False
+2020-07-25,City of El Segundo,South Bay,94,560.0,False
+2020-07-25,City of Gardena,South Bay,773,1261.0,False
+2020-07-25,City of Glendale,Verdugos,2148,1040.0,False
+2020-07-25,City of Glendora,San Gabriel Valley,842,1596.0,False
+2020-07-25,City of Hawaiian Gardens,Harbor,332,2262.0,False
+2020-07-25,City of Hawthorne,South Bay,1240,1397.0,False
+2020-07-25,City of Hermosa Beach,South Bay,143,727.0,False
+2020-07-25,City of Hidden Hills,Santa Monica Mountains,5,265.0,False
+2020-07-25,City of Huntington Park,Southeast,1881,3162.0,False
+2020-07-25,City of Industry,San Gabriel Valley,20,4577.0,False
+2020-07-25,City of Inglewood,South Bay,1780,1567.0,False
+2020-07-25,City of Irwindale,San Gabriel Valley,47,3221.0,False
+2020-07-25,City of La Canada Flintridge,Verdugos,113,546.0,False
+2020-07-25,City of La Habra Heights,San Gabriel Valley,25,458.0,False
+2020-07-25,City of La Mirada,Southeast,571,1151.0,False
+2020-07-25,City of La Puente,San Gabriel Valley,956,2349.0,False
+2020-07-25,City of La Verne,Pomona Valley,272,817.0,False
+2020-07-25,City of Lakewood,Harbor,830,1033.0,False
+2020-07-25,City of Lancaster,Antelope Valley,1862,1152.0,True
+2020-07-25,City of Lawndale,South Bay,424,1261.0,False
+2020-07-25,City of Lomita,South Bay,161,777.0,False
+2020-07-25,City of Lynwood,Southeast,2197,3049.0,True
+2020-07-25,City of Malibu,Santa Monica Mountains,73,563.0,False
+2020-07-25,City of Manhattan Beach,South Bay,249,692.0,False
+2020-07-25,City of Maywood,Southeast,913,3255.0,False
+2020-07-25,City of Monrovia,San Gabriel Valley,481,1240.0,False
+2020-07-25,City of Montebello,Southeast,1495,2322.0,False
+2020-07-25,City of Monterey Park,San Gabriel Valley,559,898.0,False
+2020-07-25,City of Norwalk,Southeast,2141,1989.0,False
+2020-07-25,City of Palmdale,Antelope Valley,2178,1370.0,False
+2020-07-25,City of Palos Verdes Estates,South Bay,68,503.0,False
+2020-07-25,City of Paramount,Southeast,1576,2813.0,False
+2020-07-25,City of Pico Rivera,Southeast,1627,2531.0,False
+2020-07-25,City of Pomona,Pomona Valley,3085,1978.0,False
+2020-07-25,City of Rancho Palos Verdes,South Bay,210,491.0,False
+2020-07-25,City of Redondo Beach,South Bay,369,537.0,False
+2020-07-25,City of Rolling Hills,South Bay,5,258.0,False
+2020-07-25,City of Rolling Hills Estates,South Bay,30,370.0,False
+2020-07-25,City of Rosemead,San Gabriel Valley,501,905.0,False
+2020-07-25,City of San Dimas,San Gabriel Valley,330,956.0,True
+2020-07-25,City of San Fernando,San Fernando Valley,539,2190.0,False
+2020-07-25,City of San Gabriel,San Gabriel Valley,370,903.0,False
+2020-07-25,City of San Marino,San Gabriel Valley,45,339.0,False
+2020-07-25,City of Santa Clarita,Northwest County,1948,884.0,False
+2020-07-25,City of Santa Fe Springs,Southeast,335,1824.0,False
+2020-07-25,City of Santa Monica,Westside,587,635.0,False
+2020-07-25,City of Sierra Madre,San Gabriel Valley,48,437.0,False
+2020-07-25,City of Signal Hill,Harbor,164,1390.0,False
+2020-07-25,City of South El Monte,San Gabriel Valley,504,2413.0,False
+2020-07-25,City of South Gate,Southeast,3024,3081.0,False
+2020-07-25,City of South Pasadena,San Gabriel Valley,208,798.0,False
+2020-07-25,City of Temple City,San Gabriel Valley,377,1034.0,False
+2020-07-25,City of Torrance,South Bay,945,633.0,False
+2020-07-25,City of Vernon,Southeast,8,3828.0,False
+2020-07-25,City of Walnut,San Gabriel Valley,183,599.0,False
+2020-07-25,City of West Covina,San Gabriel Valley,1904,1759.0,False
+2020-07-25,City of West Hollywood,Central LA,407,1101.0,False
+2020-07-25,City of Westlake Village,Santa Monica Mountains,21,251.0,False
+2020-07-25,City of Whittier,San Gabriel Valley,1450,1658.0,False
+2020-07-25,Los Angeles,,70218,1736.0,False
+2020-07-25,Los Angeles - Adams-Normandie,South LA,150,1829.0,False
+2020-07-25,Los Angeles - Alsace,South LA,248,1993.0,False
+2020-07-25,Los Angeles - Angeles National Forest,Angeles Forest,2,5000.0,False
+2020-07-25,Los Angeles - Angelino Heights,Central LA,42,1679.0,False
+2020-07-25,Los Angeles - Arleta,San Fernando Valley,848,2467.0,False
+2020-07-25,Los Angeles - Atwater Village,Northeast LA,146,995.0,False
+2020-07-25,Los Angeles - Baldwin Hills,South LA,404,1298.0,False
+2020-07-25,Los Angeles - Bel Air,Westside,57,676.0,False
+2020-07-25,Los Angeles - Beverly Crest,Westside,75,599.0,False
+2020-07-25,Los Angeles - Beverlywood,Westside,102,774.0,False
+2020-07-25,Los Angeles - Boyle Heights,Eastside,2916,3356.0,True
+2020-07-25,Los Angeles - Brentwood,Westside,198,640.0,False
+2020-07-25,Los Angeles - Brookside,Central LA,1,172.0,False
+2020-07-25,Los Angeles - Cadillac-Corning,Central LA,91,1278.0,False
+2020-07-25,Los Angeles - Canoga Park,San Fernando Valley,1184,1813.0,False
+2020-07-25,Los Angeles - Carthay,Central LA,167,1163.0,False
+2020-07-25,Los Angeles - Central,South LA,1496,3837.0,False
+2020-07-25,Los Angeles - Century City,Westside,89,696.0,False
+2020-07-25,Los Angeles - Century Palms/Cove,South LA,1020,3021.0,False
+2020-07-25,Los Angeles - Chatsworth,San Fernando Valley,447,1206.0,False
+2020-07-25,Los Angeles - Cheviot Hills,Westside,46,502.0,False
+2020-07-25,Los Angeles - Chinatown,Central LA,72,898.0,False
+2020-07-25,Los Angeles - Cloverdale/Cochran,Central LA,210,1443.0,False
+2020-07-25,Los Angeles - Country Club Park,Central LA,208,1373.0,False
+2020-07-25,Los Angeles - Crenshaw District,South LA,201,1453.0,False
+2020-07-25,Los Angeles - Crestview,Central LA,141,1240.0,False
+2020-07-25,Los Angeles - Del Rey,Westside,232,775.0,False
+2020-07-25,Los Angeles - Downtown,Central LA,514,1869.0,True
+2020-07-25,Los Angeles - Eagle Rock,Northeast LA,444,1122.0,False
+2020-07-25,Los Angeles - East Hollywood,Central LA,448,1530.0,False
+2020-07-25,Los Angeles - Echo Park,Central LA,147,1031.0,False
+2020-07-25,Los Angeles - El Sereno,Eastside,752,1799.0,False
+2020-07-25,Los Angeles - Elysian Park,Central LA,64,1120.0,False
+2020-07-25,Los Angeles - Elysian Valley,Northeast LA,164,1612.0,False
+2020-07-25,Los Angeles - Encino,San Fernando Valley,359,795.0,False
+2020-07-25,Los Angeles - Exposition,South LA,52,1563.0,False
+2020-07-25,Los Angeles - Exposition Park,South LA,856,1906.0,False
+2020-07-25,Los Angeles - Faircrest Heights,Central LA,26,722.0,False
+2020-07-25,Los Angeles - Figueroa Park Square,South LA,200,2293.0,False
+2020-07-25,Los Angeles - Florence-Firestone,South LA,1565,3299.0,False
+2020-07-25,Los Angeles - Glassell Park,Northeast LA,447,1414.0,False
+2020-07-25,Los Angeles - Gramercy Place,South LA,158,1468.0,False
+2020-07-25,Los Angeles - Granada Hills,San Fernando Valley,773,1328.0,False
+2020-07-25,Los Angeles - Green Meadows,South LA,615,2860.0,False
+2020-07-25,Los Angeles - Hancock Park,Central LA,165,968.0,False
+2020-07-25,Los Angeles - Harbor City,Harbor,339,1166.0,False
+2020-07-25,Los Angeles - Harbor Gateway,Harbor,579,1328.0,False
+2020-07-25,Los Angeles - Harbor Pines,Harbor,12,498.0,False
+2020-07-25,Los Angeles - Harvard Heights,Central LA,379,2101.0,False
+2020-07-25,Los Angeles - Harvard Park,South LA,1040,2742.0,False
+2020-07-25,Los Angeles - Highland Park,Northeast LA,719,1486.0,False
+2020-07-25,Los Angeles - Historic Filipinotown,Central LA,293,2112.0,False
+2020-07-25,Los Angeles - Hollywood,Central LA,793,1162.0,False
+2020-07-25,Los Angeles - Hollywood Hills,Central LA,206,700.0,False
+2020-07-25,Los Angeles - Hyde Park,South LA,527,1846.0,False
+2020-07-25,Los Angeles - Jefferson Park,South LA,177,2192.0,False
+2020-07-25,Los Angeles - Koreatown,Central LA,755,1461.0,False
+2020-07-25,Los Angeles - Lafayette Square,Central LA,53,1163.0,False
+2020-07-25,Los Angeles - Lake Balboa,San Fernando Valley,581,1377.0,False
+2020-07-25,Los Angeles - Lakeview Terrace,San Fernando Valley,386,2939.0,False
+2020-07-25,Los Angeles - Leimert Park,South LA,210,1378.0,False
+2020-07-25,Los Angeles - Lincoln Heights,Eastside,762,2338.0,False
+2020-07-25,Los Angeles - Little Armenia,Central LA,293,3651.0,False
+2020-07-25,Los Angeles - Little Bangladesh,Central LA,342,1207.0,False
+2020-07-25,Los Angeles - Little Tokyo,Central LA,48,1532.0,False
+2020-07-25,Los Angeles - Longwood,Central LA,78,1812.0,False
+2020-07-25,Los Angeles - Los Feliz,Central LA,127,588.0,False
+2020-07-25,Los Angeles - Manchester Square,South LA,102,1195.0,False
+2020-07-25,Los Angeles - Mandeville Canyon,Westside,13,416.0,False
+2020-07-25,Los Angeles - Mar Vista,Westside,222,523.0,False
+2020-07-25,Los Angeles - Marina Peninsula,Westside,25,573.0,False
+2020-07-25,Los Angeles - Melrose,Central LA,1309,1685.0,False
+2020-07-25,Los Angeles - Mid-city,Central LA,217,1444.0,False
+2020-07-25,Los Angeles - Miracle Mile,Central LA,114,634.0,False
+2020-07-25,Los Angeles - Mission Hills,San Fernando Valley,469,1944.0,False
+2020-07-25,Los Angeles - Mt. Washington,Northeast LA,335,1387.0,False
+2020-07-25,Los Angeles - North Hills,San Fernando Valley,1140,1851.0,False
+2020-07-25,Los Angeles - North Hollywood,San Fernando Valley,2089,1380.0,False
+2020-07-25,Los Angeles - Northridge,San Fernando Valley,900,1289.0,False
+2020-07-25,Los Angeles - Pacific Palisades,Westside,95,446.0,False
+2020-07-25,Los Angeles - Pacoima,San Fernando Valley,2043,2654.0,False
+2020-07-25,Los Angeles - Palisades Highlands,Westside,18,468.0,False
+2020-07-25,Los Angeles - Palms,Westside,395,900.0,False
+2020-07-25,Los Angeles - Panorama City,San Fernando Valley,1746,2320.0,False
+2020-07-25,Los Angeles - Park La Brea,Central LA,70,515.0,False
+2020-07-25,Los Angeles - Pico-Union,Central LA,1320,3155.0,False
+2020-07-25,Los Angeles - Playa Del Rey,South Bay,17,532.0,False
+2020-07-25,Los Angeles - Playa Vista,Westside,92,840.0,False
+2020-07-25,Los Angeles - Porter Ranch,San Fernando Valley,217,610.0,False
+2020-07-25,Los Angeles - Rancho Park,Westside,57,869.0,False
+2020-07-25,Los Angeles - Regent Square,Central LA,21,755.0,False
+2020-07-25,Los Angeles - Reseda,San Fernando Valley,1441,1881.0,False
+2020-07-25,Los Angeles - Reseda Ranch,San Fernando Valley,65,1402.0,False
+2020-07-25,Los Angeles - Reynier Village,Central LA,27,639.0,False
+2020-07-25,Los Angeles - San Pedro,Harbor,1477,1893.0,True
+2020-07-25,Los Angeles - Shadow Hills,San Fernando Valley,31,698.0,False
+2020-07-25,Los Angeles - Sherman Oaks,San Fernando Valley,639,732.0,False
+2020-07-25,Los Angeles - Silverlake,Central LA,438,994.0,False
+2020-07-25,Los Angeles - South Carthay,Central LA,77,727.0,False
+2020-07-25,Los Angeles - South Park,South LA,1370,3609.0,False
+2020-07-25,Los Angeles - St Elmo Village,Central LA,98,2138.0,False
+2020-07-25,Los Angeles - Studio City,San Fernando Valley,178,793.0,False
+2020-07-25,Los Angeles - Sun Valley,San Fernando Valley,876,1669.0,False
+2020-07-25,Los Angeles - Sunland,Verdugos,312,1529.0,False
+2020-07-25,Los Angeles - Sycamore Square,Central LA,4,618.0,False
+2020-07-25,Los Angeles - Sylmar,San Fernando Valley,2034,2469.0,True
+2020-07-25,Los Angeles - Tarzana,San Fernando Valley,469,1519.0,False
+2020-07-25,Los Angeles - Temple-Beaudry,Central LA,844,2138.0,False
+2020-07-25,Los Angeles - Thai Town,Central LA,98,999.0,False
+2020-07-25,Los Angeles - Toluca Lake,San Fernando Valley,71,816.0,False
+2020-07-25,Los Angeles - Toluca Terrace,San Fernando Valley,17,1302.0,False
+2020-07-25,Los Angeles - Toluca Woods,San Fernando Valley,11,592.0,False
+2020-07-25,Los Angeles - Tujunga,Verdugos,252,906.0,False
+2020-07-25,Los Angeles - University Hills,Eastside,42,1225.0,False
+2020-07-25,Los Angeles - University Park,South LA,529,1927.0,False
+2020-07-25,Los Angeles - Valley Glen,San Fernando Valley,343,1143.0,False
+2020-07-25,Los Angeles - Valley Village,San Fernando Valley,379,1533.0,False
+2020-07-25,Los Angeles - Van Nuys,San Fernando Valley,1745,1872.0,False
+2020-07-25,Los Angeles - Venice,Westside,183,540.0,False
+2020-07-25,Los Angeles - Vermont Knolls,South LA,506,2942.0,False
+2020-07-25,Los Angeles - Vermont Square,South LA,231,3017.0,False
+2020-07-25,Los Angeles - Vermont Vista,South LA,1255,3047.0,False
+2020-07-25,Los Angeles - Vernon Central,South LA,2032,3908.0,False
+2020-07-25,Los Angeles - Victoria Park,Central LA,130,1548.0,False
+2020-07-25,Los Angeles - View Heights,South LA,25,677.0,False
+2020-07-25,Los Angeles - Watts,South LA,1192,2793.0,False
+2020-07-25,Los Angeles - Wellington Square,Central LA,81,1648.0,False
+2020-07-25,Los Angeles - West Adams,South LA,608,2201.0,False
+2020-07-25,Los Angeles - West Hills,San Fernando Valley,346,853.0,False
+2020-07-25,Los Angeles - West Los Angeles,Westside,346,919.0,False
+2020-07-25,Los Angeles - West Vernon,South LA,1507,2809.0,False
+2020-07-25,Los Angeles - Westchester,South Bay,268,519.0,False
+2020-07-25,Los Angeles - Westlake,Central LA,1801,3034.0,False
+2020-07-25,Los Angeles - Westwood,Westside,225,416.0,False
+2020-07-25,Los Angeles - Wholesale District,Central LA,1834,5076.0,True
+2020-07-25,Los Angeles - Wilmington,Harbor,1061,1878.0,False
+2020-07-25,Los Angeles - Wilshire Center,Central LA,730,1455.0,False
+2020-07-25,Los Angeles - Winnetka,San Fernando Valley,790,1526.0,False
+2020-07-25,Los Angeles - Woodland Hills,San Fernando Valley,586,861.0,False
+2020-07-25,Unincorporated - Acton,Antelope Valley,40,502.0,False
+2020-07-25,Unincorporated - Agua Dulce,Northwest County,17,409.0,False
+2020-07-25,Unincorporated - Altadena,Verdugos,410,940.0,False
+2020-07-25,Unincorporated - Anaverde,Antelope Valley,5,332.0,False
+2020-07-25,Unincorporated - Angeles National Forest,Angeles Forest,3,241.0,False
+2020-07-25,Unincorporated - Arcadia,San Gabriel Valley,63,789.0,False
+2020-07-25,Unincorporated - Athens-Westmont,South LA,980,2309.0,False
+2020-07-25,Unincorporated - Athens Village,South LA,133,2716.0,False
+2020-07-25,Unincorporated - Avocado Heights,San Gabriel Valley,173,2554.0,False
+2020-07-25,Unincorporated - Azusa,San Gabriel Valley,322,2022.0,False
+2020-07-25,Unincorporated - Bassett,San Gabriel Valley,447,3017.0,False
+2020-07-25,Unincorporated - Bouquet Canyon,Northwest County,1,93.0,False
+2020-07-25,Unincorporated - Bradbury,San Gabriel Valley,4,3704.0,False
+2020-07-25,Unincorporated - Canyon Country,Northwest County,75,970.0,False
+2020-07-25,Unincorporated - Castaic,Northwest County,1848,6796.0,True
+2020-07-25,Unincorporated - Cerritos,Southeast,9,1533.0,False
+2020-07-25,Unincorporated - Charter Oak,San Gabriel Valley,0,0.0,False
+2020-07-25,Unincorporated - Claremont,Pomona Valley,3,427.0,False
+2020-07-25,Unincorporated - Covina,San Gabriel Valley,276,1641.0,False
+2020-07-25,Unincorporated - Del Aire,South Bay,45,1024.0,False
+2020-07-25,Unincorporated - Del Rey,Westside,1,314.0,False
+2020-07-25,Unincorporated - Del Sur,Antelope Valley,6,248.0,False
+2020-07-25,Unincorporated - Desert View Highlands,Antelope Valley,21,842.0,False
+2020-07-25,Unincorporated - Duarte,San Gabriel Valley,78,1762.0,False
+2020-07-25,Unincorporated - East Covina,San Gabriel Valley,4,1216.0,False
+2020-07-25,Unincorporated - East La Mirada,Southeast,73,1379.0,False
+2020-07-25,Unincorporated - East Lancaster,Antelope Valley,0,0.0,False
+2020-07-25,Unincorporated - East Los Angeles,Eastside,4113,3283.0,False
+2020-07-25,Unincorporated - East Pasadena,San Gabriel Valley,42,656.0,False
+2020-07-25,Unincorporated - East Rancho Dominguez,Southeast,425,2776.0,False
+2020-07-25,Unincorporated - East Whittier,Southeast,51,961.0,False
+2020-07-25,Unincorporated - El Camino Village,South Bay,100,1138.0,False
+2020-07-25,Unincorporated - El Monte,San Gabriel Valley,5,3448.0,False
+2020-07-25,Unincorporated - Elizabeth Lake,Antelope Valley,5,301.0,False
+2020-07-25,Unincorporated - Florence-Firestone,South LA,2226,3440.0,False
+2020-07-25,Unincorporated - Franklin Canyon,Central LA,0,0.0,False
+2020-07-25,Unincorporated - Glendora,San Gabriel Valley,4,606.0,False
+2020-07-25,Unincorporated - Hacienda Heights,San Gabriel Valley,661,1182.0,False
+2020-07-25,Unincorporated - Harbor Gateway,Harbor,0,0.0,False
+2020-07-25,Unincorporated - Hawthorne,South Bay,37,1472.0,False
+2020-07-25,Unincorporated - Hi Vista,Antelope Valley,1,91.0,False
+2020-07-25,Unincorporated - Kagel/Lopez Canyons,Angeles Forest,15,1062.0,False
+2020-07-25,Unincorporated - La Crescenta-Montrose,Verdugos,104,525.0,False
+2020-07-25,Unincorporated - La Habra Heights,San Gabriel Valley,0,0.0,False
+2020-07-25,Unincorporated - La Rambla,Harbor,70,3373.0,False
+2020-07-25,Unincorporated - La Verne,Pomona Valley,19,931.0,True
+2020-07-25,Unincorporated - Ladera Heights,Westside,54,764.0,False
+2020-07-25,Unincorporated - Lake Hughes,Northwest County,1,150.0,False
+2020-07-25,Unincorporated - Lake Los Angeles,Antelope Valley,116,893.0,False
+2020-07-25,Unincorporated - Lake Manor,San Fernando Valley,13,791.0,False
+2020-07-25,Unincorporated - Lakewood,Harbor,0,0.0,False
+2020-07-25,Unincorporated - Lennox,South Bay,415,1841.0,False
+2020-07-25,Unincorporated - Leona Valley,Antelope Valley,15,857.0,False
+2020-07-25,Unincorporated - Littlerock,Antelope Valley,43,1069.0,False
+2020-07-25,Unincorporated - Littlerock/Juniper Hills,Antelope Valley,4,308.0,False
+2020-07-25,Unincorporated - Littlerock/Pearblossom,Antelope Valley,53,1485.0,False
+2020-07-25,Unincorporated - Llano,Antelope Valley,2,228.0,False
+2020-07-25,Unincorporated - Marina del Rey,Westside,49,521.0,False
+2020-07-25,Unincorporated - Miracle Mile,Central LA,0,0.0,False
+2020-07-25,Unincorporated - Monrovia,San Gabriel Valley,56,1443.0,False
+2020-07-25,Unincorporated - Newhall,Northwest County,4,1818.0,False
+2020-07-25,Unincorporated - North Lancaster,Antelope Valley,14,1169.0,False
+2020-07-25,Unincorporated - North Whittier,San Gabriel Valley,136,1627.0,False
+2020-07-25,Unincorporated - Northeast San Gabriel,San Gabriel Valley,220,915.0,False
+2020-07-25,Unincorporated - Padua Hills,Pomona Valley,1,465.0,False
+2020-07-25,Unincorporated - Palmdale,Antelope Valley,15,1781.0,False
+2020-07-25,Unincorporated - Palos Verdes Peninsula,South Bay,2,322.0,False
+2020-07-25,Unincorporated - Pearblossom/Llano,Antelope Valley,14,716.0,False
+2020-07-25,Unincorporated - Pellissier Village,San Gabriel Valley,17,2746.0,False
+2020-07-25,Unincorporated - Placerita Canyon,Angeles Forest,0,0.0,False
+2020-07-25,Unincorporated - Pomona,San Gabriel Valley,9,464.0,False
+2020-07-25,Unincorporated - Quartz Hill,Antelope Valley,110,852.0,False
+2020-07-25,Unincorporated - Rancho Dominguez,Harbor,55,2067.0,False
+2020-07-25,Unincorporated - Roosevelt,Antelope Valley,4,430.0,False
+2020-07-25,Unincorporated - Rosewood,Southeast,16,1244.0,False
+2020-07-25,Unincorporated - Rosewood/East Gardena,Southeast,14,1174.0,False
+2020-07-25,Unincorporated - Rosewood/West Rancho Dominguez,Southeast,59,1755.0,False
+2020-07-25,Unincorporated - Rowland Heights,San Gabriel Valley,430,843.0,False
+2020-07-25,Unincorporated - San Clemente Island,Harbor,0,0.0,False
+2020-07-25,Unincorporated - San Francisquito Canyon/Bouquet Canyon,Northwest County,0,0.0,False
+2020-07-25,Unincorporated - San Jose Hills,San Gabriel Valley,441,2181.0,False
+2020-07-25,Unincorporated - San Pasqual,San Gabriel Valley,7,344.0,False
+2020-07-25,Unincorporated - Sand Canyon,Angeles Forest,3,974.0,False
+2020-07-25,Unincorporated - Santa Catalina Island,Harbor,6,2247.0,False
+2020-07-25,Unincorporated - Santa Monica Mountains,Santa Monica Mountains,76,408.0,True
+2020-07-25,Unincorporated - Saugus,Northwest County,12,7742.0,False
+2020-07-25,Unincorporated - Saugus/Canyon Country,Northwest County,1,281.0,False
+2020-07-25,Unincorporated - South Antelope Valley,Antelope Valley,1,220.0,False
+2020-07-25,Unincorporated - South El Monte,San Gabriel Valley,51,2841.0,False
+2020-07-25,Unincorporated - South San Gabriel,San Gabriel Valley,123,1390.0,False
+2020-07-25,Unincorporated - South Whittier,Southeast,1077,1819.0,False
+2020-07-25,Unincorporated - Southeast Antelope Valley,Antelope Valley,9,1152.0,False
+2020-07-25,Unincorporated - Stevenson Ranch,Northwest County,100,477.0,False
+2020-07-25,Unincorporated - Sun Village,Antelope Valley,85,1408.0,False
+2020-07-25,Unincorporated - Sunrise Village,San Gabriel Valley,27,2083.0,False
+2020-07-25,Unincorporated - Twin Lakes/Oat Mountain,Northwest County,9,543.0,False
+2020-07-25,Unincorporated - Val Verde,Northwest County,39,1179.0,False
+2020-07-25,Unincorporated - Valencia,Northwest County,32,1042.0,False
+2020-07-25,Unincorporated - Valinda,San Gabriel Valley,502,2148.0,False
+2020-07-25,Unincorporated - View Park/Windsor Hills,South LA,99,851.0,False
+2020-07-25,Unincorporated - Walnut Park,Southeast,485,3004.0,False
+2020-07-25,Unincorporated - West Antelope Valley,Antelope Valley,3,199.0,False
+2020-07-25,Unincorporated - West Carson,Harbor,252,1141.0,False
+2020-07-25,Unincorporated - West Chatsworth,San Fernando Valley,0,0.0,False
+2020-07-25,Unincorporated - West Puente Valley,San Gabriel Valley,257,2613.0,False
+2020-07-25,Unincorporated - West Rancho Dominguez,Harbor,18,1325.0,False
+2020-07-25,Unincorporated - West Whittier/Los Nietos,Southeast,622,2310.0,False
+2020-07-25,Unincorporated - Westfield/Academy Hills,South Bay,4,308.0,False
+2020-07-25,Unincorporated - Westhills,San Fernando Valley,7,834.0,False
+2020-07-25,Unincorporated - White Fence Farms,Antelope Valley,33,896.0,False
+2020-07-25,Unincorporated - Whittier,San Gabriel Valley,51,1348.0,False
+2020-07-25,Unincorporated - Whittier Narrows,San Gabriel Valley,0,0.0,False
+2020-07-25,Unincorporated - Willowbrook,South LA,967,2770.0,False
+2020-07-25,Unincorporated - Wiseburn,South Bay,87,1444.0,False
+2020-07-25,City of Long Beach,Harbor,7368,1571.39,
+2020-07-25,City of Pasadena,Verdugos,1857,1314.73,
+2020-07-26,City of Agoura Hills,Santa Monica Mountains,100,479.0,False
+2020-07-26,City of Alhambra,San Gabriel Valley,812,936.0,False
+2020-07-26,City of Arcadia,San Gabriel Valley,292,506.0,False
+2020-07-26,City of Artesia,Southeast,217,1292.0,False
+2020-07-26,City of Avalon,Harbor,5,129.0,False
+2020-07-26,City of Azusa,San Gabriel Valley,938,1875.0,False
+2020-07-26,City of Baldwin Park,San Gabriel Valley,1807,2354.0,False
+2020-07-26,City of Bell,Southeast,1025,2821.0,False
+2020-07-26,City of Bell Gardens,Southeast,1259,2923.0,False
+2020-07-26,City of Bellflower,Southeast,1584,2038.0,False
+2020-07-26,City of Beverly Hills,Westside,530,1535.0,False
+2020-07-26,City of Bradbury,San Gabriel Valley,9,842.0,False
+2020-07-26,City of Burbank,San Fernando Valley,909,848.0,False
+2020-07-26,City of Calabasas,Santa Monica Mountains,192,789.0,False
+2020-07-26,City of Carson,Harbor,1153,1229.0,False
+2020-07-26,City of Cerritos,Southeast,388,775.0,False
+2020-07-26,City of Claremont,Pomona Valley,226,619.0,False
+2020-07-26,City of Commerce,Southeast,372,2846.0,True
+2020-07-26,City of Compton,Southeast,2579,2581.0,False
+2020-07-26,City of Covina,San Gabriel Valley,869,1772.0,False
+2020-07-26,City of Cudahy,Southeast,754,3097.0,False
+2020-07-26,City of Culver City,Westside,307,770.0,False
+2020-07-26,City of Diamond Bar,San Gabriel Valley,353,614.0,False
+2020-07-26,City of Downey,Southeast,2828,2475.0,False
+2020-07-26,City of Duarte,San Gabriel Valley,337,1531.0,False
+2020-07-26,City of El Monte,San Gabriel Valley,2825,2409.0,False
+2020-07-26,City of El Segundo,South Bay,95,566.0,False
+2020-07-26,City of Gardena,South Bay,786,1282.0,False
+2020-07-26,City of Glendale,Verdugos,2159,1046.0,False
+2020-07-26,City of Glendora,San Gabriel Valley,850,1611.0,False
+2020-07-26,City of Hawaiian Gardens,Harbor,337,2296.0,False
+2020-07-26,City of Hawthorne,South Bay,1251,1409.0,False
+2020-07-26,City of Hermosa Beach,South Bay,142,722.0,False
+2020-07-26,City of Hidden Hills,Santa Monica Mountains,5,265.0,False
+2020-07-26,City of Huntington Park,Southeast,1889,3176.0,False
+2020-07-26,City of Industry,San Gabriel Valley,20,4577.0,False
+2020-07-26,City of Inglewood,South Bay,1791,1577.0,False
+2020-07-26,City of Irwindale,San Gabriel Valley,47,3221.0,False
+2020-07-26,City of La Canada Flintridge,Verdugos,115,556.0,False
+2020-07-26,City of La Habra Heights,San Gabriel Valley,25,458.0,False
+2020-07-26,City of La Mirada,Southeast,579,1167.0,False
+2020-07-26,City of La Puente,San Gabriel Valley,967,2376.0,False
+2020-07-26,City of La Verne,Pomona Valley,277,832.0,False
+2020-07-26,City of Lakewood,Harbor,839,1044.0,False
+2020-07-26,City of Lancaster,Antelope Valley,1897,1174.0,True
+2020-07-26,City of Lawndale,South Bay,425,1264.0,False
+2020-07-26,City of Lomita,South Bay,162,782.0,False
+2020-07-26,City of Lynwood,Southeast,2223,3085.0,True
+2020-07-26,City of Malibu,Santa Monica Mountains,73,563.0,False
+2020-07-26,City of Manhattan Beach,South Bay,250,694.0,False
+2020-07-26,City of Maywood,Southeast,919,3276.0,False
+2020-07-26,City of Monrovia,San Gabriel Valley,486,1253.0,False
+2020-07-26,City of Montebello,Southeast,1509,2344.0,False
+2020-07-26,City of Monterey Park,San Gabriel Valley,564,906.0,False
+2020-07-26,City of Norwalk,Southeast,2168,2014.0,False
+2020-07-26,City of Palmdale,Antelope Valley,2209,1390.0,False
+2020-07-26,City of Palos Verdes Estates,South Bay,68,503.0,False
+2020-07-26,City of Paramount,Southeast,1587,2833.0,False
+2020-07-26,City of Pico Rivera,Southeast,1649,2565.0,False
+2020-07-26,City of Pomona,Pomona Valley,3160,2027.0,False
+2020-07-26,City of Rancho Palos Verdes,South Bay,211,494.0,False
+2020-07-26,City of Redondo Beach,South Bay,369,537.0,False
+2020-07-26,City of Rolling Hills,South Bay,5,258.0,False
+2020-07-26,City of Rolling Hills Estates,South Bay,30,370.0,False
+2020-07-26,City of Rosemead,San Gabriel Valley,511,923.0,False
+2020-07-26,City of San Dimas,San Gabriel Valley,333,965.0,True
+2020-07-26,City of San Fernando,San Fernando Valley,548,2227.0,False
+2020-07-26,City of San Gabriel,San Gabriel Valley,378,923.0,False
+2020-07-26,City of San Marino,San Gabriel Valley,45,339.0,False
+2020-07-26,City of Santa Clarita,Northwest County,1975,896.0,False
+2020-07-26,City of Santa Fe Springs,Southeast,338,1841.0,False
+2020-07-26,City of Santa Monica,Westside,594,643.0,False
+2020-07-26,City of Sierra Madre,San Gabriel Valley,49,446.0,False
+2020-07-26,City of Signal Hill,Harbor,165,1399.0,False
+2020-07-26,City of South El Monte,San Gabriel Valley,511,2447.0,False
+2020-07-26,City of South Gate,Southeast,3051,3108.0,False
+2020-07-26,City of South Pasadena,San Gabriel Valley,208,798.0,False
+2020-07-26,City of Temple City,San Gabriel Valley,380,1042.0,False
+2020-07-26,City of Torrance,South Bay,947,634.0,False
+2020-07-26,City of Vernon,Southeast,8,3828.0,False
+2020-07-26,City of Walnut,San Gabriel Valley,188,616.0,False
+2020-07-26,City of West Covina,San Gabriel Valley,1940,1792.0,False
+2020-07-26,City of West Hollywood,Central LA,409,1107.0,False
+2020-07-26,City of Westlake Village,Santa Monica Mountains,21,251.0,False
+2020-07-26,City of Whittier,San Gabriel Valley,1464,1674.0,False
+2020-07-26,Los Angeles,,70756,1749.0,False
+2020-07-26,Los Angeles - Adams-Normandie,South LA,151,1841.0,False
+2020-07-26,Los Angeles - Alsace,South LA,251,2017.0,False
+2020-07-26,Los Angeles - Angeles National Forest,Angeles Forest,2,5000.0,False
+2020-07-26,Los Angeles - Angelino Heights,Central LA,42,1679.0,False
+2020-07-26,Los Angeles - Arleta,San Fernando Valley,858,2496.0,False
+2020-07-26,Los Angeles - Atwater Village,Northeast LA,146,995.0,False
+2020-07-26,Los Angeles - Baldwin Hills,South LA,407,1308.0,False
+2020-07-26,Los Angeles - Bel Air,Westside,57,676.0,False
+2020-07-26,Los Angeles - Beverly Crest,Westside,76,607.0,False
+2020-07-26,Los Angeles - Beverlywood,Westside,103,782.0,False
+2020-07-26,Los Angeles - Boyle Heights,Eastside,2932,3375.0,True
+2020-07-26,Los Angeles - Brentwood,Westside,200,646.0,False
+2020-07-26,Los Angeles - Brookside,Central LA,1,172.0,False
+2020-07-26,Los Angeles - Cadillac-Corning,Central LA,91,1278.0,False
+2020-07-26,Los Angeles - Canoga Park,San Fernando Valley,1198,1835.0,False
+2020-07-26,Los Angeles - Carthay,Central LA,167,1163.0,False
+2020-07-26,Los Angeles - Central,South LA,1511,3875.0,False
+2020-07-26,Los Angeles - Century City,Westside,89,696.0,False
+2020-07-26,Los Angeles - Century Palms/Cove,South LA,1027,3042.0,False
+2020-07-26,Los Angeles - Chatsworth,San Fernando Valley,451,1217.0,False
+2020-07-26,Los Angeles - Cheviot Hills,Westside,46,502.0,False
+2020-07-26,Los Angeles - Chinatown,Central LA,73,910.0,False
+2020-07-26,Los Angeles - Cloverdale/Cochran,Central LA,216,1484.0,False
+2020-07-26,Los Angeles - Country Club Park,Central LA,209,1379.0,False
+2020-07-26,Los Angeles - Crenshaw District,South LA,206,1490.0,False
+2020-07-26,Los Angeles - Crestview,Central LA,141,1240.0,False
+2020-07-26,Los Angeles - Del Rey,Westside,232,775.0,False
+2020-07-26,Los Angeles - Downtown,Central LA,517,1880.0,True
+2020-07-26,Los Angeles - Eagle Rock,Northeast LA,449,1134.0,False
+2020-07-26,Los Angeles - East Hollywood,Central LA,452,1543.0,False
+2020-07-26,Los Angeles - Echo Park,Central LA,147,1031.0,False
+2020-07-26,Los Angeles - El Sereno,Eastside,759,1815.0,False
+2020-07-26,Los Angeles - Elysian Park,Central LA,64,1120.0,False
+2020-07-26,Los Angeles - Elysian Valley,Northeast LA,167,1642.0,False
+2020-07-26,Los Angeles - Encino,San Fernando Valley,362,801.0,False
+2020-07-26,Los Angeles - Exposition,South LA,53,1594.0,False
+2020-07-26,Los Angeles - Exposition Park,South LA,866,1928.0,False
+2020-07-26,Los Angeles - Faircrest Heights,Central LA,26,722.0,False
+2020-07-26,Los Angeles - Figueroa Park Square,South LA,202,2316.0,False
+2020-07-26,Los Angeles - Florence-Firestone,South LA,1575,3320.0,False
+2020-07-26,Los Angeles - Glassell Park,Northeast LA,450,1424.0,False
+2020-07-26,Los Angeles - Gramercy Place,South LA,160,1486.0,False
+2020-07-26,Los Angeles - Granada Hills,San Fernando Valley,779,1339.0,False
+2020-07-26,Los Angeles - Green Meadows,South LA,623,2897.0,False
+2020-07-26,Los Angeles - Hancock Park,Central LA,167,980.0,False
+2020-07-26,Los Angeles - Harbor City,Harbor,340,1170.0,False
+2020-07-26,Los Angeles - Harbor Gateway,Harbor,581,1333.0,False
+2020-07-26,Los Angeles - Harbor Pines,Harbor,12,498.0,False
+2020-07-26,Los Angeles - Harvard Heights,Central LA,380,2107.0,False
+2020-07-26,Los Angeles - Harvard Park,South LA,1048,2763.0,False
+2020-07-26,Los Angeles - Highland Park,Northeast LA,722,1492.0,False
+2020-07-26,Los Angeles - Historic Filipinotown,Central LA,295,2127.0,False
+2020-07-26,Los Angeles - Hollywood,Central LA,804,1178.0,False
+2020-07-26,Los Angeles - Hollywood Hills,Central LA,207,703.0,False
+2020-07-26,Los Angeles - Hyde Park,South LA,528,1850.0,False
+2020-07-26,Los Angeles - Jefferson Park,South LA,179,2217.0,False
+2020-07-26,Los Angeles - Koreatown,Central LA,764,1478.0,False
+2020-07-26,Los Angeles - Lafayette Square,Central LA,54,1184.0,False
+2020-07-26,Los Angeles - Lake Balboa,San Fernando Valley,586,1388.0,False
+2020-07-26,Los Angeles - Lakeview Terrace,San Fernando Valley,387,2947.0,False
+2020-07-26,Los Angeles - Leimert Park,South LA,211,1385.0,False
+2020-07-26,Los Angeles - Lincoln Heights,Eastside,768,2356.0,False
+2020-07-26,Los Angeles - Little Armenia,Central LA,295,3676.0,False
+2020-07-26,Los Angeles - Little Bangladesh,Central LA,344,1214.0,False
+2020-07-26,Los Angeles - Little Tokyo,Central LA,48,1532.0,False
+2020-07-26,Los Angeles - Longwood,Central LA,78,1812.0,False
+2020-07-26,Los Angeles - Los Feliz,Central LA,129,597.0,False
+2020-07-26,Los Angeles - Manchester Square,South LA,104,1218.0,False
+2020-07-26,Los Angeles - Mandeville Canyon,Westside,14,448.0,False
+2020-07-26,Los Angeles - Mar Vista,Westside,222,523.0,False
+2020-07-26,Los Angeles - Marina Peninsula,Westside,25,573.0,False
+2020-07-26,Los Angeles - Melrose,Central LA,1327,1708.0,False
+2020-07-26,Los Angeles - Mid-city,Central LA,217,1444.0,False
+2020-07-26,Los Angeles - Miracle Mile,Central LA,115,639.0,False
+2020-07-26,Los Angeles - Mission Hills,San Fernando Valley,472,1957.0,False
+2020-07-26,Los Angeles - Mt. Washington,Northeast LA,336,1392.0,False
+2020-07-26,Los Angeles - North Hills,San Fernando Valley,1146,1861.0,False
+2020-07-26,Los Angeles - North Hollywood,San Fernando Valley,2110,1393.0,False
+2020-07-26,Los Angeles - Northridge,San Fernando Valley,915,1311.0,False
+2020-07-26,Los Angeles - Pacific Palisades,Westside,96,451.0,False
+2020-07-26,Los Angeles - Pacoima,San Fernando Valley,2059,2675.0,False
+2020-07-26,Los Angeles - Palisades Highlands,Westside,18,468.0,False
+2020-07-26,Los Angeles - Palms,Westside,396,903.0,False
+2020-07-26,Los Angeles - Panorama City,San Fernando Valley,1757,2335.0,False
+2020-07-26,Los Angeles - Park La Brea,Central LA,70,515.0,False
+2020-07-26,Los Angeles - Pico-Union,Central LA,1328,3174.0,False
+2020-07-26,Los Angeles - Playa Del Rey,South Bay,17,532.0,False
+2020-07-26,Los Angeles - Playa Vista,Westside,92,840.0,False
+2020-07-26,Los Angeles - Porter Ranch,San Fernando Valley,219,615.0,False
+2020-07-26,Los Angeles - Rancho Park,Westside,57,869.0,False
+2020-07-26,Los Angeles - Regent Square,Central LA,21,755.0,False
+2020-07-26,Los Angeles - Reseda,San Fernando Valley,1446,1887.0,False
+2020-07-26,Los Angeles - Reseda Ranch,San Fernando Valley,66,1424.0,False
+2020-07-26,Los Angeles - Reynier Village,Central LA,27,639.0,False
+2020-07-26,Los Angeles - San Pedro,Harbor,1489,1908.0,True
+2020-07-26,Los Angeles - Shadow Hills,San Fernando Valley,31,698.0,False
+2020-07-26,Los Angeles - Sherman Oaks,San Fernando Valley,645,739.0,False
+2020-07-26,Los Angeles - Silverlake,Central LA,440,998.0,False
+2020-07-26,Los Angeles - South Carthay,Central LA,77,727.0,False
+2020-07-26,Los Angeles - South Park,South LA,1387,3654.0,False
+2020-07-26,Los Angeles - St Elmo Village,Central LA,98,2138.0,False
+2020-07-26,Los Angeles - Studio City,San Fernando Valley,180,802.0,False
+2020-07-26,Los Angeles - Sun Valley,San Fernando Valley,886,1688.0,False
+2020-07-26,Los Angeles - Sunland,Verdugos,313,1534.0,False
+2020-07-26,Los Angeles - Sycamore Square,Central LA,4,618.0,False
+2020-07-26,Los Angeles - Sylmar,San Fernando Valley,2056,2495.0,True
+2020-07-26,Los Angeles - Tarzana,San Fernando Valley,470,1522.0,False
+2020-07-26,Los Angeles - Temple-Beaudry,Central LA,848,2148.0,False
+2020-07-26,Los Angeles - Thai Town,Central LA,99,1009.0,False
+2020-07-26,Los Angeles - Toluca Lake,San Fernando Valley,72,827.0,False
+2020-07-26,Los Angeles - Toluca Terrace,San Fernando Valley,17,1302.0,False
+2020-07-26,Los Angeles - Toluca Woods,San Fernando Valley,11,592.0,False
+2020-07-26,Los Angeles - Tujunga,Verdugos,252,906.0,False
+2020-07-26,Los Angeles - University Hills,Eastside,42,1225.0,False
+2020-07-26,Los Angeles - University Park,South LA,525,1912.0,False
+2020-07-26,Los Angeles - Valley Glen,San Fernando Valley,347,1156.0,False
+2020-07-26,Los Angeles - Valley Village,San Fernando Valley,382,1545.0,False
+2020-07-26,Los Angeles - Van Nuys,San Fernando Valley,1758,1886.0,False
+2020-07-26,Los Angeles - Venice,Westside,188,555.0,False
+2020-07-26,Los Angeles - Vermont Knolls,South LA,510,2965.0,False
+2020-07-26,Los Angeles - Vermont Square,South LA,232,3030.0,False
+2020-07-26,Los Angeles - Vermont Vista,South LA,1265,3071.0,False
+2020-07-26,Los Angeles - Vernon Central,South LA,2043,3929.0,False
+2020-07-26,Los Angeles - Victoria Park,Central LA,130,1548.0,False
+2020-07-26,Los Angeles - View Heights,South LA,25,677.0,False
+2020-07-26,Los Angeles - Watts,South LA,1207,2828.0,False
+2020-07-26,Los Angeles - Wellington Square,Central LA,81,1648.0,False
+2020-07-26,Los Angeles - West Adams,South LA,612,2215.0,False
+2020-07-26,Los Angeles - West Hills,San Fernando Valley,349,861.0,False
+2020-07-26,Los Angeles - West Los Angeles,Westside,347,922.0,False
+2020-07-26,Los Angeles - West Vernon,South LA,1526,2845.0,False
+2020-07-26,Los Angeles - Westchester,South Bay,269,521.0,False
+2020-07-26,Los Angeles - Westlake,Central LA,1806,3043.0,False
+2020-07-26,Los Angeles - Westwood,Westside,225,416.0,False
+2020-07-26,Los Angeles - Wholesale District,Central LA,1836,5082.0,True
+2020-07-26,Los Angeles - Wilmington,Harbor,1073,1900.0,False
+2020-07-26,Los Angeles - Wilshire Center,Central LA,731,1457.0,False
+2020-07-26,Los Angeles - Winnetka,San Fernando Valley,801,1547.0,False
+2020-07-26,Los Angeles - Woodland Hills,San Fernando Valley,591,868.0,False
+2020-07-26,Unincorporated - Acton,Antelope Valley,40,502.0,False
+2020-07-26,Unincorporated - Agua Dulce,Northwest County,17,409.0,False
+2020-07-26,Unincorporated - Altadena,Verdugos,415,951.0,False
+2020-07-26,Unincorporated - Anaverde,Antelope Valley,5,332.0,False
+2020-07-26,Unincorporated - Angeles National Forest,Angeles Forest,3,241.0,False
+2020-07-26,Unincorporated - Arcadia,San Gabriel Valley,65,814.0,False
+2020-07-26,Unincorporated - Athens-Westmont,South LA,987,2326.0,False
+2020-07-26,Unincorporated - Athens Village,South LA,134,2736.0,False
+2020-07-26,Unincorporated - Avocado Heights,San Gabriel Valley,173,2554.0,False
+2020-07-26,Unincorporated - Azusa,San Gabriel Valley,325,2041.0,False
+2020-07-26,Unincorporated - Bassett,San Gabriel Valley,450,3037.0,False
+2020-07-26,Unincorporated - Bouquet Canyon,Northwest County,1,93.0,False
+2020-07-26,Unincorporated - Bradbury,San Gabriel Valley,4,3704.0,False
+2020-07-26,Unincorporated - Canyon Country,Northwest County,75,970.0,False
+2020-07-26,Unincorporated - Castaic,Northwest County,1850,6804.0,True
+2020-07-26,Unincorporated - Cerritos,Southeast,9,1533.0,False
+2020-07-26,Unincorporated - Charter Oak,San Gabriel Valley,0,0.0,False
+2020-07-26,Unincorporated - Claremont,Pomona Valley,3,427.0,False
+2020-07-26,Unincorporated - Covina,San Gabriel Valley,281,1671.0,False
+2020-07-26,Unincorporated - Del Aire,South Bay,46,1047.0,False
+2020-07-26,Unincorporated - Del Rey,Westside,1,314.0,False
+2020-07-26,Unincorporated - Del Sur,Antelope Valley,6,248.0,False
+2020-07-26,Unincorporated - Desert View Highlands,Antelope Valley,21,842.0,False
+2020-07-26,Unincorporated - Duarte,San Gabriel Valley,79,1784.0,False
+2020-07-26,Unincorporated - East Covina,San Gabriel Valley,4,1216.0,False
+2020-07-26,Unincorporated - East La Mirada,Southeast,73,1379.0,False
+2020-07-26,Unincorporated - East Lancaster,Antelope Valley,0,0.0,False
+2020-07-26,Unincorporated - East Los Angeles,Eastside,4148,3311.0,False
+2020-07-26,Unincorporated - East Pasadena,San Gabriel Valley,42,656.0,False
+2020-07-26,Unincorporated - East Rancho Dominguez,Southeast,430,2809.0,False
+2020-07-26,Unincorporated - East Whittier,Southeast,51,961.0,False
+2020-07-26,Unincorporated - El Camino Village,South Bay,100,1138.0,False
+2020-07-26,Unincorporated - El Monte,San Gabriel Valley,5,3448.0,False
+2020-07-26,Unincorporated - Elizabeth Lake,Antelope Valley,5,301.0,False
+2020-07-26,Unincorporated - Florence-Firestone,South LA,2245,3470.0,False
+2020-07-26,Unincorporated - Franklin Canyon,Central LA,0,0.0,False
+2020-07-26,Unincorporated - Glendora,San Gabriel Valley,4,606.0,False
+2020-07-26,Unincorporated - Hacienda Heights,San Gabriel Valley,676,1209.0,False
+2020-07-26,Unincorporated - Harbor Gateway,Harbor,0,0.0,False
+2020-07-26,Unincorporated - Hawthorne,South Bay,37,1472.0,False
+2020-07-26,Unincorporated - Hi Vista,Antelope Valley,1,91.0,False
+2020-07-26,Unincorporated - Kagel/Lopez Canyons,Angeles Forest,15,1062.0,False
+2020-07-26,Unincorporated - La Crescenta-Montrose,Verdugos,104,525.0,False
+2020-07-26,Unincorporated - La Habra Heights,San Gabriel Valley,0,0.0,False
+2020-07-26,Unincorporated - La Rambla,Harbor,70,3373.0,False
+2020-07-26,Unincorporated - La Verne,Pomona Valley,19,931.0,True
+2020-07-26,Unincorporated - Ladera Heights,Westside,54,764.0,False
+2020-07-26,Unincorporated - Lake Hughes,Northwest County,1,150.0,False
+2020-07-26,Unincorporated - Lake Los Angeles,Antelope Valley,118,908.0,False
+2020-07-26,Unincorporated - Lake Manor,San Fernando Valley,13,791.0,False
+2020-07-26,Unincorporated - Lakewood,Harbor,0,0.0,False
+2020-07-26,Unincorporated - Lennox,South Bay,420,1863.0,False
+2020-07-26,Unincorporated - Leona Valley,Antelope Valley,15,857.0,False
+2020-07-26,Unincorporated - Littlerock,Antelope Valley,43,1069.0,False
+2020-07-26,Unincorporated - Littlerock/Juniper Hills,Antelope Valley,4,308.0,False
+2020-07-26,Unincorporated - Littlerock/Pearblossom,Antelope Valley,53,1485.0,False
+2020-07-26,Unincorporated - Llano,Antelope Valley,2,228.0,False
+2020-07-26,Unincorporated - Marina del Rey,Westside,49,521.0,False
+2020-07-26,Unincorporated - Miracle Mile,Central LA,0,0.0,False
+2020-07-26,Unincorporated - Monrovia,San Gabriel Valley,59,1520.0,False
+2020-07-26,Unincorporated - Newhall,Northwest County,4,1818.0,False
+2020-07-26,Unincorporated - North Lancaster,Antelope Valley,15,1252.0,False
+2020-07-26,Unincorporated - North Whittier,San Gabriel Valley,137,1639.0,False
+2020-07-26,Unincorporated - Northeast San Gabriel,San Gabriel Valley,222,924.0,False
+2020-07-26,Unincorporated - Padua Hills,Pomona Valley,1,465.0,False
+2020-07-26,Unincorporated - Palmdale,Antelope Valley,15,1781.0,False
+2020-07-26,Unincorporated - Palos Verdes Peninsula,South Bay,2,322.0,False
+2020-07-26,Unincorporated - Pearblossom/Llano,Antelope Valley,14,716.0,False
+2020-07-26,Unincorporated - Pellissier Village,San Gabriel Valley,17,2746.0,False
+2020-07-26,Unincorporated - Placerita Canyon,Angeles Forest,0,0.0,False
+2020-07-26,Unincorporated - Pomona,San Gabriel Valley,9,464.0,False
+2020-07-26,Unincorporated - Quartz Hill,Antelope Valley,112,868.0,False
+2020-07-26,Unincorporated - Rancho Dominguez,Harbor,55,2067.0,False
+2020-07-26,Unincorporated - Roosevelt,Antelope Valley,4,430.0,False
+2020-07-26,Unincorporated - Rosewood,Southeast,16,1244.0,False
+2020-07-26,Unincorporated - Rosewood/East Gardena,Southeast,14,1174.0,False
+2020-07-26,Unincorporated - Rosewood/West Rancho Dominguez,Southeast,59,1755.0,False
+2020-07-26,Unincorporated - Rowland Heights,San Gabriel Valley,436,855.0,False
+2020-07-26,Unincorporated - San Clemente Island,Harbor,0,0.0,False
+2020-07-26,Unincorporated - San Francisquito Canyon/Bouquet Canyon,Northwest County,0,0.0,False
+2020-07-26,Unincorporated - San Jose Hills,San Gabriel Valley,447,2211.0,False
+2020-07-26,Unincorporated - San Pasqual,San Gabriel Valley,7,344.0,False
+2020-07-26,Unincorporated - Sand Canyon,Angeles Forest,3,974.0,False
+2020-07-26,Unincorporated - Santa Catalina Island,Harbor,6,2247.0,False
+2020-07-26,Unincorporated - Santa Monica Mountains,Santa Monica Mountains,76,408.0,True
+2020-07-26,Unincorporated - Saugus,Northwest County,12,7742.0,False
+2020-07-26,Unincorporated - Saugus/Canyon Country,Northwest County,1,281.0,False
+2020-07-26,Unincorporated - South Antelope Valley,Antelope Valley,1,220.0,False
+2020-07-26,Unincorporated - South El Monte,San Gabriel Valley,53,2953.0,False
+2020-07-26,Unincorporated - South San Gabriel,San Gabriel Valley,124,1401.0,False
+2020-07-26,Unincorporated - South Whittier,Southeast,1095,1849.0,False
+2020-07-26,Unincorporated - Southeast Antelope Valley,Antelope Valley,11,1408.0,False
+2020-07-26,Unincorporated - Stevenson Ranch,Northwest County,103,491.0,False
+2020-07-26,Unincorporated - Sun Village,Antelope Valley,86,1425.0,False
+2020-07-26,Unincorporated - Sunrise Village,San Gabriel Valley,27,2083.0,False
+2020-07-26,Unincorporated - Twin Lakes/Oat Mountain,Northwest County,9,543.0,False
+2020-07-26,Unincorporated - Val Verde,Northwest County,41,1239.0,False
+2020-07-26,Unincorporated - Valencia,Northwest County,32,1042.0,False
+2020-07-26,Unincorporated - Valinda,San Gabriel Valley,508,2174.0,False
+2020-07-26,Unincorporated - View Park/Windsor Hills,South LA,101,868.0,False
+2020-07-26,Unincorporated - Walnut Park,Southeast,487,3017.0,False
+2020-07-26,Unincorporated - West Antelope Valley,Antelope Valley,3,199.0,False
+2020-07-26,Unincorporated - West Carson,Harbor,257,1164.0,False
+2020-07-26,Unincorporated - West Chatsworth,San Fernando Valley,0,0.0,False
+2020-07-26,Unincorporated - West Puente Valley,San Gabriel Valley,260,2644.0,False
+2020-07-26,Unincorporated - West Rancho Dominguez,Harbor,18,1325.0,False
+2020-07-26,Unincorporated - West Whittier/Los Nietos,Southeast,627,2329.0,False
+2020-07-26,Unincorporated - Westfield/Academy Hills,South Bay,4,308.0,False
+2020-07-26,Unincorporated - Westhills,San Fernando Valley,8,954.0,False
+2020-07-26,Unincorporated - White Fence Farms,Antelope Valley,33,896.0,False
+2020-07-26,Unincorporated - Whittier,San Gabriel Valley,51,1348.0,False
+2020-07-26,Unincorporated - Whittier Narrows,San Gabriel Valley,0,0.0,False
+2020-07-26,Unincorporated - Willowbrook,South LA,975,2793.0,False
+2020-07-26,Unincorporated - Wiseburn,South Bay,88,1460.0,False
+2020-07-26,City of Long Beach,Harbor,7479,1595.07,
+2020-07-26,City of Pasadena,Verdugos,1875,1327.47,

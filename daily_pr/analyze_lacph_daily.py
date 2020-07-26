@@ -162,6 +162,9 @@ def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     df[CASE_RATE] = df.apply(
         lambda x: calculate_rate(x, age_pop, AGE_GROUP, CASES), axis='columns')
 
+    df.dropna(inplace=True)
+    df[CASES] = df[CASES].convert_dtypes()
+
     return df
 
 
@@ -433,7 +436,7 @@ if __name__ == "__main__":
     today = every_day[-1]
 
     # df_summary = create_main_stats(every_day)
-    # df_age = create_by_age(every_day)
+    df_age = create_by_age(every_day)
     # df_gender = create_by_gender(every_day)
     # df_race = create_by_race(last_week)
 
