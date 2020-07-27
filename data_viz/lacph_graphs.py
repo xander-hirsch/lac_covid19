@@ -6,7 +6,7 @@
 # * Data sourced from Los Angeles County Department of Public Health's daily 2019 Novel Coronavirus news releases. The archived releases can be found [here](http://publichealth.lacounty.gov/phcommon/public/media/mediaCOVIDdisplay.cfm?unit=media&ou=ph&prog=media)
 # * *Case rate* and *Death rate* are **per 100,000 people**
 # 
-# **Last Update:** Thursday, 24 July
+# **Last Update:** Monday, 27 July
 # 
 # ### Other Sources
 # * Los Angeles County Department of Public Health [**COVID-19 Surveillance Dashboard**](http://dashboard.publichealth.lacounty.gov/covid19_surveillance_dashboard/)
@@ -82,7 +82,7 @@ fig = px.line(by_age, x=const.DATE, y=const.CASE_RATE,
               color=const.AGE_GROUP, width=WIDTH, height=HEIGHT,
               hover_data=[const.CASES],
               title='Case Rate by Age Group')
-fig.show()
+# fig.show()
 
 
 # ### Gender
@@ -121,56 +121,4 @@ fig_deaths = px.bar(df_deaths, x=const.DATE, y=const.NEW_DEATHS,
                     width=WIDTH, height=HEIGHT,
                     title='COVID-19 Deaths in Los Angeles County')
 fig_deaths.show()
-
-
-# ## Further Investigation
-
-# ## Young Adults in New COVID-19 Cases
-
-# In[8]:
-
-
-NC_YA = '{} (Young Adults)'.format(const.NEW_CASES)
-NC_ALL = '{} (All)'.format(const.NEW_CASES)
-NC_NOT_YA = ' - '.join((NC_ALL, NC_YA))
-
-df_young_adults = by_age.loc[
-    by_age[const.AGE_GROUP] == const.AGE_18_40, [const.DATE, const.CASES]]
-df_young_adults[NC_YA] = df_young_adults[const.CASES].diff()
-
-df_young_adults = df_young_adults.merge(
-    df_summary[[const.DATE, const.NEW_CASES]], on=const.DATE)
-
-df_young_adults[NC_NOT_YA] = df_young_adults[const.NEW_CASES] - df_young_adults[NC_YA]
-
-# Filter first day and backlog day
-df_young_adults = df_young_adults.iloc[1:]
-df_young_adults = df_young_adults[df_young_adults[const.DATE] != pd.Timestamp(2020, 7, 6)]
-
-df_young_adults[const.NEW_CASES] = df_young_adults[const.NEW_CASES].convert_dtypes()
-
-
-# In[9]:
-
-
-fig = make_subplots(rows=2, cols=1)
-
-fig.add_trace(go.Bar(name='Young Adults',
-                     x=df_young_adults[const.DATE], y=df_young_adults[NC_YA]),
-              row=1, col=1)
-fig.add_trace(go.Bar(name='Everyone Else',
-                     x=df_young_adults[const.DATE], y=df_young_adults[NC_NOT_YA]),
-              row=1, col=1)
-fig.update_layout(barmode='stack')
-
-fig.add_trace(go.Scatter(x=df_young_adults[const.DATE],
-              y=df_young_adults[NC_YA] / df_young_adults[const.NEW_CASES],
-              mode='markers',
-              name='% Young Adult'),
-             row=2, col=1)
-
-fig.update_yaxes(rangemode='tozero')
-fig.update_layout(title='Composition of Young Adults in Los Angeles County New COVID-19 Cases',
-                  width=WIDTH*1.5, height=HEIGHT*2)
-fig.show()
 
