@@ -4,7 +4,7 @@
 
 import os.path
 import pickle
-from typing import Any, Dict, Iterable, Optional, Tuple, Union
+from typing import Any, Dict, Iterable, Optional, Sequence, Tuple, Union
 
 import numpy as np
 import pandas as pd
@@ -68,7 +68,8 @@ def query_all_dates() -> Tuple[Dict[str, Any]]:
 
 
 def tidy_data(df: pd.DataFrame, var_desc: str, value_desc: str,
-              make_categorical: bool = True) -> pd.DataFrame:
+              make_categorical: bool = True,
+              category_order: Optional[Sequence] = None) -> pd.DataFrame:
     """Reshapes data to a tidy format.
 
     Args:
@@ -87,6 +88,10 @@ def tidy_data(df: pd.DataFrame, var_desc: str, value_desc: str,
 
     variable_type = 'category' if make_categorical else 'string'
     df[var_desc] = df[var_desc].astype(variable_type)
+
+    if category_order is not None:
+        df[var_desc] = df[var_desc].cat.reorder_categories(category_order,
+                                                           ordered=True)
 
     return df.sort_values(by=[DATE, var_desc], ignore_index=True)
 
@@ -153,9 +158,14 @@ def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     """
 
     AGE_GROUP = const.AGE_GROUP
+    age_order = (const.AGE_0_17, const.AGE_18_40, const.AGE_41_65,
+                 const.AGE_OVER_65, const.AGE_0_4, const.AGE_5_11,
+                 const.AGE_12_17, const.AGE_18_29, const.AGE_30_49,
+                 const.AGE_50_64, const.AGE_65_79, const.AGE_OVER_80)
 
     data = map(lambda x: make_section_ts(x, const.CASES_BY_AGE), many_daily_pr)
-    df = tidy_data(pd.DataFrame(data), AGE_GROUP, CASES)
+    df = tidy_data(pd.DataFrame(data), AGE_GROUP, CASES,
+                   category_order=age_order)
 
     age_pop = population.AGE
     df[CASE_RATE] = df.apply(
