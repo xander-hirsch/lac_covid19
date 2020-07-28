@@ -82,7 +82,7 @@ DIR_REFERENCE = os.path.join(DIR_DOCS, 'reference')
 ADDRESS_GEOCODES = os.path.join(DIR_REFERENCE,
                                 'address-geocodes.{}'.format(JSON))
 CSA_GEO_STATS = os.path.join(DIR_REFERENCE,
-                             TEMPLATE_DATA.format('geo-csa', GEOJSON))
+                             'csa-stats-template.{}'.format(GEOJSON))
 
 
 def pandas_export(title: str) -> Tuple[str, str]:

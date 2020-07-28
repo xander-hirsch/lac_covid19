@@ -75,7 +75,7 @@ def parse_csa_objectid() -> Dict[str, int]:
     return objectid_mapping
 
 
-def merge_csa_geo():
+def merge_csa_geo(current: bool = False):
     """Merges the recent CSA cases and deaths with the geographic data."""
 
     csa_mapping = load_csa_mapping()
@@ -87,16 +87,22 @@ def merge_csa_geo():
         area = csa_entry[const.AREA]
         geometry = csa_mapping[area]
 
+        cases = csa_entry[const.CASES] if current else 0
+        case_rate = csa_entry[const.CASE_RATE] if current else 0
+        deaths = csa_entry[const.DEATHS] if current else 0
+        death_rate = csa_entry[const.DEATH_RATE] if current else 0
+        cf_outbreak = csa_entry[const.CF_OUTBREAK] if current else False
+
         geo_csa_stats[FEATURES] += ({
             TYPE: TYPE_FEATURE,
             PROPERTIES: {
                 const.AREA: area,
                 const.REGION: csa_entry[const.REGION],
-                const.CASES: csa_entry[const.CASES],
-                const.CASE_RATE: csa_entry[const.CASE_RATE],
-                const.DEATHS: csa_entry[const.DEATHS],
-                const.DEATH_RATE: csa_entry[const.DEATH_RATE],
-                const.CF_OUTBREAK: csa_entry[const.CF_OUTBREAK],
+                const.CASES: cases,
+                const.CASE_RATE: case_rate,
+                const.DEATHS: deaths,
+                const.DEATH_RATE: death_rate,
+                const.CF_OUTBREAK: cf_outbreak,
             },
             GEOMETRY: geometry,
         },)
