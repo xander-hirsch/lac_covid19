@@ -4,9 +4,10 @@ from typing import Any, Dict, List, Tuple, Optional
 
 import requests
 
+import lac_covid19.const as const
+import lac_covid19.const.paths as paths
 from lac_covid19.geo.residential_addresses import RESIDENTIAL_ADDRESSES
 from lac_covid19.geo.manual_geocodes import MANUAL_GEOCODES
-import lac_covid19.const.paths as paths
 
 
 URL_SINGLE_ADDRESS = 'https://geocoding.geo.census.gov/geocoder/locations/onelineaddress'
@@ -107,7 +108,7 @@ def read_geocodes():
         current_request += 1
 
     with open(paths.ADDRESS_GEOCODES, 'w') as f:
-        json.dump(address_coordinates, f)
+        json.dump(address_coordinates, f, indent=const.JSON_INDENT)
 
 
 if __name__ == "__main__":

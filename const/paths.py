@@ -53,7 +53,6 @@ LACPH_RACE_RAW = os.path.join(DIR_LACPH_TABLES,
 TEMPLATE_DATA = 'data-{}.{}'
 
 CSA_CURRENT = os.path.join(DIR_DOCS, TEMPLATE_DATA.format('csa-current', CSV))
-CSA_GEO_STATS = os.path.join(DIR_DOCS, TEMPLATE_DATA.format('geo-csa', GEOJSON))
 RESIDENTIAL = os.path.join(DIR_DOCS, TEMPLATE_DATA.format('residential', CSV))
 
 RAW_DATA = os.path.join(DIR_PICKLED, TEMPLATE_DATA.format('raw', PICKLE))
@@ -65,8 +64,6 @@ POPULATION_CSA = _POPULATION_MAP.format('csa')
 POPULATION_AGE = _POPULATION_MAP.format('age')
 POPULATION_GENDER = _POPULATION_MAP.format('gender')
 POPULATION_RACE = _POPULATION_MAP.format('race')
-
-ADDRESS_GEOCODES = os.path.join(DIR_DOCS, 'address-geocodes.{}'.format(JSON))
 
 DIR_APPEND = os.path.join(DIR_PROJECT, 'append-data')
 _APPEND_CSV = os.path.join(DIR_APPEND, 'append-{{}}.{}'.format(CSV))
@@ -80,6 +77,12 @@ DIR_DELTAS = os.path.join(DIR_DOCS, 'deltas')
 _DELTA_CSV = 'delta-{{}}.{}'.format(CSV)
 AGE_DELTA = os.path.join(DIR_DELTAS, _DELTA_CSV.format('age'))
 REGION_DELTA = os.path.join(DIR_DELTAS, _DELTA_CSV.format('region'))
+
+DIR_REFERENCE = os.path.join(DIR_DOCS, 'reference')
+ADDRESS_GEOCODES = os.path.join(DIR_REFERENCE,
+                                'address-geocodes.{}'.format(JSON))
+CSA_GEO_STATS = os.path.join(DIR_REFERENCE,
+                             TEMPLATE_DATA.format('geo-csa', GEOJSON))
 
 
 def pandas_export(title: str) -> Tuple[str, str]:
