@@ -3,7 +3,6 @@ import json
 from typing import Dict, Optional
 
 import lac_covid19.const as const
-import lac_covid19.const.groups as group
 import lac_covid19.const.paths as paths
 
 def read_population_csv(table_path: str, key_index: int,
@@ -61,12 +60,12 @@ AGE_MAP = {
     '80+ years old': const.AGE_OVER_80,
 }
 
-RACE_MAP = {'American Indian or Alaska Native': group.RACE_AI_AN,
-            'Asian': group.RACE_ASIAN,
-            'Black/African American': group.RACE_BLACK,
-            'Latino/Hispanic': group.RACE_HL,
-            'Native Hawaiian or Other Pacific Islander': group.RACE_NH_PI,
-            'White': group.RACE_WHITE}
+RACE_MAP = {'American Indian or Alaska Native': const.RACE_AI_AN,
+            'Asian': const.RACE_ASIAN,
+            'Black/African American': const.RACE_BLACK,
+            'Latino/Hispanic': const.RACE_HL,
+            'Native Hawaiian or Other Pacific Islander': const.RACE_NH_PI,
+            'White': const.RACE_WHITE}
 
 
 def read_demographic_table(
@@ -76,8 +75,8 @@ def read_demographic_table(
     raw_table = read_population_csv(table_path, 1, -1)
 
     del raw_table[UNKOWN]
-    if group.OTHER in raw_table:
-        del raw_table[group.OTHER]
+    if const.OTHER in raw_table:
+        del raw_table[const.OTHER]
 
     for key in raw_table:
         raw_table[key] = int(raw_table[key])

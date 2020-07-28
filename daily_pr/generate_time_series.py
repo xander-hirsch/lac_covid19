@@ -10,25 +10,24 @@ import numpy as np
 import pandas as pd
 
 import lac_covid19.const as const
-import lac_covid19.const.columns as col
 import lac_covid19.const.lac_regions as lac_regions
 import lac_covid19.const.paths as paths
 import lac_covid19.daily_pr.bad_data as bad_data
 import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats
 import lac_covid19.population as population
 
-DATE = col.DATE
-CASES = col.CASES
-DEATHS = col.DEATHS
+DATE = const.DATE
+CASES = const.CASES
+DEATHS = const.DEATHS
 
-RATE_SCALE = col.RATE_SCALE
-CASE_RATE = col.CASE_RATE
-DEATH_RATE = col.DEATH_RATE
+RATE_SCALE = const.RATE_SCALE
+CASE_RATE = const.CASE_RATE
+DEATH_RATE = const.DEATH_RATE
 
-AREA = col.AREA
-REGION = col.REGION
-POPULATION = col.POPULATION
-CF_OUTBREAK = col.CF_OUTBREAK
+AREA = const.AREA
+REGION = const.REGION
+POPULATION = const.POPULATION
+CF_OUTBREAK = const.CF_OUTBREAK
 
 
 def calculate_rate(date_group_entry: pd.Series, population_map: pd.Series,
@@ -117,17 +116,17 @@ def create_main_stats(
             Tests.
     """
 
-    TEST_RESULTS = col.TEST_RESULTS
-    PERCENT_POSITIVE = col.PERCENT_POSITIVE_TESTS
+    TEST_RESULTS = const.TEST_RESULTS
+    PERCENT_POSITIVE = const.PERCENT_POSITIVE_TESTS
 
     data = {
         DATE: map(access_date, many_daily_pr),
-        col.NEW_CASES: map(lambda x: x[col.NEW_CASES], many_daily_pr),
+        const.NEW_CASES: map(lambda x: x[const.NEW_CASES], many_daily_pr),
         CASES: map(lambda x: x[CASES], many_daily_pr),
-        col.NEW_DEATHS: map(lambda x: x[col.NEW_DEATHS], many_daily_pr),
+        const.NEW_DEATHS: map(lambda x: x[const.NEW_DEATHS], many_daily_pr),
         DEATHS: map(lambda x: x[DEATHS], many_daily_pr),
-        col.HOSPITALIZATIONS:
-            map(lambda x: x[col.HOSPITALIZATIONS], many_daily_pr),
+        const.HOSPITALIZATIONS:
+            map(lambda x: x[const.HOSPITALIZATIONS], many_daily_pr),
         TEST_RESULTS: map(lambda x: x[TEST_RESULTS], many_daily_pr),
         PERCENT_POSITIVE: map(lambda x: x[PERCENT_POSITIVE], many_daily_pr)
     }
@@ -153,9 +152,9 @@ def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
             Rate.
     """
 
-    AGE_GROUP = col.AGE_GROUP
+    AGE_GROUP = const.AGE_GROUP
 
-    data = map(lambda x: make_section_ts(x, col.CASES_BY_AGE), many_daily_pr)
+    data = map(lambda x: make_section_ts(x, const.CASES_BY_AGE), many_daily_pr)
     df = tidy_data(pd.DataFrame(data), AGE_GROUP, CASES)
 
     age_pop = population.AGE
@@ -175,14 +174,14 @@ def create_by_gender(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
         Time series DataFrame with the entries: Date, Gender, Cases, Case Rate.
     """
 
-    GENDER = col.GENDER
-    CASES_BY_GENDER = col.CASES_BY_GENDER
+    GENDER = const.GENDER
+    CASES_BY_GENDER = const.CASES_BY_GENDER
 
     data = [make_section_ts(x, CASES_BY_GENDER)
             for x in many_daily_pr if x[CASES_BY_GENDER]]
 
     df = tidy_data(pd.DataFrame(data), GENDER, CASES, False)
-    df = df[df[GENDER] != col.OTHER]
+    df = df[df[GENDER] != const.OTHER]
     df[GENDER] = df[GENDER].astype('category')
     df[CASES] = df[CASES].astype('int')
 
@@ -201,12 +200,12 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
             Deaths, Death Rate.
     """
 
-    RACE = col.RACE
+    RACE = const.RACE
 
-    cases_raw = [make_section_ts(x, col.CASES_BY_RACE)
-                 for x in many_daily_pr if x[col.CASES_BY_RACE]]
-    deaths_raw = [make_section_ts(x, col.DEATHS_BY_RACE)
-                  for x in many_daily_pr if x[col.DEATHS_BY_RACE]]
+    cases_raw = [make_section_ts(x, const.CASES_BY_RACE)
+                 for x in many_daily_pr if x[const.CASES_BY_RACE]]
+    deaths_raw = [make_section_ts(x, const.DEATHS_BY_RACE)
+                  for x in many_daily_pr if x[const.DEATHS_BY_RACE]]
 
     # Create cases and deaths tables seperately
     df_cases = (pd.DataFrame(cases_raw)

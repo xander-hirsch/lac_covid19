@@ -6,7 +6,6 @@ import pandas as pd
 import requests
 
 import lac_covid19.const as const
-import lac_covid19.const.columns as col
 import lac_covid19.const.paths as paths
 
 URL_CSA_GEOJSON = 'https://opendata.arcgis.com/datasets/7b8a64cab4a44c0f86f12c909c5d7f1a_23.geojson'
@@ -91,13 +90,13 @@ def merge_csa_geo():
         geo_csa_stats[FEATURES] += ({
             TYPE: TYPE_FEATURE,
             PROPERTIES: {
-                col.AREA: area,
-                col.REGION: csa_entry[const.REGION],
-                col.CASES: csa_entry[const.CASES],
-                col.CASE_RATE: csa_entry[const.CASE_RATE],
-                col.DEATHS: csa_entry[const.DEATHS],
-                col.DEATH_RATE: csa_entry[const.DEATH_RATE],
-                col.CF_OUTBREAK: csa_entry[const.CF_OUTBREAK],
+                const.AREA: area,
+                const.REGION: csa_entry[const.REGION],
+                const.CASES: csa_entry[const.CASES],
+                const.CASE_RATE: csa_entry[const.CASE_RATE],
+                const.DEATHS: csa_entry[const.DEATHS],
+                const.DEATH_RATE: csa_entry[const.DEATH_RATE],
+                const.CF_OUTBREAK: csa_entry[const.CF_OUTBREAK],
             },
             GEOMETRY: geometry,
         },)

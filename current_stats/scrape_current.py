@@ -6,8 +6,6 @@ import pandas as pd
 import requests
 
 import lac_covid19.const as const
-import lac_covid19.const.columns as col
-import lac_covid19.const.health_departments as health_dept
 import lac_covid19.const.lac_regions as lac_regions
 
 STATS_URL = 'http://publichealth.lacounty.gov/media/Coronavirus/locations.htm'
@@ -132,26 +130,26 @@ def query_all_areas(
     hd_deaths = parse_health_dept_count(health_dept_deaths_header)
     csa_cases_deaths = parse_csa(csa_header)
 
-    lb_cases = hd_cases[health_dept.LONG_BEACH]
-    lb_deaths = hd_deaths[health_dept.LONG_BEACH]
+    lb_cases = hd_cases[const.hd.LONG_BEACH]
+    lb_deaths = hd_deaths[const.hd.LONG_BEACH]
 
-    lb_multiplier = col.RATE_SCALE / health_dept.POPULATION_LONG_BEACH
+    lb_multiplier = const.RATE_SCALE / const.hd.POPULATION_LONG_BEACH
     lb_case_rate = round(lb_cases * lb_multiplier)
     lb_death_rate = round(lb_deaths * lb_multiplier)
 
     long_beach_entry = pd.Series(
-        (health_dept.CSA_LB, lac_regions.HARBOR, lb_cases, lb_case_rate,
+        (const.hd.CSA_LB, lac_regions.HARBOR, lb_cases, lb_case_rate,
          lb_deaths, lb_death_rate, False), index=csa_index())
 
-    pas_cases = hd_cases[health_dept.PASADENA]
-    pas_deaths = hd_deaths[health_dept.PASADENA]
+    pas_cases = hd_cases[const.hd.PASADENA]
+    pas_deaths = hd_deaths[const.hd.PASADENA]
 
-    pas_multiplier = col.RATE_SCALE / health_dept.POPULATION_PASADENA
+    pas_multiplier = const.RATE_SCALE / const.hd.POPULATION_PASADENA
     pas_case_rate = round(pas_cases * pas_multiplier)
     pas_death_rate = round(pas_deaths * pas_multiplier)
 
     pasadena_entry = pd.Series(
-        (health_dept.CSA_PAS, lac_regions.VERDUGOS, pas_cases, pas_case_rate,
+        (const.hd.CSA_PAS, lac_regions.VERDUGOS, pas_cases, pas_case_rate,
          pas_deaths, pas_death_rate, False), index=csa_index())
 
     all_csa = (csa_cases_deaths
