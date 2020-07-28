@@ -2,16 +2,16 @@
 # coding: utf-8
 
 # # COVID-19 in Los Angeles County
-
+# 
 # * Data sourced from Los Angeles County Department of Public Health's daily 2019 Novel Coronavirus news releases. The archived releases can be found [here](http://publichealth.lacounty.gov/phcommon/public/media/mediaCOVIDdisplay.cfm?unit=media&ou=ph&prog=media)
 # * *Case rate* and *Death rate* are **per 100,000 people**
-# 
-# **Last Update:** Monday, 27 July
-# 
+#  
+# **Last Update:** Tuesday, 28 July
+#  
 # ### Other Sources
 # * Los Angeles County Department of Public Health [**COVID-19 Surveillance Dashboard**](http://dashboard.publichealth.lacounty.gov/covid19_surveillance_dashboard/)
 # * California Department of Public Health [**COVID-19 Public Dashboard**](https://public.tableau.com/views/COVID-19PublicDashboard/Covid-19Public?:embed=y&:display_count=no&:showVizHome=no)
-# 
+#  
 # ### Development and Data
 # * Source code is hosted on GitHub at [amhirsch/lac_covid19](https://github.com/amhirsch/lac_covid19)
 # * CSV time series data can be downloaded [here](https://github.com/amhirsch/lac_covid19/tree/master/docs)
@@ -32,11 +32,10 @@ WIDTH=600
 HEIGHT=400
 
 
-# ## Region
+# ## Regions of Los Angeles
 # Los Angeles County Public Health releases case count by *countywide statistical areas*.
 # These areas partion the entire county into cities, City of Los Angeles sections, and unincorporated areas.
 # The geographic boundaries are published at the [**County of Los Angeles GIS Portal**](https://egis-lacounty.hub.arcgis.com/datasets/countywide-statistical-areas-csa).
-# 
 # 
 # The regions are defined by the Los Angeles Times' [**Mapping L.A.**](http://maps.latimes.com/neighborhoods/) project.
 # Their project goes beyond convenient geographical and freeway partitions.
@@ -49,7 +48,7 @@ HEIGHT=400
 df_region = pd.read_pickle(paths.REGION_TS_PICKLE)
 
 
-# ### Region Ranking by Current COVID-19 Case Rate
+# ### Region List - Sorted by Case Rate
 
 # In[3]:
 
@@ -68,26 +67,9 @@ fig.show()
 
 # ## Statistics by Demographic
 
-# ### Age Group
-
-# In[5]:
-
-
-by_age = pd.read_pickle(paths.AGE_PICKLE)
-# Remove seemingly extraneous data point
-by_age = by_age[(by_age[const.AGE_GROUP] != const.AGE_OVER_65)
-                | (by_age[const.DATE] != pd.Timestamp('2020-04-13'))]
-
-fig = px.line(by_age, x=const.DATE, y=const.CASE_RATE,
-              color=const.AGE_GROUP, width=WIDTH, height=HEIGHT,
-              hover_data=[const.CASES],
-              title='Case Rate by Age Group')
-# fig.show()
-
-
 # ### Gender
 
-# In[6]:
+# In[5]:
 
 
 by_gender = pd.read_pickle(paths.GENDER_PICKLE)
@@ -104,7 +86,7 @@ fig.show()
 
 # ## Aggregate Daily Changes
 
-# In[7]:
+# In[6]:
 
 
 df_summary = pd.read_pickle(paths.MAIN_STATS_PICKLE)
