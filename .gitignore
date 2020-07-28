@@ -17,7 +17,7 @@ pickled/*.pickle
 
 scratchpad.py
 
-data_viz/*.ipynb*
+visualization/*.ipynb*
 
 lacph-monitor/pushbullet-log/
 lacph-monitor/monitor.log
