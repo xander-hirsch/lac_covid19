@@ -28,9 +28,7 @@ def new_daily_pr(date_: str = None):
         date_ = dt.date.today().isoformat()
     else:
         dt.date.fromisoformat(date_)
-    year, month, day = [int(x) for x in date_.split('-')]
-    daily_stats = scrape_daily_stats.query_single_date((year, month, day),
-                                                       False)
+    daily_stats = scrape_daily_stats.query_single_date(date_, False)
     stat_summary = copy.deepcopy(daily_stats)
     stat_summary[const.AREA] = "**{} reported CSA's**".format(
         len(stat_summary[const.AREA]))

@@ -246,7 +246,7 @@ def fetch_press_release(
         The associated date can be retrived with the get_date function.
     """
 
-    pr_date = dt.date(date_[0], date_[1], date_[2])
+    pr_date = dt.date.fromisoformat(date_)
     pr_html_text = ''
 
     if cached:
