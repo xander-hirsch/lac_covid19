@@ -218,7 +218,7 @@ def _cache_read_parsed(pr_date: dt.date) -> Dict[str, Any]:
 def _request_pr_online(pr_date: dt.date) -> str:
     """Requests the press release online and caches a valid response."""
 
-    prid = lacph_prid.DAILY_STATS[_date_to_tuple(pr_date)]
+    prid = lacph_prid.DAILY_STATS[pr_date.isoformat()]
     r = requests.get(LACPH_PR_URL_BASE + str(prid))
     if r.status_code == 200:
         _cache_write_html_resp(r.text, pr_date)
@@ -660,8 +660,7 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     }
 
 
-def query_single_date(date_: Tuple[int, int, int],
-                      cached: bool = True) -> Dict[str, Any]:
+def query_single_date(date_: str, cached: bool = True) -> Dict[str, Any]:
     """This puts together all the steps to go from a given date to a parsed
         response of daily COVID-19 data in Los Angeles County.
 
@@ -672,7 +671,7 @@ def query_single_date(date_: Tuple[int, int, int],
     result = None
 
     if cached:
-        result = _cache_read_parsed(dt.date(*date_))
+        result = _cache_read_parsed(dt.date.fromisoformat(date_))
 
     if result is None:
         result = _parse_entire_day(fetch_press_release(date_))

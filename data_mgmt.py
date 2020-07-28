@@ -67,14 +67,16 @@ def export_time_series():
     for csv_file, pickle_file, df in location_export:
         write_dataframe(df, csv_file, pickle_file)
 
+
 def calc_deltas():
     durations = 7, 14, 30
 
-    df_age_ts = pd.read_pickle(paths.AGE_PICKLE)
+    # df_age_ts = pd.read_pickle(paths.AGE_PICKLE)
     df_region_ts = pd.read_pickle(paths.REGION_TS_PICKLE)
 
-    df_age_delta = analysis.deltas.time_series_delta(df_age_ts, const.AGE_GROUP,
-                                                     durations)
+    # df_age_delta = analysis.deltas.time_series_delta(df_age_ts,
+    #                                                  const.AGE_GROUP,
+    #                                                  durations)
     df_region_delta = analysis.deltas.time_series_delta(df_region_ts,
                                                         const.REGION,
                                                         durations)
@@ -174,7 +176,6 @@ def update_data(date_=None):
     geo_csa.merge_csa_geo()
 
     append_all(date_)
-
 
 
 # if __name__ == "__main__":
