@@ -39614,8 +39614,8 @@ Date,Area,Region,Cases,Case Rate,CF Outbreak
 2020-07-26,Unincorporated - Whittier Narrows,San Gabriel Valley,0,0.0,False
 2020-07-26,Unincorporated - Willowbrook,South LA,975,2793.0,False
 2020-07-26,Unincorporated - Wiseburn,South Bay,88,1460.0,False
-2020-07-26,City of Long Beach,Harbor,7479,1595.07,
-2020-07-26,City of Pasadena,Verdugos,1875,1327.47,
+2020-07-26,City of Long Beach,Harbor,7479,1595.07,False
+2020-07-26,City of Pasadena,Verdugos,1875,1327.47,False
 2020-07-27,City of Agoura Hills,Santa Monica Mountains,100,479.0,False
 2020-07-27,City of Alhambra,San Gabriel Valley,820,946.0,False
 2020-07-27,City of Arcadia,San Gabriel Valley,299,518.0,False

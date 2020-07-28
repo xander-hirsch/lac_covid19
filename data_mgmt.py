@@ -85,6 +85,12 @@ def calc_deltas():
     df_region_delta.to_csv(paths.REGION_DELTA, index=False)
 
 
+def filter_current():
+    df_age = pd.read_pickle(paths.AGE_PICKLE)
+    age_current = analysis.current.snapshot(df_age)
+    age_current.to_csv(paths.AGE_CURRENT, index=False)
+
+
 def request_current_csa():
     all_tables = scrape_current.fetch_stats()
     area_cases_deaths = scrape_current.query_all_areas(all_tables[0])
@@ -155,6 +161,7 @@ def update_press_release(date_=None):
 
     export_time_series()
     calc_deltas()
+    filter_current()
 
     append_time_series(date_)
 

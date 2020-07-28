@@ -84,6 +84,9 @@ ADDRESS_GEOCODES = os.path.join(DIR_REFERENCE,
 CSA_GEO_STATS = os.path.join(DIR_REFERENCE,
                              'csa-stats-template.{}'.format(GEOJSON))
 
+DIR_CURRENT = os.path.join(DIR_DOCS, 'current')
+AGE_CURRENT = os.path.join(DIR_CURRENT, 'current-age.{}'.format(CSV))
+
 
 def pandas_export(title: str) -> Tuple[str, str]:
     """Generates paths for a pandas dataframe given a description.
