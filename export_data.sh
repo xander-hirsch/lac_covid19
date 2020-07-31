@@ -6,7 +6,10 @@ FILE_DATA_EXPORT="$FOLDER_DATA_EXPORT.zip"
 
 cd $DIR_DATA
 
-cp ../docs/deltas/*.csv .
+cp ../docs/{current,deltas}/*.csv .
+
+# Change filename for ArcGIS compatability
+mv region-deltas.csv delta-region.csv
 
 zip $FILE_DATA_EXPORT *.csv \
     && mv $FILE_DATA_EXPORT $W10_DATA \
