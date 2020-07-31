@@ -20,6 +20,10 @@ MATCH = 'Match'
 
 
 def prepare_census_geocode() -> None:
+    """Interprets the residential name-address mapping to produce a CSV request
+        for the Census geocoder.
+    """
+
     census_format = []
     for location_name in RESIDENTIAL_ADDRESSES:
         street, city, state, zip_ = RESIDENTIAL_ADDRESSES[location_name].split(', ')
@@ -31,6 +35,7 @@ def prepare_census_geocode() -> None:
 
 
 def _request_address(address: str) -> List[Dict[str, Any]]:
+    """Requests a single address from the Census geocoder."""
     payload = {
         'format': FORMAT,
         'benchmark': BENCHMARK,
@@ -42,6 +47,7 @@ def _request_address(address: str) -> List[Dict[str, Any]]:
 
 
 def _extract_coordinates(address_match: Dict[str, Any]) -> Tuple[float, float]:
+    """Extracts the coordinates from a Census geocoder reply."""
     position = address_match['coordinates']
     return position['y'], position['x']
 
@@ -62,6 +68,10 @@ def query_single_address(address: str) -> Optional[Tuple[int, int]]:
 
 
 def read_geocodes():
+    """Reads a batch request reply and tries single address requests where the
+        address failed in the batch request.
+    """
+
     ADDRESS_INDEX = 1
     MATCH_INDEX = 2
     COORDINATE_INDEX = 5
@@ -109,8 +119,3 @@ def read_geocodes():
 
     with open(paths.ADDRESS_GEOCODES, 'w') as f:
         json.dump(address_coordinates, f, indent=const.JSON_INDENT)
-
-
-if __name__ == "__main__":
-    pass
-    # prepare_census_geocode()

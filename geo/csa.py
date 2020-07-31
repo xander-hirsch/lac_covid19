@@ -25,7 +25,9 @@ COMPACT_SEPERATORS = ',', ':'
 
 
 def _request_csa() -> Dict[str, Dict]:
-    """Requests the countywide statistical areas geojson from online."""
+    """Pulls the official Countywide Statistical Areas file from the LA County
+        Enterprise GIS Portal. Parses the file for the CSA polygons.
+    """
 
     r = requests.get(URL_CSA_GEOJSON)
     if r.status_code == 200:
@@ -47,7 +49,9 @@ def _request_csa() -> Dict[str, Dict]:
 
 
 def load_csa_mapping() -> Dict[str, Dict]:
-    """Read in the CSA geometries or requests from online."""
+    """Similar to _request_csa, but tries a local file first before requesting
+        the CSA file from online.
+    """
 
     if os.path.isfile(paths.CSA_POLYGONS):
         with open(paths.CSA_POLYGONS) as f:
@@ -57,6 +61,10 @@ def load_csa_mapping() -> Dict[str, Dict]:
 
 
 def parse_csa_objectid() -> Dict[str, int]:
+    """Generates a mapping of countywide statistical area names to OBJECTID
+        values for the ArcGIS map.
+    """
+
     raw_data = None
     with open(paths.CSA_ARCGIS_QUERY) as f:
         raw_data = json.load(f)
@@ -76,7 +84,10 @@ def parse_csa_objectid() -> Dict[str, int]:
 
 
 def merge_csa_geo(current: bool = False):
-    """Merges the recent CSA cases and deaths with the geographic data."""
+    """Merges the most recent CSA cases and deaths listing with the county
+        geojson map. For version control purposes, the cases and deaths fields
+        will be populated with zero unless otherwise specified.
+    """
 
     csa_mapping = load_csa_mapping()
     csa_entries = pd.read_pickle(paths.CSA_CURRENT_PICKLE)
@@ -109,7 +120,3 @@ def merge_csa_geo(current: bool = False):
 
     with open(paths.CSA_GEO_STATS, 'w') as f:
         json.dump(geo_csa_stats, f, separators=COMPACT_SEPERATORS)
-
-
-# if __name__ == "__main__":
-#     merge_csa_geo()
