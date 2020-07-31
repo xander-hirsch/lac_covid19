@@ -86,9 +86,7 @@ CSA_GEO_STATS = os.path.join(DIR_REFERENCE,
 ## Subdir - Current ##
 DIR_CURRENT = os.path.join(DIR_DOCS, 'current')
 _CURRENT_CSV = '{{}}-current.{csv}'.format(csv=CSV)
-AGE_CURRENT = os.path.join(DIR_CURRENT, 'current-age.{}'.format(CSV))
-CSA_CURRENT = os.path.join(DIR_DOCS, TEMPLATE_DATA.format('csa-current', CSV))
-RESIDENTIAL = os.path.join(DIR_DOCS, TEMPLATE_DATA.format('residential', CSV))
+AGE_CURRENT = os.path.join(DIR_CURRENT, _CURRENT_CSV.format(_AGE))
 ## Subdir - Population ##
 DIR_POPULATION = os.path.join(DIR_DOCS, 'population')
 _POPULATION_MAP = os.path.join(DIR_POPULATION,
@@ -99,11 +97,13 @@ POPULATION_GENDER = _POPULATION_MAP.format(_GENDER)
 POPULATION_RACE = _POPULATION_MAP.format(_RACE)
 
 
-def pandas_export(title: str) -> Tuple[str, str]:
+def pandas_export(title: str,
+                  output_dir: str = DIR_TIME_SERIES) -> Tuple[str, str]:
     """Generates paths for a pandas dataframe given a description.
 
     Args:
         title: A brief description to include in the filename
+        output_dir: The export directory
 
     Returns:
         A tuple of paths for a CSV and pickle export.
@@ -111,17 +111,18 @@ def pandas_export(title: str) -> Tuple[str, str]:
             1: pickle path
     """
 
-    csv_file, pickle_file = [TEMPLATE_DATA.format(title, x)
+    csv_file, pickle_file = ['{}.{}'.format(title, x)
                              for x in (CSV, PICKLE)]
 
-    return (os.path.join(DIR_DOCS, csv_file),
+    return (os.path.join(output_dir, csv_file),
             os.path.join(DIR_PICKLED, pickle_file))
 
 ## Subdir - Time Series ##
-MAIN_STATS_CSV, MAIN_STATS_PICKLE = pandas_export('summary')
-AGE_CSV, AGE_PICKLE = pandas_export('age')
-GENDER_CSV, GENDER_PICKLE = pandas_export('gender')
-RACE_CSV, RACE_PICKLE = pandas_export('race')
-CSA_TS_CSV, CSA_TS_PICKLE = pandas_export('csa-ts')
-REGION_TS_CSV, REGION_TS_PICKLE = pandas_export('region-ts')
-CSA_CURRENT_CSV, CSA_CURRENT_PICKLE = pandas_export('csa-current')
+_TS_TEMPLATE = '{}-ts'
+MAIN_STATS_CSV, MAIN_STATS_PICKLE = pandas_export(_TS_TEMPLATE.format(_SUMMARY))
+AGE_CSV, AGE_PICKLE = pandas_export(_TS_TEMPLATE.format(_AGE))
+GENDER_CSV, GENDER_PICKLE = pandas_export(_TS_TEMPLATE.format(_GENDER))
+RACE_CSV, RACE_PICKLE = pandas_export(_TS_TEMPLATE.format(_RACE))
+CSA_TS_CSV, CSA_TS_PICKLE = pandas_export(_TS_TEMPLATE.format(_CSA))
+REGION_TS_CSV, REGION_TS_PICKLE = pandas_export(_TS_TEMPLATE.format(_REGION))
+CSA_CURRENT_CSV, CSA_CURRENT_PICKLE = pandas_export('csa-current', DIR_CURRENT)
