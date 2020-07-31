@@ -7,7 +7,7 @@ import pandas as pd
 import lac_covid19.analysis as analysis
 import lac_covid19.const as const
 import lac_covid19.const.paths as paths
-import lac_covid19.covid_plots as covid_plots
+import lac_covid19.visualization.plots as covid_plots
 import lac_covid19.current_stats.scrape_current as scrape_current
 import lac_covid19.daily_pr.bad_data as bad_data
 import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats
