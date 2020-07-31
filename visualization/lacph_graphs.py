@@ -6,7 +6,7 @@
 # * Data sourced from Los Angeles County Department of Public Health's daily 2019 Novel Coronavirus news releases. The archived releases can be found [here](http://publichealth.lacounty.gov/phcommon/public/media/mediaCOVIDdisplay.cfm?unit=media&ou=ph&prog=media)
 # * *Case rate* and *Death rate* are **per 100,000 people**
 #  
-# **Last Update:** Wednesday, 29 July
+# **Last Update:** Thursday, 30 July
 #  
 # ### Other Sources
 # * Los Angeles County Department of Public Health [**COVID-19 Surveillance Dashboard**](http://dashboard.publichealth.lacounty.gov/covid19_surveillance_dashboard/)
@@ -26,7 +26,7 @@ from plotly.subplots import make_subplots
 
 import lac_covid19.const as const
 import lac_covid19.const.paths as paths
-import lac_covid19.covid_plots as covid_plots
+import lac_covid19.visualization.plots as covid_plots
 
 WIDTH=600
 HEIGHT=400
