@@ -26,7 +26,7 @@ from plotly.subplots import make_subplots
 
 import lac_covid19.const as const
 import lac_covid19.const.paths as paths
-import lac_covid19.covid_plots as covid_plots
+import lac_covid19.visualization.plots as covid_plots
 
 WIDTH=600
 HEIGHT=400

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[2]:
 
 
 import matplotlib.pyplot as plt
@@ -12,7 +12,7 @@ import seaborn as sns
 import lac_covid19.const as const
 import lac_covid19.const.lac_regions as lac_regions
 import lac_covid19.const.paths as paths
-import lac_covid19.covid_plots as covid_plots
+import lac_covid19.visualization.plots as covid_plots
 
 sns.set()
 
@@ -21,13 +21,13 @@ df_csa_curr = pd.read_pickle(paths.CSA_CURRENT_PICKLE)
 
 # ## Choropleth Values
 
-# In[2]:
+# In[3]:
 
 
 covid_plots.csa_distribution(df_csa_curr, lac_regions.ALL_CSA, const.CASE_RATE)
 
 
-# In[11]:
+# In[4]:
 
 
 covid_plots.csa_distribution(df_csa_curr, lac_regions.ALL_CSA, const.DEATH_RATE, 20)
@@ -35,13 +35,13 @@ covid_plots.csa_distribution(df_csa_curr, lac_regions.ALL_CSA, const.DEATH_RATE,
 
 # ## Region
 
-# In[4]:
+# In[5]:
 
 
 print(tuple(lac_regions.REGIONS.keys()))
 
 
-# In[5]:
+# In[6]:
 
 
 bin_width = {
@@ -58,13 +58,13 @@ region = lac_regions.WESTSIDE
 covid_plots.csa_distribution(df_csa_curr, lac_regions.REGIONS[region], const.CASE_RATE, bin_width.get(region, 300))
 
 
-# In[6]:
+# In[7]:
 
 
 df_csa_ts = pd.read_pickle(paths.CSA_TS_PICKLE)
 
 
-# In[7]:
+# In[8]:
 
 
 area = lac_regions.ALL_CSA[25]
@@ -73,7 +73,7 @@ area = lac_regions.ALL_CSA[25]
 
 # ## Rolling Average
 
-# In[8]:
+# In[10]:
 
 
 df_summary = pd.read_pickle(paths.MAIN_STATS_PICKLE)
@@ -84,20 +84,20 @@ df_summary['New Cases Predictor'] = df_summary['Avg New Cases'].transform(np.log
 df_summary['Total Cases Predictor'] = df_summary[const.CASES].dropna().transform(np.log)
 
 sns.scatterplot(x=const.DATE, y=const.NEW_CASES, data=df_summary)
-plt.xlim((pd.Timestamp(2020, 3, 29), pd.Timestamp(2020, 7, 17)))
+plt.xlim((pd.Timestamp(2020, 3, 29), pd.Timestamp(2020, 7, 30)))
 plt.xticks(rotation='45')
 plt.title('New COVID-19 Cases in LA County over Time')
 plt.show()
 
 ax = sns.scatterplot(x=const.DATE, y='Avg New Cases', data=df_summary)
-plt.xlim((pd.Timestamp(2020, 3, 29), pd.Timestamp(2020, 7, 17)))
+plt.xlim((pd.Timestamp(2020, 3, 29), pd.Timestamp(2020, 7, 30)))
 plt.xticks(rotation='45')
 plt.title('New COVID-19 Cases in LA County over Time')
 plt.ylabel('3 Day Rolling Average')
 plt.show()
 
 ax = sns.scatterplot(x=const.DATE, y='New Cases Predictor', data=df_summary)
-plt.xlim((pd.Timestamp(2020, 3, 29), pd.Timestamp(2020, 7, 17)))
+plt.xlim((pd.Timestamp(2020, 3, 29), pd.Timestamp(2020, 7, 30)))
 plt.xticks(rotation='45')
 plt.title('New COVID-19 Cases in LA County over Time')
 plt.ylabel('ln(3 Day Rolling Average)')

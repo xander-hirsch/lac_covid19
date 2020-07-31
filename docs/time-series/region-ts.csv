@@ -1,0 +1,1921 @@
+Date,Region,Cases,Case Rate
+2020-03-30,Angeles Forest,0,0.0
+2020-03-30,Antelope Valley,36,9.17
+2020-03-30,Central LA,403,45.46
+2020-03-30,Eastside,27,9.31
+2020-03-30,Harbor,186,13.47
+2020-03-30,Northeast LA,25,14.83
+2020-03-30,Northwest County,44,15.54
+2020-03-30,Pomona Valley,8,3.5
+2020-03-30,San Fernando Valley,347,21.61
+2020-03-30,San Gabriel Valley,93,6.3
+2020-03-30,Santa Monica Mountains,20,22.98
+2020-03-30,South Bay,213,27.46
+2020-03-30,South LA,91,10.79
+2020-03-30,Southeast,156,12.7
+2020-03-30,Verdugos,94,15.13
+2020-03-30,Westside,310,55.09
+2020-03-31,Angeles Forest,0,0.0
+2020-03-31,Antelope Valley,45,11.46
+2020-03-31,Central LA,470,53.21
+2020-03-31,Eastside,32,11.03
+2020-03-31,Harbor,219,15.87
+2020-03-31,Northeast LA,30,17.8
+2020-03-31,Northwest County,51,18.2
+2020-03-31,Pomona Valley,14,6.13
+2020-03-31,San Fernando Valley,410,25.53
+2020-03-31,San Gabriel Valley,115,7.79
+2020-03-31,Santa Monica Mountains,24,27.57
+2020-03-31,South Bay,261,33.64
+2020-03-31,South LA,147,17.44
+2020-03-31,Southeast,201,16.36
+2020-03-31,Verdugos,131,21.08
+2020-03-31,Westside,357,63.44
+2020-04-01,Angeles Forest,0,0.0
+2020-04-01,Antelope Valley,50,12.74
+2020-04-01,Central LA,547,62.12
+2020-04-01,Eastside,40,13.79
+2020-04-01,Harbor,249,27.32
+2020-04-01,Northeast LA,36,21.36
+2020-04-01,Northwest County,53,18.95
+2020-04-01,Pomona Valley,18,7.88
+2020-04-01,San Fernando Valley,487,30.33
+2020-04-01,San Gabriel Valley,151,10.22
+2020-04-01,Santa Monica Mountains,23,26.43
+2020-04-01,South Bay,303,39.06
+2020-04-01,South LA,221,26.21
+2020-04-01,Southeast,248,20.19
+2020-04-01,Verdugos,154,32.08
+2020-04-01,Westside,396,70.37
+2020-04-02,Angeles Forest,0,0.0
+2020-04-02,Antelope Valley,53,13.5
+2020-04-02,Central LA,604,68.48
+2020-04-02,Eastside,58,20.0
+2020-04-02,Harbor,277,30.39
+2020-04-02,Northeast LA,41,24.32
+2020-04-02,Northwest County,74,26.54
+2020-04-02,Pomona Valley,20,8.76
+2020-04-02,San Fernando Valley,568,35.37
+2020-04-02,San Gabriel Valley,177,11.99
+2020-04-02,Santa Monica Mountains,32,36.77
+2020-04-02,South Bay,346,44.6
+2020-04-02,South LA,271,32.15
+2020-04-02,Southeast,290,23.61
+2020-04-02,Verdugos,168,34.99
+2020-04-02,Westside,424,75.35
+2020-04-03,Angeles Forest,0,0.0
+2020-04-03,Antelope Valley,65,16.56
+2020-04-03,Central LA,698,79.24
+2020-04-03,Eastside,74,25.52
+2020-04-03,Harbor,324,35.55
+2020-04-03,Northeast LA,53,31.44
+2020-04-03,Northwest County,93,33.74
+2020-04-03,Pomona Valley,28,12.26
+2020-04-03,San Fernando Valley,658,40.98
+2020-04-03,San Gabriel Valley,200,13.54
+2020-04-03,Santa Monica Mountains,39,44.81
+2020-04-03,South Bay,402,51.82
+2020-04-03,South LA,314,37.25
+2020-04-03,Southeast,325,26.46
+2020-04-03,Verdugos,182,37.91
+2020-04-03,Westside,466,82.81
+2020-04-04,Angeles Forest,0,0.0
+2020-04-04,Antelope Valley,74,18.85
+2020-04-04,Central LA,775,88.15
+2020-04-04,Eastside,103,35.52
+2020-04-04,Harbor,363,39.83
+2020-04-04,Northeast LA,69,40.93
+2020-04-04,Northwest County,108,39.05
+2020-04-04,Pomona Valley,31,13.57
+2020-04-04,San Fernando Valley,802,49.95
+2020-04-04,San Gabriel Valley,248,16.79
+2020-04-04,Santa Monica Mountains,41,47.11
+2020-04-04,South Bay,440,56.72
+2020-04-04,South LA,376,44.6
+2020-04-04,Southeast,398,32.4
+2020-04-04,Verdugos,202,42.08
+2020-04-04,Westside,501,89.03
+2020-04-05,Angeles Forest,0,0.0
+2020-04-05,Antelope Valley,88,22.41
+2020-04-05,Central LA,869,99.14
+2020-04-05,Eastside,110,37.93
+2020-04-05,Harbor,412,45.2
+2020-04-05,Northeast LA,84,49.83
+2020-04-05,Northwest County,122,44.35
+2020-04-05,Pomona Valley,36,15.76
+2020-04-05,San Fernando Valley,906,56.42
+2020-04-05,San Gabriel Valley,298,20.18
+2020-04-05,Santa Monica Mountains,51,58.6
+2020-04-05,South Bay,478,61.62
+2020-04-05,South LA,438,51.95
+2020-04-05,Southeast,502,40.87
+2020-04-05,Verdugos,254,52.91
+2020-04-05,Westside,537,95.43
+2020-04-06,Angeles Forest,0,0.0
+2020-04-06,Antelope Valley,107,27.25
+2020-04-06,Central LA,927,105.62
+2020-04-06,Eastside,123,42.42
+2020-04-06,Harbor,450,49.37
+2020-04-06,Northeast LA,92,54.58
+2020-04-06,Northwest County,128,46.25
+2020-04-06,Pomona Valley,43,18.82
+2020-04-06,San Fernando Valley,979,60.97
+2020-04-06,San Gabriel Valley,343,23.23
+2020-04-06,Santa Monica Mountains,52,59.74
+2020-04-06,South Bay,523,67.42
+2020-04-06,South LA,476,56.46
+2020-04-06,Southeast,546,44.45
+2020-04-06,Verdugos,272,56.66
+2020-04-06,Westside,558,99.16
+2020-04-07,Angeles Forest,0,0.0
+2020-04-07,Antelope Valley,117,29.8
+2020-04-07,Central LA,1002,114.29
+2020-04-07,Eastside,133,45.86
+2020-04-07,Harbor,479,52.55
+2020-04-07,Northeast LA,104,61.7
+2020-04-07,Northwest County,135,48.9
+2020-04-07,Pomona Valley,48,21.01
+2020-04-07,San Fernando Valley,1088,67.76
+2020-04-07,San Gabriel Valley,377,25.53
+2020-04-07,Santa Monica Mountains,53,60.89
+2020-04-07,South Bay,566,72.96
+2020-04-07,South LA,537,63.7
+2020-04-07,Southeast,615,50.06
+2020-04-07,Verdugos,307,63.95
+2020-04-07,Westside,590,104.85
+2020-04-08,Angeles Forest,0,0.0
+2020-04-08,Antelope Valley,138,35.15
+2020-04-08,Central LA,1068,121.7
+2020-04-08,Eastside,149,51.38
+2020-04-08,Harbor,525,57.6
+2020-04-08,Northeast LA,123,72.97
+2020-04-08,Northwest County,149,54.21
+2020-04-08,Pomona Valley,55,24.08
+2020-04-08,San Fernando Valley,1172,72.99
+2020-04-08,San Gabriel Valley,392,26.54
+2020-04-08,Santa Monica Mountains,59,67.79
+2020-04-08,South Bay,609,78.5
+2020-04-08,South LA,596,70.7
+2020-04-08,Southeast,675,54.95
+2020-04-08,Verdugos,337,70.2
+2020-04-08,Westside,610,108.4
+2020-04-09,Angeles Forest,0,0.0
+2020-04-09,Antelope Valley,156,39.73
+2020-04-09,Central LA,1140,130.02
+2020-04-09,Eastside,161,55.52
+2020-04-09,Harbor,571,62.64
+2020-04-09,Northeast LA,138,81.87
+2020-04-09,Northwest County,155,56.11
+2020-04-09,Pomona Valley,61,26.7
+2020-04-09,San Fernando Valley,1247,77.66
+2020-04-09,San Gabriel Valley,440,29.79
+2020-04-09,Santa Monica Mountains,61,70.08
+2020-04-09,South Bay,650,83.79
+2020-04-09,South LA,647,76.75
+2020-04-09,Southeast,747,60.81
+2020-04-09,Verdugos,386,80.4
+2020-04-09,Westside,623,110.71
+2020-04-10,Angeles Forest,0,0.0
+2020-04-10,Antelope Valley,172,43.81
+2020-04-10,Central LA,1204,137.31
+2020-04-10,Eastside,178,61.38
+2020-04-10,Harbor,609,66.81
+2020-04-10,Northeast LA,141,83.65
+2020-04-10,Northwest County,161,58.0
+2020-04-10,Pomona Valley,63,27.58
+2020-04-10,San Fernando Valley,1316,81.95
+2020-04-10,San Gabriel Valley,487,32.98
+2020-04-10,Santa Monica Mountains,68,78.13
+2020-04-10,South Bay,681,87.79
+2020-04-10,South LA,687,81.49
+2020-04-10,Southeast,811,66.02
+2020-04-10,Verdugos,431,89.78
+2020-04-10,Westside,648,115.16
+2020-04-11,Angeles Forest,0,0.0
+2020-04-11,Antelope Valley,182,46.36
+2020-04-11,Central LA,1264,144.25
+2020-04-11,Eastside,192,66.21
+2020-04-11,Harbor,638,70.0
+2020-04-11,Northeast LA,148,87.8
+2020-04-11,Northwest County,168,60.65
+2020-04-11,Pomona Valley,65,28.45
+2020-04-11,San Fernando Valley,1392,86.69
+2020-04-11,San Gabriel Valley,536,36.3
+2020-04-11,Santa Monica Mountains,70,80.42
+2020-04-11,South Bay,727,93.72
+2020-04-11,South LA,735,87.18
+2020-04-11,Southeast,873,71.07
+2020-04-11,Verdugos,461,96.03
+2020-04-11,Westside,664,118.0
+2020-04-12,Angeles Forest,0,0.0
+2020-04-12,Antelope Valley,196,49.92
+2020-04-12,Central LA,1291,147.26
+2020-04-12,Eastside,201,69.31
+2020-04-12,Harbor,665,72.96
+2020-04-12,Northeast LA,152,90.17
+2020-04-12,Northwest County,177,63.69
+2020-04-12,Pomona Valley,68,29.77
+2020-04-12,San Fernando Valley,1445,89.99
+2020-04-12,San Gabriel Valley,558,37.78
+2020-04-12,Santa Monica Mountains,71,81.57
+2020-04-12,South Bay,755,97.33
+2020-04-12,South LA,749,88.84
+2020-04-12,Southeast,891,72.53
+2020-04-12,Verdugos,478,99.57
+2020-04-12,Westside,668,118.71
+2020-04-13,Angeles Forest,0,0.0
+2020-04-13,Antelope Valley,197,50.18
+2020-04-13,Central LA,1325,151.19
+2020-04-13,Eastside,208,71.73
+2020-04-13,Harbor,679,74.49
+2020-04-13,Northeast LA,158,93.73
+2020-04-13,Northwest County,184,66.34
+2020-04-13,Pomona Valley,70,30.64
+2020-04-13,San Fernando Valley,1491,92.85
+2020-04-13,San Gabriel Valley,578,39.14
+2020-04-13,Santa Monica Mountains,74,85.02
+2020-04-13,South Bay,774,99.77
+2020-04-13,South LA,779,92.4
+2020-04-13,Southeast,918,74.73
+2020-04-13,Verdugos,488,101.65
+2020-04-13,Westside,675,119.95
+2020-04-14,Angeles Forest,0,0.0
+2020-04-14,Antelope Valley,211,53.74
+2020-04-14,Central LA,1392,158.48
+2020-04-14,Eastside,225,77.59
+2020-04-14,Harbor,708,77.68
+2020-04-14,Northeast LA,179,106.19
+2020-04-14,Northwest County,191,69.0
+2020-04-14,Pomona Valley,78,34.14
+2020-04-14,San Fernando Valley,1588,98.89
+2020-04-14,San Gabriel Valley,626,42.39
+2020-04-14,Santa Monica Mountains,78,89.62
+2020-04-14,South Bay,812,104.67
+2020-04-14,South LA,846,100.35
+2020-04-14,Southeast,992,80.75
+2020-04-14,Verdugos,556,115.82
+2020-04-14,Westside,687,122.09
+2020-04-15,Angeles Forest,0,0.0
+2020-04-15,Antelope Valley,229,58.33
+2020-04-15,Central LA,1448,164.73
+2020-04-15,Eastside,236,81.38
+2020-04-15,Harbor,740,81.19
+2020-04-15,Northeast LA,187,110.94
+2020-04-15,Northwest County,200,72.41
+2020-04-15,Pomona Valley,80,35.02
+2020-04-15,San Fernando Valley,1679,104.56
+2020-04-15,San Gabriel Valley,662,44.83
+2020-04-15,Santa Monica Mountains,78,89.62
+2020-04-15,South Bay,838,108.02
+2020-04-15,South LA,897,106.4
+2020-04-15,Southeast,1046,85.15
+2020-04-15,Verdugos,587,122.27
+2020-04-15,Westside,700,124.4
+2020-04-16,Angeles Forest,0,0.0
+2020-04-16,Antelope Valley,238,60.62
+2020-04-16,Central LA,1502,170.4
+2020-04-16,Eastside,250,86.21
+2020-04-16,Harbor,768,84.26
+2020-04-16,Northeast LA,190,112.72
+2020-04-16,Northwest County,213,77.34
+2020-04-16,Pomona Valley,85,37.21
+2020-04-16,San Fernando Valley,1737,108.17
+2020-04-16,San Gabriel Valley,687,46.52
+2020-04-16,Santa Monica Mountains,78,89.62
+2020-04-16,South Bay,859,110.73
+2020-04-16,South LA,923,109.48
+2020-04-16,Southeast,1117,90.93
+2020-04-16,Verdugos,603,125.61
+2020-04-16,Westside,711,126.35
+2020-04-17,Angeles Forest,0,0.0
+2020-04-17,Antelope Valley,260,66.22
+2020-04-17,Central LA,1561,176.88
+2020-04-17,Eastside,256,88.28
+2020-04-17,Harbor,817,89.63
+2020-04-17,Northeast LA,199,118.05
+2020-04-17,Northwest County,224,81.51
+2020-04-17,Pomona Valley,93,40.71
+2020-04-17,San Fernando Valley,1832,114.09
+2020-04-17,San Gabriel Valley,739,50.04
+2020-04-17,Santa Monica Mountains,81,93.06
+2020-04-17,South Bay,897,115.63
+2020-04-17,South LA,987,117.08
+2020-04-17,Southeast,1188,96.71
+2020-04-17,Verdugos,647,134.77
+2020-04-17,Westside,723,128.48
+2020-04-18,Angeles Forest,0,0.0
+2020-04-18,Antelope Valley,289,73.61
+2020-04-18,Central LA,1660,187.98
+2020-04-18,Eastside,273,94.14
+2020-04-18,Harbor,859,94.24
+2020-04-18,Northeast LA,208,123.39
+2020-04-18,Northwest County,234,84.92
+2020-04-18,Pomona Valley,97,42.46
+2020-04-18,San Fernando Valley,1946,121.19
+2020-04-18,San Gabriel Valley,784,53.09
+2020-04-18,Santa Monica Mountains,84,96.51
+2020-04-18,South Bay,933,120.27
+2020-04-18,South LA,1053,124.9
+2020-04-18,Southeast,1259,102.49
+2020-04-18,Verdugos,686,142.9
+2020-04-18,Westside,740,131.5
+2020-04-19,Angeles Forest,0,0.0
+2020-04-19,Antelope Valley,297,75.65
+2020-04-19,Central LA,1702,192.95
+2020-04-19,Eastside,283,97.59
+2020-04-19,Harbor,894,98.08
+2020-04-19,Northeast LA,209,123.99
+2020-04-19,Northwest County,239,86.81
+2020-04-19,Pomona Valley,98,42.9
+2020-04-19,San Fernando Valley,1983,123.49
+2020-04-19,San Gabriel Valley,811,54.92
+2020-04-19,Santa Monica Mountains,85,97.66
+2020-04-19,South Bay,952,122.72
+2020-04-19,South LA,1084,128.58
+2020-04-19,Southeast,1300,105.83
+2020-04-19,Verdugos,694,144.56
+2020-04-19,Westside,752,133.64
+2020-04-20,Angeles Forest,0,0.0
+2020-04-20,Antelope Valley,356,90.68
+2020-04-20,Central LA,1867,211.46
+2020-04-20,Eastside,349,120.35
+2020-04-20,Harbor,948,104.01
+2020-04-20,Northeast LA,239,141.78
+2020-04-20,Northwest County,262,95.15
+2020-04-20,Pomona Valley,110,48.15
+2020-04-20,San Fernando Valley,2227,138.69
+2020-04-20,San Gabriel Valley,879,59.52
+2020-04-20,Santa Monica Mountains,91,104.55
+2020-04-20,South Bay,1022,131.74
+2020-04-20,South LA,1245,147.68
+2020-04-20,Southeast,1474,119.99
+2020-04-20,Verdugos,716,149.14
+2020-04-20,Westside,818,145.37
+2020-04-21,Angeles Forest,0,0.0
+2020-04-21,Antelope Valley,469,119.46
+2020-04-21,Central LA,2056,232.52
+2020-04-21,Eastside,418,144.14
+2020-04-21,Harbor,1004,110.15
+2020-04-21,Northeast LA,258,153.06
+2020-04-21,Northwest County,292,106.15
+2020-04-21,Pomona Valley,129,56.47
+2020-04-21,San Fernando Valley,2543,158.37
+2020-04-21,San Gabriel Valley,996,67.44
+2020-04-21,Santa Monica Mountains,98,112.59
+2020-04-21,South Bay,1144,147.47
+2020-04-21,South LA,1418,168.2
+2020-04-21,Southeast,1640,133.51
+2020-04-21,Verdugos,796,165.81
+2020-04-21,Westside,859,152.65
+2020-04-22,Angeles Forest,0,0.0
+2020-04-22,Antelope Valley,536,136.52
+2020-04-22,Central LA,2203,248.13
+2020-04-22,Eastside,470,162.08
+2020-04-22,Harbor,1063,116.62
+2020-04-22,Northeast LA,285,169.07
+2020-04-22,Northwest County,326,117.52
+2020-04-22,Pomona Valley,145,63.47
+2020-04-22,San Fernando Valley,2836,176.61
+2020-04-22,San Gabriel Valley,1127,76.31
+2020-04-22,Santa Monica Mountains,100,114.89
+2020-04-22,South Bay,1182,152.37
+2020-04-22,South LA,1574,186.7
+2020-04-22,Southeast,1773,144.33
+2020-04-22,Verdugos,846,176.22
+2020-04-22,Westside,878,156.03
+2020-04-23,Angeles Forest,0,0.0
+2020-04-23,Antelope Valley,586,149.26
+2020-04-23,Central LA,2306,259.93
+2020-04-23,Eastside,525,181.04
+2020-04-23,Harbor,1116,122.44
+2020-04-23,Northeast LA,292,173.23
+2020-04-23,Northwest County,336,121.31
+2020-04-23,Pomona Valley,157,68.73
+2020-04-23,San Fernando Valley,3039,189.26
+2020-04-23,San Gabriel Valley,1222,82.75
+2020-04-23,Santa Monica Mountains,102,117.19
+2020-04-23,South Bay,1228,158.3
+2020-04-23,South LA,1710,202.84
+2020-04-23,Southeast,1895,154.26
+2020-04-23,Verdugos,891,185.6
+2020-04-23,Westside,902,160.29
+2020-04-24,Angeles Forest,0,0.0
+2020-04-24,Antelope Valley,621,158.17
+2020-04-24,Central LA,2401,270.92
+2020-04-24,Eastside,571,196.91
+2020-04-24,Harbor,1159,127.15
+2020-04-24,Northeast LA,305,180.94
+2020-04-24,Northwest County,351,126.62
+2020-04-24,Pomona Valley,164,71.79
+2020-04-24,San Fernando Valley,3224,200.78
+2020-04-24,San Gabriel Valley,1297,87.83
+2020-04-24,Santa Monica Mountains,105,120.64
+2020-04-24,South Bay,1263,162.81
+2020-04-24,South LA,1850,219.44
+2020-04-24,Southeast,1989,161.92
+2020-04-24,Verdugos,975,203.09
+2020-04-24,Westside,917,162.96
+2020-04-25,Angeles Forest,2,57.72
+2020-04-25,Antelope Valley,671,170.91
+2020-04-25,Central LA,2454,277.05
+2020-04-25,Eastside,595,205.18
+2020-04-25,Harbor,1220,133.85
+2020-04-25,Northeast LA,313,185.68
+2020-04-25,Northwest County,374,134.96
+2020-04-25,Pomona Valley,170,74.42
+2020-04-25,San Fernando Valley,3325,207.07
+2020-04-25,San Gabriel Valley,1366,92.5
+2020-04-25,Santa Monica Mountains,106,121.79
+2020-04-25,South Bay,1297,167.19
+2020-04-25,South LA,1912,226.8
+2020-04-25,Southeast,2058,167.53
+2020-04-25,Verdugos,994,207.05
+2020-04-25,Westside,932,165.62
+2020-04-26,Angeles Forest,2,57.72
+2020-04-26,Antelope Valley,686,174.73
+2020-04-26,Central LA,2504,282.03
+2020-04-26,Eastside,600,206.91
+2020-04-26,Harbor,1262,138.46
+2020-04-26,Northeast LA,320,189.84
+2020-04-26,Northwest County,376,135.72
+2020-04-26,Pomona Valley,171,74.86
+2020-04-26,San Fernando Valley,3411,212.42
+2020-04-26,San Gabriel Valley,1398,94.67
+2020-04-26,Santa Monica Mountains,107,122.93
+2020-04-26,South Bay,1308,168.61
+2020-04-26,South LA,1966,233.2
+2020-04-26,Southeast,2102,171.11
+2020-04-26,Verdugos,1010,210.39
+2020-04-26,Westside,943,167.58
+2020-04-27,Angeles Forest,2,57.72
+2020-04-27,Antelope Valley,732,186.45
+2020-04-27,Central LA,2587,290.59
+2020-04-27,Eastside,655,225.87
+2020-04-27,Harbor,1305,143.17
+2020-04-27,Northeast LA,329,195.18
+2020-04-27,Northwest County,396,143.3
+2020-04-27,Pomona Valley,188,82.3
+2020-04-27,San Fernando Valley,3647,227.12
+2020-04-27,San Gabriel Valley,1460,98.86
+2020-04-27,Santa Monica Mountains,107,122.93
+2020-04-27,South Bay,1355,174.67
+2020-04-27,South LA,2084,247.2
+2020-04-27,Southeast,2164,176.16
+2020-04-27,Verdugos,1054,219.55
+2020-04-27,Westside,953,169.36
+2020-04-28,Angeles Forest,2,57.72
+2020-04-28,Antelope Valley,741,188.74
+2020-04-28,Central LA,2656,297.41
+2020-04-28,Eastside,675,232.77
+2020-04-28,Harbor,1348,147.89
+2020-04-28,Northeast LA,339,201.11
+2020-04-28,Northwest County,402,145.57
+2020-04-28,Pomona Valley,190,83.17
+2020-04-28,San Fernando Valley,3753,233.72
+2020-04-28,San Gabriel Valley,1522,103.06
+2020-04-28,Santa Monica Mountains,112,128.68
+2020-04-28,South Bay,1375,177.25
+2020-04-28,South LA,2170,257.4
+2020-04-28,Southeast,2230,181.53
+2020-04-28,Verdugos,1118,232.88
+2020-04-28,Westside,966,171.67
+2020-04-29,Angeles Forest,2,57.72
+2020-04-29,Antelope Valley,776,197.65
+2020-04-29,Central LA,2774,310.6
+2020-04-29,Eastside,716,246.91
+2020-04-29,Harbor,1480,162.37
+2020-04-29,Northeast LA,357,211.79
+2020-04-29,Northwest County,431,155.81
+2020-04-29,Pomona Valley,210,91.93
+2020-04-29,San Fernando Valley,4043,251.78
+2020-04-29,San Gabriel Valley,1611,109.09
+2020-04-29,Santa Monica Mountains,115,132.13
+2020-04-29,South Bay,1456,187.69
+2020-04-29,South LA,2307,273.65
+2020-04-29,Southeast,2335,190.08
+2020-04-29,Verdugos,1177,245.17
+2020-04-29,Westside,983,174.69
+2020-04-30,Angeles Forest,2,57.72
+2020-04-30,Antelope Valley,796,202.75
+2020-04-30,Central LA,2872,319.16
+2020-04-30,Eastside,740,255.18
+2020-04-30,Harbor,1693,185.74
+2020-04-30,Northeast LA,361,214.16
+2020-04-30,Northwest County,438,158.46
+2020-04-30,Pomona Valley,212,92.8
+2020-04-30,San Fernando Valley,4154,258.69
+2020-04-30,San Gabriel Valley,1664,112.68
+2020-04-30,Santa Monica Mountains,117,134.42
+2020-04-30,South Bay,1475,190.14
+2020-04-30,South LA,2381,282.43
+2020-04-30,Southeast,2440,198.63
+2020-04-30,Verdugos,1241,258.5
+2020-04-30,Westside,997,177.18
+2020-05-01,Angeles Forest,2,57.72
+2020-05-01,Antelope Valley,830,211.41
+2020-05-01,Central LA,3006,333.97
+2020-05-01,Eastside,779,268.63
+2020-05-01,Harbor,1840,201.87
+2020-05-01,Northeast LA,399,236.7
+2020-05-01,Northwest County,457,165.28
+2020-05-01,Pomona Valley,218,95.43
+2020-05-01,San Fernando Valley,4420,275.26
+2020-05-01,San Gabriel Valley,1725,116.81
+2020-05-01,Santa Monica Mountains,119,136.72
+2020-05-01,South Bay,1528,196.97
+2020-05-01,South LA,2518,298.68
+2020-05-01,Southeast,2570,209.21
+2020-05-01,Verdugos,1286,267.88
+2020-05-01,Westside,1038,184.46
+2020-05-02,Angeles Forest,2,57.72
+2020-05-02,Antelope Valley,841,214.21
+2020-05-02,Central LA,3088,342.76
+2020-05-02,Eastside,801,276.22
+2020-05-02,Harbor,1940,212.84
+2020-05-02,Northeast LA,409,242.63
+2020-05-02,Northwest County,467,169.08
+2020-05-02,Pomona Valley,224,98.06
+2020-05-02,San Fernando Valley,4550,283.35
+2020-05-02,San Gabriel Valley,1782,120.67
+2020-05-02,Santa Monica Mountains,119,136.72
+2020-05-02,South Bay,1554,200.32
+2020-05-02,South LA,2596,307.93
+2020-05-02,Southeast,2648,215.56
+2020-05-02,Verdugos,1316,274.13
+2020-05-02,Westside,1067,189.62
+2020-05-03,Angeles Forest,2,57.72
+2020-05-03,Antelope Valley,874,222.62
+2020-05-03,Central LA,3157,350.05
+2020-05-03,Eastside,852,293.81
+2020-05-03,Harbor,2010,220.52
+2020-05-03,Northeast LA,408,242.04
+2020-05-03,Northwest County,484,175.52
+2020-05-03,Pomona Valley,235,102.87
+2020-05-03,San Fernando Valley,4730,294.56
+2020-05-03,San Gabriel Valley,1839,124.53
+2020-05-03,Santa Monica Mountains,126,144.76
+2020-05-03,South Bay,1590,204.96
+2020-05-03,South LA,2680,317.89
+2020-05-03,Southeast,2693,219.23
+2020-05-03,Verdugos,1326,276.21
+2020-05-03,Westside,1080,191.93
+2020-05-04,Angeles Forest,2,57.72
+2020-05-04,Antelope Valley,885,225.42
+2020-05-04,Central LA,3217,356.18
+2020-05-04,Eastside,863,297.6
+2020-05-04,Harbor,2043,224.14
+2020-05-04,Northeast LA,412,244.41
+2020-05-04,Northwest County,488,176.66
+2020-05-04,Pomona Valley,240,105.06
+2020-05-04,San Fernando Valley,4839,301.35
+2020-05-04,San Gabriel Valley,1881,127.37
+2020-05-04,Santa Monica Mountains,127,145.91
+2020-05-04,South Bay,1608,207.28
+2020-05-04,South LA,2717,322.28
+2020-05-04,Southeast,2742,223.21
+2020-05-04,Verdugos,1372,285.79
+2020-05-04,Westside,1100,195.48
+2020-05-05,Angeles Forest,1,28.86
+2020-05-05,Antelope Valley,929,236.62
+2020-05-05,Central LA,3388,375.04
+2020-05-05,Eastside,923,318.29
+2020-05-05,Harbor,2092,229.52
+2020-05-05,Northeast LA,435,258.06
+2020-05-05,Northwest County,521,189.17
+2020-05-05,Pomona Valley,259,113.38
+2020-05-05,San Fernando Valley,5318,331.18
+2020-05-05,San Gabriel Valley,1995,135.09
+2020-05-05,Santa Monica Mountains,130,149.36
+2020-05-05,South Bay,1693,218.24
+2020-05-05,South LA,2958,350.87
+2020-05-05,Southeast,2922,237.87
+2020-05-05,Verdugos,1422,296.21
+2020-05-05,Westside,1132,201.17
+2020-05-06,Angeles Forest,1,28.86
+2020-05-06,Antelope Valley,960,244.52
+2020-05-06,Central LA,3508,387.41
+2020-05-06,Eastside,948,326.91
+2020-05-06,Harbor,2147,235.55
+2020-05-06,Northeast LA,447,265.18
+2020-05-06,Northwest County,535,194.48
+2020-05-06,Pomona Valley,268,117.32
+2020-05-06,San Fernando Valley,5458,339.9
+2020-05-06,San Gabriel Valley,2068,140.03
+2020-05-06,Santa Monica Mountains,133,152.81
+2020-05-06,South Bay,1752,225.85
+2020-05-06,South LA,3083,365.7
+2020-05-06,Southeast,3021,245.93
+2020-05-06,Verdugos,1478,307.87
+2020-05-06,Westside,1150,204.37
+2020-05-07,Angeles Forest,1,28.86
+2020-05-07,Antelope Valley,983,250.38
+2020-05-07,Central LA,3598,396.44
+2020-05-07,Eastside,977,336.91
+2020-05-07,Harbor,2174,238.51
+2020-05-07,Northeast LA,456,270.52
+2020-05-07,Northwest County,553,200.16
+2020-05-07,Pomona Valley,279,122.13
+2020-05-07,San Fernando Valley,5615,349.68
+2020-05-07,San Gabriel Valley,2173,147.14
+2020-05-07,Santa Monica Mountains,134,153.96
+2020-05-07,South Bay,1786,230.23
+2020-05-07,South LA,3184,377.68
+2020-05-07,Southeast,3100,252.36
+2020-05-07,Verdugos,1526,317.87
+2020-05-07,Westside,1170,207.92
+2020-05-08,Angeles Forest,1,28.86
+2020-05-08,Antelope Valley,996,253.69
+2020-05-08,Central LA,3713,404.77
+2020-05-08,Eastside,1012,348.98
+2020-05-08,Harbor,2272,249.26
+2020-05-08,Northeast LA,466,276.45
+2020-05-08,Northwest County,694,201.3
+2020-05-08,Pomona Valley,287,125.64
+2020-05-08,San Fernando Valley,5730,356.84
+2020-05-08,San Gabriel Valley,2236,151.41
+2020-05-08,Santa Monica Mountains,134,153.96
+2020-05-08,South Bay,1801,232.16
+2020-05-08,South LA,3241,384.44
+2020-05-08,Southeast,3221,262.21
+2020-05-08,Verdugos,1553,323.49
+2020-05-08,Westside,1184,210.41
+2020-05-09,Angeles Forest,1,28.86
+2020-05-09,Antelope Valley,1018,259.29
+2020-05-09,Central LA,3797,413.56
+2020-05-09,Eastside,1056,364.15
+2020-05-09,Harbor,2352,258.04
+2020-05-09,Northeast LA,485,287.72
+2020-05-09,Northwest County,719,208.12
+2020-05-09,Pomona Valley,304,133.08
+2020-05-09,San Fernando Valley,5919,368.61
+2020-05-09,San Gabriel Valley,2338,158.32
+2020-05-09,Santa Monica Mountains,136,156.25
+2020-05-09,South Bay,1839,237.06
+2020-05-09,South LA,3355,397.96
+2020-05-09,Southeast,3308,269.29
+2020-05-09,Verdugos,1600,333.28
+2020-05-09,Westside,1199,213.07
+2020-05-10,Angeles Forest,1,28.86
+2020-05-10,Antelope Valley,1024,260.82
+2020-05-10,Central LA,3856,418.18
+2020-05-10,Eastside,1071,369.33
+2020-05-10,Harbor,2425,266.05
+2020-05-10,Northeast LA,492,291.87
+2020-05-10,Northwest County,727,210.4
+2020-05-10,Pomona Valley,310,135.7
+2020-05-10,San Fernando Valley,5974,372.04
+2020-05-10,San Gabriel Valley,2383,161.36
+2020-05-10,Santa Monica Mountains,136,156.25
+2020-05-10,South Bay,1848,238.22
+2020-05-10,South LA,3404,403.77
+2020-05-10,Southeast,3359,273.44
+2020-05-10,Verdugos,1626,338.7
+2020-05-10,Westside,1223,217.34
+2020-05-11,Angeles Forest,2,57.72
+2020-05-11,Antelope Valley,1039,264.64
+2020-05-11,Central LA,3917,424.78
+2020-05-11,Eastside,1092,376.57
+2020-05-11,Harbor,2485,272.63
+2020-05-11,Northeast LA,499,296.03
+2020-05-11,Northwest County,740,215.33
+2020-05-11,Pomona Valley,318,139.21
+2020-05-11,San Fernando Valley,6132,381.88
+2020-05-11,San Gabriel Valley,2461,166.65
+2020-05-11,Santa Monica Mountains,136,156.25
+2020-05-11,South Bay,1859,239.64
+2020-05-11,South LA,3473,411.96
+2020-05-11,Southeast,3406,277.27
+2020-05-11,Verdugos,1652,344.12
+2020-05-11,Westside,1233,219.12
+2020-05-12,Angeles Forest,2,57.72
+2020-05-12,Antelope Valley,1049,267.19
+2020-05-12,Central LA,4073,440.28
+2020-05-12,Eastside,1120,386.22
+2020-05-12,Harbor,2541,278.78
+2020-05-12,Northeast LA,525,311.45
+2020-05-12,Northwest County,790,220.25
+2020-05-12,Pomona Valley,325,142.27
+2020-05-12,San Fernando Valley,6308,392.84
+2020-05-12,San Gabriel Valley,2582,174.84
+2020-05-12,Santa Monica Mountains,139,159.7
+2020-05-12,South Bay,1897,244.54
+2020-05-12,South LA,3598,426.78
+2020-05-12,Southeast,3544,288.5
+2020-05-12,Verdugos,1700,354.11
+2020-05-12,Westside,1241,220.54
+2020-05-13,Angeles Forest,2,57.72
+2020-05-13,Antelope Valley,1091,277.89
+2020-05-13,Central LA,4225,454.97
+2020-05-13,Eastside,1162,400.71
+2020-05-13,Harbor,2613,286.67
+2020-05-13,Northeast LA,549,325.69
+2020-05-13,Northwest County,844,233.14
+2020-05-13,Pomona Valley,335,146.65
+2020-05-13,San Fernando Valley,6503,404.98
+2020-05-13,San Gabriel Valley,2740,185.54
+2020-05-13,Santa Monica Mountains,139,159.7
+2020-05-13,South Bay,1943,250.47
+2020-05-13,South LA,3754,445.29
+2020-05-13,Southeast,3766,306.57
+2020-05-13,Verdugos,1768,368.28
+2020-05-13,Westside,1266,224.98
+2020-05-14,Angeles Forest,4,115.44
+2020-05-14,Antelope Valley,1112,283.24
+2020-05-14,Central LA,4329,463.53
+2020-05-14,Eastside,1192,411.05
+2020-05-14,Harbor,2757,302.47
+2020-05-14,Northeast LA,559,331.62
+2020-05-14,Northwest County,888,240.72
+2020-05-14,Pomona Valley,340,148.84
+2020-05-14,San Fernando Valley,6708,417.75
+2020-05-14,San Gabriel Valley,2820,190.96
+2020-05-14,Santa Monica Mountains,142,163.15
+2020-05-14,South Bay,1972,254.21
+2020-05-14,South LA,3847,456.32
+2020-05-14,Southeast,3867,314.8
+2020-05-14,Verdugos,1805,375.99
+2020-05-14,Westside,1281,227.65
+2020-05-15,Angeles Forest,4,115.44
+2020-05-15,Antelope Valley,1126,286.8
+2020-05-15,Central LA,4409,470.7
+2020-05-15,Eastside,1219,420.36
+2020-05-15,Harbor,2853,313.01
+2020-05-15,Northeast LA,565,335.18
+2020-05-15,Northwest County,913,246.41
+2020-05-15,Pomona Valley,343,150.15
+2020-05-15,San Fernando Valley,6894,429.33
+2020-05-15,San Gabriel Valley,2887,195.49
+2020-05-15,Santa Monica Mountains,143,164.3
+2020-05-15,South Bay,1997,257.43
+2020-05-15,South LA,3966,470.44
+2020-05-15,Southeast,3997,325.38
+2020-05-15,Verdugos,1883,392.23
+2020-05-15,Westside,1302,231.38
+2020-05-16,Angeles Forest,4,115.44
+2020-05-16,Antelope Valley,1154,293.93
+2020-05-16,Central LA,4562,478.68
+2020-05-16,Eastside,1262,435.19
+2020-05-16,Harbor,2937,322.22
+2020-05-16,Northeast LA,576,341.71
+2020-05-16,Northwest County,935,253.23
+2020-05-16,Pomona Valley,354,154.96
+2020-05-16,San Fernando Valley,7095,441.85
+2020-05-16,San Gabriel Valley,2982,201.93
+2020-05-16,Santa Monica Mountains,144,165.44
+2020-05-16,South Bay,2035,262.33
+2020-05-16,South LA,4117,488.35
+2020-05-16,Southeast,4164,338.97
+2020-05-16,Verdugos,1912,398.27
+2020-05-16,Westside,1319,234.4
+2020-05-17,Angeles Forest,4,115.44
+2020-05-17,Antelope Valley,1173,298.77
+2020-05-17,Central LA,4619,482.62
+2020-05-17,Eastside,1283,442.43
+2020-05-17,Harbor,3028,332.2
+2020-05-17,Northeast LA,584,346.45
+2020-05-17,Northwest County,949,255.13
+2020-05-17,Pomona Valley,356,155.84
+2020-05-17,San Fernando Valley,7221,449.69
+2020-05-17,San Gabriel Valley,3030,205.18
+2020-05-17,Santa Monica Mountains,146,167.74
+2020-05-17,South Bay,2060,265.55
+2020-05-17,South LA,4233,502.11
+2020-05-17,Southeast,4246,345.65
+2020-05-17,Verdugos,1948,405.77
+2020-05-17,Westside,1335,237.24
+2020-05-18,Angeles Forest,4,115.44
+2020-05-18,Antelope Valley,1194,304.12
+2020-05-18,Central LA,4661,486.78
+2020-05-18,Eastside,1294,446.23
+2020-05-18,Harbor,3065,336.26
+2020-05-18,Northeast LA,588,348.82
+2020-05-18,Northwest County,953,256.65
+2020-05-18,Pomona Valley,363,158.9
+2020-05-18,San Fernando Valley,7332,456.61
+2020-05-18,San Gabriel Valley,3057,207.0
+2020-05-18,Santa Monica Mountains,146,167.74
+2020-05-18,South Bay,2083,268.51
+2020-05-18,South LA,4318,512.19
+2020-05-18,Southeast,4352,354.28
+2020-05-18,Verdugos,1962,408.69
+2020-05-18,Westside,1338,237.77
+2020-05-19,Angeles Forest,4,115.44
+2020-05-19,Antelope Valley,1212,308.71
+2020-05-19,Central LA,4787,500.66
+2020-05-19,Eastside,1374,473.81
+2020-05-19,Harbor,3097,339.77
+2020-05-19,Northeast LA,606,359.5
+2020-05-19,Northwest County,969,261.2
+2020-05-19,Pomona Valley,369,161.53
+2020-05-19,San Fernando Valley,7483,466.01
+2020-05-19,San Gabriel Valley,3184,215.6
+2020-05-19,Santa Monica Mountains,146,167.74
+2020-05-19,South Bay,2115,272.64
+2020-05-19,South LA,4480,531.4
+2020-05-19,Southeast,4555,370.8
+2020-05-19,Verdugos,1977,411.81
+2020-05-19,Westside,1344,238.84
+2020-05-20,Angeles Forest,4,115.44
+2020-05-20,Antelope Valley,1225,312.02
+2020-05-20,Central LA,4936,512.23
+2020-05-20,Eastside,1460,503.47
+2020-05-20,Harbor,3181,348.99
+2020-05-20,Northeast LA,618,366.62
+2020-05-20,Northwest County,989,267.64
+2020-05-20,Pomona Valley,380,166.35
+2020-05-20,San Fernando Valley,7629,475.1
+2020-05-20,San Gabriel Valley,3358,227.39
+2020-05-20,Santa Monica Mountains,147,168.89
+2020-05-20,South Bay,2146,276.64
+2020-05-20,South LA,4637,550.03
+2020-05-20,Southeast,4885,397.67
+2020-05-20,Verdugos,2003,417.23
+2020-05-20,Westside,1350,239.91
+2020-05-21,Angeles Forest,5,144.3
+2020-05-21,Antelope Valley,1248,317.88
+2020-05-21,Central LA,5059,523.57
+2020-05-21,Eastside,1499,516.92
+2020-05-21,Harbor,3243,355.79
+2020-05-21,Northeast LA,632,374.93
+2020-05-21,Northwest County,1011,274.46
+2020-05-21,Pomona Valley,389,170.29
+2020-05-21,San Fernando Valley,7780,484.51
+2020-05-21,San Gabriel Valley,3405,239.95
+2020-05-21,Santa Monica Mountains,147,168.89
+2020-05-21,South Bay,2190,282.31
+2020-05-21,South LA,4774,566.28
+2020-05-21,Southeast,5064,412.24
+2020-05-21,Verdugos,2093,435.98
+2020-05-21,Westside,1364,242.39
+2020-05-22,Angeles Forest,5,144.3
+2020-05-22,Antelope Valley,1261,321.19
+2020-05-22,Central LA,5154,532.82
+2020-05-22,Eastside,1533,528.64
+2020-05-22,Harbor,3359,368.52
+2020-05-22,Northeast LA,646,383.23
+2020-05-22,Northwest County,1025,277.88
+2020-05-22,Pomona Valley,400,175.1
+2020-05-22,San Fernando Valley,7946,494.84
+2020-05-22,San Gabriel Valley,3604,244.04
+2020-05-22,Santa Monica Mountains,147,168.89
+2020-05-22,South Bay,2222,286.43
+2020-05-22,South LA,4947,586.8
+2020-05-22,Southeast,5250,427.38
+2020-05-22,Verdugos,2115,440.56
+2020-05-22,Westside,1374,244.17
+2020-05-23,Angeles Forest,5,144.3
+2020-05-23,Antelope Valley,1301,331.38
+2020-05-23,Central LA,5257,543.23
+2020-05-23,Eastside,1596,550.37
+2020-05-23,Harbor,3418,374.99
+2020-05-23,Northeast LA,662,392.72
+2020-05-23,Northwest County,1054,285.46
+2020-05-23,Pomona Valley,416,182.11
+2020-05-23,San Fernando Valley,8175,509.1
+2020-05-23,San Gabriel Valley,3731,252.64
+2020-05-23,Santa Monica Mountains,148,170.04
+2020-05-23,South Bay,2258,291.07
+2020-05-23,South LA,5089,603.64
+2020-05-23,Southeast,5408,440.24
+2020-05-23,Verdugos,2146,447.02
+2020-05-23,Westside,1390,247.02
+2020-05-24,Angeles Forest,5,144.3
+2020-05-24,Antelope Valley,1322,336.72
+2020-05-24,Central LA,5335,550.98
+2020-05-24,Eastside,1643,566.58
+2020-05-24,Harbor,3487,382.56
+2020-05-24,Northeast LA,670,397.47
+2020-05-24,Northwest County,1071,291.14
+2020-05-24,Pomona Valley,425,186.05
+2020-05-24,San Fernando Valley,8326,518.51
+2020-05-24,San Gabriel Valley,3817,258.47
+2020-05-24,Santa Monica Mountains,148,170.04
+2020-05-24,South Bay,2278,293.65
+2020-05-24,South LA,5218,618.94
+2020-05-24,Southeast,5607,456.44
+2020-05-24,Verdugos,2205,459.31
+2020-05-24,Westside,1404,249.5
+2020-05-25,Angeles Forest,6,173.16
+2020-05-25,Antelope Valley,1349,343.6
+2020-05-25,Central LA,5473,563.48
+2020-05-25,Eastside,1694,584.16
+2020-05-25,Harbor,3568,391.45
+2020-05-25,Northeast LA,684,405.78
+2020-05-25,Northwest County,1104,298.73
+2020-05-25,Pomona Valley,441,193.05
+2020-05-25,San Fernando Valley,8473,527.66
+2020-05-25,San Gabriel Valley,3904,264.36
+2020-05-25,Santa Monica Mountains,155,178.08
+2020-05-25,South Bay,2319,298.94
+2020-05-25,South LA,5394,639.82
+2020-05-25,Southeast,5763,469.14
+2020-05-25,Verdugos,2235,465.56
+2020-05-25,Westside,1420,252.35
+2020-05-26,Angeles Forest,7,202.02
+2020-05-26,Antelope Valley,1382,352.01
+2020-05-26,Central LA,5649,581.29
+2020-05-26,Eastside,1842,635.2
+2020-05-26,Harbor,3639,399.24
+2020-05-26,Northeast LA,724,429.51
+2020-05-26,Northwest County,1125,304.79
+2020-05-26,Pomona Valley,469,205.31
+2020-05-26,San Fernando Valley,8668,539.81
+2020-05-26,San Gabriel Valley,4120,278.98
+2020-05-26,Santa Monica Mountains,156,179.23
+2020-05-26,South Bay,2355,303.58
+2020-05-26,South LA,5677,673.39
+2020-05-26,Southeast,6250,508.78
+2020-05-26,Verdugos,2271,473.06
+2020-05-26,Westside,1434,254.83
+2020-05-27,Angeles Forest,7,202.02
+2020-05-27,Antelope Valley,1398,356.08
+2020-05-27,Central LA,5760,590.78
+2020-05-27,Eastside,1873,645.89
+2020-05-27,Harbor,3709,406.92
+2020-05-27,Northeast LA,742,440.18
+2020-05-27,Northwest County,1138,309.34
+2020-05-27,Pomona Valley,485,212.31
+2020-05-27,San Fernando Valley,8851,551.2
+2020-05-27,San Gabriel Valley,4209,285.01
+2020-05-27,Santa Monica Mountains,157,180.38
+2020-05-27,South Bay,2384,307.32
+2020-05-27,South LA,5844,693.2
+2020-05-27,Southeast,6371,518.63
+2020-05-27,Verdugos,2317,482.64
+2020-05-27,Westside,1451,257.86
+2020-05-28,Angeles Forest,8,230.88
+2020-05-28,Antelope Valley,1415,360.41
+2020-05-28,Central LA,5845,599.69
+2020-05-28,Eastside,1920,662.1
+2020-05-28,Harbor,3804,417.34
+2020-05-28,Northeast LA,755,447.9
+2020-05-28,Northwest County,1174,316.16
+2020-05-28,Pomona Valley,501,219.31
+2020-05-28,San Fernando Valley,9062,564.34
+2020-05-28,San Gabriel Valley,4311,291.92
+2020-05-28,Santa Monica Mountains,158,181.53
+2020-05-28,South Bay,2421,312.08
+2020-05-28,South LA,6038,716.21
+2020-05-28,Southeast,6516,530.44
+2020-05-28,Verdugos,2350,489.51
+2020-05-28,Westside,1483,263.54
+2020-05-29,Angeles Forest,8,230.88
+2020-05-29,Antelope Valley,1468,373.91
+2020-05-29,Central LA,5951,610.33
+2020-05-29,Eastside,2104,725.55
+2020-05-29,Harbor,3931,431.27
+2020-05-29,Northeast LA,768,455.61
+2020-05-29,Northwest County,1296,323.75
+2020-05-29,Pomona Valley,521,228.07
+2020-05-29,San Fernando Valley,9243,575.62
+2020-05-29,San Gabriel Valley,4483,303.57
+2020-05-29,Santa Monica Mountains,160,183.83
+2020-05-29,South Bay,2461,317.24
+2020-05-29,South LA,6268,743.49
+2020-05-29,Southeast,6987,568.78
+2020-05-29,Verdugos,2371,493.89
+2020-05-29,Westside,1506,267.63
+2020-05-30,Angeles Forest,9,259.74
+2020-05-30,Antelope Valley,1497,381.3
+2020-05-30,Central LA,6147,631.5
+2020-05-30,Eastside,2269,782.45
+2020-05-30,Harbor,4110,450.91
+2020-05-30,Northeast LA,784,465.1
+2020-05-30,Northwest County,1448,332.09
+2020-05-30,Pomona Valley,558,244.27
+2020-05-30,San Fernando Valley,9492,591.12
+2020-05-30,San Gabriel Valley,4673,316.43
+2020-05-30,Santa Monica Mountains,165,189.57
+2020-05-30,South Bay,2510,323.56
+2020-05-30,South LA,6537,775.4
+2020-05-30,Southeast,7470,608.1
+2020-05-30,Verdugos,2401,500.13
+2020-05-30,Westside,1531,272.07
+2020-05-31,Angeles Forest,9,259.74
+2020-05-31,Antelope Valley,1539,392.0
+2020-05-31,Central LA,6297,647.35
+2020-05-31,Eastside,2337,805.9
+2020-05-31,Harbor,4236,464.74
+2020-05-31,Northeast LA,794,471.03
+2020-05-31,Northwest County,1537,339.29
+2020-05-31,Pomona Valley,586,256.52
+2020-05-31,San Fernando Valley,9727,605.76
+2020-05-31,San Gabriel Valley,4776,323.41
+2020-05-31,Santa Monica Mountains,176,202.21
+2020-05-31,South Bay,2555,329.36
+2020-05-31,South LA,6729,798.17
+2020-05-31,Southeast,7642,622.1
+2020-05-31,Verdugos,2423,504.72
+2020-05-31,Westside,1548,275.09
+2020-06-01,Angeles Forest,9,259.74
+2020-06-01,Antelope Valley,1562,397.85
+2020-06-01,Central LA,6357,653.59
+2020-06-01,Eastside,2377,819.69
+2020-06-01,Harbor,4285,470.11
+2020-06-01,Northeast LA,805,477.56
+2020-06-01,Northwest County,1592,340.81
+2020-06-01,Pomona Valley,598,261.78
+2020-06-01,San Fernando Valley,9895,616.22
+2020-06-01,San Gabriel Valley,4875,330.11
+2020-06-01,Santa Monica Mountains,189,217.15
+2020-06-01,South Bay,2589,333.74
+2020-06-01,South LA,6888,817.03
+2020-06-01,Southeast,7794,634.48
+2020-06-01,Verdugos,2437,507.63
+2020-06-01,Westside,1559,277.05
+2020-06-02,Angeles Forest,9,259.74
+2020-06-02,Antelope Valley,1587,404.22
+2020-06-02,Central LA,6453,663.77
+2020-06-02,Eastside,2435,839.69
+2020-06-02,Harbor,4372,479.66
+2020-06-02,Northeast LA,809,479.93
+2020-06-02,Northwest County,1671,347.25
+2020-06-02,Pomona Valley,624,273.16
+2020-06-02,San Fernando Valley,10146,631.85
+2020-06-02,San Gabriel Valley,4978,337.08
+2020-06-02,Santa Monica Mountains,191,219.44
+2020-06-02,South Bay,2660,342.89
+2020-06-02,South LA,7083,840.16
+2020-06-02,Southeast,7962,648.15
+2020-06-02,Verdugos,2454,511.17
+2020-06-02,Westside,1576,280.07
+2020-06-03,Angeles Forest,9,259.74
+2020-06-03,Antelope Valley,1610,410.08
+2020-06-03,Central LA,6528,672.1
+2020-06-03,Eastside,2472,852.45
+2020-06-03,Harbor,4518,495.67
+2020-06-03,Northeast LA,818,485.27
+2020-06-03,Northwest County,1747,351.04
+2020-06-03,Pomona Valley,660,288.92
+2020-06-03,San Fernando Valley,10310,642.06
+2020-06-03,San Gabriel Valley,5111,346.09
+2020-06-03,Santa Monica Mountains,192,220.59
+2020-06-03,South Bay,2705,348.69
+2020-06-03,South LA,7247,859.62
+2020-06-03,Southeast,8151,663.54
+2020-06-03,Verdugos,2465,513.47
+2020-06-03,Westside,1591,282.73
+2020-06-04,Angeles Forest,10,288.6
+2020-06-04,Antelope Valley,1635,416.45
+2020-06-04,Central LA,6689,685.75
+2020-06-04,Eastside,2566,884.87
+2020-06-04,Harbor,4579,502.37
+2020-06-04,Northeast LA,831,492.98
+2020-06-04,Northwest County,1864,354.07
+2020-06-04,Pomona Valley,695,304.24
+2020-06-04,San Fernando Valley,10461,651.47
+2020-06-04,San Gabriel Valley,5324,360.51
+2020-06-04,Santa Monica Mountains,194,222.89
+2020-06-04,South Bay,2740,353.21
+2020-06-04,South LA,7411,879.07
+2020-06-04,Southeast,8466,689.18
+2020-06-04,Verdugos,2515,523.88
+2020-06-04,Westside,1605,285.22
+2020-06-05,Angeles Forest,10,288.6
+2020-06-05,Antelope Valley,1652,420.78
+2020-06-05,Central LA,6957,696.28
+2020-06-05,Eastside,2645,912.11
+2020-06-05,Harbor,4646,509.72
+2020-06-05,Northeast LA,843,500.1
+2020-06-05,Northwest County,1995,360.14
+2020-06-05,Pomona Valley,715,312.99
+2020-06-05,San Fernando Valley,10604,660.37
+2020-06-05,San Gabriel Valley,5437,368.17
+2020-06-05,Santa Monica Mountains,196,225.19
+2020-06-05,South Bay,2778,358.1
+2020-06-05,South LA,7596,901.02
+2020-06-05,Southeast,8739,711.4
+2020-06-05,Verdugos,2552,531.59
+2020-06-05,Westside,1633,290.2
+2020-06-06,Angeles Forest,10,288.6
+2020-06-06,Antelope Valley,1672,425.87
+2020-06-06,Central LA,7183,706.11
+2020-06-06,Eastside,2733,942.46
+2020-06-06,Harbor,4718,517.62
+2020-06-06,Northeast LA,848,503.07
+2020-06-06,Northwest County,2089,363.17
+2020-06-06,Pomona Valley,740,323.94
+2020-06-06,San Fernando Valley,10731,668.28
+2020-06-06,San Gabriel Valley,5579,377.78
+2020-06-06,Santa Monica Mountains,199,228.64
+2020-06-06,South Bay,2827,364.42
+2020-06-06,South LA,7817,927.23
+2020-06-06,Southeast,8962,729.56
+2020-06-06,Verdugos,2569,535.13
+2020-06-06,Westside,1641,291.62
+2020-06-07,Angeles Forest,10,288.6
+2020-06-07,Antelope Valley,1683,428.67
+2020-06-07,Central LA,7396,728.44
+2020-06-07,Eastside,2811,969.35
+2020-06-07,Harbor,4837,530.67
+2020-06-07,Northeast LA,873,517.9
+2020-06-07,Northwest County,2191,365.83
+2020-06-07,Pomona Valley,756,330.94
+2020-06-07,San Fernando Valley,10920,680.05
+2020-06-07,San Gabriel Valley,5732,388.14
+2020-06-07,Santa Monica Mountains,201,230.93
+2020-06-07,South Bay,2860,368.68
+2020-06-07,South LA,8066,956.77
+2020-06-07,Southeast,9211,749.83
+2020-06-07,Verdugos,2599,541.38
+2020-06-07,Westside,1665,295.89
+2020-06-08,Angeles Forest,10,288.6
+2020-06-08,Antelope Valley,1703,433.77
+2020-06-08,Central LA,7476,734.69
+2020-06-08,Eastside,2863,987.29
+2020-06-08,Harbor,4876,534.95
+2020-06-08,Northeast LA,893,529.76
+2020-06-08,Northwest County,2218,371.13
+2020-06-08,Pomona Valley,779,341.01
+2020-06-08,San Fernando Valley,11081,690.08
+2020-06-08,San Gabriel Valley,5809,393.36
+2020-06-08,Santa Monica Mountains,201,230.93
+2020-06-08,South Bay,2890,372.54
+2020-06-08,South LA,8189,971.36
+2020-06-08,Southeast,9339,760.25
+2020-06-08,Verdugos,2614,544.5
+2020-06-08,Westside,1674,297.48
+2020-06-09,Angeles Forest,10,288.6
+2020-06-09,Antelope Valley,1734,441.66
+2020-06-09,Central LA,7552,742.2
+2020-06-09,Eastside,2915,1005.22
+2020-06-09,Harbor,4963,544.5
+2020-06-09,Northeast LA,907,538.07
+2020-06-09,Northwest County,2288,372.65
+2020-06-09,Pomona Valley,805,352.39
+2020-06-09,San Fernando Valley,11236,699.73
+2020-06-09,San Gabriel Valley,5916,400.6
+2020-06-09,Santa Monica Mountains,204,234.38
+2020-06-09,South Bay,2911,375.25
+2020-06-09,South LA,8384,994.49
+2020-06-09,Southeast,9600,781.49
+2020-06-09,Verdugos,2630,547.84
+2020-06-09,Westside,1691,300.51
+2020-06-10,Angeles Forest,10,288.6
+2020-06-10,Antelope Valley,1754,446.76
+2020-06-10,Central LA,7549,750.3
+2020-06-10,Eastside,2987,1030.05
+2020-06-10,Harbor,5134,563.26
+2020-06-10,Northeast LA,924,548.15
+2020-06-10,Northwest County,2409,374.17
+2020-06-10,Pomona Valley,841,368.15
+2020-06-10,San Fernando Valley,11385,709.01
+2020-06-10,San Gabriel Valley,6037,408.79
+2020-06-10,Santa Monica Mountains,205,235.53
+2020-06-10,South Bay,2969,382.73
+2020-06-10,South LA,8565,1015.96
+2020-06-10,Southeast,9900,805.92
+2020-06-10,Verdugos,2648,551.59
+2020-06-10,Westside,1707,303.35
+2020-06-11,Angeles Forest,10,288.6
+2020-06-11,Antelope Valley,1792,456.44
+2020-06-11,Central LA,7653,773.67
+2020-06-11,Eastside,3140,1082.81
+2020-06-11,Harbor,5232,574.01
+2020-06-11,Northeast LA,970,575.44
+2020-06-11,Northwest County,2641,377.96
+2020-06-11,Pomona Valley,866,379.09
+2020-06-11,San Fernando Valley,11653,725.7
+2020-06-11,San Gabriel Valley,6244,422.81
+2020-06-11,Santa Monica Mountains,210,241.27
+2020-06-11,South Bay,3038,391.62
+2020-06-11,South LA,8838,1048.34
+2020-06-11,Southeast,10209,831.07
+2020-06-11,Verdugos,2685,559.29
+2020-06-11,Westside,1734,308.15
+2020-06-12,Angeles Forest,10,288.6
+2020-06-12,Antelope Valley,1826,465.1
+2020-06-12,Central LA,7700,783.16
+2020-06-12,Eastside,3274,1129.02
+2020-06-12,Harbor,5352,587.17
+2020-06-12,Northeast LA,984,583.75
+2020-06-12,Northwest County,2715,384.4
+2020-06-12,Pomona Valley,900,393.98
+2020-06-12,San Fernando Valley,11857,738.4
+2020-06-12,San Gabriel Valley,6471,438.18
+2020-06-12,Santa Monica Mountains,213,244.72
+2020-06-12,South Bay,3094,398.84
+2020-06-12,South LA,9075,1076.45
+2020-06-12,Southeast,10578,861.11
+2020-06-12,Verdugos,2701,562.63
+2020-06-12,Westside,1758,312.41
+2020-06-13,Angeles Forest,11,317.46
+2020-06-13,Antelope Valley,1866,475.29
+2020-06-13,Central LA,7799,794.72
+2020-06-13,Eastside,3381,1165.91
+2020-06-13,Harbor,5458,598.8
+2020-06-13,Northeast LA,1012,600.36
+2020-06-13,Northwest County,2742,387.43
+2020-06-13,Pomona Valley,919,402.3
+2020-06-13,San Fernando Valley,12043,749.99
+2020-06-13,San Gabriel Valley,6709,454.3
+2020-06-13,Santa Monica Mountains,215,247.02
+2020-06-13,South Bay,3153,406.44
+2020-06-13,South LA,9328,1106.46
+2020-06-13,Southeast,10903,887.57
+2020-06-13,Verdugos,2726,567.83
+2020-06-13,Westside,1797,319.34
+2020-06-14,Angeles Forest,11,317.46
+2020-06-14,Antelope Valley,1897,483.18
+2020-06-14,Central LA,7871,801.2
+2020-06-14,Eastside,3465,1194.88
+2020-06-14,Harbor,5545,608.35
+2020-06-14,Northeast LA,1040,616.97
+2020-06-14,Northwest County,2745,388.95
+2020-06-14,Pomona Valley,942,412.36
+2020-06-14,San Fernando Valley,12178,758.39
+2020-06-14,San Gabriel Valley,6823,462.02
+2020-06-14,Santa Monica Mountains,215,247.02
+2020-06-14,South Bay,3192,411.47
+2020-06-14,South LA,9446,1120.46
+2020-06-14,Southeast,11073,901.4
+2020-06-14,Verdugos,2761,575.12
+2020-06-14,Westside,1819,323.25
+2020-06-15,Angeles Forest,11,317.46
+2020-06-15,Antelope Valley,1940,494.13
+2020-06-15,Central LA,7914,806.18
+2020-06-15,Eastside,3519,1213.5
+2020-06-15,Harbor,5569,610.98
+2020-06-15,Northeast LA,1051,623.49
+2020-06-15,Northwest County,2747,391.22
+2020-06-15,Pomona Valley,972,425.5
+2020-06-15,San Fernando Valley,12273,764.31
+2020-06-15,San Gabriel Valley,6965,471.63
+2020-06-15,Santa Monica Mountains,214,245.87
+2020-06-15,South Bay,3222,415.34
+2020-06-15,South LA,9613,1140.27
+2020-06-15,Southeast,11254,916.14
+2020-06-15,Verdugos,2769,576.79
+2020-06-15,Westside,1824,324.14
+2020-06-16,Angeles Forest,11,317.46
+2020-06-16,Antelope Valley,1966,500.76
+2020-06-16,Central LA,8006,815.78
+2020-06-16,Eastside,3634,1253.16
+2020-06-16,Harbor,5644,619.21
+2020-06-16,Northeast LA,1070,634.77
+2020-06-16,Northwest County,2767,396.53
+2020-06-16,Pomona Valley,998,436.88
+2020-06-16,San Fernando Valley,12409,772.78
+2020-06-16,San Gabriel Valley,7118,481.99
+2020-06-16,Santa Monica Mountains,216,248.17
+2020-06-16,South Bay,3265,420.88
+2020-06-16,South LA,9852,1168.62
+2020-06-16,Southeast,11512,937.14
+2020-06-16,Verdugos,2823,588.04
+2020-06-16,Westside,1851,328.94
+2020-06-17,Angeles Forest,11,317.46
+2020-06-17,Antelope Valley,2013,512.73
+2020-06-17,Central LA,8295,848.51
+2020-06-17,Eastside,3799,1310.06
+2020-06-17,Harbor,5778,633.91
+2020-06-17,Northeast LA,1101,653.16
+2020-06-17,Northwest County,2780,400.32
+2020-06-17,Pomona Valley,1033,452.2
+2020-06-17,San Fernando Valley,12660,788.41
+2020-06-17,San Gabriel Valley,7345,497.36
+2020-06-17,Santa Monica Mountains,216,248.17
+2020-06-17,South Bay,3330,429.26
+2020-06-17,South LA,10193,1209.06
+2020-06-17,Southeast,11919,970.27
+2020-06-17,Verdugos,2881,600.12
+2020-06-17,Westside,1893,336.4
+2020-06-18,Angeles Forest,11,317.46
+2020-06-18,Antelope Valley,2040,519.6
+2020-06-18,Central LA,8350,854.3
+2020-06-18,Eastside,3832,1321.44
+2020-06-18,Harbor,5895,646.75
+2020-06-18,Northeast LA,1111,659.09
+2020-06-18,Northwest County,2795,406.01
+2020-06-18,Pomona Valley,1066,466.65
+2020-06-18,San Fernando Valley,12841,799.68
+2020-06-18,San Gabriel Valley,7461,505.22
+2020-06-18,Santa Monica Mountains,223,256.21
+2020-06-18,South Bay,3367,434.03
+2020-06-18,South LA,10351,1227.81
+2020-06-18,Southeast,12091,984.27
+2020-06-18,Verdugos,2932,610.74
+2020-06-18,Westside,1921,341.38
+2020-06-19,Angeles Forest,12,346.32
+2020-06-19,Antelope Valley,2072,527.76
+2020-06-19,Central LA,8460,865.06
+2020-06-19,Eastside,3921,1352.13
+2020-06-19,Harbor,6048,663.53
+2020-06-19,Northeast LA,1135,673.33
+2020-06-19,Northwest County,2807,409.42
+2020-06-19,Pomona Valley,1104,483.28
+2020-06-19,San Fernando Valley,13059,813.26
+2020-06-19,San Gabriel Valley,7622,516.12
+2020-06-19,Santa Monica Mountains,228,261.95
+2020-06-19,South Bay,3411,439.7
+2020-06-19,South LA,10549,1251.29
+2020-06-19,Southeast,12283,999.9
+2020-06-19,Verdugos,2969,618.45
+2020-06-19,Westside,1951,346.71
+2020-06-20,Angeles Forest,12,346.32
+2020-06-20,Antelope Valley,2112,537.94
+2020-06-20,Central LA,8592,878.36
+2020-06-20,Eastside,4012,1383.51
+2020-06-20,Harbor,6146,674.28
+2020-06-20,Northeast LA,1164,690.53
+2020-06-20,Northwest County,2825,415.49
+2020-06-20,Pomona Valley,1159,507.36
+2020-06-20,San Fernando Valley,13336,830.51
+2020-06-20,San Gabriel Valley,7894,534.54
+2020-06-20,Santa Monica Mountains,238,273.44
+2020-06-20,South Bay,3506,451.95
+2020-06-20,South LA,10888,1291.5
+2020-06-20,Southeast,12745,1037.51
+2020-06-20,Verdugos,3014,627.82
+2020-06-20,Westside,1999,355.24
+2020-06-21,Angeles Forest,12,346.32
+2020-06-21,Antelope Valley,2138,544.57
+2020-06-21,Central LA,8677,887.85
+2020-06-21,Eastside,4111,1417.65
+2020-06-21,Harbor,6243,684.93
+2020-06-21,Northeast LA,1174,696.46
+2020-06-21,Northwest County,2838,419.66
+2020-06-21,Pomona Valley,1200,525.3
+2020-06-21,San Fernando Valley,13512,841.47
+2020-06-21,San Gabriel Valley,8158,552.42
+2020-06-21,Santa Monica Mountains,242,278.04
+2020-06-21,South Bay,3578,461.23
+2020-06-21,South LA,11152,1322.82
+2020-06-21,Southeast,13148,1070.32
+2020-06-21,Verdugos,3059,637.2
+2020-06-21,Westside,2021,359.15
+2020-06-22,Angeles Forest,12,346.32
+2020-06-22,Antelope Valley,2183,556.03
+2020-06-22,Central LA,8962,917.46
+2020-06-22,Eastside,4317,1488.69
+2020-06-22,Harbor,6310,692.28
+2020-06-22,Northeast LA,1242,736.8
+2020-06-22,Northwest County,2848,423.45
+2020-06-22,Pomona Valley,1275,558.14
+2020-06-22,San Fernando Valley,13771,857.6
+2020-06-22,San Gabriel Valley,8540,579.77
+2020-06-22,Santa Monica Mountains,244,280.34
+2020-06-22,South Bay,3627,471.21
+2020-06-22,South LA,11099,1373.41
+2020-06-22,Southeast,13666,1112.49
+2020-06-22,Verdugos,3127,651.36
+2020-06-22,Westside,2055,365.19
+2020-06-23,Angeles Forest,12,346.32
+2020-06-23,Antelope Valley,2329,593.22
+2020-06-23,Central LA,9134,934.7
+2020-06-23,Eastside,4419,1523.86
+2020-06-23,Harbor,6471,709.94
+2020-06-23,Northeast LA,1269,752.82
+2020-06-23,Northwest County,2884,435.96
+2020-06-23,Pomona Valley,1338,585.71
+2020-06-23,San Fernando Valley,14052,875.1
+2020-06-23,San Gabriel Valley,8964,607.0
+2020-06-23,Santa Monica Mountains,253,290.68
+2020-06-23,South Bay,3754,483.92
+2020-06-23,South LA,11846,1405.14
+2020-06-23,Southeast,14090,1147.0
+2020-06-23,Verdugos,3168,659.9
+2020-06-23,Westside,2106,374.25
+2020-06-24,Angeles Forest,12,346.32
+2020-06-24,Antelope Valley,2358,600.6
+2020-06-24,Central LA,9209,942.91
+2020-06-24,Eastside,4472,1542.14
+2020-06-24,Harbor,6759,741.54
+2020-06-24,Northeast LA,1281,759.94
+2020-06-24,Northwest County,2895,440.13
+2020-06-24,Pomona Valley,1369,599.28
+2020-06-24,San Fernando Valley,14187,883.51
+2020-06-24,San Gabriel Valley,9102,616.34
+2020-06-24,Santa Monica Mountains,255,292.98
+2020-06-24,South Bay,3817,492.04
+2020-06-24,South LA,12023,1426.13
+2020-06-24,Southeast,14299,1164.02
+2020-06-24,Verdugos,3201,666.78
+2020-06-24,Westside,2129,378.34
+2020-06-25,Angeles Forest,12,346.32
+2020-06-25,Antelope Valley,2400,611.3
+2020-06-25,Central LA,9387,960.15
+2020-06-25,Eastside,4572,1576.62
+2020-06-25,Harbor,6957,763.26
+2020-06-25,Northeast LA,1309,776.55
+2020-06-25,Northwest County,2960,450.36
+2020-06-25,Pomona Valley,1423,622.92
+2020-06-25,San Fernando Valley,14443,899.45
+2020-06-25,San Gabriel Valley,9386,635.57
+2020-06-25,Santa Monica Mountains,260,298.72
+2020-06-25,South Bay,3881,500.29
+2020-06-25,South LA,12259,1454.13
+2020-06-25,Southeast,14607,1189.09
+2020-06-25,Verdugos,3242,675.32
+2020-06-25,Westside,2171,385.81
+2020-06-26,Angeles Forest,12,346.32
+2020-06-26,Antelope Valley,2440,621.49
+2020-06-26,Central LA,9509,972.29
+2020-06-26,Eastside,4675,1612.14
+2020-06-26,Harbor,7107,779.72
+2020-06-26,Northeast LA,1342,796.13
+2020-06-26,Northwest County,2986,459.46
+2020-06-26,Pomona Valley,1477,646.56
+2020-06-26,San Fernando Valley,14712,916.2
+2020-06-26,San Gabriel Valley,9618,651.28
+2020-06-26,Santa Monica Mountains,264,303.32
+2020-06-26,South Bay,3954,509.7
+2020-06-26,South LA,12540,1487.46
+2020-06-26,Southeast,14919,1214.49
+2020-06-26,Verdugos,3268,680.73
+2020-06-26,Westside,2198,390.6
+2020-06-27,Angeles Forest,12,346.32
+2020-06-27,Antelope Valley,2529,644.16
+2020-06-27,Central LA,9661,987.1
+2020-06-27,Eastside,4785,1650.07
+2020-06-27,Harbor,7301,801.0
+2020-06-27,Northeast LA,1380,818.67
+2020-06-27,Northwest County,3023,472.35
+2020-06-27,Pomona Valley,1538,673.27
+2020-06-27,San Fernando Valley,14957,931.46
+2020-06-27,San Gabriel Valley,9910,671.05
+2020-06-27,Santa Monica Mountains,268,307.91
+2020-06-27,South Bay,4065,524.01
+2020-06-27,South LA,12775,1515.33
+2020-06-27,Southeast,15303,1245.75
+2020-06-27,Verdugos,3315,690.52
+2020-06-27,Westside,2255,400.73
+2020-06-28,Angeles Forest,12,346.32
+2020-06-28,Antelope Valley,2593,660.46
+2020-06-28,Central LA,9880,1008.27
+2020-06-28,Eastside,4923,1697.66
+2020-06-28,Harbor,7409,812.85
+2020-06-28,Northeast LA,1404,832.91
+2020-06-28,Northwest County,3064,486.38
+2020-06-28,Pomona Valley,1625,711.35
+2020-06-28,San Fernando Valley,15243,949.27
+2020-06-28,San Gabriel Valley,10314,698.41
+2020-06-28,Santa Monica Mountains,274,314.81
+2020-06-28,South Bay,4176,538.32
+2020-06-28,South LA,13084,1551.99
+2020-06-28,Southeast,15858,1290.93
+2020-06-28,Verdugos,3371,702.19
+2020-06-28,Westside,2314,411.22
+2020-06-29,Angeles Forest,13,375.18
+2020-06-29,Antelope Valley,2653,675.74
+2020-06-29,Central LA,10134,1034.99
+2020-06-29,Eastside,5077,1750.77
+2020-06-29,Harbor,7486,821.3
+2020-06-29,Northeast LA,1443,856.04
+2020-06-29,Northwest County,3117,504.57
+2020-06-29,Pomona Valley,1683,736.74
+2020-06-29,San Fernando Valley,15676,976.24
+2020-06-29,San Gabriel Valley,10687,723.67
+2020-06-29,Santa Monica Mountains,287,329.74
+2020-06-29,South Bay,4274,550.95
+2020-06-29,South LA,13521,1603.82
+2020-06-29,Southeast,16391,1334.32
+2020-06-29,Verdugos,3446,717.81
+2020-06-29,Westside,2364,420.1
+2020-06-30,Angeles Forest,13,375.18
+2020-06-30,Antelope Valley,2726,694.33
+2020-06-30,Central LA,10370,1061.71
+2020-06-30,Eastside,5213,1797.67
+2020-06-30,Harbor,7740,849.16
+2020-06-30,Northeast LA,1477,876.21
+2020-06-30,Northwest County,3165,520.5
+2020-06-30,Pomona Valley,1753,767.38
+2020-06-30,San Fernando Valley,15924,991.68
+2020-06-30,San Gabriel Valley,11119,752.92
+2020-06-30,Santa Monica Mountains,296,340.08
+2020-06-30,South Bay,4386,565.39
+2020-06-30,South LA,13882,1646.64
+2020-06-30,Southeast,16951,1379.91
+2020-06-30,Verdugos,3518,732.81
+2020-06-30,Westside,2411,428.46
+2020-07-01,Angeles Forest,13,375.18
+2020-07-01,Antelope Valley,2778,707.58
+2020-07-01,Central LA,10509,1077.33
+2020-07-01,Eastside,5270,1817.32
+2020-07-01,Harbor,8125,891.4
+2020-07-01,Northeast LA,1495,886.89
+2020-07-01,Northwest County,3185,528.46
+2020-07-01,Pomona Valley,1790,783.58
+2020-07-01,San Fernando Valley,16092,1002.14
+2020-07-01,San Gabriel Valley,11389,771.2
+2020-07-01,Santa Monica Mountains,304,349.27
+2020-07-01,South Bay,4465,575.57
+2020-07-01,South LA,14137,1676.89
+2020-07-01,Southeast,17279,1406.61
+2020-07-01,Verdugos,3572,744.06
+2020-07-01,Westside,2458,436.81
+2020-07-02,Angeles Forest,14,404.04
+2020-07-02,Antelope Valley,2835,722.1
+2020-07-02,Central LA,10671,1093.64
+2020-07-02,Eastside,5411,1865.95
+2020-07-02,Harbor,8351,916.2
+2020-07-02,Northeast LA,1525,904.69
+2020-07-02,Northwest County,3218,540.59
+2020-07-02,Pomona Valley,1844,807.22
+2020-07-02,San Fernando Valley,16382,1020.2
+2020-07-02,San Gabriel Valley,11730,794.29
+2020-07-02,Santa Monica Mountains,312,358.46
+2020-07-02,South Bay,4526,583.43
+2020-07-02,South LA,14393,1707.26
+2020-07-02,Southeast,17679,1439.17
+2020-07-02,Verdugos,3614,752.81
+2020-07-02,Westside,2499,444.09
+2020-07-06,Angeles Forest,15,432.9
+2020-07-06,Antelope Valley,3145,801.06
+2020-07-06,Central LA,11401,1147.43
+2020-07-06,Eastside,5820,2006.99
+2020-07-06,Harbor,8783,963.59
+2020-07-06,Northeast LA,1603,950.96
+2020-07-06,Northwest County,3349,587.6
+2020-07-06,Pomona Valley,2108,922.78
+2020-07-06,San Fernando Valley,17294,1077.0
+2020-07-06,San Gabriel Valley,13276,898.98
+2020-07-06,Santa Monica Mountains,327,375.7
+2020-07-06,South Bay,4961,639.51
+2020-07-06,South LA,15408,1827.65
+2020-07-06,Southeast,19336,1574.06
+2020-07-06,Verdugos,3805,792.59
+2020-07-06,Westside,2740,486.92
+2020-07-07,Angeles Forest,16,461.76
+2020-07-07,Antelope Valley,3215,818.89
+2020-07-07,Central LA,11724,1181.79
+2020-07-07,Eastside,6058,2089.06
+2020-07-07,Harbor,8993,986.63
+2020-07-07,Northeast LA,1659,984.18
+2020-07-07,Northwest County,3400,604.65
+2020-07-07,Pomona Valley,2192,959.56
+2020-07-07,San Fernando Valley,17839,1110.94
+2020-07-07,San Gabriel Valley,13870,939.2
+2020-07-07,Santa Monica Mountains,337,387.19
+2020-07-07,South Bay,5145,663.23
+2020-07-07,South LA,16008,1898.82
+2020-07-07,Southeast,20137,1639.26
+2020-07-07,Verdugos,3879,808.01
+2020-07-07,Westside,2812,499.72
+2020-07-08,Angeles Forest,16,461.76
+2020-07-08,Antelope Valley,3277,834.68
+2020-07-08,Central LA,11861,1196.94
+2020-07-08,Eastside,6128,2113.2
+2020-07-08,Harbor,9326,1023.16
+2020-07-08,Northeast LA,1671,991.3
+2020-07-08,Northwest County,3441,618.3
+2020-07-08,Pomona Valley,2247,983.63
+2020-07-08,San Fernando Valley,18126,1128.81
+2020-07-08,San Gabriel Valley,14253,965.14
+2020-07-08,Santa Monica Mountains,341,391.78
+2020-07-08,South Bay,5249,676.63
+2020-07-08,South LA,16317,1935.47
+2020-07-08,Southeast,20645,1680.62
+2020-07-08,Verdugos,3922,816.96
+2020-07-08,Westside,2874,510.74
+2020-07-09,Angeles Forest,16,461.76
+2020-07-09,Antelope Valley,3342,851.24
+2020-07-09,Central LA,11952,1206.43
+2020-07-09,Eastside,6186,2133.2
+2020-07-09,Harbor,9604,1053.66
+2020-07-09,Northeast LA,1695,1005.54
+2020-07-09,Northwest County,3472,628.92
+2020-07-09,Pomona Valley,2295,1004.64
+2020-07-09,San Fernando Valley,18335,1141.83
+2020-07-09,San Gabriel Valley,14492,981.32
+2020-07-09,Santa Monica Mountains,343,394.08
+2020-07-09,South Bay,5348,689.4
+2020-07-09,South LA,16526,1960.27
+2020-07-09,Southeast,20929,1703.74
+2020-07-09,Verdugos,3976,828.21
+2020-07-09,Westside,2915,518.02
+2020-07-10,Angeles Forest,16,461.76
+2020-07-10,Antelope Valley,3399,865.75
+2020-07-10,Central LA,12121,1223.55
+2020-07-10,Eastside,6293,2170.1
+2020-07-10,Harbor,9941,1090.64
+2020-07-10,Northeast LA,1712,1015.63
+2020-07-10,Northwest County,3505,640.29
+2020-07-10,Pomona Valley,2353,1030.03
+2020-07-10,San Fernando Valley,18572,1156.59
+2020-07-10,San Gabriel Valley,14858,1006.11
+2020-07-10,Santa Monica Mountains,355,407.87
+2020-07-10,South Bay,5467,704.74
+2020-07-10,South LA,16879,2002.14
+2020-07-10,Southeast,21468,1747.62
+2020-07-10,Verdugos,4020,837.38
+2020-07-10,Westside,3002,533.48
+2020-07-11,Angeles Forest,16,461.76
+2020-07-11,Antelope Valley,3494,889.95
+2020-07-11,Central LA,12313,1243.22
+2020-07-11,Eastside,6448,2223.55
+2020-07-11,Harbor,10152,1113.79
+2020-07-11,Northeast LA,1744,1034.61
+2020-07-11,Northwest County,3539,652.8
+2020-07-11,Pomona Valley,2411,1055.42
+2020-07-11,San Fernando Valley,18898,1176.89
+2020-07-11,San Gabriel Valley,15311,1036.78
+2020-07-11,Santa Monica Mountains,364,418.21
+2020-07-11,South Bay,5581,719.43
+2020-07-11,South LA,17247,2045.79
+2020-07-11,Southeast,21993,1790.35
+2020-07-11,Verdugos,4088,851.54
+2020-07-11,Westside,3077,546.81
+2020-07-12,Angeles Forest,16,461.76
+2020-07-12,Antelope Valley,3591,914.66
+2020-07-12,Central LA,12532,1267.74
+2020-07-12,Eastside,6628,2285.62
+2020-07-12,Harbor,10424,1143.63
+2020-07-12,Northeast LA,1786,1059.53
+2020-07-12,Northwest County,3595,673.27
+2020-07-12,Pomona Valley,2500,1094.38
+2020-07-12,San Fernando Valley,19271,1200.12
+2020-07-12,San Gabriel Valley,15881,1075.38
+2020-07-12,Santa Monica Mountains,370,425.1
+2020-07-12,South Bay,5716,736.83
+2020-07-12,South LA,17632,2091.46
+2020-07-12,Southeast,22644,1843.35
+2020-07-12,Verdugos,4146,863.62
+2020-07-12,Westside,3150,559.78
+2020-07-13,Angeles Forest,17,490.62
+2020-07-13,Antelope Valley,3656,931.21
+2020-07-13,Central LA,12711,1286.83
+2020-07-13,Eastside,6744,2325.62
+2020-07-13,Harbor,10507,1152.73
+2020-07-13,Northeast LA,1817,1077.92
+2020-07-13,Northwest County,3640,689.57
+2020-07-13,Pomona Valley,2576,1127.65
+2020-07-13,San Fernando Valley,19618,1221.73
+2020-07-13,San Gabriel Valley,16308,1104.29
+2020-07-13,Santa Monica Mountains,380,436.59
+2020-07-13,South Bay,5852,754.37
+2020-07-13,South LA,17975,2132.14
+2020-07-13,Southeast,23153,1884.78
+2020-07-13,Verdugos,4219,878.83
+2020-07-13,Westside,3222,572.58
+2020-07-14,Angeles Forest,19,548.34
+2020-07-14,Antelope Valley,3769,960.0
+2020-07-14,Central LA,13017,1318.29
+2020-07-14,Eastside,6974,2404.94
+2020-07-14,Harbor,10892,1194.97
+2020-07-14,Northeast LA,1862,1104.61
+2020-07-14,Northwest County,3680,704.36
+2020-07-14,Pomona Valley,2677,1171.87
+2020-07-14,San Fernando Valley,20097,1251.56
+2020-07-14,San Gabriel Valley,16986,1150.2
+2020-07-14,Santa Monica Mountains,386,443.48
+2020-07-14,South Bay,6018,775.76
+2020-07-14,South LA,18551,2200.47
+2020-07-14,Southeast,23916,1946.9
+2020-07-14,Verdugos,4319,899.66
+2020-07-14,Westside,3308,587.86
+2020-07-15,Angeles Forest,19,548.34
+2020-07-15,Antelope Valley,3832,976.04
+2020-07-15,Central LA,13200,1333.79
+2020-07-15,Eastside,7077,2440.45
+2020-07-15,Harbor,11216,1230.52
+2020-07-15,Northeast LA,1898,1125.97
+2020-07-15,Northwest County,3746,728.24
+2020-07-15,Pomona Valley,2741,1199.88
+2020-07-15,San Fernando Valley,20387,1269.62
+2020-07-15,San Gabriel Valley,17342,1174.31
+2020-07-15,Santa Monica Mountains,393,451.53
+2020-07-15,South Bay,6143,791.88
+2020-07-15,South LA,18788,2228.58
+2020-07-15,Southeast,24386,1985.16
+2020-07-15,Verdugos,4394,915.28
+2020-07-15,Westside,3380,600.66
+2020-07-16,Angeles Forest,20,577.2
+2020-07-16,Antelope Valley,3952,1006.61
+2020-07-16,Central LA,13547,1370.12
+2020-07-16,Eastside,7338,2530.46
+2020-07-16,Harbor,11559,1268.15
+2020-07-16,Northeast LA,1938,1149.7
+2020-07-16,Northwest County,3801,747.19
+2020-07-16,Pomona Valley,2857,1250.66
+2020-07-16,San Fernando Valley,21009,1308.35
+2020-07-16,San Gabriel Valley,17965,1216.5
+2020-07-16,Santa Monica Mountains,406,466.46
+2020-07-16,South Bay,6351,818.69
+2020-07-16,South LA,19462,2308.53
+2020-07-16,Southeast,25288,2058.58
+2020-07-16,Verdugos,4481,933.4
+2020-07-16,Westside,3491,620.38
+2020-07-17,Angeles Forest,20,577.2
+2020-07-17,Antelope Valley,4008,1020.87
+2020-07-17,Central LA,13723,1388.28
+2020-07-17,Eastside,7468,2575.29
+2020-07-17,Harbor,11845,1299.53
+2020-07-17,Northeast LA,1973,1170.46
+2020-07-17,Northwest County,3833,758.19
+2020-07-17,Pomona Valley,2968,1299.25
+2020-07-17,San Fernando Valley,21356,1329.96
+2020-07-17,San Gabriel Valley,18347,1242.36
+2020-07-17,Santa Monica Mountains,410,471.06
+2020-07-17,South Bay,6510,839.19
+2020-07-17,South LA,19822,2351.23
+2020-07-17,Southeast,25777,2098.39
+2020-07-17,Verdugos,4549,947.57
+2020-07-17,Westside,3561,632.82
+2020-07-18,Angeles Forest,20,577.2
+2020-07-18,Antelope Valley,4080,1039.21
+2020-07-18,Central LA,13878,1404.82
+2020-07-18,Eastside,7590,2617.36
+2020-07-18,Harbor,12034,1320.26
+2020-07-18,Northeast LA,2007,1190.63
+2020-07-18,Northwest County,3856,766.53
+2020-07-18,Pomona Valley,3053,1336.46
+2020-07-18,San Fernando Valley,21762,1355.25
+2020-07-18,San Gabriel Valley,18765,1270.67
+2020-07-18,Santa Monica Mountains,420,482.55
+2020-07-18,South Bay,6652,857.49
+2020-07-18,South LA,20131,2387.88
+2020-07-18,Southeast,26290,2140.15
+2020-07-18,Verdugos,4617,961.73
+2020-07-18,Westside,3603,640.29
+2020-07-19,Angeles Forest,20,577.2
+2020-07-19,Antelope Valley,4175,1063.41
+2020-07-19,Central LA,14079,1425.87
+2020-07-19,Eastside,7717,2661.15
+2020-07-19,Harbor,12240,1342.86
+2020-07-19,Northeast LA,2048,1214.95
+2020-07-19,Northwest County,3885,777.14
+2020-07-19,Pomona Valley,3162,1384.18
+2020-07-19,San Fernando Valley,22164,1380.28
+2020-07-19,San Gabriel Valley,19169,1298.02
+2020-07-19,Santa Monica Mountains,422,484.85
+2020-07-19,South Bay,6769,872.57
+2020-07-19,South LA,20495,2431.06
+2020-07-19,Southeast,26799,2181.59
+2020-07-19,Verdugos,4680,974.86
+2020-07-19,Westside,3666,651.48
+2020-07-20,Angeles Forest,20,577.2
+2020-07-20,Antelope Valley,4257,1084.29
+2020-07-20,Central LA,14357,1455.84
+2020-07-20,Eastside,7924,2732.54
+2020-07-20,Harbor,12350,1354.93
+2020-07-20,Northeast LA,2099,1245.21
+2020-07-20,Northwest County,3909,785.86
+2020-07-20,Pomona Valley,3231,1414.38
+2020-07-20,San Fernando Valley,22718,1414.78
+2020-07-20,San Gabriel Valley,19620,1328.56
+2020-07-20,Santa Monica Mountains,427,490.59
+2020-07-20,South Bay,6885,887.53
+2020-07-20,South LA,20934,2483.13
+2020-07-20,Southeast,27369,2227.99
+2020-07-20,Verdugos,4765,992.56
+2020-07-20,Westside,3708,658.94
+2020-07-21,Angeles Forest,21,606.06
+2020-07-21,Antelope Valley,4339,1105.18
+2020-07-21,Central LA,14530,1475.5
+2020-07-21,Eastside,8030,2769.09
+2020-07-21,Harbor,12540,1375.78
+2020-07-21,Northeast LA,2124,1260.04
+2020-07-21,Northwest County,3953,801.4
+2020-07-21,Pomona Valley,3310,1448.96
+2020-07-21,San Fernando Valley,23037,1434.65
+2020-07-21,San Gabriel Valley,20011,1355.04
+2020-07-21,Santa Monica Mountains,433,497.48
+2020-07-21,South Bay,6999,902.22
+2020-07-21,South LA,21300,2526.54
+2020-07-21,Southeast,27803,2263.32
+2020-07-21,Verdugos,4840,1008.18
+2020-07-21,Westside,3775,670.85
+2020-07-22,Angeles Forest,22,634.92
+2020-07-22,Antelope Valley,4435,1129.63
+2020-07-22,Central LA,14759,1499.45
+2020-07-22,Eastside,8209,2830.82
+2020-07-22,Harbor,12975,1423.5
+2020-07-22,Northeast LA,2163,1283.18
+2020-07-22,Northwest County,3999,818.46
+2020-07-22,Pomona Valley,3418,1496.24
+2020-07-22,San Fernando Valley,23414,1458.13
+2020-07-22,San Gabriel Valley,20466,1385.85
+2020-07-22,Santa Monica Mountains,446,512.42
+2020-07-22,South Bay,7163,923.36
+2020-07-22,South LA,21707,2574.82
+2020-07-22,Southeast,28335,2306.63
+2020-07-22,Verdugos,4956,1032.35
+2020-07-22,Westside,3870,687.73
+2020-07-23,Angeles Forest,23,663.78
+2020-07-23,Antelope Valley,4507,1147.97
+2020-07-23,Central LA,14857,1510.44
+2020-07-23,Eastside,8263,2849.44
+2020-07-23,Harbor,13242,1452.79
+2020-07-23,Northeast LA,2179,1292.67
+2020-07-23,Northwest County,4028,828.7
+2020-07-23,Pomona Valley,3453,1511.56
+2020-07-23,San Fernando Valley,23736,1478.18
+2020-07-23,San Gabriel Valley,20643,1397.84
+2020-07-23,Santa Monica Mountains,357,539.64
+2020-07-23,South Bay,7246,934.06
+2020-07-23,South LA,21917,2599.73
+2020-07-23,Southeast,28642,2331.62
+2020-07-23,Verdugos,5028,1047.35
+2020-07-23,Westside,3904,693.78
+2020-07-24,Angeles Forest,23,663.78
+2020-07-24,Antelope Valley,4570,1164.02
+2020-07-24,Central LA,15025,1529.18
+2020-07-24,Eastside,8380,2889.78
+2020-07-24,Harbor,13456,1476.27
+2020-07-24,Northeast LA,2204,1307.5
+2020-07-24,Northwest County,4060,839.31
+2020-07-24,Pomona Valley,3493,1529.07
+2020-07-24,San Fernando Valley,23969,1492.69
+2020-07-24,San Gabriel Valley,20910,1415.92
+2020-07-24,Santa Monica Mountains,458,526.21
+2020-07-24,South Bay,7317,943.22
+2020-07-24,South LA,22162,2628.79
+2020-07-24,Southeast,28941,2355.96
+2020-07-24,Verdugos,5089,1060.05
+2020-07-24,Westside,3936,699.46
+2020-07-25,Angeles Forest,23,663.78
+2020-07-25,Antelope Valley,4639,1181.59
+2020-07-25,Central LA,15283,1555.78
+2020-07-25,Eastside,8585,2960.48
+2020-07-25,Harbor,13713,1504.47
+2020-07-25,Northeast LA,2255,1337.75
+2020-07-25,Northwest County,4087,848.79
+2020-07-25,Pomona Valley,3599,1575.48
+2020-07-25,San Fernando Valley,24667,1536.16
+2020-07-25,San Gabriel Valley,21401,1449.16
+2020-07-25,Santa Monica Mountains,464,533.1
+2020-07-25,South Bay,7466,962.42
+2020-07-25,South LA,22681,2690.35
+2020-07-25,Southeast,29509,2402.2
+2020-07-25,Verdugos,5196,1082.34
+2020-07-25,Westside,3994,709.77
+2020-07-26,Angeles Forest,23,663.78
+2020-07-26,Antelope Valley,4713,1200.44
+2020-07-26,Central LA,15375,1566.19
+2020-07-26,Eastside,8649,2982.55
+2020-07-26,Harbor,13879,1522.68
+2020-07-26,Northeast LA,2270,1346.65
+2020-07-26,Northwest County,4121,860.92
+2020-07-26,Pomona Valley,3686,1613.56
+2020-07-26,San Fernando Valley,24885,1549.73
+2020-07-26,San Gabriel Valley,21673,1467.58
+2020-07-26,Santa Monica Mountains,467,536.55
+2020-07-26,South Bay,7515,968.74
+2020-07-26,South LA,22876,2713.48
+2020-07-26,Southeast,29787,2424.83
+2020-07-26,Verdugos,5233,1090.05
+2020-07-26,Westside,4018,714.03
+2020-07-27,Angeles Forest,25,721.5
+2020-07-27,Antelope Valley,4754,1210.88
+2020-07-27,Central LA,15547,1584.36
+2020-07-27,Eastside,8787,3030.14
+2020-07-27,Harbor,13941,1529.48
+2020-07-27,Northeast LA,2315,1373.35
+2020-07-27,Northwest County,4150,871.54
+2020-07-27,Pomona Valley,3743,1638.51
+2020-07-27,San Fernando Valley,25237,1571.65
+2020-07-27,San Gabriel Valley,21976,1488.1
+2020-07-27,Santa Monica Mountains,469,538.85
+2020-07-27,South Bay,7622,982.53
+2020-07-27,South LA,23173,2748.71
+2020-07-27,Southeast,30054,2446.56
+2020-07-27,Verdugos,5295,1102.96
+2020-07-27,Westside,4049,719.54
+2020-07-28,Angeles Forest,25,721.5
+2020-07-28,Antelope Valley,4910,1250.62
+2020-07-28,Central LA,15700,1601.25
+2020-07-28,Eastside,8897,3068.07
+2020-07-28,Harbor,14129,1550.11
+2020-07-28,Northeast LA,2337,1386.4
+2020-07-28,Northwest County,4197,888.6
+2020-07-28,Pomona Valley,3889,1702.42
+2020-07-28,San Fernando Valley,25462,1585.67
+2020-07-28,San Gabriel Valley,22407,1517.28
+2020-07-28,Santa Monica Mountains,472,542.29
+2020-07-28,South Bay,7749,998.9
+2020-07-28,South LA,23504,2787.98
+2020-07-28,Southeast,30570,2488.57
+2020-07-28,Verdugos,5351,1114.63
+2020-07-28,Westside,4088,726.47
+2020-07-29,Angeles Forest,27,779.22
+2020-07-29,Antelope Valley,5032,1281.69
+2020-07-29,Central LA,16066,1641.39
+2020-07-29,Eastside,9150,3155.31
+2020-07-29,Harbor,14551,1596.4
+2020-07-29,Northeast LA,2407,1427.93
+2020-07-29,Northwest County,4267,914.0
+2020-07-29,Pomona Valley,3994,1748.39
+2020-07-29,San Fernando Valley,26509,1650.87
+2020-07-29,San Gabriel Valley,22934,1552.97
+2020-07-29,Santa Monica Mountains,484,556.08
+2020-07-29,South Bay,7922,1021.2
+2020-07-29,South LA,24181,2868.28
+2020-07-29,Southeast,31206,2540.34
+2020-07-29,Verdugos,5473,1140.04
+2020-07-29,Westside,4158,738.91
+2020-07-30,Angeles Forest,28,808.08
+2020-07-30,Antelope Valley,5131,1306.91
+2020-07-30,Central LA,16271,1662.9
+2020-07-30,Eastside,9293,3204.63
+2020-07-30,Harbor,14724,1615.38
+2020-07-30,Northeast LA,2447,1451.66
+2020-07-30,Northwest County,4296,924.61
+2020-07-30,Pomona Valley,4082,1786.91
+2020-07-30,San Fernando Valley,26861,1672.79
+2020-07-30,San Gabriel Valley,23288,1576.94
+2020-07-30,Santa Monica Mountains,492,565.27
+2020-07-30,South Bay,8055,1038.35
+2020-07-30,South LA,24501,2906.24
+2020-07-30,Southeast,31587,2571.36
+2020-07-30,Verdugos,5545,1155.04
+2020-07-30,Westside,4213,748.69

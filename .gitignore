@@ -7,12 +7,6 @@ append-data/*.csv
 daily_pr/cached-html/*.html
 daily_pr/parsed-json/*.json
 
-geo/csa/countywide-statistical-areas.geojson
-geo/csa/arcgis-csa-query.json
-
-geo/geocode/addresses.csv
-geo/geocode/geocoderesult.csv
-
 pickled/*.pickle
 
 scratchpad.py
