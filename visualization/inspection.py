@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 import matplotlib.pyplot as plt
@@ -27,7 +27,7 @@ df_csa_curr = pd.read_pickle(paths.CSA_CURRENT_PICKLE)
 covid_plots.csa_distribution(df_csa_curr, lac_regions.ALL_CSA, const.CASE_RATE)
 
 
-# In[4]:
+# In[5]:
 
 
 covid_plots.csa_distribution(df_csa_curr, lac_regions.ALL_CSA, const.DEATH_RATE, 20)
@@ -73,7 +73,7 @@ area = lac_regions.ALL_CSA[25]
 
 # ## Rolling Average
 
-# In[10]:
+# In[7]:
 
 
 df_summary = pd.read_pickle(paths.MAIN_STATS_PICKLE)
