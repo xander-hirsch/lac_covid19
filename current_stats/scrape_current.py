@@ -1,5 +1,5 @@
-import re
-from typing import Dict, List, Tuple
+import os.path
+from typing import Dict, Iterable, List, Optional, Union
 
 import bs4
 import pandas as pd
@@ -7,196 +7,215 @@ import requests
 
 import lac_covid19.const as const
 import lac_covid19.const.lac_regions as lac_regions
+import lac_covid19.const.paths as paths
 
 STATS_URL = 'http://publichealth.lacounty.gov/media/Coronavirus/locations.htm'
 
-UNDER_INVESTIGATION = 'Under Investigation'
-RE_UNDER_INVESTIGATION = re.compile(UNDER_INVESTIGATION)
+CITY_COMMUNITY = 'CITY/COMMUNITY**'
+STRING_COLUMNS = (CITY_COMMUNITY, 'City', 'Address',
+                  'Setting Name', 'Setting Type')
 
-RE_LOS_ANGELES = re.compile('^Los Angeles$')
 
-
-def fetch_stats() -> List[bs4.Tag]:
+def fetch_stats(use_cache: bool = False) -> Optional[List[bs4.Tag]]:
     """Fetches most recent COVID-19 counts from Los Angeles Public Health.
+
+    Args:
+        use_cache: Specifies if the local copy of the page is used instead of
+            connecting to website
 
     Returns:
         A list where each entry is a table from the website.
             0: Case summary
-            1: Residential congregate settings
-            2: Non-residential outbreaks
-            3: Homeless services
+            1: Countywide statistical areas
+            2: Residential congregate settings
+            3: Non-residential outbreaks
+            4: Homeless services
     """
 
-    r = requests.get(STATS_URL)
-    stats_html = None
-    if r.status_code == 200:
-        stats_html = bs4.BeautifulSoup(r.text, 'html.parser')
-        stats_html = stats_html.find('body')
+    raw_html = None
 
-        return stats_html.find_all(
-            'table', class_='table table-striped table-bordered table-sm')
-
-
-def break_summary(summary_table: bs4.Tag) -> List[bs4.Tag]:
-    """Breaks the summary table into its parts.
-
-    Returns:
-        Header for each section.
-        0: Laboratory confirmed cases
-        1: Deaths
-        2: Age group
-        3: Gender
-        4: Race/Ethnicity cases
-        5: Hospitalizations
-        6: Race/Ethnicity deaths
-        7: Countywide statistical areas
-    """
-    return summary_table.find_all('tr', class_='blue text-white')
-
-
-def parse_health_dept_count(count_header: bs4.Tag) -> Dict[str, int]:
-    """Parses the case count by health department"""
-
-    health_dept_count = {}
-    for _ in range(3):
-        count_header = count_header.find_next('tr')
-        entries = [x.get_text(strip=True) for x in count_header.find_all('td')]
-        department = entries[0].lstrip('-- ')
-        count = int(entries[1])
-
-        health_dept_count[department] = count
-
-
-    return health_dept_count
-
-def csa_index() -> pd.Index:
-    return pd.Index((const.AREA, const.REGION, const.CASES, const.CASE_RATE,
-                     const.DEATHS, const.DEATH_RATE, const.CF_OUTBREAK))
-
-
-def parse_csa(areas_header: bs4.Tag) -> pd.DataFrame:
-    """Parses the cases and deaths by area."""
-
-    df = pd.DataFrame(
-        {
-            const.AREA: pd.Series(dtype='string'),
-            const.REGION: pd.Series(dtype='string'),
-            const.CASES: pd.Series(dtype=int),
-            const.CASE_RATE: pd.Series(dtype=int),
-            const.DEATHS: pd.Series(dtype=int),
-            const.DEATH_RATE: pd.Series(dtype=int),
-            const.CF_OUTBREAK: pd.Series(dtype=bool)
-        }
-    )
-
-    area_entry = areas_header.find_next('tr')
-    while area_entry is not None:
-        area_data = [x.get_text(strip=True) for x in area_entry.find_all('td')]
-        csa, cases, case_rate, deaths, death_rate = area_data
-
-        if RE_UNDER_INVESTIGATION.search(csa):
-            break
-        elif RE_LOS_ANGELES.match(csa):
-            pass
+    if use_cache and os.path.isfile(paths.CURRENT_STATS_PAGE):
+        with open(paths.CURRENT_STATS_PAGE) as f:
+            raw_html = f.read()
+    else:
+        r = requests.get(STATS_URL)
+        if r.status_code == 200:
+            raw_html = r.text
+            with open(paths.CURRENT_STATS_PAGE, 'w') as f:
+                f.write(raw_html)
         else:
-            cf_outbreak = False
-            if csa[-1] == '*':
-                csa = csa[:-1]
-                cf_outbreak = True
+            raise ConnectionError('Cannot connect to LAPH COVID-19 Stats Page')
 
-            table_row = pd.Series((csa, lac_regions.REGION_MAP[csa],
-                                   int(cases), int(case_rate),
-                                   int(deaths), int(death_rate),
-                                   cf_outbreak), index=csa_index())
-            df = df.append(table_row, ignore_index=True)
+    stats_html = bs4.BeautifulSoup(raw_html, 'html.parser')
+    stats_html = stats_html.find('body')
+    return stats_html.find_all('table')
 
-        area_entry = area_entry.find_next('tr')
+
+def extract_tr_data(tr: bs4.Tag) -> Iterable[Union[str, int]]:
+    """Takes the data from a table row into a useable format"""
+    data_points = [x.get_text(strip=True) for x in tr.find_all('td')]
+    # Try to strip dash, then convert to integer
+    for i in range(len(data_points)):
+        data_points[i] = data_points[i].lstrip('-  ')
+        try:
+            data_points[i] = int(data_points[i])
+        except ValueError:
+            pass
+    return tuple(data_points)
+
+
+def seperate_summary(table: bs4.Tag) -> Iterable[Iterable[Union[str, int]]]:
+    """First pass at seperating the summary stats"""
+    groups = table.find_all('thead')
+    for i in range(len(groups)):
+        group = groups[i]
+        lines = []
+        # Extract header content
+        lines.append(extract_tr_data(group))
+        # Move through subsequent rows
+        group = group.next_sibling.next_sibling
+        while (group is not None) and (group.name == 'tr'):
+            lines.append(extract_tr_data(group))
+            group = group.next_sibling.next_sibling
+        groups[i] = lines
+    return groups
+
+
+def organize_summary(raw_summary) -> Dict:
+    """Cleans up the summary listing"""
+    summary_dict = {}
+    for group in raw_summary:
+        group_name = group[0][0]
+        group_dict = {}
+        for row in group[1:]:
+            row_name = row[0]
+            if row_name not in ('', const.UNDER_INVESTIGATION):
+                group_dict[row_name] = row[1]
+        summary_dict[group_name] = group_dict
+
+    # Clean up some parts of the output
+    summary_dict['New Daily Counts'][const.CASES] = summary_dict[
+        'New Daily Counts'].pop('Cases**')
+    summary_dict[const.CASES] = summary_dict.pop('Laboratory Confirmed Cases')
+    summary_dict[const.HOSPITALIZATIONS] = summary_dict.pop(
+        'Hospitalization LAC cases only (not Long Beach and Pasadena)')
+    summary_dict[const.AGE_GROUP] = summary_dict.pop(
+        'Age Group (Los Angeles County Cases Only-excl\xa0LB\xa0and\xa0Pas)')
+    summary_dict[const.GENDER] = summary_dict.pop(
+        'Gender (Los Angeles County Cases Only-excl\xa0LB\xa0and\xa0Pas)')
+    summary_dict[const.CASES_BY_RACE] = summary_dict.pop(
+        'Race/Ethnicity (Los Angeles County Cases Only-excl LB and Pas)')
+    summary_dict[const.DEATHS_BY_RACE] = summary_dict.pop(
+        'Deaths Race/Ethnicity (Los Angeles County Cases Only-excl LB and Pas)')
+
+    return summary_dict
+
+
+def parse_summary(table: bs4.Tag) -> Dict:
+    return organize_summary(seperate_summary(table))
+
+
+def parse_table(table: bs4.Tag) -> pd.DataFrame:
+    """Interprets an HTML table to only have the data"""
+
+    headings_list = [x.get_text() for x in table.find('thead').find_all('th')]
+    data_rows = tuple(map(extract_tr_data, table.find('tbody').find_all('tr')))
+
+    # Attempt to use Obs as the index value if avalible
+    index = None
+    if headings_list[0] == 'Obs':
+        headings_list = headings_list[1:]
+        index = [x[0] for x in data_rows]
+        data_rows = [x[1:] for x in data_rows]
+
+    df = pd.DataFrame(data_rows, index, headings_list)
+
+    # Convert select columns to string dtypes
+    for col in df.columns:
+        if col in STRING_COLUMNS:
+            df[col] = df[col].astype('string')
 
     return df
 
 
-def query_all_areas(
-        summary_table: bs4.Tag) -> List[Tuple[str, str, int, int, int, int]]:
+def clean_city_community(df: pd.DataFrame) -> pd.DataFrame:
+    """Fixes problems on the CITY/COMMUNITY table"""
+
+    COLUMN_NAME_FIX = {
+        'CITY/COMMUNITY**': const.AREA,
+        'Case Rate1': const.CASE_RATE,
+        'Death Rate2': const.DEATH_RATE,
+    }
+    df = df.rename(columns=COLUMN_NAME_FIX)
+
+    df = df[df[const.AREA] != const.UNDER_INVESTIGATION]
+
+    df[const.CASE_RATE] = df[const.CASE_RATE].astype('int')
+    df[const.DEATH_RATE] = df[const.DEATH_RATE].astype('int')
+
+    df[const.CF_OUTBREAK] = df[const.AREA].apply(lambda x: x[-1] == '*')
+    df[const.AREA] = df[const.AREA].apply(lambda x: x.rstrip('*'))
+
+    df[const.REGION] = (df[const.AREA].apply(lac_regions.REGION_MAP.get)
+                        .astype('string'))
+
+    return df[[const.AREA, const.REGION, const.CASES, const.CASE_RATE,
+               const.DEATHS, const.DEATH_RATE, const.CF_OUTBREAK]]
+
+
+def load_page(use_cache: bool = False):
+    """Loads in the page and does preliminary parsing"""
+    all_tables = fetch_stats(use_cache)
+
+    all_tables[0] = parse_summary(all_tables[0])
+    all_tables[1:] = [parse_table(x) for x in all_tables[1:]]
+
+    all_tables[1] = clean_city_community(all_tables[1])
+
+    return all_tables
+
+
+def parse_single_health_dept(summary_dict: Dict,
+                             health_dept: str) -> pd.DataFrame:
+    """Converts a single health department (Long Beach, Pasadena) as a line on
+        the area listing
+    """
+
+    hd_cases = summary_dict[const.CASES][health_dept]
+    hd_deaths = summary_dict[const.DEATHS][health_dept]
+
+    csa, region, population = const.hd.HEALTH_DEPT_INFO[health_dept]
+
+    rate_multiplier = const.RATE_SCALE / population
+    case_rate = round(hd_cases * rate_multiplier)
+    death_rate = round(hd_deaths * rate_multiplier)
+
+    data = {const.AREA: csa, const.REGION: region,
+            const.CASES: hd_cases, const.CASE_RATE: case_rate,
+            const.DEATHS: hd_deaths, const.DEATH_RATE: death_rate,
+            const.CF_OUTBREAK: False}
+
+    return pd.DataFrame([data.values()], columns=data.keys())
+
+
+def query_all_areas(summary_dict: Dict, df_csa: pd.DataFrame) -> pd.DataFrame:
     """Queries the countywide statistical areas, but also the health departments
         to account for all areas in Los Angeles County.
     """
 
-    case_summary_headers = break_summary(summary_table)
-    health_dept_cases_header = case_summary_headers[0]
-    health_dept_deaths_header = case_summary_headers[1]
-    csa_header = case_summary_headers[-1]
+    df_csa = df_csa[df_csa[const.AREA] != const.LOS_ANGELES]
 
-    hd_cases = parse_health_dept_count(health_dept_cases_header)
-    hd_deaths = parse_health_dept_count(health_dept_deaths_header)
-    csa_cases_deaths = parse_csa(csa_header)
+    df_hd = pd.concat([parse_single_health_dept(summary_dict, x)
+                       for x in (const.hd.LONG_BEACH, const.hd.PASADENA)])
 
-    lb_cases = hd_cases[const.hd.LONG_BEACH]
-    lb_deaths = hd_deaths[const.hd.LONG_BEACH]
+    df_all = pd.concat([df_csa, df_hd], ignore_index=True)
 
-    lb_multiplier = const.RATE_SCALE / const.hd.POPULATION_LONG_BEACH
-    lb_case_rate = round(lb_cases * lb_multiplier)
-    lb_death_rate = round(lb_deaths * lb_multiplier)
+    df_all[const.AREA] = df_all[const.AREA].astype('string')
+    df_all[const.REGION] = df_all[const.REGION].astype('category')
 
-    long_beach_entry = pd.Series(
-        (const.hd.CSA_LB, lac_regions.HARBOR, lb_cases, lb_case_rate,
-         lb_deaths, lb_death_rate, False), index=csa_index())
-
-    pas_cases = hd_cases[const.hd.PASADENA]
-    pas_deaths = hd_deaths[const.hd.PASADENA]
-
-    pas_multiplier = const.RATE_SCALE / const.hd.POPULATION_PASADENA
-    pas_case_rate = round(pas_cases * pas_multiplier)
-    pas_death_rate = round(pas_deaths * pas_multiplier)
-
-    pasadena_entry = pd.Series(
-        (const.hd.CSA_PAS, lac_regions.VERDUGOS, pas_cases, pas_case_rate,
-         pas_deaths, pas_death_rate, False), index=csa_index())
-
-    all_csa = (csa_cases_deaths
-               .append(long_beach_entry, ignore_index=True)
-               .append(pasadena_entry, ignore_index=True))
-
-    all_csa[const.AREA] = all_csa[const.AREA].astype('string')
-    all_csa[const.REGION] = all_csa[const.REGION].astype('string')
-
-    return all_csa
-
-
-# def parse_residental(residential_table):
-#     """Parses the residential congregate cases and deaths"""
-
-#     residential_settings = residential_table.find_all('tr')
-#     residential_settings = residential_settings[1:-1]
-
-#     residential_list = [(col.RESID_SETTING, col.ADDRESS, col.STAFF_CASES,
-#                          col.RESID_CASES, col.DEATHS)]
-
-#     for setting in residential_settings:
-#         text_list = [x.get_text(strip=True) for x in setting.find_all('td')]
-#         id_, name, city, staff_cases, resid_cases, deaths = text_list
-#         address = addresses.RESIDENTIAL.get(name)
-#         residential_list += ((name, address, int(staff_cases), int(resid_cases),
-#                               int(deaths)),)
-
-#     return residential_list
+    return df_all
 
 
 if __name__ == "__main__":
-    all_tables = fetch_stats()
-    csa_table = break_summary(all_tables[0])[-1]
-
-    # area_cases_deaths = parse_csa(csa_table)
-    # area_cases_deaths = query_all_areas(all_tables[0])
-    # data_mgmt.write_dataframe(area_cases_deaths,
-    #                           paths.CSA_CURRENT_CSV, paths.CSA_CURRENT_PICKLE)
-    # area_cases_deaths.to_csv(paths.CSA_CURRENT_CSV, index=False)
-    # area_cases_deaths.to_pickle(paths.CSA_CURRENT_PICKLE)
-    # with open(paths.CSA_CURRENT, 'w') as f:
-    #     writer = csv.writer(f)
-    #     writer.writerows(area_cases_deaths)
-
-    # residential_congregate = all_tables[1]
-    # residential_listings = parse_residental(residential_congregate)
-    # with open(paths.RESIDENTIAL_CSV, 'w') as f:
-    #     writer = csv.writer(f)
-    #     writer.writerows(residential_listings)
+    all_tables = load_page(True)
+    df_area = query_all_areas(all_tables[0], all_tables[1])

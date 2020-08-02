@@ -29,6 +29,10 @@ DIR_CACHED_HTML = os.path.join(DIR_DAILY_PR, 'cached-html')
 DIR_PARSED_JSON = os.path.join(DIR_DAILY_PR, 'parsed-json')
 TEMPLATE_DAILY_PR = '{}-{}-{}.{}'
 
+### DIRECTORY - Current Stats ###
+DIR_CURRENT_STATS = os.path.join(DIR_PROJECT, 'current_stats')
+CURRENT_STATS_PAGE = os.path.join(DIR_CURRENT_STATS, 'locations.htm')
+
 ### DIRECTORY - Geo ###
 DIR_GEO = os.path.join(DIR_PROJECT, 'geo')
 ## Subdirectory - CSA ##
