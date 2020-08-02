@@ -90,8 +90,9 @@ def filter_current():
 
 
 def request_current_csa():
-    all_tables = scrape_current.fetch_stats()
-    area_cases_deaths = scrape_current.query_all_areas(all_tables[0])
+    all_tables = scrape_current.load_page()
+    area_cases_deaths = scrape_current.query_all_areas(all_tables[0],
+                                                       all_tables[1])
     write_dataframe(area_cases_deaths,
                     paths.CSA_CURRENT_CSV, paths.CSA_CURRENT_PICKLE)
 
