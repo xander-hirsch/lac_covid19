@@ -42,6 +42,7 @@ OBJECTID = 'ObjectId'
 _CHANGE_IN = 'Change in {}'
 CHANGE_DATE = _CHANGE_IN.format(DATE)
 CHANGE_CASES = _CHANGE_IN.format(CASES)
+CHANGE_CASE_RATE = _CHANGE_IN.format(CASE_RATE)
 
 
 def stat_by_group(stat: str, group: str) -> str:

@@ -1,49 +1,15 @@
-Region,Change in Date,Change in Cases
-Angeles Forest,7,11
-Antelope Valley,7,674
-Central LA,7,1267
-Eastside,7,964
-Harbor,7,1378
-Northeast LA,7,263
-Northwest County,7,258
-Pomona Valley,7,555
-San Fernando Valley,7,3115
-San Gabriel Valley,7,2124
-Santa Monica Mountains,7,52
-South Bay,7,769
-South LA,7,2500
-Southeast,7,2675
-Verdugos,7,456
-Westside,7,317
-Angeles Forest,14,15
-Antelope Valley,14,1245
-Central LA,14,2437
-Eastside,14,1831
-Harbor,14,2967
-Northeast LA,14,476
-Northwest County,14,502
-Pomona Valley,14,1134
-San Fernando Valley,14,5540
-San Gabriel Valley,14,4520
-Santa Monica Mountains,14,91
-South Bay,14,1519
-South LA,14,4704
-Southeast,14,5442
-Verdugos,14,967
-Westside,14,630
-Angeles Forest,30,22
-Antelope Valley,30,2749
-Central LA,30,6296
-Eastside,30,4450
-Harbor,30,7156
-Northeast LA,30,1075
-Northwest County,30,1237
-Pomona Valley,30,2600
-San Fernando Valley,30,12195
-San Gabriel Valley,30,12801
-Santa Monica Mountains,30,212
-South Bay,30,3992
-South LA,30,11611
-Southeast,30,15566
-Verdugos,30,2193
-Westside,30,1906
+Region,Change in Date,Change in Case Rate
+Antelope Valley,14,317.11
+Central LA,14,263.41
+Eastside,14,631.41
+Harbor,14,325.51
+Northeast LA,14,282.38
+Northwest County,14,181.59
+Pomona Valley,14,496.42
+San Fernando Valley,14,345.01
+San Gabriel Valley,14,306.07
+South Bay,14,195.81
+South LA,14,557.98
+Southeast,14,443.01
+Verdugos,14,201.43
+Westside,14,111.96

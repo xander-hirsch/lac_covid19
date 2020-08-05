@@ -6,6 +6,7 @@ import pandas as pd
 
 import lac_covid19.analysis as analysis
 import lac_covid19.const as const
+import lac_covid19.const.lac_regions as lac_regions
 import lac_covid19.const.paths as paths
 import lac_covid19.visualization.plots as covid_plots
 import lac_covid19.current_stats.scrape_current as scrape_current
@@ -67,7 +68,7 @@ def export_time_series():
 
 
 def calc_deltas():
-    durations = 7, 14, 30
+    durations = 14
 
     # df_age_ts = pd.read_pickle(paths.AGE_PICKLE)
     df_region_ts = pd.read_pickle(paths.REGION_TS_PICKLE)
@@ -75,9 +76,13 @@ def calc_deltas():
     # df_age_delta = analysis.deltas.time_series_delta(df_age_ts,
     #                                                  const.AGE_GROUP,
     #                                                  durations)
-    df_region_delta = analysis.deltas.time_series_delta(df_region_ts,
-                                                        const.REGION,
-                                                        durations)
+    df_region_delta = analysis.deltas.time_series_delta(
+        df_region_ts, durations, const.REGION)
+
+    REGION_DROP = (lac_regions.ANGELES_FOREST,
+                   lac_regions.SANTA_MONICA_MOUNTAINS)
+    df_region_delta = df_region_delta[
+        ~df_region_delta[const.REGION].isin(REGION_DROP)]
 
     # df_age_delta.to_csv(paths.AGE_DELTA, index=False)
     df_region_delta.to_csv(paths.REGION_DELTA, index=False)

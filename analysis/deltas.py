@@ -4,8 +4,13 @@ import lac_covid19.const as const
 import lac_covid19.const.paths as paths
 
 
-def time_series_delta(df, var, durations):
-    df = df[[const.DATE, var, const.CASES]]
+def time_series_delta(df, durations, indep_var, dep_var=None):
+
+    if dep_var is None:
+        dep_var = const.CASE_RATE, const.CHANGE_CASE_RATE
+    dep_var_col, dep_var_delta = dep_var
+
+    df = df[[const.DATE, indep_var, dep_var_col]]
     last_date = df[const.DATE].max()
 
     df_last = df[df[const.DATE] == last_date]
@@ -25,20 +30,20 @@ def time_series_delta(df, var, durations):
 
         df_duration = df_last.append(df_target, ignore_index=True)
 
-        df_duration = df_duration.pivot(index=var, columns=const.DATE,
-                                        values=const.CASES)
+        df_duration = df_duration.pivot(index=indep_var, columns=const.DATE,
+                                        values=dep_var_col)
         df_duration.columns.name = None
 
         df_duration[const.CHANGE_DATE] = duration
-        df_duration[const.CHANGE_CASES] = (df_duration[last_date]
-                                           - df_duration[target_date])
+        df_duration[dep_var_delta] = (df_duration[last_date]
+                                      - df_duration[target_date]).round(2)
 
-        df_duration = df_duration[[const.CHANGE_DATE, const.CHANGE_CASES]]
+        df_duration = df_duration[[const.CHANGE_DATE, dep_var_delta]]
 
         indiv_deltas += df_duration,
 
     df_deltas = pd.concat(indiv_deltas)
-    df_deltas.sort_values([const.CHANGE_DATE, var], inplace=True)
+    df_deltas.sort_values([const.CHANGE_DATE, indep_var], inplace=True)
     df_deltas = df_deltas.reset_index()
 
     return df_deltas
