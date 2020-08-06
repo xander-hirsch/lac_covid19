@@ -17,6 +17,12 @@ import lac_covid19.visualization.plots as covid_plots
 sns.set()
 
 
+# In[2]:
+
+
+sns.palplot(sns.color_palette())
+
+
 # ## Choropleth Values
 
 # In[2]:
