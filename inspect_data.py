@@ -1,9 +1,6 @@
-import sys
-
-import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 
+import lac_covid19.analysis as analysis
 import lac_covid19.const as const
 import lac_covid19.const.lac_regions as lac_regions
 import lac_covid19.const.paths as paths
@@ -43,14 +40,6 @@ def check_always_increasing(df_loc: pd.DataFrame, region: str):
         for area in region_areas
     ]
     return [x[0] for x in test_areas if not x[1]]
-
-
-def plot_area(df_area: pd.DataFrame, area_id: str) -> plt.Axes:
-    df_focus = df_area.loc[df_area[const.AREA] == area_id,
-                           [const.DATE, const.CASES]]
-
-    return sns.lineplot(x=const.DATE, y=const.CASES, data=df_focus)
-
 
 if __name__ == "__main__":
     raw_daily_pr = [scrape_daily_stats.fetch_press_release(x) for x in
