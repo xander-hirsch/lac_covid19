@@ -1100,7 +1100,7 @@ Date,Region,Cases,Case Rate
 2020-06-06,Santa Monica Mountains,199,228.64
 2020-06-06,South Bay,2827,364.42
 2020-06-06,South LA,7817,927.23
-2020-06-06,Southeast,8962,729.56
+2020-06-06,Southeast,8945,728.17
 2020-06-06,Verdugos,2569,535.13
 2020-06-06,Westside,1641,291.62
 2020-06-07,Angeles Forest,10,288.6
@@ -1116,7 +1116,7 @@ Date,Region,Cases,Case Rate
 2020-06-07,Santa Monica Mountains,201,230.93
 2020-06-07,South Bay,2860,368.68
 2020-06-07,South LA,8066,956.77
-2020-06-07,Southeast,9211,749.83
+2020-06-07,Southeast,9194,748.44
 2020-06-07,Verdugos,2599,541.38
 2020-06-07,Westside,1665,295.89
 2020-06-08,Angeles Forest,10,288.6
@@ -1132,7 +1132,7 @@ Date,Region,Cases,Case Rate
 2020-06-08,Santa Monica Mountains,201,230.93
 2020-06-08,South Bay,2890,372.54
 2020-06-08,South LA,8189,971.36
-2020-06-08,Southeast,9339,760.25
+2020-06-08,Southeast,9322,758.86
 2020-06-08,Verdugos,2614,544.5
 2020-06-08,Westside,1674,297.48
 2020-06-09,Angeles Forest,10,288.6
@@ -1148,7 +1148,7 @@ Date,Region,Cases,Case Rate
 2020-06-09,Santa Monica Mountains,204,234.38
 2020-06-09,South Bay,2911,375.25
 2020-06-09,South LA,8384,994.49
-2020-06-09,Southeast,9600,781.49
+2020-06-09,Southeast,9583,780.11
 2020-06-09,Verdugos,2630,547.84
 2020-06-09,Westside,1691,300.51
 2020-06-10,Angeles Forest,10,288.6
@@ -1164,7 +1164,7 @@ Date,Region,Cases,Case Rate
 2020-06-10,Santa Monica Mountains,205,235.53
 2020-06-10,South Bay,2969,382.73
 2020-06-10,South LA,8565,1015.96
-2020-06-10,Southeast,9900,805.92
+2020-06-10,Southeast,9883,804.53
 2020-06-10,Verdugos,2648,551.59
 2020-06-10,Westside,1707,303.35
 2020-06-11,Angeles Forest,10,288.6
@@ -1660,7 +1660,7 @@ Date,Region,Cases,Case Rate
 2020-07-14,Santa Monica Mountains,386,443.48
 2020-07-14,South Bay,6018,775.76
 2020-07-14,South LA,18551,2200.47
-2020-07-14,Southeast,23916,1946.9
+2020-07-14,Southeast,23961,1950.56
 2020-07-14,Verdugos,4319,899.66
 2020-07-14,Westside,3308,587.86
 2020-07-15,Angeles Forest,19,548.34
@@ -1916,7 +1916,7 @@ Date,Region,Cases,Case Rate
 2020-07-30,Santa Monica Mountains,492,565.27
 2020-07-30,South Bay,8055,1038.35
 2020-07-30,South LA,24501,2906.24
-2020-07-30,Southeast,31587,2571.36
+2020-07-30,Southeast,31651,2576.57
 2020-07-30,Verdugos,5545,1155.04
 2020-07-30,Westside,4213,748.69
 2020-07-31,Angeles Forest,32,923.52

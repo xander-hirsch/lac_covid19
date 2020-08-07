@@ -3,6 +3,8 @@ import pandas as pd
 import lac_covid19.const as const
 
 _unic_val_verde = 'Unincorporated - Val Verde'
+_city_of_vernon = 'City of Vernon'
+_unic_rosewood_w_rancho = 'Unincorporated - Rosewood/West Rancho Dominguez'
 BAD_DATE_AREA = (
     ('2020-04-26', _unic_val_verde),
     ('2020-04-27', _unic_val_verde),
@@ -18,6 +20,13 @@ BAD_DATE_AREA = (
     ('2020-05-07', _unic_val_verde),
     ('2020-06-09', _unic_val_verde),
     ('2020-06-10', _unic_val_verde),
+    ('2020-06-06', _city_of_vernon),
+    ('2020-06-07', _city_of_vernon),
+    ('2020-06-08', _city_of_vernon),
+    ('2020-06-09', _city_of_vernon),
+    ('2020-06-10', _city_of_vernon),
+    ('2020-07-14', _unic_rosewood_w_rancho),
+    ('2020-07-30', _unic_rosewood_w_rancho),
 )
 
 CSA_CF_OUTLIER = (
