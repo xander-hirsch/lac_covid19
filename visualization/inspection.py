@@ -20,18 +20,18 @@ sns.set()
 # In[2]:
 
 
-sns.palplot(sns.color_palette())
+# sns.palplot(sns.color_palette())
 
 
 # ## Choropleth Values
 
-# In[2]:
+# In[3]:
 
 
 df_csa_curr = pd.read_pickle(paths.CSA_CURRENT_PICKLE)
 
 
-# In[3]:
+# In[4]:
 
 
 print(covid_plots.high_vals_summary(df_csa_curr[const.CASE_RATE]))
@@ -42,7 +42,7 @@ ax.set_xlim(right=5500)
 fig.show()
 
 
-# In[4]:
+# In[5]:
 
 
 print(covid_plots.high_vals_summary(df_csa_curr[const.DEATH_RATE]))
@@ -55,13 +55,13 @@ fig.show()
 
 # ## Region
 
-# In[5]:
+# In[6]:
 
 
 print(tuple(lac_regions.REGIONS.keys()))
 
 
-# In[11]:
+# In[7]:
 
 
 bin_width = {
@@ -81,31 +81,43 @@ covid_plots.csa_distribution(ax, df_csa_curr, selections=lac_regions.REGIONS[reg
 fig.show()
 
 
-# In[2]:
+# In[8]:
 
 
 df_csa_ts = pd.read_pickle(paths.CSA_TS_PICKLE)
 
 
-# In[16]:
+# In[100]:
 
 
 fig, ax = plt.subplots(figsize=(12,6))
-area = lac_regions.ALL_CSA[16]
+# area = lac_regions.ALL_CSA[16]
+area = 'Unincorporated - Rosewood/West Rancho Dominguez'
 
 covid_plots.csa_ts(ax, df_csa_ts, area)
+# ax.set_xlim(pd.Timestamp('2020-07-25'), pd.Timestamp('2020-08-01'))
 fig.show()
+
+
+# In[ ]:
+
+
+# start = 345
+# for i in range(start, start+5):
+#     fig, ax = plt.subplots(figsize=(12,5))
+#     area = lac_regions.ALL_CSA[i]
+#     covid_plots.csa_ts(ax, df_csa_ts, area)
 
 
 # ## Rolling Average
 
-# In[24]:
+# In[10]:
 
 
 df_summary = pd.read_pickle(paths.MAIN_STATS_PICKLE)
 
 
-# In[31]:
+# In[11]:
 
 
 df_summary['Avg New Cases'] = df_summary[const.NEW_CASES].rolling(3).mean()

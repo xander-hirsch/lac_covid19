@@ -70,12 +70,11 @@ def export_time_series():
 def calc_deltas():
     durations = 14
 
-    # df_age_ts = pd.read_pickle(paths.AGE_PICKLE)
+    df_age_ts = pd.read_pickle(paths.AGE_PICKLE)
     df_region_ts = pd.read_pickle(paths.REGION_TS_PICKLE)
 
-    # df_age_delta = analysis.deltas.time_series_delta(df_age_ts,
-    #                                                  const.AGE_GROUP,
-    #                                                  durations)
+    df_age_delta = analysis.deltas.time_series_delta(
+        df_age_ts, durations, const.AGE_GROUP)
     df_region_delta = analysis.deltas.time_series_delta(
         df_region_ts, durations, const.REGION)
 
@@ -84,7 +83,7 @@ def calc_deltas():
     df_region_delta = df_region_delta[
         ~df_region_delta[const.REGION].isin(REGION_DROP)]
 
-    # df_age_delta.to_csv(paths.AGE_DELTA, index=False)
+    df_age_delta.to_csv(paths.AGE_DELTA, index=False)
     df_region_delta.to_csv(paths.REGION_DELTA, index=False)
 
 
@@ -177,17 +176,6 @@ def update_current():
     check_csa_outliers()
 
 
-def update_data(date_=None):
-    if date_ is None:
-        date_ = dt.date.today()
-
-    export_time_series()
-
-    request_current_csa()
-    geo_csa.merge_csa_geo()
-
-    append_all(date_)
-
-
-# if __name__ == "__main__":
-    # new_daily_pr('2020-07-02')
+def update_all(date_=None):
+    update_press_release(date_)
+    update_current()
