@@ -23,33 +23,67 @@ sns.set()
 # sns.palplot(sns.color_palette())
 
 
-# ## Choropleth Values
-
 # In[3]:
 
 
 df_csa_curr = pd.read_pickle(paths.CSA_CURRENT_PICKLE)
 
 
+# ## Choropleth Values
+
+# ### Case Rate
+
 # In[4]:
 
 
 print(covid_plots.high_vals_summary(df_csa_curr[const.CASE_RATE]))
 
-fig, ax = plt.subplots()
-covid_plots.csa_distribution(ax, df_csa_curr)
+fig, ax = plt.subplots(figsize=(12,4))
+covid_plots.csa_distribution(ax, df_csa_curr, bin_width=250)
 ax.set_xlim(right=5500)
 fig.show()
 
 
-# In[5]:
+# In[6]:
+
+
+print(covid_plots.high_vals_summary(df_csa_curr[const.CASE_RATE]))
+print(' Bottom 5% {}'.format(df_csa_curr[const.CASE_RATE].quantile(.05, 'midpoint')))
+print('Bottom 10% {}'.format(df_csa_curr[const.CASE_RATE].quantile(.10, 'midpoint')))
+
+fig, ax = plt.subplots(figsize=(12, 4))
+covid_plots.csa_distribution(ax, df_csa_curr, bin_width=50)
+ax.set_xlim(0, 1000)
+fig.show()
+
+
+# ### Death Rate
+
+# In[7]:
+
+
+df_csa_curr[const.DEATH_RATE].quantile(.3, 'midpoint')
+
+
+# In[8]:
 
 
 print(covid_plots.high_vals_summary(df_csa_curr[const.DEATH_RATE]))
 
 fig, ax = plt.subplots()
 covid_plots.csa_distribution(ax, df_csa_curr, const.DEATH_RATE, bin_width=10)
-ax.set_xlim(right=200)
+ax.set_xlim(right=150)
+fig.show()
+
+
+# In[9]:
+
+
+print(covid_plots.high_vals_summary(df_csa_curr[const.DEATH_RATE]))
+
+fig, ax = plt.subplots()
+covid_plots.csa_distribution(ax, df_csa_curr, const.DEATH_RATE, bin_width=5)
+ax.set_xlim(0, 30)
 fig.show()
 
 
