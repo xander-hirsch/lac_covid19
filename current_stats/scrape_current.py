@@ -98,7 +98,7 @@ def organize_summary(raw_summary) -> Dict:
         'New Daily Counts'].pop('Cases**')
     summary_dict[const.CASES] = summary_dict.pop('Laboratory Confirmed Cases')
     summary_dict[const.HOSPITALIZATIONS] = summary_dict.pop(
-        'Hospitalization LAC cases only (not Long Beach and Pasadena)')
+        'Hospitalization LAC cases only (excl Long Beach and Pasadena)')
     summary_dict[const.AGE_GROUP] = summary_dict.pop(
         'Age Group (Los Angeles County Cases Only-excl\xa0LB\xa0and\xa0Pas)')
     summary_dict[const.GENDER] = summary_dict.pop(

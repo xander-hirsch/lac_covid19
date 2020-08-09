@@ -57,10 +57,11 @@ def calc_high_outlier(values) -> float:
 
 def high_vals_summary(values) -> str:
     obs = values.size
-    ninety, ninety_five = [values.quantile(x, 'midpoint') for x in (0.9, 0.95)]
+    five, thirty, fifty, ninety, ninety_five = [
+        values.quantile(x, 'midpoint') for x in (0.05, 0.3, 0.5, 0.9, 0.95)]
     high_outlier = calc_high_outlier(values)
-    return 'n={}, 90%={}, 95%={}, outlier={}'.format(obs, ninety, ninety_five,
-                                                     high_outlier)
+    return 'n={}, 5%={}, 30%={}, 50%={}, 90%={}, 95%={}, outlier={}'.format(
+        obs, five, thirty, fifty, ninety, ninety_five, high_outlier)
 
 
 def csa_distribution(ax, df_csa, variable=const.CASE_RATE, selections=None,
