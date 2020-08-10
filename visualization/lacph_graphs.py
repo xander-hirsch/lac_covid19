@@ -6,7 +6,7 @@
 # * Data sourced from Los Angeles County Department of Public Health's daily 2019 Novel Coronavirus news releases. The archived releases can be found [here](http://publichealth.lacounty.gov/phcommon/public/media/mediaCOVIDdisplay.cfm?unit=media&ou=ph&prog=media)
 # * *Case rate* and *Death rate* are **per 100,000 people**
 #  
-# **Last Update:** Sunday, 9 August
+# **Last Update:** Monday, 10 August
 #  
 # ### Other Sources
 # * Los Angeles County Department of Public Health [**COVID-19 Surveillance Dashboard**](http://dashboard.publichealth.lacounty.gov/covid19_surveillance_dashboard/)
