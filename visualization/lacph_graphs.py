@@ -6,8 +6,6 @@
 # * Data sourced from Los Angeles County Department of Public Health's daily 2019 Novel Coronavirus news releases. The archived releases can be found [here](http://publichealth.lacounty.gov/phcommon/public/media/mediaCOVIDdisplay.cfm?unit=media&ou=ph&prog=media)
 # * *Case rate* and *Death rate* are **per 100,000 people**
 #  
-# **Last Update:** Monday, 10 August
-#  
 # ### Other Sources
 # * Los Angeles County Department of Public Health [**COVID-19 Surveillance Dashboard**](http://dashboard.publichealth.lacounty.gov/covid19_surveillance_dashboard/)
 # * California Department of Public Health [**COVID-19 Public Dashboard**](https://public.tableau.com/views/COVID-19PublicDashboard/Covid-19Public?:embed=y&:display_count=no&:showVizHome=no)
@@ -32,6 +30,16 @@ WIDTH=600
 HEIGHT=400
 
 
+# ### Last Update
+
+# In[2]:
+
+
+df_summary = pd.read_pickle(paths.MAIN_STATS_PICKLE)
+last_update = df_summary[const.DATE].max()
+print('Last Update: {}'.format(last_update.strftime('%A, %d %B')))
+
+
 # ## Regions of Los Angeles
 # Los Angeles County Public Health releases case count by *countywide statistical areas*.
 # These areas partion the entire county into cities, City of Los Angeles sections, and unincorporated areas.
@@ -42,7 +50,7 @@ HEIGHT=400
 # Rather, it attempts to define regions based on socioeconomic indicators, demographic data, and shared characteristics.
 # Those definitions seem most appropriate for asking questions on how varying communities are affected by the disease.
 
-# In[2]:
+# In[3]:
 
 
 df_region = pd.read_pickle(paths.REGION_TS_PICKLE)
@@ -50,7 +58,7 @@ df_region = pd.read_pickle(paths.REGION_TS_PICKLE)
 
 # ### Region List - Sorted by Case Rate
 
-# In[3]:
+# In[4]:
 
 
 (df_region.tail(16).drop(columns=const.DATE)
@@ -58,7 +66,7 @@ df_region = pd.read_pickle(paths.REGION_TS_PICKLE)
  .loc[:, [const.REGION, const.CASE_RATE, const.CASES]])
 
 
-# In[4]:
+# In[5]:
 
 
 fig = covid_plots.plot_region(df_region)
@@ -69,7 +77,7 @@ fig.show()
 
 # ### Gender
 
-# In[5]:
+# In[6]:
 
 
 by_gender = pd.read_pickle(paths.GENDER_PICKLE)
@@ -86,7 +94,7 @@ fig.show()
 
 # ## Aggregate Daily Changes
 
-# In[6]:
+# In[7]:
 
 
 df_summary = pd.read_pickle(paths.MAIN_STATS_PICKLE)
