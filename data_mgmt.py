@@ -145,9 +145,11 @@ def append_time_series(date_: str):
 def check_csa_outliers():
     df_csa_curr = pd.read_pickle(paths.CSA_CURRENT_PICKLE)
     print(' Case rate: {}'.format(
-        covid_plots.high_vals_summary(df_csa_curr[const.CASE_RATE])))
+        covid_plots.high_vals_summary(df_csa_curr[const.CASE_RATE],
+        (5, 95))))
     print('Death rate: {}'.format(
-        covid_plots.high_vals_summary(df_csa_curr[const.DEATH_RATE])))
+        covid_plots.high_vals_summary(df_csa_curr[const.DEATH_RATE],
+        (30, 90))))
 
 
 def append_all(date_=None):

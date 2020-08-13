@@ -1,3 +1,5 @@
+from typing import Iterable
+
 import pandas as pd
 import plotly.express as px
 import seaborn as sns
@@ -55,13 +57,23 @@ def calc_high_outlier(values) -> float:
     return q3 + 1.5 * (q3 - q1)
 
 
-def high_vals_summary(values) -> str:
+def high_vals_summary(values, percentiles: Iterable[int] = None) -> str:
+    """Text output of data distribution points."""
+
+    if percentiles is None:
+        percentiles = (5, 95)
+
+    percentile_values = []
+    for percentile in percentiles:
+        dist_value = values.quantile(percentile/100, 'midpoint')
+        str_rep = '{}%={}'.format(percentile, dist_value)
+        percentile_values.append(str_rep)
+
     obs = values.size
-    five, thirty, fifty, ninety, ninety_five = [
-        values.quantile(x, 'midpoint') for x in (0.05, 0.3, 0.5, 0.9, 0.95)]
     high_outlier = calc_high_outlier(values)
-    return 'n={}, 5%={}, 30%={}, 50%={}, 90%={}, 95%={}, outlier={}'.format(
-        obs, five, thirty, fifty, ninety, ninety_five, high_outlier)
+
+    return 'n={}, {}, outlier={}'.format(
+        obs, ', '.join(percentile_values), high_outlier)
 
 
 def csa_distribution(ax, df_csa, variable=const.CASE_RATE, selections=None,
