@@ -167,6 +167,10 @@ def load_page(use_cache: bool = False):
     """Loads in the page and does preliminary parsing"""
     all_tables = fetch_stats(use_cache)
 
+    # Homeless Service Settings table is missing, so drop the last <table> 
+    # element from the fetch_stats return value
+    del all_tables[-1]
+
     all_tables[0] = parse_summary(all_tables[0])
     all_tables[1:] = [parse_table(x) for x in all_tables[1:]]
 
@@ -217,5 +221,7 @@ def query_all_areas(summary_dict: Dict, df_csa: pd.DataFrame) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
+    # all_tables = fetch_stats(True)
     all_tables = load_page(True)
+
     df_area = query_all_areas(all_tables[0], all_tables[1])
