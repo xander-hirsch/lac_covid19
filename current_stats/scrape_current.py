@@ -64,7 +64,7 @@ def extract_tr_data(tr: bs4.Tag) -> Iterable[Union[str, int]]:
     return tuple(data_points)
 
 
-def seperate_summary(table: bs4.Tag) -> Iterable[Iterable[Union[str, int]]]:
+def separate_summary(table: bs4.Tag) -> Iterable[Iterable[Union[str, int]]]:
     """First pass at seperating the summary stats"""
     groups = table.find_all('thead')
     for i in range(len(groups)):
@@ -100,9 +100,9 @@ def organize_summary(raw_summary) -> Dict:
     summary_dict[const.HOSPITALIZATIONS] = summary_dict.pop(
         'Hospitalization LAC cases only (excl Long Beach and Pasadena)')
     summary_dict[const.AGE_GROUP] = summary_dict.pop(
-        'Age Group (Los Angeles County Cases Only-excl\xa0LB\xa0and\xa0Pas)')
+        'Age Group (Los Angeles County Cases Only-exclÂ\xa0LBÂ\xa0andÂ\xa0Pas)')
     summary_dict[const.GENDER] = summary_dict.pop(
-        'Gender (Los Angeles County Cases Only-excl\xa0LB\xa0and\xa0Pas)')
+        'Gender (Los Angeles County Cases Only-exclÂ\xa0LBÂ\xa0andÂ\xa0Pas)')
     summary_dict[const.CASES_BY_RACE] = summary_dict.pop(
         'Race/Ethnicity (Los Angeles County Cases Only-excl LB and Pas)')
     summary_dict[const.DEATHS_BY_RACE] = summary_dict.pop(
@@ -112,7 +112,7 @@ def organize_summary(raw_summary) -> Dict:
 
 
 def parse_summary(table: bs4.Tag) -> Dict:
-    return organize_summary(seperate_summary(table))
+    return organize_summary(separate_summary(table))
 
 
 def parse_table(table: bs4.Tag) -> pd.DataFrame:
@@ -169,7 +169,7 @@ def load_page(use_cache: bool = False):
 
     # Homeless Service Settings table is missing, so drop the last <table> 
     # element from the fetch_stats return value
-    del all_tables[-1]
+    # del all_tables[-1]
 
     all_tables[0] = parse_summary(all_tables[0])
     all_tables[1:] = [parse_table(x) for x in all_tables[1:]]
@@ -221,7 +221,10 @@ def query_all_areas(summary_dict: Dict, df_csa: pd.DataFrame) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    # all_tables = fetch_stats(True)
+    raw_tables = fetch_stats(True)
     all_tables = load_page(True)
+
+    # raw_summary = separate_summary(raw_tables[0])
+    # parsed_summary = organize_summary(raw_summary)
 
     df_area = query_all_areas(all_tables[0], all_tables[1])
