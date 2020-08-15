@@ -44,10 +44,9 @@ ax.set_xlim(right=5500)
 fig.show()
 
 
-# In[6]:
+# In[5]:
 
 
-print(covid_plots.high_vals_summary(df_csa_curr[const.CASE_RATE]))
 print(' Bottom 5% {}'.format(df_csa_curr[const.CASE_RATE].quantile(.05, 'midpoint')))
 print('Bottom 10% {}'.format(df_csa_curr[const.CASE_RATE].quantile(.10, 'midpoint')))
 
@@ -62,13 +61,7 @@ fig.show()
 # In[7]:
 
 
-df_csa_curr[const.DEATH_RATE].quantile(.3, 'midpoint')
-
-
-# In[8]:
-
-
-print(covid_plots.high_vals_summary(df_csa_curr[const.DEATH_RATE]))
+print(covid_plots.high_vals_summary(df_csa_curr[const.DEATH_RATE], (30, 90)))
 
 fig, ax = plt.subplots()
 covid_plots.csa_distribution(ax, df_csa_curr, const.DEATH_RATE, bin_width=10)
@@ -76,10 +69,8 @@ ax.set_xlim(right=150)
 fig.show()
 
 
-# In[9]:
+# In[8]:
 
-
-print(covid_plots.high_vals_summary(df_csa_curr[const.DEATH_RATE]))
 
 fig, ax = plt.subplots()
 covid_plots.csa_distribution(ax, df_csa_curr, const.DEATH_RATE, bin_width=5)
@@ -89,13 +80,13 @@ fig.show()
 
 # ## Region
 
-# In[6]:
+# In[9]:
 
 
 print(tuple(lac_regions.REGIONS.keys()))
 
 
-# In[7]:
+# In[10]:
 
 
 bin_width = {
@@ -115,26 +106,38 @@ covid_plots.csa_distribution(ax, df_csa_curr, selections=lac_regions.REGIONS[reg
 fig.show()
 
 
-# In[8]:
+# ## Countywide Statistical Area
+
+# In[11]:
 
 
 df_csa_ts = pd.read_pickle(paths.CSA_TS_PICKLE)
 
 
-# In[100]:
+# In[17]:
 
 
 fig, ax = plt.subplots(figsize=(12,6))
+
+city_industry = 'City of Industry'
+city_vernon = 'City of Vernon'
+unic_rosewood_w_rancho = 'Unincorporated - Rosewood/West Rancho Dominguez'
+unic_val_verde = 'Unincorporated - Val Verde'
+
 # area = lac_regions.ALL_CSA[16]
-area = 'Unincorporated - Rosewood/West Rancho Dominguez'
+area = city_vernon
+
+lower_date, upper_date = '2020-07-25', '2020-08-01'
 
 covid_plots.csa_ts(ax, df_csa_ts, area)
-# ax.set_xlim(pd.Timestamp('2020-07-25'), pd.Timestamp('2020-08-01'))
+# ax.set_xlim(pd.Timestamp(lower_date), pd.Timestamp(upper_date))
 fig.show()
 
 
 # In[ ]:
 
+
+# Batch inspection of CSA time series
 
 # start = 345
 # for i in range(start, start+5):
@@ -170,10 +173,4 @@ fig.show()
 fig, ax = plt.subplots()
 covid_plots.plot_time_series(ax, df_summary, 'New Cases Predictor')
 fig.show()
-
-
-# In[ ]:
-
-
-
 
