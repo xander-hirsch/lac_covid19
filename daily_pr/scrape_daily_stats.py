@@ -22,6 +22,8 @@ DATE = const.DATE
 LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid='  # pylint: disable=line-too-long
 RE_DATE = re.compile('[A-Z][a-z]+ \d{2}, 20\d{2}')
 
+RE_TESTING = re.compile('esting\s+results.+available.+\s([\d,]{6,})\s+individuals')  # pylint: disable=line-too-long
+
 RE_TESTING_1 = re.compile(
     'testing\s+results\s+available.+\s([\d,]{6,})\s+individuals.+\s(\d{1,2})%.+testing\s+positive')  # pylint: disable=line-too-long
 
@@ -290,20 +292,13 @@ def _get_new_cases_deaths(pr_html: bs4.BeautifulSoup) -> Tuple[int, int]:
     return cases, deaths
 
 
-def _get_testing(pr_html: bs4.BeautifulSoup) -> Optional[Tuple[int, int]]:
+def _get_testing(pr_html: bs4.BeautifulSoup) -> Optional[int]:
     """Extacts the number of test results and percent of positive tests."""
 
     pr_text = pr_html.get_text()
-    # Try both testing patterns
-    result = RE_TESTING_1.search(pr_text)
-    if result is None:
-        result = RE_TESTING_2.search(pr_text)
-
-    num_tests, pos_rate = None, None
+    result = RE_TESTING.search(pr_text)
     if result:
-        num_tests = _str_to_int(result.group(1))
-        pos_rate = int(result.group(2))
-    return num_tests, pos_rate
+        return _str_to_int(result.group(1))
 
 
 def _isolate_html_general(
@@ -619,7 +614,7 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
     """
 
     cases_by_dept = _parse_cases(daily_pr)
-    tests_available, positive_tests = _get_testing(daily_pr)
+    tests_available = _get_testing(daily_pr)
     new_cases, new_deaths = _get_new_cases_deaths(daily_pr)
 
     cases_by_area = _parse_area(daily_pr)
@@ -651,7 +646,6 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
         const.NEW_CASES: new_cases,
         const.NEW_DEATHS: new_deaths,
         const.TEST_RESULTS: tests_available,
-        const.PERCENT_POSITIVE_TESTS: positive_tests,
         const.CASES_BY_AGE: _parse_age_cases(daily_pr),
         const.CASES_BY_GENDER: _parse_gender(daily_pr),
         const.CASES_BY_RACE: _parse_race_cases(daily_pr),

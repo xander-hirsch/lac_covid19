@@ -133,7 +133,6 @@ def create_main_stats(
         const.HOSPITALIZATIONS:
             map(lambda x: x[const.HOSPITALIZATIONS], many_daily_pr),
         TEST_RESULTS: map(lambda x: x[TEST_RESULTS], many_daily_pr),
-        PERCENT_POSITIVE: map(lambda x: x[PERCENT_POSITIVE], many_daily_pr)
     }
 
     df = pd.DataFrame(data)
@@ -142,7 +141,7 @@ def create_main_stats(
           .reset_index(drop=True))
 
     has_missing_data = (CASES, DEATHS, const.NEW_DEATHS, const.HOSPITALIZATIONS,
-                        TEST_RESULTS, PERCENT_POSITIVE)
+                        TEST_RESULTS)
     for column in has_missing_data:
         df[column] = df[column].convert_dtypes()
 
@@ -444,8 +443,8 @@ if __name__ == "__main__":
     last_week = every_day[-7:]
     today = every_day[-1]
 
-    # df_summary = create_main_stats(every_day)
-    df_age = create_by_age(every_day)
+    df_summary = create_main_stats(every_day)
+    # df_age = create_by_age(every_day)
     # df_gender = create_by_gender(every_day)
     # df_race = create_by_race(last_week)
 
