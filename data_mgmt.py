@@ -122,22 +122,22 @@ def append_time_series(date_: str):
     date_ = pd.Timestamp(date_)
 
     df_summary = pd.read_pickle(paths.MAIN_STATS_PICKLE)
-    df_summary = df_summary[df_summary[DATE] == date_]
+    df_summary = df_summary[df_summary[DATE] >= date_]
     df_summary[DATE] = df_summary[DATE].apply(lambda x: x + tz_offset)
     df_summary.to_csv(paths.APPEND_SUMMARY, index=False)
 
     df_age = pd.read_pickle(paths.AGE_PICKLE)
-    df_age = df_age[df_age[DATE] == date_]
+    df_age = df_age[df_age[DATE] >= date_]
     df_age[DATE] = df_age[DATE].apply(lambda x: x + tz_offset)
     df_age.to_csv(paths.APPEND_AGE, index=False)
 
     df_csa_ts = pd.read_pickle(paths.CSA_TS_PICKLE)
-    df_csa_ts = df_csa_ts[df_csa_ts[DATE] == date_]
+    df_csa_ts = df_csa_ts[df_csa_ts[DATE] >= date_]
     df_csa_ts[DATE] = df_csa_ts[DATE].apply(lambda x: x + tz_offset)
     df_csa_ts.to_csv(paths.APPEND_CSA_TS, index=False)
 
     df_region_ts = pd.read_pickle(paths.REGION_TS_PICKLE)
-    df_region_ts = df_region_ts[df_region_ts[DATE] == date_]
+    df_region_ts = df_region_ts[df_region_ts[DATE] >= date_]
     df_region_ts[DATE] = df_region_ts[DATE].apply(lambda x: x + tz_offset)
     df_region_ts.to_csv(paths.APPEND_REGION_TS, index=False)
 
