@@ -112,3 +112,18 @@ fig_deaths = px.bar(df_deaths, x=const.DATE, y=const.NEW_DEATHS,
                     title='COVID-19 Deaths in Los Angeles County')
 fig_deaths.show()
 
+
+# In[8]:
+
+
+def ts_scatter(fig, data, ind_var, dep_var, roll_days=7):
+#     data = data
+    pass
+fig = go.Figure()
+
+
+# In[ ]:
+
+
+
+
