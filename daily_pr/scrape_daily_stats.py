@@ -38,7 +38,7 @@ RE_NEW_DEATHS_CASES = re.compile(
 RE_UNDER_INVESTIGATION = re.compile('Under Investigation')
 
 HEADER_CASE_COUNT = re.compile(
-    'Laboratory Confirmed Cases.*\s([\d,]+)\s+Total Cases')
+    'Laboratory Confirmed[^\d]+([\d,]+)[^\d]+')
 HEADER_DEATH = re.compile('Deaths\s+([\d,]+)')
 ENTRY_BY_DEPT = re.compile(
     '(Los Angeles County \(excl\. LB and Pas\)|{}|{})[\s-]*(\d+)'
