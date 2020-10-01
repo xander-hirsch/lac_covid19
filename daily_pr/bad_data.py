@@ -51,6 +51,7 @@ HARDCODE_NEW_CASES_DEATHS = {
     (2020, 7, 2): (2204, 55),
     (2020, 7, 7): (4015, 46),
     (2020, 7, 14): (4244, 73),
+    (2020, 9, 28): (663, 1),
 }
 
 REPORTING_SYSTEM_UPDATE = pd.DataFrame(
