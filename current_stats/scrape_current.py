@@ -172,7 +172,7 @@ def load_page(use_cache: bool = False):
     # del all_tables[-1]
 
     all_tables[0] = parse_summary(all_tables[0])
-    all_tables[1:] = [parse_table(x) for x in all_tables[1:]]
+    all_tables[1:] = [parse_table(x) for x in all_tables[1:-1]]
 
     all_tables[1] = clean_city_community(all_tables[1])
 

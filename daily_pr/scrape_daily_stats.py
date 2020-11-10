@@ -23,13 +23,7 @@ LACPH_PR_URL_BASE = 'http://www.publichealth.lacounty.gov/phcommon/public/media/
 RE_DATE = re.compile('[A-Z][a-z]+ \d{2}, 20\d{2}')
 
 RE_TESTING = re.compile('esting\s+results.+available.+\s([\d,]{6,})\s+individuals')  # pylint: disable=line-too-long
-
-RE_TESTING_1 = re.compile(
-    'testing\s+results\s+available.+\s([\d,]{6,})\s+individuals.+\s(\d{1,2})%.+testing\s+positive')  # pylint: disable=line-too-long
-
-RE_TESTING_2 = re.compile(
-    'Testing\s+results\s+are\s+available\s+for.*\s([\d,]{6,})\s+individuals,?\s+with\s+(\d{1,2})%\s+of\s+(all\s+)?people\s+testing\s+positive'  # pylint: disable=line-too-long
-)
+RE_TESTING_1 = re.compile('([\d,]{6,})\s+individuals\s+tested')
 
 RE_NEW_DEATHS_CASES = re.compile(
     '([\d,]+)\s+new\s+deaths\s+and\s+([\d,]+)\s+new\s+cases'
@@ -38,7 +32,7 @@ RE_NEW_DEATHS_CASES = re.compile(
 RE_UNDER_INVESTIGATION = re.compile('Under Investigation')
 
 HEADER_CASE_COUNT = re.compile(
-    'Laboratory Confirmed[^\d]+([\d,]+)[^\d]+')
+    'Laboratory Confirmed[^\d]+([\d,]+).*')
 HEADER_DEATH = re.compile('Deaths\s+([\d,]+)')
 ENTRY_BY_DEPT = re.compile(
     '(Los Angeles County \(excl\. LB and Pas\)|{}|{})[\s-]*(\d+)'
@@ -47,18 +41,18 @@ ENTRY_BY_DEPT = re.compile(
 LAC_ONLY = '\(Los Angeles County Cases Only-excl LB and Pas\)'
 
 HEADER_AGE_GROUP = re.compile('Age Group {}'.format(LAC_ONLY))
-ENTRY_AGE = re.compile('(\d+ to \d+|over \d+)(\s*--\s*|\s+)(\d+)')
+ENTRY_AGE = re.compile('(\d+ to \d+|over \d+)\s*[:\-\s]+(\d+)')
 
 HEADER_HOSPITAL = re.compile('Hospitalization')
 ENTRY_HOSPITAL = re.compile('([A-Z][A-Za-z() ]+[)a-z])\s*(\d+)')
 
 HEADER_GENDER = re.compile('Gender {}'.format(LAC_ONLY))
-ENTRY_GENDER = re.compile('(Mm*ale|{}|{})\s+(\d+)'.format(const.FEMALE,
+ENTRY_GENDER = re.compile('(Mm*ale|{}|{})\s*[:\-\s]+(\d+)'.format(const.FEMALE,
                                                           const.OTHER))
 
 HEADER_RACE_CASE = re.compile('(?<!Deaths )Race/Ethnicity {}'.format(LAC_ONLY))
 HEADER_RACE_DEATH = re.compile('Deaths Race/Ethnicity {}'.format(LAC_ONLY))
-ENTRY_RACE = re.compile('([A-Z][A-Za-z/ ]+[a-z])\s+(\d+)')
+ENTRY_RACE = re.compile('([A-Z][A-Za-z/ ]+[a-z])\s*[:\-\s]+(\d+)')
 
 HEADER_LOC = re.compile('CITY / COMMUNITY\** \(Rate\**\)')
 RE_LOC = re.compile(
@@ -297,8 +291,9 @@ def _get_testing(pr_html: bs4.BeautifulSoup) -> Optional[int]:
 
     pr_text = pr_html.get_text()
     result = RE_TESTING.search(pr_text)
-    if result:
-        return _str_to_int(result.group(1))
+    if not result:
+        result = RE_TESTING_1.search(pr_text)
+    return _str_to_int(result.group(1))
 
 
 def _isolate_html_general(
@@ -623,13 +618,17 @@ def _parse_entire_day(daily_pr: bs4.Tag) -> Dict[str, Any]:
 
     lb_pas_cf = False if date_ >= CORR_FACILITY_RECORDED else None
 
-    long_beach_cases = cases_by_dept[const.hd.LONG_BEACH]
+    long_beach_cases = cases_by_dept.get(const.hd.LONG_BEACH, 0)
+    if long_beach_cases == 0:
+        print('WARNING - Long Beach Cases Missing')
     long_beach_rate = round(
         long_beach_cases / const.hd.POPULATION_LONG_BEACH * const.RATE_SCALE,
         2)  # pylint: disable=old-division
     cases_by_area.append((const.hd.CSA_LB, long_beach_cases,
                           long_beach_rate, lb_pas_cf))
-    pasadena_cases = cases_by_dept[const.hd.PASADENA]
+    pasadena_cases = cases_by_dept.get(const.hd.PASADENA, 0)
+    if pasadena_cases == 0:
+        print('WARNING - Pasadena Cases Missing')
     pasadena_rate = round(
         pasadena_cases / const.hd.POPULATION_PASADENA * const.RATE_SCALE, 2)  # pylint: disable=old-division
     cases_by_area.append((const.hd.CSA_PAS, pasadena_cases, pasadena_rate,
