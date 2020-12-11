@@ -1,5 +1,6 @@
 from lac_covid19.const.lac_regions import HARBOR, SAN_GABRIEL_VALLEY
 
+LOS_ANGELES_COUNTY = 'Los Angeles County'
 LONG_BEACH = 'Long Beach'
 PASADENA = 'Pasadena'
 
