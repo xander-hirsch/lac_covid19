@@ -28,6 +28,7 @@ DT_CASES = _DT_COL.format(CASES)
 DT_CASE_RATE = _DT_COL.format(CASE_RATE)
 
 REGION = 'Region'
+SPA = 'Service Planning Area'
 AREA = 'Area'
 POPULATION = 'Population'
 CF_OUTBREAK = 'CF Outbreak'

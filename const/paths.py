@@ -48,15 +48,16 @@ ADDRESSES_REQUEST = os.path.join(DIR_GEOCODING, 'addresses.{}').format(CSV)
 ADDRESSES_RESPONSE = os.path.join(DIR_GEOCODING, 'geocoderesult.{}'.format(CSV))
 
 ### DIRECTORY - Population ###
-DIR_LACPH_TABLES = os.path.join(DIR_PROJECT, 'population', 'lacph_import')
-LACPH_CSA_RAW = os.path.join(DIR_LACPH_TABLES,
+DIR_LACDPH_DASH = os.path.join(DIR_PROJECT, 'lacdph_dashboard')
+LACDPH_CSA_RAW = os.path.join(DIR_LACDPH_DASH,
                              'city_community_table.{}'.format(CSV))
 _DEMOGRAPHIC_TABLE = 'demographic_table_{{}}.{csv}'.format(csv=CSV)
-LACPH_AGE_RAW = os.path.join(DIR_LACPH_TABLES, _DEMOGRAPHIC_TABLE.format(_AGE))
-LACPH_GENDER_RAW = os.path.join(DIR_LACPH_TABLES,
+LACPH_AGE_RAW = os.path.join(DIR_LACDPH_DASH, _DEMOGRAPHIC_TABLE.format(_AGE))
+LACPH_GENDER_RAW = os.path.join(DIR_LACDPH_DASH,
                                 _DEMOGRAPHIC_TABLE.format(_GENDER))
-LACPH_RACE_RAW = os.path.join(DIR_LACPH_TABLES,
+LACPH_RACE_RAW = os.path.join(DIR_LACDPH_DASH,
                               _DEMOGRAPHIC_TABLE.format(_RACE))
+
 
 ## Contents ##
 _TIME_SERIES = '{}-ts'

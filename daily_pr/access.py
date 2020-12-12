@@ -5,6 +5,7 @@ import json
 import bs4
 import requests
 import re
+import pickle
 
 from lac_covid19.daily_pr.prid import PRID
 from lac_covid19.daily_pr.parse import parse_pr
@@ -15,6 +16,7 @@ _DIR_HTML, _DIR_JSON = [
     os.path.join(os.path.dirname(__file__), x)
     for x in ('cached-html', 'parsed-json')
 ]
+_PICKLE_CACHE = os.path.join(_DIR_JSON, 'parsed.pickle')
 
 _EXT_HTML = '{}.html'
 _EXT_JSON = '{}.json'
@@ -83,8 +85,14 @@ def query_date(date, json_cache=True, html_cache=True):
     return pr
 
 
-def query_all(json_cache=True, html_cache=True):
-    return [query_date(x, json_cache, html_cache) for x in PRID.keys()]
+def query_all(pickle_cache=True, json_cache=True, html_cache=True):
+    if pickle_cache and os.path.isfile(_PICKLE_CACHE):
+        with open(_PICKLE_CACHE, 'rb') as f:
+            return pickle.load(f)
+    data = [query_date(x, json_cache, html_cache) for x in PRID.keys()]
+    with open(_PICKLE_CACHE, 'wb') as f:
+        pickle.dump(data, f)
+    return data
 
 
 if __name__ == "__main__":

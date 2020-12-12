@@ -8,6 +8,9 @@ current_stats/locations.htm
 
 daily_pr/cached-html/*.html
 daily_pr/parsed-json/*.json
+daily_pr/parsed-json/parsed.pickle
+
+lacdph_dashboard/
 
 pickled/*.pickle
 

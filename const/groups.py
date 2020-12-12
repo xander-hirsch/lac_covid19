@@ -27,3 +27,12 @@ OTHER = 'Other'
 UNDER_INVESTIGATION = 'Under Investigation'
 
 LOS_ANGELES = 'Los Angeles'
+
+SPA_AV = 'Antelope Valley'
+SPA_SF = 'San Fernando'
+SPA_SG = 'San Gabriel'
+SPA_M = 'Metro'
+SPA_W = 'West'
+SPA_S = 'South'
+SPA_E = 'East'
+SPA_SB = 'South Bay'
