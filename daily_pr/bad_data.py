@@ -53,4 +53,5 @@ HARDCODE_NEW_CASES_DEATHS = {
 
 REPORTING_SYSTEM_UPDATE = pd.DataFrame(
     {const.DATE: [pd.Timestamp(2020, 7, x) for x in (3, 4, 5)],
-     const.NEW_CASES: (2643, 3187, 1402)})
+     const.NEW_CASES: (2643, 3187, 1402)}
+)

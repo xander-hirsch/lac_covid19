@@ -9,11 +9,13 @@ from typing import Any, Dict, Iterable, Optional, Sequence, Tuple, Union
 import numpy as np
 import pandas as pd
 
+import covid_tools.calc
+
 import lac_covid19.const as const
 import lac_covid19.const.lac_regions as lac_regions
 import lac_covid19.const.paths as paths
-import lac_covid19.daily_pr.bad_data as bad_data
-import lac_covid19.daily_pr.scrape_daily_stats as scrape_daily_stats
+from lac_covid19.daily_pr.bad_data import REPORTING_SYSTEM_UPDATE
+import lac_covid19.daily_pr.access as access
 import lac_covid19.population as population
 
 DATE = const.DATE
@@ -53,18 +55,6 @@ def calculate_rate(date_group_entry: pd.Series, population_map: pd.Series,
         return np.nan
 
     return round((count / population_map[group] * RATE_SCALE), 2)
-
-
-def query_all_dates() -> Tuple[Dict[str, Any]]:
-    """Loads in previously scraped press releases. See query_all_dates() in
-        module scrape_daily_stats for more information.
-    """
-
-    if not os.path.isfile(paths.RAW_DATA):
-        return scrape_daily_stats.query_all_dates()
-
-    with open(paths.RAW_DATA, 'rb') as f:
-        return pickle.load(f)
 
 
 def tidy_data(df: pd.DataFrame, var_desc: str, value_desc: str,
@@ -107,46 +97,31 @@ def access_date(
 def make_section_ts(daily_pr: Dict, section: str) -> Dict[str, Any]:
     """Extracts a section and appends the corersponding date."""
     data = daily_pr[section]
-    data[DATE] = access_date(daily_pr)
+    data[DATE] = pd.to_datetime(daily_pr[DATE])
     return data
 
 
-def create_main_stats(
-        many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
-    """Time series of aggregate data.
+def make_ts_general(many_daily_pr, dict_key, var_name, value_name):
+    return pd.melt(
+        pd.DataFrame([make_section_ts(x, dict_key) for x in many_daily_pr]),
+        id_vars=DATE, var_name=var_name, value_name=value_name
+    ).sort_values([DATE, var_name]).reset_index(drop=True)
 
-    Returns:
-        Time series DataFrame with the entries: Date, New Cases, Cases,
-            New Deaths, Deaths, Hospitalizations, Test Results, % Positive
-            Tests.
-    """
 
-    TEST_RESULTS = const.TEST_RESULTS
-    PERCENT_POSITIVE = const.PERCENT_POSITIVE_TESTS
-
-    data = {
-        DATE: map(access_date, many_daily_pr),
-        const.NEW_CASES: map(lambda x: x[const.NEW_CASES], many_daily_pr),
-        CASES: map(lambda x: x[CASES], many_daily_pr),
-        const.NEW_DEATHS: map(lambda x: x[const.NEW_DEATHS], many_daily_pr),
-        DEATHS: map(lambda x: x[DEATHS], many_daily_pr),
-        const.HOSPITALIZATIONS:
-            map(lambda x: x[const.HOSPITALIZATIONS], many_daily_pr),
-        TEST_RESULTS: map(lambda x: x[TEST_RESULTS], many_daily_pr),
-    }
-
-    df = pd.DataFrame(data)
-    df = (df.append(bad_data.REPORTING_SYSTEM_UPDATE)
-          .sort_values(DATE)
-          .reset_index(drop=True))
-
-    has_missing_data = (CASES, DEATHS, const.NEW_DEATHS, const.HOSPITALIZATIONS,
-                        TEST_RESULTS)
-    for column in has_missing_data:
-        df[column] = df[column].convert_dtypes()
-
-    return df
-
+AGE_SORT_MAP = {
+    const.AGE_0_17: 0,
+    const.AGE_18_40: 18,
+    const.AGE_41_65: 41,
+    const.AGE_OVER_65: 66,
+    const.AGE_0_4: 0,
+    const.AGE_5_11: 5,
+    const.AGE_12_17: 12,
+    const.AGE_18_29: 18,
+    const.AGE_30_49: 30,
+    const.AGE_50_64: 50,
+    const.AGE_65_79: 65,
+    const.AGE_OVER_80: 81,
+}
 
 def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     """Time series of cases by age group.
@@ -155,25 +130,16 @@ def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
         Time series DataFrame with the entries: Date, Age Group, Cases, Case
             Rate.
     """
-
-    AGE_GROUP = const.AGE_GROUP
-    age_order = (const.AGE_0_17, const.AGE_18_40, const.AGE_41_65,
-                 const.AGE_OVER_65, const.AGE_0_4, const.AGE_5_11,
-                 const.AGE_12_17, const.AGE_18_29, const.AGE_30_49,
-                 const.AGE_50_64, const.AGE_65_79, const.AGE_OVER_80)
-
-    data = map(lambda x: make_section_ts(x, const.CASES_BY_AGE), many_daily_pr)
-    df = tidy_data(pd.DataFrame(data), AGE_GROUP, CASES,
-                   category_order=age_order)
-
-    age_pop = population.AGE
-    df[CASE_RATE] = df.apply(
-        lambda x: calculate_rate(x, age_pop, AGE_GROUP, CASES), axis='columns')
-
-    df.dropna(inplace=True)
-    df[CASES] = df[CASES].convert_dtypes()
-
-    return df
+    df_age = covid_tools.calc.compute_all_groups(
+        make_ts_general(many_daily_pr, const.CASES_BY_AGE,
+                        const.AGE_GROUP, const.CASES),
+        DATE, const.CASES, const.AGE_GROUP,
+        var_dt_norm_avg_col=const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
+        population_mapper=population.AGE
+    )
+    df_age['age'] = df_age[const.AGE_GROUP].apply(AGE_SORT_MAP.get)
+    return (df_age.sort_values([DATE, 'age'])
+            .drop(columns='age').reset_index(drop=True))
 
 
 def create_by_gender(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
@@ -182,23 +148,13 @@ def create_by_gender(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     Returns:
         Time series DataFrame with the entries: Date, Gender, Cases, Case Rate.
     """
-
-    GENDER = const.GENDER
-    CASES_BY_GENDER = const.CASES_BY_GENDER
-
-    data = [make_section_ts(x, CASES_BY_GENDER)
-            for x in many_daily_pr if x[CASES_BY_GENDER]]
-
-    df = tidy_data(pd.DataFrame(data), GENDER, CASES, False)
-    df = df[df[GENDER] != const.OTHER]
-    df[GENDER] = df[GENDER].astype('category')
-    df[CASES] = df[CASES].astype('int')
-
-    gender_pop = population.GENDER
-    df[CASE_RATE] = df.apply(
-        lambda x: calculate_rate(x, gender_pop, GENDER, CASES), axis='columns')
-
-    return df
+    return covid_tools.calc.compute_all_groups(
+        make_ts_general(many_daily_pr, const.CASES_BY_GENDER,
+                        const.GENDER, const.CASES),
+        DATE, const.CASES, const.GENDER,
+        var_dt_norm_avg_col=const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
+        population_mapper=population.GENDER, exclude_groups=[const.OTHER]
+    )
 
 
 def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
@@ -209,36 +165,21 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
             Deaths, Death Rate.
     """
 
-    RACE = const.RACE
-
-    cases_raw = [make_section_ts(x, const.CASES_BY_RACE)
-                 for x in many_daily_pr if x[const.CASES_BY_RACE]]
-    deaths_raw = [make_section_ts(x, const.DEATHS_BY_RACE)
-                  for x in many_daily_pr if x[const.DEATHS_BY_RACE]]
-
-    # Create cases and deaths tables seperately
-    df_cases = (pd.DataFrame(cases_raw)
-                .melt(id_vars=DATE, var_name=RACE, value_name=CASES))
-    df_deaths = (pd.DataFrame(deaths_raw)
-                 .melt(id_vars=DATE, var_name=RACE, value_name=DEATHS))
-
-    # Merge cases and deaths
-    df_all = df_cases.merge(df_deaths, on=[DATE, RACE], how='left')
-    df_all[RACE] = df_all[RACE].astype('category')
-    df_all[CASES] = df_all[CASES].convert_dtypes()
-    df_all[DEATHS] = df_all[DEATHS].convert_dtypes()
-
-    df_all = df_all.sort_values(by=[DATE, RACE]).reset_index(drop=True)
-
-    race_pop = population.RACE
-
-    df_all[CASE_RATE] = df_all.apply(
-        lambda x: calculate_rate(x, race_pop, RACE, CASES), axis='columns')
-
-    df_all[DEATH_RATE] = df_all.apply(
-        lambda x: calculate_rate(x, race_pop, RACE, DEATHS), axis='columns')
-
-    return df_all[[DATE, RACE, CASES, CASE_RATE, DEATHS, DEATH_RATE]]
+    df_cases = covid_tools.calc.compute_all_groups(
+        make_ts_general(many_daily_pr, const.CASES_BY_RACE,
+                        const.RACE, const.CASES),
+        DATE, const.CASES, const.RACE,
+        var_dt_norm_avg_col=const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
+        population_mapper=population.RACE, exclude_groups=[const.OTHER]
+    )
+    df_deaths = covid_tools.calc.compute_all_groups(
+        make_ts_general(many_daily_pr, const.DEATHS_BY_RACE,
+                        const.RACE, const.DEATHS),
+        DATE, const.DEATHS, const.RACE,
+        var_dt_norm_avg_col=const.NEW_DEATHS_14_DAY_AVG_PER_CAPITA,
+        population_mapper=population.RACE, exclude_groups=[const.OTHER]
+    )
+    return pd.merge(df_cases, df_deaths, on=[DATE, const.RACE])
 
 
 def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
@@ -437,13 +378,67 @@ def area_slowed_increase(
     return area_cases[location].astype('string')
 
 
+def health_dept_ts(many_daily_pr, variable):
+    df = pd.DataFrame([x[variable] for x in many_daily_pr])
+    df[DATE] = [pd.to_datetime(x[DATE]) for x in many_daily_pr]
+    return (
+        pd.melt(df, id_vars=DATE, var_name=const.HEALTH_DPET,
+                value_name=variable)
+        .sort_values([DATE, const.HEALTH_DPET]).reset_index(drop=True)
+    )
+
+
+def aggregate_single_stat(many_daily_pr, variable):
+    df = health_dept_ts(
+        many_daily_pr, variable).groupby(DATE).sum().reset_index()
+    if variable not in [const.CASES, const.DEATHS]:
+        raise ValueError(f'Variable must be {const.CASES} or {const.DEATHS}')
+    variable = variable == const.CASES
+    var_daily_change = const.NEW_CASES if variable else const.NEW_DEATHS
+    var_daily_change_avg = (const.NEW_CASES_7_DAY_AVG
+                            if variable else const.NEW_DEATHS_7_DAY_AVG)
+    var_daily_change_avg_per_capita = (
+        const.NEW_CASES_7_DAY_AVG_PER_CAPITA
+        if variable else const.NEW_DEATHS_7_DAY_AVG_PER_CAPITA
+    )
+    df[var_daily_change] = [x[var_daily_change] for x in many_daily_pr]
+    if variable:
+        df = (
+            pd.concat((df, REPORTING_SYSTEM_UPDATE))
+            .sort_values(DATE).reset_index(drop=True)
+        )
+    return covid_tools.calc.normalize_population(
+        covid_tools.calc.rolling_avg(
+            df, DATE, var_daily_change, var_daily_change_avg, 7),
+        var_daily_change_avg, var_daily_change_avg_per_capita,
+        population.LA_COUNTY
+    )
+
+
+def aggregate_stats(many_daily_pr):
+    df_hospital = covid_tools.calc.daily_change(
+        pd.DataFrame({
+            DATE: [pd.to_datetime(x[DATE]) for x in many_daily_pr],
+            const.HOSPITALIZATIONS: [
+                x[const.HOSPITALIZATIONS] for x in many_daily_pr
+            ],
+        }), DATE, const.HOSPITALIZATIONS, const.NEW_HOSPITALIZATIONS
+    )
+    df_cases, df_deaths = [aggregate_single_stat(many_daily_pr, x)
+                           for x in (const.CASES, const.DEATHS)]
+    return pd.merge(
+        pd.merge(df_cases, df_deaths, 'left', DATE),
+        df_hospital, 'left', DATE
+    )
+
+
 if __name__ == "__main__":
-    every_day = query_all_dates()
+    every_day = access.query_all()
     mid_april = every_day[14:21]
-    last_week = every_day[-7:]
+    last_month = every_day[-30:]
     today = every_day[-1]
 
-    df_summary = create_main_stats(every_day)
+    # df_summary = create_main_stats(every_day)
     # df_age = create_by_age(every_day)
     # df_gender = create_by_gender(every_day)
     # df_race = create_by_race(last_week)

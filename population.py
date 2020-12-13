@@ -1,5 +1,4 @@
 import csv
-import os.path
 import lac_covid19.const as const
 import lac_covid19.const.paths as paths
 
