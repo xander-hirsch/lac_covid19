@@ -5,6 +5,8 @@ import lac_covid19.const as const
 SUBSTITUE_SORUCE = {
     '2020-04-16': ('Mmale', 'Male'),
     '2020-04-17': ('Mmale', 'Male'),
+    '2020-07-23': ('CCity of Agoura Hills', 'City of Agoura Hills'),
+    '2020-10-06': ('City of City of Agoura Hills', 'City of Agoura Hills'),
 }
 
 _unic_val_verde = 'Unincorporated - Val Verde'
@@ -55,3 +57,13 @@ REPORTING_SYSTEM_UPDATE = pd.DataFrame(
     {const.DATE: [pd.Timestamp(2020, 7, x) for x in (3, 4, 5)],
      const.NEW_CASES: (2643, 3187, 1402)}
 )
+
+
+DATA_TYPOS = {
+    '2020-04-13': (const.CASES_BY_AGE, const.AGE_OVER_65, 2032),
+    '2020-09-06': (const.CASES_BY_AGE, const.AGE_65_79, 18029),
+    '2020-11-03': (const.CASES_BY_AGE, const.AGE_5_11, 11230),
+    '2020-11-10': (const.CASES_BY_AGE, const.AGE_OVER_80, 10220),
+    '2020-11-12': (const.CASES_BY_AGE, const.AGE_0_4, 5601),
+    '2020-11-27': (const.CASES_BY_AGE, const.AGE_30_49, 125868),
+}

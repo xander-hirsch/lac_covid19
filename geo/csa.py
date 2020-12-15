@@ -1,122 +1,113 @@
 import json
 import os.path
-from typing import Dict
+import geopandas
+from shapely.affinity import scale
 
-import pandas as pd
-import requests
+from lac_covid19.const.groups import (SPA_AV, SPA_SF, SPA_SG, SPA_M,
+                                      SPA_W, SPA_S, SPA_E, SPA_SB)
 
-import lac_covid19.const as const
-import lac_covid19.const.paths as paths
+from lac_covid19.const.columns import AREA, REGION, OBJECTID
+from lac_covid19.const import JSON_COMPACT
+from lac_covid19.geo import DIR_DATA
 
-URL_CSA_GEOJSON = 'https://opendata.arcgis.com/datasets/7b8a64cab4a44c0f86f12c909c5d7f1a_23.geojson'
+_CSA_REGION_MAP_JSON = os.path.join(DIR_DATA, 'csa-region-map.json')
 
-DIR_GEO = os.path.dirname(__file__)
+df_csa, df_spa = [
+    geopandas.read_file(os.path.join(DIR_DATA, f'{x}.geojson'))
+    for x in ('csa', 'spa')
+]
 
-FEATURES = 'features'
-ATTRIBUTES = 'attributes'
-PROPERTIES = 'properties'
-GEOMETRY = 'geometry'
-CSA_LABEL = 'LABEL'
-TYPE = 'type'
-FEATURE_COLLECTION = 'FeatureCollection'
-TYPE_FEATURE = 'Feature'
-
-COMPACT_SEPERATORS = ',', ':'
-
-
-def _request_csa() -> Dict[str, Dict]:
-    """Pulls the official Countywide Statistical Areas file from the LA County
-        Enterprise GIS Portal. Parses the file for the CSA polygons.
-    """
-
-    r = requests.get(URL_CSA_GEOJSON)
-    if r.status_code == 200:
-        with open(paths.CSA_GEOJSON, 'w') as f:
-            f.write(r.text)
-
-        raw_csa = json.loads(r.text)
-        csa_geo_mapping = {}
-        for item in raw_csa[FEATURES]:
-            if item[TYPE] == TYPE_FEATURE:
-                area = item[PROPERTIES][CSA_LABEL]
-                geometry = item[GEOMETRY]
-                csa_geo_mapping[area] = geometry
-
-        with open(paths.CSA_POLYGONS, 'w') as f:
-            json.dump(csa_geo_mapping, f, separators=COMPACT_SEPERATORS)
-
-        return csa_geo_mapping
+MANUAL_REGION = {
+    'City of Carson': SPA_SB,
+    'City of El Segundo': SPA_SB,
+    'City of Lakewood': SPA_SB,
+    'City of Long Beach': SPA_SB,
+    'City of Lynwood': SPA_S,
+    'City of Signal Hill': SPA_E,
+    'Los Angeles - Vernon Central': SPA_S,
+    'Los Angeles - Westchester': SPA_W,
+    'Unincorporated - Agua Dulce': SPA_AV,
+    'Unincorporated - Angeles National Forest': SPA_SG,
+    'Unincorporated - Castaic': SPA_SF,
+    'Unincorporated - Lake Hughes': SPA_SF,
+    'Unincorporated - Santa Monica Mountains': SPA_SF,
+    'Unincorporated - West Antelope Valley': SPA_AV,
+}
 
 
-def load_csa_mapping() -> Dict[str, Dict]:
-    """Similar to _request_csa, but tries a local file first before requesting
-        the CSA file from online.
-    """
+def determine_region(csa_series, df_region, region_name_col,
+                     csa_name_col=None, manual_assignment=None,
+                     csa_scale=0.9):
+    if (all((csa_name_col, manual_assignment))
+        and (csa_name := csa_series.loc[csa_name_col]) in manual_assignment):
+        return manual_assignment[csa_name]
+    region_scale = 2 - csa_scale
+    df_contains = df_region[
+        df_region.geometry.apply(
+            lambda x: (
+                scale(x, region_scale, region_scale, origin='centroid')
+                .contains(scale(csa_series.geometry,
+                          csa_scale, csa_scale, origin='centroid'))
+            )
+        )
+    ]
+    if not df_contains.empty:
+        return df_contains.iloc[0].loc[region_name_col]
+    df_intersects = df_region[
+        df_region.geometry.apply(lambda x: x.intersects(csa_series.geometry))
+    ]
+    if not df_intersects.empty:
+        if df_intersects.shape[0] == 1:
+            return df_intersects.iloc[0].loc[region_name_col]
+        return df_intersects[region_name_col].to_list()
 
-    if os.path.isfile(paths.CSA_POLYGONS):
-        with open(paths.CSA_POLYGONS) as f:
+
+def create_region_mapping():
+    df_csa_region = df_csa.drop(
+        columns=['OBJECTID', 'CITY_TYPE', 'LCITY', 'COMMUNITY', 'SOURCE',
+                 'ShapeSTArea', 'ShapeSTLength']
+    ).copy()
+    df_csa_region.rename(columns={'LABEL': AREA}, inplace=True)
+    df_csa_region[REGION] = df_csa_region.apply(
+        lambda x: determine_region(x, df_spa, 'SPA_NAME', AREA,
+                                   MANUAL_REGION, csa_scale=0.8),
+        axis='columns',
+    )
+    df_csa_region.drop(columns='geometry', inplace=True)
+    df_csa_region.sort_values(AREA, inplace=True)
+    df_csa_region.set_index(AREA, inplace=True)
+    output = {}
+    for area, region in df_csa_region.loc[:, REGION].items():
+        output[area] = region
+    return output
+
+
+def get_region_mapping(cache=True):
+    if cache and os.path.isfile(_CSA_REGION_MAP_JSON):
+        with open(_CSA_REGION_MAP_JSON) as f:
             return json.load(f)
-    else:
-        return _request_csa()
+    csa_region = create_region_mapping()
+    with open(_CSA_REGION_MAP_JSON, 'w') as f:
+        json.dump(csa_region, f, separators=JSON_COMPACT)
+    return csa_region
 
 
-def parse_csa_objectid() -> Dict[str, int]:
-    """Generates a mapping of countywide statistical area names to OBJECTID
-        values for the ArcGIS map.
-    """
-
-    raw_data = None
-    with open(paths.CSA_ARCGIS_QUERY) as f:
-        raw_data = json.load(f)
-
-    raw_data = raw_data[FEATURES]
-
-    objectid_mapping = {}
-    for entry in raw_data:
-        obj_id = entry[ATTRIBUTES][const.OBJECTID]
-        area = entry[ATTRIBUTES][const.AREA]
-        objectid_mapping[area] = obj_id
-
-    with open(paths.CSA_OBJECTID, 'w') as f:
-        json.dump(objectid_mapping, f)
-
-    return objectid_mapping
+CSA_REGION_MAP = get_region_mapping()
+CSA_BLANK = (
+    df_csa.drop(columns=['CITY_TYPE', 'LCITY', 'COMMUNITY', 'SOURCE',
+                         'ShapeSTArea', 'ShapeSTLength'])
+    .rename(columns={'OBJECTID': OBJECTID, 'LABEL': AREA}).copy()
+)
 
 
-def merge_csa_geo(current: bool = False):
-    """Merges the most recent CSA cases and deaths listing with the county
-        geojson map. For version control purposes, the cases and deaths fields
-        will be populated with zero unless otherwise specified.
-    """
-
-    csa_mapping = load_csa_mapping()
-    csa_entries = pd.read_pickle(paths.CSA_CURRENT_PICKLE)
-
-    geo_csa_stats = {TYPE: FEATURE_COLLECTION, FEATURES: []}
-    for x in csa_entries.iterrows():
-        csa_entry = x[1]
-        area = csa_entry[const.AREA]
-        geometry = csa_mapping[area]
-
-        cases = csa_entry[const.CASES] if current else 0
-        case_rate = csa_entry[const.CASE_RATE] if current else 0
-        deaths = csa_entry[const.DEATHS] if current else 0
-        death_rate = csa_entry[const.DEATH_RATE] if current else 0
-        cf_outbreak = csa_entry[const.CF_OUTBREAK] if current else False
-
-        geo_csa_stats[FEATURES] += ({
-            TYPE: TYPE_FEATURE,
-            PROPERTIES: {
-                const.AREA: area,
-                const.REGION: csa_entry[const.REGION],
-                const.CASES: cases,
-                const.CASE_RATE: case_rate,
-                const.DEATHS: deaths,
-                const.DEATH_RATE: death_rate,
-                const.CF_OUTBREAK: cf_outbreak,
-            },
-            GEOMETRY: geometry,
-        },)
-
-    with open(paths.CSA_GEO_STATS, 'w') as f:
-        json.dump(geo_csa_stats, f, separators=COMPACT_SEPERATORS)
+if __name__ == "__main__":
+    pass
+    # df_csa_region = df_csa.copy()
+    # df_csa_region['region'] = df_csa_region.apply(
+    #     lambda x: determine_region(x, df_spa, 'SPA_NAME', 'LABEL',
+    #                                MANUAL_REGION, csa_scale=0.8),
+    #     axis='columns',
+    # )
+    # df_todo = df_csa_region[df_csa_region['region']
+    #                         .apply(lambda x: not isinstance(x, str))]
+    # df_todo = df_todo[['LABEL', 'region']]

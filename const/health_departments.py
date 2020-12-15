@@ -7,6 +7,11 @@ PASADENA = 'Pasadena'
 _CSA_CITY = 'City of {}'
 CSA_LB, CSA_PAS= [f'City of {x}' for x in (LONG_BEACH, PASADENA)]
 
+HD_CSA_MAP = {
+    LONG_BEACH: CSA_LB,
+    PASADENA: CSA_PAS,
+}
+
 # US Census Table DP05 2018 5-year
 POPULATION_LAC = 10_098_052
 POPULATION_LONG_BEACH = 468_883

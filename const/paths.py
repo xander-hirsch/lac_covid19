@@ -42,6 +42,7 @@ CSA_GEOJSON = os.path.join(DIR_CSA_MAP,
 CSA_POLYGONS = os.path.join(DIR_CSA_MAP, 'csa-polygons.{}'.format(JSON))
 CSA_OBJECTID = os.path.join(DIR_CSA_MAP, 'csa-objectid.{}'.format(JSON))
 CSA_ARCGIS_QUERY = os.path.join(DIR_CSA_MAP, 'arcgis-csa-query.{}'.format(JSON))
+CSA_REGION_MAP = os.path.join(DIR_GEO, 'csa-region-map.json')
 ## Subdirecotry - Geocoding ##
 DIR_GEOCODING = os.path.join(DIR_GEO, 'geocode')
 ADDRESSES_REQUEST = os.path.join(DIR_GEOCODING, 'addresses.{}').format(CSV)

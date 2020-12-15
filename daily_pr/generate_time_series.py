@@ -22,8 +22,9 @@ DATE = const.DATE
 CASES = const.CASES
 DEATHS = const.DEATHS
 
+
 RATE_SCALE = const.RATE_SCALE
-CASE_RATE = const.CASE_RATE
+CASE_RATE = const.CASES_PER_CAPITA
 DEATH_RATE = const.DEATH_RATE
 
 AREA = const.AREA
@@ -134,6 +135,7 @@ def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
         make_ts_general(many_daily_pr, const.CASES_BY_AGE,
                         const.AGE_GROUP, const.CASES),
         DATE, const.CASES, const.AGE_GROUP,
+        var_norm_col=const.CASES_PER_CAPITA,
         var_dt_norm_avg_col=const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
         population_mapper=population.AGE
     )
@@ -152,6 +154,7 @@ def create_by_gender(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
         make_ts_general(many_daily_pr, const.CASES_BY_GENDER,
                         const.GENDER, const.CASES),
         DATE, const.CASES, const.GENDER,
+        var_norm_col=const.CASES_PER_CAPITA,
         var_dt_norm_avg_col=const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
         population_mapper=population.GENDER, exclude_groups=[const.OTHER]
     )
@@ -169,6 +172,7 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
         make_ts_general(many_daily_pr, const.CASES_BY_RACE,
                         const.RACE, const.CASES),
         DATE, const.CASES, const.RACE,
+        var_norm_col=const.CASES_PER_CAPITA,
         var_dt_norm_avg_col=const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
         population_mapper=population.RACE, exclude_groups=[const.OTHER]
     )
@@ -176,6 +180,7 @@ def create_by_race(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
         make_ts_general(many_daily_pr, const.DEATHS_BY_RACE,
                         const.RACE, const.DEATHS),
         DATE, const.DEATHS, const.RACE,
+        var_norm_col=const.DEATHS_PER_CAPITA,
         var_dt_norm_avg_col=const.NEW_DEATHS_14_DAY_AVG_PER_CAPITA,
         population_mapper=population.RACE, exclude_groups=[const.OTHER]
     )
@@ -188,8 +193,11 @@ def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
     """
 
     # Leverage the provided grouping of area, cases, and case rate.
-    df = pd.DataFrame(daily_pr[AREA], columns=(AREA, CASES, CASE_RATE,
-                                               CF_OUTBREAK))
+    df = pd.DataFrame(daily_pr[AREA],
+                      columns=(AREA, CASES, CASE_RATE, CF_OUTBREAK))
+    df[DATE] = pd.to_datetime(daily_pr[DATE])
+    return df[[DATE, AREA, CASES, CASE_RATE, CF_OUTBREAK]]
+
     df[CASES] = df[CASES].convert_dtypes()
     df[CF_OUTBREAK] = df[CF_OUTBREAK].convert_dtypes()
 
@@ -213,13 +221,48 @@ def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
         Time series DataFrame with the entries: Date, Area, Region, Case Rate.
     """
 
-    all_dates = map(single_day_area, many_daily_pr)
-    df = pd.concat(all_dates, ignore_index=True)
+    df_csa = pd.concat(map(single_day_area, many_daily_pr), ignore_index=True)
+
+    df_hd = health_dept_ts(many_daily_pr, const.CASES)
+    df_hd = df_hd[df_hd[const.HEALTH_DPET]!=const.hd.LOS_ANGELES_COUNTY].copy()
+    df_hd = covid_tools.calc.normalize_population_groups(
+        df_hd, const.CASES, const.CASES_PER_CAPITA,
+        const.HEALTH_DPET, population.HEALTH_DEPT
+    )
+    df_hd.rename(columns={const.HEALTH_DPET: const.AREA}, inplace=True)
+    df_hd[const.AREA] = df_hd[const.AREA].apply(const.hd.HD_CSA_MAP.get)
+    df_hd[CF_OUTBREAK] = False
+
+    # df = df_csa.copy()
+    df = (pd.concat([df_csa, df_hd])
+          .sort_values([DATE, AREA]).reset_index(drop=True))
+    
+    df = covid_tools.calc.rolling_avg_groups(
+        covid_tools.calc.daily_change_groups(
+            df, DATE, const.CASES, const.NEW_CASES, const.AREA
+        ), DATE, const.NEW_CASES, const.NEW_CASES_14_DAY_AVG, 14, const.AREA
+    )
+    # return df
+    df = covid_tools.calc.rolling_avg_groups(
+        covid_tools.calc.daily_change_groups(
+            df, DATE, const.CASES_PER_CAPITA, 'new cases per capita', const.AREA
+        ), DATE, 'new cases per capita',
+        const.NEW_CASES_14_DAY_AVG_PER_CAPITA, 14, const.AREA
+    )
+    df.drop(columns='new cases per capita', inplace=True)
+    return df
+    # df = covid_tools.calc.daily_change_groups(
+    #     df, DATE, const.CASES, const.NEW_CASES, const.AREA
+    # )
+    # df = covid_tools.calc.rolling_avg_groups(
+    #     df, DATE, const.NEW_CASES, const.NEW_CASES_14_DAY_AVG, 14, const.AREA
+    # )
+    # return df
+
 
     df[REGION] = df[REGION].astype('category')
     df[AREA] = df[AREA].astype('string')
 
-    return df
 
 
 def aggregate_locations(

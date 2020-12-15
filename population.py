@@ -4,9 +4,16 @@ import lac_covid19.const.paths as paths
 
 # http://publichealth.lacounty.gov/epi/docs/2019-LAC-Population.pdf
 LA_COUNTY = 10_260_237
-# US Census 2018 American Community Survey 1-Year Estimates
 PASADENA = 141_374
 LONG_BEACH = 467_353
+
+# 2018 PEPS Population for LA County Health Dept
+# US Census 2018 American Community Survey 1-Year Estimates for LB, Pas
+HEALTH_DEPT = {
+    const.hd.LOS_ANGELES_COUNTY: 9_651_332,
+    const.hd.LONG_BEACH: 467_353,
+    const.hd.PASADENA: 141_374,
+}
 
 SPA = {
     const.SPA_AV: 397_272,

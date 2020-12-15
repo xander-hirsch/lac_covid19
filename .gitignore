@@ -10,6 +10,8 @@ daily_pr/cached-html/*.html
 daily_pr/parsed-json/*.json
 daily_pr/parsed-json/parsed.pickle
 
+geo/data/*.*json
+
 lacdph_dashboard/
 
 pickled/*.pickle

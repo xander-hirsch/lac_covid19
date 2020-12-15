@@ -9,8 +9,8 @@ import pickle
 
 from lac_covid19.daily_pr.prid import PRID
 from lac_covid19.daily_pr.parse import parse_pr
-from lac_covid19.const import DATE, AREA
-from lac_covid19.daily_pr.bad_data import SUBSTITUE_SORUCE
+from lac_covid19.const import DATE, AREA, JSON_COMPACT
+from lac_covid19.daily_pr.bad_data import SUBSTITUE_SORUCE, DATA_TYPOS
 
 _DIR_HTML, _DIR_JSON = [
     os.path.join(os.path.dirname(__file__), x)
@@ -63,7 +63,7 @@ def _write_json(pr_dict):
     pr_dict = deepcopy(pr_dict)
     pr_dict[DATE] = pr_dict[DATE].isoformat()
     with open(_json_path(pr_dict[DATE]), 'w') as f:
-        json.dump(pr_dict, f)
+        json.dump(pr_dict, f, separators=JSON_COMPACT)
 
 
 def _load_json(date):
@@ -81,12 +81,16 @@ def query_date(date, json_cache=True, html_cache=True):
     if json_cache and (pr := _load_json(date)):
         return pr
     pr = parse_pr(load_html(date, html_cache))
+    if date in DATA_TYPOS:
+        keys_value = DATA_TYPOS[date]
+        pr[keys_value[0]][keys_value[1]] = keys_value[2]
     _write_json(pr)
     return pr
 
 
 def query_all(pickle_cache=True, json_cache=True, html_cache=True):
-    if pickle_cache and os.path.isfile(_PICKLE_CACHE):
+    if (all((pickle_cache, json_cache, html_cache))
+        and os.path.isfile(_PICKLE_CACHE)):
         with open(_PICKLE_CACHE, 'rb') as f:
             return pickle.load(f)
     data = [query_date(x, json_cache, html_cache) for x in PRID.keys()]
