@@ -98,6 +98,7 @@ CSA_BLANK = (
                          'ShapeSTArea', 'ShapeSTLength'])
     .rename(columns={'OBJECTID': OBJECTID, 'LABEL': AREA}).copy()
 )
+CSA_BLANK[REGION] = CSA_BLANK[AREA].apply(CSA_REGION_MAP.get)
 
 
 if __name__ == "__main__":

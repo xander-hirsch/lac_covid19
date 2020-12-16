@@ -2,19 +2,20 @@
 **/__pycache__
 .ipynb_checkpoints/**
 
-append-data/*.csv
-
 current_stats/locations.htm
 
 daily_pr/cached-html/*.html
 daily_pr/parsed-json/*.json
-daily_pr/parsed-json/parsed.pickle
+daily_pr/pickle-cache/*.pickle
+
+export/*
+!export/README.md
+!export/arcgis-append/README.md
+!export/arcgis-upload/README.md
 
 geo/data/*.*json
 
 lacdph_dashboard/
-
-pickled/*.pickle
 
 scratchpad.py
 

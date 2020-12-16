@@ -7,6 +7,7 @@ HOSPITALIZATIONS = 'Hospitalizations'
 NEW_HOSPITALIZATIONS = f'New {HOSPITALIZATIONS.lower()}'
 TEST_RESULTS = 'Test Results'
 PERCENT_POSITIVE_TESTS = '% Positive Tests'
+AGGREGATE = 'Aggregate'
 
 _NEW = 'New'
 NEW_CASES = ' '.join((_NEW, CASES))
@@ -14,8 +15,8 @@ NEW_DEATHS = ' '.join((_NEW, DEATHS))
 
 HEALTH_DPET = 'Health dept'
 
-NEW_CASES_7_DAY_AVG, NEW_DEATHS_7_DAY_AVG = [
-    f'New {x}, 7-day avg' for x in ('cases', 'deaths')]
+NEW_CASES_7_DAY_AVG, NEW_DEATHS_7_DAY_AVG, NEW_HOSPITALIZATIONS_7_DAY_AVG = [
+    f'New {x}, 7-day avg' for x in ('cases', 'deaths', 'hospitalizations')]
 CASES_PER_CAPITA, DEATHS_PER_CAPITA, NEW_CASES_7_DAY_AVG_PER_CAPITA, NEW_DEATHS_7_DAY_AVG_PER_CAPITA = [
     f'{x} per 100k'
     for x in (CASES, DEATHS, NEW_CASES_7_DAY_AVG, NEW_DEATHS_7_DAY_AVG)

@@ -9,14 +9,11 @@ import pickle
 
 from lac_covid19.daily_pr.prid import PRID
 from lac_covid19.daily_pr.parse import parse_pr
+from lac_covid19.daily_pr.paths import *
 from lac_covid19.const import DATE, AREA, JSON_COMPACT
 from lac_covid19.daily_pr.bad_data import SUBSTITUE_SORUCE, DATA_TYPOS
 
-_DIR_HTML, _DIR_JSON = [
-    os.path.join(os.path.dirname(__file__), x)
-    for x in ('cached-html', 'parsed-json')
-]
-_PICKLE_CACHE = os.path.join(_DIR_JSON, 'parsed.pickle')
+_PICKLE_CACHE = os.path.join(DIR_PICKLE, 'parsed.pickle')
 
 _EXT_HTML = '{}.html'
 _EXT_JSON = '{}.json'
@@ -24,11 +21,11 @@ _LACDPH_PR_URL = 'http://www.publichealth.lacounty.gov/phcommon/public/media/med
 
 
 def _html_path(date):
-    return os.path.join(_DIR_HTML, _EXT_HTML.format(date))
+    return os.path.join(DIR_HTML, _EXT_HTML.format(date))
 
 
 def _json_path(date):
-    return os.path.join(_DIR_JSON, _EXT_JSON.format(date))
+    return os.path.join(DIR_JSON, _EXT_JSON.format(date))
 
 
 def _fetch_html(date):
