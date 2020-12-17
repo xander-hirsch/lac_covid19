@@ -17,6 +17,15 @@ DIR_ARCGIS_UPLOAD, DIR_ARCGIS_APPEND = [os.path.join(DIR_EXPORT, f'arcgis-{x}')
 DIR_TS = os.path.join(DIR_DOCS, 'time-series')
 
 
+def datetime_input(obj):
+    if isinstance(obj, pd.Timestamp):
+        return obj
+    elif isinstance(obj, str):
+        return pd.to_datetime(obj)
+    else:
+        raise ValueError
+
+
 def arcgis_live_map(df_area):
     df_area = df_area.loc[
         df_area[const.DATE]==df_area[const.DATE].max(),
@@ -37,15 +46,17 @@ def arcgis_live_map(df_area):
 
 
 def arcgis_ts(df_area, append_date=None):
-    df_area = (df_area[[const.DATE, const.AREA, const.CASES, const.NEW_CASES]]
-               .copy())
+    df_area = df_area.loc[
+        df_area[const.AREA] != const.LOS_ANGELES,
+        [const.DATE, const.AREA, const.CASES, const.NEW_CASES]
+    ].copy()
     df_area[const.REGION] = df_area[const.AREA].apply(CSA_REGION_MAP.get)
     df_area = df_area[[const.DATE, const.AREA, const.REGION,
                        const.CASES, const.NEW_CASES]]
     filename = 'csa-ts.csv'
     df_area.to_csv(os.path.join(DIR_ARCGIS_UPLOAD, filename), index=False)
     if append_date is not None:
-        df_area = df_area[[const.DATE]>=pd.to_datetime(append_date)]
+        df_area = df_area[df_area[const.DATE]>=datetime_input(append_date)]
         # Correct for ArcGIS append timezone change
         df_area[const.DATE] = df_area[const.DATE].apply(lambda x: x + tz_offset)
         df_area.to_csv(os.path.join(DIR_ARCGIS_APPEND, filename), index=False)
@@ -56,7 +67,7 @@ def arcgis_aggregate(df_aggregate, append_date=None):
     df_aggregate.to_csv(os.path.join(DIR_ARCGIS_UPLOAD, filename), index=False)
     if append_date is not None:
         df_aggregate = df_aggregate[
-            df_aggregate[const.DATE]>=pd.to_datetime(append_date)
+            df_aggregate[const.DATE]>=datetime_input(append_date)
         ].copy()
         df_aggregate[const.DATE] = df_aggregate[const.DATE].apply(
             lambda x: x+tz_offset
@@ -88,8 +99,13 @@ def export_time_series(ts_dict):
         ts_dict[key].to_csv(os.path.join(DIR_TS, filename), index=False)
 
 
-def publish(date=None):
-    export_time_series(ts_dict := update_ts())
+def publish(date=None, use_cache=False):
+    if use_cache:
+        ts_dict = generate_all_ts()
+    else:
+        export_time_series(ts_dict := update_ts())
+    if date is None:
+        date = ts_dict[const.AGGREGATE][const.DATE].max()
     arcgis_live_map(ts_dict[const.AREA])
     arcgis_ts(ts_dict[const.AREA], date)
     arcgis_aggregate(ts_dict[const.AGGREGATE], date)

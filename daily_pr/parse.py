@@ -4,7 +4,7 @@
 
 import datetime as dt
 import re
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, Tuple
 
 import bs4
 
@@ -23,6 +23,8 @@ NUMBERS_AS_WORDS = {
     'nine': 9,
 }
 
+PATTERN_NUMBERS = '[\d,]+'
+
 RE_DATE = re.compile('[A-Z][a-z]+ \d{2}, 20\d{2}')
 
 RE_NEW_DEATHS_CASES_NORMAL = re.compile(
@@ -33,13 +35,6 @@ RE_NEW_DEATHS_CASES_AUTO = re.compile(
 )
 
 RE_UNDER_INVESTIGATION = re.compile('Under Investigation')
-
-HEADER_CASE_COUNT = re.compile(
-    'Laboratory Confirmed[^\d]+([\d,]+).*')
-HEADER_DEATH = re.compile('Deaths\s+([\d,]+)')
-ENTRY_BY_DEPT = re.compile(
-    '(Los Angeles County \(excl\. LB and Pas\)|{}|{})[\s-]*(\d+)'
-    .format(const.hd.LONG_BEACH, const.hd.PASADENA))
 
 LAC_ONLY = '\(Los Angeles County Cases Only-excl LB and Pas\)'
 
@@ -66,16 +61,18 @@ CORR_FACILITY_RECORDED = dt.date(2020, 5, 14)
 
 TOTAL_HOSPITALIZATIONS = 'Hospitalized (Ever)'
 
+RE_HD = re.compile(
+    f'Los\s+Angeles\s+County\s+\(excl\.\s+LB\s+and\s+Pas\).+?(?P<lac>{PATTERN_NUMBERS}).+'
+    f'Long\s+Beach.+?(?P<lb>{PATTERN_NUMBERS}).+'
+    f'Pasadena.+?(?P<pas>{PATTERN_NUMBERS})'
+)
+
 
 def _str_to_int(number: str) -> int:
     """Parses a string to an integer with safegaurds for commas in numerical
         representation.
     """
     return int(number.replace(',', ''))
-
-
-def _date_to_tuple(date_: dt.date) -> Tuple[int, int, int]:
-    return date_.year, date_.month, date_.day
 
 
 def _get_date(pr_html: bs4.BeautifulSoup) -> dt.date:
@@ -198,65 +195,6 @@ def _parse_list_entries_general(
             result[name] = _str_to_int(stat)
 
     return result
-
-
-def _parse_total_by_dept_general(
-        daily_pr: bs4.Tag, header_pattern: re.Pattern) -> Dict[str, int]:
-    """Generalized parsing when a header has a total statistic followed by a
-    per public health department breakdown.
-
-    See parse_cases and parse_deaths for examples.
-    """
-
-    result = _parse_list_entries_general(
-        _isolate_html_general(daily_pr, header_pattern, True), ENTRY_BY_DEPT
-    )
-    result[const.hd.LOS_ANGELES_COUNTY] = result.pop(
-        'Los Angeles County (excl. LB and Pas)')
-    return result
-
-
-def _parse_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
-    """Parses the total COVID-19 cases in Los Angeles County,
-    including Long Beach and Pasadena.
-
-    SAMPLE:
-    Laboratory Confirmed Cases -- 44988 Total Cases*
-
-        Los Angeles County (excl. LB and Pas) -- 42604
-        Long Beach -- 1553
-        Pasadena -- 831
-    RETURNS:
-    {
-        "Total": 44988,
-        "Los Angeles County (excl. LB and Pas)": 42604,
-        "Long Beach": 1553,
-        "Pasadena": 831
-    }
-    """
-
-    return _parse_total_by_dept_general(daily_pr, HEADER_CASE_COUNT)
-
-
-def _parse_deaths(daily_pr: bs4.Tag) -> Dict[str, int]:
-    """Parses the total COVID-19 deaths from Los Angeles County,
-    including Long Beach and Pasadena.
-
-    SAMPLE:
-    Deaths 2104
-        Los Angeles County (excl. LB and Pas) 1953
-        Long Beach 71
-        Pasadena 80
-    RETURNS:
-    {
-        "Total": 2104,
-        "Los Angeles County (excl. LB and Pas)": 1953,
-        "Long Beach": 71,
-        "Pasadena": 80
-    }
-    """
-
-    return _parse_total_by_dept_general(daily_pr, HEADER_DEATH)
 
 
 def _parse_hospital(daily_pr: bs4.Tag) -> Dict[str, int]:
@@ -401,16 +339,35 @@ def _parse_area(daily_pr: bs4.Tag) -> Dict[str, int]:
     return tuple(area_extracted)
 
 
+def _parse_hd_cases_deaths(daily_pr: bs4.Tag):
+    cases_find, deaths_find = [
+        x for x in RE_HD.finditer(daily_pr.get_text())
+    ]
+    return {
+        const.CASES: {
+            const.hd.LOS_ANGELES_COUNTY: _str_to_int(cases_find.group('lac')),
+            const.hd.LONG_BEACH: _str_to_int(cases_find.group('lb')),
+            const.hd.PASADENA: _str_to_int(cases_find.group('pas')),
+        },
+        const.DEATHS: {
+            const.hd.LOS_ANGELES_COUNTY: _str_to_int(deaths_find.group('lac')),
+            const.hd.LONG_BEACH: _str_to_int(deaths_find.group('lb')),
+            const.hd.PASADENA: _str_to_int(deaths_find.group('pas')),
+        },
+    }
+
+
 def parse_pr(daily_pr: bs4.Tag) -> Dict[str, Any]:
     """Parses each section of the daily COVID-19 report and places everything
         in a single object.
     """
 
     new_cases, new_deaths = _get_new_cases_deaths(daily_pr)
+    hd_cases_deaths = _parse_hd_cases_deaths(daily_pr)
     return {
         const.DATE: _get_date(daily_pr),
-        const.CASES: _parse_cases(daily_pr),
-        const.DEATHS: _parse_deaths(daily_pr),
+        const.CASES: hd_cases_deaths[const.CASES],
+        const.DEATHS: hd_cases_deaths[const.DEATHS],
         const.HOSPITALIZATIONS:
             _parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS],
         const.NEW_CASES: new_cases,
@@ -432,10 +389,12 @@ if __name__ == "__main__":
     ]
     auto_reporting = [
         '2020-10-04', '2020-10-05', '2020-10-11', '2020-10-18',
-        '2020-10-25', '2020-11-01', '2020-11-08', '2020-11-11', 
+        '2020-10-25', '2020-11-01', '2020-11-08', '2020-11-11',
         '2020-11-15', '2020-11-26', '2020-11-29', '2020-12-06',
     ]
     hard_code_cases_dates = ['2020-07-14', '2020-11-23', '2020-12-04']
+    death_count_wrong = ['2020-08-15', '2020-08-16', '2020-08-17', '2020-08-18',
+                         '2020-08-19', '2020-08-20', '2020-08-21']
 
     # debug_raw_pr = tuple([fetch_press_release(x)
     #                       for x in lacph_prid.DAILY_STATS])

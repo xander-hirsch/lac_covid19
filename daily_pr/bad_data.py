@@ -5,8 +5,10 @@ import lac_covid19.const as const
 SUBSTITUE_SORUCE = {
     '2020-04-16': ('Mmale', 'Male'),
     '2020-04-17': ('Mmale', 'Male'),
-    '2020-07-23': ('CCity of Agoura Hills', 'City of Agoura Hills'),
-    '2020-10-06': ('City of City of Agoura Hills', 'City of Agoura Hills'),
+    '2020-07-23': ('CCity\s+of\s+Agoura\s+Hills', 'City of Agoura Hills'),
+    '2020-08-07': ('CCity\s+of\s+Agoura\s+Hills', 'City of Agoura Hills'),
+    '2020-10-06': ('City\s+of\s+City\s+of\s+Agoura\s+Hills',
+                   'City of Agoura Hills'),
 }
 
 _unic_val_verde = 'Unincorporated - Val Verde'
