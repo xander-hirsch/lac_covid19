@@ -1,4 +1,4 @@
-Date,Cases,New Cases,"New cases, 7-day avg","New cases, 7-day avg per 100k",Deaths,New Deaths,"New deaths, 7-day avg","New deaths, 7-day avg per 100k",Hospitalizations,New hospitalizations,"New hospitalizations, 7-day avg"
+Date,Cases,New cases,"New cases, 7-day avg","New cases, 7-day avg per 100k",Deaths,New deaths,"New deaths, 7-day avg","New deaths, 7-day avg per 100k",Hospitalizations,New hospitalizations,"New hospitalizations, 7-day avg"
 2020-03-30,2474,342,,,44,7,,,492,,
 2020-03-31,3011,548,,,54,10,,,594,102,
 2020-04-01,3518,513,,,65,11,,,733,139,
@@ -260,3 +260,4 @@ Date,Cases,New Cases,"New cases, 7-day avg","New cases, 7-day avg per 100k",Deat
 2020-12-13,525486,12731,10959.6,106.82,8279,29,55.6,0.5416,30989,84,217.6
 2020-12-14,532730,7344,10853.6,105.78,8345,48,58.6,0.5709,31110,121,222.3
 2020-12-15,543769,11194,11231.7,109.47,8431,86,61.7,0.6015,31110,0,202.1
+2020-12-16,566005,22422,13114.4,127.82,8568,138,70.7,0.6892,31759,649,229.9

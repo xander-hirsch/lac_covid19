@@ -1,4 +1,4 @@
-Date,Region,Cases,New Cases,"New cases, 14-day avg",Cases per 100k,"New cases, 14-day avg per 100k"
+Date,Region,Cases,New cases,"New cases, 14-day avg",Cases per 100k,"New cases, 14-day avg per 100k"
 2020-03-30,Antelope Valley,36,,,9.1,
 2020-03-30,San Fernando,660,,,29.4,
 2020-03-30,San Gabriel,116,,,6.4,
@@ -2063,3 +2063,11 @@ Date,Region,Cases,New Cases,"New cases, 14-day avg",Cases per 100k,"New cases, 1
 2020-12-15,South,63637,1255,1060.3,6056.6,100.91
 2020-12-15,East,94133,1882,1698.6,7126.2,128.59
 2020-12-15,South Bay,68734,1542,1208.6,4379.2,77.01
+2020-12-16,Antelope Valley,24762,822,563.5,6233.0,141.84
+2020-12-16,San Fernando,132296,5323,2466.3,5884.2,109.7
+2020-12-16,San Gabriel,91120,2898,1750.8,5021.9,96.49
+2020-12-16,Metro,54186,2534,993.8,4546.7,83.39
+2020-12-16,West,18308,640,333.1,2743.9,49.92
+2020-12-16,South,66409,2772,1221.4,6320.5,116.24
+2020-12-16,East,98047,3914,1909.9,7422.5,144.58
+2020-12-16,South Bay,71705,2971,1342.8,4568.5,85.55

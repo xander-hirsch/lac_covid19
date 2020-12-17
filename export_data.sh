@@ -1,13 +1,11 @@
 #!/bin/bash
 
-DIR_DATA='./append-data'
-FOLDER_DATA_EXPORT='lac-covid19-data-append'
-FILE_DATA_EXPORT="$FOLDER_DATA_EXPORT.zip"
+DIR_DATA='./export'
+ZIP_FILENAME='lac-covid19-data'
+FILE_DATA_EXPORT="$ZIP_FILENAME.zip"
 
 cd $DIR_DATA
 
-cp ../docs/{current,deltas}/*.csv .
-
-zip $FILE_DATA_EXPORT *.csv \
+zip -r $FILE_DATA_EXPORT . \
     && mv $FILE_DATA_EXPORT $W10_DATA \
-    && rm -rf "$W10_DATA/$FOLDER_DATA_EXPORT"
+    && rm -rf "$W10_DATA/$ZIP_FILENAME"

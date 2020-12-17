@@ -52,7 +52,7 @@ def arcgis_ts(df_area, append_date=None):
 
 
 def arcgis_aggregate(df_aggregate, append_date=None):
-    filename = 'aggregate.csv'
+    filename = 'aggregate-ts.csv'
     df_aggregate.to_csv(os.path.join(DIR_ARCGIS_UPLOAD, filename), index=False)
     if append_date is not None:
         df_aggregate = df_aggregate[

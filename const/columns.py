@@ -4,19 +4,16 @@ DATE = 'Date'
 CASES = 'Cases'
 DEATHS = 'Deaths'
 HOSPITALIZATIONS = 'Hospitalizations'
-NEW_HOSPITALIZATIONS = f'New {HOSPITALIZATIONS.lower()}'
-TEST_RESULTS = 'Test Results'
-PERCENT_POSITIVE_TESTS = '% Positive Tests'
 AGGREGATE = 'Aggregate'
 
-_NEW = 'New'
-NEW_CASES = ' '.join((_NEW, CASES))
-NEW_DEATHS = ' '.join((_NEW, DEATHS))
+NEW_CASES, NEW_DEATHS, NEW_HOSPITALIZATIONS = [
+    f'New {x.lower()}' for x in (CASES, DEATHS, HOSPITALIZATIONS)
+]
 
 HEALTH_DPET = 'Health dept'
 
 NEW_CASES_7_DAY_AVG, NEW_DEATHS_7_DAY_AVG, NEW_HOSPITALIZATIONS_7_DAY_AVG = [
-    f'New {x}, 7-day avg' for x in ('cases', 'deaths', 'hospitalizations')]
+    f'{x}, 7-day avg' for x in (NEW_CASES, NEW_DEATHS, NEW_HOSPITALIZATIONS)]
 CASES_PER_CAPITA, DEATHS_PER_CAPITA, NEW_CASES_7_DAY_AVG_PER_CAPITA, NEW_DEATHS_7_DAY_AVG_PER_CAPITA = [
     f'{x} per 100k'
     for x in (CASES, DEATHS, NEW_CASES_7_DAY_AVG, NEW_DEATHS_7_DAY_AVG)
@@ -40,10 +37,6 @@ _RATE = '{} Rate'
 CASE_RATE = _RATE.format('Case')
 DEATH_RATE = _RATE.format('Death')
 
-_DT_COL = 'dt[{}]'
-DT_CASES = _DT_COL.format(CASES)
-DT_CASE_RATE = _DT_COL.format(CASE_RATE)
-
 REGION = 'Region'
 SPA = 'Service Planning Area'
 AREA = 'Area'
@@ -57,17 +50,12 @@ RESID_CASES = 'Resident {}'.format(CASES)
 
 OBJECTID = 'ObjectID'
 
-_CHANGE_IN = 'Change in {}'
-CHANGE_DATE = _CHANGE_IN.format(DATE)
-CHANGE_CASES = _CHANGE_IN.format(CASES)
-CHANGE_CASE_RATE = _CHANGE_IN.format(CASE_RATE)
-
 
 def stat_by_group(stat: str, group: str) -> str:
     """Provides consistant naming to statistic descriptors"""
-    return '{} by {}'.format(stat, group)
+    return f'{stat} by {group}'
 
-CASES_BY_RACE = stat_by_group(CASES, RACE)
+CASES_BY_AGE, CASES_BY_GENDER, CASES_BY_RACE = [
+    stat_by_group(CASES, x) for x in (AGE_GROUP, GENDER, RACE)
+]
 DEATHS_BY_RACE = stat_by_group(DEATHS, RACE)
-CASES_BY_AGE = stat_by_group(CASES, AGE_GROUP)
-CASES_BY_GENDER = stat_by_group(CASES, GENDER)
