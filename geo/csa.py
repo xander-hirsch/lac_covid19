@@ -8,7 +8,7 @@ from lac_covid19.const.groups import (SPA_AV, SPA_SF, SPA_SG, SPA_M,
 
 from lac_covid19.const.columns import AREA, REGION, OBJECTID
 from lac_covid19.const import JSON_COMPACT
-from lac_covid19.geo import DIR_DATA
+from lac_covid19.geo.paths import DIR_DATA
 
 _CSA_REGION_MAP_JSON = os.path.join(DIR_DATA, 'csa-region-map.json')
 

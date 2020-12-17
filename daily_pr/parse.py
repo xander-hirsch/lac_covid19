@@ -41,9 +41,6 @@ LAC_ONLY = '\(Los Angeles County Cases Only-excl LB and Pas\)'
 HEADER_AGE_GROUP = re.compile('Age Group {}'.format(LAC_ONLY))
 ENTRY_AGE = re.compile('(\d+ to \d+|over \d+)\s*[:\-\s]+(\d+)')
 
-HEADER_HOSPITAL = re.compile('Hospitalization')
-ENTRY_HOSPITAL = re.compile('([A-Z][A-Za-z() ]+[)a-z])\s*(\d+)')
-
 HEADER_GENDER = re.compile('Gender {}'.format(LAC_ONLY))
 ENTRY_GENDER = re.compile(f'({const.MALE}|{const.FEMALE}|{const.OTHER})\s*[:\-\s]+(\d+)')
 
@@ -59,7 +56,10 @@ FORMAT_START_HOSPITAL_NESTED = dt.date(2020, 4, 4)
 FORMAT_START_AGE_NESTED = dt.date(2020, 4, 4)
 CORR_FACILITY_RECORDED = dt.date(2020, 5, 14)
 
-TOTAL_HOSPITALIZATIONS = 'Hospitalized (Ever)'
+
+RE_HOSPITALIZATIONS = re.compile(
+    f'Hospitalized\s+\(Ever\).+?({PATTERN_NUMBERS})'
+)
 
 RE_HD = re.compile(
     f'Los\s+Angeles\s+County\s+\(excl\.\s+LB\s+and\s+Pas\).+?(?P<lac>{PATTERN_NUMBERS}).+'
@@ -107,6 +107,30 @@ def _get_new_cases_deaths(pr_html: bs4.BeautifulSoup) -> Tuple[int, int]:
     return cases, deaths
 
 
+def _parse_hd_cases_deaths(daily_pr: bs4.Tag):
+    cases_find, deaths_find = [
+        x for x in RE_HD.finditer(daily_pr.get_text())
+    ]
+    return {
+        const.CASES: {
+            const.hd.LOS_ANGELES_COUNTY: _str_to_int(cases_find.group('lac')),
+            const.hd.LONG_BEACH: _str_to_int(cases_find.group('lb')),
+            const.hd.PASADENA: _str_to_int(cases_find.group('pas')),
+        },
+        const.DEATHS: {
+            const.hd.LOS_ANGELES_COUNTY: _str_to_int(deaths_find.group('lac')),
+            const.hd.LONG_BEACH: _str_to_int(deaths_find.group('lb')),
+            const.hd.PASADENA: _str_to_int(deaths_find.group('pas')),
+        },
+    }
+
+
+def _parse_hospitalizations(daily_pr: bs4.Tag):
+    return _str_to_int(
+        RE_HOSPITALIZATIONS.search(daily_pr.get_text(strip=True)).group(1)
+    )
+
+
 def _isolate_html_general(
         daily_pr: bs4.Tag, header_pattern: re.Pattern, nested: bool) -> str:
     """Narrows down the section of HTML which must be parsed for data
@@ -139,11 +163,6 @@ def _isolate_html_general(
 def _isolate_html_age_group(daily_pr: bs4.Tag) -> str:
     nested = _get_date(daily_pr) >= FORMAT_START_AGE_NESTED
     return _isolate_html_general(daily_pr, HEADER_AGE_GROUP, nested)
-
-
-def _isolate_html_hospital(daily_pr: bs4.Tag) -> str:
-    nested = _get_date(daily_pr) >= FORMAT_START_HOSPITAL_NESTED
-    return _isolate_html_general(daily_pr, HEADER_HOSPITAL, nested)
 
 
 def _isolate_html_area(daily_pr: bs4.Tag) -> str:
@@ -195,22 +214,6 @@ def _parse_list_entries_general(
             result[name] = _str_to_int(stat)
 
     return result
-
-
-def _parse_hospital(daily_pr: bs4.Tag) -> Dict[str, int]:
-    """Parses the hospitalizations due to COVID-19.
-
-    SAMPLE:
-    Hospitalization
-        Hospitalized (Ever) 6177
-    RETURNS:
-    {
-        "Hospitalized (Ever)": 6177
-    }
-    """
-
-    return _parse_list_entries_general(_isolate_html_hospital(daily_pr),
-                                       ENTRY_HOSPITAL)
 
 
 def _parse_age_cases(daily_pr: bs4.Tag) -> Dict[str, int]:
@@ -339,22 +342,6 @@ def _parse_area(daily_pr: bs4.Tag) -> Dict[str, int]:
     return tuple(area_extracted)
 
 
-def _parse_hd_cases_deaths(daily_pr: bs4.Tag):
-    cases_find, deaths_find = [
-        x for x in RE_HD.finditer(daily_pr.get_text())
-    ]
-    return {
-        const.CASES: {
-            const.hd.LOS_ANGELES_COUNTY: _str_to_int(cases_find.group('lac')),
-            const.hd.LONG_BEACH: _str_to_int(cases_find.group('lb')),
-            const.hd.PASADENA: _str_to_int(cases_find.group('pas')),
-        },
-        const.DEATHS: {
-            const.hd.LOS_ANGELES_COUNTY: _str_to_int(deaths_find.group('lac')),
-            const.hd.LONG_BEACH: _str_to_int(deaths_find.group('lb')),
-            const.hd.PASADENA: _str_to_int(deaths_find.group('pas')),
-        },
-    }
 
 
 def parse_pr(daily_pr: bs4.Tag) -> Dict[str, Any]:
@@ -366,12 +353,11 @@ def parse_pr(daily_pr: bs4.Tag) -> Dict[str, Any]:
     hd_cases_deaths = _parse_hd_cases_deaths(daily_pr)
     return {
         const.DATE: _get_date(daily_pr),
-        const.CASES: hd_cases_deaths[const.CASES],
-        const.DEATHS: hd_cases_deaths[const.DEATHS],
-        const.HOSPITALIZATIONS:
-            _parse_hospital(daily_pr)[TOTAL_HOSPITALIZATIONS],
         const.NEW_CASES: new_cases,
         const.NEW_DEATHS: new_deaths,
+        const.HOSPITALIZATIONS: _parse_hospitalizations(daily_pr),
+        const.CASES: hd_cases_deaths[const.CASES],
+        const.DEATHS: hd_cases_deaths[const.DEATHS],
         const.CASES_BY_AGE: _parse_age_cases(daily_pr),
         const.CASES_BY_GENDER: _parse_gender(daily_pr),
         const.CASES_BY_RACE: _parse_race_cases(daily_pr),
@@ -395,8 +381,3 @@ if __name__ == "__main__":
     hard_code_cases_dates = ['2020-07-14', '2020-11-23', '2020-12-04']
     death_count_wrong = ['2020-08-15', '2020-08-16', '2020-08-17', '2020-08-18',
                          '2020-08-19', '2020-08-20', '2020-08-21']
-
-    # debug_raw_pr = tuple([fetch_press_release(x)
-    #                       for x in lacph_prid.DAILY_STATS])
-    # today_parse = _parse_entire_day(debug_raw_pr[-1])
-    # another_parse = _parse_entire_day(debug_raw_pr[12])
