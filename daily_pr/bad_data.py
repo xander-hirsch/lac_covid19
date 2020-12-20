@@ -1,8 +1,15 @@
+import datetime as dt
 import pandas as pd
 
 import lac_covid19.const as const
 
 SUBSTITUE_SORUCE = {
+    '2020-03-30': ('over\s+65\s+--467', 'over 65 --467 Under Investigation'),
+    '2020-03-31': ('Unknown', 'Under Investigation'),
+    '2020-04-01': ('Unknown', 'Under Investigation'),
+    '2020-04-02': ('Unknown', 'Under Investigation'),
+    '2020-04-03': ('Unknown', 'Under Investigation'),
+    '2020-04-04': ('Unknown', 'Under Investigation'),
     '2020-04-16': ('Mmale', 'Male'),
     '2020-04-17': ('Mmale', 'Male'),
     '2020-07-23': ('CCity\s+of\s+Agoura\s+Hills', 'City of Agoura Hills'),
@@ -10,6 +17,8 @@ SUBSTITUE_SORUCE = {
     '2020-10-06': ('City\s+of\s+City\s+of\s+Agoura\s+Hills',
                    'City of Agoura Hills'),
 }
+
+CORR_FACILITY_RECORDED = dt.date(2020, 5, 14)
 
 _unic_val_verde = 'Unincorporated - Val Verde'
 _city_of_vernon = 'City of Vernon'

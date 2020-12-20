@@ -98,6 +98,7 @@ CSA_BLANK = (
                          'ShapeSTArea', 'ShapeSTLength'])
     .rename(columns={'OBJECTID': OBJECTID, 'LABEL': AREA}).copy()
 )
+CSA_BLANK[AREA] = CSA_BLANK[AREA].convert_dtypes()
 
 
 if __name__ == "__main__":

@@ -43,6 +43,17 @@ AREA = 'Area'
 POPULATION = 'Population'
 CF_OUTBREAK = 'CF Outbreak'
 
+AREA_TOTAL, AREA_RECENT = [f'{AREA} {x}' for x in ('Total', 'Recent')]
+RESIDENTIAL = 'Residential'
+NON_RESIDENTIAL = 'Non Residential'
+HOMELESS = 'Homeless'
+EDUCATION = 'Education'
+
+STREET = 'Street'
+CITY = 'City'
+STATE = 'State'
+ZIP = 'Zip'
+
 RESID_SETTING = 'Residential Setting'
 ADDRESS = 'Address'
 STAFF_CASES = 'Staff {}'.format(CASES)

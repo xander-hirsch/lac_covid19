@@ -11,8 +11,8 @@ def _print_header(date, padding):
         '-'*(2*padding+14)
     ])
 
-def query_date(date, json_cache=True):
-    query = access.query_date(date, json_cache)
+def query_date(date, json_cache=True, html_cache=True):
+    query = access.query_date(date, json_cache, html_cache)
     top = '\n'.join([
         _print_header(query[DATE], 5),
         f'{query[NEW_CASES]:,} {NEW_CASES} / {query[NEW_DEATHS]} {NEW_DEATHS}',

@@ -53,7 +53,7 @@ def load_html(date, cache=True):
     if date in SUBSTITUE_SORUCE:
         raw_html = re.sub(
             SUBSTITUE_SORUCE[date][0], SUBSTITUE_SORUCE[date][1], raw_html)
-    return bs4.BeautifulSoup(raw_html, 'html.parser')
+    return bs4.BeautifulSoup(raw_html, 'html.parser').get_text()
 
 
 def _write_json(pr_dict):

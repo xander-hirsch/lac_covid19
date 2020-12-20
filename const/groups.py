@@ -13,8 +13,11 @@ AGE_50_64 = _AGE_RANGE.format(50, 64)
 AGE_65_79 = _AGE_RANGE.format(65, 79)
 AGE_OVER_80 = _AGE_OVER.format(80)
 
+OTHER = 'Other'
+
 MALE = 'Male'
 FEMALE = 'Female'
+GENDER_GROUP = (MALE, FEMALE, OTHER)
 
 RACE_AI_AN = 'American Indian/Alaska Native'
 RACE_ASIAN = 'Asian'
@@ -22,8 +25,9 @@ RACE_BLACK = 'Black'
 RACE_HL = 'Hispanic/Latino'
 RACE_NH_PI = 'Native Hawaiian/Pacific Islander'
 RACE_WHITE = 'White'
+RACE_GROUP = (RACE_AI_AN, RACE_ASIAN, RACE_BLACK, RACE_HL,
+              RACE_NH_PI, RACE_WHITE, OTHER)
 
-OTHER = 'Other'
 UNDER_INVESTIGATION = 'Under Investigation'
 
 LOS_ANGELES = 'Los Angeles'
