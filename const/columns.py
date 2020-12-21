@@ -61,6 +61,13 @@ RESID_CASES = 'Resident {}'.format(CASES)
 
 OBJECTID = 'ObjectID'
 
+COORDINATES = 'Coordinates'
+LATITUDE = 'Latitude'
+LONGITUDE = 'Longitude'
+
+SETTING = 'Setting'
+CATEGORY = 'Category'
+
 
 def stat_by_group(stat: str, group: str) -> str:
     """Provides consistant naming to statistic descriptors"""

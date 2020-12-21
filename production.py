@@ -1,12 +1,16 @@
 import os.path
+import re
 
 import pandas as pd
 
 import lac_covid19.const as const
 from lac_covid19.daily_pr.update import query_date, update_ts
+from lac_covid19.current_stats.scrape import query_live
+from lac_covid19.current_stats.citations import CITATIONS
 from lac_covid19.population import CSA as CSA_POPULATION
 from lac_covid19.daily_pr.time_series import generate_all_ts
 from lac_covid19.geo.csa import CSA_BLANK, CSA_REGION_MAP
+import lac_covid19.geo.geocoder as geocoder
 
 tz_offset = pd.to_timedelta(8, unit='hours')
 
@@ -14,7 +18,7 @@ DIR_DOCS, DIR_EXPORT = [os.path.join(os.path.dirname(__file__), x)
                         for x in ('docs', 'export')]
 DIR_ARCGIS_UPLOAD, DIR_ARCGIS_APPEND = [os.path.join(DIR_EXPORT, f'arcgis-{x}')
                                         for x in ('upload', 'append')]
-DIR_TS = os.path.join(DIR_DOCS, 'time-series')
+DIR_TS, DIR_LIVE = [os.path.join(DIR_DOCS, x) for x in ('time-series', 'live')]
 
 
 def datetime_input(obj):
@@ -93,17 +97,61 @@ def arcgis_age_snapshot(df_age):
     ].to_csv(os.path.join(DIR_ARCGIS_UPLOAD, 'age-groups-snapshot.csv'))
 
 
+def apply_coordinates(df):
+    df = df.copy()
+    df[const.COORDINATES] = df[const.ADDRESS].apply(geocoder.lookup_address)
+    df[const.LATITUDE] = df[const.COORDINATES].apply(lambda x: x[0])
+    df[const.LONGITUDE] = df[const.COORDINATES].apply(lambda x: x[1])
+    return df.drop(columns=const.COORDINATES)
+
+
+def arcgis_live_non_res(df_non_res):
+    apply_coordinates(df_non_res).to_csv(
+        os.path.join(DIR_ARCGIS_UPLOAD, 'non-residential-outbreaks.csv'),
+        index=False)
+
+
+def arcgis_live_edu(df_education):
+    df_education = df_education[df_education[const.ADDRESS]!='Los Angeles, CA']
+    apply_coordinates(df_education).to_csv(
+        os.path.join(DIR_ARCGIS_UPLOAD, 'education-outbreaks.csv'), index=False)
+
+
+def arcgis_citations():
+    df = (
+        CITATIONS.drop_duplicates('Name')
+        .rename(columns={const.DATE: 'Last Citation'}).copy()
+    )
+    df['Category'] = df['Description'].apply(
+        lambda x: re.match('[^(]+', x).group(0).rstrip())
+    apply_coordinates(df).to_csv(
+        os.path.join(DIR_ARCGIS_UPLOAD, 'citations.csv'), index=False
+    )
+
+
 def export_time_series(ts_dict):
     for key in ts_dict:
         filename = f"{key.lower().replace('/', '-')}-ts.csv"
         ts_dict[key].to_csv(os.path.join(DIR_TS, filename), index=False)
 
 
-def publish(date=None, use_cache=False):
-    if use_cache:
+def export_live(live_dict):
+    for key in live_dict:
+        filename = f"{key.lower().replace(' ', '-')}-live.csv"
+        live_dict[key].to_csv(os.path.join(DIR_LIVE, filename), index=False)
+
+
+def publish(date=None, use_ts_cache=False, use_live_cache=False):
+    export_live(live_dict := query_live(use_live_cache))
+    arcgis_live_non_res(live_dict[const.NON_RESIDENTIAL])
+    arcgis_live_edu(live_dict[const.EDUCATION])
+    arcgis_citations()
+
+    if use_ts_cache:
         ts_dict = generate_all_ts()
     else:
         export_time_series(ts_dict := update_ts())
+
     if date is None:
         date = ts_dict[const.AGGREGATE][const.DATE].max()
     arcgis_live_map(ts_dict[const.AREA])
