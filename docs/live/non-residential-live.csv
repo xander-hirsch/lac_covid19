@@ -99,6 +99,7 @@ Construction Site of Dobkin Construction,"9422 Sierra Mar Dr, Los Angeles, CA, 9
 Contessa Premium Food,"5970 Alcoa Ave, Vernon, CA, 90058",57,0
 Corn Maiden Foods,"24201 Frampton Ave, Harbor City, CA, 90710",14,0
 "Cosmetic Lab, Inc.","11933 Woodruff Ave, Downey, CA, 90241",10,0
+Costco Lancaster,"1141 W Avenue L, Lancaster, CA, 93534",10,0
 "Costco Warehouse, Culver City #479","13463 Washington Blvd, Marina Del Rey, CA, 90292",51,0
 "Costco Warehouse, Santa Clarita #447","18649 Via Princessa, Santa Clarita, CA, 91387",10,0
 "Costco Warehouse, Woodland Hills #1205","21800 Victory Blvd, Woodland Hills, CA, 91367",34,0
@@ -163,7 +164,7 @@ Goodwill Industries,"1500 W 6th St, Los Angeles, CA, 90017",7,0
 Grace Community Church,"13248 Roscoe Blvd, Sun Valley, CA, 91352",5,0
 Greystar - THEA at Metropolis Apartments,"1000 W 8th St, Los Angeles, CA, 90017",7,0
 Griffith Company Brea,"4000 Oak Grove Rd., Pasadena, CA, 91103",5,0
-Griley Airfreight,"5341 W 104th St, Los Angeles, CA, 90045",14,0
+Griley Airfreight,"5341 W 104th St, Los Angeles, CA, 90045",13,0
 "H Mart Logistics, Inc.","11966 Washington Blvd, Whittier, CA, 90606",5,0
 "HACLA, Nickerson Gardens Apartments","1590 E 114th St, Los Angeles, CA, 90059",5,0
 Hall's Culligan Water,"15580 Roxford St, Sylmar, CA, 91342",3,0
@@ -180,7 +181,7 @@ Holland Flower Market,"2000 E 27th St, Vernon, CA, 90058",13,0
 Hollander Sleep Products,"8500 Rex Rd, Pico Rivera, CA, 90660",15,0
 Hollywood Family Source Center (Volunteers of America of Los Angeles),"1075 N Western Ave, Suite 110, Los Angeles, CA, 90029",5,0
 Home Depot - Alhambra #6610,"500 S Marengo Ave, Alhambra, CA, 91803",13,0
-Home Depot - Hyde Park #1039,"1830 W Slauson Ave, Los Angeles, CA, 90047",9,0
+Home Depot - Hyde Park #1039,"1830 W Slauson Ave, Los Angeles, CA, 90047",18,0
 Home Depot - North Hollywood #6613,"11600 Sherman Way, North Hollywood, CA, 91605",12,0
 Home Depot - Panorama City #6644,"7870 Van Nuys Blvd, Panorama City, CA, 91402",12,0
 Homeboy Industries,"130 Bruno St, Los Angeles, CA, 90012",9,0
@@ -229,7 +230,7 @@ Kohl's Redondo Beach,"1799 Hawthorne Blvd, Redondo Beach, CA, 90278",10,0
 Kohl's Valencia,"24200 Valencia Blvd, Valencia, CA, 91355",6,0
 L & L Hawaiian Barbecue,"2400 Foothill Blvd, # A, La Verne, CA, 91750",5,0
 LA Airforce Base,"482 N Aviation Blvd, El Segundo, CA, 90245",3,0
-LA Apparel #3,"1020 E 59th St, Los Angeles, CA, 90001",16,0
+LA Apparel #3,"1020 E 59th St, Los Angeles, CA, 90001",17,0
 LA City Bureau of Street Lighting,"4550 Santa Monica Blvd, Los Angeles, CA, 90029",13,0
 LA City General Services Division,"2319 Dorris Pl, Los Angeles, CA, 90031",6,0
 LA City Parks - The Kleimer Building,"3900 Chevy Chase Dr, Los Angeles, CA, 90039",8,0
@@ -240,7 +241,7 @@ LA County DCFS - Lancaster,"300 E Avenue K6, Lancaster, CA, 93535",10,0
 LA County DCFS - San Dimas,"955 Overland Ct, Suite 100, San Dimas, CA, 91773",5,0
 LA County DCFS - Santa Fe Springs,"10355 Slusher Dr, Santa Fe Springs, CA, 90670",8,0
 LA County Department of Public Works (RD339),"29773 Mulholland Hwy, Agoura Hills, CA, 91301",3,0
-LA County DPSS - Metro Special 70,"2707 S Grand Ave, Los Angeles, CA, 90007",13,0
+LA County DPSS - Metro Special 70,"2707 S Grand Ave, Los Angeles, CA, 90007",14,0
 LA County DPSS - South Special,"17600 B Santa Fe Ave, East Rancho Dominguez, CA, 90221",25,0
 "LA County DPSS - Warehouse, Logistics, and Asset Management Section","13409 Carmenita Rd, Santa Fe Springs, CA, 90670",6,0
 LA County Edmund D. Edelman Children's Court,"201 Centre Plaza Dr, Monterey Park, CA, 91754",8,0
@@ -266,11 +267,11 @@ Lake Balboa Lifeguard Station,"6300 Balboa Blvd, Van Nuys, CA, 91316",3,0
 Lance Camper,"43120 Venture St, Lancaster, CA, 93535",21,0
 Langer's Deli,"704 S Alvarado St, Los Angeles, CA, 90057",11,0
 Langer's Juice Company,"16195 Stephens St, City of Industry, CA, 91745",21,0
-LAPD 77th Street Community Police Station,"7600 S Broadway, Los Angeles, CA, 90003",25,0
+LAPD 77th Street Community Police Station,"7600 S Broadway, Los Angeles, CA, 90003",29,0
 LAPD Central Community Police Station,"251 E 6th St, Los Angeles, CA, 90014",29,0
 LAPD Foothill Community Police Station,"12760 Osborne St, Pacoima, CA, 91331",10,0
-LAPD Headquarters,"100 W 1st St, Los Angeles, CA, 90012",19,0
-LAPD Newton Community Police Station,"3400 S Central Ave, Los Angeles, CA, 90011",38,0
+LAPD Headquarters,"100 W 1st St, Los Angeles, CA, 90012",22,0
+LAPD Newton Community Police Station,"3400 S Central Ave, Los Angeles, CA, 90011",46,0
 LAPD Northeast Community Police Station,"3353 N San Fernando Rd, Los Angeles, CA, 90065",7,0
 LAPD Southwest Community Police Station,"1546 W Martin Luther King Jr Blvd, Los Angeles, CA, 90062",19,0
 LAPD Topanga Community Police Station,"21501 Schoenborn St, Canoga Park, CA, 91304",4,0
@@ -305,6 +306,7 @@ McDonald's #1411,"1133 N La Brea Ave, West Hollywood, CA, 90038",7,0
 McDonald's #5213,"1185 Durfee Ave, South El Monte, CA, 91733",5,0
 McDonald's #7963,"15000 Whittier Blvd, Whittier, CA, 90603",3,0
 McDonald's #11826,"101 W Manchester Ave, Los Angeles, CA, 90003",6,0
+McDonald's #14283,"4480 E Olympic Blvd, Los Angeles, CA, 90023",13,0
 McDonald's #14473,"3868 E 3rd St, Los Angeles, CA, 90063",8,0
 McDonald's #25565,"11240 Glenoaks Blvd, Pacoima, CA, 91331",5,0
 "MCI Foods, Inc.","13013 Molette St, Santa Fe Springs, CA, 90670",18,0
@@ -313,8 +315,8 @@ MDR Fertility Pharmacy - Encino,"17071 Ventura Blvd, 100, Encino, CA, 91316",7,0
 MedReach Ambulance,"1303 Kona Dr, Compton, CA, 90220",5,0
 Mejuri,"8404 Melrose Ave, Los Angeles, CA, 90069",3,0
 Menzies Aviation,"5625 W Imperial Hwy, Los Angeles, CA, 90045",13,0
-Mercury Air Cargo Building 213,"6040 Avion Dr, Los Angeles, CA, 90045",15,0
-Mercury Air Cargo Building 216,"6041 W Imperial Hwy, Los Angeles, CA, 90045",10,0
+Mercury Air Cargo Building 213,"6040 Avion Dr, Los Angeles, CA, 90045",17,0
+Mercury Air Cargo Building 216,"6041 W Imperial Hwy, Los Angeles, CA, 90045",16,0
 "Mercury Plastics, Inc.","14825 Salt Lake Ave, City of Industry, CA, 91746",11,0
 Metro Division 13,"920 N Vignes St, Los Angeles, CA, 90012",11,0
 Metropolitan Courthouse,"1945 S Hill St, Los Angeles, CA, 90007",8,0
@@ -371,6 +373,7 @@ Pomona Police Department,"490 W Mission Blvd, Pomona, CA, 91766",13,0
 Popcornopolis LLC,"3200 E Slauson Ave, Vernon, CA, 90058",18,0
 Porto's Bakery & Cafe Burbank,"3614 W Magnolia Blvd, Burbank, CA, 91505",11,0
 "PRC Restoration, Inc.","23839 Banning Blvd, Carson, CA, 90745",14,0
+Precision Floor Covering,"1 Lmu Dr, Los Angeles, CA, 90045",11,0
 Premier Auto Credit,"6502 Van Nuys Blvd, Van Nuys, CA, 91401",8,0
 "Pro Packing, Inc.","100 Broad Ave, Wilmington, CA, 90744",4,0
 Promotional Design Concepts,"9872 Rush St, South El Monte, CA, 91733",15,0
@@ -392,6 +395,7 @@ RTI Services,"2836 Vail Ave, Commerce, CA, 90040",7,0
 Rudolph & Sletten,"3525 W 8th St, Los Angeles, CA, 90005",9,0
 S & A Property Solution,"6747 Odessa Ave, #103 , Van Nuys, CA, 91406",5,0
 Safran Passenger Solutions,"1500 Glenn Curtiss St, Carson, CA, 90746",12,0
+Salvation Army Alegria,"2737 W Sunset Blvd, Los Angeles, CA, 90026",2,3
 Salvation Army Retail Store,"1940 W Pico Blvd, Los Angeles, CA, 90006",4,0
 Sam's Club #26,"4901 Santa Anita Ave, El Monte, CA, 91731",26,0
 San Gabriel/MTS Management,"7955 San Fernando Rd, Sun Valley, CA, 91352",4,0
@@ -460,14 +464,15 @@ UCLA Campus Police (UCPD),"601 Westwood Plz, Los Angeles, CA, 90095",7,0
 UCLA Research Support Unit,"221 Westwood Plaza, Los Angeles, CA, 90095",6,0
 Universal Waste Systems,"10120 Miller Way, South Gate, CA, 90280",11,0
 "UPS - Boyle Trailer Shop, Vernon","4925 S Boyle Ave, Vernon, CA, 90058",4,0
-USC Facilities Management Services,"3434 S Grand Ave, Los Angeles, CA, 90089",8,0
+Us Airforce Plant 42 Fire Station,"2501 E Avenue S, Palmdale, CA, 93550",9,0
+USC Facilities Management Services,"3434 S Grand Ave, Los Angeles, CA, 90089",10,0
 USC Hotel,"1031 W 34th St, Los Angeles, CA, 90089",6,1
 USPS - Carson Annex,"24760 Main St, Carson, CA, 90745",14,0
 VACCO Industries,"10350 Vacco St, South El Monte, CA, 91733",14,0
 Valencia Management Group,"27644 Newhall Ranch Rd, Unit #45, Valencia, CA, 91355",5,0
 Valencia Water Treatment Facility Construction Site,"28185 The Old Rd, Valencia, CA, 91355",11,0
 Vallarta Supermarket #08,"9136 Sepulveda Blvd, North Hills, CA, 91343",4,0
-Vallarta Supermarket #25,"3425 Whittier Blvd, Los Angeles, CA, 90023",5,0
+Vallarta Supermarket #25,"3425 Whittier Blvd, Los Angeles, CA, 90023",12,0
 Vallarta Supermarket #26,"9011 Woodman Ave, Arleta, CA, 91331",8,0
 Vallarta Supermarkets Corporate Office,"10147 San Fernando Rd, Pacoima, CA, 91331",16,0
 Vallereinis.Com (Valle Reinis Builders),"2 Latimer Rd, Santa Monica, CA, 90402",4,0
@@ -481,7 +486,7 @@ Vision Produce,"1651 Bay St, Los Angeles, CA, 90021",4,0
 Vista Sotheby's International Realty,"16 Malaga Cove Plz, Palos Verdes Estates, CA, 90274",4,0
 Volvo Santa Monica,"1631 Santa Monica Blvd, Santa Monica, CA, 90404",8,0
 Warner Bros Television - Lucifer,"4000 Warner Blvd, Bldg 28/ Suite 1300, Burbank, CA, 91522",13,0
-Warner Bros Television - The Kominsky Method,"4000 Warner Blvd, Burbank, CA, 91522",5,0
+Warner Bros Television - The Kominsky Method,"4000 Warner Blvd, Burbank, CA, 91522",10,0
 Warner Bros Television - Young Sheldon,"4000 Warner Blvd, Building 191, Burbank, CA, 91522",9,0
 Waste Management - Azusa Transfer Station and Recycling Center,"1501 W Gladstone St, Azusa, CA, 91702",7,0
 WebCor Builders,"945 W 8th St, Los Angeles, CA, 90017",15,0
@@ -489,7 +494,7 @@ WebCor General Contractor,"9000 W 3rd St, Los Angeles, CA, 90048",31,0
 Wells Fargo Bank - El Monte,"9000 Flair Dr, El Monte, CA, 91731",16,0
 Western Bagel,"11628 Santa Monica Blvd, Los Angeles, CA, 90025",4,0
 Westlake Financial Services,"29851 Agoura Rd, Agoura Hills, CA, 91301",4,0
-"Whole Foods Market, 23rd & Wilshire Blvd","2201 Wilshire Blvd, Santa Monica, CA, 90403",11,0
+"Whole Foods Market, 23rd & Wilshire Blvd","2201 Wilshire Blvd, Santa Monica, CA, 90403",12,0
 "Whole Foods Market, Sherman Oaks","14311 Ventura Blvd, Sherman Oaks, CA, 91423",18,0
 Woodpecker Cabinets,"21512 Nordhoff St, Chatsworth, CA, 91311",5,0
 "Woodward HRT, Inc.","25200 Rye Canyon Rd, Santa Clarita, CA, 91355",24,0

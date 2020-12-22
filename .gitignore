@@ -13,7 +13,7 @@ export/*
 !export/arcgis-append/README.md
 !export/arcgis-upload/README.md
 
-geo/data/*.*json
+geo/data/*.geojson
 
 lacdph_dashboard/
 

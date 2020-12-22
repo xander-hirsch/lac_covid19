@@ -49,7 +49,7 @@ def arcgis_live_map(df_area):
     ].to_csv(os.path.join(DIR_ARCGIS_APPEND, f'{filename}.csv'), index=False)
 
 
-def arcgis_ts(df_area, append_date=None):
+def arcgis_csa_ts(df_area, append_date=None):
     df_area = df_area.loc[
         df_area[const.AREA] != const.LOS_ANGELES,
         [const.DATE, const.AREA, const.CASES, const.NEW_CASES]
@@ -66,7 +66,21 @@ def arcgis_ts(df_area, append_date=None):
         df_area.to_csv(os.path.join(DIR_ARCGIS_APPEND, filename), index=False)
 
 
-def arcgis_aggregate(df_aggregate, append_date=None):
+def arcgis_region_ts(df_region, append_date=None):
+    filename = 'region-ts.csv'
+    df_region.to_csv(os.path.join(DIR_ARCGIS_UPLOAD, filename), index=False)
+    if append_date is not None:
+        df_region = df_region[
+            df_region[const.DATE]>=datetime_input(append_date)
+        ].copy()
+        # Correct for ArcGIS append timezone change
+        df_region[const.DATE] = df_region[const.DATE].apply(
+            lambda x: x + tz_offset
+        )
+        df_region.to_csv(os.path.join(DIR_ARCGIS_APPEND, filename), index=False)
+
+
+def arcgis_aggregate_ts(df_aggregate, append_date=None):
     filename = 'aggregate-ts.csv'
     df_aggregate.to_csv(os.path.join(DIR_ARCGIS_UPLOAD, filename), index=False)
     if append_date is not None:
@@ -118,12 +132,17 @@ def arcgis_live_edu(df_education):
 
 
 def arcgis_citations():
+    citation_counts = CITATIONS.value_counts([const.NAME, const.ADDRESS])
     df = (
         CITATIONS.drop_duplicates('Name')
         .rename(columns={const.DATE: 'Last Citation'}).copy()
     )
     df['Category'] = df['Description'].apply(
         lambda x: re.match('[^(]+', x).group(0).rstrip())
+    df[const.NUM_CITATIONS] = df.apply(
+        lambda x: citation_counts.loc[(x[const.NAME], x[const.ADDRESS])],
+        axis='columns'
+    )
     apply_coordinates(df).to_csv(
         os.path.join(DIR_ARCGIS_UPLOAD, 'citations.csv'), index=False
     )
@@ -143,6 +162,7 @@ def export_live(live_dict):
 
 def publish(date=None, use_ts_cache=False, use_live_cache=False):
     export_live(live_dict := query_live(use_live_cache))
+    geocoder.prep_addresses()
     arcgis_live_non_res(live_dict[const.NON_RESIDENTIAL])
     arcgis_live_edu(live_dict[const.EDUCATION])
     arcgis_citations()
@@ -155,8 +175,9 @@ def publish(date=None, use_ts_cache=False, use_live_cache=False):
     if date is None:
         date = ts_dict[const.AGGREGATE][const.DATE].max()
     arcgis_live_map(ts_dict[const.AREA])
-    arcgis_ts(ts_dict[const.AREA], date)
-    arcgis_aggregate(ts_dict[const.AGGREGATE], date)
+    arcgis_csa_ts(ts_dict[const.AREA], date)
+    arcgis_region_ts(ts_dict[const.REGION], date)
+    arcgis_aggregate_ts(ts_dict[const.AGGREGATE], date)
     arcgis_region_snapshot(ts_dict[const.REGION])
     arcgis_age_snapshot(ts_dict[const.AGE_GROUP])
 

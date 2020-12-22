@@ -64,7 +64,7 @@ def lookup_many_addresses(addresses: Iterable[str], buffer=25):
 
 
 def prep_addresses():
-    live_page = current_stats.query_live(True)
+    live_page = current_stats.query_live(False)
     addresses = (
         list(live_page[const.NON_RESIDENTIAL][const.ADDRESS])
         + list(live_page[const.EDUCATION][const.ADDRESS])

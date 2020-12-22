@@ -11,6 +11,7 @@ from lac_covid19.const import JSON_COMPACT
 from lac_covid19.geo.paths import DIR_DATA
 
 _CSA_REGION_MAP_JSON = os.path.join(DIR_DATA, 'csa-region-map.json')
+_CSA_OBJECTID = os.path.join(DIR_DATA, 'csa-objectid.json')
 
 df_csa, df_spa = [
     geopandas.read_file(os.path.join(DIR_DATA, f'{x}.geojson'))
@@ -92,13 +93,25 @@ def get_region_mapping(cache=True):
     return csa_region
 
 
+CSA_OBJECTID_MAP = {}
+if os.path.isfile(_CSA_OBJECTID):
+    raw_csa_objectid = None
+    with open(_CSA_OBJECTID) as f:
+        raw_csa_objectid = json.load(f)['features']
+    for entry in raw_csa_objectid:
+        values = entry['attributes']
+        CSA_OBJECTID_MAP[values[AREA]] = values[OBJECTID]
+
+
 CSA_REGION_MAP = get_region_mapping()
 CSA_BLANK = (
-    df_csa.drop(columns=['CITY_TYPE', 'LCITY', 'COMMUNITY', 'SOURCE',
-                         'ShapeSTArea', 'ShapeSTLength'])
-    .rename(columns={'OBJECTID': OBJECTID, 'LABEL': AREA}).copy()
+    df_csa.drop(columns=['OBJECTID', 'CITY_TYPE', 'LCITY', 'COMMUNITY',
+                         'SOURCE', 'ShapeSTArea', 'ShapeSTLength'])
+    .rename(columns={'LABEL': AREA}).copy()
 )
 CSA_BLANK[AREA] = CSA_BLANK[AREA].convert_dtypes()
+CSA_BLANK[OBJECTID] = (CSA_BLANK[AREA]
+                       .apply(CSA_OBJECTID_MAP.get).convert_dtypes())
 
 
 if __name__ == "__main__":

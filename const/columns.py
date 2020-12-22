@@ -67,6 +67,8 @@ LONGITUDE = 'Longitude'
 
 SETTING = 'Setting'
 CATEGORY = 'Category'
+NUM_CITATIONS = 'Number of Citations'
+NAME = 'Name'
 
 
 def stat_by_group(stat: str, group: str) -> str:
