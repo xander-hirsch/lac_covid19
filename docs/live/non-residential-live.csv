@@ -1,5 +1,5 @@
 Setting Name,Address,Total Confirmed Staff,Total Confirmed Non-Staff
-99 Cents Only Stores Warehouse and Corporate Office,"4000 Union Pacific Ave, Commerce, CA, 90023",67,0
+99 Cents Only Stores Warehouse and Corporate Office,"4000 Union Pacific Ave, Commerce, CA, 90023",74,0
 "365 Delivery, Inc.","21822 Lassen St, Chatsworth, CA, 91311",3,0
 "AA Meat, Inc.","6544 Flotilla St, Commerce, CA, 90040",4,0
 Abbott Laboratories,"15900 Valley View Ct, Sylmar, CA, 91342",22,0
@@ -8,6 +8,7 @@ ABM Industries - Century Park,"2049 Century Park E, Level D,, Los Angeles, CA, 9
 ACCO Engineered Systems,"3421 S Malt Ave, Commerce, CA, 90040",5,0
 Accurate Manufacturing Company,"6641 San Fernando Rd, Glendale, CA, 91201",5,0
 Accurate Steel Treating,"10008 Miller Way, South Gate, CA, 90280",8,0
+Acorn Paper,"3701 Union Pacific Ave, Los Angeles, CA, 90023",16,0
 "Acromil, LLC","18421 Railroad St, City of Industry, CA, 91748",7,0
 Aero Chrome Plating,"14660 Arminta St, Panorama City, CA, 91402",5,0
 Aeroscopic Construction,"1833 Dana St, Glendale, CA, 91201",5,0
@@ -21,7 +22,7 @@ Amazon DAX7,"9350 Rayo Ave, South Gate, CA, 90280",40,0
 Amazon DLA3,"5829 Smithway St, Commerce, CA, 90040",13,0
 Amazon DLA8,"2815 W El Segundo Blvd, Hawthorne, CA, 90250",28,0
 Amazon DLX9,"5750 Mesmer Ave, Culver City, CA, 90230",12,0
-Amazon DPS1,"4187 Temple City Blvd, El Monte, CA, 91731",36,0
+Amazon DPS1,"4187 Temple City Blvd, El Monte, CA, 91731",47,0
 America's Job Centers of California,"5301 Whittier Blvd, Los Angeles, CA, 90022",4,0
 "American Nuts, LLC","12950 San Fernando Rd, Sylmar, CA, 91342",13,0
 Andrew Lauren Surfaces,"13220 Cambridge St, Santa Fe Springs, CA, 90670",3,0
@@ -30,8 +31,8 @@ Anvil Steel Corporation,"134 W 168th St, Gardena, CA, 90248",3,0
 "Arcadia, Inc. Steel Windows Department","2301 E Vernon Ave, Vernon, CA, 90058",6,0
 Armorcast Products Company,"9140 Lurline Ave, Chatsworth, CA, 91311",17,0
 Athens Services,"9147 De Garmo Ave, Sun Valley, CA, 91352",9,0
-AutoNation Toyota Cerritos,"18700 Studebaker Rd, Cerritos, CA, 90703",15,0
-AVO American Vegetable Oils,"7244 Condor Ave, Commerce, CA, 90040",6,0
+AutoNation Toyota Cerritos,"18700 Studebaker Rd, Cerritos, CA, 90703",17,0
+AVO American Vegetable Oils,"7244 Condor Ave, Commerce, CA, 90040",8,0
 Bagcraft Novolex,"515 Turnbull Canyon Rd, City of Industry, CA, 91745",11,0
 Bakkavor Foods,"18201 Central Ave, Carson, CA, 90746",23,0
 "Bapko Metal, Inc.","6033 West Century Blvd, Los Angeles, CA, 90045",5,0
@@ -51,14 +52,14 @@ Bobs Hawaiian Restaurant,"15926 S Western Ave, Gardena, CA, 90247",5,0
 Bocchi Laboratory,"26455 Ruether Ave, Santa Clarita, CA, 91350",20,0
 "Bon Appetit, 50th St","4820 E 50th St, Vernon, CA, 90058",9,0
 "Borray's Plastics MFG, Inc.","10616 Pioneer Blvd, Santa Fe Springs, CA, 90670",7,0
-Brentwood Originals,"20639 S Fordyce Ave, Carson, CA, 90810",81,0
+Brentwood Originals,"20639 S Fordyce Ave, Carson, CA, 90810",86,0
 "Burbank Unified School District, Facilities Department","1900 W Olive Ave, Burbank, CA, 91506",6,0
 C&G Plastics,"12729 Foothill Blvd, Sylmar, CA, 91342",3,0
 Cacique #10537,"14940 Proctor Ave, City of Industry, CA, 91746",14,0
 California Bear Credit Union,"300 S Spring St, #1215, Los Angeles, CA, 90013",4,0
 California Highway Patrol Santa Fe Springs,"10051 Orr And Day Rd, Santa Fe Springs, CA, 90670",14,0
 California Highway Patrol West Valley,"5825 De Soto Ave, Woodland Hills, CA, 91367",15,0
-Caltrans Monrovia,"850 E Huntington Dr, Monrovia, CA, 91016",4,0
+Caltrans Monrovia,"850 E Huntington Dr, Monrovia, CA, 91016",6,0
 Caltrans Tarzana - Maintenance Yard 3,"5660 Reseda Blvd, Tarzana, CA, 91356",6,0
 "Calvin Klein #65, Citadel Outlets","100 Citadel Dr, 602, Commerce, CA, 90040",3,0
 Calvo Group,"1619 W Garvey Ave N, West Covina, CA, 91790",12,0
@@ -84,10 +85,9 @@ Clara Shortridge Foltz Criminal Justice Center,"210 W Temple St, Los Angeles, CA
 Classic Distributing & Beverage Group,"120 Puente Ave, City of Industry, CA, 91746",17,0
 Clementine Foods LLC,"1751 Ensley Ave, Los Angeles, CA, 90024",3,0
 Climb Adult Day Care,"171 W Sierra Madre Blvd, Sierra Madre, CA, 91024",13,0
-Coaster of America,"20300 Business Pkwy, City of Industry, CA, 91789",5,0
 Cole Vocational Services,"14028 Pioneer Blvd, Norwalk, CA, 90650",3,1
 Comfort Keepers Home Care (Senior Care),"420 W Baseline Rd, Ste D, Claremont, CA, 91711",3,0
-Command Packing,"3840 E 26th St, Vernon, CA, 90058",15,0
+Command Packing,"3840 E 26th St, Vernon, CA, 90058",17,0
 Commercial Meat Company,"7820 Industry Ave, Pico Rivera, CA, 90660",7,0
 Commercial Tenant Improvement Project,"5901 W Sunset Blvd, Los Angeles, CA, 90028",5,0
 Compton Fire Department - Fire Station 1,"201 Acacia Avenue, Compton, CA, 90220",5,0
@@ -99,9 +99,10 @@ Construction Site of Dobkin Construction,"9422 Sierra Mar Dr, Los Angeles, CA, 9
 Contessa Premium Food,"5970 Alcoa Ave, Vernon, CA, 90058",57,0
 Corn Maiden Foods,"24201 Frampton Ave, Harbor City, CA, 90710",14,0
 "Cosmetic Lab, Inc.","11933 Woodruff Ave, Downey, CA, 90241",10,0
-Costco Lancaster,"1141 W Avenue L, Lancaster, CA, 93534",10,0
 "Costco Warehouse, Culver City #479","13463 Washington Blvd, Marina Del Rey, CA, 90292",51,0
+"Costco Warehouse, Lancaster #762","1141 W Avenue L, Lancaster, CA, 93534",10,0
 "Costco Warehouse, Santa Clarita #447","18649 Via Princessa, Santa Clarita, CA, 91387",10,0
+"Costco Warehouse, Van Nuys #48","6100 Sepulveda Blvd, Van Nuys, CA, 91411",30,0
 "Costco Warehouse, Woodland Hills #1205","21800 Victory Blvd, Woodland Hills, CA, 91367",34,0
 Covina Police Department,"444 N Citrus Ave, Covina, CA, 91723",15,0
 CR Creative Services,"1400 Calzona St, Los Angeles, CA, 90023",29,0
@@ -113,7 +114,7 @@ Curacao #2,"8401 Van Nuys Blvd, Ste 63, Panorama City, CA, 91402",6,0
 Curtis Wright Aerospace Manufacturing,"28965 Avenue Penn, Valencia, CA, 91355",10,0
 CVS - Workman St,"2419 Workman St, Los Angeles, CA, 90031",9,0
 "CW Cole (DBA, Cole Lighting)","2560 Rosemead Blvd, South El Monte, CA, 91733",9,0
-"Day-Lee Foods, Inc.","13055 Molette St, Santa Fe Springs, CA, 90670",23,0
+"Day-Lee Foods, Inc.","13055 Molette St, Santa Fe Springs, CA, 90670",28,0
 Dependable Highway Express,"800 E 230th St, Carson, CA, 90745",12,0
 DHL Global Mail,"3963 Workman Mill Rd, Unit A, Whittier, CA, 90601",13,0
 Dimetri Gardikas,"14811 Marquardt Ave, Santa Fe Springs, CA, 90670",26,0
@@ -123,6 +124,7 @@ Dimetri Gardikas,"14811 Marquardt Ave, Santa Fe Springs, CA, 90670",26,0
 Downey Fire Department - Fire Station 3,"9900 Paramount Blvd, Downey, CA, 90240",4,0
 "Dytran Instruments, Inc.","21592 Marilla St, Chatsworth, CA, 91311",7,0
 Edgemine,"1801 E 50th St, Los Angeles, CA, 90058",11,0
+EDIC,"1753 Blake Ave, Los Angeles, CA, 90031",10,0
 EJ Lauren,"9400 Hall Rd, Downey, CA, 90241",11,0
 El Monte Police Department,"11333 Valley Blvd, El Monte, CA, 91731",12,0
 Emanate Business Services,"1325 N Grand Ave, Covina, CA, 91724",4,0
@@ -133,11 +135,10 @@ Fairmont Miramar Hotel & Bungalows,"101 Wilshire Blvd, Santa Monica, CA, 90401",
 Farmer Boys Restaurant,"43408 10th St W, Lancaster, CA, 93534",6,0
 "Fashion Nova Logistics, Inc.","12588 Lakeland Rd, Santa Fe Springs, CA, 90670",106,0
 FedEx Freight,"4500 Bandini Blvd, Vernon, CA, 90058",12,0
-FedEx Ground Arcadia,"12369 Lower Azusa Rd, Arcadia, CA, 91006",49,0
-FedEx Ground Carson,"1725 Charles Willard St, Carson, CA, 90746",12,0
+FedEx Ground Arcadia,"12369 Lower Azusa Rd, Arcadia, CA, 91006",58,0
+FedEx Ground Carson,"1725 Charles Willard St, Carson, CA, 90746",14,0
 FedEx Ground City of Industry,"200 Old Ranch Rd, City of Industry, CA, 91789",44,0
 FedEx Ground Pacoima,"12500 Branford St, Pacoima, CA, 91331",31,0
-Fenix Marine Services,"614 Terminal Way, San Pedro, CA, 90731",8,0
 Fleetwood-Fibre Packaging and Graphics,"15250 Don Julian Rd, City of Industry, CA, 91745",7,0
 "Flexco, Inc.","6855 Suva St, Bell Gardens, CA, 90201",4,0
 "Flores Design Fine Furniture, Inc.","4618 Pacific Blvd, Vernon, CA, 90058",50,0
@@ -159,7 +160,6 @@ Glen Air,"1211 Air Way, Glendale, CA, 91201",52,0
 "Global Paratransit, Inc.","400 W Compton Blvd, Gardena, CA, 90248",4,0
 Gold Coast Ingredients,"2429 Yates Ave, Commerce, CA, 90040",19,0
 Golden Bolt LLC,"9371 Canoga Ave, Chatsworth, CA, 91311",8,0
-Good American,"3125 S La Cienega Blvd, Los Angeles, CA, 90016",6,0
 Goodwill Industries,"1500 W 6th St, Los Angeles, CA, 90017",7,0
 Grace Community Church,"13248 Roscoe Blvd, Sun Valley, CA, 91352",5,0
 Greystar - THEA at Metropolis Apartments,"1000 W 8th St, Los Angeles, CA, 90017",7,0
@@ -182,13 +182,14 @@ Hollander Sleep Products,"8500 Rex Rd, Pico Rivera, CA, 90660",15,0
 Hollywood Family Source Center (Volunteers of America of Los Angeles),"1075 N Western Ave, Suite 110, Los Angeles, CA, 90029",5,0
 Home Depot - Alhambra #6610,"500 S Marengo Ave, Alhambra, CA, 91803",13,0
 Home Depot - Hyde Park #1039,"1830 W Slauson Ave, Los Angeles, CA, 90047",18,0
+Home Depot - Long Beach #1062,"751 E Spring St, Signal Hill, CA, 90755",14,0
 Home Depot - North Hollywood #6613,"11600 Sherman Way, North Hollywood, CA, 91605",12,0
-Home Depot - Panorama City #6644,"7870 Van Nuys Blvd, Panorama City, CA, 91402",12,0
+Home Depot - Panorama City #6644,"7870 Van Nuys Blvd, Panorama City, CA, 91402",18,0
 Homeboy Industries,"130 Bruno St, Los Angeles, CA, 90012",9,0
 "Honda Performance Development, Inc.","25145 Anza Dr, Valencia, CA, 91355",5,0
 "Honda, Goudy","1400 W Main St, Alhambra, CA, 91801",6,0
 "Honda, World Downey Service & Parts Center","11136 Dollison Dr, Downey, CA, 90241",7,0
-Howmet Aerospace #2,"3000 Lomita Blvd, Torrance, CA, 90505",27,0
+Howmet Aerospace #2,"3000 Lomita Blvd, Torrance, CA, 90505",29,0
 "Huck International, Inc.","900 E Watson Center Rd, Carson, CA, 90745",14,0
 "Hughes Brothers Aircrafters, Inc.","11010 Garfield Pl, South Gate, CA, 90280",6,0
 Hydra Electric Aerospace Manufacturing,"3151 N Kenwood St, Burbank, CA, 91505",12,0
@@ -220,11 +221,11 @@ Jo's Candies LLC,"2530 W 237th St, Torrance, CA, 90505",7,0
 Josie Maran Cosmetics,"12236 Sherman Way, North Hollywood, CA, 91605",5,0
 JP Original Corporation,"19101 E Walnut Dr N, City of Industry, CA, 91748",4,0
 Justice Design Group,"405 E Euclid Ave, Compton, CA, 90222",12,0
-Kaiser Aluminum,"6250 Bandini Blvd, Commerce, CA, 90040",9,0
+Kaiser Aluminum,"6250 Bandini Blvd, Commerce, CA, 90040",13,0
 Kaiser Permanente Central Refill Pharmacy Center,"9521 Dalen St, Downey, CA, 90242",18,0
 Kaiser Permanente Regional Lab,"4580 Electronics Pl, Los Angeles, CA, 90039",5,0
 Killer Merch,"9505 Mason Ave, Chatsworth, CA, 91311",10,0
-King's Hawaiian Manufacturing Plant,"19161 Harborgate Way, Torrance, CA, 90501",17,0
+King's Hawaiian Manufacturing Plant,"19161 Harborgate Way, Torrance, CA, 90501",19,0
 Klune Industries,"7323 Coldwater Canyon Ave, North Hollywood, CA, 91605",13,0
 Kohl's Redondo Beach,"1799 Hawthorne Blvd, Redondo Beach, CA, 90278",10,0
 Kohl's Valencia,"24200 Valencia Blvd, Valencia, CA, 91355",6,0
@@ -236,8 +237,8 @@ LA City General Services Division,"2319 Dorris Pl, Los Angeles, CA, 90031",6,0
 LA City Parks - The Kleimer Building,"3900 Chevy Chase Dr, Los Angeles, CA, 90039",8,0
 LA County DCFS - Broadway,"1993 S Broadway, Los Angeles, CA, 90007",39,0
 LA County DCFS - Covina Annex Regional Office,"1373 Center Court Dr, Covina, CA, 91724",3,0
-LA County DCFS - Glendora,"725 S Grand Ave, Glendora, CA, 91740",9,0
-LA County DCFS - Lancaster,"300 E Avenue K6, Lancaster, CA, 93535",10,0
+LA County DCFS - Glendora,"725 S Grand Ave, Glendora, CA, 91740",15,0
+LA County DCFS - Lancaster,"300 E Avenue K6, Lancaster, CA, 93535",12,0
 LA County DCFS - San Dimas,"955 Overland Ct, Suite 100, San Dimas, CA, 91773",5,0
 LA County DCFS - Santa Fe Springs,"10355 Slusher Dr, Santa Fe Springs, CA, 90670",8,0
 LA County Department of Public Works (RD339),"29773 Mulholland Hwy, Agoura Hills, CA, 91301",3,0
@@ -250,6 +251,7 @@ LA County Edmund D. Edelman Children's Court,"201 Centre Plaza Dr, Monterey Park
 LA County Fire Department - Fire Station 28,"7733 Greenleaf Ave, Whittier, CA, 90602",4,0
 LA County Library,"7400 Imperial Hwy, Downey, CA, 90242",7,0
 LA County Registrar-Recorder/County Clerk,"12680 Corral Pl, Santa Fe Springs, CA, 90670",3,0
+LA County Registrar-Recorder/County Clerk Norwalk,"12400 Imperial Hwy Ste 2204, Norwalk, CA, 90650",13,0
 LA County Sheriff's Department - Crescenta Valley Station,"4554 Briggs Ave, La Crescenta, CA, 91214",4,0
 LA County Sheriff's Department - East Los Angeles Station,"5019 E 3rd St, Los Angeles, CA, 90022",13,0
 LA County Sheriff's Department - Inmate Services Bureau Operations,"4700 W Ramona Blvd, Monterey Park, CA, 91754",5,0
@@ -260,18 +262,16 @@ LADWP - John Ferraro Bldg Ste A17,"111 N Hope St, Los Angeles, CA, 90012",5,0
 LADWP - Northridge District,"18718 Rayen St, Northridge, CA, 91324",7,0
 LAFD Fire Station 1,"2230 Pasadena Ave, Los Angeles, CA, 90031",11,0
 LAFD Fire Station 25,"2927 Whittier Blvd, Los Angeles, CA, 90023",7,0
-LAFD Fire Station 91,"14430 Polk St, Sylmar, CA, 91342",12,0
 LAFD Fire Station 94,"4470 Coliseum St, Los Angeles, CA, 90016",5,0
-LAFD Fire Station 112,"444 S Harbor Blvd, San Pedro, CA, 90731",9,0
 Lake Balboa Lifeguard Station,"6300 Balboa Blvd, Van Nuys, CA, 91316",3,0
 Lance Camper,"43120 Venture St, Lancaster, CA, 93535",21,0
 Langer's Deli,"704 S Alvarado St, Los Angeles, CA, 90057",11,0
 Langer's Juice Company,"16195 Stephens St, City of Industry, CA, 91745",21,0
 LAPD 77th Street Community Police Station,"7600 S Broadway, Los Angeles, CA, 90003",29,0
 LAPD Central Community Police Station,"251 E 6th St, Los Angeles, CA, 90014",29,0
-LAPD Foothill Community Police Station,"12760 Osborne St, Pacoima, CA, 91331",10,0
-LAPD Headquarters,"100 W 1st St, Los Angeles, CA, 90012",22,0
-LAPD Newton Community Police Station,"3400 S Central Ave, Los Angeles, CA, 90011",46,0
+LAPD Foothill Community Police Station,"12760 Osborne St, Pacoima, CA, 91331",14,0
+LAPD Headquarters,"100 W 1st St, Los Angeles, CA, 90012",18,0
+LAPD Newton Community Police Station,"3400 S Central Ave, Los Angeles, CA, 90011",50,0
 LAPD Northeast Community Police Station,"3353 N San Fernando Rd, Los Angeles, CA, 90065",7,0
 LAPD Southwest Community Police Station,"1546 W Martin Luther King Jr Blvd, Los Angeles, CA, 90062",19,0
 LAPD Topanga Community Police Station,"21501 Schoenborn St, Canoga Park, CA, 91304",4,0
@@ -306,7 +306,7 @@ McDonald's #1411,"1133 N La Brea Ave, West Hollywood, CA, 90038",7,0
 McDonald's #5213,"1185 Durfee Ave, South El Monte, CA, 91733",5,0
 McDonald's #7963,"15000 Whittier Blvd, Whittier, CA, 90603",3,0
 McDonald's #11826,"101 W Manchester Ave, Los Angeles, CA, 90003",6,0
-McDonald's #14283,"4480 E Olympic Blvd, Los Angeles, CA, 90023",13,0
+McDonald's #14283,"4480 E Olympic Blvd, Los Angeles, CA, 90023",14,0
 McDonald's #14473,"3868 E 3rd St, Los Angeles, CA, 90063",8,0
 McDonald's #25565,"11240 Glenoaks Blvd, Pacoima, CA, 91331",5,0
 "MCI Foods, Inc.","13013 Molette St, Santa Fe Springs, CA, 90670",18,0
@@ -351,16 +351,17 @@ Nissan of West Covina,"205 N Citrus St, West Covina, CA, 91791",5,0
 Nordstrom #322,"300 Los Cerritos Mall, Cerritos, CA, 90703",3,0
 Northeast Valley Health Center - Call Center,"531 5th St, Suite A, San Fernando, CA, 91340",5,0
 Northridge Mills,"1901 1st St, San Fernando, CA, 91340",9,0
-Northrop Grumman - Azusa,"1111 W 3rd St, Azusa, CA, 91702",15,0
-Northrop Grumman - Palmdale,"3520 E Avenue M, Palmdale, CA, 93550",199,0
+Northrop Grumman - Azusa,"1111 W 3rd St, Azusa, CA, 91702",12,0
+Northrop Grumman - Palmdale,"3520 E Avenue M, Palmdale, CA, 93550",257,0
 Novacap LLC,"25111 Anza Dr, Valencia, CA, 91355",33,0
 O' Tasty Foods,"160 S Hacienda Blvd, City of Industry, CA, 91745",13,0
 Onstage Dance Center,"11711 Woodruff Ave, Downey, CA, 90241",1,2
 "Ontic Engineering and Manufacturing, Inc.","20400 Plummer St, Chatsworth, CA, 91311",14,0
-OnTrac Shipping - Commerce,"5959 Randolph St, Commerce, CA, 90040",34,0
+OnTrac Shipping - Commerce,"5959 Randolph St, Commerce, CA, 90040",41,0
+Pacific Maritime Association,"614 Terminal Way, San Pedro, CA, 90731",8,0
 Packaging Corporation of America,"4240 Bandini Blvd, Vernon, CA, 90058",5,0
 Panda Express #2521,"8315 Laurel Canyon Blvd, Sun Valley, CA, 91352",5,0
-Pankow Construction #2,"8899 Beverly Blvd, West Hollywood, CA, 90048",27,0
+Pankow Construction #2,"8899 Beverly Blvd, West Hollywood, CA, 90048",29,0
 Paramount Exclusive Insurance,"15760 Ventura Blvd, Encino, CA, 91436",7,0
 Parkhouse Tires,"5960 Shull St, Bell Gardens, CA, 90201",20,0
 PB Fasteners,"1700 W 132nd St, Gardena, CA, 90249",12,0
@@ -376,7 +377,7 @@ Porto's Bakery & Cafe Burbank,"3614 W Magnolia Blvd, Burbank, CA, 91505",11,0
 Precision Floor Covering,"1 Lmu Dr, Los Angeles, CA, 90045",11,0
 Premier Auto Credit,"6502 Van Nuys Blvd, Van Nuys, CA, 91401",8,0
 "Pro Packing, Inc.","100 Broad Ave, Wilmington, CA, 90744",4,0
-Promotional Design Concepts,"9872 Rush St, South El Monte, CA, 91733",15,0
+Promotional Design Concepts,"9872 Rush St, South El Monte, CA, 91733",12,0
 "R & R Masonry, Inc.","6010 Avion Dr, Los Angeles, CA, 90045",10,0
 R3 Los Angeles,"15959 Piuma Ave, Cerritos, CA, 90703",6,0
 "Rancho Foods, Inc.","2528 E 37th St, Vernon, CA, 90058",31,0
@@ -395,7 +396,6 @@ RTI Services,"2836 Vail Ave, Commerce, CA, 90040",7,0
 Rudolph & Sletten,"3525 W 8th St, Los Angeles, CA, 90005",9,0
 S & A Property Solution,"6747 Odessa Ave, #103 , Van Nuys, CA, 91406",5,0
 Safran Passenger Solutions,"1500 Glenn Curtiss St, Carson, CA, 90746",12,0
-Salvation Army Alegria,"2737 W Sunset Blvd, Los Angeles, CA, 90026",2,3
 Salvation Army Retail Store,"1940 W Pico Blvd, Los Angeles, CA, 90006",4,0
 Sam's Club #26,"4901 Santa Anita Ave, El Monte, CA, 91731",26,0
 San Gabriel/MTS Management,"7955 San Fernando Rd, Sun Valley, CA, 91352",4,0
@@ -404,13 +404,12 @@ Saunders Midwest NUPLA LLC,"11912 Sheldon St, Sun Valley, CA, 91352",10,0
 "Sea Win, Inc.","526 Stanford Ave, Los Angeles, CA, 90013",12,0
 Seafood City Supermarket,"134 S Vermont Ave # 140, Los Angeles, CA, 90004",5,0
 Sectran Security,"7633 Industry Ave, Pico Rivera, CA, 90660",5,0
-"See's Candy, Inc. (Manufacturing)","3423 S La Cienega Blvd, Los Angeles, CA, 90016",12,0
 Senior Aerospace SSP,"2980 N San Fernando Blvd, Burbank, CA, 91504",47,0
 Shell Gas Station Vermont,"700 S Vermont Ave, Los Angeles, CA, 90005",7,0
 "Signal Products, Inc.","4270 S Maywood Ave, Vernon, CA, 90058",3,0
 Smiles and Tears Foster Agency,"925 N Garey Ave, Pomona, CA, 91767",5,0
 Smithfield,"3049 E Vernon Ave, Vernon, CA, 90058",384,0
-Smurfit Kappa North America,"440 Baldwin Park Blvd, City of Industry, CA, 91746",12,0
+Smurfit Kappa North America,"440 Baldwin Park Blvd, City of Industry, CA, 91746",16,0
 "Southwest Airlines, Hollywood Burbank Airport","2627 N Hollywood Way, Burbank, CA, 91505",11,0
 Space Corporation,"1 Rocket Rd, Hawthorne, CA, 90250",3,0
 Spears Manufacturing Company,"15853 Olden St, Sylmar, CA, 91342",13,0
@@ -419,7 +418,7 @@ Sprouts Farmers Market #418,"1375 Foothill Blvd, La Verne, CA, 91750",5,0
 "Square-H Brands, Inc.","2731 S Soto St, Vernon, CA, 90058",20,0
 St. Peter Chanel Parish,"12001 214th St, Hawaiian Gardens, CA, 90716",10,0
 Staples #1499 Koreatown,"3223 W 6th St, Los Angeles, CA, 90020",5,0
-Star Nail / Cuccio,"29120 Avenue Paine, Valencia, CA, 91355",13,0
+Star Nail / Cuccio,"29120 Avenue Paine, Valencia, CA, 91355",22,0
 Starbucks Mission Hills,"11109 Sepulveda Blvd, Mission Hills, CA, 91345",5,0
 Starbucks Montebello,"2501 W Whittier Blvd, Montebello, CA, 90640",5,0
 Stonefire Grill #2,"6405 Fallbrook Ave, West Hills, CA, 91307",7,0
@@ -432,11 +431,12 @@ Superior Grocers #114,"151 S Hacienda Blvd, City of Industry, CA, 91745",5,0
 Sutter Street Manufacturing,"21700 Baker Pkwy, City of Industry, CA, 91789",141,0
 Synedgen,"1420 N Claremont Blvd, Claremont, CA, 91711",3,0
 Tamarack Studios,"8615 Tamarack Ave, Sun Valley, CA, 91352",17,0
-Target - Alhambra,"2120 W Main St, Alhambra, CA, 91801",27,0
-Target - La Cienega Blvd,"3535 S La Cienega Blvd, Los Angeles, CA, 90016",26,0
+Target - Alhambra,"2120 W Main St, Alhambra, CA, 91801",31,0
+Target - La Cienega Blvd,"3535 S La Cienega Blvd, Los Angeles, CA, 90016",32,0
+Target - Rosemead,"3600 Rosemead Blvd, Rosemead, CA, 91770",15,0
 Target - Van Nuys #1307,"5711 Sepulveda Blvd, Van Nuys, CA, 91411",11,0
-Target - Van Nuys #1309,"14920 Raymer St, Van Nuys, CA, 91405",25,0
-Target - West Hollywood,"7100 Santa Monica Blvd, West Hollywood, CA, 90046",15,0
+Target - Van Nuys #1309,"14920 Raymer St, Van Nuys, CA, 91405",28,0
+Target - West Hollywood,"7100 Santa Monica Blvd, West Hollywood, CA, 90046",18,0
 The Bicycle Hotel & Casino,"888 Bicycle Casino Dr, Bell Gardens, CA, 90201",11,0
 The Habit Burger Grill - Chatsworth,"9243 Winnetka Ave, Chatsworth, CA, 91311",3,0
 The Habit Burger Grill - Diamond Bar,"257 S Diamond Bar Blvd, Diamond Bar, CA, 91765",5,0
@@ -491,7 +491,7 @@ Warner Bros Television - Young Sheldon,"4000 Warner Blvd, Building 191, Burbank,
 Waste Management - Azusa Transfer Station and Recycling Center,"1501 W Gladstone St, Azusa, CA, 91702",7,0
 WebCor Builders,"945 W 8th St, Los Angeles, CA, 90017",15,0
 WebCor General Contractor,"9000 W 3rd St, Los Angeles, CA, 90048",31,0
-Wells Fargo Bank - El Monte,"9000 Flair Dr, El Monte, CA, 91731",16,0
+Wells Fargo Bank - El Monte,"9000 Flair Dr, El Monte, CA, 91731",19,0
 Western Bagel,"11628 Santa Monica Blvd, Los Angeles, CA, 90025",4,0
 Westlake Financial Services,"29851 Agoura Rd, Agoura Hills, CA, 91301",4,0
 "Whole Foods Market, 23rd & Wilshire Blvd","2201 Wilshire Blvd, Santa Monica, CA, 90403",12,0
