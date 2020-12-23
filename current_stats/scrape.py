@@ -1,5 +1,4 @@
 import os.path
-from typing import Dict, Iterable, List, Optional, Union
 
 import bs4
 import pandas as pd
@@ -16,6 +15,8 @@ ID_RESIDENTIAL = 'residential-settings'
 ID_NON_RESIDENTIAL = 'nonres-settings'
 ID_HOMELESS = 'peh-settings'
 ID_EDUCATION = 'educational-settings'
+
+OBS = 'Obs'
 
 
 def fetch_page(cached=True):
@@ -37,77 +38,72 @@ def table_html(html, id_, multi=False):
     return search.find('table')
 
 
-def extract_tr_data(tr: bs4.Tag) -> Iterable[Union[str, int]]:
-    """Takes the data from a table row into a useable format"""
-    data_points = [x.get_text(strip=True) for x in tr.find_all('td')]
-    # Try to strip dash, then convert to integer
-    for i in range(len(data_points)):
-        data_points[i] = data_points[i].lstrip('-  ')
-        try:
-            data_points[i] = int(data_points[i])
-        except ValueError:
-            pass
-    return tuple(data_points)
-
-
-def parse_table(table: bs4.Tag) -> pd.DataFrame:
-    """Interprets an HTML table to only have the data"""
-
-    headings_list = [x.get_text() for x in table.find('thead').find_all('th')]
-    data_rows = tuple(map(extract_tr_data, table.find('tbody').find_all('tr')))
-
-    # Attempt to use Obs as the index value if avalible
-    index = None
-    if headings_list[0] == 'Obs':
-        headings_list = headings_list[1:]
-        index = [x[0] for x in data_rows]
-        data_rows = [x[1:] for x in data_rows]
-
-    df = pd.DataFrame(data_rows, index, headings_list).convert_dtypes()
-    if 'Total' in df.index:
-        df.drop('Total', inplace=True)
-    return df
-
-
-def clean_csa(df: pd.DataFrame) -> pd.DataFrame:
-    """Fixes problems on the CITY/COMMUNITY table"""
-
-    COLUMN_NAME_FIX = {
-        'CITY/COMMUNITY**': const.AREA,
-        'Case Rate1': const.CASES_PER_CAPITA,
-        'Death Rate2': const.DEATHS_PER_CAPITA,
-    }
-    df = df.rename(columns=COLUMN_NAME_FIX)
-
-    df = df[df[const.AREA] != const.UNDER_INVESTIGATION]
-
-    df[const.CF_OUTBREAK] = df[const.AREA].apply(lambda x: x[-1] == '*')
-    df[const.AREA] = df[const.AREA].apply(lambda x: x.rstrip('*'))
-
-    return df[[const.AREA, const.CASES, const.CASES_PER_CAPITA, const.DEATHS,
-               const.DEATHS_PER_CAPITA, const.CF_OUTBREAK]].convert_dtypes()
-
-
 def extract_summary(html):
     return table_html(html, ID_SUMMARY)
 
+
+def filter_non_specific_entries(df, col, entry):
+    return df[df[col].apply(lambda x: entry not in x)].copy()
+
+
 def parse_csa(html):
-    return clean_csa(parse_table(table_html(html, ID_SUMMARY, True)[1]))
+    df = (
+        pd.read_html(str(table_html(html, ID_SUMMARY, True)[1]))[0]
+        .rename(
+            columns={
+                'CITY/COMMUNITY**': const.AREA,
+                'Case Rate1': const.CASE_RATE,
+                'Death Rate2': const.DEATH_RATE,
+            }
+        )
+    )
+    return df[df[const.AREA].apply(
+        lambda x: const.UNDER_INVESTIGATION not in x
+    )].copy().convert_dtypes(convert_integer=False)
+
 
 def parse_recent(html):
-    return parse_table(table_html(html, ID_RECENT, True)[1])
+    df = (
+        pd.read_html(str(table_html(html, ID_RECENT, True)[1]))[0]
+        .rename(columns={
+            'City/Community': const.AREA,
+            'Total Cases': const.NEW_CASES_14_DAY_AVG,
+            'Crude Case Rate3': const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
+            'Adjusted Case Rate3,4': const.ADJ_NEW_CASES_14_DAY_AVG,
+            'Unstable Adjusted Rate': const.UNSTABLE_ADJ_CASE_RATE,
+            '2018 PEPS Population': const.POPULATION,
+        })
+    )
+    df[const.UNSTABLE_ADJ_CASE_RATE] = df[const.UNSTABLE_ADJ_CASE_RATE].apply(
+        lambda x: x=='^'
+    )
+    for x in (
+        const.NEW_CASES_14_DAY_AVG, const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
+        const.ADJ_NEW_CASES_14_DAY_AVG
+    ):
+        df[x] = (df[x] / 14).round(2)
+    return df.convert_dtypes(convert_integer=False)
+
+
+def parse_outbreaks(html, id_):
+    return (
+        pd.read_html(str(table_html(html, id_)))[0]
+        .set_index(OBS).drop(const.TOTAL).convert_dtypes(convert_integer=False)
+    )
+
 
 def parse_residential(html):
-    return parse_table(table_html(html, ID_RESIDENTIAL))
+    return parse_outbreaks(html, ID_RESIDENTIAL)
 
 def parse_non_residential(html):
-    return parse_table(table_html(html, ID_NON_RESIDENTIAL))
+    return parse_outbreaks(html, ID_NON_RESIDENTIAL)
 
 def parse_homeless(html):
-    return parse_table(table_html(html, ID_HOMELESS))
+    return parse_outbreaks(html, ID_HOMELESS)
 
 def parse_education(html):
-    return parse_table(table_html(html, ID_EDUCATION))
+    return parse_outbreaks(html, ID_EDUCATION)
+
 
 def query_live(cached=False):
     page_html = fetch_page(cached)

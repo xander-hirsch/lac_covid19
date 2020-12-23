@@ -33,9 +33,13 @@ RACE = 'Race/Ethnicity'
 
 RATE_SCALE = 100_000
 
-_RATE = '{} Rate'
-CASE_RATE = _RATE.format('Case')
-DEATH_RATE = _RATE.format('Death')
+CASE_RATE, DEATH_RATE = [f'{x} rate' for x in ('Case', 'Death')]
+ADJ_CASE_RATE, ADJ_NEW_CASES_14_DAY_AVG, ADJ_DEATH_RATE = [
+    f'Adjusted {x.lower()}'
+    for x in (CASE_RATE, NEW_CASES_14_DAY_AVG, DEATH_RATE)
+]
+UNSTABLE_ADJ_CASE_RATE = f'Unstable {ADJ_CASE_RATE.lower()}'
+
 
 REGION = 'Region'
 SPA = 'Service Planning Area'
