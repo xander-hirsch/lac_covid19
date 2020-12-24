@@ -1,5 +1,5 @@
 Setting Name,Setting Type,Number of Confirmed Staff,Number of Confirmed Non-Staff,Total Deaths
-51st Street Family Shelter,Homeless Shelter,1,0,0
+51st Street Family Shelter,Homeless Shelter,2,1,0
 A Bridge Home - Casa Azul,Homeless Shelter,1,0,0
 A Bridge Home - Eubank,Homeless Shelter,1,0,0
 A Bridge Home - Hope St.,Homeless Shelter,5,20,0
@@ -25,6 +25,7 @@ Cloverfield,Homeless Shelter,1,0,0
 "Community Bridge Housing, Sylmar",Homeless Shelter,0,1,0
 Connections For Women,Homeless Shelter,0,6,0
 Connections For Women 88th Street,Homeless Shelter,0,1,0
+Connections For Women 116th Street,Homeless Shelter,0,1,0
 Connections For Women Colden Ave,Homeless Shelter,0,5,0
 Connections For Women Main Street,Homeless Shelter,0,1,0
 Courtland Hotel,Single Room Occupancy Housing,0,1,0
@@ -52,11 +53,12 @@ Encampment - Eagle Rock,Homeless Encampment,2,1,0
 Encampment - Echo Park,Homeless Encampment,0,1,0
 Encampment - Echo Park #2,Homeless Encampment,0,1,0
 Encampment - Highland Park,Homeless Encampment,0,1,0
+Encampment - Hollywood #5,Homeless Encampment,0,1,0
 Encampment - Lancaster #2,Homeless Encampment,0,4,0
 Encampment - Lancaster #3,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #3,Homeless Encampment,0,1,0
 Encampment - MacArthur Park,Homeless Encampment,0,1,0
-Encampment - North Hollywood #2,Homeless Encampment,0,1,1
+Encampment - North Hollywood #2,Homeless Encampment,0,1,0
 Encampment - Pacoima #2,Homeless Encampment,0,1,0
 Encampment - Palms,Homeless Encampment,0,1,0
 Encampment - Safe Parking Reseda,Homeless Encampment,0,1,0
@@ -123,6 +125,7 @@ National Health Foundation,Recuperative Care Center,1,1,0
 National Health Foundation - HFH,Recuperative Care Center,0,1,0
 New Directions For Veterans,Homeless Shelter,3,7,0
 New Hope Temporary Shelter,Homeless Shelter,2,0,0
+New Reflections,Homeless Shelter,1,1,0
 Olympia Hotel,Single Room Occupancy Housing,1,0,0
 Pacific Clinics Portals Community Connections,Homeless Shelter,0,1,0
 Pacoima Place,Single Room Occupancy Housing,0,1,0
@@ -132,7 +135,7 @@ PATH - A Bridge Home Venice,Homeless Shelter,1,0,0
 PATH - Lodi,Homeless Shelter,0,1,0
 PATH - Madison,Homeless Shelter,4,0,0
 Pathways Transitional Housing,Homeless Shelter,0,1,0
-Proyecto Pastoral Shelter,Homeless Shelter,0,1,0
+Proyecto Pastoral - Dolores Mission,Homeless Shelter,0,1,0
 Proyecto Pastoral Women's Shelter,Homeless Shelter,1,0,0
 Rainbow Apartments,Single Room Occupancy Housing,0,1,0
 Rossmore Hotel,Single Room Occupancy Housing,1,0,0
@@ -177,7 +180,6 @@ Upward Bound House #5,Homeless Shelter,0,1,0
 Upward Bound House #6,Homeless Shelter,0,1,0
 Urban Alchemy Care Plus Program - Mobile Showers Hope,Homeless Service Provider,7,0,0
 Urban Alchemy Care Plus Program - Mobile Showers Maple,Homeless Service Provider,7,0,0
-Urban Alchemy Care Plus Program - Outreach Beacon,Homeless Service Provider,7,0,0
 "US Veterans Initiative, Inglewood",Homeless Shelter,1,4,0
 Valley Oasis - Family Access Center,Homeless Service Provider,2,0,0
 Ward Hotel,Single Room Occupancy Housing,0,1,0
