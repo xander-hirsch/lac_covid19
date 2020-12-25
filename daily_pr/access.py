@@ -15,20 +15,19 @@ from lac_covid19.daily_pr.bad_data import SUBSTITUE_SORUCE, DATA_TYPOS
 
 _PICKLE_CACHE = os.path.join(DIR_PICKLE, 'parsed.pickle')
 
-_EXT_HTML = '{}.html'
-_EXT_JSON = '{}.json'
 _LACDPH_PR_URL = 'http://www.publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid={}'  # pylint: disable=line-too-long
 
 
 def _html_path(date):
-    return os.path.join(DIR_HTML, _EXT_HTML.format(date))
+    return os.path.join(DIR_HTML, f'{date}.html')
 
 
 def _json_path(date):
-    return os.path.join(DIR_JSON, _EXT_JSON.format(date))
+    return os.path.join(DIR_JSON, f'{date}.json')
 
 
 def _fetch_html(date):
+    """Fetches the webpage online and returns the html source as text."""
     date_prid = PRID.get(date)
     if date_prid is None:
         raise ValueError(f'No Press Release ID for {date_prid}')
@@ -43,6 +42,7 @@ def _fetch_html(date):
 
 
 def load_html(date, cache=True):
+    """Loads the webpage and makes small edits defined in bad_data."""
     raw_html = None
     date_html = _html_path(date)
     if cache and os.path.isfile(date_html):
@@ -65,19 +65,29 @@ def _write_json(pr_dict):
 
 def _load_json(date):
     if os.path.isfile(date_json := _json_path(date)):
+        pr_dict = None
         with open(date_json) as f:
             pr_dict = json.load(f)
-            pr_dict[DATE] = dt.date.fromisoformat(pr_dict[DATE])
-            for i in range(len(pr_dict[AREA])):
-                pr_dict[AREA][i] = tuple(pr_dict[AREA][i])
-            pr_dict[AREA] = tuple(pr_dict[AREA])
-            return pr_dict
+        pr_dict[DATE] = dt.date.fromisoformat(pr_dict[DATE])
+        for i in range(len(pr_dict[AREA])):
+            pr_dict[AREA][i] = tuple(pr_dict[AREA][i])
+        pr_dict[AREA] = tuple(pr_dict[AREA])
+        return pr_dict
 
 
 def query_date(date, json_cache=True, html_cache=True):
+    """Queries a single press release
+    Args:
+        date: A specified date formated in ISO 8601 YYYY-MM-DD
+        json_cache: Tries to read a cached parsed json first
+        html_cache: Tries to read a cached webpage first
+    Returns:
+        A dictionary of data from a press release.
+    """
     if json_cache and (pr := _load_json(date)):
         return pr
     pr = parse_pr(load_html(date, html_cache))
+    assert date == pr[DATE].isoformat()
     if date in DATA_TYPOS:
         keys_value = DATA_TYPOS[date]
         pr[keys_value[0]][keys_value[1]] = keys_value[2]
@@ -85,12 +95,19 @@ def query_date(date, json_cache=True, html_cache=True):
     return pr
 
 
-def query_all(pickle_cache=True, json_cache=True, html_cache=True):
-    if (all((pickle_cache, json_cache, html_cache))
-        and os.path.isfile(_PICKLE_CACHE)):
+def query_all(pickle_cache=True, json_cache=True):
+    """Queries all press releases.
+    Args:
+        pickle_cache: Tries to load a python pickle file to avoid needing to
+            read through all the json files.
+        json_cache: Tries to read already parsed json's of press releases.
+    Returns:
+        A list of python dictonaries of parsed json.
+    """
+    if pickle_cache and json_cache and os.path.isfile(_PICKLE_CACHE):
         with open(_PICKLE_CACHE, 'rb') as f:
             return pickle.load(f)
-    data = [query_date(x, json_cache, html_cache) for x in PRID.keys()]
+    data = [query_date(x, json_cache) for x in PRID]
     with open(_PICKLE_CACHE, 'wb') as f:
         pickle.dump(data, f)
     return data

@@ -31,6 +31,7 @@ ADDRESSES = load_addresses_cache()
 
 
 def lookup_address(address_query: str) -> Tuple[float, float]:
+    """Queries an address throught the Bing geocoder."""
     # Normalize queries by saving all upper case
     address_query = address_query.upper()
     if address_query in APPEND_ZIP:
@@ -45,6 +46,9 @@ def lookup_address(address_query: str) -> Tuple[float, float]:
 
 
 def lookup_many_addresses(many_address_queries: Iterable[str], buffer=25):
+    """Lookup many addresses at once. This function does not return anything,
+        but updates the local cache of address queries.
+    """
     queries_ran = 0
     for address in many_address_queries:
         if address not in ADDRESSES:
@@ -60,6 +64,10 @@ def lookup_many_addresses(many_address_queries: Iterable[str], buffer=25):
 
 
 def prep_addresses():
+    """Combines the functionality of lookup_many_addresses, but references all
+        address listed on the LACDPH COVID-19 website first. This should be ran
+        before geocoding addresses to get the cached versions saved.
+    """
     live_page = current_stats.query_live(True)
     addresses = (
         list(live_page[const.NON_RESIDENTIAL][const.ADDRESS])

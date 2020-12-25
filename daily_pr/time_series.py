@@ -12,7 +12,8 @@ import pandas as pd
 import covid_tools.calc
 
 import lac_covid19.const as const
-from lac_covid19.daily_pr.bad_data import REPORTING_SYSTEM_UPDATE
+from lac_covid19.daily_pr.bad_data import (REPORTING_SYSTEM_UPDATE,
+                                           CORR_FACILITY_RECORDED)
 import lac_covid19.daily_pr.access as access
 import lac_covid19.population as population
 from lac_covid19.geo.csa import CSA_REGION_MAP
@@ -65,13 +66,6 @@ AGE_SORT_MAP = {
     const.AGE_65_79: 65,
     const.AGE_OVER_80: 81,
 }
-
-OLD_AGE_GROUPS = (const.AGE_0_17, const.AGE_18_40, const.AGE_41_65,
-                  const.AGE_OVER_65)
-NEW_AGE_GROUPS = (const.AGE_0_4, const.AGE_5_11, const.AGE_12_17,
-                  const.AGE_18_29, const.AGE_30_49, const.AGE_50_64,
-                  const.AGE_65_79, const.AGE_OVER_80)
-NEW_AGE_GROUPS_TRANSITION = pd.to_datetime('2020-07-24')
 
 def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     """Time series of cases by age group.
@@ -169,7 +163,9 @@ def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     df_hd[const.CASES_PER_CAPITA] = df_hd[const.CASES_PER_CAPITA].round(1)
     df_hd.rename(columns={const.HEALTH_DPET: const.AREA}, inplace=True)
     df_hd[const.AREA] = df_hd[const.AREA].apply(const.hd.HD_CSA_MAP.get)
-    df_hd[CF_OUTBREAK] = False
+    df_hd[CF_OUTBREAK] = df_hd[DATE].apply(
+        lambda x: False if x >= CORR_FACILITY_RECORDED else None
+    )
 
     df = (pd.concat([df_csa, df_hd])
           .sort_values([DATE, AREA]).reset_index(drop=True))

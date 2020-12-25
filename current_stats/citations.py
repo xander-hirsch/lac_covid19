@@ -10,5 +10,5 @@ CITATIONS = (
 CITATIONS[const.DATE] = pd.to_datetime(CITATIONS[const.DATE])
 CITATIONS[const.ADDRESS] = CITATIONS.apply(
     lambda x: f'{x[const.ADDRESS]}, {x[const.CITY]}, CA', axis='columns'
-)
+).convert_dtypes()
 CITATIONS.drop(columns=const.CITY, inplace=True)

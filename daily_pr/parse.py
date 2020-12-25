@@ -8,7 +8,6 @@ from typing import Any, Dict, Tuple, Optional, Union
 
 import lac_covid19.const as const
 import lac_covid19.daily_pr.bad_data as bad_data
-from lac_covid19.geo.csa import CSA_BLANK
 
 NUMBERS_AS_WORDS = {
     'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5,
@@ -50,10 +49,6 @@ RE_RACE_ENTRY = re.compile(
     f"(?P<group>{'|'.join(const.RACE_GROUP)}).+?(?P<count>\d+)\s"
 )
 
-CSA_MATCH = (
-    '|'.join(list(CSA_BLANK[const.AREA])+[const.LOS_ANGELES])
-    .replace('.', '\.').replace('(', '\(').replace(')', '\)')
-)
 CSA_ENTIRE = re.compile('City\s+of\s+Agoura\s+Hills.+?Under\s+Investigation')
 RE_CSA_ENTRY = re.compile(
     '(?P<csa>City\s+of.+?|Los\s+Angeles.*?|Unincorporated.+?)'
@@ -79,6 +74,19 @@ def _parse_date(pr_txt: str) -> dt.date:
 
 def _parse_group(pr_txt: str, header_pattern: str,
                  entry_regex: re.Pattern) -> Dict[str, int]:
+    """General function to parse and extract a listing from the press release.
+    Args:
+        pr_txt: The text of the press release.
+        header_pattern: A string representing a regex pattern uniquely
+            identifying the top of the section.
+        entry_regex: A regular expression to match all the groups in the
+            section. This is expected to have a match group entitled "group"
+            identifying the subset of the population and "count" to identify
+            the tally identified with the group.
+    Returns:
+        A dictionary with keys being the groups in section and values being
+        their associated counts.
+    """
     output = {}
     listing = re.search(f'{header_pattern}.+?Under\s+Investigation', pr_txt)
     if listing:
@@ -90,6 +98,16 @@ def _parse_group(pr_txt: str, header_pattern: str,
 def _parse_csa(
     pr_txt: str
 ) -> Dict[str, Tuple[Optional[int], Optional[int], Optional[bool]]]:
+    """Parses the city/community section of the press release.
+    Args:
+        pr_txt: A string of the press release contents.
+    Returns:
+        A dictionary with keys representing the statistical area in question.
+        The values are represted in the following tuple.
+            0 - Total cases
+            1 - Cumulative case rate
+            2 - Indicates if there is a correctional facility outbreak.
+    """
     output = []
     cf_recorded = _parse_date(pr_txt) >= bad_data.CORR_FACILITY_RECORDED
     search_txt = pr_txt
@@ -107,7 +125,6 @@ def _parse_csa(
 
 def _get_new_cases_deaths(pr_txt: str) -> Tuple[int, int]:
     """Extracts the daily new deaths and cases."""
-
     if ((date := _parse_date(pr_txt).isoformat())
         in bad_data.HARDCODE_NEW_CASES_DEATHS.keys()):
         return bad_data.HARDCODE_NEW_CASES_DEATHS[date]

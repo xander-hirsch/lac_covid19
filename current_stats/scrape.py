@@ -20,6 +20,12 @@ OBS = 'Obs'
 
 
 def fetch_page(cached=True):
+    """Fetches the 'Locations & Demographics' page from LACDPH
+    Args:
+        cached: Indicates if a local cached version should be tried before
+            requesting the website online.
+    Returns: A BeautifulSoup object representing the page.
+    """
     if cached and os.path.isfile(PAGE_HTML):
         with open(PAGE_HTML) as f:
             return bs4.BeautifulSoup(f.read(), 'html.parser')
@@ -32,6 +38,16 @@ def fetch_page(cached=True):
 
 
 def table_html(html, id_, multi=False):
+    """Extracts a desired table or tables from the webpage.
+    Args:
+        html: A BeautifulSoup object representing the webpage.
+        id_: A string of a target element html ID.
+        multi: A boolean representing how many tables should be searched.
+    Returns:
+        If multi is False, a BeautifulSoup object representing the first
+        table found. Otherwise, a list of BeautifulSoup objects of all the
+        tables found in the section.
+    """
     search = html.find('div', id=id_).find_next_sibling('div')
     if multi:
         return search.find_all('table')
@@ -42,18 +58,17 @@ def extract_summary(html):
     return table_html(html, ID_SUMMARY)
 
 
-def filter_non_specific_entries(df, col, entry):
-    return df[df[col].apply(lambda x: entry not in x)].copy()
-
-
 def parse_csa(html):
+    """Parses the table representing cummulative cases and deaths in each
+        countwide statistical area.
+    """
     df = (
         pd.read_html(str(table_html(html, ID_SUMMARY, True)[1]))[0]
         .rename(
             columns={
                 'CITY/COMMUNITY**': const.AREA,
-                'Case Rate1': const.CASE_RATE,
-                'Death Rate2': const.DEATH_RATE,
+                'Case Rate1': const.CASES_PER_CAPITA,
+                'Death Rate2': const.DEATHS_PER_CAPITA,
             }
         )
     )
@@ -63,6 +78,9 @@ def parse_csa(html):
 
 
 def parse_recent(html):
+    """Parses the table representing cases in deaths in each countwide
+        statistical area in the last fourteen days.
+    """
     df = (
         pd.read_html(str(table_html(html, ID_RECENT, True)[1]))[0]
         .rename(columns={
@@ -86,6 +104,7 @@ def parse_recent(html):
 
 
 def parse_outbreaks(html, id_):
+    """A general helper function to parse an outbreak table"""
     return (
         pd.read_html(str(table_html(html, id_)))[0]
         .set_index(OBS).drop(const.TOTAL).convert_dtypes(convert_integer=False)

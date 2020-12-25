@@ -39,6 +39,26 @@ MANUAL_REGION = {
 def determine_region(csa_series, df_region, region_name_col,
                      csa_name_col=None, manual_assignment=None,
                      csa_scale=0.9):
+    """Determines which service planning area to assign a countywide statistical
+        area.
+    Args:
+        csa_series: A geopandas Series object of a single countywide statistical
+            area.
+        df_region: A geopandas DataFrame representing all the service planning
+            areas.
+        region_name_col: An identifier for the column in df_region containg the
+            region name.
+        csa_name_col: An optional identifier in csa_series determing the name
+            of the countywide statistical area.
+        manual_assignment: A dictionary which can manually asign a region
+            without any computations.
+        csa_scale: Scales the countywide statistical area by a factor to make
+            sure it fits inside a region's boundaries.
+    Returns:
+        - A single region name if the area fits into a single region.
+        - A list of multiple regions if the area fits into multiple regions.
+        - None if no determination can be made.
+    """
     if (all((csa_name_col, manual_assignment))
         and (csa_name := csa_series.loc[csa_name_col]) in manual_assignment):
         return manual_assignment[csa_name]
@@ -63,7 +83,10 @@ def determine_region(csa_series, df_region, region_name_col,
         return df_intersects[region_name_col].to_list()
 
 
-def create_region_mapping():
+def _create_region_mapping():
+    """Generates a mapping of areas to regions using calculations in
+        determine_region.
+    """
     df_csa_region = df_csa.drop(
         columns=['OBJECTID', 'CITY_TYPE', 'LCITY', 'COMMUNITY', 'SOURCE',
                  'ShapeSTArea', 'ShapeSTLength']
@@ -84,10 +107,13 @@ def create_region_mapping():
 
 
 def get_region_mapping(cache=True):
+    """This is similar to _create_region_mapping, but tries a cached version of
+        region mappings before running the calculations.
+    """
     if cache and os.path.isfile(_CSA_REGION_MAP_JSON):
         with open(_CSA_REGION_MAP_JSON) as f:
             return json.load(f)
-    csa_region = create_region_mapping()
+    csa_region = _create_region_mapping()
     with open(_CSA_REGION_MAP_JSON, 'w') as f:
         json.dump(csa_region, f, separators=JSON_COMPACT)
     return csa_region
