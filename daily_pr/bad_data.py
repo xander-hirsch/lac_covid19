@@ -4,7 +4,9 @@ import pandas as pd
 import lac_covid19.const as const
 
 SUBSTITUE_SORUCE = {
-    '2020-03-30': ('over\s+65\s+--467', 'over 65 --467 Under Investigation'),
+    '2020-03-30': (('over\s+65\s+--467', 'over 65 --467 Under Investigation'),
+                   ('City\s+of\s+Long\s+Beach\s+0\s+\(\s+0\s+\)', ''),
+                   ('City\s+of\s+Pasadena\s+0\s+\(\s+0\s+\)', '')),
     '2020-03-31': ('Unknown', 'Under Investigation'),
     '2020-04-01': ('Unknown', 'Under Investigation'),
     '2020-04-02': ('Unknown', 'Under Investigation'),

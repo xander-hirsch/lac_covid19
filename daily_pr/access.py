@@ -51,8 +51,13 @@ def load_html(date, cache=True):
     else:
         raw_html = _fetch_html(date)
     if date in SUBSTITUE_SORUCE:
-        raw_html = re.sub(
-            SUBSTITUE_SORUCE[date][0], SUBSTITUE_SORUCE[date][1], raw_html)
+        if date == '2020-03-30':
+            for swap_instructions in SUBSTITUE_SORUCE[date]:
+                raw_html = re.sub(swap_instructions[0], swap_instructions[1],
+                                  raw_html)
+        else:
+            raw_html = re.sub(
+                SUBSTITUE_SORUCE[date][0], SUBSTITUE_SORUCE[date][1], raw_html)
     return bs4.BeautifulSoup(raw_html, 'html.parser').get_text()
 
 

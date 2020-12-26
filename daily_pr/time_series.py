@@ -66,6 +66,12 @@ AGE_SORT_MAP = {
     const.AGE_65_79: 65,
     const.AGE_OVER_80: 81,
 }
+OLD_GROUPS = (const.AGE_0_17, const.AGE_18_40, const.AGE_41_65,
+              const.AGE_OVER_65)
+NEW_GROUPS = (const.AGE_0_4, const.AGE_5_11, const.AGE_12_17, const.AGE_18_29,
+              const.AGE_30_49, const.AGE_50_64, const.AGE_65_79,
+              const.AGE_OVER_80)
+AGE_TRANSITION = pd.to_datetime('2020-07-24')
 
 def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     """Time series of cases by age group.
@@ -83,9 +89,12 @@ def create_by_age(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
         population_mapper=population.AGE
     )
     df['age'] = df[const.AGE_GROUP].apply(AGE_SORT_MAP.get)
-    df = (df.sort_values([DATE, 'age'])
-          .drop(columns='age').reset_index(drop=True))
-    return df.convert_dtypes()
+    df = df.sort_values([DATE, 'age']).drop(columns='age')
+    df = df[
+        (df[const.DATE]<AGE_TRANSITION)&(df[const.AGE_GROUP].isin(OLD_GROUPS))
+        |(df[const.DATE]>=AGE_TRANSITION)&(df[const.AGE_GROUP].isin(NEW_GROUPS))
+    ].copy()
+    return df.reset_index(drop=True).convert_dtypes()
 
 
 def create_by_gender(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
@@ -332,7 +341,8 @@ def aggregate_single_stat(many_daily_pr, variable):
         )
     df = covid_tools.calc.normalize_population(
         covid_tools.calc.rolling_avg(
-            df, DATE, var_daily_change, var_daily_change_avg, 7),
+            df, DATE, var_daily_change, var_daily_change_avg, 7,
+            ffill_missing=False),
         var_daily_change_avg, var_daily_change_avg_per_capita,
         population.LA_COUNTY
     )
@@ -348,7 +358,7 @@ def aggregate_stats(many_daily_pr):
                 x[const.HOSPITALIZATIONS] for x in many_daily_pr
             ],
         }), DATE, const.HOSPITALIZATIONS, const.NEW_HOSPITALIZATIONS,
-        const.NEW_HOSPITALIZATIONS_7_DAY_AVG
+        const.NEW_HOSPITALIZATIONS_7_DAY_AVG, ffill_missing=False
     )
     df_cases, df_deaths = [aggregate_single_stat(many_daily_pr, x)
                            for x in (const.CASES, const.DEATHS)]
