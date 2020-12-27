@@ -1,3 +1,4 @@
+import math
 import os.path
 import re
 
@@ -49,9 +50,16 @@ def arcgis_live_map(df_area):
     ].to_csv(os.path.join(DIR_ARCGIS_APPEND, f'{filename}.csv'), index=False)
 
 
+def arcgis_csa_days_back(df_area):
+    reporting_areas = len(df_area[const.AREA].unique())
+    days_back = math.ceil(50_000 / reporting_areas)
+    return df_area[const.DATE].max() - pd.Timedelta(days_back, 'days')
+
+
 def arcgis_csa_ts(df_area, append_date=None):
     df_area = df_area.loc[
-        df_area[const.AREA] != const.LOS_ANGELES,
+        ((df_area[const.AREA] != const.LOS_ANGELES)
+         & (df_area[const.DATE] >= arcgis_csa_days_back(df_area))),
         [const.DATE, const.AREA, const.CASES, const.NEW_CASES]
     ].copy()
     df_area[const.REGION] = df_area[const.AREA].apply(CSA_REGION_MAP.get)
