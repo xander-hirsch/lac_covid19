@@ -154,6 +154,14 @@ def single_day_area(daily_pr: Dict[str, Any]) -> pd.DataFrame:
     return df[[DATE, AREA, CASES, CASE_RATE, CF_OUTBREAK]]
 
 
+def detect_active_areas(df_area, days_back=60, min_days=50):
+    area_counts = df_area[
+        df_area[const.DATE]
+        >=(df_area[const.DATE].max()-pd.Timedelta(days_back, 'days'))
+    ].value_counts(const.AREA).reset_index()
+    return area_counts.loc[area_counts[0]>min_days, const.AREA].copy()
+
+
 def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     """Time series of cases by area.
 
@@ -197,7 +205,9 @@ def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
         df[const.NEW_CASES_14_DAY_AVG_PER_CAPITA].round(2)
     )
     df.drop(columns='new cases per capita', inplace=True)
-    return df.convert_dtypes()
+    return df[
+        df[const.AREA].isin(detect_active_areas(df))
+    ].copy().reset_index(drop=True).convert_dtypes()
 
 
 SPA_NUMBERS = {

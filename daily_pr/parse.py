@@ -51,7 +51,7 @@ RE_RACE_ENTRY = re.compile(
 
 CSA_ENTIRE = re.compile('City\s+of\s+Agoura\s+Hills.+?Under\s+Investigation')
 RE_CSA_ENTRY = re.compile(
-    '(?P<csa>City\s+of.+?|Los\s+Angeles.*?|Unincorporated.+?)'
+    '(?P<csa>City\s+of.+?|Los\s+Angeles(?!,|\sCounty).*?|Unincorporated.+?)'
     '(?P<cfoutbreak>\*?)\s+(?P<cases>\d+|--).+?(?P<case_rate>\d+|--)')
 
 
@@ -115,7 +115,7 @@ def _parse_csa(
         search_txt = csa_txt.group()
     for row in RE_CSA_ENTRY.finditer(search_txt):
         output.append((
-            row.group('csa'),
+            row.group('csa').rstrip('*'),  # Remove excessive asterisks
             _str_to_int(row.group('cases')),
             _str_to_int(row.group('case_rate')),
             bool(row.group('cfoutbreak')) if cf_recorded else None
