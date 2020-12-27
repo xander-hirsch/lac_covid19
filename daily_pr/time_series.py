@@ -12,7 +12,7 @@ import pandas as pd
 import covid_tools.calc
 
 import lac_covid19.const as const
-from lac_covid19.daily_pr.bad_data import (REPORTING_SYSTEM_UPDATE,
+from lac_covid19.daily_pr.bad_data import (NO_REPORT_DATES,
                                            CORR_FACILITY_RECORDED)
 import lac_covid19.daily_pr.access as access
 import lac_covid19.population as population
@@ -170,6 +170,7 @@ def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     """
 
     df_csa = pd.concat(map(single_day_area, many_daily_pr), ignore_index=True)
+    df_csa = df_csa[df_csa[const.AREA].isin(detect_active_areas(df_csa))].copy()
 
     df_hd = health_dept_ts(many_daily_pr, const.CASES)
     df_hd = df_hd[df_hd[const.HEALTH_DPET]!=const.hd.LOS_ANGELES_COUNTY].copy()
@@ -205,9 +206,7 @@ def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
         df[const.NEW_CASES_14_DAY_AVG_PER_CAPITA].round(2)
     )
     df.drop(columns='new cases per capita', inplace=True)
-    return df[
-        df[const.AREA].isin(detect_active_areas(df))
-    ].copy().reset_index(drop=True).convert_dtypes()
+    return df.convert_dtypes()
 
 
 SPA_NUMBERS = {
@@ -329,35 +328,32 @@ def health_dept_ts(many_daily_pr, variable):
         .sort_values([DATE, const.HEALTH_DPET]).reset_index(drop=True)
     )
 
+AGGREGATE_VAR_NAMES = {
+    const.CASES: (const.NEW_CASES, const.NEW_CASES_7_DAY_AVG,
+                  const.NEW_CASES_7_DAY_AVG_PER_CAPITA),
+    const.DEATHS: (const.NEW_DEATHS, const.NEW_DEATHS_7_DAY_AVG,
+                   const.NEW_DEATHS_7_DAY_AVG_PER_CAPITA)
+}
 
 def aggregate_single_stat(many_daily_pr, variable):
-    df = health_dept_ts(
-        many_daily_pr, variable).groupby(DATE).sum().reset_index()
     if variable not in [const.CASES, const.DEATHS]:
         raise ValueError(f'Variable must be {const.CASES} or {const.DEATHS}')
-    variable = variable == const.CASES
-    var_daily_change = const.NEW_CASES if variable else const.NEW_DEATHS
-    var_daily_change_avg = (const.NEW_CASES_7_DAY_AVG
-                            if variable else const.NEW_DEATHS_7_DAY_AVG)
-    var_daily_change_avg_per_capita = (
-        const.NEW_CASES_7_DAY_AVG_PER_CAPITA
-        if variable else const.NEW_DEATHS_7_DAY_AVG_PER_CAPITA
-    )
+    var_daily_change = AGGREGATE_VAR_NAMES[variable][0]
+    var_daily_change_avg = AGGREGATE_VAR_NAMES[variable][1]
+    var_daily_change_avg_per_capita = AGGREGATE_VAR_NAMES[variable][2]
+
+    df = (health_dept_ts(many_daily_pr, variable).groupby(DATE)
+          .sum().reset_index())
     df[var_daily_change] = [x[var_daily_change] for x in many_daily_pr]
-    if variable:
-        df = (
-            pd.concat((df, REPORTING_SYSTEM_UPDATE))
-            .sort_values(DATE).reset_index(drop=True)
-        )
-    df = covid_tools.calc.normalize_population(
+    df = pd.concat([df, NO_REPORT_DATES[[const.DATE, var_daily_change]]])
+
+    return covid_tools.calc.normalize_population(
         covid_tools.calc.rolling_avg(
             df, DATE, var_daily_change, var_daily_change_avg, 7,
             ffill_missing=False),
         var_daily_change_avg, var_daily_change_avg_per_capita,
         population.LA_COUNTY
     )
-    return df
-
 
 
 def aggregate_stats(many_daily_pr):
@@ -376,6 +372,7 @@ def aggregate_stats(many_daily_pr):
         pd.merge(df_cases, df_deaths, 'left', DATE),
         df_hospital, 'left', DATE
     ).convert_dtypes()
+
     df[const.NEW_CASES_7_DAY_AVG] = df[const.NEW_CASES_7_DAY_AVG].round(1)
     df[const.NEW_CASES_7_DAY_AVG_PER_CAPITA] = df[
         const.NEW_CASES_7_DAY_AVG_PER_CAPITA
@@ -384,7 +381,8 @@ def aggregate_stats(many_daily_pr):
     df[const.NEW_DEATHS_7_DAY_AVG_PER_CAPITA] = df[
         const.NEW_DEATHS_7_DAY_AVG_PER_CAPITA
     ].round(4)
-    return df
+    return (df[df[const.NEW_CASES].notna()].copy()
+            .sort_values(const.DATE).reset_index(drop=True))
 
 
 def generate_all_ts(many_daily_pr=None):
@@ -410,7 +408,7 @@ if __name__ == "__main__":
     last_month = every_day[-30:]
     today = every_day[-1]
 
-    # df_summary = create_main_stats(every_day)
+    # df_summary = aggregate_stats(every_day)
     # df_age = create_by_age(every_day)
     # df_gender = create_by_gender(every_day)
     # df_race = create_by_race(last_week)

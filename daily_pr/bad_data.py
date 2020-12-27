@@ -75,6 +75,7 @@ HARDCODE_NEW_CASES_DEATHS = {
     '2020-11-23': (6124, 8),
     '2020-12-04': (8860, 60),
     '2020-12-23': (16525, 145),
+    '2020-12-26': (13185, 5),
 }
 
 
@@ -83,6 +84,18 @@ REPORTING_SYSTEM_UPDATE = pd.DataFrame(
      const.NEW_CASES: (2643, 3187, 1402)}
 )
 
+CHRISTMAS_OUTAGE = pd.DataFrame(
+    {const.DATE: pd.to_datetime('2020-12-25'),
+     const.NEW_CASES: 15538,
+     const.NEW_DEATHS: 131},
+    index=(0,)
+)
+
+NO_REPORT_DATES = pd.concat([REPORTING_SYSTEM_UPDATE, CHRISTMAS_OUTAGE],
+                            ignore_index=True)
+NO_REPORT_DATES[const.NEW_DEATHS] = NO_REPORT_DATES[
+    const.NEW_DEATHS
+].convert_dtypes()
 
 DATA_TYPOS = {
     '2020-04-13': (const.CASES_BY_AGE, const.AGE_OVER_65, 2032),
