@@ -31,7 +31,17 @@ def datetime_input(obj):
         raise ValueError
 
 
-def arcgis_live_map(df_area):
+def choropleth_colors(df_area_day, col, lower, upper):
+    if df_area_day is None:
+        df_area_day = generate_all_ts()[const.AREA]
+        df_area_day = df_area_day[
+            df_area_day[const.DATE]==df_area_day[const.DATE].max()
+        ]
+    print(f'{col}: {lower}->{df_area_day[col].quantile(lower).round(1)} / '
+          f'{upper}->{df_area_day[col].quantile(upper).round(1)}')
+
+
+def arcgis_live_map(df_area, lower=0.05, upper=0.95):
     df_area = df_area.loc[
         df_area[const.DATE]==df_area[const.DATE].max(),
         [const.AREA, const.CASES, const.CASES_PER_CAPITA,
@@ -48,6 +58,9 @@ def arcgis_live_map(df_area):
         :, [const.OBJECTID, const.CASES, const.CASES_PER_CAPITA,
             const.NEW_CASES_14_DAY_AVG, const.NEW_CASES_14_DAY_AVG_PER_CAPITA]
     ].to_csv(os.path.join(DIR_ARCGIS_APPEND, f'{filename}.csv'), index=False)
+    choropleth_colors(df_area, const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
+                      lower, upper)
+    choropleth_colors(df_area, const.CASES_PER_CAPITA, lower, upper)
 
 
 def arcgis_csa_days_back(df_area):

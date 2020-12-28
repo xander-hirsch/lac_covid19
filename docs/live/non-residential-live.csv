@@ -68,7 +68,7 @@ Caltrans Monrovia,"850 E Huntington Dr, Monrovia, CA, 91016",6,0
 Caltrans Tarzana - Maintenance Yard 3,"5660 Reseda Blvd, Tarzana, CA, 91356",6,0
 "Calvin Klein #65, Citadel Outlets","100 Citadel Dr, 602, Commerce, CA, 90040",3,0
 Calvo Group,"1619 W Garvey Ave N, West Covina, CA, 91790",13,0
-Camino Real Kitchens,"2638 E Vernon Ave, Vernon, CA, 90058",10,0
+Camino Real Kitchens,"2638 E Vernon Ave, Vernon, CA, 90058",15,0
 "Campus Residential Dining, UCLA","351 Charles E Young Dr W, Los Angeles, CA, 90024",9,0
 Cannasafe,"7027 Hayvenhurst Ave, Van Nuys, CA, 91406",3,0
 Carmax,"405 W Technology Dr, Palmdale, CA, 93551",10,0
@@ -126,10 +126,10 @@ CVS - Workman St,"2419 Workman St, Los Angeles, CA, 90031",9,0
 Dependable Highway Express,"800 E 230th St, Carson, CA, 90745",12,0
 DHL Global Mail,"3963 Workman Mill Rd, Unit A, Whittier, CA, 90601",13,0
 Dimetri Gardikas,"14811 Marquardt Ave, Santa Fe Springs, CA, 90670",26,0
-"Dodge, Cerritos","18803 Studebaker Rd, Cerritos, CA, 90703",10,0
 "Dodge Chrysler Jeep Ram, Glenn E Thomas","2100 E Spring St, Signal Hill, CA, 90755",7,0
 "Dodge Chrysler Jeep Ram, Hunter","1130 Auto Mall Dr, Lancaster, CA, 93534",5,0
 "Dodge Chrysler Jeep Ram, Rydell","700 San Fernando Rd, San Fernando, CA, 91340",11,0
+Dodge of Cerritos,"18803 Studebaker Rd, Cerritos, CA, 90703",10,0
 Downey Fire Department - Fire Station 3,"9900 Paramount Blvd, Downey, CA, 90240",4,0
 "Dytran Instruments, Inc.","21592 Marilla St, Chatsworth, CA, 91311",7,0
 Edgemine,"1801 E 50th St, Los Angeles, CA, 90058",15,0
@@ -140,7 +140,7 @@ Environmental Health and Safety,"3271 East 19th St, Signal Hill, CA, 90755",3,0
 Estes Express Line,"13327 Temple Ave, City of Industry, CA, 91746",11,0
 Everson Spice,"2667 Gundry Ave, Signal Hill, CA, 90755",8,0
 Evolution Productions - Reality TV Show,"3310 W Vanowen St, Burbank, CA, 91505",3,0
-"F. Gavina & Sons, Inc.","2700 Fruitland Ave, Vernon, CA, 90058",17,0
+"F. Gavina & Sons, Inc.","2700 Fruitland Ave, Vernon, CA, 90058",18,0
 Fairmont Miramar Hotel & Bungalows,"101 Wilshire Blvd, Santa Monica, CA, 90401",4,0
 Fantasy Dyeing Finishing/Fantasy Activewear,"5383 Alcoa Ave, Vernon, CA, 90058",21,0
 Farmer Boys Restaurant,"43408 10th St W, Lancaster, CA, 93534",6,0
@@ -450,7 +450,7 @@ Sugar Foods,"9500 El Dorado Ave, Sun Valley, CA, 91352",8,0
 Sugarbloom Bakery LLC,"4126 Verdugo Rd, Los Angeles, CA, 90065",4,0
 Superior Court of California - Stanley Mosk Courthouse,"111 N Hill St, Los Angeles, CA, 90012",17,0
 Superior Grocers #114,"151 S Hacienda Blvd, City of Industry, CA, 91745",8,0
-Sutter Street Manufacturing,"21700 Baker Pkwy, City of Industry, CA, 91789",146,0
+Sutter Street Manufacturing,"21700 Baker Pkwy, City of Industry, CA, 91789",147,0
 Synedgen,"1420 N Claremont Blvd, Claremont, CA, 91711",3,0
 Tamarack Studios,"8615 Tamarack Ave, Sun Valley, CA, 91352",17,0
 Target #0184,"2120 W Main St, Alhambra, CA, 91801",31,0
@@ -493,6 +493,7 @@ Universal Waste Systems,"10120 Miller Way, South Gate, CA, 90280",11,0
 UPS - Cerritos,"13233 Moore St, Cerritos, CA, 90703",19,0
 UPS - Compton,"1430 N Mckinley Ave, Los Angeles, CA, 90059",14,0
 Us Airforce Plant 42 Fire Station,"2501 E Avenue S, Palmdale, CA, 93550",9,0
+USC Facilities Management Services,"3434 S Grand Ave, Los Angeles, CA, 90089",9,0
 USPS - Carson Annex,"24760 Main St, Carson, CA, 90745",14,0
 VACCO Industries,"10350 Vacco St, South El Monte, CA, 91733",22,0
 Valencia Management Group,"27644 Newhall Ranch Rd, Unit #45, Valencia, CA, 91355",5,0
