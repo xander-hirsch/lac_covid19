@@ -4,7 +4,7 @@ Setting Name,Address,Total Confirmed Staff,Total Confirmed Non-Staff
 "AA Meat, Inc.","6544 Flotilla St, Commerce, CA, 90040",4,0
 Abbott Laboratories,"15900 Valley View Ct, Sylmar, CA, 91342",22,0
 Able Services,"351 S Fuller Ave, Tower 35, Los Angeles, CA, 90036",11,0
-ABM Industries - Century Park,"2049 Century Park E, Level D,, Los Angeles, CA, 90067",4,0
+ABM Industries - Century Park,"2049 Century Park E, Level D, Los Angeles, CA, 90067",4,0
 ACCO Engineered Systems,"3421 S Malt Ave, Commerce, CA, 90040",6,0
 Accurate Manufacturing Company,"6641 San Fernando Rd, Glendale, CA, 91201",5,0
 Accurate Steel Treating,"10008 Miller Way, South Gate, CA, 90280",8,0
@@ -22,7 +22,7 @@ Amazon DAX7,"9350 Rayo Ave, South Gate, CA, 90280",47,0
 Amazon DLA3,"5829 Smithway St, Commerce, CA, 90040",24,0
 Amazon DLA8,"2815 W El Segundo Blvd, Hawthorne, CA, 90250",28,0
 Amazon DLX9,"5750 Mesmer Ave, Culver City, CA, 90230",12,0
-Amazon DPS1,"4187 Temple City Blvd, El Monte, CA, 91731",47,0
+Amazon DPS1,"4187 Temple City Blvd, El Monte, CA, 91731",56,0
 America's Job Centers of California,"5301 Whittier Blvd, Los Angeles, CA, 90022",4,0
 "American Nuts, LLC","12950 San Fernando Rd, Sylmar, CA, 91342",13,0
 Andrew Lauren Surfaces (1),"13220 Cambridge St, Santa Fe Springs, CA, 90670",3,0
@@ -70,7 +70,7 @@ Caltrans Tarzana - Maintenance Yard 3,"5660 Reseda Blvd, Tarzana, CA, 91356",6,0
 Calvo Group,"1619 W Garvey Ave N, West Covina, CA, 91790",13,0
 Camino Real Kitchens,"2638 E Vernon Ave, Vernon, CA, 90058",15,0
 "Campus Residential Dining, UCLA","351 Charles E Young Dr W, Los Angeles, CA, 90024",9,0
-Cannasafe,"7027 Hayvenhurst Ave, Van Nuys, CA, 91406",3,0
+Cannasafe,"7027 Hayvenhurst Ave, Van Nuys, CA, 91406",9,0
 Carmax,"405 W Technology Dr, Palmdale, CA, 93551",10,0
 "CBS Studio Center Bungalow 3, Lyons Gate Production","4024 Radford Ave, 3, Studio City, CA, 91604",26,0
 CBS Studio Center Stage 04,"4024 Radford Ave, Studio City, CA, 91604",11,0
@@ -399,7 +399,7 @@ Porto's Bakery & Cafe Burbank,"3614 W Magnolia Blvd, Burbank, CA, 91505",11,0
 "PRC Restoration, Inc.","23839 Banning Blvd, Carson, CA, 90745",14,0
 Premier Auto Credit,"6502 Van Nuys Blvd, Van Nuys, CA, 91401",9,0
 "Pro Packing, Inc.","100 Broad Ave, Wilmington, CA, 90744",4,0
-Quality Custom Distribution,"14317 Lomitas Ave, La Puente, CA, 91746",21,0
+Quality Custom Distribution,"14317 Lomitas Ave, La Puente, CA, 91746",35,0
 "R & R Masonry, Inc.","6010 Avion Dr, Los Angeles, CA, 90045",10,0
 R3 Los Angeles,"15959 Piuma Ave, Cerritos, CA, 90703",6,0
 "Rancho Foods, Inc.","2528 E 37th St, Vernon, CA, 90058",34,0
@@ -433,7 +433,7 @@ Simplify Optics,"24844 Avenue Rockefeller, Valencia, CA, 91355",10,0
 Smiles and Tears Foster Agency,"925 N Garey Ave, Pomona, CA, 91767",5,0
 Smithfield,"3049 E Vernon Ave, Vernon, CA, 90058",421,0
 Smurfit Kappa North America,"440 Baldwin Park Blvd, City of Industry, CA, 91746",16,0
-Snap on Specialty Tools,"19220 San Jose Ave, City of Industry, CA, 91748",14,0
+Snap on Specialty Tools,"19220 San Jose Ave, City of Industry, CA, 91748",16,0
 Space Corporation,"1 Rocket Rd, Hawthorne, CA, 90250",3,0
 Spears Manufacturing Company,"15853 Olden St, Sylmar, CA, 91342",20,0
 Sprouts Farmers Market #411,"8985 Venice Blvd, Los Angeles, CA, 90034",7,0

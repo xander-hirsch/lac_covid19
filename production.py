@@ -197,7 +197,7 @@ def publish(date=None, use_ts_cache=False, use_live_cache=False):
         date = ts_dict[const.AGGREGATE][const.DATE].max()
     arcgis_live_map(ts_dict[const.AREA])
     arcgis_csa_ts(ts_dict[const.AREA], date)
-    arcgis_region_ts(ts_dict[const.REGION], date)
+    # arcgis_region_ts(ts_dict[const.REGION], date)
     arcgis_aggregate_ts(ts_dict[const.AGGREGATE], date)
     arcgis_region_snapshot(ts_dict[const.REGION])
     arcgis_age_snapshot(ts_dict[const.AGE_GROUP])

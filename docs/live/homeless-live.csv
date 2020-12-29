@@ -60,13 +60,14 @@ Encampment - Hollywood #5,Homeless Encampment,0,1,0
 Encampment - Lancaster #2,Homeless Encampment,0,4,0
 Encampment - Lancaster #3,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #3,Homeless Encampment,0,1,0
+Encampment - Lincoln Heights #4,Homeless Encampment,0,1,0
 Encampment - MacArthur Park,Homeless Encampment,0,8,0
 Encampment - North Hollywood #2,Homeless Encampment,0,1,1
 Encampment - Pacoima #2,Homeless Encampment,0,1,0
 Encampment - Palms,Homeless Encampment,0,1,0
 Encampment - Safe Parking Reseda,Homeless Encampment,0,1,0
 Encampment - San Fernando,Homeless Encampment,0,1,0
-Encampment - San Pedro #2,Homeless Encampment,0,1,0
+Encampment - San Pedro #2,Homeless Encampment,0,3,0
 Encampment - Santa Monica,Homeless Encampment,0,1,0
 Encampment - Sierra Vista,Homeless Encampment,0,1,0
 Encampment - South El Monte,Homeless Encampment,0,1,0
@@ -74,6 +75,7 @@ Encampment - South Gate #2,Homeless Encampment,0,2,0
 Encampment - South LA #4,Homeless Encampment,0,2,0
 Encampment - South LA #8,Homeless Encampment,0,2,0
 Encampment - South LA #9,Homeless Encampment,0,1,0
+Encampment - Sun Valley #2,Homeless Encampment,0,2,0
 Encampment - West LA #3,Homeless Encampment,0,1,0
 Encampment - West LA #4,Homeless Encampment,0,4,0
 Encampment - West LA #5,Homeless Encampment,0,1,0
@@ -85,8 +87,9 @@ Friendship Auditorium,Homeless Shelter,7,1,0
 Gateways Apartments SRO,Single Room Occupancy Housing,1,0,0
 Good Shepherd Hawkes,Homeless Shelter,0,2,0
 Good Shepherd Languille,Homeless Shelter,0,1,0
+Gratitude House,Homeless Shelter,0,1,0
 Harbor Interfaith - A Bridge Home San Pedro,Homeless Shelter,1,0,0
-Harbor Interfaith 8th Street,Homeless Shelter,1,0,0
+Harbor Interfaith 8th Street,Homeless Shelter,3,0,0
 Harbor Interfaith 9th Street,Homeless Service Provider,3,0,0
 Harold,Single Room Occupancy Housing,0,1,0
 Hart Hotel,Single Room Occupancy Housing,0,1,0
@@ -144,6 +147,7 @@ PATH - A Bridge Home Los Feliz,Homeless Shelter,3,5,0
 PATH - A Bridge Home Venice,Homeless Shelter,1,0,0
 PATH - Lodi,Homeless Shelter,0,1,0
 PATH - Madison,Homeless Shelter,4,0,0
+PATH - Madison Interim Housing,Homeless Shelter,0,4,0
 Pathways Transitional Housing,Homeless Shelter,0,1,0
 Proyecto Pastoral - Dolores Mission,Homeless Shelter,1,1,0
 Proyecto Pastoral Women's Shelter,Homeless Shelter,1,0,0
@@ -207,7 +211,7 @@ Weingart Center - THP,Homeless Shelter,0,1,0
 Weingart Center Cafe,Homeless Service Provider,1,0,0
 Weingart Civic Center A Bridge Home,Homeless Shelter,0,2,0
 Whittier First Day,Homeless Shelter,1,0,0
-Whittier Narrows Shower Event,Homeless Hygiene Center,1,5,0
+Whittier Narrows Shower Event,Homeless Hygiene Center,0,9,0
 Whittier Senior Center,Homeless Shelter,0,1,0
 Women's Care Cottage,Homeless Shelter,0,1,0
 Zahn Memorial Center,Homeless Shelter,0,2,0
