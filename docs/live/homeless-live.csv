@@ -25,7 +25,7 @@ Cheviot Hills Recreation Center,Homeless Shelter,1,0,0
 Cloverfield,Homeless Shelter,4,0,0
 "Community Bridge Housing, Sylmar",Homeless Shelter,0,1,0
 Connections For Women,Homeless Shelter,0,6,0
-Connections For Women 88th Street,Homeless Shelter,0,1,0
+Connections For Women 88th Street,Homeless Shelter,0,6,0
 Connections For Women 116th Street,Homeless Shelter,0,1,0
 Connections For Women Colden Ave,Homeless Shelter,0,5,0
 Connections For Women Main Street,Homeless Shelter,0,1,0
@@ -33,14 +33,14 @@ Courtland Hotel,Single Room Occupancy Housing,0,1,0
 Covenant House,Homeless Shelter,4,7,0
 Desert Mac Facility,Homeless Shelter,0,3,0
 Downtown Women's Center,Homeless Shelter,5,0,0
-Downtown Women's Center (SRO),Single Room Occupancy Housing,1,0,0
+Downtown Women's Center (SRO),Single Room Occupancy Housing,3,0,0
+Echo Park Recreation Center Shelter,Homeless Shelter,1,1,0
 Elden House,Homeless Shelter,1,1,0
 Encampment - Canoga Park,Homeless Encampment,0,1,0
 Encampment - Central LA #5,Homeless Encampment,0,1,0
 Encampment - Central LA #7,Homeless Encampment,0,1,0
 Encampment - Central LA #8,Homeless Encampment,0,2,0
 Encampment - Central LA #10,Homeless Encampment,0,1,0
-Encampment - Central LA #18,Homeless Encampment,0,2,0
 Encampment - Central LA #19,Homeless Encampment,0,5,0
 Encampment - Central LA #20,Homeless Encampment,0,1,0
 Encampment - Central LA #21,Homeless Encampment,0,1,0
@@ -48,28 +48,32 @@ Encampment - Central LA #22,Homeless Encampment,0,1,0
 Encampment - Central LA #23,Homeless Encampment,0,1,0
 Encampment - Central LA #24,Homeless Encampment,0,1,0
 Encampment - Central LA #27,Homeless Encampment,0,1,0
-Encampment - Compton,Homeless Encampment,0,2,0
 Encampment - Eagle Rock,Homeless Encampment,2,1,0
+Encampment - East Hollywood,Homeless Encampment,0,1,0
 Encampment - Echo Park,Homeless Encampment,0,1,0
 Encampment - Highland Park,Homeless Encampment,0,1,0
 Encampment - Hollywood #5,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #3,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #4,Homeless Encampment,0,1,0
 Encampment - MacArthur Park,Homeless Encampment,0,8,0
+Encampment - Mission Hills #1,Homeless Encampment,0,1,0
 Encampment - Palms,Homeless Encampment,0,1,0
+Encampment - Safe Parking Glassell,Homeless Encampment,0,1,0
 Encampment - Safe Parking Reseda,Homeless Encampment,0,1,0
 Encampment - San Fernando,Homeless Encampment,0,1,0
 Encampment - San Pedro #2,Homeless Encampment,0,3,0
 Encampment - Santa Monica,Homeless Encampment,0,1,0
-Encampment - South El Monte,Homeless Encampment,0,1,0
+Encampment - South El Monte,Homeless Encampment,0,3,1
 Encampment - South Gate #2,Homeless Encampment,0,2,0
 Encampment - South LA #8,Homeless Encampment,0,2,0
 Encampment - South LA #9,Homeless Encampment,0,1,0
 Encampment - South LA #10,Homeless Encampment,0,1,0
+Encampment - South LA #11,Homeless Encampment,0,1,0
 Encampment - Sun Valley #2,Homeless Encampment,0,2,0
 Encampment - West LA #4,Homeless Encampment,0,4,0
 Encampment - West LA #5,Homeless Encampment,0,1,0
 Eugene Apartments,Single Room Occupancy Housing,0,2,1
+Exodus Broadway,Homeless Shelter,0,6,0
 First To Serve - Coronado,Homeless Shelter,1,0,0
 First To Serve - Figueroa,Homeless Shelter,0,1,0
 First To Serve - Vernon,Homeless Shelter,7,6,0
@@ -92,7 +96,7 @@ Home at Last - Vermont,Homeless Shelter,0,1,0
 Home at Last - Western,Homeless Shelter,0,3,0
 Homes For Life,Homeless Shelter,0,1,0
 Hope For Home Pomona,Homeless Shelter,1,17,0
-Hope of The Valley - A Bridge Home Van Nuys,Homeless Shelter,9,7,1
+Hope of The Valley - A Bridge Home Van Nuys,Homeless Shelter,9,12,1
 Hope of The Valley - North Hollywood,Homeless Shelter,1,0,0
 Hope of The Valley - Pacoima Winter Shelter,Homeless Shelter,5,1,0
 Hope of The Valley - The Landing,Homeless Shelter,1,2,0
@@ -123,7 +127,6 @@ Ms. Hazel's House - Wall Street,Homeless Shelter,2,1,0
 National Health Foundation,Recuperative Care Center,1,1,0
 National Health Foundation - HFH,Recuperative Care Center,0,1,0
 New Directions For Veterans,Homeless Shelter,3,7,0
-New Hope Temporary Shelter,Homeless Shelter,2,0,0
 New Reflections,Homeless Shelter,1,2,0
 Pacific Clinics Portals Community Connections,Homeless Shelter,0,1,0
 Pacoima Place,Single Room Occupancy Housing,0,1,0
@@ -170,7 +173,7 @@ The Silver Villa,Homeless Shelter,1,0,0
 The T-House,Homeless Shelter,1,2,0
 The Whole Child Interim Safe Families Shelter,Homeless Shelter,2,0,0
 TLP Taft,Homeless Shelter,0,1,0
-Total Restoration Ministries,Homeless Shelter,3,13,0
+Total Restoration Ministries,Homeless Shelter,3,13,1
 Transitional Living Program,Homeless Shelter,0,3,0
 Union Rescue Mission,Homeless Shelter,2,22,0
 "Union Rescue Mission, DHS Clinic",Homeless Service Provider,1,0,0
