@@ -1,8 +1,8 @@
 Setting Name,Address,Total Confirmed Staff,Total Confirmed Students
 Acton-Agua Dulce District Office,"32248 Crown Valley Rd, Acton, CA, 93510",5,0
 Amir Family Child Care,"5218 Sylmar Ave, Sherman Oaks, CA, 91401",3,6
-Antelope Valley College Nursing,"3041 W Avenue K, Lancaster, CA, 93536",2,9
 "Antelope Valley College, CTE Cohort","3041 W Avenue K, Lancaster, CA, 93536",2,3
+"Antelope Valley College, Nursing","3041 W Avenue K, Lancaster, CA, 93536",2,9
 Arcadia High School,"180 Campus Dr, Arcadia, CA, 91007",3,0
 "Azusa Pacific University, Athletics","901 E Alosta Ave, Azusa, CA, 91702",0,4
 Baches Family Childcare,"415 N Ethel Ave, Alhambra, CA, 91801",0,6
@@ -23,7 +23,7 @@ Drew Child Development Center,"9200 Maie Ave, Los Angeles, CA, 90002",3,2
 Emek Hebrew Academy Day Camp,"15365 Magnolia Blvd, Sherman Oaks, CA, 91403",2,5
 Esalante Elementry School,"4443 Live Oak St, Cudahy, CA, 90201",7,0
 "Florence Ave ES, LAUSD","7211 Bell Ave, Los Angeles, CA, 90001",3,0
-"Footprints Christian, Lancaster United Methodist Preschool","918 W Avenue J, Lancaster, CA, 93534",4,0
+"Footprints Christian, Lancaster United Methodist Preschool","918 W Avenue J, Lancaster, CA, 93534",4,2
 Fountain Day School,"1128 N Orange Grove Ave, West Hollywood, CA, 90046",1,3
 Harry Pregerson Child Care Center,"255 E Temple St, Los Angeles, CA, 90012",1,3
 "Hart High School, William S. Hart Union High School District","24825 Newhall Ave, Newhall, CA, 91321",7,0
@@ -71,3 +71,4 @@ Trinity Classical Academy,"28310 Kelly Johnson Pkwy, Valencia, CA, 91355",5,4
 Tutor Time,"17150 Soledad Canyon Rd, Canyon Country, CA, 91387",6,2
 UCLA Facilities,"731 Charles E Young Dr S, Los Angeles, CA, 90095",16,0
 Valor Christian Academy Preschool/TK-8th Grade,"525 Earle Ln, Redondo Beach, CA, 90278",5,0
+"Woodrow Wilson Senior High, LAUSD","4500 Multnomah St, Los Angeles, CA, 90032",6,0

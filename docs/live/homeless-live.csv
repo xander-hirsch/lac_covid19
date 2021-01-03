@@ -3,6 +3,8 @@ Setting Name,Setting Type,Number of Confirmed Staff,Number of Confirmed Non-Staf
 A Bridge Home - Casa Azul,Homeless Shelter,1,0,0
 A Bridge Home - Eubank,Homeless Shelter,1,0,0
 A Bridge Home - Hope St.,Homeless Shelter,7,24,0
+A Bridge Home - St. Andrew's,Homeless Shelter,0,8,0
+A New Direction Transitional Housing,Homeless Shelter,1,7,1
 Abundant Blessings From Above - 3rd Ave,Homeless Shelter,0,1,0
 Abundant Blessings From Above - 62nd St,Homeless Shelter,0,3,0
 Abundant Blessings From Above 332,Homeless Shelter,0,3,0
@@ -14,7 +16,6 @@ Bassett Park Winter Shelter,Homeless Shelter,0,9,0
 BCP TLP South Los Angeles,Homeless Shelter,2,0,0
 Boyd Hotel,Single Room Occupancy Housing,0,1,0
 Bridge Housing For Women,Homeless Shelter,0,2,0
-Bridge Taper Shelter,Homeless Shelter,2,18,0
 Bridge To Home,Homeless Shelter,0,1,0
 Bryant Temple Women's Winter Shelter,Homeless Shelter,0,1,0
 C3 Skid Row,Homeless Service Provider,5,0,0
@@ -22,7 +23,6 @@ Canby House,Homeless Shelter,1,21,0
 Cardinal Manning Center,Homeless Shelter,1,5,0
 Casa de Vida,Homeless Shelter,1,8,0
 Cheviot Hills Recreation Center,Homeless Shelter,1,0,0
-Cloverfield,Homeless Shelter,4,0,0
 "Community Bridge Housing, Sylmar",Homeless Shelter,0,1,0
 Connections For Women,Homeless Shelter,0,6,0
 Connections For Women 88th Street,Homeless Shelter,0,6,0
@@ -37,6 +37,7 @@ Downtown Women's Center (SRO),Single Room Occupancy Housing,3,0,0
 Echo Park Recreation Center Shelter,Homeless Shelter,1,1,0
 Elden House,Homeless Shelter,1,1,0
 Encampment - Canoga Park,Homeless Encampment,0,1,0
+Encampment - Central LA,Homeless Encampment,0,1,0
 Encampment - Central LA #5,Homeless Encampment,0,1,0
 Encampment - Central LA #7,Homeless Encampment,0,1,0
 Encampment - Central LA #8,Homeless Encampment,0,2,0
@@ -48,6 +49,7 @@ Encampment - Central LA #22,Homeless Encampment,0,1,0
 Encampment - Central LA #23,Homeless Encampment,0,1,0
 Encampment - Central LA #24,Homeless Encampment,0,1,0
 Encampment - Central LA #27,Homeless Encampment,0,1,0
+Encampment - Central LA #30,Homeless Encampment,0,1,0
 Encampment - Eagle Rock,Homeless Encampment,2,1,0
 Encampment - East Hollywood,Homeless Encampment,0,1,0
 Encampment - Echo Park,Homeless Encampment,0,1,0
@@ -58,8 +60,10 @@ Encampment - Lincoln Heights #4,Homeless Encampment,0,1,0
 Encampment - MacArthur Park,Homeless Encampment,0,8,0
 Encampment - Mission Hills #1,Homeless Encampment,0,1,0
 Encampment - Palms,Homeless Encampment,0,1,0
+Encampment - Safe Parking Bixel,Homeless Encampment,0,1,0
 Encampment - Safe Parking Glassell,Homeless Encampment,0,1,0
 Encampment - Safe Parking Reseda,Homeless Encampment,0,1,0
+Encampment - Safe Parking SPA 1,Homeless Encampment,3,0,0
 Encampment - San Fernando,Homeless Encampment,0,1,0
 Encampment - San Pedro #2,Homeless Encampment,0,3,0
 Encampment - Santa Monica,Homeless Encampment,0,1,0
@@ -69,6 +73,7 @@ Encampment - South LA #8,Homeless Encampment,0,2,0
 Encampment - South LA #9,Homeless Encampment,0,1,0
 Encampment - South LA #10,Homeless Encampment,0,1,0
 Encampment - South LA #11,Homeless Encampment,0,1,0
+Encampment - South LA #12,Homeless Encampment,0,1,0
 Encampment - Sun Valley #2,Homeless Encampment,0,2,0
 Encampment - West LA #4,Homeless Encampment,0,4,0
 Encampment - West LA #5,Homeless Encampment,0,1,0
@@ -88,11 +93,10 @@ Harold,Single Room Occupancy Housing,0,1,0
 Hart Hotel,Single Room Occupancy Housing,0,1,0
 Harvest Home,Homeless Shelter,1,4,0
 HOLA Recuperative Care,Recuperative Care Center,1,2,0
-Holliday's Helping Hands,Homeless Shelter,2,0,0
+Holliday's Helping Hands,Homeless Shelter,4,0,0
 Home at Last - Athens Park,Homeless Shelter,3,3,0
 Home at Last - Avalon,Homeless Shelter,2,0,0
 Home at Last - Manchester,Homeless Shelter,1,2,0
-Home at Last - Vermont,Homeless Shelter,0,1,0
 Home at Last - Western,Homeless Shelter,0,3,0
 Homes For Life,Homeless Shelter,0,1,0
 Hope For Home Pomona,Homeless Shelter,1,17,0
@@ -101,6 +105,7 @@ Hope of The Valley - North Hollywood,Homeless Shelter,1,0,0
 Hope of The Valley - Pacoima Winter Shelter,Homeless Shelter,5,1,0
 Hope of The Valley - The Landing,Homeless Shelter,1,2,0
 Horizon Recuperative Care,Recuperative Care Center,2,6,0
+House of Hope Transitional Housing,Homeless Shelter,0,1,0
 Illumination Foundation Recuperative Care - LA,Recuperative Care Center,1,0,0
 Illumination Foundation Recuperative Care - Santa Fe Springs,Recuperative Care Center,3,0,0
 Jovenes - Norwalk,Homeless Shelter,0,1,0
@@ -126,6 +131,7 @@ Ms. Hazel's House - Ruthelen Street,Homeless Shelter,1,1,0
 Ms. Hazel's House - Wall Street,Homeless Shelter,2,1,0
 National Health Foundation,Recuperative Care Center,1,1,0
 National Health Foundation - HFH,Recuperative Care Center,0,1,0
+Neffertiti's Housing,Homeless Shelter,0,1,0
 New Directions For Veterans,Homeless Shelter,3,7,0
 New Reflections,Homeless Shelter,1,2,0
 Pacific Clinics Portals Community Connections,Homeless Shelter,0,1,0
@@ -137,6 +143,7 @@ PATH - Lodi,Homeless Shelter,0,1,0
 PATH - Madison,Homeless Shelter,4,0,0
 PATH - Madison Interim Housing,Homeless Shelter,0,4,0
 Pathways Transitional Housing,Homeless Shelter,0,1,0
+Prototypes - Bridge Housing,Homeless Shelter,0,2,0
 Proyecto Pastoral - Dolores Mission,Homeless Shelter,1,1,0
 Rainbow Apartments,Single Room Occupancy Housing,0,1,0
 Rossmore Hotel,Single Room Occupancy Housing,1,0,0
@@ -177,7 +184,6 @@ Total Restoration Ministries,Homeless Shelter,3,13,1
 Transitional Living Program,Homeless Shelter,0,3,0
 Union Rescue Mission,Homeless Shelter,2,22,0
 "Union Rescue Mission, DHS Clinic",Homeless Service Provider,1,0,0
-"Union Rescue Mission, Hope Gardens Family Center",Homeless Shelter,0,1,0
 Upward Bound House,Homeless Shelter,1,1,0
 Upward Bound House #2,Homeless Shelter,0,2,0
 Upward Bound House #5,Homeless Shelter,0,1,0

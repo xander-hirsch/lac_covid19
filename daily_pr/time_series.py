@@ -364,7 +364,7 @@ def aggregate_stats(many_daily_pr):
                 x[const.HOSPITALIZATIONS] for x in many_daily_pr
             ],
         }), DATE, const.HOSPITALIZATIONS, const.NEW_HOSPITALIZATIONS,
-        const.NEW_HOSPITALIZATIONS_7_DAY_AVG, ffill_missing=False
+        const.NEW_HOSPITALIZATIONS_7_DAY_AVG, avg_window=7, ffill_missing=False
     )
     df_cases, df_deaths = [aggregate_single_stat(many_daily_pr, x)
                            for x in (const.CASES, const.DEATHS)]

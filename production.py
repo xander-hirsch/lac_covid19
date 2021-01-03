@@ -181,14 +181,16 @@ def export_live(live_dict):
         live_dict[key].to_csv(os.path.join(DIR_LIVE, filename), index=False)
 
 
-def publish(date=None, use_ts_cache=False, use_live_cache=False):
-    export_live(live_dict := query_live(use_live_cache))
-    geocoder.prep_addresses()
-    arcgis_live_non_res(live_dict[const.NON_RESIDENTIAL])
-    arcgis_live_edu(live_dict[const.EDUCATION])
+def publish(date=None, update_live=True, ts_cache=False, live_cache=False):
+    if update_live:
+        export_live(live_dict := query_live(live_cache))
+        geocoder.prep_addresses()
+        arcgis_live_non_res(live_dict[const.NON_RESIDENTIAL])
+        arcgis_live_edu(live_dict[const.EDUCATION])
+
     arcgis_citations()
 
-    if use_ts_cache:
+    if ts_cache:
         ts_dict = generate_all_ts()
     else:
         export_time_series(ts_dict := update_ts())
