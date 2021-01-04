@@ -3,7 +3,7 @@ Setting Name,Setting Type,Number of Confirmed Staff,Number of Confirmed Non-Staf
 A Bridge Home - Casa Azul,Homeless Shelter,1,0,0
 A Bridge Home - Eubank,Homeless Shelter,1,0,0
 A Bridge Home - Hope St.,Homeless Shelter,7,24,0
-A Bridge Home - St. Andrew's,Homeless Shelter,0,8,0
+A Bridge Home - St. Andrew's,Homeless Shelter,0,1,0
 A New Direction Transitional Housing,Homeless Shelter,1,7,1
 Abundant Blessings From Above - 3rd Ave,Homeless Shelter,0,1,0
 Abundant Blessings From Above - 62nd St,Homeless Shelter,0,3,0
@@ -14,10 +14,11 @@ Aviva Family and Children's Services - Wallis House,Homeless Shelter,0,2,0
 Ballington Plaza,Homeless Shelter,0,1,0
 Bassett Park Winter Shelter,Homeless Shelter,0,9,0
 BCP TLP South Los Angeles,Homeless Shelter,2,0,0
-Boyd Hotel,Single Room Occupancy Housing,0,1,0
+Boyd Hotel,Single Room Occupancy Housing,0,2,0
 Bridge Housing For Women,Homeless Shelter,0,2,0
+Bridge Taper Shelter,Homeless Shelter,1,1,0
 Bridge To Home,Homeless Shelter,0,1,0
-Bryant Temple Women's Winter Shelter,Homeless Shelter,0,1,0
+Bryant Temple Women's Winter Shelter,Homeless Shelter,0,4,0
 C3 Skid Row,Homeless Service Provider,5,0,0
 Canby House,Homeless Shelter,1,21,0
 Cardinal Manning Center,Homeless Shelter,1,5,0
@@ -31,6 +32,7 @@ Connections For Women Colden Ave,Homeless Shelter,0,5,0
 Connections For Women Main Street,Homeless Shelter,0,1,0
 Courtland Hotel,Single Room Occupancy Housing,0,1,0
 Covenant House,Homeless Shelter,4,7,0
+Crescent Hotel Apartments,Single Room Occupancy Housing,0,1,0
 Desert Mac Facility,Homeless Shelter,0,3,0
 Downtown Women's Center,Homeless Shelter,5,0,0
 Downtown Women's Center (SRO),Single Room Occupancy Housing,3,0,0
@@ -59,6 +61,7 @@ Encampment - Lincoln Heights #3,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #4,Homeless Encampment,0,1,0
 Encampment - MacArthur Park,Homeless Encampment,0,8,0
 Encampment - Mission Hills #1,Homeless Encampment,0,1,0
+Encampment - North Hollywood #3,Homeless Encampment,0,1,0
 Encampment - Palms,Homeless Encampment,0,1,0
 Encampment - Safe Parking Bixel,Homeless Encampment,0,1,0
 Encampment - Safe Parking Glassell,Homeless Encampment,0,1,0
@@ -81,6 +84,7 @@ Eugene Apartments,Single Room Occupancy Housing,0,2,1
 Exodus Broadway,Homeless Shelter,0,6,0
 First To Serve - Coronado,Homeless Shelter,1,0,0
 First To Serve - Figueroa,Homeless Shelter,0,1,0
+First To Serve - San Pedro,Homeless Shelter,1,0,0
 First To Serve - Vernon,Homeless Shelter,7,6,0
 Friendship Auditorium,Homeless Shelter,7,1,0
 Gateways Apartments SRO,Single Room Occupancy Housing,1,0,0
@@ -123,7 +127,7 @@ Luz En El Pensamiento,Homeless Shelter,1,2,0
 Mama's House,Homeless Shelter,0,1,0
 Marshal House,Homeless Shelter,0,1,0
 Ms. Hazel's House - 59th Place,Homeless Shelter,1,0,0
-Ms. Hazel's House - 66th Street,Homeless Shelter,0,1,0
+Ms. Hazel's House - 66th Street,Homeless Shelter,0,2,0
 Ms. Hazel's House - 67th Street,Homeless Shelter,0,1,0
 Ms. Hazel's House - 74th Street,Homeless Shelter,0,2,0
 Ms. Hazel's House - Crocker Street,Homeless Shelter,0,4,0
@@ -201,6 +205,3 @@ Weingart Center - THP,Homeless Shelter,0,1,0
 Weingart Civic Center A Bridge Home,Homeless Shelter,0,2,0
 Whittier First Day,Homeless Shelter,1,0,0
 Whittier Narrows Shower Event,Homeless Hygiene Center,0,9,0
-Whittier Senior Center,Homeless Shelter,0,1,0
-Women's Care Cottage,Homeless Shelter,0,1,0
-Zahn Memorial Center,Homeless Shelter,0,2,0

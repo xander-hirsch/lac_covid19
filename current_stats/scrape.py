@@ -105,10 +105,10 @@ def parse_recent(html):
 
 def parse_outbreaks(html, id_):
     """A general helper function to parse an outbreak table"""
-    return (
-        pd.read_html(str(table_html(html, id_)))[0]
-        .set_index(OBS).drop(const.TOTAL).convert_dtypes(convert_integer=False)
-    )
+    df = pd.read_html(str(table_html(html, id_)))[0].set_index(OBS)
+    if const.TOTAL in df.index:
+        df.drop(const.TOTAL, inplace=True)
+    return df.convert_dtypes(convert_integer=False)
 
 
 def parse_residential(html):
