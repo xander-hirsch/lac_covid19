@@ -12,7 +12,7 @@ Angel's Flight Youth Shelter,Homeless Shelter,1,1,0
 Anita May Rosenstein Campus LGBT Center,Homeless Shelter,3,0,0
 Aviva Family and Children's Services - Wallis House,Homeless Shelter,0,2,0
 Ballington Plaza,Homeless Shelter,0,1,0
-Bassett Park Winter Shelter,Homeless Shelter,0,9,0
+Bassett Park Winter Shelter,Homeless Shelter,1,9,0
 BCP TLP South Los Angeles,Homeless Shelter,2,0,0
 Boyd Hotel,Single Room Occupancy Housing,0,2,0
 Bridge Housing For Women,Homeless Shelter,0,2,0
@@ -26,9 +26,9 @@ Casa de Vida,Homeless Shelter,1,8,0
 Cheviot Hills Recreation Center,Homeless Shelter,1,0,0
 "Community Bridge Housing, Sylmar",Homeless Shelter,0,1,0
 Connections For Women,Homeless Shelter,0,6,0
-Connections For Women 88th Street,Homeless Shelter,0,6,0
-Connections For Women 116th Street,Homeless Shelter,0,1,0
-Connections For Women Colden Ave,Homeless Shelter,0,5,0
+Connections For Women 88th Street,Homeless Shelter,2,5,0
+Connections For Women 116th Street,Homeless Shelter,0,4,0
+Connections For Women Colden Ave,Homeless Shelter,0,6,0
 Connections For Women Main Street,Homeless Shelter,0,1,0
 Courtland Hotel,Single Room Occupancy Housing,0,1,0
 Covenant House,Homeless Shelter,4,7,0
@@ -52,6 +52,7 @@ Encampment - Central LA #23,Homeless Encampment,0,1,0
 Encampment - Central LA #24,Homeless Encampment,0,1,0
 Encampment - Central LA #27,Homeless Encampment,0,1,0
 Encampment - Central LA #30,Homeless Encampment,0,1,0
+Encampment - Central LA #32,Homeless Encampment,0,1,0
 Encampment - Eagle Rock,Homeless Encampment,2,1,0
 Encampment - East Hollywood,Homeless Encampment,0,1,0
 Encampment - Echo Park,Homeless Encampment,0,1,0
@@ -70,6 +71,7 @@ Encampment - Safe Parking SPA 1,Homeless Encampment,3,0,0
 Encampment - San Fernando,Homeless Encampment,0,1,0
 Encampment - San Pedro #2,Homeless Encampment,0,3,0
 Encampment - Santa Monica,Homeless Encampment,0,1,0
+Encampment - Santa Monica #2,Homeless Encampment,0,2,0
 Encampment - South El Monte,Homeless Encampment,0,3,1
 Encampment - South Gate #2,Homeless Encampment,0,2,0
 Encampment - South LA #8,Homeless Encampment,0,2,0
@@ -92,7 +94,7 @@ Good Shepherd Languille,Homeless Shelter,0,1,0
 Gratitude House,Homeless Shelter,0,1,0
 Harbor Interfaith - A Bridge Home San Pedro,Homeless Shelter,1,0,0
 Harbor Interfaith 8th Street,Homeless Shelter,3,0,0
-Harbor Interfaith 9th Street,Homeless Service Provider,3,0,0
+Harbor Interfaith 9th Street,Homeless Service Provider,6,0,0
 Harold,Single Room Occupancy Housing,0,1,0
 Hart Hotel,Single Room Occupancy Housing,0,1,0
 Harvest Home,Homeless Shelter,1,4,0
@@ -180,7 +182,8 @@ The Arroyo,Homeless Shelter,2,0,0
 The King Edward,Single Room Occupancy Housing,0,1,0
 The Madison Hotel,Single Room Occupancy Housing,0,1,0
 The People Concern El Puente,Homeless Shelter,0,2,0
-The Silver Villa,Homeless Shelter,1,0,0
+The Silver Villa (1),Homeless Shelter,1,0,0
+The Silver Villa (2),Homeless Shelter,0,1,0
 The T-House,Homeless Shelter,1,2,0
 The Whole Child Interim Safe Families Shelter,Homeless Shelter,2,0,0
 TLP Taft,Homeless Shelter,0,1,0
@@ -194,6 +197,7 @@ Upward Bound House #5,Homeless Shelter,0,1,0
 Upward Bound House #6,Homeless Shelter,0,1,0
 Urban Alchemy Care Plus Program - Outreach Beacon,Homeless Service Provider,7,0,0
 "US Veterans Initiative, Inglewood",Homeless Shelter,1,4,0
+Valley Oasis - 60th St,Homeless Shelter,0,1,0
 Ward Hotel,Single Room Occupancy Housing,0,1,0
 Watts Labor CAC Shelter,Homeless Shelter,0,1,0
 Weingart / Gardner Library Bridge Housing,Homeless Shelter,1,0,0
@@ -205,3 +209,6 @@ Weingart Center - THP,Homeless Shelter,0,1,0
 Weingart Civic Center A Bridge Home,Homeless Shelter,0,2,0
 Whittier First Day,Homeless Shelter,1,0,0
 Whittier Narrows Shower Event,Homeless Hygiene Center,0,9,0
+Whittier Senior Center,Homeless Shelter,2,11,0
+Women's Care Cottage,Homeless Shelter,0,1,0
+Zahn Memorial Center,Homeless Shelter,0,2,0

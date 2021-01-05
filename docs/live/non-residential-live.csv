@@ -26,7 +26,7 @@ Amazon DLX9,"5750 Mesmer Ave, Culver City, CA, 90230",12,0
 Amazon DPS1,"4187 Temple City Blvd, El Monte, CA, 91731",66,0
 "American Nuts, LLC","12950 San Fernando Rd, Sylmar, CA, 91342",13,0
 Andrew Lauren Surfaces (1),"13220 Cambridge St, Santa Fe Springs, CA, 90670",3,0
-Andrew Lauren Surfaces (2),"13220 Cambridge St, Santa Fe Springs, CA, 90670",18,0
+Andrew Lauren Surfaces (2),"13220 Cambridge St, Santa Fe Springs, CA, 90670",24,0
 "Apple Store, Beverly Center","8500 Beverly Blvd, Suite 782, Los Angeles, CA, 90048",3,0
 "Apple Store, Glendale Galleria","2126 Glendale Galleria, Glendale, CA, 91210",13,0
 "Apple Store, Los Cerritos Center","242 Los Cerritos Mall, Cerritos, CA, 90703",10,0
@@ -107,7 +107,7 @@ Corn Maiden Foods,"24201 Frampton Ave, Harbor City, CA, 90710",14,0
 "Costco Business Center Warehouse, Burbank #653","11428 Sherman Way, North Hollywood, CA, 91605",16,0
 "Costco Warehouse, Culver City #479","13463 Washington Blvd, Marina Del Rey, CA, 90292",71,0
 "Costco Warehouse, Lancaster #762","1141 W Avenue L, Lancaster, CA, 93534",15,0
-"Costco Warehouse, Monterey Park #1318","2000 Market Place Dr, Monterey Park, CA, 91755",23,0
+"Costco Warehouse, Monterey Park #1318","2000 Market Place Dr, Monterey Park, CA, 91755",35,0
 "Costco Warehouse, Santa Clarita #447","18649 Via Princessa, Santa Clarita, CA, 91387",24,0
 "Costco Warehouse, Van Nuys #48","6100 Sepulveda Blvd, Van Nuys, CA, 91411",50,0
 "Costco Warehouse, Woodland Hills #1205","21800 Victory Blvd, Woodland Hills, CA, 91367",42,0
@@ -147,7 +147,7 @@ FedEx Ground Arcadia,"12369 Lower Azusa Rd, Arcadia, CA, 91006",82,0
 FedEx Ground Carson,"1725 Charles Willard St, Carson, CA, 90746",31,0
 FedEx Ground City of Industry,"200 Old Ranch Rd, City of Industry, CA, 91789",69,0
 FedEx Ground Pacoima,"12500 Branford St, Pacoima, CA, 91331",128,0
-FedEx Ground Sun Valley,"9210 San Fernando Rd, Sun Valley, CA, 91352",28,0
+FedEx Ground Sun Valley,"9210 San Fernando Rd, Sun Valley, CA, 91352",35,0
 FedEx Ground Vernon,"2600 E 28th St, Vernon, CA, 90058",16,0
 FedEx LAX,"5927 W Imperial Hwy, Los Angeles, CA, 90045",28,0
 Fenix Marine Services,"614 Terminal Way, San Pedro, CA, 90731",10,0
@@ -300,6 +300,7 @@ Little Caesars Pizza #5903,"751 S Workman St, San Fernando, CA, 91340",7,0
 Live Play Mobile,"3951 Higuera St, Culver City, CA, 90232",5,0
 Location Secret Charm,"1433 Walnut St, Los Angeles, CA, 90011",9,0
 Lockheed Martin Palmdale,"1011 Lockheed Way, Palmdale, CA, 93599",14,0
+"Los Altos Food Products, LLC","450 Baldwin Park Blvd, City of Industry, CA, 91746",10,0
 Los Amigos Restaurant,"2825 W Olive Ave, Burbank, CA, 91505",4,0
 Los Angeles Dodgers LLC,"1000 Vin Scully Ave, Los Angeles, CA, 90012",12,1
 "Los Angeles Motor Cars, Inc.","2025 S Figueroa St, Los Angeles, CA, 90007",33,0
@@ -412,6 +413,7 @@ Snap on Specialty Tools,"19220 San Jose Ave, City of Industry, CA, 91748",26,0
 Southland Box Company,"4201 Fruitland Ave, Vernon, CA, 90058",12,0
 Space Corporation,"1 Rocket Rd, Hawthorne, CA, 90250",3,0
 Spears Manufacturing Company,"15853 Olden St, Sylmar, CA, 91342",20,0
+Sprouts Farmers Market #236,"1011 N San Fernando Blvd, Burbank, CA, 91504",10,0
 Sprouts Farmers Market #411,"8985 Venice Blvd, Los Angeles, CA, 90034",9,0
 Sprouts Farmers Market #418,"1375 Foothill Blvd, La Verne, CA, 91750",5,0
 "Square-H Brands, Inc.","2731 S Soto St, Vernon, CA, 90058",20,0
@@ -445,7 +447,7 @@ Tempur-Sealy Mattress Company,"825 Ajax Ave, City of Industry, CA, 91748",17,0
 "TFC Manufacturing, Inc.","4001 Watson Plaza Dr, Lakewood, CA, 90712",13,0
 The American Bottling Company,"3220 E 26th St, Vernon, CA, 90058",10,0
 The Bicycle Hotel & Casino,"888 Bicycle Casino Dr, Bell Gardens, CA, 90201",11,0
-The Gill Corporation,"4056 Easy St, Building 1, El Monte, CA, 91731",11,0
+The Gill Corporation,"4056 Easy St, Building 1, El Monte, CA, 91731",15,0
 The Habit Burger Grill - Chatsworth,"9243 Winnetka Ave, Chatsworth, CA, 91311",5,0
 The Habit Burger Grill - Echo Park,"2134 W Sunset Blvd, A, Los Angeles, CA, 90026",5,0
 The Habit Burger Grill - South Gate,"4791 Firestone Blvd, South Gate, CA, 90280",4,0
@@ -489,13 +491,15 @@ Vista Sotheby's International Realty,"16 Malaga Cove Plz, Palos Verdes Estates, 
 Volvo Santa Monica,"1631 Santa Monica Blvd, Santa Monica, CA, 90404",8,0
 Vons West Hollywood,"8969 Santa Monica Blvd, West Hollywood, CA, 90069",15,0
 Voyant Beauty,"9250 Mason Ave, Chatsworth, CA, 91311",15,0
+"Walker Design, Inc.","11926 Allegheny St, Sun Valley, CA, 91352",3,0
 Warner Bros Television - Lucifer,"4000 Warner Blvd, Bldg 28/ Suite 1300, Burbank, CA, 91522",13,0
 Warner Bros Television - Young Sheldon,"4000 Warner Blvd, Building 191, Burbank, CA, 91522",12,0
 Waste Management - Azusa Transfer Station and Recycling Center,"1501 W Gladstone St, Azusa, CA, 91702",7,0
 WebCor Builders,"945 W 8th St, Los Angeles, CA, 90017",17,0
 Wells Fargo Bank - El Monte,"9000 Flair Dr, El Monte, CA, 91731",22,0
 Westlake Financial Services,"29851 Agoura Rd, Agoura Hills, CA, 91301",4,0
-"Whole Foods Market, 23rd & Wilshire Blvd","2201 Wilshire Blvd, Santa Monica, CA, 90403",17,0
+Whole Foods Market- Downtown LA,"788 S Grand Ave, Los Angeles, CA, 90017",11,0
+"Whole Foods Market, 23rd & Wilshire Blvd","2201 Wilshire Blvd, Santa Monica, CA, 90403",21,0
 "Whole Foods Market, Sherman Oaks","14311 Ventura Blvd, Sherman Oaks, CA, 91423",18,0
 "Wismettac Asian Foods, Inc.","13409 Orden Dr, Santa Fe Springs, CA, 90670",18,0
 Woodpecker Cabinets,"21512 Nordhoff St, Chatsworth, CA, 91311",5,0
