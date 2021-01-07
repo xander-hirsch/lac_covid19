@@ -9,7 +9,7 @@ Abundant Blessings From Above - 3rd Ave,Homeless Shelter,0,1,0
 Abundant Blessings From Above - 62nd St,Homeless Shelter,0,3,0
 Abundant Blessings From Above 332,Homeless Shelter,0,3,0
 Angel's Flight Youth Shelter,Homeless Shelter,1,1,0
-Anita May Rosenstein Campus LGBT Center,Homeless Shelter,3,0,0
+Anita May Rosenstein Campus Lgbt Center,Homeless Shelter,3,0,0
 Aviva Family and Children's Services - Wallis House,Homeless Shelter,0,2,0
 Ballington Plaza,Homeless Shelter,0,1,0
 Bassett Park Winter Shelter,Homeless Shelter,1,9,0
@@ -21,17 +21,18 @@ Bridge To Home,Homeless Shelter,0,1,0
 Bryant Temple Women's Winter Shelter,Homeless Shelter,0,4,0
 C3 Skid Row,Homeless Service Provider,7,3,0
 Canby House,Homeless Shelter,1,21,0
-Cardinal Manning Center,Homeless Shelter,1,5,0
+Cardinal Manning Center,Homeless Shelter,1,5,1
 Casa de Vida,Homeless Shelter,2,8,0
 Cheviot Hills Recreation Center,Homeless Shelter,1,0,0
+Cloverfield,Homeless Shelter,4,0,0
 "Community Bridge Housing, Sylmar",Homeless Shelter,0,1,0
-Connections For Women,Homeless Shelter,0,6,0
+Connections For Women,Homeless Shelter,0,10,0
 Connections For Women 88th Street,Homeless Shelter,2,5,0
 Connections For Women 116th Street,Homeless Shelter,0,4,0
 Connections For Women Colden Ave,Homeless Shelter,0,6,0
 Connections For Women Main Street,Homeless Shelter,0,1,0
 Courtland Hotel,Single Room Occupancy Housing,0,1,0
-Covenant House,Homeless Shelter,4,7,0
+Covenant House,Homeless Shelter,7,8,0
 Crescent Hotel Apartments,Single Room Occupancy Housing,0,1,0
 Desert Mac Facility,Homeless Shelter,0,3,0
 Downtown Women's Center,Homeless Shelter,5,0,0
@@ -57,6 +58,7 @@ Encampment - Central LA #34,Homeless Encampment,0,1,0
 Encampment - Downey,Homeless Encampment,0,1,0
 Encampment - Eagle Rock,Homeless Encampment,2,1,0
 Encampment - East Hollywood,Homeless Encampment,0,1,0
+Encampment - East LA #2,Homeless Encampment,0,1,0
 Encampment - Echo Park,Homeless Encampment,0,1,0
 Encampment - Highland Park,Homeless Encampment,0,1,0
 Encampment - Hollywood #5,Homeless Encampment,0,1,0
@@ -64,6 +66,7 @@ Encampment - Lincoln Heights #3,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #4,Homeless Encampment,0,1,0
 Encampment - MacArthur Park,Homeless Encampment,0,8,0
 Encampment - Mission Hills #1,Homeless Encampment,0,1,0
+Encampment - Montecito Heights,Homeless Encampment,0,1,0
 Encampment - North Hollywood #3,Homeless Encampment,0,1,0
 Encampment - Palms,Homeless Encampment,0,1,0
 Encampment - Safe Parking Bixel,Homeless Encampment,0,1,0
@@ -74,6 +77,7 @@ Encampment - San Fernando,Homeless Encampment,0,1,0
 Encampment - San Pedro #2,Homeless Encampment,0,3,0
 Encampment - Santa Monica,Homeless Encampment,0,1,0
 Encampment - Santa Monica #2,Homeless Encampment,0,2,0
+Encampment - Signal Hill,Homeless Encampment,0,1,0
 Encampment - South El Monte,Homeless Encampment,0,3,1
 Encampment - South Gate #2,Homeless Encampment,0,2,0
 Encampment - South LA #8,Homeless Encampment,0,2,0
@@ -115,14 +119,15 @@ Hope of The Valley - The Landing,Homeless Shelter,1,2,0
 Horizon Recuperative Care,Recuperative Care Center,2,6,0
 House of Hope Transitional Housing,Homeless Shelter,0,1,0
 Illumination Foundation Recuperative Care - LA,Recuperative Care Center,1,0,0
-Illumination Foundation Recuperative Care - Santa Fe Springs,Recuperative Care Center,3,0,0
+Illumination Foundation Recuperative Care - Santa Fe Springs,Recuperative Care Center,9,18,0
 Jovenes - Norwalk,Homeless Shelter,0,1,0
 Jovenes - The Village,Homeless Shelter,0,3,0
+Jovenes - Union Ave.,Homeless Shelter,1,0,0
 Kensington Campus - Interim Housing,Homeless Shelter,3,1,0
 La Jolla,Single Room Occupancy Housing,0,1,0
 La Posada Shelter,Homeless Shelter,4,3,0
 LAMP Village,Homeless Shelter,2,0,0
-Las Americas Hotel,Single Room Occupancy Housing,2,3,0
+Las Americas Hotel,Single Room Occupancy Housing,2,4,0
 Los Angeles Mission - Anne Douglas Center,Homeless Shelter,1,0,0
 Los Angeles Mission - Men's Shelter,Homeless Shelter,0,1,0
 Los Angeles Room and Board,Homeless Shelter,0,10,0
@@ -183,7 +188,7 @@ The Arroyo,Homeless Shelter,2,0,0
 The King Edward,Single Room Occupancy Housing,0,1,0
 The Madison Hotel,Single Room Occupancy Housing,0,1,0
 The People Concern El Puente,Homeless Shelter,0,2,0
-The Silver Villa (2),Homeless Shelter,0,1,0
+The Silver Villa,Homeless Shelter,0,1,0
 The T-House,Homeless Shelter,1,2,0
 The Whole Child Interim Safe Families Shelter,Homeless Shelter,2,0,0
 TLP Taft,Homeless Shelter,0,1,0
@@ -196,7 +201,7 @@ Upward Bound House #2,Homeless Shelter,0,2,0
 Upward Bound House #5,Homeless Shelter,0,1,0
 Upward Bound House #6,Homeless Shelter,0,1,0
 Urban Alchemy Care Plus Program - Outreach Beacon,Homeless Service Provider,7,0,0
-"US Veterans Initiative, Inglewood",Homeless Shelter,1,4,0
+"US Veterans Initiative, Inglewood",Homeless Shelter,7,14,0
 Valley Oasis - 60th St,Homeless Shelter,0,1,0
 Ward Hotel,Single Room Occupancy Housing,0,1,0
 Watts Labor CAC Shelter,Homeless Shelter,0,1,0

@@ -1,5 +1,5 @@
 Setting Name,Address,Total Confirmed Staff,Total Confirmed Students
-Acton-Agua Dulce District Office,"32248 Crown Valley Rd, Acton, CA, 93510",5,0
+Acton-Agua Dulce District Office,"32248 Crown Valley Rd, Acton, CA, 93510",7,0
 Amir Family Child Care,"5218 Sylmar Ave, Sherman Oaks, CA, 91401",3,6
 "Antelope Valley College, CTE Cohort","3041 W Avenue K, Lancaster, CA, 93536",2,3
 "Antelope Valley College, Nursing","3041 W Avenue K, Lancaster, CA, 93536",2,9
@@ -18,7 +18,7 @@ Busy Bees Daycare (Cortez Family Childcare),"11047 Liggett St, Norwalk, CA, 9065
 "Canyon View School, McKinley Schools","180 Via Verde, Suite 200, San Dimas, CA, 91773",2,1
 Child's World School,"6100 Lindley Ave, Encino, CA, 91316",4,4
 Curtis School,"15871 Mulholland Dr, Los Angeles, CA, 90049",3,0
-Dr. Julian Nava Learning Academy Middle School,"1420 E Adams Blvd, Los Angeles, CA, 90011",6,0
+Dr Julian Nava Learning Academy Middle School,"1420 E Adams Blvd, Los Angeles, CA, 90011",6,0
 Drew Child Development Center,"9200 Maie Ave, Los Angeles, CA, 90002",3,2
 Emek Hebrew Academy Day Camp,"15365 Magnolia Blvd, Sherman Oaks, CA, 91403",2,5
 Esalante Elementry School,"4443 Live Oak St, Cudahy, CA, 90201",7,0
@@ -30,12 +30,13 @@ Harry Pregerson Child Care Center,"255 E Temple St, Los Angeles, CA, 90012",1,3
 "Hillery T Broadous Elementary, LAUSD","12561 Filmore St, Pacoima, CA, 91331",3,0
 Holy Martyrs Armenian Preschool,"16617 Parthenia St, North Hills, CA, 91343",6,0
 James A Garfield Senior High,"5101 E 6th St, Los Angeles, CA, 90022",9,0
-"Jefferson Elementary, Lennox School District","10322 Condon Ave, Inglewood, CA, 90304",5,0
+"Jefferson Elementary, Lennox School District","10322 Condon Ave, Inglewood, CA, 90304",7,0
+Jim Gilliam Childcare,"4000 S La Brea Ave, Los Angeles, CA, 90008",4,0
 "Kadima Day School, West Hills","7011 Shoup Ave, West Hills, CA, 91307",2,4
 Kenmore Elementary School,"3823 Kenmore Ave, Baldwin Park, CA, 91706",3,0
 Kranz Intermediate School,"12460 Fineview St, El Monte, CA, 91732",3,0
 "LA City Department of Recreation and Parks, Delano Recreation Center","15100 Erwin St, Van Nuys, CA, 91411",4,3
-La Marina Pre-School and Kindergarten,"115 S Sepulveda Blvd, Manhattan Beach, CA, 90266",4,3
+La Marina Pre -School and Kindergarten,"115 S Sepulveda Blvd, Manhattan Beach, CA, 90266",4,3
 Leona Cox Community School,"18643 Oakmoor St, Santa Clarita, CA, 91351",4,0
 Life Pacific University Athletics,"1100 W Covina Blvd, San Dimas, CA, 91773",0,6
 "Los Angeles High School, LAUSD","4650 W Olympic Blvd, Los Angeles, CA, 90019",5,0
@@ -54,9 +55,8 @@ Pico Rivera Head Start and Child Care,"9125 Burke St, Pico Rivera, CA, 90660",11
 "Pomona Unified School District, School Mental Health Dept","605 N Park Ave, Pomona, CA, 91768",6,0
 Proyecto Pastoral Centro de Alegria,"420 N Soto St, Los Angeles, CA, 90033",1,2
 Reyes Family Childcare,"1655 Westmoreland Blvd, Los Angeles, CA, 90006",2,5
-"RFK Community Schools, LAUSD","701 S Catalina St, Los Angeles, CA, 90005",5,0
+"Rfk Community Schools, LAUSD","701 S Catalina St, Los Angeles, CA, 90005",5,0
 Sinai Akiba Academy,"10400 Wilshire Blvd, Los Angeles, CA, 90024",7,1
-"South East Senior High, LAUSD","2720 Tweedy Blvd, South Gate, CA, 90280",6,0
 "South Gate High School, LAUSD","3351 Firestone Blvd, South Gate, CA, 90280",12,0
 St Mark's Lutheran Preschool,"2323 Las Lomitas Dr, Hacienda Heights, CA, 91745",3,3
 St. Genevieve School,"13967 Roscoe Blvd, Panorama City, CA, 91402",5,0
@@ -66,4 +66,6 @@ Tiny DOTs Early Education Center,"100 S Main St, Los Angeles, CA, 90012",3,0
 Trinity Classical Academy,"28310 Kelly Johnson Pkwy, Valencia, CA, 91355",5,4
 UCLA Facilities,"731 Charles E Young Dr S, Los Angeles, CA, 90095",16,0
 Valor Christian Academy Preschool/TK-8th Grade,"525 Earle Ln, Redondo Beach, CA, 90278",5,0
+Van Nuys Early Education Center,"14350 Sylvan St, Van Nuys, CA, 91401",5,2
+"Wescove Elementary School, West Covina","1010 W Vine Ave, West Covina, CA, 91790",4,0
 "Woodrow Wilson Senior High, LAUSD","4500 Multnomah St, Los Angeles, CA, 90032",6,0
