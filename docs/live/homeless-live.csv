@@ -41,7 +41,7 @@ Echo Park Recreation Center Shelter,Homeless Shelter,1,1,0
 Elden House,Homeless Shelter,1,1,0
 Encampment - Canoga Park,Homeless Encampment,0,1,0
 Encampment - Central LA,Homeless Encampment,0,1,0
-Encampment - Central LA #5,Homeless Encampment,0,1,0
+Encampment - Central LA #5,Homeless Encampment,0,5,0
 Encampment - Central LA #7,Homeless Encampment,0,1,0
 Encampment - Central LA #8,Homeless Encampment,0,2,0
 Encampment - Central LA #10,Homeless Encampment,0,1,0
@@ -53,13 +53,13 @@ Encampment - Central LA #24,Homeless Encampment,0,1,0
 Encampment - Central LA #27,Homeless Encampment,0,1,0
 Encampment - Central LA #30,Homeless Encampment,0,1,0
 Encampment - Central LA #32,Homeless Encampment,0,1,0
-Encampment - Central LA #33,Homeless Encampment,0,1,0
 Encampment - Central LA #34,Homeless Encampment,0,1,0
 Encampment - Downey,Homeless Encampment,0,1,0
 Encampment - Eagle Rock,Homeless Encampment,2,1,0
 Encampment - East Hollywood,Homeless Encampment,0,1,0
 Encampment - East LA #2,Homeless Encampment,0,1,0
 Encampment - Echo Park,Homeless Encampment,0,1,0
+Encampment - Hacienda Heights,Homeless Encampment,0,2,0
 Encampment - Highland Park,Homeless Encampment,0,1,0
 Encampment - Hollywood #5,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #3,Homeless Encampment,0,1,0
@@ -82,14 +82,18 @@ Encampment - South El Monte,Homeless Encampment,0,3,1
 Encampment - South Gate #2,Homeless Encampment,0,2,0
 Encampment - South LA #8,Homeless Encampment,0,2,0
 Encampment - South LA #9,Homeless Encampment,0,1,0
-Encampment - South LA #10,Homeless Encampment,0,1,0
+Encampment - South LA #10,Homeless Encampment,0,3,0
 Encampment - South LA #11,Homeless Encampment,0,1,0
 Encampment - South LA #12,Homeless Encampment,0,1,0
+Encampment - South LA #13,Homeless Encampment,0,1,0
 Encampment - Sun Valley #2,Homeless Encampment,0,2,0
+Encampment - Venice,Homeless Encampment,0,1,0
 Encampment - West LA #4,Homeless Encampment,0,4,0
 Encampment - West LA #5,Homeless Encampment,0,1,0
 Eugene Apartments,Single Room Occupancy Housing,0,2,1
 Exodus Broadway,Homeless Shelter,0,6,0
+Fair Opportunity For Change #3,Homeless Shelter,0,1,0
+First To Serve - 50th Street,Homeless Shelter,0,1,0
 First To Serve - Coronado,Homeless Shelter,1,0,0
 First To Serve - Figueroa,Homeless Shelter,0,1,0
 First To Serve - San Pedro,Homeless Shelter,1,0,0
@@ -109,6 +113,7 @@ Holliday's Helping Hands,Homeless Shelter,4,0,0
 Home at Last - Athens Park,Homeless Shelter,3,3,0
 Home at Last - Avalon,Homeless Shelter,2,0,0
 Home at Last - Manchester,Homeless Shelter,1,2,0
+Home at Last - Vermont,Homeless Shelter,0,1,0
 Home at Last - Western,Homeless Shelter,0,3,0
 Homes For Life,Homeless Shelter,0,1,0
 Hope For Home Pomona,Homeless Shelter,1,17,0
@@ -183,6 +188,7 @@ St. Agnes Hotel,Single Room Occupancy Housing,0,1,0
 St. George Hotel,Single Room Occupancy Housing,0,1,0
 St. Mark's Hotel,Single Room Occupancy Housing,0,1,0
 "St. Matthew's Lutheran Church, North Hollywood",Homeless Service Provider,0,1,0
+Steinmetz Shelter,Homeless Shelter,0,1,0
 Sustainable Futures Project Interim Housing Shelter,Homeless Shelter,1,0,0
 The Arroyo,Homeless Shelter,2,0,0
 The King Edward,Single Room Occupancy Housing,0,1,0
@@ -194,6 +200,7 @@ The Whole Child Interim Safe Families Shelter,Homeless Shelter,2,0,0
 TLP Taft,Homeless Shelter,0,1,0
 Total Restoration Ministries,Homeless Shelter,3,13,1
 Transitional Living Program,Homeless Shelter,0,3,0
+Turning Point Housing,Homeless Shelter,0,1,0
 Union Rescue Mission,Homeless Shelter,2,22,0
 "Union Rescue Mission, DHS Clinic",Homeless Service Provider,1,0,0
 Upward Bound House,Homeless Shelter,1,1,0
