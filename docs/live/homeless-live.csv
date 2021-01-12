@@ -24,7 +24,7 @@ Cardinal Manning Center,Homeless Shelter,1,5,1
 Casa de Vida,Homeless Shelter,2,8,0
 Cheviot Hills Recreation Center,Homeless Shelter,1,0,0
 Cloverfield,Homeless Shelter,4,0,0
-"Community Bridge Housing, Sylmar",Homeless Shelter,0,1,0
+"Community Bridge Housing, Sylmar",Homeless Shelter,0,3,0
 Connections For Women,Homeless Shelter,0,10,0
 Connections For Women 88th Street,Homeless Shelter,2,5,0
 Connections For Women 116th Street,Homeless Shelter,0,6,0
@@ -63,6 +63,7 @@ Encampment - Echo Park,Homeless Encampment,0,1,0
 Encampment - Hacienda Heights,Homeless Encampment,0,2,0
 Encampment - Highland Park,Homeless Encampment,0,1,0
 Encampment - Hollywood #5,Homeless Encampment,0,1,0
+Encampment - Hollywood #9,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #3,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #4,Homeless Encampment,0,1,0
 Encampment - MacArthur Park,Homeless Encampment,0,8,0
@@ -128,6 +129,7 @@ Hope For Home Pomona,Homeless Shelter,1,17,0
 Hope of The Valley - A Bridge Home Van Nuys,Homeless Shelter,9,12,1
 Hope of The Valley - North Hollywood,Homeless Shelter,1,0,0
 Hope of The Valley - Pacoima Winter Shelter,Homeless Shelter,5,1,0
+Hopics - Long Beach Ave,Homeless Shelter,1,0,0
 Horizon Recuperative Care,Recuperative Care Center,2,6,0
 House of Hope Transitional Housing,Homeless Shelter,0,1,0
 Illumination Foundation Recuperative Care - LA,Recuperative Care Center,1,0,0
@@ -174,6 +176,7 @@ PATH - Madison Interim Housing,Homeless Shelter,0,4,0
 Pathways Transitional Housing,Homeless Shelter,0,1,0
 Prototypes - Bridge Housing,Homeless Shelter,0,2,0
 Proyecto Pastoral - Dolores Mission,Homeless Shelter,1,1,0
+Proyecto Pastoral Shelter,Homeless Shelter,1,0,0
 Rainbow Apartments,Single Room Occupancy Housing,0,1,0
 Rossmore Hotel,Single Room Occupancy Housing,1,0,0
 Russ Hotel,Single Room Occupancy Housing,6,4,0
@@ -195,7 +198,7 @@ Serenity Recuperative Care - ELA,Recuperative Care Center,0,1,0
 Serenity Recuperative Care - Lakeview Terrace,Homeless Shelter,1,0,0
 Shouridge House,Homeless Shelter,0,2,0
 Simone Hotel,Single Room Occupancy Housing,0,1,0
-Solar Recuperative Care,Homeless Shelter,0,1,0
+Solar Recuperative Care,Homeless Shelter,0,1,1
 South LA Women's Shelter,Homeless Shelter,0,2,0
 St. Agnes Hotel,Single Room Occupancy Housing,0,1,0
 St. George Hotel,Single Room Occupancy Housing,0,1,0
@@ -203,6 +206,7 @@ St. Mark's Hotel,Single Room Occupancy Housing,0,1,0
 "St. Matthew's Lutheran Church, North Hollywood",Homeless Service Provider,0,1,0
 Steinmetz Shelter,Homeless Shelter,0,1,0
 The Arroyo,Homeless Shelter,2,0,0
+The Carlton Hotel,Single Room Occupancy Housing,0,1,0
 The King Edward,Single Room Occupancy Housing,0,1,0
 The Madison Hotel,Single Room Occupancy Housing,0,1,0
 The People Concern El Puente,Homeless Shelter,0,2,0
@@ -211,7 +215,7 @@ The T-House,Homeless Shelter,1,2,0
 The Whole Child Interim Safe Families Shelter,Homeless Shelter,2,0,0
 TLP Taft,Homeless Shelter,0,1,0
 Total Restoration Ministries,Homeless Shelter,3,13,1
-Transitional Living Program,Homeless Shelter,0,3,0
+Transitional Living Program - Lancaster,Homeless Shelter,0,4,0
 Turning Point Housing,Homeless Shelter,0,1,0
 Union Rescue Mission,Homeless Shelter,2,22,0
 "Union Rescue Mission, DHS Clinic",Homeless Service Provider,1,0,0
