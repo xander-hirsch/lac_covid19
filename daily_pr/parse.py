@@ -22,7 +22,7 @@ RE_NEW_DEATHS_CASES_NORMAL = re.compile(
     '(?P<deaths>[\d,]+|[a-z]+)\s+new\s+deaths?\s+and\s+(?P<cases>[\d,]+)\s+new\s+cases'
 )
 RE_NEW_DEATHS_CASES_AUTO = re.compile(
-    'Daily\s+(new\s+)?cases:\s+(?P<cases>[\d,]+)\s+Daily\s+(new\s+)?deaths:\s+(?P<deaths>[\d,]+)'
+    'Daily\s+(new\s+)?cases:\s+(?P<cases>[\d,]+)\*?\s+Daily\s+(new\s+)?deaths:\s+(?P<deaths>[\d,]+)'
 )
 
 RE_HD = re.compile(
