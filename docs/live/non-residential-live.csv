@@ -72,7 +72,7 @@ Camino Real Kitchens,"2638 E Vernon Ave, Vernon, CA, 90058",33,0
 "Campus Residential Dining, UCLA","351 Charles E Young Dr W, Los Angeles, CA, 90024",9,0
 Cannasafe,"7027 Hayvenhurst Ave, Van Nuys, CA, 91406",9,0
 Carmax,"405 W Technology Dr, Palmdale, CA, 93551",16,0
-CBS Studio Center Stage 04,"4024 Radford Ave, Studio City, CA, 91604",11,0
+CBS Studio Center Stage 4,"4024 Radford Ave, Studio City, CA, 91604",11,0
 CBS Studio Center Stage 14,"4024 Radford Ave, Studio City, CA, 91604",8,0
 CEMCO,"263 N Covina Ln, La Puente, CA, 91746",12,0
 Century 21 All Stars,"9155 Telegraph Rd, Pico Rivera, CA, 90660",5,0
@@ -90,7 +90,7 @@ Cintas Corp.,"7735 Paramount Blvd, Pico Rivera, CA, 90660",14,0
 Cintas Corporation,"20100 S Susana Rd, Compton, CA, 90221",18,0
 Citibank,"13003 Victory Blvd, North Hollywood, CA, 91606",6,0
 City of Baldwin Park,"14403 Pacific Ave, Baldwin Park, CA, 91706",20,0
-"City of Carson, City Hall, Floor 2","701 E Carson St, Carson, CA, 90745",12,0
+"City of Carson, City Hall, 2nd Floor","701 E Carson St, Carson, CA, 90745",12,0
 City of Santa Clarita,"23920 Valencia Blvd, Santa Clarita, CA, 91355",11,0
 Classic Distributing & Beverage Group,"120 Puente Ave, City of Industry, CA, 91746",38,0
 Coast Packing Company,"3275 E Vernon Ave, Vernon, CA, 90058",20,0
@@ -104,9 +104,9 @@ Consolidated Precision Products #1,"4200 Valley Blvd, Walnut, CA, 91789",14,0
 Consolidated Precision Products #2,"16800 Chestnut St, City of Industry, CA, 91748",29,0
 Contessa Premium Food,"5970 Alcoa Ave, Vernon, CA, 90058",65,0
 Corn Maiden Foods,"24201 Frampton Ave, Harbor City, CA, 90710",14,0
-"Costco Business Center Warehouse, Burbank #653","11428 Sherman Way, North Hollywood, CA, 91605",28,0
+"Costco Business Center Warehouse, Burbank #653","11428 Sherman Way, North Hollywood, CA, 91605",30,0
 Costco Warehouse Burbank #677,"1051 W Burbank Blvd, Burbank, CA, 91506",35,0
-Costco Warehouse Signal Hill #424,"2200 E Willow St, Signal Hill, CA, 90755",48,0
+Costco Warehouse Signal Hill #424,"2200 E Willow St, Signal Hill, CA, 90755",51,0
 "Costco Warehouse, Culver City #479","13463 Washington Blvd, Marina Del Rey, CA, 90292",71,0
 "Costco Warehouse, Lancaster #762","1141 W Avenue L, Lancaster, CA, 93534",25,0
 "Costco Warehouse, Los Feliz #130","2901 Los Feliz Blvd, Los Angeles, CA, 90039",37,0
@@ -216,10 +216,10 @@ IKEA Burbank,"600 Ikea Way, Burbank, CA, 91502",40,0
 IKEA Carson,"20700 Avalon Blvd, Carson, CA, 90746",22,0
 IMC Powered By Parts Authority,"8901 Canoga Ave, Canoga Park, CA, 91304",36,0
 "Imperfect Foods, Walnut","351 Cheryl Ln, Walnut, CA, 91789",44,0
-In N Out Warehouse,"13502 Hamburger Ln, Baldwin Park, CA, 91706",44,0
 In-N-Out Burger - Palmdale,"142 E Palmdale Blvd, Palmdale, CA, 93550",7,0
 In-N-Out Burger - Pomona,"2505 S Garey Ave, Pomona, CA, 91766",13,0
 In-N-Out Burger - Sherman Oaks,"4444 Van Nuys Blvd, Sherman Oaks, CA, 91403",8,0
+In-N-Out Burger Warehouse,"13502 Hamburger Ln, Baldwin Park, CA, 91706",44,0
 InClusion Services,"7255 Greenleaf Ave Ste 20, Whittier, CA, 90602",7,1
 Infiniti of Valencia,"24055 Magic Mountain Pkwy, Santa Clarita, CA, 91355",8,0
 Integrated Food Service,"310 W Alondra Blvd, Gardena, CA, 90248",36,0
@@ -250,7 +250,7 @@ Klune Industries,"7323 Coldwater Canyon Ave, North Hollywood, CA, 91605",16,0
 Kohl's Redondo Beach,"1799 Hawthorne Blvd, Redondo Beach, CA, 90278",18,0
 Kohl's Valencia,"24200 Valencia Blvd, Valencia, CA, 91355",9,0
 LA Airforce Base,"482 N Aviation Blvd, El Segundo, CA, 90245",3,0
-LA Apparel #3,"1020 E 59th St, Los Angeles, CA, 90001",45,0
+LA Apparel #3,"1020 E 59th St, Los Angeles, CA, 90001",50,0
 LA City Bureau of Street Lighting,"4550 Santa Monica Blvd, Los Angeles, CA, 90029",13,0
 LA City Parks - The Kleimer Building,"3900 Chevy Chase Dr, Los Angeles, CA, 90039",10,0
 LA County DCFS - Compton-Carson Office,"1 Civic Plaza Dr, Carson, CA, 90745",28,0
@@ -286,7 +286,7 @@ LAPD 77th Street Community Police Station,"7600 S Broadway, Los Angeles, CA, 900
 LAPD Central Community Police Station,"251 E 6th St, Los Angeles, CA, 90014",57,0
 LAPD Foothill Community Police Station,"12760 Osborne St, Pacoima, CA, 91331",14,0
 LAPD Headquarters,"100 W 1st St, Los Angeles, CA, 90012",54,0
-LAPD Metropolitan Communications Dispatch Center,"100 N Los Angeles St, Los Angeles, CA, 90012",16,0
+LAPD Metropolitan Communications Dispatch Center,"100 N Los Angeles St, Los Angeles, CA, 90012",14,0
 LAPD Newton Community Police Station,"3400 S Central Ave, Los Angeles, CA, 90011",86,0
 LAPD North Hollywood Community Police Station,"11640 Burbank Blvd, North Hollywood, CA, 91601",16,0
 LAPD Northeast Community Police Station,"3353 N San Fernando Rd, Los Angeles, CA, 90065",27,0
@@ -345,7 +345,7 @@ Mission Foods Corp.,"5505 E Olympic Blvd, Commerce, CA, 90022",111,0
 "Mission Foods, Panorama","14200 Arminta St, Panorama City, CA, 91402",25,0
 Mistras,"8427 Atlantic Ave, Cudahy, CA, 90201",32,0
 "Mola, Inc.","3226 E 44th St, Vernon, CA, 90058",19,0
-Morley Construction Company,"5500 W 98th St, Los Angeles, CA, 90045",64,0
+Morley Construction Company,"5500 W 98th St, Los Angeles, CA, 90045",65,0
 Morton Manufacturing,"201 E Avenue K15, Lancaster, CA, 93535",25,0
 Moss & Company Property Management - Zelzah Court Apartments,"9810 Zelzah Ave, Northridge, CA, 91325",4,0
 Motor Car Parts of America,"2929 California St, Torrance, CA, 90503",42,0
@@ -370,7 +370,7 @@ Northrop Grumman - Azusa,"1111 W 3rd St, Azusa, CA, 91702",37,0
 Northrop Grumman - Palmdale,"3520 E Avenue M, Palmdale, CA, 93550",410,0
 Novacap LLC,"25111 Anza Dr, Valencia, CA, 91355",33,0
 Novolex Zenith Bag,"17625 Railroad St, City of Industry, CA, 91748",18,0
-"Nowhere Calabasas, LLC Dba. Erewhon Market","26767 Agoura Rd, Calabasas, CA, 91302",13,0
+"Nowhere Calabasas, LLC Dba. Erewhon Market","26767 Agoura Rd, Calabasas, CA, 91302",14,0
 "Ontic Engineering and Manufacturing, Inc.","20400 Plummer St, Chatsworth, CA, 91311",31,0
 OnTrac Shipping - Commerce,"5959 Randolph St, Commerce, CA, 90040",61,0
 OnTrac Shipping Delivery Services,"11051 Pendleton St, Sun Valley, CA, 91352",19,0
@@ -461,13 +461,14 @@ Target #1306,"3535 S La Cienega Blvd, Los Angeles, CA, 90016",61,0
 Target #1307,"5711 Sepulveda Blvd, Van Nuys, CA, 91411",38,0
 Target #1309,"14920 Raymer St, Van Nuys, CA, 91405",47,0
 Target #1329,"3471 W Century Blvd, Inglewood, CA, 90303",15,0
+Target #1408,"2626 Colorado Blvd, Los Angeles, CA, 90041",18,0
 Target #1411,"3600 Rosemead Blvd, Rosemead, CA, 91770",50,0
 Target #1424,"12051 Imperial Hwy, Norwalk, CA, 90650",32,0
 Target #1884,"7100 Santa Monica Blvd, West Hollywood, CA, 90046",46,0
 Target #2143,"6700 Topanga Canyon Blvd, Canoga Park, CA, 91303",14,0
 Target #2319,"950 E 33rd St, Signal Hill, CA, 90755",30,0
 Target #2776,"735 S Figueroa St, Los Angeles, CA, 90017",22,0
-Taslimi Construction-Spotify,"555 Mateo St, Los Angeles, CA, 90013",16,0
+Taslimi Construction-Spotify,"555 Mateo St, Los Angeles, CA, 90013",17,0
 Techmer PM,"18420 S Laurel Park Rd, Rancho Dominguez, CA, 90220",33,0
 Tempur-Sealy Mattress Company,"825 Ajax Ave, City of Industry, CA, 91748",21,0
 "TFC Manufacturing, Inc.","4001 Watson Plaza Dr, Lakewood, CA, 90712",18,0
@@ -510,7 +511,7 @@ Valley Thrift Store - Azusa,"777 W Foothill Blvd, Azusa, CA, 91702",6,0
 Value Valley Center,"13630 Victory Blvd, Van Nuys, CA, 91401",27,0
 Vance & Hines,"13861 Rosecrans Ave, Santa Fe Springs, CA, 90670",5,0
 Vans Distribution Center,"15700 Shoemaker Ave, Santa Fe Springs, CA, 90670",28,0
-Vege-Kurl,"412 W Cypress St, Glendale, CA, 91204",13,0
+Vege-Kurl,"412 W Cypress St, Glendale, CA, 91204",16,0
 Veggie Grill - Toluca Lake,"4300 W Riverside Dr, Burbank, CA, 91505",9,0
 Velvet LLC,"3961 Landmark St, Culver City, CA, 90232",16,0
 "Vernon Sales, Inc.","2788 E Vernon Ave, Vernon, CA, 90058",10,0
@@ -521,7 +522,7 @@ Warner Bros Television - Young Sheldon,"4000 Warner Blvd, Building 191, Burbank,
 Waste Management - Azusa Transfer Station and Recycling Center,"1501 W Gladstone St, Azusa, CA, 91702",7,0
 Wells Fargo Bank - El Monte,"9000 Flair Dr, El Monte, CA, 91731",31,0
 Westlake Financial Services,"29851 Agoura Rd, Agoura Hills, CA, 91301",4,0
-"Whole Foods Market, 23rd & Wilshire Blvd","2201 Wilshire Blvd, Santa Monica, CA, 90403",24,0
+"Whole Foods Market, 23rd & Wilshire Blvd","2201 Wilshire Blvd, Santa Monica, CA, 90403",28,0
 "Whole Foods Market, Burbank","3401 W Olive Ave, Burbank, CA, 91505",13,0
 "Whole Foods Market, Downtown LA","788 S Grand Ave, Los Angeles, CA, 90017",15,0
 "Whole Foods Market, Glendale","331 N Glendale Ave, Glendale, CA, 91206",12,0
