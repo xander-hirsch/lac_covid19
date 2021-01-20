@@ -7,7 +7,6 @@ Abbott Laboratories,"15900 Valley View Ct, Sylmar, CA, 91342",30,0
 Able Services,"351 S Fuller Ave, Tower 35, Los Angeles, CA, 90036",16,0
 Access Animal Specialty and Emergency Hospital,"20051 Ventura Blvd, Woodland Hills, CA, 91364",15,0
 Accurate Steel Treating,"10008 Miller Way, South Gate, CA, 90280",8,0
-Acorn Paper,"3701 Union Pacific Ave, Los Angeles, CA, 90023",17,0
 "Acromil, LLC","18421 Railroad St, City of Industry, CA, 91748",7,0
 Aero Chrome Plating,"14660 Arminta St, Panorama City, CA, 91402",5,0
 Aeroscopic Construction,"1833 Dana St, Glendale, CA, 91201",6,0
@@ -51,7 +50,7 @@ Bellis Steel Company,"8740 Vanalden Ave, Northridge, CA, 91324",3,0
 Bentley Mills LA,"14641 Don Julian Rd, City of Industry, CA, 91746",99,0
 "Bernards Brothers Construction, LMU Construction Site","1 LMU Dr, Los Angeles, CA, 90045",45,0
 Best Buy Downey,"12118 Lakewood Blvd, Downey, CA, 90242",15,0
-Best Buy West Hollywood,"1015 N La Brea Ave, West Hollywood, CA, 90038",27,0
+Best Buy West Hollywood,"1015 N La Brea Ave, West Hollywood, CA, 90038",28,0
 Beverly Hills Hotel,"9641 Sunset Blvd, Beverly Hills, CA, 90210",19,0
 Big 5 Sporting Goods El Segundo #137,"2515 E El Segundo Blvd, El Segundo, CA, 90245",7,0
 Bimbo Bakery - South Gate,"9430 Rayo Ave, South Gate, CA, 90280",5,0
@@ -72,7 +71,7 @@ Camino Real Kitchens,"2638 E Vernon Ave, Vernon, CA, 90058",33,0
 "Campus Residential Dining, UCLA","351 Charles E Young Dr W, Los Angeles, CA, 90024",9,0
 Cannasafe,"7027 Hayvenhurst Ave, Van Nuys, CA, 91406",9,0
 Carmax,"405 W Technology Dr, Palmdale, CA, 93551",16,0
-CBS Studio Center Stage 4,"4024 Radford Ave, Studio City, CA, 91604",11,0
+CBS Studio Center Stage 04,"4024 Radford Ave, Studio City, CA, 91604",11,0
 CBS Studio Center Stage 14,"4024 Radford Ave, Studio City, CA, 91604",8,0
 CEMCO,"263 N Covina Ln, La Puente, CA, 91746",12,0
 Century 21 All Stars,"9155 Telegraph Rd, Pico Rivera, CA, 90660",5,0
@@ -112,7 +111,7 @@ Costco Warehouse Signal Hill #424,"2200 E Willow St, Signal Hill, CA, 90755",51,
 "Costco Warehouse, Los Feliz #130","2901 Los Feliz Blvd, Los Angeles, CA, 90039",37,0
 "Costco Warehouse, Monterey Park #1318","2000 Market Place Dr, Monterey Park, CA, 91755",43,0
 "Costco Warehouse, Santa Clarita #447","18649 Via Princessa, Santa Clarita, CA, 91387",38,0
-"Costco Warehouse, Van Nuys #48","6100 Sepulveda Blvd, Van Nuys, CA, 91411",58,0
+"Costco Warehouse, Van Nuys #48","6100 Sepulveda Blvd, Van Nuys, CA, 91411",63,0
 "Costco Warehouse, Woodland Hills #1205","21800 Victory Blvd, Woodland Hills, CA, 91367",56,0
 Covina Police Department,"444 N Citrus Ave, Covina, CA, 91723",29,0
 CR Laurence,"2503 E Vernon Ave, Vernon, CA, 90058",47,0
@@ -142,7 +141,7 @@ Everson Spice,"2667 Gundry Ave, Signal Hill, CA, 90755",8,0
 "F. Gavina & Sons, Inc.","2700 Fruitland Ave, Vernon, CA, 90058",44,0
 Fantasy Dyeing Finishing/Fantasy Activewear,"5383 Alcoa Ave, Vernon, CA, 90058",28,0
 "Fashion Nova Logistics, Inc.","12588 Lakeland Rd, Santa Fe Springs, CA, 90670",246,0
-FedEx Freight,"4500 Bandini Blvd, Vernon, CA, 90058",23,0
+FedEx Freight,"4500 Bandini Blvd, Vernon, CA, 90058",26,0
 FedEx Ground Arcadia,"12369 Lower Azusa Rd, Arcadia, CA, 91006",130,0
 FedEx Ground Carson,"1725 Charles Willard St, Carson, CA, 90746",51,0
 FedEx Ground City of Industry,"200 Old Ranch Rd, City of Industry, CA, 91789",101,0
@@ -190,13 +189,12 @@ Hawthorne Police Department,"12501 Hawthorne Blvd, Hawthorne, CA, 90250",23,0
 "Henkels & McCoy, Inc.","2840 Ficus St, Pomona, CA, 91766",6,0
 HiRel Connectors #1,"212 S Cambridge Ave, Claremont, CA, 91711",25,0
 HiRel Connectors #2,"260 York Pl, Claremont, CA, 91711",10,0
-HiRel Connectors #3,"759 W Arrow Hwy, Suite Af, Claremont, CA, 91711",12,0
 Holland Flower Market,"2000 E 27th St, Vernon, CA, 90058",13,0
 Hollander Sleep Products,"8500 Rex Rd, Pico Rivera, CA, 90660",15,0
 Home Depot - Alhambra #6610,"500 S Marengo Ave, Alhambra, CA, 91803",43,0
 Home Depot - Cypress Park #6689,"2055 N Figueroa St, Los Angeles, CA, 90065",45,0
-Home Depot - Downey #6627,"7121 Firestone Blvd, Downey, CA, 90241",27,0
-Home Depot - Hyde Park #1039,"1830 W Slauson Ave, Los Angeles, CA, 90047",40,0
+Home Depot - Downey #6627,"7121 Firestone Blvd, Downey, CA, 90241",30,0
+Home Depot - Hyde Park #1039,"1830 W Slauson Ave, Los Angeles, CA, 90047",43,0
 Home Depot - Long Beach #1062,"751 E Spring St, Signal Hill, CA, 90755",19,0
 Home Depot - Marina Del Rey #6611,"12975 W Jefferson Blvd, Los Angeles, CA, 90066",15,0
 Home Depot - North Hollywood #6613,"11600 Sherman Way, North Hollywood, CA, 91605",51,0
@@ -213,7 +211,7 @@ Howmet Aerospace #2,"3000 Lomita Blvd, Torrance, CA, 90505",50,0
 Hydra Electric Aerospace Manufacturing,"3151 N Kenwood St, Burbank, CA, 91505",12,0
 "Hydroform USA, Inc.","2848 E 208th St, Carson, CA, 90810",59,0
 IKEA Burbank,"600 Ikea Way, Burbank, CA, 91502",40,0
-IKEA Carson,"20700 Avalon Blvd, Carson, CA, 90746",22,0
+IKEA Carson,"20700 Avalon Blvd, Carson, CA, 90746",23,0
 IMC Powered By Parts Authority,"8901 Canoga Ave, Canoga Park, CA, 91304",36,0
 "Imperfect Foods, Walnut","351 Cheryl Ln, Walnut, CA, 91789",44,0
 In-N-Out Burger - Palmdale,"142 E Palmdale Blvd, Palmdale, CA, 93550",7,0
@@ -238,7 +236,7 @@ Jersey Mike's - Santa Clarita,"19159 Golden Valley Rd, Santa Clarita, CA, 91387"
 Jo's Candies LLC,"2530 W 237th St, Torrance, CA, 90505",7,0
 John Michael Design LLC,"11220 Wright Rd, Lynwood, CA, 90262",22,0
 JP Original Corporation,"19101 E Walnut Dr N, City of Industry, CA, 91748",4,0
-Kaiser Aluminum,"6250 Bandini Blvd, Commerce, CA, 90040",23,0
+Kaiser Aluminum,"6250 Bandini Blvd, Commerce, CA, 90040",24,0
 Kaiser Permanente Central Refill Pharmacy Center,"9521 Dalen St, Downey, CA, 90242",47,0
 Kaiser Permanente Regional Lab,"4580 Electronics Pl, Los Angeles, CA, 90039",8,0
 Kellwood Apparel,"13071 Temple Ave, City of Industry, CA, 91746",21,0
@@ -261,7 +259,7 @@ LA County DCFS - Metro North,"1933 S Broadway, Los Angeles, CA, 90007",79,0
 LA County DCFS - San Dimas,"955 Overland Ct, Suite 100, San Dimas, CA, 91773",15,0
 LA County DCFS - Santa Fe Springs,"10355 Slusher Dr, Santa Fe Springs, CA, 90670",16,0
 LA County DCFS - South LA Administration,"8300 S Vermont Ave, Los Angeles, CA, 90044",30,0
-LA County DCFS - Van Nuys,"7555 Van Nuys Blvd, Van Nuys, CA, 91405",17,0
+LA County DCFS - Van Nuys,"7555 Van Nuys Blvd, Van Nuys, CA, 91405",18,0
 "LA County DPSS - Inglewood, Customer Service Center II, 11th Floor","9800 S La Cienega Blvd, 11th Floor, Inglewood, CA, 90301",26,0
 LA County DPSS - South Special,"17600 B Santa Fe Ave, East Rancho Dominguez, CA, 90221",51,0
 "LA County DPSS - Warehouse, Logistics, and Asset Management Section","13409 Carmenita Rd, Santa Fe Springs, CA, 90670",6,0
@@ -291,8 +289,8 @@ LAPD Newton Community Police Station,"3400 S Central Ave, Los Angeles, CA, 90011
 LAPD North Hollywood Community Police Station,"11640 Burbank Blvd, North Hollywood, CA, 91601",16,0
 LAPD Northeast Community Police Station,"3353 N San Fernando Rd, Los Angeles, CA, 90065",27,0
 LAPD Olympic Community Police Station,"1130 S Vermont Ave, Los Angeles, CA, 90006",40,0
-LAPD Rampart Community Police Station,"1401 W 6th St, Los Angeles, CA, 90017",44,0
-LAPD Southeast Community Police Station,"145 W 108th St, Los Angeles, CA, 90061",48,0
+LAPD Rampart Community Police Station,"1401 W 6th St, Los Angeles, CA, 90017",46,0
+LAPD Southeast Community Police Station,"145 W 108th St, Los Angeles, CA, 90061",72,0
 LAPD Southwest Community Police Station,"1546 W Martin Luther King Jr Blvd, Los Angeles, CA, 90062",57,0
 LAPD Topanga Community Police Station,"21501 Schoenborn St, Canoga Park, CA, 91304",25,0
 LAPD Van Nuys Community Police Station,"6240 Sylmar Ave, Van Nuys, CA, 91401",25,0
@@ -399,21 +397,21 @@ R3 Los Angeles,"15959 Piuma Ave, Cerritos, CA, 90703",6,0
 "RC Furniture, Inc.","1111 Jellick Ave, City of Industry, CA, 91748",24,0
 "Remo, Inc.","28101 Industry Dr, Valencia, CA, 91355",22,0
 Revolve,"12889 Moore St, Cerritos, CA, 90703",28,0
-Reyes Coca-Cola Bottling,"1334 S Central Ave, Los Angeles, CA, 90021",31,0
+Reyes Coca-Cola Bottling,"1334 S Central Ave, Los Angeles, CA, 90021",24,0
 Reynaldo's Mexican Food Co.,"3301 E Vernon Ave, Vernon, CA, 90058",11,0
 Rich Products Corp. Torrance,"22417 S Vermont Ave, Torrance, CA, 90502",22,0
 "Riedon, Inc.","300 Cypress Ave, Alhambra, CA, 91801",17,0
 "Ritz Flooring, Inc.","14909 Calvert St, Van Nuys, CA, 91411",3,0
 Robert F. Chapman (Metal Fabrication),"43100 Exchange Pl, Lancaster, CA, 93535",33,0
 Robinson Helicopter Company,"2901 Airport Dr, Torrance, CA, 90505",12,0
-Rose and Shore,"5151 Alcoa Ave, Vernon, CA, 90058",21,0
+"Rose & Shore, Inc.","5151 Alcoa Ave, Vernon, CA, 90058",21,0
 Rose Hills Memorial Park and Mortuary,"3888 Workman Mill Rd, Whittier, CA, 90601",9,0
 Royal Truck Body,"24200 Main St, Carson, CA, 90745",13,0
-RTC Aerospace,"20409 Prairie St, Chatsworth, CA, 91311",31,0
+RTC Aerospace,"20409 Prairie St, Chatsworth, CA, 91311",48,0
 Rudolph & Sletten,"3525 W 8th St, Los Angeles, CA, 90005",9,0
 Russel Westbrook Car Dealership,"6110 Van Nuys Blvd, Van Nuys, CA, 91401",17,0
 Sam's Club #26,"4901 Santa Anita Ave, El Monte, CA, 91731",32,0
-Santa Monica Public Safety Facility,"333 Olympic Dr, Santa Monica, CA, 90401",13,0
+Santa Monica Public Safety Facility,"333 Olympic Dr, Santa Monica, CA, 90401",14,0
 Saunders Midwest NUPLA LLC,"11912 Sheldon St, Sun Valley, CA, 91352",27,0
 "Schrey & Sons Mold Co., Inc.","24735 Rockefeller Ave, Valencia, CA, 91355",3,0
 Seafood City,"1525 E Amar Rd, West Covina, CA, 91792",11,0
@@ -455,7 +453,7 @@ Target #184,"2120 W Main St, Alhambra, CA, 91801",54,0
 Target #189,"5600 Whittier Blvd, Commerce, CA, 90022",21,0
 Target #190,"5700 Firestone Blvd, South Gate, CA, 90280",19,0
 Target #290,"2169 W Redondo Beach Blvd, Gardena, CA, 90247",13,0
-Target #299,"8840 Corbin Ave, Northridge, CA, 91324",28,0
+Target #299,"8840 Corbin Ave, Northridge, CA, 91324",30,0
 Target #1033,"3100 Baldwin Park Blvd, Baldwin Park, CA, 91706",16,0
 Target #1306,"3535 S La Cienega Blvd, Los Angeles, CA, 90016",61,0
 Target #1307,"5711 Sepulveda Blvd, Van Nuys, CA, 91411",38,0
@@ -485,7 +483,6 @@ Time Tec Watch Service Center,"635 S Hill St, #209, Los Angeles, CA, 90014",5,0
 TK Services,"6118 Alcoa Ave, Vernon, CA, 90058",5,0
 "Toyota of Downey, Penske","9136 Firestone Blvd, Downey, CA, 90241",22,0
 "Toyota, Frontier","23621 Creekside Rd, Valencia, CA, 91355",14,0
-"Toyota, Longo","3534 Peck Rd, El Monte, CA, 91731",81,0
 Trader Joe's Granada Hills,"11114 Balboa Blvd, Granada Hills, CA, 91344",5,0
 Trader Joe's Los Angeles - Olympic Blvd,"11755 W Olympic Blvd, Los Angeles, CA, 90064",21,0
 Trader Joe's North Hollywood,"6130 Laurel Canyon Blvd, North Hollywood, CA, 91606",23,0
@@ -524,10 +521,10 @@ Wells Fargo Bank - El Monte,"9000 Flair Dr, El Monte, CA, 91731",31,0
 Westlake Financial Services,"29851 Agoura Rd, Agoura Hills, CA, 91301",4,0
 "Whole Foods Market, 23rd & Wilshire Blvd","2201 Wilshire Blvd, Santa Monica, CA, 90403",28,0
 "Whole Foods Market, Burbank","3401 W Olive Ave, Burbank, CA, 91505",13,0
-"Whole Foods Market, Downtown LA","788 S Grand Ave, Los Angeles, CA, 90017",15,0
+"Whole Foods Market, Downtown LA","788 S Grand Ave, Los Angeles, CA, 90017",18,0
 "Whole Foods Market, Glendale","331 N Glendale Ave, Glendale, CA, 91206",12,0
 "Whole Foods Market, Porter Ranch","20209 Rinaldi St, Porter Ranch, CA, 91326",11,0
-"Whole Foods Market, Sherman Oaks","14311 Ventura Blvd, Sherman Oaks, CA, 91423",26,0
+"Whole Foods Market, Sherman Oaks","14311 Ventura Blvd, Sherman Oaks, CA, 91423",28,0
 "Whole Foods Market, West Hollywood","7871 Santa Monica Blvd, West Hollywood, CA, 90046",11,0
 "Whole Foods Market, Westwood","1050 Gayley Ave, Los Angeles, CA, 90024",12,0
 "Whole Foods Market, Woodland Hills","21347 Ventura Blvd, Woodland Hills, CA, 91364",14,0

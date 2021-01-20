@@ -10,7 +10,7 @@ ADE Emmanuel Adult Residential Facility,"Los Angeles, CA",1,1,0
 Adventist Health Glendale - Surgical Unit,"Glendale, CA",0,2,0
 Adventist Health White Memorial Medical Center,"Los Angeles, CA",12,5,0
 Adventist Health White Memorial Medical Center D/P SNF,"Los Angeles, CA",0,1,0
-Aegis Living Granada Hills,"Granada Hills, CA",13,16,1
+Aegis Living Granada Hills,"Granada Hills, CA",18,24,1
 Affinity Healthcare Center,"Paramount, CA",32,5,0
 Alcoholism Center For Women,"Los Angeles, CA",2,12,0
 Alcott Rehabilitation Hospital,"Los Angeles, CA",31,54,9
@@ -25,7 +25,7 @@ Alvarado Care Home,"Los Angeles, CA",3,5,0
 Amazing Effort,"Windsor Hills, CA",4,0,0
 Ambassador Garden,"Reseda, CA",4,5,0
 Ambitions - Devlin Facility,"Lakewood, CA",3,2,0
-Ambitions - Doble Avenue,"Torrance, CA",3,2,0
+Ambitions - Doble Avenue,"Torrance, CA",3,1,0
 Ambitions - Verdugo House 1,"Burbank, CA",2,0,0
 Amigo Home Care,"Reseda, CA",3,1,0
 Amity Beacon Transitional Housing,"Los Angeles, CA",1,2,0
@@ -68,7 +68,7 @@ Bay Crest Care Center,"Torrance, CA",39,48,3
 Be Well Senior Living,"Tarzana, CA",2,5,1
 Beachside Post Acute (Previously Royalwood Care Center) (1),"Torrance, CA",1,3,0
 Beachside Post Acute (Previously Royalwood Care Center) (2),"Torrance, CA",7,4,0
-Beachwood Post Acute & Rehab,"Santa Monica, CA",10,24,1
+Beachwood Post Acute & Rehab,"Santa Monica, CA",10,24,2
 Beacon of Hope,"Los Angeles, CA",0,3,0
 Beit T'shuvah,"Los Angeles, CA",0,3,0
 Bel Tooren Villa Convalescent Hospital,"Bellflower, CA",16,13,0
@@ -111,7 +111,6 @@ Brookdale Chatsworth Assisted Living,"Chatsworth, CA",17,38,4
 Brookdale Gardens of Tarzana,"Tarzana, CA",4,2,0
 Brookdale Northridge SNF,"Northridge, CA",24,19,5
 Brookdale Uptown Whittier,"Whittier, CA",6,15,1
-Brookdale Walnut,"Walnut, CA",16,27,0
 Brookfield Healthcare Center (1),"Downey, CA",8,19,6
 Brookfield Healthcare Center (2),"Downey, CA",12,31,3
 Buena Ventura Post Acute Care Center,"Los Angeles, CA",13,12,0
@@ -121,7 +120,6 @@ California Healthcare and Rehabilitation Center,"Van Nuys, CA",43,30,3
 California Mentor Meadcliff Home,"Diamond Bar, CA",0,1,0
 California Mentor Rosemount Home,"Claremont, CA",5,1,0
 California Mission Inn - Residential Care,"Rosemead, CA",6,18,3
-California Mission Inn Rose Manor,"Rosemead, CA",0,2,0
 California Post Acute Care,"Lynwood, CA",21,14,0
 California Post Acute Convalescent Center,"Los Angeles, CA",6,1,0
 California Senior of Sherman Oaks,"Sherman Oaks, CA",1,2,0
@@ -132,9 +130,9 @@ Camp Rockey,"San Dimas, CA",10,10,0
 Canyon Crest,"Sun Valley, CA",5,5,0
 Canyon Home 3,"Sunland, CA",3,5,0
 Canyon Oaks Nursing and Rehabilitation Center,"Canoga Park, CA",35,65,10
-Canyon Trails at Topanga Senior Living,"Canoga Park, CA",26,35,4
 Carrie Board and Care,"Panorama City, CA",2,5,2
 Carrie's Care Villa,"North Hollywood, CA",2,5,1
+Carrington Cares (SLS),"Inglewood, CA",3,2,0
 Carson Senior Assisted Living and Memory Care,"Carson, CA",0,3,0
 Casa Amore,"Lancaster, CA",3,6,1
 Casa Bonita Convalescent Hospital,"San Dimas, CA",13,27,0
@@ -142,17 +140,17 @@ Casa Colina Hospital For Rehabilitative Medicine,"Pomona, CA",3,8,0
 Casa Colina Hospital Transitional Living Center,"Pomona, CA",18,23,0
 Casa Del Corazon Sober Living,"Los Angeles, CA",2,6,0
 Casa Fatima,"Huntington Park, CA",5,2,0
-Casitas Care Center,"Granada Hills, CA",21,9,1
+Casitas Care Center,"Granada Hills, CA",21,9,2
 "Catalina House of Hope, Inc.","Los Angeles, CA",0,7,0
 Catherine Home,"Bellflower, CA",0,2,1
 Cato Ree's Residential,"Compton, CA",2,2,0
 Cato's Quality Residential Care,"Carson, CA",4,6,0
 Cedars Assisted Living,"Northridge, CA",7,21,2
 Centinela Skilled Nursing & Wellness Centre West,"Inglewood, CA",2,1,0
-Centinella Assisted Living Center,"Inglewood, CA",7,29,0
+Centinella Assisted Living Center,"Inglewood, CA",7,30,0
 Central Juvenile Hall,"Los Angeles, CA",28,70,0
 Century Regional Detention Facility,"Lynwood, CA",53,212,1
-Cerritos Vista Healthcare Center (Previously Woodruff Convalescent Center),"Bellflower, CA",14,25,2
+Cerritos Vista Healthcare Center (Previously Woodruff Convalescent Center),"Bellflower, CA",14,25,3
 Chandler Convalescent Hospital,"Glendale, CA",20,10,0
 Chateau of Life,"Hawthorne, CA",14,3,0
 Chatsworth Park Care Center,"Chatsworth, CA",17,11,1
@@ -166,7 +164,7 @@ Choices R Us - Woodhue,"Pico Rivera, CA",0,4,0
 Chosen Gospel Recovery,"Los Angeles, CA",1,8,0
 Christine's Retreat 3,"Reseda, CA",2,2,0
 City View LA,"Los Angeles, CA",15,7,0
-Clara Baldwin Stocker Home,"West Covina, CA",13,13,0
+Clara Baldwin Stocker Home,"West Covina, CA",13,13,1
 Claremont Care Center,"Pomona, CA",36,66,6
 Claremont Manor Retirement Community,"Claremont, CA",25,5,1
 Claremont Place Assisted Living,"Claremont, CA",15,14,1
@@ -177,8 +175,8 @@ Clear View Convalescent Center (2),"Gardena, CA",14,9,0
 Clearwater at South Bay - Clearbrook Towers,"Torrance, CA",28,21,1
 "Climb, Inc. - Pride Home","Sierra Madre, CA",3,6,0
 Clontarf Manor Artesia,"Artesia, CA",3,32,0
-CN Home #6 (ARF),"Lomita, CA",6,5,0
-CN Residential Home #2,"Norwalk, CA",6,4,0
+CN Home #2,"Norwalk, CA",6,4,0
+CN Home #6,"Lomita, CA",6,5,0
 Coast Care Convalescent Center,"Baldwin Park, CA",18,38,3
 "Coastal House, Inc.","Los Angeles, CA",3,3,2
 Cold Springs Home,"Diamond Bar, CA",4,3,0
@@ -202,12 +200,12 @@ Country Villa Claremont Healthcare Center,"Claremont, CA",18,15,3
 Country Villa East Nursing Center,"Los Angeles, CA",21,21,1
 Country Villa Los Feliz Nursing Center,"Los Angeles, CA",69,90,16
 Country Villa Mar Vista Nursing Center,"Los Angeles, CA",26,25,4
-Country Villa North Convalescent Center,"Los Angeles, CA",61,50,3
+Country Villa North Convalescent Center,"Los Angeles, CA",62,50,3
 Country Villa Rehabilitation Center,"Los Angeles, CA",51,38,4
 Country Villa Sheraton Nursing and Rehab Center,"North Hills, CA",14,16,0
 Country Villa South Convalescent Center,"Los Angeles, CA",17,15,1
 Country Villa Terrace Assisted Living,"Los Angeles, CA",5,7,2
-Country Villa Terrace Nursing Center,"Los Angeles, CA",27,32,3
+Country Villa Terrace Nursing Center,"Los Angeles, CA",27,32,4
 Country Villa Westwood Convalescent Center,"Los Angeles, CA",34,25,0
 Country Villa Wilshire Convalescent Center,"Los Angeles, CA",27,57,0
 Courtyard Care Center,"Signal Hill, CA",12,12,1
@@ -218,7 +216,7 @@ Crebs Compassion Home,"Northridge, CA",0,3,0
 Crenshaw Nursing Home,"Los Angeles, CA",26,24,3
 "CRI-Help, Inc.","North Hollywood, CA",16,6,0
 Cullen Home,"Whittier, CA",0,2,0
-Culver West Health Center,"Los Angeles, CA",22,29,0
+Culver West Health Center,"Los Angeles, CA",22,29,1
 Daniella's Home,"Torrance, CA",1,3,0
 "David & Margaret Family Services, Winterhaven Home","La Verne, CA",4,4,0
 Dawnview Home,"Pomona, CA",8,4,0
@@ -227,11 +225,12 @@ Del Mar Convalescent Hospital,"Rosemead, CA",3,9,1
 Del Sol Home (Faust),"Lakewood, CA",2,1,0
 Dela Vega ARF,"Northridge, CA",2,4,0
 Delta Home Care,"West Covina, CA",2,0,0
+Delta Home Care III,"West Covina, CA",3,3,0
 Desert Canyon Post Acute SNF,"Lancaster, CA",55,63,13
 Dignity Home Center,"Covina, CA",5,5,0
 "Discovery 4 (D4, Inc)","Los Angeles, CA",8,25,0
 Dorothy Kirby Center,"Commerce, CA",26,8,0
-Downey Community Health Center,"Downey, CA",37,59,2
+Downey Community Health Center,"Downey, CA",37,59,3
 Downey Post Acute,"Downey, CA",49,49,8
 Downey Retirement Center,"Downey, CA",27,39,7
 Dreier's Nursing Care Center,"Glendale, CA",18,51,1
@@ -240,18 +239,17 @@ DSH - Metropolitan State Hospital (Forensic Unit 402),"Norwalk, CA",6,1,0
 DSH - Metropolitan State Hospital (Forensic Unit 405),"Norwalk, CA",3,2,0
 DSH - Metropolitan State Hospital (Forensic Unit 411),"Norwalk, CA",4,19,0
 DSH - Metropolitan State Hospital (Forensic Unit 413),"Norwalk, CA",1,30,0
-DSH - Metropolitan State Hospital Unit 101,"Norwalk, CA",2,10,0
 DSH - Metropolitan State Hospital Unit 102,"Norwalk, CA",10,19,0
-DSH - Metropolitan State Hospital Unit 105,"Norwalk, CA",10,26,0
+DSH - Metropolitan State Hospital Unit 105,"Norwalk, CA",8,26,0
 DSH - Metropolitan State Hospital Unit 106,"Norwalk, CA",5,22,0
 DSH - Metropolitan State Hospital Unit 108,"Norwalk, CA",5,19,0
 DSH - Metropolitan State Hospital Unit 408,"Norwalk, CA",0,5,0
 DSH - Metropolitan State Hospital Unit 410,"Norwalk, CA",2,10,0
 Eagle Dale Division,"Eagle Rock, CA",5,3,0
-Easter Seal Home on Faculty,"Norwalk, CA",8,3,0
-Easter Seal Victoria Home,"Claremont, CA",4,2,1
-Easter Seals Dempsey,"Granada Hills, CA",3,1,0
-Easterseals of Southern California,"Burbank, CA",5,0,0
+Easter Seals Dempsey Home,"Granada Hills, CA",3,1,0
+Easter Seals Faculty Home,"Norwalk, CA",8,3,0
+Easter Seals Kenwood Home,"Burbank, CA",5,0,0
+Easter Seals Victoria Home,"Claremont, CA",4,2,1
 Eilat's Manor,"Los Angeles, CA",0,3,2
 Eisenberg Village - GZ Bldg,"Reseda, CA",42,12,3
 "El Dorado Oaks, Inc.","Glendora, CA",8,23,2
@@ -266,14 +264,13 @@ Elwyn California Rancho Lindo,"Covina, CA",3,0,0
 Elwyn NC Babcock,"Valley Village, CA",8,4,1
 Elwyn NC Doreen,"Temple City, CA",2,0,0
 Elwyn NC Kelvin 2,"Winnetka, CA",10,3,0
-Elwyn NC Larrylyn,"Whittier, CA",0,3,0
+Elwyn NC Larrylyn,"Whittier, CA",9,3,0
 Elwyn NC Mayall,"Northridge, CA",10,4,0
 Emily's Home #4,"Carson, CA",3,4,0
 Emily's Home #5,"Carson, CA",2,3,0
 "Emily's Residential Care Center, LLC","Sun Valley, CA",5,6,0
 EPT Better Living,"Reseda, CA",4,2,0
 Ettie Lee Homes - Oak Knolls,"Azusa, CA",2,2,0
-Eunice Home,"Granada Hills, CA",0,3,0
 Evergreen Retirement,"Burbank, CA",6,36,6
 Fallbrook Glen of West Hills,"West Hills, CA",9,7,1
 "FCI, Terminal Island","San Pedro, CA",24,743,10
@@ -289,7 +286,7 @@ Fountainview at Gonda Westside,"Los Angeles, CA",35,14,0
 Four Seasons Assisted Living Center,"Valley Village, CA",0,8,0
 "Four Seasons Healthcare & Wellness Center, LP","Valley Village, CA",3,9,0
 Fred Brown Recovery Center (ARF),"San Pedro, CA",0,2,0
-Freda's Home of Love,"Los Angeles, CA",0,1,0
+Freda's Home of Love I,"Los Angeles, CA",0,1,0
 Fresh Start Sober Living,"Los Angeles, CA",0,14,0
 Friends United,"Hawthorne, CA",2,1,0
 "Friends United, LLC","Hawthorne, CA",3,3,0
@@ -301,10 +298,10 @@ Gemly's Home Care III,"Glendora, CA",6,6,1
 Genuine Care Adult Residential,"Los Angeles, CA",3,4,0
 Gilmar Manor,"Van Nuys, CA",6,23,0
 Gladstone Care and Rehabilitation Center,"Glendora, CA",28,8,0
-Glen Park at Glendale - Boynton St.,"Glendale, CA",0,7,0
+Glen Park at Glendale - Boynton St,"Glendale, CA",0,7,0
+Glen Park at Glendale - Mariposa St,"Glendale, CA",22,39,3
 Glen Park at Monrovia,"Monrovia, CA",2,8,0
-Glen Park at Valley Village,"Valley Village, CA",11,9,1
-Glen Park Healthy Living,"Glendale, CA",22,39,3
+Glen Park at Valley Village,"Valley Village, CA",11,9,2
 Glen Terra Assisted Living,"Glendale, CA",2,5,0
 Glendale Carehome,"Glendale, CA",1,1,0
 Glendale Healthcare Center,"Glendale, CA",20,20,0
@@ -344,7 +341,6 @@ Helen Evans Home,"Hacienda Heights, CA",24,23,0
 Heritage Home,"Carson, CA",6,1,0
 Heritage Manor,"Monterey Park, CA",35,51,12
 Heritage Rehabilitation Center,"Torrance, CA",59,100,9
-"Hi Hopes, Inc.","Torrance, CA",1,3,0
 High Valley Lodge,"Sunland, CA",10,3,0
 Highland Manor Guest Home,"Lynwood, CA",0,1,0
 Highland Park Skilled Nursing & Wellness Centre,"Los Angeles, CA",35,48,0
@@ -355,7 +351,7 @@ Holiday Villa East,"Santa Monica, CA",3,29,1
 Hollenbeck Palms Assisted Living Facility,"Los Angeles, CA",26,10,1
 Hollenbeck Palms SNF,"Los Angeles, CA",4,1,0
 Hollywood Presbyterian Medical Center D/P SNF,"Los Angeles, CA",6,1,0
-Holmans Adult Residential,"Los Angeles, CA",1,3,0
+Holmans Adult Residential,"Los Angeles, CA",3,4,0
 "Home of Compassion No. 2, Inc.","Sylmar, CA",7,1,0
 Home of TLC,"Downey, CA",1,1,0
 Home Sweet Home LA,"Los Angeles, CA",1,2,0
@@ -402,7 +398,6 @@ La Brea Rehabilitation Center,"Los Angeles, CA",27,31,0
 LA County Teen Challenge,"Lynwood, CA",5,14,0
 "La Crescenta Chateau/Nurtur, Inc.","Tujunga, CA",4,30,0
 La Crescenta Healthcare Center,"La Crescenta, CA",34,43,2
-La Paz Geropsychiatric Center,"Paramount, CA",11,5,0
 La Verne Manor,"La Verne, CA",6,19,0
 Lake Balboa Care Center,"Van Nuys, CA",7,5,0
 Lakeview Terrace,"Los Angeles, CA",37,47,0
@@ -417,7 +412,7 @@ Land of Peace 6,"West Hills, CA",2,4,0
 Las Flores Convalescent Hospital,"Gardena, CA",40,44,1
 "Lawndale Healthcare & Wellness Centre, LLC","Lawndale, CA",40,14,1
 Lawndale Home,"Lawndale, CA",3,3,0
-Le Bleu Chateau,"Burbank, CA",6,35,3
+Le Bleu Chateau,"Burbank, CA",15,35,3
 Le Bleu Chateau - Gold,"Burbank, CA",5,36,6
 Leisure Glen Post Acute Care Center,"Glendale, CA",20,18,0
 Leisure Living #1,"Agoura Hills, CA",2,2,0
@@ -427,8 +422,8 @@ Little Sisters of The Poor (RCFE),"San Pedro, CA",13,1,0
 Little Sisters of The Poor (SNF),"San Pedro, CA",14,17,2
 Live Oak Rehabilitation Center,"San Gabriel, CA",61,76,28
 Living Graceful,"Chatsworth, CA",3,4,0
-Lomita Post Acute Care Center,"Lomita, CA",22,17,3
-Lonestar Board & Care Tujunga,"Tujunga, CA",12,25,0
+Lomita Post Acute Care Center,"Lomita, CA",22,18,3
+Lone Star Board & Care Tujunga,"Tujunga, CA",12,25,0
 Longwood Manor Convalescent Hospital,"Los Angeles, CA",62,92,9
 "Loop Home Foundation, Inc. II","Gardena, CA",3,2,0
 Los Angeles Community Hospital,"Los Angeles, CA",6,7,0
@@ -442,12 +437,10 @@ Lubec Home II,"Downey, CA",9,3,2
 Luxor Living,"Sherwood Forest, CA",2,1,0
 Maclay Healthcare Center,"Sylmar, CA",16,9,0
 Magnolia Gardens Convalescent Hospital,"Granada Hills, CA",7,25,3
-Manchester Manor Convalescent Hospital,"Los Angeles, CA",23,38,6
 Maple Healthcare Center,"Los Angeles, CA",23,22,4
 Marina Pointe Healthcare & Subacute,"Culver City, CA",29,14,1
 Mariposa Home,"Los Angeles, CA",2,3,0
 Marycrest Manor,"Culver City, CA",24,5,1
-MaryJo House,"Baldwin Park, CA",6,1,0
 Masonic Homes,"Covina, CA",14,11,0
 Mayflower Care Center,"El Monte, CA",33,53,4
 Maywood Skilled Nursing & Wellness Centre,"Maywood, CA",25,9,0
@@ -469,14 +462,14 @@ Men's Central Jail,"Los Angeles, CA",158,762,5
 Methodist Hospital of Southern California,"Arcadia, CA",15,1,0
 Metropolitan Detention Center,"Los Angeles, CA",39,326,1
 Mid Wilshire Health Care Center,"Los Angeles, CA",9,13,0
-Mindful Growth Foundation - Facility 2,"Los Angeles, CA",3,1,0
 Miracle Mile Healthcare Center (Previously Beverly West Healthcare),"Los Angeles, CA",14,21,0
 Mirada Hills Rehabilitation and Convalescent Hospital,"La Mirada, CA",63,78,12
 Mission Care Center,"Rosemead, CA",29,48,6
+Mitchell's Group Home #2,"Los Angeles, CA",1,3,0
 Monrovia Post Acute,"Duarte, CA",23,27,0
-Monte Cedro Retirement Community,"Altadena, CA",5,2,0
 Monte Vista Healthcare Center,"Duarte, CA",23,33,2
 Montebello Care Center,"Montebello, CA",52,70,4
+Montecedro Retirement Community,"Altadena, CA",5,2,0
 "Montecito Heights Healthcare & Wellness Centre, LP","Los Angeles, CA",21,32,0
 "Monterey Healthcare & Wellness Centre, LP","Rosemead, CA",7,2,0
 Monterey Park Convalescent Hospital,"Monterey Park, CA",10,11,0
@@ -485,7 +478,7 @@ Mother of Mercy Homes,"West Covina, CA",1,1,0
 Motion Picture & Television Fund,"Woodland Hills, CA",32,16,0
 Mount San Antonio Gardens,"Pomona, CA",6,5,0
 Mountain View Care,"El Monte, CA",2,9,0
-Mountain View Center,"Claremont, CA",1,1,0
+Mountain View Center,"Claremont, CA",2,1,0
 Mountain View Convalescent Hospital,"Sylmar, CA",11,6,1
 Mountain View Cottages #1,"Diamond Bar, CA",2,4,0
 Mt. Sinai Residential Home #3,"Los Angeles, CA",4,5,0
@@ -507,8 +500,9 @@ Norwalk Community Hospital,"Norwalk, CA",0,7,1
 Norwalk Meadows Nursing Center,"Norwalk, CA",32,42,3
 Norwalk Skilled Nursing & Wellness Centre,"Norwalk, CA",35,40,3
 Nuestra Casa - Recovery Bridge Housing,"South Gate, CA",1,3,0
-Oakmont of Santa Clarita,"Santa Clarita, CA",11,20,1
-Oakmont of Whittier,"Whittier, CA",10,18,3
+Oakmont of Santa Clarita,"Santa Clarita, CA",16,23,1
+Oakmont of Whittier (1),"Whittier, CA",10,18,3
+Oakmont of Whittier (2),"Whittier, CA",0,4,1
 Ocean Pointe Healthcare Center,"Santa Monica, CA",24,25,1
 Olive Branch Assisted Living,"Northridge, CA",0,3,0
 Olive Vista Behavioral Health Center,"Pomona, CA",20,7,0
@@ -524,7 +518,6 @@ Pacifica Senior Living Santa Clarita,"Santa Clarita, CA",21,36,10
 Palazzo Post Acute,"Los Angeles, CA",3,1,0
 Palm Court Independent Living,"Culver City, CA",13,14,2
 Palm House,"La Verne, CA",1,3,0
-Palmdale Care Facility #1,"Palmdale, CA",2,4,0
 Palos Verdes Health Care Center,"Lomita, CA",3,1,0
 Palos Verdes Villa,"Rancho Palos Verdes, CA",15,65,5
 Panorama Gardens Nursing and Rehabilitation Center,"Panorama City, CA",12,66,5
@@ -532,18 +525,17 @@ Paradigm Treatment Centers - Point Dume House,"Malibu, CA",2,1,0
 Paramount Convalescent Hospital,"Paramount, CA",39,44,9
 Park Avenue Healthcare & Wellness Center,"Pomona, CA",40,19,3
 Park Paseo Independent Living,"Glendale, CA",0,4,1
-Parker Homes Adult Residential Facility,"Rowland Heights, CA",4,4,0
 Parkview Manor,"Los Angeles, CA",8,1,0
 Parkwest Healthcare Center SNF,"Reseda, CA",26,2,1
 Pasadena Park Healthcare & Wellness Center,"Pasadena, CA",25,40,0
 Pate & Ingram Home 1,"Inglewood, CA",0,3,0
-Pate and Ingram Home #2,"Hawthorne, CA",7,3,0
+Pate & Ingram Home 2,"Hawthorne, CA",7,3,0
 Pate Enterprise,"Los Angeles, CA",2,3,0
 Pathways 8,"Azusa, CA",0,6,0
 Patterns,"Hawthorne, CA",1,1,0
 Penn Mar Therapeutic Center,"El Monte, CA",18,4,0
 Penny Lane Center,"North Hills, CA",1,2,0
-People's Care - Home on Croft,"Los Angeles, CA",3,3,1
+People's Care Croft Home,"Los Angeles, CA",3,3,1
 People's Care Ferrero Home,"La Puente, CA",9,2,0
 Percy Village,"Los Angeles, CA",14,6,0
 Phoenix Empowerment Sober Living,"Downey, CA",1,7,0
@@ -557,11 +549,13 @@ Pilgrim Place Health Services Center,"Claremont, CA",12,3,0
 "Pine Grove Healthcare & Wellness Centre, LP","San Gabriel, CA",24,40,1
 Pitchess Detention Facility,"Castaic, CA",87,531,2
 Playa Del Rey Center,"Playa Del Rey, CA",12,11,1
+Plymouth Home,"Inglewood, CA",2,1,0
 Prestige Assisted Living,"Lancaster, CA",5,1,0
 Primrose Post-Acute,"Inglewood, CA",13,6,0
 Project Six DD Homes,"North Hills, CA",2,2,0
 Prospect Manor,"South Pasadena, CA",3,14,1
 Prototypes in Pomona,"Pomona, CA",13,1,0
+Providence Cedars-Sinai Tarzana Medical Center,"Tarzana, CA",0,3,0
 Providence Little Company of Mary Medical Center - San Pedro,"San Pedro, CA",2,5,0
 Providence Little Company of Mary Sub Acute Care Center,"San Pedro, CA",21,1,0
 Providence Little Company of Mary Transitional Care Center,"Torrance, CA",10,2,3
@@ -580,7 +574,6 @@ Riviera Healthcare Center (1),"Pico Rivera, CA",7,10,1
 Riviera Healthcare Center (2),"Pico Rivera, CA",10,7,0
 RMD Homes - Casa Bonita,"Whittier, CA",5,4,0
 "Robilyn Guest Home, Inc. #3","Norwalk, CA",2,2,1
-Robilyn's Guest Home,"Carson, CA",1,2,0
 Robinson Manor,"Altadena, CA",0,2,0
 "Rose Senior Care, Inc.","Porter Ranch, CA",6,3,2
 Rose Valley Arcadia,"Arcadia, CA",2,0,0
@@ -590,10 +583,10 @@ Rosecrans Care Center,"Gardena, CA",5,2,0
 Rosecrans Villa,"Hawthorne, CA",6,14,0
 Royal Bellingham,"Valley Village, CA",6,35,5
 Royal Gardens Healthcare,"Alhambra, CA",14,12,2
-Royal Oaks Assisted Living,"Duarte, CA",7,10,0
-Royal Oaks Manor,"Duarte, CA",6,21,0
+Royal Oaks (Assisted Living),"Duarte, CA",7,10,0
+Royal Oaks Manor - Bradbury Oaks (SNF),"Duarte, CA",6,21,0
 Royal Palms LGBTQ+ Residential,"Los Angeles, CA",1,2,0
-Royal Palms Post Acute,"Glendale, CA",18,8,1
+Royal Palms Post Acute,"Glendale, CA",18,9,1
 Royal Terrace Healthcare,"Duarte, CA",7,6,0
 Sails Newcastle,"Granada Hills, CA",3,1,0
 Saint Anne's Maternity Home,"Los Angeles, CA",5,5,0
@@ -614,7 +607,7 @@ Santa Monica Convalescent Center II,"Santa Monica, CA",4,15,1
 Santa Monica Home & Care 2,"Santa Monica, CA",6,9,2
 Santa Teresita Manor,"Duarte, CA",27,11,0
 Scholl Canyon Estates,"Glendale, CA",7,21,0
-Seacrest Convalescent Hospital,"San Pedro, CA",12,9,0
+Seacrest Convalescent Hospital,"San Pedro, CA",13,8,0
 Sepulveda Residential,"Van Nuys, CA",0,3,0
 Serene Abode Adult Residential Facility,"Whittier, CA",2,3,0
 Serento Casa SNF (Previously Brookdale San Dimas),"San Dimas, CA",14,9,2
@@ -623,7 +616,7 @@ Shalis Care Center,"Altadena, CA",7,3,0
 Sharon Care Center,"Los Angeles, CA",40,54,9
 Sherman Oaks Congregate Center,"Sherman Oaks, CA",0,5,1
 Sherman Oaks Health & Rehabilitation Center,"Sherman Oaks, CA",31,40,9
-Sherman Village Healthcare Center,"Valley Village, CA",71,53,1
+Sherman Village Healthcare Center,"Valley Village, CA",71,53,3
 Sierra View Care Center,"Baldwin Park, CA",19,27,3
 Silverado Beach Cities,"Redondo Beach, CA",5,0,0
 Silverado Beverly Place,"Los Angeles, CA",8,2,0
@@ -647,7 +640,7 @@ Springville,"Baldwin Park, CA",0,2,0
 St. Andrews Healthcare,"Los Angeles, CA",6,5,0
 St. John Grande,"Los Angeles, CA",2,4,4
 St. John of God Retirement and Care Center (SNF),"Los Angeles, CA",53,43,4
-Star Homes,"Torrance, CA",3,1,0
+Star House III,"Torrance, CA",3,1,0
 Starview Adolescent Center,"Torrance, CA",40,19,0
 Stepping Stones Transitional Housing,"Los Angeles, CA",0,3,0
 Stoney Point Healthcare Center,"Chatsworth, CA",32,26,6
@@ -656,7 +649,7 @@ Strata Bella Home,"Torrance, CA",3,4,0
 Studio City Rehabilitation Center,"Studio City, CA",42,20,0
 Studio Royale Retirement Home Assisted Living,"Culver City, CA",17,21,8
 Summer Breeze Manor,"Torrance, CA",1,3,3
-Summer Wind Manor,"Torrance, CA",6,6,0
+Summer Wind Manor Vii,"Torrance, CA",6,6,0
 Sunny Village Care Center,"Alhambra, CA",38,59,10
 Sunnyside Guest Home,"El Monte, CA",3,6,1
 Sunnyside Nursing Center (1),"Torrance, CA",95,121,22
@@ -668,7 +661,6 @@ Sunrise at Sterling Canyon,"Santa Clarita, CA",15,3,1
 Sunrise of Beverly Hills (1),"Beverly Hills, CA",10,1,0
 Sunrise of Beverly Hills (2),"Beverly Hills, CA",3,2,0
 Sunrise of Claremont,"Claremont, CA",8,1,0
-Sunrise of Hermosa Beach,"Hermosa Beach, CA",10,6,1
 Sunrise of Santa Monica,"Santa Monica, CA",10,7,1
 Sunrise of Studio City,"Studio City, CA",4,3,0
 Sunrise of West Hills,"West Hills, CA",16,7,0
@@ -725,7 +717,7 @@ Topanga Terrace Convalescent Center,"West Hills, CA",33,27,1
 "Total Care Residential, Inc.","Cerritos, CA",6,4,0
 Trinity Services El Monte,"El Monte, CA",1,3,0
 Turner's Residential Facility,"Palmdale, CA",1,4,0
-Twelve Oaks Senior Living,"La Crescenta, CA",7,12,0
+Twelve Oaks Senior Living,"La Crescenta, CA",8,12,0
 Twin Towers Correctional Facility,"Los Angeles, CA",226,828,4
 United Cerebral Palsy Bradley House,"Sylmar, CA",10,3,0
 United Cerebral Palsy Harbor Home,"Lomita, CA",10,2,0
@@ -740,7 +732,7 @@ Vagthol's Home #1,"Los Angeles, CA",5,4,0
 Vagthol's Home #2,"Los Angeles, CA",4,2,0
 Vagthol's Home #3,"Los Angeles, CA",4,4,0
 Vagthol's Ville,"Los Angeles, CA",5,2,0
-Valley Manor Guest Home,"North Hollywood, CA",7,13,0
+Valley Manor Guest Home,"North Hollywood, CA",7,14,0
 Valley Palms Care Center,"North Hollywood, CA",1,8,0
 Valley View Congregate Living,"North Hollywood, CA",3,0,0
 Valley View Retirement Center,"Panorama City, CA",2,21,0
@@ -764,8 +756,8 @@ Villa Elena Healthcare Center,"Norwalk, CA",32,54,0
 Villa Scalabrini,"Sun Valley, CA",10,15,0
 Virgil Rehabilitation and Skilled Nursing Center,"Los Angeles, CA",15,20,3
 "Vista Care Home, Inc.","Mission Hills, CA",3,1,0
-Vista Del Mar Child and Family Services - Handler Unit,"Los Angeles, CA",8,4,0
 "Vista Del Mar Child and Family Services, Community Treatment Center","Los Angeles, CA",8,4,0
+"Vista Del Mar Child and Family Services, Handler Unit","Los Angeles, CA",8,4,0
 Vista Del Sol Care Center,"Los Angeles, CA",7,8,0
 Vista Veranda,"Lynwood, CA",11,14,0
 Wachter Residential Care,"Saugus, CA",3,6,0
@@ -795,11 +787,12 @@ Whittier Hills Health Care Center,"Whittier, CA",50,87,19
 Whittier Pacific Care Center,"Whittier, CA",3,15,2
 Windsor Care Center of Cheviot Hills (1),"Los Angeles, CA",12,5,0
 Windsor Care Center of Cheviot Hills (2),"Los Angeles, CA",17,14,0
-Windsor Gardens Convalescent Center (Camino Healthcare),"Hawthorne, CA",16,25,0
+Windsor Gardens Convalescent Center (Camino Healthcare),"Hawthorne, CA",18,26,0
 Windsor Gardens Convalescent Hospital (1),"Los Angeles, CA",2,2,0
 Windsor Gardens Convalescent Hospital (2),"Los Angeles, CA",18,24,0
 Windsor Gardens Healthcare Center of The Valley,"North Hollywood, CA",35,60,5
 Windsor Manor (Assisted Living),"Glendale, CA",2,12,0
+Windsor Manor (SNF),"Glendale, CA",2,1,0
 Windsor Palms Care Center of Artesia,"Artesia, CA",92,226,14
 Windsor Terrace Healthcare Center,"Van Nuys, CA",55,36,3
 Woodland Care Center,"Reseda, CA",51,62,16

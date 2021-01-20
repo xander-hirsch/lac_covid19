@@ -34,6 +34,7 @@ Downtown Women's Center,Homeless Shelter,5,0,0
 Downtown Women's Center (SRO),Single Room Occupancy Housing,3,0,0
 Echo Park Recreation Center Shelter,Homeless Shelter,1,1,0
 Elden House,Homeless Shelter,1,1,0
+Ellis Hotel,Single Room Occupancy Housing,0,1,0
 Encampment - Boyle Heights #2,Homeless Encampment,0,1,0
 Encampment - Canoga Park,Homeless Encampment,0,1,0
 Encampment - Central LA,Homeless Encampment,0,1,0
@@ -55,7 +56,7 @@ Encampment - Central LA #34,Homeless Encampment,0,1,0
 Encampment - Central LA #35,Homeless Encampment,0,1,0
 Encampment - Central LA #36,Homeless Encampment,0,1,0
 Encampment - Central LA #37,Homeless Shelter,0,1,0
-Encampment - Compton,Homeless Encampment,0,1,0
+Encampment - Compton,Homeless Encampment,0,6,0
 Encampment - Downey,Homeless Encampment,0,1,0
 Encampment - Eagle Rock,Homeless Encampment,2,1,0
 Encampment - East Hollywood,Homeless Encampment,0,1,0
@@ -114,7 +115,6 @@ First To Serve - Vernon,Homeless Shelter,7,6,0
 Florence Apartments,Single Room Occupancy Housing,0,1,0
 Friendship Auditorium,Homeless Shelter,8,1,0
 Good Shepherd Languille,Homeless Shelter,0,1,0
-Gratitude House,Homeless Shelter,0,1,0
 Harbor Interfaith - A Bridge Home San Pedro,Homeless Shelter,1,0,0
 Harbor Interfaith 8th Street,Homeless Shelter,3,0,0
 Harbor Interfaith 9th Street,Homeless Service Provider,6,0,0
@@ -166,7 +166,7 @@ National Health Foundation,Recuperative Care Center,1,1,0
 National Health Foundation - HFH,Recuperative Care Center,0,1,0
 Neffertiti's Housing,Homeless Shelter,0,1,0
 New Directions For Veterans,Homeless Shelter,6,15,0
-New Hope Temporary Shelter,Homeless Shelter,2,0,0
+New Hope Temporary Shelter,Homeless Shelter,2,1,0
 New Reflections,Homeless Shelter,1,2,0
 Norbo Hotel,Single Room Occupancy Housing,0,1,0
 Pacoima Place,Single Room Occupancy Housing,0,1,0
@@ -178,7 +178,7 @@ PATH - Lodi,Homeless Shelter,0,1,1
 PATH - Madison Interim Housing,Homeless Shelter,0,4,0
 Pathways To Home,Homeless Shelter,1,3,0
 Pathways Transitional Housing,Homeless Shelter,0,1,0
-Prototypes - Bridge Housing,Homeless Shelter,0,2,0
+Prototypes - Bridge Housing,Homeless Shelter,0,3,0
 Proyecto Pastoral - Dolores Mission,Homeless Shelter,1,1,0
 Rainbow Apartments,Single Room Occupancy Housing,0,1,0
 Rossmore Hotel,Single Room Occupancy Housing,1,0,0
@@ -194,6 +194,7 @@ Salvation Army Booth Home,Homeless Shelter,0,1,0
 Salvation Army Lily's Place,Homeless Shelter,1,0,0
 Salvation Army Santa Fe Springs,Homeless Shelter,0,1,0
 Salvation Army The Way In,Homeless Shelter,2,1,0
+San Fernando Valley Rescue Mission,Homeless Shelter,3,6,0
 Sanborn Hotel,Single Room Occupancy Housing,0,1,0
 Serenity Recuperative Care,Recuperative Care Center,2,1,0
 Serenity Recuperative Care - ELA,Recuperative Care Center,0,1,0
@@ -202,9 +203,9 @@ Shouridge House,Homeless Shelter,0,2,0
 Simone Hotel,Single Room Occupancy Housing,0,1,0
 Solar Recuperative Care,Homeless Shelter,0,1,1
 South LA Women's Shelter,Homeless Shelter,0,2,0
-St Joseph Center - Palms,Homeless Service Provider,3,0,0
 St. Agnes Hotel,Single Room Occupancy Housing,0,1,0
 St. George Hotel,Single Room Occupancy Housing,0,1,0
+St. Joseph Center - Palms,Homeless Service Provider,3,0,0
 St. Mark's Hotel,Single Room Occupancy Housing,0,1,0
 "St. Matthew's Lutheran Church, North Hollywood",Homeless Service Provider,0,1,0
 Steinmetz Shelter,Homeless Shelter,0,1,0
@@ -232,7 +233,6 @@ Weingart Center - DHS,Homeless Shelter,0,1,0
 Weingart Center - RSAAP,Homeless Shelter,1,0,0
 Weingart Center - THP,Homeless Shelter,0,1,0
 Weingart Civic Center A Bridge Home,Homeless Shelter,0,2,0
-Whittier First Day,Homeless Shelter,5,0,0
 Whittier Narrows Shower Event,Homeless Hygiene Center,0,9,0
 Whittier Senior Center,Homeless Shelter,2,12,0
 Women's Care Cottage,Homeless Shelter,0,1,0
