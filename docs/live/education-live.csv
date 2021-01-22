@@ -1,10 +1,8 @@
 Setting Name,Address,Total Confirmed Staff,Total Confirmed Students
 Amir Family Child Care,"5218 Sylmar Ave, Sherman Oaks, CA, 91401",3,6
 "Antelope Valley College, CTE Cohort","3041 W Avenue K, Lancaster, CA, 93536",2,3
-"Antelope Valley College, Nursing","3041 W Avenue K, Lancaster, CA, 93536",2,9
 Arcadia High School,"180 Campus Dr, Arcadia, CA, 91007",3,0
 Baldwin Park Unified School District Office,"3699 Holly Ave, Baldwin Park, CA, 91706",20,0
-Barahona Family Child Care,"1819 W Adams Blvd, Los Angeles, CA, 90018",2,2
 "Bell Senior High, LAUSD Grab & Go Distribution Center","4328 Bell Ave, Bell, CA, 90201",9,0
 Bellflower II Child Development Center,"14523 Bellflower Blvd, Bellflower, CA, 90706",2,2
 Blessed Sacrament School,"6641 W Sunset Blvd, Los Angeles, CA, 90028",3,0
@@ -15,7 +13,6 @@ Bright Horizons at The Water Garden,"1620 26th St, Ste 1020 N, Santa Monica, CA,
 Carrillo Family Child Care,"1227 E 76th St, Los Angeles, CA, 90001",2,2
 Child's World School,"6100 Lindley Ave, Encino, CA, 91316",4,4
 Cruz Family Childcare,"3741 Military Ave, Los Angeles, CA, 90034",1,2
-Curtis School,"15871 Mulholland Dr, Los Angeles, CA, 90049",3,0
 Drew Child Development Center,"9200 Maie Ave, Los Angeles, CA, 90002",3,2
 Edison Around The Bell Program (Burbank Unified School District),"921 N Keystone St, Burbank, CA, 91506",3,0
 Emek Hebrew Academy Day Camp,"15365 Magnolia Blvd, Sherman Oaks, CA, 91403",2,5
@@ -32,14 +29,12 @@ Holy Martyrs Armenian Preschool,"16617 Parthenia St, North Hills, CA, 91343",6,0
 Jim Gilliam Childcare,"4000 S La Brea Ave, Los Angeles, CA, 90008",4,0
 "Kadima Day School, West Hills","7011 Shoup Ave, West Hills, CA, 91307",2,4
 "LA City Department of Recreation and Parks, Delano Recreation Center","15100 Erwin St, Van Nuys, CA, 91411",4,3
-La Marina Pre-School and Kindergarten,"115 S Sepulveda Blvd, Manhattan Beach, CA, 90266",4,3
 LAC + USC Employees Children's Center,"1401 N Mission Rd, Los Angeles, CA, 90033",5,0
 LAUSD Procurement Services Support Center,"8525 Rex Rd, Pico Rivera, CA, 90660",43,0
 Leona Cox Community School,"18643 Oakmoor St, Santa Clarita, CA, 91351",4,0
 Linda Esperanza Marquez High School,"6361 Cottage St, Huntington Park, CA, 90255",5,0
 Loyola Marymount University Athletics,"1 LMU Dr, Los Angeles, CA, 90045",2,4
 Luskin Conference Center 3,"337 Charles E Young Dr E,, Los Angeles, CA, 90095",22,0
-Mail Distribution - UCLA,"555 Westwood Plz, Level B, Los Angeles, CA, 90095",5,0
 Newhall School District Office,"25375 Orchard Village Rd, Valencia, CA, 91355",4,0
 Oaks Christian School Westlake Village,"31749 La Tienda Rd, Westlake Village, CA, 91362",0,4
 "Off Campus Neighborhood, USC S. Figueroa St","Los Angeles, CA",2,26
@@ -55,8 +50,9 @@ The Master's University and Seminary,"21726 Placerita Canyon Rd, Santa Clarita, 
 Tiny Thinkers Preschool,"15737 Parthenia St, North Hills, CA, 91343",4,2
 Trinity Classical Academy,"28310 Kelly Johnson Pkwy, Valencia, CA, 91355",5,4
 UCLA Facilities,"731 Charles E Young Dr S, Los Angeles, CA, 90095",41,0
+UCLA Mail Distribution,"555 Westwood Plz, Level B, Los Angeles, CA, 90095",5,0
 UEI College Encino,"5445 Balboa Blvd, Encino, CA, 91316",2,31
-UEI College Huntington Park,"6055 Pacific Blvd, Huntington Park, CA, 90255",4,0
+UEI College Huntington Park,"6055 Pacific Blvd, Huntington Park, CA, 90255",5,0
 USC Athletics 2,"1031 W 34th St, Los Angeles, CA, 90089",0,7
 USC Department of Public Safety 2,"3667 Mcclintock Ave, Los Angeles, CA, 90089",3,0
 USC Facilities Management Services 2,"1441 Eastlake Ave, Los Angeles, CA, 90089",3,0
