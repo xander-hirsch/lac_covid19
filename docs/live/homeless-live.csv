@@ -3,7 +3,6 @@ A Bridge Home - Casa Azul,Homeless Shelter,1,2,0
 A Bridge Home - Eubank,Homeless Shelter,1,0,0
 A Bridge Home - St. Andrew's,Homeless Shelter,2,2,0
 A New Direction Transitional Housing,Homeless Shelter,1,7,1
-Abundant Blessings From Above - 3rd Ave,Homeless Shelter,0,1,0
 Abundant Blessings From Above - 62nd St,Homeless Shelter,0,7,0
 Abundant Blessings From Above 2412,Homeless Shelter,0,1,0
 Anita May Rosenstein Campus LGBT Center,Homeless Shelter,3,0,0
@@ -19,6 +18,7 @@ Bryant Temple Women's Winter Shelter,Homeless Shelter,1,9,0
 C3 Skid Row,Homeless Service Provider,7,3,0
 Cardinal Manning Center,Homeless Shelter,1,5,1
 Casa de Vida,Homeless Shelter,4,8,0
+Charles Cobb Apartments,Single Room Occupancy Housing,1,2,0
 Cloverfield,Homeless Shelter,4,0,0
 Connections For Women,Homeless Shelter,0,11,0
 Connections For Women 88th Street,Homeless Shelter,2,5,0
@@ -86,6 +86,7 @@ Encampment - San Pedro #2,Homeless Encampment,0,4,0
 Encampment - Santa Monica,Homeless Encampment,0,3,0
 Encampment - Santa Monica #2,Homeless Encampment,0,3,0
 Encampment - Signal Hill,Homeless Encampment,0,1,0
+Encampment - Signal Hill #2,Homeless Encampment,0,1,0
 Encampment - South Gate #2,Homeless Encampment,0,2,0
 Encampment - South LA #9,Homeless Encampment,0,1,0
 Encampment - South LA #10,Homeless Encampment,0,3,0
@@ -102,6 +103,7 @@ Encampment - Westmont,Homeless Encampment,0,1,0
 Encampment - Wilmington #4,Homeless Encampment,0,1,0
 Eugene Apartments,Single Room Occupancy Housing,2,11,1
 Exodus Broadway,Homeless Shelter,0,6,0
+Fair Opportunity For Change,Homeless Shelter,0,1,0
 Fair Opportunity For Change #2,Homeless Shelter,0,1,0
 Fair Opportunity For Change #3,Homeless Shelter,1,1,0
 First To Serve - 50th Street,Homeless Shelter,0,1,0
@@ -115,33 +117,31 @@ Friendship Auditorium,Homeless Shelter,8,1,0
 Good Shepherd Hawkes,Homeless Shelter,0,2,0
 Good Shepherd Languille,Homeless Shelter,0,1,0
 Grupo Empezar de Las Tinieblas A La Luz,Homeless Shelter,0,1,0
-Harbor Interfaith - A Bridge Home San Pedro,Homeless Shelter,1,3,0
+Harbor Interfaith - A Bridge Home San Pedro,Homeless Shelter,2,2,0
 Harbor Interfaith 8th Street,Homeless Shelter,3,0,0
 Harbor Interfaith 9th Street,Homeless Service Provider,6,0,0
 Harbor Recuperative Care,Recuperative Care Center,1,6,0
 Hart Hotel,Single Room Occupancy Housing,0,1,0
-Harvest Home,Homeless Shelter,1,4,0
 HOLA Recuperative Care,Recuperative Care Center,1,2,0
 Holliday's Helping Hands,Homeless Shelter,4,0,0
 Home at Last - Athens Park,Homeless Shelter,3,4,0
 Home at Last - Vermont,Homeless Shelter,0,3,0
-Home at Last - Western,Homeless Shelter,0,3,0
 Homes For Life,Homeless Shelter,0,1,0
 Hope For Home Pomona,Homeless Shelter,1,17,0
 Hope of The Valley - A Bridge Home Van Nuys,Homeless Shelter,9,12,1
 Hope of The Valley - North Hollywood,Homeless Shelter,0,2,0
 Hope of The Valley - Pacoima Winter Shelter,Homeless Shelter,5,1,0
+Hope of The Valley - The Landing,Homeless Shelter,0,1,0
 HOPICS - Long Beach Ave,Homeless Shelter,1,0,0
-Horizon Recuperative Care,Recuperative Care Center,2,6,0
 House of Hope Transitional Housing,Homeless Shelter,0,1,0
 Illumination Foundation Recuperative Care - LA,Recuperative Care Center,1,0,0
+Illumination Foundation Recuperative Care - Santa Fe Springs,Recuperative Care Center,9,19,0
 Inland Valley Council of Churches,Homeless Shelter,1,3,0
 Jovenes - Norwalk,Homeless Shelter,0,1,0
 Jovenes - The Village,Homeless Shelter,0,3,0
 Jovenes - Union Ave.,Homeless Shelter,1,0,0
 Kensington Campus - Interim Housing,Homeless Shelter,3,1,0
 La Jolla,Single Room Occupancy Housing,0,2,0
-La Posada Shelter,Homeless Shelter,4,3,0
 LAMP Village,Homeless Shelter,2,0,0
 Las Americas Hotel,Single Room Occupancy Housing,2,4,0
 Las Palomas Hotel,Single Room Occupancy Housing,4,0,0
@@ -152,18 +152,16 @@ Luz En El Pensamiento,Homeless Shelter,1,2,0
 Marshal House,Homeless Shelter,0,1,0
 Martin Luther King Junior Recuperative Care Center,Recuperative Care Center,17,19,1
 Motorcycle Riders For Homeless Parolees,Homeless Shelter,0,6,0
-Ms. Hazel's House - 59th Place,Homeless Shelter,1,0,0
 Ms. Hazel's House - 66th Street,Homeless Shelter,0,2,0
 Ms. Hazel's House - 67th Street,Homeless Shelter,0,1,0
 Ms. Hazel's House - 74th Street,Homeless Shelter,0,3,0
 Ms. Hazel's House - 76th Street,Homeless Shelter,0,4,0
 Ms. Hazel's House - Crocker Street,Homeless Shelter,0,5,0
 Ms. Hazel's House - Edgehill Drive,Homeless Shelter,2,0,0
-Ms. Hazel's House - Ruthelen Street,Homeless Shelter,1,1,0
-Ms. Hazel's House - Wall Street,Homeless Shelter,2,1,0
+Ms. Hazel's House - Ruthelen Street,Homeless Shelter,0,4,0
+Ms. Hazel's House - Wall Street,Homeless Shelter,2,2,0
 My Friend's Place,Homeless Service Provider,3,0,0
 National Health Foundation,Recuperative Care Center,1,1,0
-National Health Foundation - HFH,Recuperative Care Center,0,1,0
 Neffertiti's Housing,Homeless Shelter,0,1,0
 New Directions For Veterans,Homeless Shelter,6,15,0
 New Hope Temporary Shelter,Homeless Shelter,2,1,0
@@ -178,6 +176,7 @@ PATH - Lodi,Homeless Shelter,0,1,1
 PATH - Madison Interim Housing,Homeless Shelter,0,4,0
 Pathways To Home,Homeless Shelter,1,3,0
 Pathways Transitional Housing,Homeless Shelter,0,8,0
+Produce Hotel,Single Room Occupancy Housing,0,2,0
 Prototypes - Bridge Housing,Homeless Shelter,0,3,0
 Proyecto Pastoral - Dolores Mission,Homeless Shelter,1,1,0
 Rainbow Apartments,Single Room Occupancy Housing,0,1,0
@@ -193,13 +192,13 @@ Salvation Army Bell Shelter,Homeless Shelter,12,34,1
 Salvation Army Booth Home,Homeless Shelter,0,1,0
 Salvation Army Lily's Place,Homeless Shelter,1,0,0
 Salvation Army Santa Fe Springs,Homeless Shelter,0,1,0
-Salvation Army The Way In,Homeless Shelter,2,1,0
 San Fernando Valley Rescue Mission,Homeless Shelter,3,6,0
 Sanborn Hotel,Single Room Occupancy Housing,0,1,0
 Serenity Recuperative Care,Recuperative Care Center,2,1,0
 Serenity Recuperative Care - ELA,Recuperative Care Center,0,1,0
 Serenity Recuperative Care - Lakeview Terrace,Homeless Shelter,1,0,0
 Shouridge House,Homeless Shelter,0,2,0
+Shull House,Homeless Shelter,0,1,0
 Simone Hotel,Single Room Occupancy Housing,0,1,0
 Solar Recuperative Care,Homeless Shelter,0,1,1
 South LA Women's Shelter,Homeless Shelter,0,2,0
@@ -217,13 +216,13 @@ The Silver Villa,Homeless Shelter,0,1,0
 The T-House,Homeless Shelter,1,2,0
 The Whole Child Interim Safe Families Shelter,Homeless Shelter,2,0,0
 TLP Taft,Homeless Shelter,0,1,0
-Total Restoration Ministries,Homeless Shelter,4,15,1
+Total Restoration Ministries,Homeless Shelter,4,15,0
 Transitional Living Program - Lancaster,Homeless Shelter,0,4,0
 Turning Point Housing,Homeless Shelter,0,1,0
 Union Rescue Mission,Homeless Shelter,2,22,0
-"Union Rescue Mission, DHS Clinic",Homeless Service Provider,1,0,0
 Upward Bound House,Homeless Shelter,1,1,0
 "US Veterans Initiative, Inglewood",Homeless Shelter,7,14,0
+Valerio House,Homeless Shelter,0,1,0
 Valley Oasis - 60th St,Homeless Shelter,0,1,0
 Valley Oasis - Family Access Center,Homeless Service Provider,3,0,0
 Ward Hotel,Single Room Occupancy Housing,0,1,0
@@ -232,8 +231,7 @@ Weingart Center - AB109,Homeless Shelter,0,1,0
 Weingart Center - DHS,Homeless Shelter,0,1,0
 Weingart Center - RSAAP,Homeless Shelter,1,0,0
 Weingart Center - THP,Homeless Shelter,0,1,0
-Weingart Civic Center A Bridge Home,Homeless Shelter,0,2,0
+Weingart Civic Center A Bridge Home,Homeless Shelter,1,6,0
 Whittier Narrows Shower Event,Homeless Hygiene Center,0,9,0
 Whittier Senior Center,Homeless Shelter,2,12,0
-Women's Care Cottage,Homeless Shelter,1,1,0
 Zahn Memorial Center,Homeless Shelter,0,2,1
