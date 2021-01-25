@@ -16,6 +16,7 @@ Bridge Taper Shelter,Homeless Shelter,2,4,0
 Bridge To Home,Homeless Shelter,0,1,1
 Bryant Temple Women's Winter Shelter,Homeless Shelter,1,9,0
 C3 Skid Row,Homeless Service Provider,7,3,0
+Canaan House Family Transitional Housing,Homeless Shelter,0,1,0
 Cardinal Manning Center,Homeless Shelter,1,5,1
 Casa de Vida,Homeless Shelter,4,8,0
 Charles Cobb Apartments,Single Room Occupancy Housing,1,2,0
@@ -23,7 +24,7 @@ Cloverfield,Homeless Shelter,4,0,0
 Connections For Women,Homeless Shelter,0,11,0
 Connections For Women 88th Street,Homeless Shelter,2,5,0
 Connections For Women 116th Street,Homeless Shelter,0,6,0
-Connections For Women Colden Avenue,Homeless Shelter,0,6,0
+Connections For Women Colden Ave,Homeless Shelter,0,6,0
 Connections For Women Main Street,Homeless Shelter,0,1,0
 Courtland Hotel,Single Room Occupancy Housing,0,1,0
 Covenant House,Homeless Shelter,7,10,0
@@ -54,7 +55,7 @@ Encampment - Central LA #35,Homeless Encampment,0,1,0
 Encampment - Central LA #36,Homeless Encampment,0,1,0
 Encampment - Central LA #37,Homeless Shelter,0,1,0
 Encampment - Central LA #38,Homeless Encampment,0,1,0
-Encampment - Compton,Homeless Encampment,0,6,0
+Encampment - Compton,Homeless Encampment,0,7,0
 Encampment - Downey,Homeless Encampment,0,1,0
 Encampment - Eagle Rock,Homeless Encampment,2,1,0
 Encampment - East Hollywood,Homeless Encampment,0,1,0
@@ -67,6 +68,7 @@ Encampment - Hollywood #9,Homeless Encampment,0,1,0
 Encampment - Hollywood #10,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #3,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #4,Homeless Encampment,0,1,0
+Encampment - Lynwood,Homeless Encampment,0,1,0
 Encampment - MacArthur Park,Homeless Encampment,1,14,1
 Encampment - Mission Hills #1,Homeless Encampment,0,1,0
 Encampment - Montecito Heights,Homeless Encampment,0,1,0
@@ -76,7 +78,6 @@ Encampment - North Hollywood Studio City,Homeless Encampment,0,2,0
 Encampment - Norwalk #2,Homeless Encampment,0,2,0
 Encampment - Panorama City #2,Homeless Encampment,0,1,0
 Encampment - Redondo Beach,Homeless Encampment,0,1,0
-Encampment - Safe Parking Bixel,Homeless Encampment,0,1,0
 Encampment - Safe Parking Glassell,Homeless Encampment,0,1,0
 Encampment - Safe Parking Reseda,Homeless Encampment,0,1,0
 Encampment - Safe Parking SPA 1,Homeless Encampment,3,0,0
@@ -87,7 +88,7 @@ Encampment - Santa Monica #2,Homeless Encampment,0,3,0
 Encampment - Signal Hill,Homeless Encampment,0,1,0
 Encampment - Signal Hill #2,Homeless Encampment,0,1,0
 Encampment - South Gate #2,Homeless Encampment,0,2,0
-Encampment - South LA #9,Homeless Encampment,0,1,0
+Encampment - South LA #9,Homeless Encampment,0,2,0
 Encampment - South LA #10,Homeless Encampment,0,3,0
 Encampment - South LA #11,Homeless Encampment,0,1,0
 Encampment - South LA #12,Homeless Encampment,0,1,0
@@ -95,7 +96,7 @@ Encampment - South LA #13,Homeless Encampment,0,1,0
 Encampment - South LA #14,Homeless Encampment,0,1,0
 Encampment - South LA #15,Homeless Encampment,0,1,0
 Encampment - South LA #16,Homeless Encampment,0,1,0
-Encampment - Sun Valley #2,Homeless Encampment,0,2,0
+Encampment - South LA #17,Homeless Encampment,0,1,0
 Encampment - Venice,Homeless Encampment,0,1,0
 Encampment - West LA #1,Homeless Encampment,0,1,0
 Encampment - West LA #4,Homeless Encampment,0,4,0
@@ -185,7 +186,7 @@ Russ Hotel,Single Room Occupancy Housing,6,4,0
 S. Mark Taper Foundation Family Living Center,Homeless Shelter,1,5,0
 Safe Landing For Families,Homeless Shelter,0,7,0
 Safe Sleep Program,Homeless Encampment,1,2,0
-Salvation Army A Bridge Home Imperial Highway,Homeless Shelter,2,9,0
+Salvation Army A Bridge Home Imperial Highway,Homeless Shelter,6,9,0
 Salvation Army Aetna Bridge Home,Homeless Shelter,0,7,0
 Salvation Army Bell Shelter,Homeless Shelter,12,34,1
 "Salvation Army Bell Shelter, JWCH Recuperative Care Program",Recuperative Care Center,7,1,0
@@ -218,7 +219,6 @@ TLP Taft,Homeless Shelter,0,1,0
 Transitional Living Program - Lancaster,Homeless Shelter,0,4,0
 Turning Point Housing,Homeless Shelter,0,1,0
 Union Rescue Mission,Homeless Shelter,2,22,1
-Upward Bound House,Homeless Shelter,1,1,0
 "US Veterans Initiative, Inglewood",Homeless Shelter,7,14,0
 Valerio House,Homeless Shelter,0,1,0
 Valley Oasis - 60th St,Homeless Shelter,0,1,0
@@ -232,4 +232,5 @@ Weingart Center - THP,Homeless Shelter,0,1,0
 Weingart Civic Center A Bridge Home,Homeless Shelter,1,6,0
 Whittier Narrows Shower Event,Homeless Hygiene Center,0,9,0
 Whittier Senior Center,Homeless Shelter,2,12,0
+Women's Care Cottage,Homeless Shelter,1,1,0
 Zahn Memorial Center,Homeless Shelter,0,2,1
