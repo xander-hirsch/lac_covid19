@@ -9,7 +9,7 @@ Anita May Rosenstein Campus LGBT Center,Homeless Shelter,3,0,0
 Ascencia Homeless Shelter,Homeless Shelter,2,12,0
 Aviva Family and Children's Services - Wallis House,Homeless Shelter,0,2,0
 Ballington Plaza,Homeless Shelter,0,1,0
-Bassett Park Winter Shelter,Homeless Shelter,1,9,0
+Bassett Park Winter Shelter,Homeless Shelter,1,10,0
 Boyd Hotel,Single Room Occupancy Housing,0,2,0
 Bridge Housing For Women,Homeless Shelter,4,3,0
 Bridge Taper Shelter,Homeless Shelter,2,4,0
@@ -32,7 +32,6 @@ Crescent Hotel Apartments,Single Room Occupancy Housing,0,1,0
 Desert Mac Facility,Homeless Shelter,0,3,0
 Downtown Women's Center,Homeless Shelter,5,0,0
 Downtown Women's Center (SRO),Single Room Occupancy Housing,3,0,0
-Echo Park Recreation Center Shelter,Homeless Shelter,1,1,0
 Elden House,Homeless Shelter,1,3,0
 Ellis Hotel,Single Room Occupancy Housing,0,1,0
 Encampment - Boyle Heights #2,Homeless Encampment,0,1,0
@@ -123,7 +122,7 @@ Harbor Interfaith 8th Street,Homeless Shelter,3,0,0
 Harbor Interfaith 9th Street,Homeless Service Provider,6,0,0
 Harbor Recuperative Care,Recuperative Care Center,1,6,0
 Hart Hotel,Single Room Occupancy Housing,0,1,0
-HOLA Recuperative Care,Recuperative Care Center,1,2,0
+HOLA Recuperative Care,Recuperative Care Center,1,2,1
 Holliday's Helping Hands,Homeless Shelter,4,0,0
 Home at Last - Athens Park,Homeless Shelter,3,4,0
 Home at Last - Vermont,Homeless Shelter,0,3,0
@@ -161,10 +160,8 @@ Ms. Hazel's House - Ruthelen Street,Homeless Shelter,0,4,0
 Ms. Hazel's House - Wall Street,Homeless Shelter,2,2,0
 My Friend's Place,Homeless Service Provider,3,0,0
 National Health Foundation,Recuperative Care Center,1,1,0
-Neffertiti's Housing,Homeless Shelter,0,1,0
 New Directions For Veterans,Homeless Shelter,6,15,0
 New Hope Temporary Shelter,Homeless Shelter,2,1,0
-New Reflections,Homeless Shelter,1,2,0
 Norbo Hotel,Single Room Occupancy Housing,0,1,0
 Pacoima Place,Single Room Occupancy Housing,0,1,0
 Pan Pacific Park Recreation Center,Homeless Shelter,1,0,0
@@ -173,7 +170,6 @@ PATH - A Bridge Home Los Feliz,Homeless Shelter,3,10,0
 PATH - A Bridge Home Venice,Homeless Shelter,1,0,0
 PATH - Lodi,Homeless Shelter,0,1,1
 PATH - Madison Interim Housing,Homeless Shelter,0,4,0
-Pathways To Home,Homeless Shelter,1,3,0
 Pathways Transitional Housing,Homeless Shelter,0,8,0
 Prentice Hotel,Single Room Occupancy Housing,0,1,0
 Produce Hotel,Single Room Occupancy Housing,0,2,0
@@ -182,14 +178,12 @@ Proyecto Pastoral - Dolores Mission,Homeless Shelter,1,1,0
 Rainbow Apartments,Single Room Occupancy Housing,0,1,0
 Rossmore Hotel,Single Room Occupancy Housing,1,0,0
 Russ Hotel,Single Room Occupancy Housing,6,4,0
-S. Mark Taper Foundation Family Living Center,Homeless Shelter,1,6,0
+S. Mark Taper Foundation Family Living Center,Homeless Shelter,1,9,0
 Safe Landing For Families,Homeless Shelter,0,7,0
 Safe Sleep Program,Homeless Encampment,1,2,0
 Salvation Army A Bridge Home Imperial Highway,Homeless Shelter,6,9,0
 Salvation Army Aetna Bridge Home,Homeless Shelter,0,7,0
 Salvation Army Bell Shelter,Homeless Shelter,12,34,1
-"Salvation Army Bell Shelter, JWCH Recuperative Care Program",Recuperative Care Center,7,1,0
-Salvation Army Booth Home,Homeless Shelter,0,1,0
 Salvation Army Lily's Place,Homeless Shelter,1,0,0
 San Fernando Valley Rescue Mission,Homeless Shelter,3,6,0
 Sanborn Hotel,Single Room Occupancy Housing,0,1,0
@@ -198,7 +192,7 @@ Serenity Recuperative Care - Lakeview Terrace,Homeless Shelter,1,0,0
 Shouridge House,Homeless Shelter,0,2,0
 Shull House,Homeless Shelter,0,1,0
 Simone Hotel,Single Room Occupancy Housing,0,1,0
-Solar Recuperative Care,Homeless Shelter,0,1,1
+Solar Recuperative Care,Homeless Shelter,3,18,1
 South LA Women's Shelter,Homeless Shelter,0,2,0
 St. Agnes Hotel,Single Room Occupancy Housing,0,1,0
 St. George Hotel,Single Room Occupancy Housing,0,1,0
@@ -219,7 +213,7 @@ Turning Point Housing,Homeless Shelter,0,1,0
 Union Rescue Mission,Homeless Shelter,2,22,1
 "US Veterans Initiative, Inglewood",Homeless Shelter,7,14,0
 Valerio House,Homeless Shelter,0,1,0
-Valley Oasis - 60th St,Homeless Shelter,0,1,0
+Valley Oasis - 60th St,Homeless Shelter,1,2,0
 Valley Oasis - Family Access Center,Homeless Service Provider,3,0,0
 Ward Hotel,Single Room Occupancy Housing,0,1,0
 Weingart Center,Homeless Shelter,0,1,0
