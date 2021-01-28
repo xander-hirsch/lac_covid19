@@ -15,23 +15,19 @@ Bridge Housing For Women,Homeless Shelter,4,3,0
 Bridge Taper Shelter,Homeless Shelter,2,4,0
 Bridge To Home,Homeless Shelter,0,1,1
 Bryant Temple Women's Winter Shelter,Homeless Shelter,1,9,0
-C3 Skid Row,Homeless Service Provider,7,3,0
 Canaan House Family Transitional Housing,Homeless Shelter,0,1,0
-Cardinal Manning Center,Homeless Shelter,1,5,1
 Casa de Vida,Homeless Shelter,4,8,0
 Charles Cobb Apartments,Single Room Occupancy Housing,1,2,0
 Cloverfield,Homeless Shelter,4,0,0
 Connections For Women,Homeless Shelter,0,11,0
 Connections For Women 88th Street,Homeless Shelter,2,5,0
 Connections For Women 116th Street,Homeless Shelter,0,6,0
-Connections For Women Colden Ave,Homeless Shelter,0,6,0
 Connections For Women Main Street,Homeless Shelter,0,1,0
 Courtland Hotel,Single Room Occupancy Housing,0,1,0
 Covenant House,Homeless Shelter,7,10,0
 Crescent Hotel Apartments,Single Room Occupancy Housing,0,1,0
 Desert Mac Facility,Homeless Shelter,0,3,0
 Downtown Women's Center,Homeless Shelter,5,0,0
-Downtown Women's Center (SRO),Single Room Occupancy Housing,3,0,0
 Elden House,Homeless Shelter,1,3,0
 Ellis Hotel,Single Room Occupancy Housing,0,1,0
 Encampment - Boyle Heights #2,Homeless Encampment,0,1,0
@@ -57,6 +53,7 @@ Encampment - Central LA #37,Homeless Shelter,0,1,0
 Encampment - Central LA #38,Homeless Encampment,0,1,0
 Encampment - Compton,Homeless Encampment,0,7,0
 Encampment - Downey,Homeless Encampment,0,1,0
+Encampment - Downey #2,Homeless Encampment,0,1,0
 Encampment - Eagle Rock,Homeless Encampment,2,1,0
 Encampment - East Hollywood,Homeless Encampment,0,1,0
 Encampment - East Hollywood #2,Homeless Encampment,0,1,0
@@ -67,11 +64,11 @@ Encampment - Hollywood #5,Homeless Encampment,0,1,0
 Encampment - Hollywood #9,Homeless Encampment,0,1,0
 Encampment - Hollywood #10,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #3,Homeless Encampment,0,1,0
-Encampment - Lincoln Heights #4,Homeless Encampment,0,1,0
+Encampment - Lincoln Heights #4,Homeless Encampment,0,2,0
 Encampment - Lynwood,Homeless Encampment,0,1,0
 Encampment - MacArthur Park,Homeless Encampment,1,14,1
 Encampment - Mission Hills #1,Homeless Encampment,0,1,0
-Encampment - Montecito Heights,Homeless Encampment,0,1,0
+Encampment - Montecito Heights,Homeless Encampment,0,1,1
 Encampment - Montecito Heights #2,Homeless Encampment,1,0,0
 Encampment - North Hollywood #3,Homeless Encampment,0,1,0
 Encampment - North Hollywood Studio City,Homeless Encampment,0,2,0
@@ -88,7 +85,6 @@ Encampment - Santa Monica #2,Homeless Encampment,0,3,0
 Encampment - Signal Hill,Homeless Encampment,0,1,0
 Encampment - Signal Hill #2,Homeless Encampment,0,1,0
 Encampment - South Gate #2,Homeless Encampment,0,2,0
-Encampment - South LA #9,Homeless Encampment,0,2,0
 Encampment - South LA #10,Homeless Encampment,0,3,0
 Encampment - South LA #11,Homeless Encampment,0,1,0
 Encampment - South LA #12,Homeless Encampment,0,1,0
@@ -122,7 +118,7 @@ Harbor Interfaith 8th Street,Homeless Shelter,3,0,0
 Harbor Interfaith 9th Street,Homeless Service Provider,6,0,0
 Harbor Recuperative Care,Recuperative Care Center,1,6,0
 Hart Hotel,Single Room Occupancy Housing,0,1,0
-HOLA Recuperative Care,Recuperative Care Center,1,2,1
+HOLA Recuperative Care,Recuperative Care Center,1,2,2
 Holliday's Helping Hands,Homeless Shelter,4,0,0
 Home at Last - Athens Park,Homeless Shelter,3,4,0
 Home at Last - Vermont,Homeless Shelter,0,3,0
@@ -145,7 +141,6 @@ Las Americas Hotel,Single Room Occupancy Housing,2,4,0
 Las Palomas Hotel,Single Room Occupancy Housing,4,0,0
 Los Angeles Mission - Anne Douglas Center,Homeless Shelter,1,0,0
 Los Angeles Mission - Men's Shelter,Homeless Shelter,0,1,0
-Los Angeles Room and Board,Homeless Shelter,0,10,0
 Luz En El Pensamiento,Homeless Shelter,1,2,0
 Marshal House,Homeless Shelter,0,1,0
 Martin Luther King Junior Recuperative Care Center,Recuperative Care Center,17,19,1
@@ -181,7 +176,7 @@ Russ Hotel,Single Room Occupancy Housing,6,4,0
 S. Mark Taper Foundation Family Living Center,Homeless Shelter,1,9,0
 Safe Landing For Families,Homeless Shelter,0,7,0
 Safe Sleep Program,Homeless Encampment,1,2,0
-Salvation Army A Bridge Home Imperial Highway,Homeless Shelter,6,9,0
+Salvation Army A Bridge Home Imperial Highway,Homeless Shelter,4,15,0
 Salvation Army Aetna Bridge Home,Homeless Shelter,0,7,0
 Salvation Army Bell Shelter,Homeless Shelter,12,34,1
 Salvation Army Lily's Place,Homeless Shelter,1,0,0
