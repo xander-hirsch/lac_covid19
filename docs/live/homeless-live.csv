@@ -1,5 +1,4 @@
 Setting Name,Setting Type,Number of Confirmed Staff,Number of Confirmed Non-Staff,Total Deaths
-A Bridge Home - Casa Azul,Homeless Shelter,1,2,0
 A Bridge Home - Eubank,Homeless Shelter,1,0,0
 A Bridge Home - St. Andrew's,Homeless Shelter,2,2,0
 A New Direction Transitional Housing,Homeless Shelter,1,7,1
@@ -20,7 +19,6 @@ Casa de Vida,Homeless Shelter,4,8,0
 Charles Cobb Apartments,Single Room Occupancy Housing,1,2,0
 Cloverfield,Homeless Shelter,4,0,0
 Connections For Women,Homeless Shelter,0,11,0
-Connections For Women 88th Street,Homeless Shelter,2,5,0
 Connections For Women 116th Street,Homeless Shelter,0,6,0
 Connections For Women Main Street,Homeless Shelter,0,1,0
 Courtland Hotel,Single Room Occupancy Housing,0,1,0
@@ -30,6 +28,7 @@ Desert Mac Facility,Homeless Shelter,0,3,0
 Downtown Women's Center,Homeless Shelter,5,0,0
 Elden House,Homeless Shelter,1,3,0
 Ellis Hotel,Single Room Occupancy Housing,0,1,0
+Emmanuel Baptist Rescue Mission,Homeless Shelter,0,1,0
 Encampment - Boyle Heights #2,Homeless Encampment,0,1,0
 Encampment - Central LA,Homeless Encampment,0,1,0
 Encampment - Central LA #5,Homeless Encampment,0,5,0
@@ -51,6 +50,7 @@ Encampment - Central LA #35,Homeless Encampment,0,1,0
 Encampment - Central LA #36,Homeless Encampment,0,1,0
 Encampment - Central LA #37,Homeless Shelter,0,1,0
 Encampment - Central LA #38,Homeless Encampment,0,1,0
+Encampment - Central LA #39,Homeless Encampment,0,1,0
 Encampment - Compton,Homeless Encampment,0,7,0
 Encampment - Downey,Homeless Encampment,0,1,0
 Encampment - Downey #2,Homeless Encampment,0,1,0
@@ -79,7 +79,6 @@ Encampment - Safe Parking Glassell,Homeless Encampment,0,1,0
 Encampment - Safe Parking Reseda,Homeless Encampment,0,1,0
 Encampment - Safe Parking SPA 1,Homeless Encampment,3,0,0
 Encampment - San Fernando,Homeless Encampment,0,1,0
-Encampment - San Pedro #2,Homeless Encampment,0,4,0
 Encampment - Santa Monica,Homeless Encampment,0,3,0
 Encampment - Santa Monica #2,Homeless Encampment,0,3,0
 Encampment - Signal Hill,Homeless Encampment,0,1,0
@@ -98,12 +97,12 @@ Encampment - West LA #1,Homeless Encampment,0,1,0
 Encampment - West LA #4,Homeless Encampment,0,4,0
 Encampment - Westmont,Homeless Encampment,0,1,0
 Encampment - Wilmington #4,Homeless Encampment,0,1,0
-Eugene Apartments,Single Room Occupancy Housing,2,11,1
 Exodus Broadway,Homeless Shelter,0,6,0
 Fair Opportunity For Change,Homeless Shelter,0,1,0
 Fair Opportunity For Change #2,Homeless Shelter,0,1,0
 Fair Opportunity For Change #3,Homeless Shelter,1,1,0
 First To Serve - Coronado,Homeless Shelter,1,0,0
+First To Serve - Figueroa,Homeless Shelter,0,1,0
 First To Serve - Mid City 3 Shelter,Homeless Shelter,0,3,0
 First To Serve - San Pedro,Homeless Shelter,1,0,0
 First To Serve - Vermont,Homeless Shelter,0,1,0
@@ -136,8 +135,6 @@ Jovenes - The Village,Homeless Shelter,0,3,0
 Jovenes - Union Ave.,Homeless Shelter,1,0,0
 Kensington Campus - Interim Housing,Homeless Shelter,3,1,0
 La Jolla,Single Room Occupancy Housing,0,2,0
-LAMP Village,Homeless Shelter,2,0,0
-Las Americas Hotel,Single Room Occupancy Housing,2,4,0
 Las Palomas Hotel,Single Room Occupancy Housing,4,0,0
 Los Angeles Mission - Anne Douglas Center,Homeless Shelter,1,0,0
 Los Angeles Mission - Men's Shelter,Homeless Shelter,0,1,0
@@ -165,7 +162,6 @@ PATH - A Bridge Home Los Feliz,Homeless Shelter,3,10,0
 PATH - A Bridge Home Venice,Homeless Shelter,1,0,0
 PATH - Lodi,Homeless Shelter,0,1,1
 PATH - Madison Interim Housing,Homeless Shelter,0,4,0
-Pathways Transitional Housing,Homeless Shelter,0,8,0
 Prentice Hotel,Single Room Occupancy Housing,0,1,0
 Produce Hotel,Single Room Occupancy Housing,0,2,0
 Prototypes - Bridge Housing,Homeless Shelter,0,3,0
@@ -188,7 +184,6 @@ Shouridge House,Homeless Shelter,0,2,0
 Shull House,Homeless Shelter,0,1,0
 Simone Hotel,Single Room Occupancy Housing,0,1,0
 Solar Recuperative Care,Homeless Shelter,3,18,1
-South LA Women's Shelter,Homeless Shelter,0,2,0
 St. Agnes Hotel,Single Room Occupancy Housing,0,1,0
 St. George Hotel,Single Room Occupancy Housing,0,1,0
 St. Joseph Center - Palms,Homeless Service Provider,3,0,0
@@ -196,6 +191,7 @@ St. Mark's Hotel,Single Room Occupancy Housing,0,1,0
 Steinmetz Shelter,Homeless Shelter,0,1,0
 Testimonial Community Love Center - 5721,Homeless Shelter,0,5,0
 The Arroyo,Homeless Shelter,2,0,0
+The Dream Center,Homeless Shelter,13,45,0
 The King Edward,Single Room Occupancy Housing,0,1,0
 The Madison Hotel,Single Room Occupancy Housing,0,1,0
 The People Concern El Puente,Homeless Shelter,0,2,0
@@ -206,11 +202,13 @@ TLP Taft,Homeless Shelter,0,1,0
 Transitional Living Program - Lancaster,Homeless Shelter,0,4,0
 Turning Point Housing,Homeless Shelter,0,1,0
 Union Rescue Mission,Homeless Shelter,2,22,1
+Upward Bound House #5,Homeless Shelter,0,1,0
 "US Veterans Initiative, Inglewood",Homeless Shelter,7,14,0
 Valerio House,Homeless Shelter,0,1,0
 Valley Oasis - 60th St,Homeless Shelter,1,2,0
 Valley Oasis - Family Access Center,Homeless Service Provider,3,0,0
 Ward Hotel,Single Room Occupancy Housing,0,1,0
+Weingart / Gardner Library Bridge Housing,Homeless Shelter,0,1,0
 Weingart Center,Homeless Shelter,0,1,0
 Weingart Center - AB109,Homeless Shelter,0,1,0
 Weingart Center - DHS,Homeless Shelter,0,1,0
