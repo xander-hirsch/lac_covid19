@@ -1,3 +1,5 @@
+import datetime as dt
+
 from lac_covid19.const import *
 import lac_covid19.daily_pr.access as access
 from lac_covid19.daily_pr.time_series import generate_all_ts
@@ -11,7 +13,7 @@ def _print_header(date, padding):
         '-'*(2*padding+14)
     ])
 
-def query_date(date, json_cache=True, html_cache=True):
+def query_date(date=dt.date.today().isoformat(), json_cache=True, html_cache=True):
     query = access.query_date(date, json_cache, html_cache)
     top = '\n'.join([
         _print_header(query[DATE], 5),

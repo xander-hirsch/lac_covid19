@@ -60,6 +60,7 @@ Encampment - East Hollywood #2,Homeless Encampment,0,1,0
 Encampment - East LA #2,Homeless Encampment,0,1,0
 Encampment - Hacienda Heights,Homeless Encampment,0,2,0
 Encampment - Highland Park,Homeless Encampment,0,1,0
+Encampment - Highland Park #2,Homeless Encampment,0,1,0
 Encampment - Hollywood #5,Homeless Encampment,0,1,0
 Encampment - Hollywood #9,Homeless Encampment,0,1,0
 Encampment - Hollywood #10,Homeless Encampment,0,1,0
@@ -85,11 +86,10 @@ Encampment - Signal Hill,Homeless Encampment,0,1,0
 Encampment - Signal Hill #2,Homeless Encampment,0,1,0
 Encampment - South Gate #2,Homeless Encampment,0,2,0
 Encampment - South LA #10,Homeless Encampment,0,3,0
-Encampment - South LA #11,Homeless Encampment,0,1,0
 Encampment - South LA #12,Homeless Encampment,0,1,0
 Encampment - South LA #13,Homeless Encampment,0,1,0
 Encampment - South LA #14,Homeless Encampment,0,1,0
-Encampment - South LA #15,Homeless Encampment,0,1,0
+Encampment - South LA #15,Homeless Encampment,0,3,0
 Encampment - South LA #16,Homeless Encampment,0,1,0
 Encampment - South LA #17,Homeless Encampment,0,1,0
 Encampment - Venice,Homeless Encampment,0,1,0
@@ -105,16 +105,13 @@ First To Serve - Coronado,Homeless Shelter,1,0,0
 First To Serve - Figueroa,Homeless Shelter,0,1,0
 First To Serve - Mid City 3 Shelter,Homeless Shelter,0,3,0
 First To Serve - San Pedro,Homeless Shelter,1,0,0
-First To Serve - Vermont,Homeless Shelter,0,1,0
 First To Serve - Vernon,Homeless Shelter,8,7,0
 Florence Apartments,Single Room Occupancy Housing,0,1,0
 Friendship Auditorium,Homeless Shelter,8,1,0
 Good Shepherd Hawkes,Homeless Shelter,0,2,0
 Good Shepherd Languille,Homeless Shelter,0,1,0
 Grupo Empezar de Las Tinieblas A La Luz,Homeless Shelter,0,1,0
-Harbor Interfaith - A Bridge Home San Pedro,Homeless Shelter,2,2,0
 Harbor Interfaith 8th Street,Homeless Shelter,3,0,0
-Harbor Interfaith 9th Street,Homeless Service Provider,6,0,0
 Harbor Recuperative Care,Recuperative Care Center,1,6,0
 Hart Hotel,Single Room Occupancy Housing,0,1,0
 HOLA Recuperative Care,Recuperative Care Center,1,2,2
@@ -127,7 +124,6 @@ Hope of The Valley - North Hollywood,Homeless Shelter,0,2,0
 Hope of The Valley - Pacoima Winter Shelter,Homeless Shelter,5,1,0
 Hope of The Valley - The Landing,Homeless Shelter,0,1,0
 HOPICS - Long Beach Ave,Homeless Shelter,1,0,0
-House of Hope Transitional Housing,Homeless Shelter,0,1,0
 Illumination Foundation Recuperative Care - LA,Recuperative Care Center,1,0,0
 Illumination Foundation Recuperative Care - Santa Fe Springs,Recuperative Care Center,9,19,0
 Inland Valley Council of Churches,Homeless Shelter,1,3,0
@@ -155,6 +151,7 @@ National Health Foundation,Recuperative Care Center,1,1,0
 New Directions For Veterans,Homeless Shelter,6,15,0
 New Hope Temporary Shelter,Homeless Shelter,2,1,0
 Norbo Hotel,Single Room Occupancy Housing,0,1,0
+Olympia Hotel,Single Room Occupancy Housing,0,1,0
 Pacoima Place,Single Room Occupancy Housing,0,1,0
 Pan Pacific Park Recreation Center,Homeless Shelter,1,0,0
 PATH - A Bridge Home Hollywood,Homeless Shelter,0,1,0
@@ -173,7 +170,6 @@ S. Mark Taper Foundation Family Living Center,Homeless Shelter,1,9,0
 Safe Landing For Families,Homeless Shelter,0,7,0
 Safe Sleep Program,Homeless Encampment,1,2,0
 Salvation Army A Bridge Home Imperial Highway,Homeless Shelter,4,15,0
-Salvation Army Aetna Bridge Home,Homeless Shelter,0,7,0
 Salvation Army Bell Shelter,Homeless Shelter,12,34,1
 Salvation Army Lily's Place,Homeless Shelter,1,0,0
 San Fernando Valley Rescue Mission,Homeless Shelter,3,6,0
@@ -183,7 +179,7 @@ Serenity Recuperative Care - Lakeview Terrace,Homeless Shelter,1,0,0
 Shouridge House,Homeless Shelter,0,2,0
 Shull House,Homeless Shelter,0,1,0
 Simone Hotel,Single Room Occupancy Housing,0,1,0
-Solar Recuperative Care,Homeless Shelter,3,18,1
+Solar Recuperative Care,Homeless Shelter,3,18,2
 St. Agnes Hotel,Single Room Occupancy Housing,0,1,0
 St. George Hotel,Single Room Occupancy Housing,0,1,0
 St. Joseph Center - Palms,Homeless Service Provider,3,0,0
