@@ -60,6 +60,7 @@ Encampment - East LA #2,Homeless Encampment,0,1,0
 Encampment - Hacienda Heights,Homeless Encampment,0,2,0
 Encampment - Highland Park,Homeless Encampment,0,1,0
 Encampment - Highland Park #2,Homeless Encampment,0,1,0
+Encampment - Hollywood #2,Homeless Encampment,0,1,0
 Encampment - Hollywood #5,Homeless Encampment,0,1,0
 Encampment - Hollywood #9,Homeless Encampment,0,1,0
 Encampment - Hollywood #10,Homeless Encampment,0,1,0
@@ -74,7 +75,6 @@ Encampment - North Hollywood,Homeless Encampment,0,2,0
 Encampment - North Hollywood #3,Homeless Encampment,0,1,0
 Encampment - North Hollywood Studio City,Homeless Encampment,0,2,0
 Encampment - Norwalk #2,Homeless Encampment,0,2,0
-Encampment - Panorama City #2,Homeless Encampment,0,1,0
 Encampment - Redondo Beach,Homeless Encampment,0,1,0
 Encampment - Safe Parking Glassell,Homeless Encampment,0,1,0
 Encampment - Safe Parking Reseda,Homeless Encampment,0,1,0
@@ -195,9 +195,9 @@ The People Concern El Puente,Homeless Shelter,0,2,0
 The Silver Villa,Homeless Shelter,0,3,0
 The T-House,Homeless Shelter,1,2,0
 The Whole Child Interim Safe Families Shelter,Homeless Shelter,2,0,0
-TLP Taft,Homeless Shelter,0,1,0
+TLP Taft,Homeless Shelter,1,2,0
 Transitional Living Program - Lancaster,Homeless Shelter,0,4,0
-Turning Point Housing,Homeless Shelter,0,1,0
+Turning Point Housing,Homeless Shelter,1,1,0
 Union Rescue Mission,Homeless Shelter,2,22,1
 Upward Bound House #5,Homeless Shelter,0,1,0
 "US Veterans Initiative, Inglewood",Homeless Shelter,7,14,1
@@ -209,7 +209,6 @@ Weingart / Gardner Library Bridge Housing,Homeless Shelter,0,1,0
 Weingart Center,Homeless Shelter,0,1,0
 Weingart Center - AB109,Homeless Shelter,0,1,0
 Weingart Center - DHS,Homeless Shelter,0,1,0
-Weingart Center - RSAAP,Homeless Shelter,1,0,0
 Weingart Center - THP,Homeless Shelter,0,1,0
 Weingart Civic Center A Bridge Home,Homeless Shelter,1,6,0
 Whittier Narrows Shower Event,Homeless Hygiene Center,0,9,0
