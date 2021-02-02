@@ -4,23 +4,10 @@ The unique data featured here, and not directly from the public health departmen
 Time series data is provided for case counts by countywide statistical areas and demographic groups.
 These features help explain the where and who of the pandemic's spread.
 
-## Regions
-Case reports by countywide statistical areas are an insightful feature to gain a more nuanced understanding of how the disease spreads in such a diverse county.
-However, there are over three hundred countywide statistical areas, which makes the task of understanding trends daunting.
-Partitioning the county into regions is one such way to show big picture trends.
-The project uses the region definitions from the Los Angeles Times' [*Mapping L.A.*](http://maps.latimes.com/neighborhoods/) project.
-There exist many rational ways to divide the county; however, *Mapping L.A.* lends itself to provide the most appropriate region definitions for this project.
-We are keenly aware of this pandemic's disproportionate effect of communities of color and poverty.
-As such, *Mapping L.A.* partitions the county on the basis of community rather than convenient geographic or freeways separators.
-Additionally, the Los Angeles Times' reporters have done a tremendous job compiling data on region and neighborhood statistics such as income, race, ethnicity, etc.
-When the long standing data is juxtaposed against the effects of this novel coronavirus, saddening and all too predictable patterns emerge.
-
 ## Curated Data
-### Data Visualization
-* ArcGIS Dashboard
-  * [Desktop](https://claremont.maps.arcgis.com/apps/opsdashboard/index.html#/1d9ca05fb9e946cb940d31ba4e0c6b55)
-  * [Mobile](https://claremont.maps.arcgis.com/apps/opsdashboard/index.html#/54f45e8e8d6d4f4a9c0fdde674e6271f)
-* [GitHub Pages](https://amhirsch.github.io/lac_covid19/) - Experimental Presentations
+### ArcGIS Dashboard
+* [Desktop](https://claremont.maps.arcgis.com/apps/opsdashboard/index.html#/1d9ca05fb9e946cb940d31ba4e0c6b55)
+* [Mobile](https://claremont.maps.arcgis.com/apps/opsdashboard/index.html#/54f45e8e8d6d4f4a9c0fdde674e6271f)
 ### Raw Data
 * [docs directory](https://github.com/amhirsch/lac_covid19/tree/master/docs)
 
@@ -29,7 +16,9 @@ When the long standing data is juxtaposed against the effects of this novel coro
   * [Press Releases](http://publichealth.lacounty.gov/phcommon/public/media/mediaCOVIDdisplay.cfm)
   * [Locations & Demographics](http://publichealth.lacounty.gov/media/Coronavirus/locations.htm)
   * [COVID-19 Surveillance Dashboard](http://dashboard.publichealth.lacounty.gov/covid19_surveillance_dashboard/)
+  * [Los Angeles County Population Estimates (July 1, 2019)](http://publichealth.lacounty.gov/epi/docs/2019-LAC-Population.pdf)
 * Los Angeles County Enterprise GIS Portal
   * [Countywide Statistical Areas](https://egis-lacounty.hub.arcgis.com/datasets/countywide-statistical-areas-csa)
-* Los Angeles Times
-  * [Mapping L.A.](http://maps.latimes.com/neighborhoods/)
+  * [Service Planning Areas](https://egis-lacounty.hub.arcgis.com/datasets/la-county-service-planning-area)
+* US Census
+  * [2018 American Community Survey 1-Year Estimates Data Profiles](https://data.census.gov/cedsci/)
