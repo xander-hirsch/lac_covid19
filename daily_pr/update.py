@@ -13,7 +13,9 @@ def _print_header(date, padding):
         '-'*(2*padding+14)
     ])
 
-def query_date(date=dt.date.today().isoformat(), json_cache=True, html_cache=True):
+def query_date(date=None, json_cache=True, html_cache=True):
+    if date is None:
+        date = dt.date.today().isoformat()
     query = access.query_date(date, json_cache, html_cache)
     top = '\n'.join([
         _print_header(query[DATE], 5),
