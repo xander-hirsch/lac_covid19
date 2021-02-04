@@ -106,4 +106,5 @@ DATA_TYPOS = {
     '2020-11-27': (const.CASES_BY_AGE, const.AGE_30_49, 125868),
     '2021-01-30': (const.CASES_BY_AGE, const.AGE_12_17, 62373),
     '2021-01-31': (const.CASES_BY_AGE, const.AGE_OVER_80, 27902),
+    '2021-02-03': (const.CASES_BY_AGE, const.AGE_65_79, 81155),
 }

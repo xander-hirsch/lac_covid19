@@ -5,11 +5,11 @@ A New Direction Transitional Housing,Homeless Shelter,1,7,1
 Abundant Blessings From Above - 62nd St,Homeless Shelter,0,7,0
 Abundant Blessings From Above 2412,Homeless Shelter,0,1,0
 Anita May Rosenstein Campus LGBT Center,Homeless Shelter,3,0,0
-Ascencia Homeless Shelter,Homeless Shelter,3,15,0
+Ascencia Homeless Shelter,Homeless Shelter,3,17,0
 Aviva Family and Children's Services - Wallis House,Homeless Shelter,0,2,0
 Ballington Plaza,Homeless Shelter,0,1,0
 Bassett Park Winter Shelter,Homeless Shelter,1,10,0
-Boyd Hotel,Single Room Occupancy Housing,0,2,0
+Beacon Light Mission,Homeless Shelter,0,6,0
 Bridge Housing For Women,Homeless Shelter,4,3,0
 Bridge Taper Shelter,Homeless Shelter,2,4,0
 Bridge To Home,Homeless Shelter,0,1,1
@@ -19,7 +19,6 @@ Casa de Vida,Homeless Shelter,4,8,0
 Charles Cobb Apartments,Single Room Occupancy Housing,1,2,0
 Cloverfield,Homeless Shelter,4,0,0
 Connections For Women,Homeless Shelter,0,11,0
-Connections For Women 116th Street,Homeless Shelter,0,6,0
 Courtland Hotel,Single Room Occupancy Housing,0,1,0
 Covenant House,Homeless Shelter,7,10,0
 Crescent Hotel Apartments,Single Room Occupancy Housing,0,1,0
@@ -43,7 +42,7 @@ Encampment - Central LA #24,Homeless Encampment,0,1,0
 Encampment - Central LA #27,Homeless Encampment,0,1,0
 Encampment - Central LA #30,Homeless Encampment,0,1,0
 Encampment - Central LA #32,Homeless Encampment,0,1,0
-Encampment - Central LA #34,Homeless Encampment,0,1,0
+Encampment - Central LA #34,Homeless Encampment,0,1,1
 Encampment - Central LA #35,Homeless Encampment,0,1,0
 Encampment - Central LA #36,Homeless Encampment,0,1,0
 Encampment - Central LA #37,Homeless Shelter,0,1,0
@@ -79,10 +78,10 @@ Encampment - Safe Parking Glassell,Homeless Encampment,0,1,0
 Encampment - Safe Parking Reseda,Homeless Encampment,0,1,0
 Encampment - Safe Parking SPA 1,Homeless Encampment,3,0,0
 Encampment - San Fernando,Homeless Encampment,0,1,0
-Encampment - Santa Monica #2,Homeless Encampment,0,3,0
 Encampment - Signal Hill,Homeless Encampment,0,1,0
 Encampment - Signal Hill #2,Homeless Encampment,0,1,0
 Encampment - South Gate #2,Homeless Encampment,0,2,0
+Encampment - South LA #8,Homeless Encampment,0,6,0
 Encampment - South LA #10,Homeless Encampment,0,3,0
 Encampment - South LA #12,Homeless Encampment,0,1,0
 Encampment - South LA #13,Homeless Encampment,0,1,0
@@ -133,7 +132,7 @@ Los Angeles Mission - Anne Douglas Center,Homeless Shelter,1,0,0
 Los Angeles Mission - Men's Shelter,Homeless Shelter,0,1,0
 Luz En El Pensamiento,Homeless Shelter,1,2,0
 Marshal House,Homeless Shelter,0,1,0
-Martin Luther King Junior Recuperative Care Center,Recuperative Care Center,17,19,1
+Martin Luther King Junior Recuperative Care Center,Recuperative Care Center,17,19,2
 Motorcycle Riders For Homeless Parolees,Homeless Shelter,0,6,0
 Ms. Hazel's House - 60th Street,Homeless Shelter,0,1,0
 Ms. Hazel's House - 67th Street,Homeless Shelter,0,1,0
@@ -156,11 +155,11 @@ PATH - Lodi,Homeless Shelter,0,1,1
 Prentice Hotel,Single Room Occupancy Housing,0,1,0
 Produce Hotel,Single Room Occupancy Housing,0,2,0
 Prototypes - Bridge Housing,Homeless Shelter,0,3,0
-Proyecto Pastoral - Dolores Mission,Homeless Shelter,1,1,0
+Proyecto Pastoral - Dolores Mission,Homeless Shelter,2,1,0
 Rainbow Apartments,Single Room Occupancy Housing,0,1,0
 Rossmore Hotel,Single Room Occupancy Housing,1,0,0
 Russ Hotel,Single Room Occupancy Housing,6,4,0
-S. Mark Taper Foundation Family Living Center,Homeless Shelter,2,15,0
+S. Mark Taper Foundation Family Living Center,Homeless Shelter,2,14,0
 Safe Landing For Families,Homeless Shelter,0,7,0
 Safe Sleep Program,Homeless Encampment,1,2,0
 Salvation Army A Bridge Home Imperial Highway,Homeless Shelter,4,15,0
@@ -169,8 +168,7 @@ Salvation Army Lily's Place,Homeless Shelter,1,0,0
 San Fernando Valley Rescue Mission,Homeless Shelter,3,6,0
 Sanborn Hotel,Single Room Occupancy Housing,0,1,0
 Senator Hotel,Single Room Occupancy Housing,0,1,0
-Serenity Recuperative Care,Recuperative Care Center,2,1,0
-Serenity Recuperative Care - Lakeview Terrace,Homeless Shelter,1,0,0
+Serenity Recuperative Care,Recuperative Care Center,3,8,0
 Shouridge House,Homeless Shelter,0,2,0
 Shull House,Homeless Shelter,0,1,0
 Simone Hotel,Single Room Occupancy Housing,0,1,0
@@ -180,6 +178,7 @@ St. George Hotel,Single Room Occupancy Housing,0,1,0
 St. Joseph Center - Palms,Homeless Service Provider,3,0,0
 St. Mark's Hotel,Single Room Occupancy Housing,0,1,0
 Steinmetz Shelter,Homeless Shelter,1,2,0
+"Success Recovery Center, Inc.",Homeless Shelter,2,3,0
 Testimonial Community Love Center - 5721,Homeless Shelter,0,5,0
 The Arroyo,Homeless Shelter,2,0,0
 The Dream Center,Homeless Shelter,13,45,0
@@ -187,7 +186,6 @@ The Madison Hotel,Single Room Occupancy Housing,0,1,0
 The People Concern El Puente,Homeless Shelter,0,2,0
 The Silver Villa,Homeless Shelter,0,3,0
 The Southern,Single Room Occupancy Housing,0,1,0
-The T-House,Homeless Shelter,1,2,0
 The Whole Child Interim Safe Families Shelter,Homeless Shelter,2,0,0
 TLP Taft,Homeless Shelter,1,2,0
 Transitional Living Program - Lancaster,Homeless Shelter,0,4,0
@@ -198,7 +196,6 @@ Upward Bound House #5,Homeless Shelter,0,1,0
 Valerio House,Homeless Shelter,0,1,0
 Valley Oasis - 60th St,Homeless Shelter,1,2,0
 Valley Oasis - Family Access Center,Homeless Service Provider,3,0,0
-Ward Hotel,Single Room Occupancy Housing,0,1,0
 Weingart / Gardner Library Bridge Housing,Homeless Shelter,0,1,0
 Weingart Center,Homeless Shelter,0,1,0
 Weingart Center - AB109,Homeless Shelter,0,1,0
