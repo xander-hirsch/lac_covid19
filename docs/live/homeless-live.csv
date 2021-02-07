@@ -1,7 +1,6 @@
 Setting Name,Setting Type,Number of Confirmed Staff,Number of Confirmed Non-Staff,Total Deaths
 A Bridge Home - Eubank,Homeless Shelter,1,0,0
 A Bridge Home - St. Andrew's,Homeless Shelter,2,2,0
-A New Direction Transitional Housing,Homeless Shelter,1,7,1
 Abundant Blessings From Above - 62nd St,Homeless Shelter,0,7,0
 Abundant Blessings From Above 2412,Homeless Shelter,0,1,0
 Anita May Rosenstein Campus LGBT Center,Homeless Shelter,3,0,0
@@ -13,10 +12,8 @@ Beacon Light Mission,Homeless Shelter,0,6,0
 Bridge Housing For Women,Homeless Shelter,4,3,0
 Bridge Taper Shelter,Homeless Shelter,2,9,0
 Bridge To Home,Homeless Shelter,0,1,1
-Bryant Temple Women's Winter Shelter,Homeless Shelter,1,9,0
 Canaan House Family Transitional Housing,Homeless Shelter,0,2,0
 Charles Cobb Apartments,Single Room Occupancy Housing,1,2,0
-Cloverfield,Homeless Shelter,4,0,0
 Connections For Women,Homeless Shelter,0,11,0
 Courtland Hotel,Single Room Occupancy Housing,0,1,0
 Covenant House,Homeless Shelter,7,12,0
@@ -38,10 +35,10 @@ Encampment - Central LA #21,Homeless Encampment,0,1,0
 Encampment - Central LA #22,Homeless Encampment,0,1,0
 Encampment - Central LA #24,Homeless Encampment,0,1,0
 Encampment - Central LA #27,Homeless Encampment,0,1,0
+Encampment - Central LA #28,Homeless Encampment,0,1,0
 Encampment - Central LA #30,Homeless Encampment,0,1,0
 Encampment - Central LA #32,Homeless Encampment,0,1,0
 Encampment - Central LA #34,Homeless Encampment,0,1,1
-Encampment - Central LA #36,Homeless Encampment,0,1,0
 Encampment - Central LA #37,Homeless Shelter,0,1,0
 Encampment - Central LA #38,Homeless Encampment,0,1,0
 Encampment - Central LA #39,Homeless Encampment,0,1,0
@@ -57,7 +54,6 @@ Encampment - Highland Park,Homeless Encampment,0,1,0
 Encampment - Highland Park #2,Homeless Encampment,0,1,0
 Encampment - Hollywood #2,Homeless Encampment,0,1,0
 Encampment - Hollywood #5,Homeless Encampment,0,1,0
-Encampment - Hollywood #9,Homeless Encampment,0,1,0
 Encampment - Hollywood #10,Homeless Encampment,0,1,0
 Encampment - Lincoln Heights #4,Homeless Encampment,0,2,0
 Encampment - Lynwood,Homeless Encampment,0,1,0
@@ -88,7 +84,6 @@ Encampment - West LA #1,Homeless Encampment,0,1,0
 Encampment - West LA #4,Homeless Encampment,0,4,0
 Encampment - West LA #6,Homeless Encampment,0,2,0
 Encampment - Westmont,Homeless Encampment,0,1,0
-Encampment - Wilmington #4,Homeless Encampment,0,1,0
 Exodus Broadway,Homeless Shelter,0,6,0
 Fair Opportunity For Change,Homeless Shelter,0,1,0
 Fair Opportunity For Change #3,Homeless Shelter,1,1,0
@@ -99,7 +94,7 @@ First To Serve - Mid City 3 Shelter,Homeless Shelter,0,3,0
 First To Serve - San Pedro,Homeless Shelter,4,0,0
 First To Serve - Vernon,Homeless Shelter,9,7,0
 Florence Apartments,Single Room Occupancy Housing,0,2,0
-Good Shepherd Hawkes,Homeless Shelter,0,2,0
+Good Shepherd Hawkes,Homeless Shelter,2,2,0
 Good Shepherd Languille,Homeless Shelter,0,1,0
 Grupo Empezar de Las Tinieblas A La Luz,Homeless Shelter,0,1,0
 Harbor Interfaith 8th Street,Homeless Shelter,3,0,0
@@ -109,10 +104,10 @@ HOLA Recuperative Care,Recuperative Care Center,1,2,2
 Home at Last - Athens Park,Homeless Shelter,3,4,0
 Home at Last - Paloma,Homeless Shelter,0,1,0
 Home at Last - Vermont,Homeless Shelter,0,3,0
-Hope of The Valley - A Bridge Home Van Nuys,Homeless Shelter,9,12,1
 Hope of The Valley - North Hollywood,Homeless Shelter,0,2,0
 Hope of The Valley - The Landing,Homeless Shelter,0,1,0
 HOPICS - Long Beach Ave,Homeless Shelter,1,0,0
+Housing Works - 88th and Vermont,Single Room Occupancy Housing,0,3,0
 Illumination Foundation Recuperative Care - Santa Fe Springs,Recuperative Care Center,9,19,0
 Jovenes - The Village,Homeless Shelter,0,3,0
 Jovenes - Union Ave.,Homeless Shelter,1,0,0
@@ -126,8 +121,6 @@ Marshal House,Homeless Shelter,0,1,0
 Martin Luther King Junior Recuperative Care Center,Recuperative Care Center,17,19,2
 Motorcycle Riders For Homeless Parolees,Homeless Shelter,0,6,0
 Ms. Hazel's House - 60th Street,Homeless Shelter,0,1,0
-Ms. Hazel's House - 67th Street,Homeless Shelter,0,1,0
-Ms. Hazel's House - 74th Street,Homeless Shelter,0,3,0
 Ms. Hazel's House - 76th Street,Homeless Shelter,0,4,0
 Ms. Hazel's House - Crocker Street,Homeless Shelter,0,5,0
 Ms. Hazel's House - Ruthelen Street,Homeless Shelter,0,4,0
@@ -148,7 +141,6 @@ Rainbow Apartments,Single Room Occupancy Housing,0,1,0
 Rossmore Hotel,Single Room Occupancy Housing,1,0,0
 Russ Hotel,Single Room Occupancy Housing,6,4,0
 S. Mark Taper Foundation Family Living Center,Homeless Shelter,2,14,0
-Safe Landing For Families,Homeless Shelter,0,7,0
 Safe Sleep Program,Homeless Encampment,1,2,0
 Salvation Army A Bridge Home Imperial Highway,Homeless Shelter,4,15,1
 Salvation Army Bell Shelter,Homeless Shelter,12,34,1
@@ -168,6 +160,7 @@ St. Joseph Center - Palms,Homeless Service Provider,3,0,0
 St. Mark's Hotel,Single Room Occupancy Housing,0,1,0
 Steinmetz Shelter,Homeless Shelter,1,2,0
 "Success Recovery Center, Inc.",Homeless Shelter,2,3,0
+Testimonial Community Love Center,Homeless Shelter,0,1,0
 Testimonial Community Love Center - 5721,Homeless Shelter,0,5,0
 The Arroyo,Homeless Shelter,2,0,0
 The Dream Center,Homeless Shelter,13,45,0

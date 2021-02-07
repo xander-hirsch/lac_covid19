@@ -1,17 +1,23 @@
+from functools import partial
 import json
 from typing import Tuple, Iterable
 import os
 import os.path
 
-import geopy
+from geopy.geocoders import Bing
+from geopy.extra.rate_limiter import RateLimiter
+from geopy.point import Point
 
-from lac_covid19.geo.paths                                                                                                                                                       import DIR_DATA
+from lac_covid19.geo.paths import DIR_DATA
 import lac_covid19.const as const
 import lac_covid19.current_stats as current_stats
 
-
-BING_MAPS_QUERY = geopy.geocoders.Bing(os.environ.get('BINGMAPSKEY'))
-LAC_CENTER = geopy.point.Point(34.0, -118.2)
+LAC_CENTER = Point(34.0, -118.2)
+BING_GEOCODER = Bing(os.environ.get('BINGMAPSKEY'))
+request_geocode = RateLimiter(
+    partial(BING_GEOCODER.geocode, user_location=LAC_CENTER),
+    min_delay_seconds=1
+)
 
 APPEND_ZIP = {
     '14208 MULBERRY AVE, WHITTIER, CA': 90604,
@@ -31,14 +37,14 @@ ADDRESSES = load_addresses_cache()
 
 
 def lookup_address(address_query: str) -> Tuple[float, float]:
-    """Queries an address throught the Bing geocoder."""
+    """Queries an address through the Bing geocoder."""
     # Normalize queries by saving all upper case
     address_query = address_query.upper()
     if address_query in APPEND_ZIP:
         address_query = f'{address_query}, {APPEND_ZIP[address_query]}'
     if address_query in ADDRESSES:
         return ADDRESSES[address_query]
-    query = BING_MAPS_QUERY.geocode(address_query, user_location=LAC_CENTER)
+    query = request_geocode(address_query)
     resp_point = query.latitude, query.longitude
     ADDRESSES[address_query] = resp_point
     print(f'{address_query}: ({resp_point[0]}, {resp_point[1]})')
