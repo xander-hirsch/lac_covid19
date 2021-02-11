@@ -16,7 +16,7 @@ LAC_CENTER = Point(34.0, -118.2)
 BING_GEOCODER = Bing(os.environ.get('BINGMAPSKEY'))
 request_geocode = RateLimiter(
     partial(BING_GEOCODER.geocode, user_location=LAC_CENTER),
-    min_delay_seconds=1
+    min_delay_seconds=2
 )
 
 APPEND_ZIP = {

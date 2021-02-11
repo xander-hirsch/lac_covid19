@@ -7,7 +7,7 @@ Ascencia Homeless Shelter,Homeless Shelter,3,17,0
 Aviva Family and Children's Services - Wallis House,Homeless Shelter,1,4,0
 Ballington Plaza,Homeless Shelter,0,1,0
 Bassett Park Winter Shelter,Homeless Shelter,1,10,0
-Beacon Light Mission,Homeless Shelter,0,6,0
+Beacon Light Mission,Homeless Shelter,1,6,0
 Bridge Housing For Women,Homeless Shelter,4,3,0
 Bridge Taper Shelter,Homeless Shelter,2,9,0
 Bridge To Home,Homeless Shelter,0,1,0
@@ -29,14 +29,13 @@ Encampment - Central LA #8,Homeless Encampment,0,2,0
 Encampment - Central LA #10,Homeless Encampment,0,1,0
 Encampment - Central LA #12,Homeless Encampment,0,1,0
 Encampment - Central LA #13,Homeless Encampment,0,1,0
-Encampment - Central LA #18,Homeless Encampment,0,2,0
 Encampment - Central LA #21,Homeless Encampment,0,1,0
 Encampment - Central LA #22,Homeless Encampment,0,1,0
 Encampment - Central LA #24,Homeless Encampment,0,1,0
 Encampment - Central LA #28,Homeless Encampment,0,1,0
 Encampment - Central LA #32,Homeless Encampment,0,1,0
 Encampment - Central LA #34,Homeless Encampment,0,1,1
-Encampment - Central LA #37,Homeless Shelter,0,1,0
+Encampment - Central LA #37,Homeless Encampment,0,1,0
 Encampment - Central LA #38,Homeless Encampment,0,1,0
 Encampment - Central LA #39,Homeless Encampment,0,1,0
 Encampment - Compton,Homeless Encampment,0,7,0
@@ -44,13 +43,12 @@ Encampment - Downey,Homeless Encampment,0,1,0
 Encampment - Downey #2,Homeless Encampment,0,3,0
 Encampment - Eagle Rock,Homeless Encampment,2,1,0
 Encampment - East Hollywood,Homeless Encampment,0,1,0
-Encampment - East Hollywood #2,Homeless Encampment,0,1,0
 Encampment - East LA #2,Homeless Encampment,0,1,0
 Encampment - Echo Park #3,Homeless Encampment,0,2,0
 Encampment - Highland Park,Homeless Encampment,0,1,0
 Encampment - Highland Park #2,Homeless Encampment,0,1,0
 Encampment - Hollywood #2,Homeless Encampment,0,1,0
-Encampment - Hollywood #10,Homeless Encampment,0,1,0
+Encampment - Hollywood #10,Homeless Encampment,0,2,0
 Encampment - Lancaster #4,Homeless Encampment,0,2,0
 Encampment - Lincoln Heights #4,Homeless Encampment,0,2,0
 Encampment - Lynwood,Homeless Encampment,0,1,0
@@ -81,10 +79,9 @@ Encampment - Westmont,Homeless Encampment,0,1,0
 Encampment - Wilmington #5,Homeless Encampment,0,1,0
 Exodus Broadway,Homeless Shelter,0,6,0
 Fair Opportunity For Change,Homeless Shelter,0,1,0
-Fair Opportunity For Change #3,Homeless Shelter,1,1,0
 First To Serve - Alondra Park Winter Shelter,Homeless Shelter,0,1,0
 First To Serve - Coronado,Homeless Shelter,1,0,0
-First To Serve - Figueroa,Homeless Shelter,0,1,0
+First To Serve - Figueroa,Homeless Shelter,0,2,0
 First To Serve - Mid City 3 Shelter,Homeless Shelter,0,3,0
 First To Serve - San Pedro,Homeless Shelter,4,0,0
 First To Serve - Vernon,Homeless Shelter,9,7,0
@@ -98,7 +95,7 @@ Hart Hotel,Single Room Occupancy Housing,0,1,0
 HOLA Recuperative Care,Recuperative Care Center,1,2,2
 Home at Last - Athens Park,Homeless Shelter,3,4,0
 Home at Last - Paloma,Homeless Shelter,0,1,0
-Home at Last - Vermont,Homeless Shelter,0,3,0
+Home at Last - Vermont,Homeless Shelter,1,5,0
 Hope of The Valley - North Hollywood,Homeless Shelter,0,2,0
 Hope of The Valley - The Landing,Homeless Shelter,0,1,0
 Housing Works - 88th and Vermont,Single Room Occupancy Housing,0,3,0
@@ -112,7 +109,6 @@ Los Angeles Mission - Anne Douglas Center,Homeless Shelter,1,0,0
 Los Angeles Mission - Men's Shelter,Homeless Shelter,0,1,0
 Luz En El Pensamiento,Homeless Shelter,1,2,0
 Marshal House,Homeless Shelter,0,1,0
-Martin Luther King Junior Recuperative Care Center,Recuperative Care Center,17,19,2
 Motorcycle Riders For Homeless Parolees,Homeless Shelter,0,6,0
 Ms. Hazel's House - 60th Street,Homeless Shelter,0,2,0
 Ms. Hazel's House - 76th Street,Homeless Shelter,0,4,0
@@ -136,17 +132,15 @@ S. Mark Taper Foundation Family Living Center,Homeless Shelter,2,14,0
 Safe Sleep Program,Homeless Encampment,1,2,0
 Salvation Army A Bridge Home Imperial Highway,Homeless Shelter,4,15,1
 Salvation Army Bell Shelter,Homeless Shelter,12,34,1
-Salvation Army Lily's Place,Homeless Shelter,1,0,0
 San Fernando Valley Rescue Mission,Homeless Shelter,3,6,0
 Sanborn Hotel,Single Room Occupancy Housing,0,1,0
 Senator Hotel,Single Room Occupancy Housing,0,1,0
 Serenity Recuperative Care,Recuperative Care Center,3,8,0
-Serenity Recuperative Care - Lakeview Terrace,Homeless Shelter,1,0,0
+Serenity Recuperative Care - Lakeview Terrace,Recuperative Care Center,1,0,0
 Shouridge House,Homeless Shelter,0,2,0
 Shull House,Homeless Shelter,0,1,0
 Simone Hotel,Single Room Occupancy Housing,0,1,0
-Solar Recuperative Care,Homeless Shelter,3,18,2
-St. Agnes Hotel,Single Room Occupancy Housing,0,1,0
+Solar Recuperative Care,Recuperative Care Center,3,18,3
 St. George Hotel,Single Room Occupancy Housing,0,1,0
 St. Joseph Center - Palms,Homeless Service Provider,3,0,0
 Steinmetz Shelter,Homeless Shelter,1,2,0
@@ -170,12 +164,11 @@ Valley Oasis - 60th St,Homeless Shelter,1,2,0
 Valley Oasis - Crisis and Bridge Program,Homeless Shelter,0,1,0
 Valley Oasis - Family Access Center,Homeless Service Provider,3,0,0
 Weingart / Gardner Library Bridge Housing,Homeless Shelter,0,1,0
-Weingart Center,Homeless Shelter,0,1,0
 Weingart Center - AB109,Homeless Shelter,0,1,0
 Weingart Center - DHS,Homeless Shelter,0,1,0
 Weingart Center - RSAAP,Homeless Shelter,1,0,0
 Weingart Center - THP,Homeless Shelter,0,1,0
 Weingart Civic Center A Bridge Home,Homeless Shelter,1,0,0
 Whittier Senior Center,Homeless Shelter,2,12,0
-Women's Care Cottage,Homeless Shelter,3,1,0
+Women's Care Cottage,Homeless Shelter,2,2,0
 XzaviersPlace Transitional Living,Homeless Shelter,0,1,0
