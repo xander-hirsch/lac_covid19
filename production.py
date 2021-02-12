@@ -147,7 +147,10 @@ def arcgis_live_non_res(df_non_res):
 
 
 def arcgis_live_edu(df_education):
-    df_education = df_education[df_education[const.ADDRESS]!='Los Angeles, CA']
+    df_education = df_education[
+        df_education[const.ADDRESS].apply(lambda x: x.upper())
+        != 'LOS ANGELES, CA'
+    ]
     apply_coordinates(df_education).to_csv(
         os.path.join(DIR_ARCGIS_UPLOAD, 'education-outbreaks.csv'), index=False)
 

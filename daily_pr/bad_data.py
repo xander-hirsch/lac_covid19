@@ -29,6 +29,9 @@ SUBSTITUE_SORUCE = {
          'City of Agoura Hills'),
     ),
     '2020-12-18': (('City\s+of\s+Agoura\s+Hills\s+440\s+\(\s+2107\s+\)', ''),),
+    '2021-02-11': (
+        ('Deaths\s+Race/Ethnicity\s+\(Los\s+Angeles\s+County\s+Cases\s+Only-excl\s+LB\s+and\s+Pas\)', ''),
+    ),
 }
 
 CORR_FACILITY_RECORDED = dt.date(2020, 5, 14)
