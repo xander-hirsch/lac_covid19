@@ -6,12 +6,11 @@ Anita May Rosenstein Campus LGBT Center,Homeless Shelter,3,0,0
 Ascencia Homeless Shelter,Homeless Shelter,3,17,0
 Aviva Family and Children's Services - Wallis House,Homeless Shelter,1,4,0
 Ballington Plaza,Homeless Shelter,0,1,0
-Bassett Park Winter Shelter,Homeless Shelter,2,14,0
+Bassett Park Winter Shelter,Homeless Shelter,3,12,0
 Beacon Light Mission,Homeless Shelter,1,6,0
 Bridge Housing For Women,Homeless Shelter,4,3,0
 Bridge Taper Shelter,Homeless Shelter,2,9,0
 Bridge To Home,Homeless Shelter,0,1,0
-Canaan House Family Transitional Housing,Homeless Shelter,0,2,0
 Charles Cobb Apartments,Single Room Occupancy Housing,1,2,0
 Courtland Hotel,Single Room Occupancy Housing,0,1,0
 Covenant House,Homeless Shelter,7,12,0
@@ -25,10 +24,11 @@ Emmanuel Baptist Rescue Mission,Homeless Shelter,0,1,0
 Encampment - Boyle Heights #2,Homeless Encampment,0,1,0
 Encampment - Central LA,Homeless Encampment,0,1,0
 Encampment - Central LA #5,Homeless Encampment,0,5,0
-Encampment - Central LA #8,Homeless Encampment,0,2,0
+Encampment - Central LA #8,Homeless Encampment,0,1,0
 Encampment - Central LA #10,Homeless Encampment,0,1,0
 Encampment - Central LA #12,Homeless Encampment,0,1,0
 Encampment - Central LA #13,Homeless Encampment,0,1,0
+Encampment - Central LA #17,Homeless Encampment,0,1,0
 Encampment - Central LA #21,Homeless Encampment,0,1,0
 Encampment - Central LA #22,Homeless Encampment,0,1,0
 Encampment - Central LA #24,Homeless Encampment,0,1,0
@@ -51,7 +51,6 @@ Encampment - Hollywood #2,Homeless Encampment,0,1,0
 Encampment - Hollywood #10,Homeless Encampment,0,2,0
 Encampment - Lancaster #4,Homeless Encampment,0,2,0
 Encampment - Lincoln Heights #4,Homeless Encampment,0,2,0
-Encampment - Lynwood,Homeless Encampment,0,1,0
 Encampment - MacArthur Park,Homeless Encampment,1,14,1
 Encampment - Mission Hills #1,Homeless Encampment,0,1,0
 Encampment - Montecito Heights #2,Homeless Encampment,1,0,0
@@ -61,7 +60,6 @@ Encampment - North Hollywood Studio City,Homeless Encampment,0,2,0
 Encampment - Safe Parking Compton,Homeless Encampment,0,1,0
 Encampment - Safe Parking Glassell,Homeless Encampment,0,1,0
 Encampment - Safe Parking Reseda,Homeless Encampment,0,1,0
-Encampment - San Fernando,Homeless Encampment,0,1,0
 Encampment - Signal Hill #2,Homeless Encampment,0,1,0
 Encampment - South Gate #2,Homeless Encampment,0,2,0
 Encampment - South LA,Homeless Encampment,0,1,0
@@ -84,13 +82,13 @@ First To Serve - Coronado,Homeless Shelter,1,0,0
 First To Serve - Figueroa,Homeless Shelter,0,2,0
 First To Serve - Mid City 3 Shelter,Homeless Shelter,0,3,0
 First To Serve - San Pedro,Homeless Shelter,4,0,0
-First To Serve - Vernon,Homeless Shelter,9,7,0
+First To Serve - Vernon,Homeless Shelter,10,7,0
 Florence Apartments,Single Room Occupancy Housing,0,2,0
 Good Shepherd Hawkes,Homeless Shelter,2,2,0
 Good Shepherd Languille,Homeless Shelter,0,1,0
 Grupo Empezar de Las Tinieblas A La Luz,Homeless Shelter,0,1,0
 Harbor Interfaith 8th Street,Homeless Shelter,3,0,0
-Harbor Recuperative Care,Recuperative Care Center,1,7,0
+Harbor Recuperative Care,Recuperative Care Center,1,8,0
 Hart Hotel,Single Room Occupancy Housing,0,1,0
 HOLA Recuperative Care,Recuperative Care Center,1,2,2
 Home at Last - Athens Park,Homeless Shelter,3,4,0
@@ -131,6 +129,7 @@ S. Mark Taper Foundation Family Living Center,Homeless Shelter,2,14,0
 Safe Sleep Program,Homeless Encampment,1,2,0
 Salvation Army A Bridge Home Imperial Highway,Homeless Shelter,4,15,1
 Salvation Army Bell Shelter,Homeless Shelter,12,34,1
+Salvation Army Santa Fe Springs,Homeless Shelter,0,1,0
 San Fernando Valley Rescue Mission,Homeless Shelter,3,6,0
 Sanborn Hotel,Single Room Occupancy Housing,0,1,0
 Senator Hotel,Single Room Occupancy Housing,0,1,0
