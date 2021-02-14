@@ -32,6 +32,7 @@ SUBSTITUE_SORUCE = {
     '2021-02-11': (
         ('Deaths\s+Race/Ethnicity\s+\(Los\s+Angeles\s+County\s+Cases\s+Only-excl\s+LB\s+and\s+Pas\)', ''),
     ),
+    '2021-02-14': (('Daily\s+new\s+cases:\s+1,93\*', 'Daily new cases: 1,936*'),),
 }
 
 CORR_FACILITY_RECORDED = dt.date(2020, 5, 14)
