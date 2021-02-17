@@ -371,7 +371,7 @@ def aggregate_stats(many_daily_pr):
     df = pd.merge(
         pd.merge(df_cases, df_deaths, 'left', DATE),
         df_hospital, 'left', DATE
-    ).convert_dtypes()
+    )
 
     df[const.NEW_CASES_7_DAY_AVG] = df[const.NEW_CASES_7_DAY_AVG].round(1)
     df[const.NEW_CASES_7_DAY_AVG_PER_CAPITA] = df[
@@ -381,8 +381,8 @@ def aggregate_stats(many_daily_pr):
     df[const.NEW_DEATHS_7_DAY_AVG_PER_CAPITA] = df[
         const.NEW_DEATHS_7_DAY_AVG_PER_CAPITA
     ].round(4)
-    return (df[df[const.NEW_CASES].notna()].copy()
-            .sort_values(const.DATE).reset_index(drop=True))
+    return (df[df[const.NEW_CASES].notna()].copy().sort_values(const.DATE)
+            .reset_index(drop=True).convert_dtypes())
 
 
 def generate_all_ts(many_daily_pr=None):

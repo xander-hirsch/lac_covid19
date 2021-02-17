@@ -50,6 +50,10 @@ def arcgis_live_map(df_area, lower=0.05, upper=0.95):
     df_area[const.REGION] = df_area[const.AREA].apply(CSA_REGION_MAP.get)
     df_area[const.POPULATION] = (df_area[const.AREA].apply(CSA_POPULATION.get)
                                  .fillna(pd.NA).astype('Int64'))
+    # GeoPandas cannot interpret Float64Dtype
+    for col in (const.CASES_PER_CAPITA, const.NEW_CASES_14_DAY_AVG,
+                const.NEW_CASES_14_DAY_AVG_PER_CAPITA):
+        df_area[col] = df_area[col].astype('float')
     df = CSA_BLANK.merge(df_area, on=const.AREA)
     filename = 'csa-live-map'
     df.to_file(os.path.join(DIR_ARCGIS_UPLOAD, f'{filename}.geojson'),
