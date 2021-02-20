@@ -10,7 +10,7 @@ from lac_covid19.current_stats.scrape import query_live
 from lac_covid19.current_stats.citations import CITATIONS
 from lac_covid19.population import CSA as CSA_POPULATION
 from lac_covid19.daily_pr.time_series import generate_all_ts
-from lac_covid19.geo.csa import CSA_BLANK, CSA_REGION_MAP
+from lac_covid19.geo.csa import CSA_BLANK, CSA_REGION_MAP, CSA_OBJECTID_MAP
 import lac_covid19.geo.geocoder as geocoder
 
 tz_offset = pd.to_timedelta(8, unit='hours')
@@ -41,30 +41,55 @@ def choropleth_colors(df_area_day, col, lower, upper):
           f'{upper}->{df_area_day[col].quantile(upper).round(1)}')
 
 
-def arcgis_live_map(df_area, lower=0.05, upper=0.95):
-    df_area = df_area.loc[
-        df_area[const.DATE]==df_area[const.DATE].max(),
-        [const.AREA, const.CASES, const.CASES_PER_CAPITA,
-         const.NEW_CASES_14_DAY_AVG, const.NEW_CASES_14_DAY_AVG_PER_CAPITA]
+def area_data(df_area_live, df_area_ts): #, lower=0.05, upper=0.95):
+    # Get 14 day average of new cases from area time series
+    df_area_recent = df_area_ts.loc[
+        df_area_ts[const.DATE] == df_area_ts[const.DATE].max(),
+        [const.AREA, const.NEW_CASES_14_DAY_AVG,
+         const.NEW_CASES_14_DAY_AVG_PER_CAPITA]
     ].copy()
-    df_area[const.REGION] = df_area[const.AREA].apply(CSA_REGION_MAP.get)
-    df_area[const.POPULATION] = (df_area[const.AREA].apply(CSA_POPULATION.get)
-                                 .fillna(pd.NA).astype('Int64'))
-    # GeoPandas cannot interpret Float64Dtype
-    for col in (const.CASES_PER_CAPITA, const.NEW_CASES_14_DAY_AVG,
-                const.NEW_CASES_14_DAY_AVG_PER_CAPITA):
-        df_area[col] = df_area[col].astype('float')
-    df = CSA_BLANK.merge(df_area, on=const.AREA)
+    df_area = df_area_live.merge(df_area_recent, 'left', const.AREA)
+    # Drop City of Los Angeles
+    df_area = (df_area[df_area[const.AREA]!=const.LOS_ANGELES]
+               .reset_index(drop=True).copy())
+    # Add region and population data
+    df_area[const.REGION] = (df_area[const.AREA].apply(CSA_REGION_MAP.get)
+                             .convert_dtypes())
+    df_area[const.POPULATION] = df_area[const.AREA].apply(CSA_POPULATION.get)
+    # Reorder columns and export
+    df_area = df_area[
+        [const.AREA, const.REGION, const.POPULATION, const.CF_OUTBREAK,
+         const.CASES, const.CASE_RATE,
+         const.NEW_CASES_14_DAY_AVG, const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
+         const.DEATHS, const.DEATH_RATE,
+         const.VACCINATED_PEOPLE, const.VACCINATED_PERCENT]
+    ]
+    df_area.to_csv(os.path.join(DIR_LIVE, 'area.csv'), index=False)
+    return df_area
+
+
+def arcgis_map(df_area, lower=0.05, upper=0.95):
+    # Put area data into a geojson
+    df_geo = CSA_BLANK.merge(df_area, on=const.AREA)
     filename = 'csa-live-map'
-    df.to_file(os.path.join(DIR_ARCGIS_UPLOAD, f'{filename}.geojson'),
+    df_geo.to_file(os.path.join(DIR_ARCGIS_UPLOAD, f'{filename}.geojson'),
                driver='GeoJSON')
-    df.loc[
-        :, [const.CASES, const.CASES_PER_CAPITA,
-            const.NEW_CASES_14_DAY_AVG, const.NEW_CASES_14_DAY_AVG_PER_CAPITA]
-    ].to_csv(os.path.join(DIR_ARCGIS_APPEND, f'{filename}.csv'), index=False)
-    choropleth_colors(df_area, const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
-                      lower, upper)
-    choropleth_colors(df_area, const.CASES_PER_CAPITA, lower, upper)
+    # Create append file
+    df_append = df_area.copy()
+    df_append[const.OBJECTID] = df_append[const.AREA].apply(CSA_OBJECTID_MAP.get)
+    df_append = df_append.drop(columns=[const.AREA, const.REGION,
+                                        const.POPULATION, const.CF_OUTBREAK])
+    df_append.to_csv(os.path.join(DIR_ARCGIS_APPEND, f'{filename}.csv'),
+                     index=False)
+
+    # Choropleth suggestions
+    def choropleth_suggestions(column, lower=lower, upper=upper):
+        return choropleth_colors(df_area, column, lower, upper)
+
+    choropleth_suggestions(const.NEW_CASES_14_DAY_AVG_PER_CAPITA)
+    choropleth_suggestions(const.CASE_RATE)
+    choropleth_suggestions(const.DEATH_RATE)
+    choropleth_suggestions(const.VACCINATED_PERCENT)
 
 
 def arcgis_live_vaccinated(df_vaccinated):
@@ -201,13 +226,20 @@ def export_time_series(ts_dict):
 
 def export_live(live_dict):
     for key in live_dict:
-        filename = f"{key.lower().replace(' ', '-')}.csv"
-        live_dict[key].to_csv(os.path.join(DIR_LIVE, filename), index=False)
+        if key != const.AREA:
+            filename = f"{key.lower().replace(' ', '-')}.csv"
+            live_dict[key].to_csv(os.path.join(DIR_LIVE, filename),
+                                  index=False)
 
 
 def publish(date=None, update_live=True, ts_cache=False, live_cache=False):
+
+    df_area_live = None
+
     if update_live:
-        export_live(live_dict := query_live(live_cache))
+        live_dict = query_live(live_cache)
+        export_live(live_dict)
+        df_area_live = live_dict[const.AREA]
         geocoder.prep_addresses()
         arcgis_live_non_res(live_dict[const.NON_RESIDENTIAL])
         arcgis_live_edu(live_dict[const.EDUCATION])
@@ -221,7 +253,10 @@ def publish(date=None, update_live=True, ts_cache=False, live_cache=False):
 
     if date is None:
         date = ts_dict[const.AGGREGATE][const.DATE].max()
-    arcgis_live_map(ts_dict[const.AREA])
+
+    df_area_ts = ts_dict[const.AREA]
+    df_area = area_data(df_area_live, df_area_ts)
+    arcgis_map(df_area)
     arcgis_csa_ts(ts_dict[const.AREA], date)
     # arcgis_region_ts(ts_dict[const.REGION], date)
     arcgis_aggregate_ts(ts_dict[const.AGGREGATE], date)
@@ -230,9 +265,11 @@ def publish(date=None, update_live=True, ts_cache=False, live_cache=False):
 
 
 if __name__ == "__main__":
-    pass
-    # ts_dict = generate_all_ts()
-    # df_area = ts_dict[const.AREA]
-    # df_region = ts_dict[const.REGION]
-    # df_age = ts_dict[const.AGE_GROUP]
-    # df_aggregate = ts_dict[const.AGGREGATE]
+    if False:
+        ts_dict = generate_all_ts()
+        df_area_ts = ts_dict[const.AREA]
+        df_area_live = query_live()[const.AREA]
+        df_area = area_data(df_area_live, df_area_ts)
+        # df_region = ts_dict[const.REGION]
+        # df_age = ts_dict[const.AGE_GROUP]
+        # df_aggregate = ts_dict[const.AGGREGATE]

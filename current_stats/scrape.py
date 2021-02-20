@@ -106,8 +106,9 @@ def parse_health_dept(html):
 
     df = pd.DataFrame(data).reset_index().rename(columns={'index': const.AREA})
     populations = pd.Series([467_353, 141_374])
-    df[const.CASE_RATE] = (df[const.CASES] * 100_000 / populations).round()
-    df[const.DEATH_RATE] = (df[const.DEATHS] * 100_000 / populations).round()
+    for raw, rate in ((const.CASES, const.CASE_RATE),
+                      (const.DEATHS, const.DEATH_RATE)):
+        df[rate] = (df[raw] * 100_000 / populations).round().astype('int')
     df[const.CF_OUTBREAK] = False
 
     return df
