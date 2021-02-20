@@ -46,15 +46,16 @@ SPA = 'Service Planning Area'
 AREA = 'Area'
 POPULATION = 'Population'
 CF_OUTBREAK = 'CF Outbreak'
-
-AREA_TOTAL, AREA_RECENT = [f'{AREA} {x}' for x in ('Total', 'Recent')]
-RESIDENTIAL = 'Residential'
-NON_RESIDENTIAL = 'Non Residential'
-HOMELESS = 'Homeless'
-EDUCATION = 'Education'
 VACCINATED = 'Vaccinated'
 VACCINATED_PEOPLE, VACCINATED_PERCENT = [f'{x} {VACCINATED}'
                                          for x in ('People', 'Percent')]
+
+
+CSA_TOTAL, CSA_RECENT = [f'CSA {x}' for x in ('Total', 'Recent')]
+RESIDENTIAL, NON_RESIDENTIAL, HOMELESS, EDUCATION = [
+    f'{x} Outbreaks' for x in
+    ('Residential', 'Non Residential', 'Homeless', 'Education')
+]
 
 STREET = 'Street'
 CITY = 'City'

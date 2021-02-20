@@ -57,7 +57,7 @@ RACE = {
 }
 
 CSA = pd.concat([
-    (query_live(True)[const.AREA_RECENT][[const.AREA, const.POPULATION]]
+    (query_live(True)[const.CSA_RECENT][[const.AREA, const.POPULATION]]
      .set_index(const.AREA))[const.POPULATION].copy(),
     pd.Series((LONG_BEACH, PASADENA), index=(const.hd.CSA_LB, const.hd.CSA_PAS))
 ])

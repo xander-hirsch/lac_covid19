@@ -134,7 +134,12 @@ def parse_csa(html):
     )].copy().convert_dtypes(convert_integer=False)
     # Tidy correctional facility outbreak data
     df[const.CF_OUTBREAK] = df[const.AREA].apply(lambda x: x[-1]=='*')
-    df[const.AREA] = df[const.AREA].apply(lambda x: x.rstrip('*'))
+    df[const.AREA] = (
+        df[const.AREA].apply(lambda x: x.rstrip('*')).convert_dtypes()
+    )
+    # Manually convert dtypes
+    for col in (const.CASE_RATE, const.DEATH_RATE):
+        df[col] = df[col].astype('int')
 
     return df
 
@@ -154,6 +159,7 @@ def parse_recent(html):
             '2018 PEPS Population': const.POPULATION,
         })
     )
+    df[const.AREA] = df[const.AREA].convert_dtypes()
     df[const.UNSTABLE_ADJ_CASE_RATE] = df[const.UNSTABLE_ADJ_CASE_RATE].apply(
         lambda x: x=='^'
     )
@@ -162,7 +168,7 @@ def parse_recent(html):
         const.ADJ_NEW_CASES_14_DAY_AVG
     ):
         df[x] = (df[x] / 14).round(2)
-    return df.convert_dtypes(convert_integer=False)
+    return df
 
 
 def parse_vaccinated(html):
@@ -181,16 +187,13 @@ def parse_vaccinated(html):
     return df
 
 
-def parse_areas(html):
+def parse_areas(df_csa_total, df_health_dept, df_area_vaccinated):
     df = (
-        pd.concat([x(html) for x in (parse_csa, parse_health_dept)])
+        pd.concat([df_csa_total, df_health_dept])
         .sort_values(const.AREA).reset_index(drop=True).copy()
     )
     df[const.AREA] = df[const.AREA].convert_dtypes()
-    for col in (const.CASE_RATE, const.DEATH_RATE):
-        df[col] = df[col].astype('int')
-
-    return pd.merge(df, parse_vaccinated(html), 'left', const.AREA)
+    return pd.merge(df, df_area_vaccinated, 'left', const.AREA)
 
 
 def parse_outbreaks(html, id_):
@@ -216,9 +219,16 @@ def parse_education(html):
 
 def query_live(cached=False):
     page_html = fetch_page(cached)
+    df_csa_total = parse_csa(page_html)
+    df_csa_recent = parse_recent(page_html)
+    df_area_vaccinated = parse_vaccinated(page_html)
+    df_health_dept = parse_health_dept(page_html)
     return {
-        const.AREA: parse_areas(page_html),
-        const.AREA_RECENT: parse_recent(page_html),
+        const.AREA: parse_areas(df_csa_total, df_health_dept,
+                                df_area_vaccinated),
+        const.CSA_TOTAL: df_csa_total,
+        const.CSA_RECENT: df_csa_recent,
+        const.VACCINATED: df_area_vaccinated,
         const.RESIDENTIAL: parse_residential(page_html),
         const.NON_RESIDENTIAL: parse_non_residential(page_html),
         const.HOMELESS: parse_homeless(page_html),
@@ -228,3 +238,4 @@ def query_live(cached=False):
 
 if __name__ == "__main__":
     page_html = fetch_page()
+    df = query_live(page_html)

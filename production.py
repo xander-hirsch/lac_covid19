@@ -201,7 +201,7 @@ def export_time_series(ts_dict):
 
 def export_live(live_dict):
     for key in live_dict:
-        filename = f"{key.lower().replace(' ', '-')}-live.csv"
+        filename = f"{key.lower().replace(' ', '-')}.csv"
         live_dict[key].to_csv(os.path.join(DIR_LIVE, filename), index=False)
 
 
@@ -209,8 +209,6 @@ def publish(date=None, update_live=True, ts_cache=False, live_cache=False):
     if update_live:
         export_live(live_dict := query_live(live_cache))
         geocoder.prep_addresses()
-        # arcgis_live_vaccinated(live_dict[const.VACCINATED])
-        # arcgis_live_map_version_two(live_dict[const.AREA_TOTAL], live_dict[const.VACCINATED])
         arcgis_live_non_res(live_dict[const.NON_RESIDENTIAL])
         arcgis_live_edu(live_dict[const.EDUCATION])
 
