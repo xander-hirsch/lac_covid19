@@ -59,12 +59,29 @@ def arcgis_live_map(df_area, lower=0.05, upper=0.95):
     df.to_file(os.path.join(DIR_ARCGIS_UPLOAD, f'{filename}.geojson'),
                driver='GeoJSON')
     df.loc[
-        :, [const.OBJECTID, const.CASES, const.CASES_PER_CAPITA,
+        :, [const.CASES, const.CASES_PER_CAPITA,
             const.NEW_CASES_14_DAY_AVG, const.NEW_CASES_14_DAY_AVG_PER_CAPITA]
     ].to_csv(os.path.join(DIR_ARCGIS_APPEND, f'{filename}.csv'), index=False)
     choropleth_colors(df_area, const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
                       lower, upper)
     choropleth_colors(df_area, const.CASES_PER_CAPITA, lower, upper)
+
+
+def arcgis_live_vaccinated(df_vaccinated):
+    df = CSA_BLANK.merge(df_vaccinated, on=const.AREA)
+    df = df.drop(columns=[const.VACCINATED_PEOPLE, const.VACCINATED_PERCENT])
+    filename = 'csa-vaccinated'
+    df.to_file(os.path.join(DIR_ARCGIS_UPLOAD, f'{filename}.geojson'),
+               driver='GeoJSON')
+
+
+def arcgis_live_map_version_two(df_area, df_vaccinated):
+    df = CSA_BLANK.merge(df_vaccinated, on=const.AREA, how='left')
+    # df = CSA_BLANK.merge(pd.merge(df_area, df_vaccinated, on=const.AREA), on=const.AREA)
+    filename = 'csa-vaccinated'
+    df.to_file(os.path.join(DIR_ARCGIS_UPLOAD, f'{filename}.geojson'),
+               driver='GeoJSON')
+
 
 
 def arcgis_csa_days_back(df_area):
@@ -192,6 +209,8 @@ def publish(date=None, update_live=True, ts_cache=False, live_cache=False):
     if update_live:
         export_live(live_dict := query_live(live_cache))
         geocoder.prep_addresses()
+        # arcgis_live_vaccinated(live_dict[const.VACCINATED])
+        arcgis_live_map_version_two(live_dict[const.AREA_TOTAL], live_dict[const.VACCINATED])
         arcgis_live_non_res(live_dict[const.NON_RESIDENTIAL])
         arcgis_live_edu(live_dict[const.EDUCATION])
 

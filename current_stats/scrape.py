@@ -15,6 +15,7 @@ ID_RESIDENTIAL = 'residential-settings'
 ID_NON_RESIDENTIAL = 'nonres-settings'
 ID_HOMELESS = 'peh-settings'
 ID_EDUCATION = 'educational-settings'
+ID_VACCINATED = 'vaccinated'
 
 OBS = 'Obs'
 
@@ -103,6 +104,22 @@ def parse_recent(html):
     return df.convert_dtypes(convert_integer=False)
 
 
+def parse_vaccinated(html):
+    df = (
+        pd.read_html(str(table_html(html, ID_VACCINATED)))[0]
+        .rename(columns={
+            'City/Comminity*': const.AREA,
+            'Number of Persons Vaccinated**': const.VACCINATED_PEOPLE,
+            'Percentage of People Vaccinated***': const.VACCINATED_PERCENT,
+        })
+    )
+    df[const.AREA] = df[const.AREA].convert_dtypes()
+    df[const.VACCINATED_PEOPLE] = df[const.VACCINATED_PEOPLE].apply(
+        lambda x: pd.NA if x == '<5' else int(x)
+    ).astype('Int64')
+    return df
+
+
 def parse_outbreaks(html, id_):
     """A general helper function to parse an outbreak table"""
     df = pd.read_html(str(table_html(html, id_)))[0].set_index(OBS)
@@ -129,6 +146,7 @@ def query_live(cached=False):
     return {
         const.AREA_TOTAL: parse_csa(page_html),
         const.AREA_RECENT: parse_recent(page_html),
+        const.VACCINATED: parse_vaccinated(page_html),
         const.RESIDENTIAL: parse_residential(page_html),
         const.NON_RESIDENTIAL: parse_non_residential(page_html),
         const.HOMELESS: parse_homeless(page_html),

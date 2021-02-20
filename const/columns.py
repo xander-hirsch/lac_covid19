@@ -52,6 +52,9 @@ RESIDENTIAL = 'Residential'
 NON_RESIDENTIAL = 'Non Residential'
 HOMELESS = 'Homeless'
 EDUCATION = 'Education'
+VACCINATED = 'Vaccinated'
+VACCINATED_PEOPLE, VACCINATED_PERCENT = [f'{x} {VACCINATED}'
+                                         for x in ('People', 'Percent')]
 
 STREET = 'Street'
 CITY = 'City'

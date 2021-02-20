@@ -133,11 +133,9 @@ CSA_REGION_MAP = get_region_mapping()
 CSA_BLANK = (
     df_csa.drop(columns=['OBJECTID', 'CITY_TYPE', 'LCITY', 'COMMUNITY',
                          'SOURCE', 'ShapeSTArea', 'ShapeSTLength'])
-    .rename(columns={'LABEL': AREA}).copy()
+    .rename(columns={'LABEL': AREA}).sort_values(AREA).copy()
 )
 CSA_BLANK[AREA] = CSA_BLANK[AREA].convert_dtypes()
-CSA_BLANK[OBJECTID] = (CSA_BLANK[AREA]
-                       .apply(CSA_OBJECTID_MAP.get).convert_dtypes())
 
 
 if __name__ == "__main__":
