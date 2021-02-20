@@ -59,6 +59,61 @@ def extract_summary(html):
     return table_html(html, ID_SUMMARY)
 
 
+def parse_health_dept(html):
+    table_rows = html.find('table').find_all('tr')
+    data = {
+        const.CASES: {
+            const.hd.CSA_LB: None,
+            const.hd.CSA_PAS: None,
+        },
+        const.DEATHS: {
+            const.hd.CSA_LB: None,
+            const.hd.CSA_PAS: None,
+        },
+    }
+
+    lb_cases_row = table_rows[6].find_all('td')
+    if const.hd.LONG_BEACH in lb_cases_row[0].get_text(strip=True):
+        data[const.CASES][const.hd.CSA_LB] = int(
+            lb_cases_row[1].get_text(strip=True)
+        )
+    else:
+        print('Cannot find Long Beach cases')
+
+    pas_cases_row = table_rows[7].find_all('td')
+    if const.hd.PASADENA in pas_cases_row[0].get_text(strip=True):
+        data[const.CASES][const.hd.CSA_PAS] = int(
+            pas_cases_row[1].get_text(strip=True)
+        )
+    else:
+        print('Cannot find Pasadena cases')
+
+    lb_deaths_row = table_rows[10].find_all('td')
+    if const.hd.LONG_BEACH in lb_deaths_row[0].get_text(strip=True):
+        data[const.DEATHS][const.hd.CSA_LB] = int(
+            lb_deaths_row[1].get_text(strip=True)
+        )
+    else:
+        print('Cannot find Long Beach deaths')
+
+    pas_deaths_row = table_rows[11].find_all('td')
+    if const.hd.PASADENA in pas_deaths_row[0].get_text(strip=True):
+        data[const.DEATHS][const.hd.CSA_PAS] = int(
+            pas_deaths_row[1].get_text(strip=True)
+        )
+    else:
+        print('Cannot find Pasadena deaths')
+
+    df = pd.DataFrame(data).reset_index().rename(columns={'index': const.AREA})
+    populations = pd.Series([467_353, 141_374])
+    df[const.CASE_RATE] = (df[const.CASES] * 100_000 / populations).round()
+    df[const.DEATH_RATE] = (df[const.DEATHS] * 100_000 / populations).round()
+    df[const.CF_OUTBREAK] = False
+
+    return df
+
+
+
 def parse_csa(html):
     """Parses the table representing cummulative cases and deaths in each
         countwide statistical area.
@@ -68,14 +123,20 @@ def parse_csa(html):
         .rename(
             columns={
                 'CITY/COMMUNITY**': const.AREA,
-                'Case Rate1': const.CASES_PER_CAPITA,
-                'Death Rate2': const.DEATHS_PER_CAPITA,
+                'Case Rate1': const.CASE_RATE,
+                'Death Rate2': const.DEATH_RATE,
             }
         )
     )
-    return df[df[const.AREA].apply(
+    # Remove "Under Investigation" entry
+    df = df[df[const.AREA].apply(
         lambda x: const.UNDER_INVESTIGATION not in x
     )].copy().convert_dtypes(convert_integer=False)
+    # Tidy correctional facility outbreak data
+    df[const.CF_OUTBREAK] = df[const.AREA].apply(lambda x: x[-1]=='*')
+    df[const.AREA] = df[const.AREA].apply(lambda x: x.rstrip('*'))
+
+    return df
 
 
 def parse_recent(html):
@@ -120,6 +181,18 @@ def parse_vaccinated(html):
     return df
 
 
+def parse_areas(html):
+    df = (
+        pd.concat([x(html) for x in (parse_csa, parse_health_dept)])
+        .sort_values(const.AREA).reset_index(drop=True).copy()
+    )
+    df[const.AREA] = df[const.AREA].convert_dtypes()
+    for col in (const.CASE_RATE, const.DEATH_RATE):
+        df[col] = df[col].astype('int')
+
+    return pd.merge(df, parse_vaccinated(html), 'left', const.AREA)
+
+
 def parse_outbreaks(html, id_):
     """A general helper function to parse an outbreak table"""
     df = pd.read_html(str(table_html(html, id_)))[0].set_index(OBS)
@@ -144,9 +217,8 @@ def parse_education(html):
 def query_live(cached=False):
     page_html = fetch_page(cached)
     return {
-        const.AREA_TOTAL: parse_csa(page_html),
+        const.AREA: parse_areas(page_html),
         const.AREA_RECENT: parse_recent(page_html),
-        const.VACCINATED: parse_vaccinated(page_html),
         const.RESIDENTIAL: parse_residential(page_html),
         const.NON_RESIDENTIAL: parse_non_residential(page_html),
         const.HOMELESS: parse_homeless(page_html),
