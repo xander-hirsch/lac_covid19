@@ -67,7 +67,7 @@ ADDRESS = 'Address'
 STAFF_CASES = 'Staff {}'.format(CASES)
 RESID_CASES = 'Resident {}'.format(CASES)
 
-OBJECTID = 'ObjectID'
+OBJECTID = 'ObjectId'
 
 COORDINATES = 'Coordinates'
 LATITUDE = 'Latitude'

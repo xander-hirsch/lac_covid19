@@ -69,8 +69,12 @@ def area_data(df_area_live, df_area_ts): #, lower=0.05, upper=0.95):
 
 
 def arcgis_map(df_area, lower=0.05, upper=0.95):
-    # Put area data into a geojson
     df_geo = CSA_BLANK.merge(df_area, on=const.AREA)
+    # Fix GeoPandas GeoJSON driver unable to handle Float64
+    for col in(const.NEW_CASES_14_DAY_AVG,
+               const.NEW_CASES_14_DAY_AVG_PER_CAPITA):
+        df_geo[col] = df_geo[col].astype('float')
+    # Put area data into a geojson
     filename = 'csa-live-map'
     df_geo.to_file(os.path.join(DIR_ARCGIS_UPLOAD, f'{filename}.geojson'),
                driver='GeoJSON')
@@ -84,7 +88,7 @@ def arcgis_map(df_area, lower=0.05, upper=0.95):
 
     # Choropleth suggestions
     def choropleth_suggestions(column, lower=lower, upper=upper):
-        return choropleth_colors(df_area, column, lower, upper)
+        return choropleth_colors(df_geo, column, lower, upper)
 
     choropleth_suggestions(const.NEW_CASES_14_DAY_AVG_PER_CAPITA)
     choropleth_suggestions(const.CASE_RATE)
@@ -265,7 +269,7 @@ def publish(date=None, update_live=True, ts_cache=False, live_cache=False):
 
 
 if __name__ == "__main__":
-    if False:
+    if True:
         ts_dict = generate_all_ts()
         df_area_ts = ts_dict[const.AREA]
         df_area_live = query_live()[const.AREA]
