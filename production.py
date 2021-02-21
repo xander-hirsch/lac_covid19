@@ -88,7 +88,7 @@ def arcgis_map(df_area, lower=0.05, upper=0.95):
 
     choropleth_suggestions(const.NEW_CASES_14_DAY_AVG_PER_CAPITA)
     choropleth_suggestions(const.CASE_RATE)
-    choropleth_suggestions(const.DEATH_RATE)
+    choropleth_suggestions(const.DEATH_RATE, 0.1, 0.9)
     choropleth_suggestions(const.VACCINATED_PERCENT)
 
 
