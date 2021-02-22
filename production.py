@@ -269,7 +269,7 @@ def publish(date=None, update_live=True, ts_cache=False, live_cache=False):
 
 
 if __name__ == "__main__":
-    if True:
+    if False:
         ts_dict = generate_all_ts()
         df_area_ts = ts_dict[const.AREA]
         df_area_live = query_live()[const.AREA]
