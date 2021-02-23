@@ -230,7 +230,7 @@ def query_live(cached=False):
         const.CSA_TOTAL: df_csa_total,
         const.CSA_RECENT: df_csa_recent,
         const.VACCINATED: df_area_vaccinated,
-        const.RESIDENTIAL: parse_residential(page_html),
+        # const.RESIDENTIAL: parse_residential(page_html),
         const.NON_RESIDENTIAL: parse_non_residential(page_html),
         const.HOMELESS: parse_homeless(page_html),
         const.EDUCATION: parse_education(page_html),

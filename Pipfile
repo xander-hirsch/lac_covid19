@@ -16,6 +16,7 @@ geopandas = "*"
 shapely = "*"
 geopy = "*"
 lxml = "*"
+html5lib = "*"
 
 [dev-packages]
 pylint = "*"
