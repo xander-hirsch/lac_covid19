@@ -1,342 +1,342 @@
 Area,Cases,Case rate,Deaths,Death rate,CF Outbreak
-City of Agoura Hills,964,4616,14,67,False
-City of Alhambra,6578,7585,176,203,False
-City of Arcadia,2563,4438,104,180,False
-City of Artesia,1962,11682,55,327,False
+City of Agoura Hills,968,4635,17,81,False
+City of Alhambra,6585,7593,188,217,False
+City of Arcadia,2566,4443,112,194,False
+City of Artesia,1967,11712,62,369,False
 City of Avalon,14,362,0,0,False
-City of Azusa,6075,12140,99,198,False
-City of Baldwin Park,12724,16574,255,332,False
-City of Bell,6539,17998,93,256,False
-City of Bell Gardens,8029,18641,90,209,False
-City of Bellflower,10303,13254,163,210,False
-City of Beverly Hills,2438,7063,28,81,False
+City of Azusa,6078,12146,103,206,False
+City of Baldwin Park,12724,16574,261,340,False
+City of Bell,6548,18023,98,270,False
+City of Bell Gardens,8045,18678,95,221,False
+City of Bellflower,10317,13272,174,224,False
+City of Beverly Hills,2445,7083,32,93,False
 City of Bradbury,34,3181,0,0,False
-City of Burbank,8145,7599,201,188,False
-City of Calabasas,1127,4633,28,115,False
-City of Carson,8981,9570,201,214,False
-City of Cerritos,2865,5722,41,82,False
-City of Claremont,2169,5945,47,129,False
-City of Commerce,2322,17767,35,268,True
-City of Compton,16216,16232,191,191,False
-City of Covina,6196,12637,132,269,False
-City of Cudahy,4644,19074,49,201,False
-City of Culver City,2066,5182,80,201,False
-City of Diamond Bar,3074,5345,52,90,False
-City of Downey,16827,14727,237,207,False
-City of Duarte,2219,10079,76,345,False
-City of El Monte,16740,14275,366,312,False
-City of El Segundo,639,3807,5,30,False
-City of Gardena,5986,9763,148,241,False
-City of Glendale,18310,8867,518,251,False
-City of Glendora,4561,8644,147,279,False
-City of Hawaiian Gardens,2149,14643,8,55,False
-City of Hawthorne,9868,11114,167,188,False
-City of Hermosa Beach,882,4484,10,51,False
+City of Burbank,8180,7632,210,196,False
+City of Calabasas,1131,4650,29,119,False
+City of Carson,9018,9609,209,223,False
+City of Cerritos,2873,5738,45,90,False
+City of Claremont,2169,5945,49,134,False
+City of Commerce,2324,17783,36,275,True
+City of Compton,16245,16261,204,204,False
+City of Covina,6195,12635,140,286,False
+City of Cudahy,4647,19087,51,209,False
+City of Culver City,2071,5195,87,218,False
+City of Diamond Bar,3077,5350,63,110,False
+City of Downey,16844,14741,253,221,False
+City of Duarte,2221,10088,82,372,False
+City of El Monte,16760,14292,384,327,False
+City of El Segundo,640,3813,5,30,False
+City of Gardena,5996,9780,157,256,False
+City of Glendale,18374,8898,543,263,False
+City of Glendora,4566,8654,150,284,False
+City of Hawaiian Gardens,2153,14670,10,68,False
+City of Hawthorne,9889,11138,178,200,False
+City of Hermosa Beach,885,4499,11,56,False
 City of Hidden Hills,78,4127,2,106,False
-City of Huntington Park,10844,18230,139,234,False
+City of Huntington Park,10851,18242,144,242,False
 City of Industry,163,37300,4,915,False
-City of Inglewood,12928,11382,265,233,False
+City of Inglewood,12950,11401,274,241,False
 City of Irwindale,247,16929,4,274,False
-City of La Canada Flintridge,696,3363,15,72,False
-City of La Habra Heights,100,1833,1,18,False
-City of La Mirada,4054,8174,89,179,False
-City of La Puente,6460,15873,92,226,False
-City of La Verne,2696,8100,43,129,False
-City of Lakewood,6851,8525,66,82,False
-City of Lancaster,20892,12931,239,148,True
-City of Lawndale,3343,9945,44,131,False
-City of Lomita,1331,6421,21,101,False
-City of Lynwood,12848,17833,199,276,True
-City of Malibu,347,2677,6,46,False
-City of Manhattan Beach,1192,3311,14,39,False
-City of Maywood,5030,17933,76,271,False
-City of Monrovia,3060,7887,66,170,False
-City of Montebello,9832,15273,166,258,False
-City of Monterey Park,4618,7417,163,262,False
-City of Norwalk,15460,14365,281,261,False
-City of Palmdale,23473,14766,262,165,False
-City of Palos Verdes Estates,386,2855,7,52,False
-City of Paramount,9579,17098,115,205,False
-City of Pico Rivera,10725,16684,222,345,False
-City of Pomona,23654,15170,356,228,False
-City of Rancho Palos Verdes,1308,3060,48,112,False
-City of Redondo Beach,2504,3645,27,39,False
+City of La Canada Flintridge,696,3363,16,77,False
+City of La Habra Heights,103,1888,1,18,False
+City of La Mirada,4056,8178,101,204,False
+City of La Puente,6467,15891,95,233,False
+City of La Verne,2701,8115,46,138,False
+City of Lakewood,6866,8544,72,90,False
+City of Lancaster,20931,12955,249,154,True
+City of Lawndale,3358,9990,47,140,False
+City of Lomita,1338,6455,23,111,False
+City of Lynwood,12885,17884,212,294,True
+City of Malibu,352,2716,7,54,False
+City of Manhattan Beach,1197,3325,17,47,False
+City of Maywood,5042,17976,80,285,False
+City of Monrovia,3065,7899,67,173,False
+City of Montebello,9839,15284,178,277,False
+City of Monterey Park,4626,7430,172,276,False
+City of Norwalk,15488,14391,304,282,False
+City of Palmdale,23516,14793,271,170,False
+City of Palos Verdes Estates,389,2877,7,52,False
+City of Paramount,9588,17114,119,212,False
+City of Pico Rivera,10738,16704,229,356,False
+City of Pomona,23669,15179,387,248,False
+City of Rancho Palos Verdes,1325,3100,52,122,False
+City of Redondo Beach,2511,3655,33,48,False
 City of Rolling Hills,49,2526,1,52,False
-City of Rolling Hills Estates,248,3057,8,99,False
-City of Rosemead,4738,8560,111,201,False
-City of San Dimas,3047,8828,76,220,True
-City of San Fernando,5056,20543,53,215,False
-City of San Gabriel,3085,7533,174,425,False
-City of San Marino,356,2681,10,75,False
-City of Santa Clarita,18832,8544,213,97,False
-City of Santa Fe Springs,2718,14801,34,185,False
-City of Santa Monica,4268,4617,135,146,False
-City of Sierra Madre,444,4040,12,109,False
-City of Signal Hill,1086,9206,9,76,False
-City of South El Monte,3317,15882,52,249,False
-City of South Gate,18032,18371,186,189,False
-City of South Pasadena,1253,4809,39,150,False
-City of Temple City,2261,6202,97,266,False
-City of Torrance,6609,4428,163,109,False
+City of Rolling Hills Estates,253,3118,8,99,False
+City of Rosemead,4754,8589,120,217,False
+City of San Dimas,3051,8839,79,229,True
+City of San Fernando,5069,20596,53,215,False
+City of San Gabriel,3090,7545,180,440,False
+City of San Marino,357,2689,10,75,False
+City of Santa Clarita,18923,8585,225,102,False
+City of Santa Fe Springs,2725,14839,35,191,False
+City of Santa Monica,4280,4630,146,158,False
+City of Sierra Madre,444,4040,13,118,False
+City of Signal Hill,1087,9214,9,76,False
+City of South El Monte,3325,15921,54,259,False
+City of South Gate,18046,18385,198,202,False
+City of South Pasadena,1256,4821,39,150,False
+City of Temple City,2263,6208,105,288,False
+City of Torrance,6635,4445,174,117,False
 City of Vernon,124,59330,1,478,False
-City of Walnut,1690,5535,32,105,False
-City of West Covina,12309,11372,200,185,False
-City of West Hollywood,2099,5680,30,81,False
-City of Westlake Village,100,1196,0,0,False
-City of Whittier,10602,12126,193,221,False
-Los Angeles,479682,11860,8170,202,False
-Los Angeles - Adams-Normandie,1139,13887,15,183,False
-Los Angeles - Alsace,1522,12230,18,145,False
+City of Walnut,1692,5542,34,111,False
+City of West Covina,12324,11386,209,193,False
+City of West Hollywood,2103,5691,31,84,False
+City of Westlake Village,100,1196,1,12,False
+City of Whittier,10616,12142,205,234,False
+Los Angeles,480572,11882,8494,210,False
+Los Angeles - Adams-Normandie,1138,13875,17,207,False
+Los Angeles - Alsace,1526,12262,18,145,False
 Los Angeles - Angeles National Forest,5,12500,0,0,False
-Los Angeles - Angelino Heights,274,10951,5,200,False
-Los Angeles - Arleta,6823,19852,91,265,False
-Los Angeles - Atwater Village,1350,9205,23,157,False
-Los Angeles - Baldwin Hills,2587,8312,49,157,False
-Los Angeles - Bel Air,356,4224,2,24,False
-Los Angeles - Beverly Crest,574,4583,5,40,False
-Los Angeles - Beverlywood,818,6210,1,8,False
-Los Angeles - Boyle Heights,17062,19638,261,300,True
-Los Angeles - Brentwood,1368,4419,15,48,False
+Los Angeles - Angelino Heights,275,10991,5,200,False
+Los Angeles - Arleta,6830,19872,92,268,False
+Los Angeles - Atwater Village,1353,9225,24,164,False
+Los Angeles - Baldwin Hills,2590,8321,51,164,False
+Los Angeles - Bel Air,360,4271,2,24,False
+Los Angeles - Beverly Crest,576,4599,5,40,False
+Los Angeles - Beverlywood,820,6225,1,8,False
+Los Angeles - Boyle Heights,17075,19653,271,312,True
+Los Angeles - Brentwood,1371,4429,17,55,False
 Los Angeles - Brookside,31,5336,2,344,False
-Los Angeles - Cadillac-Corning,662,9296,7,98,False
-Los Angeles - Canoga Park,8944,13699,134,205,False
-Los Angeles - Carthay,874,6085,52,362,False
-Los Angeles - Central,7280,18670,114,292,False
+Los Angeles - Cadillac-Corning,667,9367,7,98,False
+Los Angeles - Canoga Park,8964,13730,143,219,False
+Los Angeles - Carthay,849,5911,56,390,False
+Los Angeles - Central,7287,18688,121,310,False
 Los Angeles - Century City,564,4409,12,94,False
-Los Angeles - Century Palms/Cove,5979,17707,69,204,False
-Los Angeles - Chatsworth,3461,9339,66,178,False
-Los Angeles - Cheviot Hills,417,4547,8,87,False
-Los Angeles - Chinatown,692,8627,12,150,False
-Los Angeles - Cloverdale/Cochran,1531,10520,18,124,False
-Los Angeles - Country Club Park,1482,9780,66,436,False
-Los Angeles - Crenshaw District,1389,10044,22,159,False
+Los Angeles - Century Palms/Cove,5986,17728,73,216,False
+Los Angeles - Chatsworth,3466,9352,70,189,False
+Los Angeles - Cheviot Hills,417,4547,9,98,False
+Los Angeles - Chinatown,692,8627,14,175,False
+Los Angeles - Cloverdale/Cochran,1536,10555,19,131,False
+Los Angeles - Country Club Park,1489,9826,70,462,False
+Los Angeles - Crenshaw District,1394,10080,25,181,False
 Los Angeles - Crestview,943,8295,41,361,False
-Los Angeles - Del Rey,1875,6263,21,70,False
-Los Angeles - Downtown,3734,13575,43,156,True
-Los Angeles - Eagle Rock,3524,8901,93,235,False
-Los Angeles - East Hollywood,3081,10520,102,348,False
-Los Angeles - Echo Park,1284,9007,18,126,False
-Los Angeles - El Sereno,6048,14466,93,222,False
-Los Angeles - Elysian Park,488,8543,3,53,False
-Los Angeles - Elysian Valley,1258,12368,21,206,False
-Los Angeles - Encino,3208,7102,54,120,False
-Los Angeles - Exposition,347,10433,5,150,False
-Los Angeles - Exposition Park,5930,13202,74,165,False
-Los Angeles - Faircrest Heights,237,6583,2,56,False
+Los Angeles - Del Rey,1886,6300,24,80,False
+Los Angeles - Downtown,3740,13597,45,164,True
+Los Angeles - Eagle Rock,3533,8924,98,248,False
+Los Angeles - East Hollywood,3090,10551,103,352,False
+Los Angeles - Echo Park,1287,9028,19,133,False
+Los Angeles - El Sereno,6052,14476,98,234,False
+Los Angeles - Elysian Park,487,8526,4,70,False
+Los Angeles - Elysian Valley,1259,12378,21,206,False
+Los Angeles - Encino,3213,7113,58,128,False
+Los Angeles - Exposition,349,10493,7,210,False
+Los Angeles - Exposition Park,5943,13231,78,174,False
+Los Angeles - Faircrest Heights,238,6611,2,56,False
 Los Angeles - Figueroa Park Square,1321,15147,17,195,False
-Los Angeles - Florence-Firestone,9022,19016,103,217,False
-Los Angeles - Glassell Park,3315,10489,44,139,False
+Los Angeles - Florence-Firestone,9034,19041,109,230,False
+Los Angeles - Glassell Park,3317,10496,47,149,False
 Los Angeles - Gramercy Place,1254,11650,20,186,False
-Los Angeles - Granada Hills,6127,10529,157,270,False
-Los Angeles - Green Meadows,3801,17675,43,200,False
-Los Angeles - Hancock Park,959,5628,9,53,False
-Los Angeles - Harbor City,2329,8012,31,107,False
-Los Angeles - Harbor Gateway,4658,10683,57,131,False
+Los Angeles - Granada Hills,6141,10553,162,278,False
+Los Angeles - Green Meadows,3804,17689,46,214,False
+Los Angeles - Hancock Park,961,5640,10,59,False
+Los Angeles - Harbor City,2338,8043,31,107,False
+Los Angeles - Harbor Gateway,4663,10695,59,135,False
 Los Angeles - Harbor Pines,158,6559,0,0,False
-Los Angeles - Harvard Heights,2504,13884,61,338,False
-Los Angeles - Harvard Park,6853,18065,76,200,False
-Los Angeles - Highland Park,5589,11550,86,178,False
-Los Angeles - Historic Filipinotown,1984,14304,74,534,False
-Los Angeles - Hollywood,5126,7510,57,84,False
-Los Angeles - Hollywood Hills,1377,4678,19,65,False
-Los Angeles - Hyde Park,3510,12298,57,200,False
-Los Angeles - Jefferson Park,1131,14010,12,149,False
-Los Angeles - Koreatown,5381,10410,112,217,False
-Los Angeles - Lafayette Square,508,11143,7,154,False
-Los Angeles - Lake Balboa,5164,12235,57,135,False
-Los Angeles - Lakeview Terrace,2250,17132,37,282,False
-Los Angeles - Leimert Park,1512,9925,21,138,False
-Los Angeles - Lincoln Heights,4979,15274,141,433,False
-Los Angeles - Little Armenia,1105,13769,74,922,False
-Los Angeles - Little Bangladesh,2662,9392,28,99,False
-Los Angeles - Little Tokyo,371,11842,10,319,False
+Los Angeles - Harvard Heights,2512,13928,64,355,False
+Los Angeles - Harvard Park,6865,18097,81,214,False
+Los Angeles - Highland Park,5599,11570,90,186,False
+Los Angeles - Historic Filipinotown,1987,14326,74,534,False
+Los Angeles - Hollywood,5133,7520,60,88,False
+Los Angeles - Hollywood Hills,1384,4702,19,65,False
+Los Angeles - Hyde Park,3513,12309,63,221,False
+Los Angeles - Jefferson Park,1132,14022,12,149,False
+Los Angeles - Koreatown,5389,10425,115,222,False
+Los Angeles - Lafayette Square,511,11209,7,154,False
+Los Angeles - Lake Balboa,5174,12259,59,140,False
+Los Angeles - Lakeview Terrace,2257,17186,37,282,False
+Los Angeles - Leimert Park,1515,9944,22,144,False
+Los Angeles - Lincoln Heights,4980,15277,144,442,False
+Los Angeles - Little Armenia,1106,13782,76,947,False
+Los Angeles - Little Bangladesh,2669,9417,28,99,False
+Los Angeles - Little Tokyo,370,11810,10,319,False
 Los Angeles - Longwood,567,13174,7,163,False
 Los Angeles - Los Feliz,990,4582,21,97,False
-Los Angeles - Manchester Square,893,10462,10,117,False
-Los Angeles - Mandeville Canyon,133,4257,1,32,False
-Los Angeles - Mar Vista,1881,4429,29,68,False
+Los Angeles - Manchester Square,897,10508,10,117,False
+Los Angeles - Mandeville Canyon,134,4289,1,32,False
+Los Angeles - Mar Vista,1887,4443,31,73,False
 Los Angeles - Marina Peninsula,132,3028,1,23,False
-Los Angeles - Melrose,7701,9912,186,239,False
-Los Angeles - Mid-city,1139,7578,37,246,False
-Los Angeles - Miracle Mile,886,4926,14,78,False
-Los Angeles - Mission Hills,4123,17091,113,468,False
-Los Angeles - Mt. Washington,2782,11522,56,232,False
-Los Angeles - North Hills,8931,14504,121,197,False
-Los Angeles - North Hollywood,19655,12980,292,193,False
-Los Angeles - Northridge,7170,10273,138,198,False
-Los Angeles - Pacific Palisades,731,3433,17,80,False
-Los Angeles - Pacoima,16642,21619,190,247,False
+Los Angeles - Melrose,7727,9945,189,243,False
+Los Angeles - Mid-city,1143,7605,38,253,False
+Los Angeles - Miracle Mile,892,4960,16,89,False
+Los Angeles - Mission Hills,4131,17124,113,468,False
+Los Angeles - Mt. Washington,2785,11534,57,236,False
+Los Angeles - North Hills,8942,14522,123,200,False
+Los Angeles - North Hollywood,19724,13026,304,201,False
+Los Angeles - Northridge,7186,10296,144,206,False
+Los Angeles - Pacific Palisades,734,3447,18,85,False
+Los Angeles - Pacoima,16668,21653,200,260,False
 Los Angeles - Palisades Highlands,131,3406,1,26,False
-Los Angeles - Palms,2456,5597,54,123,False
-Los Angeles - Panorama City,12930,17183,222,295,False
-Los Angeles - Park La Brea,550,4050,1,7,False
-Los Angeles - Pico-Union,6877,16436,192,459,False
+Los Angeles - Palms,2457,5600,57,130,False
+Los Angeles - Panorama City,12960,17223,227,302,False
+Los Angeles - Park La Brea,555,4087,1,7,False
+Los Angeles - Pico-Union,6890,16467,198,473,False
 Los Angeles - Playa Del Rey,100,3129,1,31,False
-Los Angeles - Playa Vista,548,5006,7,64,False
-Los Angeles - Porter Ranch,2299,6460,32,90,False
-Los Angeles - Rancho Park,333,5076,2,30,False
-Los Angeles - Regent Square,231,8309,3,108,False
-Los Angeles - Reseda,11052,14425,261,341,False
-Los Angeles - Reseda Ranch,640,13805,3,65,False
+Los Angeles - Playa Vista,549,5015,7,64,False
+Los Angeles - Porter Ranch,2305,6477,34,96,False
+Los Angeles - Rancho Park,335,5107,2,30,False
+Los Angeles - Regent Square,232,8345,3,108,False
+Los Angeles - Reseda,11065,14442,267,348,False
+Los Angeles - Reseda Ranch,641,13827,3,65,False
 Los Angeles - Reynier Village,253,5984,1,24,False
-Los Angeles - San Pedro,6717,8607,97,124,True
-Los Angeles - Shadow Hills,368,8285,3,68,False
-Los Angeles - Sherman Oaks,5350,6132,80,92,False
-Los Angeles - Silverlake,3012,6833,100,227,False
-Los Angeles - South Carthay,657,6201,6,57,False
-Los Angeles - South Park,7128,18777,89,234,False
-Los Angeles - St Elmo Village,673,14682,34,742,False
-Los Angeles - Studio City,1235,5504,43,192,False
-Los Angeles - Sun Valley,8998,17145,126,240,False
-Los Angeles - Sunland,2162,10594,51,250,False
+Los Angeles - San Pedro,6734,8629,100,128,True
+Los Angeles - Shadow Hills,370,8330,3,68,False
+Los Angeles - Sherman Oaks,5376,6161,89,102,False
+Los Angeles - Silverlake,3017,6844,102,231,False
+Los Angeles - South Carthay,662,6248,6,57,False
+Los Angeles - South Park,7140,18809,92,242,False
+Los Angeles - St Elmo Village,673,14682,35,764,False
+Los Angeles - Studio City,1239,5521,46,205,False
+Los Angeles - Sun Valley,9016,17179,129,246,False
+Los Angeles - Sunland,2176,10662,52,255,False
 Los Angeles - Sycamore Square,28,4328,2,309,False
-Los Angeles - Sylmar,15458,18760,215,261,True
-Los Angeles - Tarzana,3191,10335,68,220,False
-Los Angeles - Temple-Beaudry,4867,12327,104,263,False
-Los Angeles - Thai Town,844,8604,15,153,False
+Los Angeles - Sylmar,15487,18795,218,265,True
+Los Angeles - Tarzana,3200,10364,70,227,False
+Los Angeles - Temple-Beaudry,4875,12347,105,266,False
+Los Angeles - Thai Town,848,8645,15,153,False
 Los Angeles - Toluca Lake,458,5262,6,69,False
-Los Angeles - Toluca Terrace,130,9954,4,306,False
+Los Angeles - Toluca Terrace,131,10031,6,459,False
 Los Angeles - Toluca Woods,96,5167,0,0,False
-Los Angeles - Tujunga,2682,9644,56,201,False
-Los Angeles - University Hills,260,7582,1,29,False
-Los Angeles - University Park,3297,12008,44,160,False
-Los Angeles - Valley Glen,3641,12130,53,177,False
-Los Angeles - Valley Village,1883,7617,56,227,False
-Los Angeles - Van Nuys,14010,15033,281,302,True
-Los Angeles - Venice,1460,4309,13,38,False
-Los Angeles - Vermont Knolls,2742,15942,50,291,False
-Los Angeles - Vermont Square,1422,18571,15,196,False
-Los Angeles - Vermont Vista,7270,17652,80,194,False
-Los Angeles - Vernon Central,10747,20668,136,262,False
-Los Angeles - Victoria Park,1020,12144,11,131,False
-Los Angeles - View Heights,214,5793,5,135,False
-Los Angeles - Watts,7204,16881,82,192,False
-Los Angeles - Wellington Square,548,11150,8,163,False
-Los Angeles - West Adams,3826,13847,126,456,False
-Los Angeles - West Hills,2841,7007,89,220,False
-Los Angeles - West Los Angeles,2179,5790,42,112,False
-Los Angeles - West Vernon,9802,18272,161,300,False
-Los Angeles - Westchester,2298,4453,41,79,False
-Los Angeles - Westlake,7454,12558,263,443,False
-Los Angeles - Westwood,2408,4450,22,41,False
-Los Angeles - Wholesale District,6118,16934,96,266,True
-Los Angeles - Wilmington,7984,14134,83,147,False
-Los Angeles - Wilshire Center,5375,10714,111,221,False
-Los Angeles - Winnetka,6460,12474,63,122,False
-Los Angeles - Woodland Hills,4645,6825,74,109,False
-Unincorporated - Acton,437,5482,7,88,False
-Unincorporated - Agua Dulce,252,6061,2,48,False
-Unincorporated - Altadena,3114,7139,53,122,False
+Los Angeles - Tujunga,2713,9755,57,205,False
+Los Angeles - University Hills,262,7641,1,29,False
+Los Angeles - University Park,3311,12059,47,171,False
+Los Angeles - Valley Glen,3654,12174,55,183,False
+Los Angeles - Valley Village,1890,7646,60,243,False
+Los Angeles - Van Nuys,14038,15063,289,310,True
+Los Angeles - Venice,1464,4320,14,41,False
+Los Angeles - Vermont Knolls,2747,15971,51,297,False
+Los Angeles - Vermont Square,1423,18584,16,209,False
+Los Angeles - Vermont Vista,7277,17669,85,206,False
+Los Angeles - Vernon Central,10757,20687,143,275,False
+Los Angeles - Victoria Park,1019,12132,11,131,False
+Los Angeles - View Heights,214,5793,6,162,False
+Los Angeles - Watts,7206,16886,85,199,False
+Los Angeles - Wellington Square,549,11170,9,183,False
+Los Angeles - West Adams,3835,13880,137,496,False
+Los Angeles - West Hills,2844,7014,98,242,False
+Los Angeles - West Los Angeles,2182,5798,45,120,False
+Los Angeles - West Vernon,9811,18289,167,311,False
+Los Angeles - Westchester,2304,4465,46,89,False
+Los Angeles - Westlake,7458,12565,271,457,False
+Los Angeles - Westwood,2414,4461,24,44,False
+Los Angeles - Wholesale District,6114,16923,97,268,True
+Los Angeles - Wilmington,8003,14168,85,150,False
+Los Angeles - Wilshire Center,5378,10720,112,223,False
+Los Angeles - Winnetka,6467,12488,68,131,False
+Los Angeles - Woodland Hills,4655,6840,75,110,False
+Unincorporated - Acton,439,5507,7,88,False
+Unincorporated - Agua Dulce,252,6061,3,72,False
+Unincorporated - Altadena,3124,7162,59,135,False
 Unincorporated - Anaverde,140,9284,0,0,False
 Unincorporated - Angeles National Forest,31,2490,0,0,False
 Unincorporated - Arcadia,590,7393,14,175,False
-Unincorporated - Athens-Westmont,6081,14328,79,186,False
-Unincorporated - Athens Village,1027,20972,28,572,False
+Unincorporated - Athens-Westmont,6089,14347,83,196,False
+Unincorporated - Athens Village,1028,20992,28,572,False
 Unincorporated - Avocado Heights,1050,15498,12,177,False
-Unincorporated - Azusa,2277,14300,32,201,False
-Unincorporated - Bassett,2555,17244,43,290,False
+Unincorporated - Azusa,2279,14313,33,207,False
+Unincorporated - Bassett,2556,17250,44,297,False
 Unincorporated - Bouquet Canyon,43,4007,1,93,False
 Unincorporated - Bradbury,52,48148,22,20370,False
-Unincorporated - Canyon Country,778,10067,3,39,False
-Unincorporated - Castaic,3553,13067,14,51,True
-Unincorporated - Cerritos,71,12095,0,0,False
+Unincorporated - Canyon Country,783,10132,3,39,False
+Unincorporated - Castaic,3562,13100,14,51,True
+Unincorporated - Cerritos,71,12095,1,170,False
 Unincorporated - Charter Oak,0,0,0,0,False
 Unincorporated - Claremont,40,5698,4,570,False
-Unincorporated - Covina,2246,13354,35,208,False
-Unincorporated - Covina (Charter Oak),1490,11336,11,84,False
-Unincorporated - Del Aire,281,6397,3,68,False
+Unincorporated - Covina,2251,13384,37,220,False
+Unincorporated - Covina (Charter Oak),1491,11344,13,99,False
+Unincorporated - Del Aire,283,6442,3,68,False
 Unincorporated - Del Rey,24,7547,0,0,False
 Unincorporated - Del Sur,159,6584,2,83,False
-Unincorporated - Desert View Highlands,328,13157,4,160,False
+Unincorporated - Desert View Highlands,329,13197,4,160,False
 Unincorporated - Duarte,824,18609,9,203,False
 Unincorporated - East Covina,34,10334,1,304,False
-Unincorporated - East La Mirada,475,8976,5,94,False
+Unincorporated - East La Mirada,477,9014,5,94,False
 Unincorporated - East Lancaster,15,13158,0,0,False
-Unincorporated - East Los Angeles,24361,19447,358,286,False
-Unincorporated - East Pasadena,197,3077,7,109,False
-Unincorporated - East Rancho Dominguez,2683,17527,45,294,False
-Unincorporated - East Whittier,439,8274,7,132,False
+Unincorporated - East Los Angeles,24393,19472,371,296,False
+Unincorporated - East Pasadena,198,3092,7,109,False
+Unincorporated - East Rancho Dominguez,2689,17566,45,294,False
+Unincorporated - East Whittier,442,8330,7,132,False
 Unincorporated - El Camino Village,780,8873,11,125,False
 Unincorporated - El Monte,23,15862,0,0,False
 Unincorporated - Elizabeth Lake,74,4455,0,0,False
-Unincorporated - Florence-Firestone,13178,20366,180,278,False
+Unincorporated - Florence-Firestone,13187,20380,190,294,False
 Unincorporated - Franklin Canyon,1,8333,0,0,False
 Unincorporated - Glendora,62,9394,2,303,False
-Unincorporated - Hacienda Heights,5024,8983,89,159,False
+Unincorporated - Hacienda Heights,5032,8998,90,161,False
 Unincorporated - Harbor Gateway,0,0,0,0,False
-Unincorporated - Hawthorne,304,12092,1,40,False
+Unincorporated - Hawthorne,304,12092,2,80,False
 Unincorporated - Hi Vista,42,3825,0,0,False
 Unincorporated - Kagel/Lopez Canyons,207,14660,2,142,False
-Unincorporated - La Crescenta-Montrose,1009,5096,10,51,False
+Unincorporated - La Crescenta-Montrose,1013,5116,11,56,False
 Unincorporated - La Habra Heights,13,1923,1,148,False
-Unincorporated - La Rambla,240,11566,16,771,False
-Unincorporated - La Verne,154,7549,1,49,True
-Unincorporated - Ladera Heights,358,5063,11,156,False
+Unincorporated - La Rambla,241,11614,16,771,False
+Unincorporated - La Verne,155,7598,1,49,True
+Unincorporated - Ladera Heights,359,5077,11,156,False
 Unincorporated - Lake Hughes,40,5988,1,150,False
-Unincorporated - Lake Los Angeles,1500,11544,17,131,False
+Unincorporated - Lake Los Angeles,1502,11559,18,139,False
 Unincorporated - Lake Manor,126,7669,2,122,False
 Unincorporated - Lakewood,0,0,0,0,False
-Unincorporated - Lennox,3389,15034,42,186,False
+Unincorporated - Lennox,3399,15079,43,191,False
 Unincorporated - Leona Valley,107,6111,1,57,False
-Unincorporated - Littlerock,505,12559,5,124,False
+Unincorporated - Littlerock,509,12659,6,149,False
 Unincorporated - Littlerock/Juniper Hills,107,8250,1,77,False
-Unincorporated - Littlerock/Pearblossom,503,14094,8,224,False
+Unincorporated - Littlerock/Pearblossom,505,14150,8,224,False
 Unincorporated - Llano,36,4105,1,114,False
 Unincorporated - Marina del Rey,334,3549,1,11,False
 Unincorporated - Miracle Mile,0,0,0,0,False
-Unincorporated - Monrovia,354,9121,1,26,False
+Unincorporated - Monrovia,355,9147,1,26,False
 Unincorporated - Newhall,66,30000,1,455,False
 Unincorporated - North Lancaster,143,11937,2,167,False
 Unincorporated - North Whittier,1081,12931,27,323,False
-Unincorporated - Northeast San Gabriel,1564,6507,38,158,False
+Unincorporated - Northeast San Gabriel,1565,6511,39,162,False
 Unincorporated - Padua Hills,9,4186,0,0,False
-Unincorporated - Palmdale,109,12945,2,238,False
+Unincorporated - Palmdale,109,12945,3,356,False
 Unincorporated - Palos Verdes Peninsula,21,3382,0,0,False
 Unincorporated - Pearblossom/Llano,112,5726,1,51,False
 Unincorporated - Pellissier Village,160,25848,1,162,False
 Unincorporated - Placerita Canyon,1,217,0,0,False
 Unincorporated - Pomona,60,3096,1,52,False
-Unincorporated - Quartz Hill,1116,8647,19,147,False
-Unincorporated - Rancho Dominguez,364,13679,5,188,False
+Unincorporated - Quartz Hill,1117,8655,20,155,False
+Unincorporated - Rancho Dominguez,366,13754,5,188,False
 Unincorporated - Roosevelt,81,8700,0,0,False
 Unincorporated - Rosewood,149,11586,3,233,False
-Unincorporated - Rosewood/East Gardena,149,12490,5,419,False
+Unincorporated - Rosewood/East Gardena,150,12573,5,419,False
 Unincorporated - Rosewood/West Rancho Dominguez,483,14371,10,298,False
-Unincorporated - Rowland Heights,3499,6858,50,98,False
+Unincorporated - Rowland Heights,3502,6864,60,118,False
 Unincorporated - San Clemente Island,0,0,0,0,False
 Unincorporated - San Francisquito Canyon/Bouquet Canyon,14,1632,0,0,False
-Unincorporated - San Jose Hills,3395,16789,53,262,False
+Unincorporated - San Jose Hills,3395,16789,58,287,False
 Unincorporated - San Pasqual,34,1671,1,49,False
 Unincorporated - Sand Canyon,15,4870,0,0,False
 Unincorporated - Santa Catalina Island,162,60674,1,375,False
-Unincorporated - Santa Monica Mountains,567,3045,6,32,True
+Unincorporated - Santa Monica Mountains,571,3066,6,32,True
 Unincorporated - Saugus,131,84516,0,0,False
 Unincorporated - Saugus/Canyon Country,40,11236,0,0,False
 Unincorporated - South Antelope Valley,25,5495,0,0,False
 Unincorporated - South El Monte,338,18830,4,223,False
-Unincorporated - South San Gabriel,886,10014,35,396,False
-Unincorporated - South Whittier,8011,13527,126,213,False
+Unincorporated - South San Gabriel,889,10047,37,418,False
+Unincorporated - South Whittier,8023,13547,130,220,False
 Unincorporated - Southeast Antelope Valley,74,9475,0,0,False
-Unincorporated - Stevenson Ranch,1033,4927,4,19,False
-Unincorporated - Sun Village,895,14828,8,133,False
+Unincorporated - Stevenson Ranch,1040,4960,4,19,False
+Unincorporated - Sun Village,900,14911,8,133,False
 Unincorporated - Sunrise Village,187,14429,1,77,False
 Unincorporated - Twin Lakes/Oat Mountain,82,4946,2,121,False
 Unincorporated - Val Verde,308,9308,1,30,False
-Unincorporated - Valencia,176,5729,1,33,False
-Unincorporated - Valinda,3612,15455,60,257,False
-Unincorporated - View Park/Windsor Hills,650,5587,13,112,False
-Unincorporated - Walnut Park,2978,18448,45,279,False
+Unincorporated - Valencia,178,5794,1,33,False
+Unincorporated - Valinda,3611,15451,61,261,False
+Unincorporated - View Park/Windsor Hills,653,5612,14,120,False
+Unincorporated - Walnut Park,2978,18448,49,304,False
 Unincorporated - West Antelope Valley,48,3177,1,66,False
-Unincorporated - West Carson,2027,9178,104,471,False
+Unincorporated - West Carson,2033,9205,105,475,False
 Unincorporated - West Chatsworth,2,16667,0,0,False
-Unincorporated - West LA,214,22479,12,1261,False
-Unincorporated - West Puente Valley,1655,16828,22,224,False
-Unincorporated - West Rancho Dominguez,177,13024,5,368,False
-Unincorporated - West Whittier/Los Nietos,4067,15105,74,275,False
+Unincorporated - West LA,214,22479,13,1366,False
+Unincorporated - West Puente Valley,1656,16838,22,224,False
+Unincorporated - West Rancho Dominguez,179,13171,5,368,False
+Unincorporated - West Whittier/Los Nietos,4072,15123,77,286,False
 Unincorporated - Westfield/Academy Hills,34,2615,0,0,False
 Unincorporated - Westhills,42,5006,0,0,False
 Unincorporated - White Fence Farms,254,6897,2,54,False
-Unincorporated - Whittier,302,7981,8,211,False
+Unincorporated - Whittier,302,7981,9,238,False
 Unincorporated - Whittier Narrows,13,108333,1,8333,False
-Unincorporated - Willowbrook,5783,16564,80,229,False
+Unincorporated - Willowbrook,5794,16596,82,235,False
 Unincorporated - Wiseburn,485,8047,8,133,False
