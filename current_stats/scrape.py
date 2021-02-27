@@ -1,6 +1,7 @@
 import os.path
 
 import bs4
+import numpy as np
 import pandas as pd
 import requests
 
@@ -172,19 +173,27 @@ def parse_recent(html):
     return df
 
 
+VACCINATED_DTYPE_CONVERSIONS = (
+    (const.VACCINATED_PEOPLE, int, pd.NA, 'Int64'),
+    (const.VACCINATED_PERCENT, float, np.nan, 'float'),
+)
+
+
 def parse_vaccinated(html):
     df = (
         pd.read_html(str(table_html(html, ID_VACCINATED)))[0]
         .rename(columns={
-            'City/Community*': const.AREA,
+            'City/Comminity*': const.AREA,
             'Number of Persons Vaccinated**': const.VACCINATED_PEOPLE,
             'Percentage of People Vaccinated***': const.VACCINATED_PERCENT,
         })
+        .drop(columns=['Unnamed: 2', 'Population 2019'])
     )
     df[const.AREA] = df[const.AREA].convert_dtypes()
-    df[const.VACCINATED_PEOPLE] = df[const.VACCINATED_PEOPLE].apply(
-        lambda x: pd.NA if x == '<5' else int(x)
-    ).astype('Int64')
+    for col, str_to_num, missing, dtype in VACCINATED_DTYPE_CONVERSIONS:
+        df[col] = df[col].apply(
+            lambda x: missing if x == 'Unreliable Data' else str_to_num(x)
+        ).astype(dtype)
     return df
 
 
