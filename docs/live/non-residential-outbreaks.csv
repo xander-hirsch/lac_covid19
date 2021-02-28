@@ -3,6 +3,7 @@ Setting Name,Address,Total Confirmed Staff,Total Confirmed Non-Staff
 99 Cents Only Stores Warehouse and Corporate Office,"4000 Union Pacific Ave, Commerce, CA, 90023",147,0
 "365 Delivery, Inc.","21822 Lassen St, Chatsworth, CA, 91311",3,0
 "AA Meat, Inc.","6544 Flotilla St, Commerce, CA, 90040",7,0
+ACCESS Specialty Animal Hospitals - Los Angeles,"9599 Jefferson Blvd, Culver City, CA, 90232",19,0
 Accurate Steel Treating,"10008 Miller Way, South Gate, CA, 90280",8,0
 Aero Chrome Plating,"14660 Arminta St, Panorama City, CA, 91402",8,0
 Alexander's Prime Meats,"6580 N San Gabriel Blvd, San Gabriel, CA, 91775",15,0
@@ -19,11 +20,12 @@ Camino Real Kitchens,"2638 E Vernon Ave, Vernon, CA, 90058",42,0
 Century 21 All Stars,"9155 Telegraph Rd, Pico Rivera, CA, 90660",5,0
 "Chevrolet of Cerritos, Penske","18605 Studebaker Rd, Cerritos, CA, 90703",24,0
 Chick-Fil-A Hollywood Drive-Thru Only,"6750 W Sunset Blvd, Los Angeles, CA, 90028",11,0
+Chick-Fil-A I-10 & La Cienega,"2310 S La Cienega Blvd, Los Angeles, CA, 90034",6,0
 Coast Produce,"1791 Bay St, Los Angeles, CA, 90021",8,0
 Compu-Aire,"8167 Byron Rd, Whittier, CA, 90606",24,0
 Concorde Battery Corp.,"2009 W San Bernardino Rd, West Covina, CA, 91790",9,0
 Consolidated Precision Products #1,"4200 Valley Blvd, Walnut, CA, 91789",14,0
-Consolidated Precision Products #2,"16800 Chestnut St, City of Industry, CA, 91748",29,0
+Consolidated Precision Products #2,"16800 Chestnut St, City of Industry, CA, 91748",17,0
 "Costco Business Center Warehouse, Burbank #653","11428 Sherman Way, North Hollywood, CA, 91605",41,0
 "Costco Warehouse, Lancaster #762","1141 W Ave L, Lancaster, CA, 93534",44,0
 "Costco Warehouse, Monterey Park #1318","2000 Market Place Dr, Monterey Park, CA, 91755",73,0
@@ -32,13 +34,11 @@ CR Laurence Manufacturing,"2100 E 38th St, Vernon, CA, 90058",5,0
 CR Laurence of Southern California,"2503 E Vernon Ave, Vernon, CA, 90058",35,0
 Curacao - Panorama,"8401 Van Nuys Blvd, Ste 63, Panorama City, CA, 91402",6,0
 DHL Global Mail,"3963 Workman Mill Rd, Unit A, Whittier, CA, 90601",53,0
-"Dodge Chrysler Jeep Ram, Hunter","1130 Auto Mall Dr, Lancaster, CA, 93534",14,0
 Equus,"20480 Business Pkwy, City of Industry, CA, 91789",30,0
 "Estrella Media, Inc. - Hollywood Way","2820 N Hollywood Way, Burbank, CA, 91505",12,0
-"Fashion Nova Logistics, Inc.","12588 Lakeland Rd, Santa Fe Springs, CA, 90670",310,0
+"Fashion Nova Logistics, Inc.","12588 Lakeland Rd, Santa Fe Springs, CA, 90670",311,0
 FedEx Freight - Vernon,"4500 Bandini Blvd, Vernon, CA, 90058",31,0
 FedEx Ground - City of Industry,"200 Old Ranch Rd, City of Industry, CA, 91789",141,0
-FedEx Ground - Pacoima,"12500 Branford St, Pacoima, CA, 91331",183,0
 FedEx LAX,"5927 W Imperial Hwy, Los Angeles, CA, 90045",117,0
 Fleetwood-Fibre Packaging and Graphics,"15250 Don Julian Rd, City of Industry, CA, 91745",8,0
 "Flores Design Fine Furniture, Inc.","4618 Pacific Blvd, Vernon, CA, 90058",57,0
@@ -53,7 +53,7 @@ Hain Celestial,"5630 Rickenbacker Rd, Bell, CA, 90201",21,0
 Hannibal Industries,"3851 S Santa Fe Ave, Vernon, CA, 90058",31,0
 Home Depot - Cypress Park #6689,"2055 N Figueroa St, Los Angeles, CA, 90065",57,0
 Homeboy Industries,"130 Bruno St, Los Angeles, CA, 90012",9,0
-Honest Tax,"19710 Ventura Blvd, Woodland Hills, CA, 91364",7,0
+Honest Tax,"19710 Ventura Blvd, Woodland Hills, CA, 91364",8,0
 IMC Powered By Parts Authority,"8901 Canoga Ave, Canoga Park, CA, 91304",39,0
 In-N-Out Burger #79,"142 E Palmdale Blvd, Palmdale, CA, 93550",7,0
 Inland Kenworth,"1600 Washington Blvd, Montebello, CA, 90640",11,0
@@ -64,7 +64,10 @@ LA County DCFS - Covina Annex,"1373 Center Court Dr, Covina, CA, 91724",4,0
 LA County DCFS - San Dimas,"955 Overland Ct, Ste 100, San Dimas, CA, 91773",14,0
 LA County DCFS - Santa Fe Springs,"10355 Slusher Dr, Santa Fe Springs, CA, 90670",29,0
 "LA County DPSS - Inglewood, Customer Service Center II Floor 11","9800 S La Cienega Blvd, 11th Floor, Inglewood, CA, 90301",15,0
+LAFD Fire Station 2,"1962 E Cesar E Chavez Ave, Los Angeles, CA, 90033",11,0
+LAFD Fire Station 3,"108 N Fremont Ave, Los Angeles, CA, 90012",4,0
 LAFD Fire Station 29,"4029 Wilshire Blvd, Los Angeles, CA, 90010",18,0
+LAFD Fire Station 55,"4455 York Blvd, Los Angeles, CA, 90041",10,0
 LAFD Fire Station 64,"10811 S Main St, Los Angeles, CA, 90061",17,0
 LAFD Fire Station 68,"5023 W Washington Blvd, Los Angeles, CA, 90016",8,0
 LAFD Fire Station 87,"10124 Balboa Blvd, Granada Hills, CA, 91344",8,0
@@ -101,7 +104,7 @@ Revolve,"12889 Moore St, Cerritos, CA, 90703",28,0
 Robert F. Chapman (Metal Fabrication),"43100 Exchange Pl, Lancaster, CA, 93535",33,0
 "Rose & Shore, Inc.","5151 Alcoa Ave, Vernon, CA, 90058",23,0
 Rose Hills Memorial Park and Mortuary,"3888 Workman Mill Rd, Whittier, CA, 90601",52,0
-Russell Westbrook Car Dealership,"6110 Van Nuys Blvd, Van Nuys, CA, 91401",23,0
+Russell Westbrook Car Dealership,"6110 Van Nuys Blvd, Van Nuys, CA, 91401",25,0
 Senior Aerospace SSP,"2980 N San Fernando Blvd, Burbank, CA, 91504",131,0
 Shaw Industries,"15305 Valley View Ave, Santa Fe Springs, CA, 90670",21,0
 Shultz Steel Co.,"5321 Firestone Blvd, South Gate, CA, 90280",23,0
@@ -114,7 +117,7 @@ Target #290,"2169 W Redondo Beach Blvd, Gardena, CA, 90247",23,0
 Target #1306,"3535 S La Cienega Blvd, Los Angeles, CA, 90016",69,0
 Target #1329,"3471 W Century Blvd, Inglewood, CA, 90303",45,0
 Target #1424,"12051 Imperial Hwy, Norwalk, CA, 90650",48,0
-Target #1884,"7100 Santa Monica Blvd, West Hollywood, CA, 90046",51,0
+Target #1884,"7100 Santa Monica Blvd, West Hollywood, CA, 90046",50,0
 Tempur-Sealy Mattress Company,"825 Ajax Ave, City of Industry, CA, 91748",42,0
 The American Bottling Company,"3220 E 26th St, Vernon, CA, 90058",10,0
 "Thibiant International, Inc.","20320 Prairie St, Chatsworth, CA, 91311",110,0
