@@ -187,7 +187,7 @@ def parse_vaccinated(html):
             'Number of Persons Vaccinated**': const.VACCINATED_PEOPLE,
             'Percentage of People Vaccinated***': const.VACCINATED_PERCENT,
         })
-        .drop(columns=['Unnamed: 2', 'Population 2019'])
+        .drop(columns='Population 2019')
     )
     df[const.AREA] = df[const.AREA].convert_dtypes()
     for col, str_to_num, missing, dtype in VACCINATED_DTYPE_CONVERSIONS:
