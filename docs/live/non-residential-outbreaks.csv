@@ -56,9 +56,9 @@ In-N-Out Burger #79,"142 E Palmdale Blvd, Palmdale, CA, 93550",7,0
 Inland Kenworth,"1600 Washington Blvd, Montebello, CA, 90640",11,0
 International Medication System-Building 14,"1886 Santa Anita Ave, Bldg 14, South El Monte, CA, 91733",8,0
 IOG Products,"9737 Lurline Ave, Chatsworth, CA, 91311",3,0
+Irwin Naturals,"5310 Beethoven St, Los Angeles, CA, 90066",16,0
 LA County DCFS - Covina Annex,"1373 Center Court Dr, Covina, CA, 91724",4,0
 LA County DCFS - San Dimas,"955 Overland Ct, Ste 100, San Dimas, CA, 91773",14,0
-LA County DCFS - Santa Fe Springs,"10355 Slusher Dr, Santa Fe Springs, CA, 90670",29,0
 "LA County DPSS - Inglewood, Customer Service Center II Floor 11","9800 S La Cienega Blvd, 11th Floor, Inglewood, CA, 90301",15,0
 LAFD Fire Station 2,"1962 E Cesar E Chavez Ave, Los Angeles, CA, 90033",11,0
 LAFD Fire Station 3,"108 N Fremont Ave, Los Angeles, CA, 90012",4,0
@@ -67,15 +67,15 @@ LAFD Fire Station 50,"3036 Fletcher Dr, Los Angeles, CA, 90065",7,0
 LAFD Fire Station 55,"4455 York Blvd, Los Angeles, CA, 90041",10,0
 LAFD Fire Station 64,"10811 S Main St, Los Angeles, CA, 90061",17,0
 LAFD Fire Station 68,"5023 W Washington Blvd, Los Angeles, CA, 90016",8,0
-LAFD Fire Station 85,"1331 253rd St, # 1331, Harbor City, CA, 90710",10,0
+LAFD Fire Station 85,"1331 253rd St # 1331, Harbor City, CA, 90710",10,0
 LAFD Fire Station 87,"10124 Balboa Blvd, Granada Hills, CA, 91344",8,0
 LAFD Fire Station 93,"19059 Ventura Blvd, Tarzana, CA, 91356",6,0
 Lake Balboa Lifeguard Station,"6300 Balboa Blvd, Van Nuys, CA, 91316",3,0
 Lance Camper,"43120 Venture St, Lancaster, CA, 93535",62,0
 LAX Terminal 4 - American Airlines,"400 World Way, Los Angeles, CA, 90045",294,0
 Line 204 LLC,"12224 Montague St, Pacoima, CA, 91331",11,0
-Lisi Aerospace,"2600 Skypark Dr, Torrance, CA, 90505",47,0
-"Llamas Plastics, Inc.","12970 Bradley Ave, Sylmar, CA, 91342",31,0
+Lisi Aerospace,"2600 Skypark Dr, Torrance, CA, 90505",48,0
+"Llamas Plastics, Inc.","12970 Bradley Ave, Sylmar, CA, 91342",32,0
 Los Angeles Dodgers LLC,"1000 Vin Scully Ave, Los Angeles, CA, 90012",12,1
 "LYMI, Inc.","2263 E Vernon Ave, Vernon, CA, 90058",52,0
 Marathon Petroleum,"2350 E 223rd St, Carson, CA, 90810",114,0
@@ -84,7 +84,6 @@ Michaels Distribution Center,"3501 W Ave H, Lancaster, CA, 93536",95,0
 Miracle Works,"730 Los Angeles Ave, Monrovia, CA, 91016",14,0
 "Mission Foods, Los Angeles","5505 E Olympic Blvd, Commerce, CA, 90022",152,0
 "Mission Foods, Panorama","14200 Arminta St, Panorama City, CA, 91402",36,0
-Mistras,"8427 Atlantic Ave, Cudahy, CA, 90201",32,0
 Montebello Dog and Cat Hospital,"2437 W Whittier Blvd, Montebello, CA, 90640",8,0
 Morley Construction Company,"5500 W 98th St, Los Angeles, CA, 90045",87,0
 National Rent A Car (Enterprise),"9020 Aviation Blvd, Inglewood, CA, 90301",19,0
@@ -113,18 +112,15 @@ St. Vincent Meals on Wheels,"2303 Miramar St, Los Angeles, CA, 90057",14,0
 Superior Grocers #114,"151 S Hacienda Blvd, City of Industry, CA, 91745",10,0
 Target #290,"2169 W Redondo Beach Blvd, Gardena, CA, 90247",23,0
 Target #1329,"3471 W Century Blvd, Inglewood, CA, 90303",45,0
-Target #1424,"12051 Imperial Hwy, Norwalk, CA, 90650",48,0
 Tempur-Sealy Mattress Company,"825 Ajax Ave, City of Industry, CA, 91748",42,0
 The American Bottling Company,"3220 E 26th St, Vernon, CA, 90058",10,0
 "Thibiant International, Inc.","20320 Prairie St, Chatsworth, CA, 91311",110,0
-TK Services,"6118 Alcoa Ave, Vernon, CA, 90058",7,0
 "Tomarco Contractor Specialists, Inc.","14848 Northam St, La Mirada, CA, 90638",14,0
 Trader Joe's #44,"11114 Balboa Blvd, Granada Hills, CA, 91344",5,0
 Trader Joe's #122,"11976 Ventura Blvd, Studio City, CA, 91604",12,0
 Turner AECOM Hunt Office Trailer,"1000 S Prairie Ave, Inglewood, CA, 90301",15,0
-"Tutor Perini/O&G, A Joint Venture","1801 Century Park E, Ste 500, Los Angeles, CA, 90067",11,0
 UPS - Cerritos,"13233 Moore St, Cerritos, CA, 90703",81,0
-UPS - La Mirada,"16301 Trojan Way, La Mirada, CA, 90638",46,0
+UPS - La Mirada,"16301 Trojan Way, La Mirada, CA, 90638",48,0
 Vans Distribution Center,"15700 Shoemaker Ave, Santa Fe Springs, CA, 90670",155,0
 Voyant Beauty,"9250 Mason Ave, Chatsworth, CA, 91311",15,0
 Waste Management - Azusa Transfer Station and Recycling Center,"1501 W Gladstone St, Azusa, CA, 91702",7,0
@@ -132,6 +128,4 @@ Wells Fargo Bank - El Monte,"9000 Flair Dr, El Monte, CA, 91731",32,0
 Westlake Financial Services,"29851 Agoura Rd, Agoura Hills, CA, 91301",16,0
 "Whole Foods Market, Glendale","331 N Glendale Ave, Glendale, CA, 91206",58,0
 "Whole Foods Market, Porter Ranch","20209 Rinaldi St, Porter Ranch, CA, 91326",17,0
-"Whole Foods Market, Sherman Oaks","14311 Ventura Blvd, Sherman Oaks, CA, 91423",35,0
 World Oil Corp.,"9302 Garfield Ave, South Gate, CA, 90280",11,0
-Youth With A Mission (POW and Mission Training Program),"11141 Osborne St, Sylmar, CA, 91342",19,5
