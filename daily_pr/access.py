@@ -11,7 +11,7 @@ from lac_covid19.daily_pr.prid import PRID
 from lac_covid19.daily_pr.parse import parse_pr
 from lac_covid19.daily_pr.paths import *
 from lac_covid19.const import DATE, AREA, JSON_COMPACT
-from lac_covid19.daily_pr.bad_data import SUBSTITUE_SORUCE, DATA_TYPOS
+from lac_covid19.daily_pr.bad_data import HARDCODE_DATE_AREA, SUBSTITUE_SORUCE, DATA_TYPOS
 
 _PICKLE_CACHE = os.path.join(DIR_PICKLE, 'parsed.pickle')
 
@@ -92,6 +92,16 @@ def query_date(date, json_cache=True, html_cache=True):
     if date in DATA_TYPOS:
         keys_value = DATA_TYPOS[date]
         pr[keys_value[0]][keys_value[1]] = keys_value[2]
+    if date in HARDCODE_DATE_AREA:
+        substitutions = HARDCODE_DATE_AREA[date]
+        area_index_map = {}
+        for i in range(len(substitutions)):
+            area_index_map[substitutions[i][0]] = i
+        pr_area = list(pr[AREA])
+        for i in range(len(pr_area)):
+            if (area := pr_area[i][0]) in area_index_map:
+                pr_area[i] = substitutions[area_index_map[area]]
+        pr[AREA] = tuple(pr_area)
     _write_json(pr)
     return pr
 

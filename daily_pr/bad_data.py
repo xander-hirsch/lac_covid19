@@ -36,6 +36,55 @@ SUBSTITUE_SORUCE = {
     # '2021-03-06': (('City\s+of\s+Agoura\s+Hills.+Under\s+Investigation\s+20383', ''),),
 }
 
+HARDCODE_DATE_AREA = {
+    '2021-02-23': (
+        ('Unincorporated - Pomona', 60, 3096, False),
+        ('Unincorporated - Quartz Hill', 1116, 8647, False),
+        ('Unincorporated - Rancho Dominguez', 364, 13679, False),
+        ('Unincorporated - Roosevelt', 81, 8700, False),
+        ('Unincorporated - Rosewood', 149, 11586, False),
+        ('Unincorporated - Rosewood/East Gardena', 149, 12490, False),
+        ('Unincorporated - Rosewood/West Rancho Dominguez', 483, 14371, False),
+        ('Unincorporated - Rowland Heights', 3499, 6858, False),
+        ('Unincorporated - San Francisquito Canyon/Bouquet Canyon', 14, 1632, False),
+        ('Unincorporated - San Jose Hills', 3395, 16789, False),
+        ('Unincorporated - San Pasqual', 34, 1671, False),
+        ('Unincorporated - Sand Canyon', 15, 4870, False),
+        ('Unincorporated - Santa Catalina Island', 162, 60674, False),
+        ('Unincorporated - Santa Monica Mountains', 567, 3045, True),
+        ('Unincorporated - Saugus', 131, 84516, False),
+        ('Unincorporated - Saugus/Canyon Country', 40, 11236, False),
+        ('Unincorporated - South Antelope Valley', 25, 5495, False),
+        ('Unincorporated - South El Monte', 338, 18830, False),
+        ('Unincorporated - South San Gabriel', 886, 10014, False),
+        ('Unincorporated - South Whittier', 8011, 13527, False),
+        ('Unincorporated - Southeast Antelope Valley', 74, 9475, False),
+        ('Unincorporated - Stevenson Ranch', 1033, 4927, False),
+        ('Unincorporated - Sun Village', 895, 14828, False),
+        ('Unincorporated - Sunrise Village', 187, 14429, False),
+        ('Unincorporated - Twin Lakes/Oat Mountain', 82, 4946, False),
+        ('Unincorporated - Val Verde', 308, 9308, False),
+        ('Unincorporated - Valencia', 176, 5729, False),
+        ('Unincorporated - Valinda', 3612, 15455, False),
+        ('Unincorporated - View Park/Windsor Hills', 650, 5587, False),
+        ('Unincorporated - Walnut Park', 2978, 18448, False),
+        ('Unincorporated - West Antelope Valley', 48, 3177, False),
+        ('Unincorporated - West Carson', 2027, 9178, False),
+        ('Unincorporated - West Chatsworth', 2, 16667, False),
+        ('Unincorporated - West LA', 214, 22479, False),
+        ('Unincorporated - West Puente Valley', 1655, 16828, False),
+        ('Unincorporated - West Rancho Dominguez', 177, 13024, False),
+        ('Unincorporated - West Whittier/Los Nietos', 4067, 15105, False),
+        ('Unincorporated - Westfield/Academy Hills', 34, 2615, False),
+        ('Unincorporated - Westhills', 42, 5006, False),
+        ('Unincorporated - White Fence Farms', 254, 6897, False),
+        ('Unincorporated - Whittier', 302, 7981, False),
+        ('Unincorporated - Whittier Narrows', 13, 108333, False),
+        ('Unincorporated - Willowbrook', 5783, 16564, False),
+        ('Unincorporated - Wiseburn', 485, 8047, False),
+    )
+}
+
 CORR_FACILITY_RECORDED = dt.date(2020, 5, 14)
 
 _unic_val_verde = 'Unincorporated - Val Verde'

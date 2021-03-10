@@ -1,6 +1,5 @@
 Setting Name,Address,Total Confirmed Staff,Total Confirmed Non-Staff
 99 Cents Only Stores Warehouse and Corporate Office,"4000 Union Pacific Ave, Commerce, CA, 90023",147,0
-"365 Delivery, Inc.","21822 Lassen St, Chatsworth, CA, 91311",3,0
 "AA Meat, Inc.","6544 Flotilla St, Commerce, CA, 90040",7,0
 ACCESS Specialty Animal Hospitals - Los Angeles,"9599 Jefferson Blvd, Culver City, CA, 90232",19,0
 Accurate Steel Treating,"10008 Miller Way, South Gate, CA, 90280",8,0
@@ -11,7 +10,6 @@ Anheuser-Busch Central LA,"12065 Pike St, Santa Fe Springs, CA, 90670",16,0
 Atlas Assembly Arcadia,"12359 Lower Azusa Rd, Arcadia, CA, 91006",32,0
 Bentley Mills LA,"14641 Don Julian Rd, City of Industry, CA, 91746",99,0
 Cacique #10537,"14940 Proctor Ave, City of Industry, CA, 91746",51,0
-Camino Real Kitchens,"2638 E Vernon Ave, Vernon, CA, 90058",39,0
 Century 21 All Stars,"9155 Telegraph Rd, Pico Rivera, CA, 90660",5,0
 "Chevrolet of Cerritos, Penske","18605 Studebaker Rd, Cerritos, CA, 90703",24,0
 Chick-Fil-A Hollywood Drive-Thru Only,"6750 W Sunset Blvd, Los Angeles, CA, 90028",11,0
@@ -20,7 +18,6 @@ Coast Produce,"1791 Bay St, Los Angeles, CA, 90021",8,0
 Compu-Aire,"8167 Byron Rd, Whittier, CA, 90606",24,0
 Concorde Battery Corp.,"2009 W San Bernardino Rd, West Covina, CA, 91790",9,0
 Consolidated Precision Products #2,"16800 Chestnut St, City of Industry, CA, 91748",17,0
-"Costco Business Center Warehouse, Burbank #653","11428 Sherman Way, North Hollywood, CA, 91605",41,0
 "Costco Warehouse, Lancaster #762","1141 W Ave L, Lancaster, CA, 93534",44,0
 "Costco Warehouse, Monterey Park #1318","2000 Market Place Dr, Monterey Park, CA, 91755",74,0
 CR Laurence Manufacturing,"2100 E 38th St, Vernon, CA, 90058",37,0
@@ -28,7 +25,7 @@ Curacao - Panorama,"8401 Van Nuys Blvd, Ste 63, Panorama City, CA, 91402",6,0
 DHL Global Mail,"3963 Workman Mill Rd, Unit A, Whittier, CA, 90601",53,0
 "Eastland Forrester Corp-All Access Staging & Production, Inc.","1320 Storm Pkwy, Torrance, CA, 90501",7,0
 Ed Iskenderian Racing Cams,"16020 S Broadway, Gardena, CA, 90248",7,0
-"Fashion Nova Logistics, Inc.","12588 Lakeland Rd, Santa Fe Springs, CA, 90670",312,0
+"Fashion Nova Logistics, Inc.","12588 Lakeland Rd, Santa Fe Springs, CA, 90670",313,0
 FedEx Express - LAX,"5927 W Imperial Hwy, Los Angeles, CA, 90045",128,0
 FedEx Ground - City of Industry,"200 Old Ranch Rd, City of Industry, CA, 91789",141,0
 Fleetwood-Fibre Packaging and Graphics,"15250 Don Julian Rd, City of Industry, CA, 91745",29,0
@@ -51,7 +48,7 @@ LAFD Fire Station 50,"3036 Fletcher Dr, Los Angeles, CA, 90065",7,0
 LAFD Fire Station 55,"4455 York Blvd, Los Angeles, CA, 90041",10,0
 LAFD Fire Station 64,"10811 S Main St, Los Angeles, CA, 90061",17,0
 LAFD Fire Station 68,"5023 W Washington Blvd, Los Angeles, CA, 90016",8,0
-LAFD Fire Station 85,"1331 253rd St, # 1331, Harbor City, CA, 90710",10,0
+LAFD Fire Station 85,"1331 253rd St # 1331, Harbor City, CA, 90710",10,0
 LAFD Fire Station 87,"10124 Balboa Blvd, Granada Hills, CA, 91344",8,0
 LAFD Fire Station 93,"19059 Ventura Blvd, Tarzana, CA, 91356",6,0
 Lake Balboa Lifeguard Station,"6300 Balboa Blvd, Van Nuys, CA, 91316",3,0
@@ -67,9 +64,8 @@ Michaels Distribution Center,"3501 W Ave H, Lancaster, CA, 93536",95,0
 "Mission Foods, Los Angeles","5505 E Olympic Blvd, Commerce, CA, 90022",152,0
 "Mission Foods, Panorama","14200 Arminta St, Panorama City, CA, 91402",36,0
 Morley Construction Company,"5500 W 98th St, Los Angeles, CA, 90045",87,0
-New Century Plaza - South Tower,"2025 Ave of The Stars, Los Angeles, CA, 90067",132,0
 Northrop Grumman - Palmdale,"3520 E Ave M, Palmdale, CA, 93550",669,0
-Novolex Zenith Bag,"17625 Railroad St, City of Industry, CA, 91748",18,0
+Novolex Zenith Bag,"17625 Railroad St, City of Industry, CA, 91748",26,0
 OnTrac Shipping - Commerce,"5959 Randolph St, Commerce, CA, 90040",99,0
 Palisades Ranch,"5925 Alcoa Ave, Vernon, CA, 90058",28,0
 Quality Custom Distribution,"14317 Lomitas Ave, La Puente, CA, 91746",69,0
@@ -81,7 +77,7 @@ Russell Westbrook Car Dealership,"6110 Van Nuys Blvd, Van Nuys, CA, 91401",25,0
 Senior Aerospace SSP,"2980 N San Fernando Blvd, Burbank, CA, 91504",131,0
 Shultz Steel Co.,"5321 Firestone Blvd, South Gate, CA, 90280",23,0
 Simply Salad - Ladera Heights,"5035 W Slauson Ave, B, Los Angeles, CA, 90056",13,0
-Smithfield,"3049 E Vernon Ave, Vernon, CA, 90058",784,0
+Smithfield,"3049 E Vernon Ave, Vernon, CA, 90058",785,0
 Sprouts Farmers Market #272,"6607 Fallbrook Ave, West Hills, CA, 91307",15,0
 Sprouts Farmers Market #418,"1375 Foothill Blvd, La Verne, CA, 91750",5,0
 St. Vincent Meals on Wheels,"2303 Miramar St, Los Angeles, CA, 90057",14,0
@@ -95,7 +91,6 @@ Turner AECOM Hunt Office Trailer,"1000 S Prairie Ave, Inglewood, CA, 90301",15,0
 UPS - Cerritos,"13233 Moore St, Cerritos, CA, 90703",82,0
 UPS - La Mirada,"16301 Trojan Way, La Mirada, CA, 90638",48,0
 Voyant Beauty,"9250 Mason Ave, Chatsworth, CA, 91311",15,0
-Waste Management - Azusa Transfer Station and Recycling Center,"1501 W Gladstone St, Azusa, CA, 91702",7,0
 Westlake Financial Services,"29851 Agoura Rd, Agoura Hills, CA, 91301",16,0
 "Whole Foods Market, Glendale","331 N Glendale Ave, Glendale, CA, 91206",58,0
 "Whole Foods Market, Porter Ranch","20209 Rinaldi St, Porter Ranch, CA, 91326",17,0
