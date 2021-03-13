@@ -183,7 +183,7 @@ def parse_vaccinated(html):
     df = (
         pd.read_html(str(table_html(html, ID_VACCINATED)))[0]
         .rename(columns={
-            'City/Comminity*': const.AREA,
+            'City/Community*': const.AREA,
             'Number of Persons Vaccinated**': const.VACCINATED_PEOPLE,
             'Percentage of People Vaccinated***': const.VACCINATED_PERCENT,
         })
