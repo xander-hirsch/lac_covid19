@@ -1,5 +1,6 @@
 Setting Name,City,Number of Confirmed Staff,Number of Confirmed Residents,Total Deaths
 AACRES CA LLC - Nectar,"Lakewood, CA",3,2,0
+Adventist Health Glendale,"Glendale, CA",0,2,0
 Adventist Health White Memorial Medical Center D/P SNF,"Los Angeles, CA",0,1,0
 Alameda Care Center,"Burbank, CA",8,7,2
 Alderbrook Health Facility,"Lancaster, CA",2,3,1
@@ -23,7 +24,6 @@ Best Life Sober Living - Women's House,"Winnetka, CA",0,3,0
 Brookfield Healthcare Center (1),"Downey, CA",7,19,6
 Brookfield Healthcare Center (2),"Downey, CA",17,19,5
 Buena Ventura Post Acute Care Center,"Los Angeles, CA",15,15,3
-California Healthcare and Rehabilitation Center,"Van Nuys, CA",44,30,4
 California Mentor Family Home Agency,"Pico Rivera, CA",0,1,0
 California Mission Inn,"Rosemead, CA",9,20,7
 California Post-Acute Care,"Lynwood, CA",0,1,0
@@ -63,10 +63,9 @@ Downey Post Acute,"Downey, CA",51,48,13
 Dreier's Nursing Care Center,"Glendale, CA",17,46,4
 DSH - Metropolitan State Hospital SNF Unit 419,"Norwalk, CA",0,1,0
 Easter Seals Dempsey Home,"Granada Hills, CA",6,3,0
-"Elim Healthcare, Inc.","Los Angeles, CA",14,50,14
+"Elim Healthcare, Inc.","Los Angeles, CA",14,50,18
 Elmcrest Care Center (Valley View Post Acute),"El Monte, CA",26,20,8
 Elwyn NC Babcock,"Valley Village, CA",11,2,1
-Elwyn NC Mayall,"Northridge, CA",10,4,1
 Encino Terrace Senior Living,"Encino, CA",5,18,3
 Fairwinds West Hills,"West Hills, CA",12,13,2
 Fallbrook Glen of West Hills,"West Hills, CA",11,7,2
@@ -79,12 +78,10 @@ Glen Park at Monrovia,"Monrovia, CA",29,38,6
 Glen Park at Valley Village,"Valley Village, CA",18,33,7
 Glendora Canyon Transitional Care Unit,"Glendora, CA",16,36,8
 Glenoaks Convalescent Hospital,"Glendale, CA",0,2,0
-"Glenridge Center, #140","Glendale, CA",40,40,11
 Golden Hills Retirement Center,"Tujunga, CA",0,9,1
 Golden Manor Retirement Center,"Montebello, CA",9,47,2
 Grace Pineda's Home II,"Covina, CA",2,3,0
 Granada Hills Convalescent Hospital,"Granada Hills, CA",8,3,1
-Grancell Village of The Jewish Homes For The Aging,"Reseda, CA",40,37,19
 Grand Valley Health Care Center,"Van Nuys, CA",0,1,0
 Grandeur SRF,"Altadena, CA",2,2,0
 Griffith Park Healthcare Center,"Glendale, CA",42,57,7
@@ -116,7 +113,7 @@ Le Bleu Chateau - Gold,"Burbank, CA",11,42,14
 Leisure Living #1,"Agoura Hills, CA",2,2,0
 Leisure Vale Retirement Hotel,"Glendale, CA",19,22,5
 Little House,"Bellflower, CA",2,6,0
-Live Oak Rehabilitation Center,"San Gabriel, CA",1,5,1
+Live Oak Rehabilitation Center,"San Gabriel, CA",1,6,1
 Los Angeles Community Hospital at Bellflower,"Bellflower, CA",45,10,0
 Los Feliz Gardens,"Glendale, CA",12,55,14
 Lotus Care Center,"Los Angeles, CA",5,23,2
@@ -140,7 +137,6 @@ Northridge Care Center,"Reseda, CA",38,56,16
 Norwalk Meadows Nursing Center,"Norwalk, CA",33,42,6
 Oakmont of Santa Clarita,"Santa Clarita, CA",16,24,5
 Pacifica Senior Living Northridge,"Northridge, CA",7,23,4
-Pacifica Senior Living Santa Clarita,"Santa Clarita, CA",21,40,13
 Paradise in The Valley,"Van Nuys, CA",4,7,1
 Park Avenue Healthcare & Wellness Center,"Pomona, CA",65,26,5
 Pasadena Park Healthcare & Wellness Center,"Pasadena, CA",23,40,7
@@ -182,7 +178,6 @@ Tarzana Treatment Center,"Tarzana, CA",12,83,0
 Teen Challenge Ministry Institute,"South Gate, CA",4,40,0
 The Carter Place,"Sierra Madre, CA",0,2,0
 The Commons at Woodland Hills,"Woodland Hills, CA",33,45,9
-The Gardens of El Monte (Previously Idle Acre Sanitarium & Convalescent Hospital),"El Monte, CA",17,3,0
 The Grandview,"Los Angeles, CA",9,36,1
 The Grove Post-Acute Care Center,"Sylmar, CA",14,19,3
 The Havens at Antelope Valley,"Lancaster, CA",16,43,1
@@ -191,8 +186,7 @@ The Rehabilitation Center of Santa Monica,"Santa Monica, CA",30,29,3
 The Royal Garden Board and Care,"Valley Glen, CA",4,1,0
 The Village at Northridge,"Northridge, CA",31,17,3
 "Total Care Residential, Inc.","Cerritos, CA",6,4,0
-Turner's Residential Facility,"Palmdale, CA",1,4,1
-Twelve Oaks Senior Living,"La Crescenta, CA",15,19,5
+Twelve Oaks Senior Living,"La Crescenta, CA",11,19,5
 United Cerebral Palsy Mission House,"Northridge, CA",8,5,0
 United Cerebral Palsy Ranch House,"Sylmar, CA",3,3,0
 Valley Village Altano House,"Sylmar, CA",10,8,0

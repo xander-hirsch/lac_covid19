@@ -13,7 +13,7 @@ from lac_covid19.daily_pr.time_series import generate_all_ts
 from lac_covid19.geo.csa import CSA_BLANK, CSA_REGION_MAP, CSA_OBJECTID_MAP
 import lac_covid19.geo.geocoder as geocoder
 
-tz_offset = pd.to_timedelta(8, unit='hours')
+tz_offset = pd.to_timedelta(7, unit='hours')
 
 DIR_DOCS, DIR_EXPORT = [os.path.join(os.path.dirname(__file__), x)
                         for x in ('docs', 'export')]
