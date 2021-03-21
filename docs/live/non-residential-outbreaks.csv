@@ -1,18 +1,14 @@
 Setting Name,Address,Total Confirmed Staff,Total Confirmed Non-Staff
-99 Cents Only Stores Warehouse and Corporate Office,"4000 Union Pacific Ave, Commerce, CA, 90023",147,0
+99 Cents Only Stores Warehouse and Corporate Office,"4000 Union Pacific Ave, Commerce, CA, 90023",151,0
 "AA Meat, Inc.","6544 Flotilla St, Commerce, CA, 90040",7,0
 ACCESS Specialty Animal Hospitals - Los Angeles,"9599 Jefferson Blvd, Culver City, CA, 90232",19,0
 Accurate Steel Treating,"10008 Miller Way, South Gate, CA, 90280",8,0
-Aero Chrome Plating,"14660 Arminta St, Panorama City, CA, 91402",10,0
-Amazon DLA3,"5829 Smithway St, Commerce, CA, 90040",60,0
 Amazon Fresh,"19340 Rinaldi St, Northridge, CA, 91326",43,0
 California Metal X,"366 E 58th St, Los Angeles, CA, 90011",6,0
-Century 21 All Stars,"9155 Telegraph Rd, Pico Rivera, CA, 90660",5,0
 "Chevrolet of Cerritos, Penske","18605 Studebaker Rd, Cerritos, CA, 90703",24,0
 Chick-Fil-A Hollywood Drive-Thru Only,"6750 W Sunset Blvd, Los Angeles, CA, 90028",11,0
 Chick-Fil-A I-10 & La Cienega,"2310 S La Cienega Blvd, Los Angeles, CA, 90034",6,0
 Coast Produce,"1791 Bay St, Los Angeles, CA, 90021",8,0
-Compu-Aire,"8167 Byron Rd, Whittier, CA, 90606",24,0
 Concorde Battery Corp.,"2009 W San Bernardino Rd, West Covina, CA, 91790",9,0
 Consolidated Precision Products #2,"16800 Chestnut St, City of Industry, CA, 91748",17,0
 "Costco Warehouse, Monterey Park #1318","2000 Market Place Dr, Monterey Park, CA, 91755",74,0
@@ -25,12 +21,12 @@ Gibson Overseas,"2410 Yates Ave, Commerce, CA, 90040",56,0
 Gilead Sciences #1,"650 Cliffside Dr, San Dimas, CA, 91773",6,0
 Golden State Drayage,"1700 N Alameda St, Compton, CA, 90222",7,0
 Haaker Equipment Company,"2070 N White Ave, La Verne, CA, 91750",12,0
-Hain Celestial,"5630 Rickenbacker Rd, Bell, CA, 90201",21,0
-Hannibal Industries,"3851 S Santa Fe Ave, Vernon, CA, 90058",31,0
+Hain Celestial,"5630 Rickenbacker Rd, Bell, CA, 90201",22,0
+Hannibal Industries,"3851 S Santa Fe Ave, Vernon, CA, 90058",67,0
 Homeboy Industries,"130 Bruno St, Los Angeles, CA, 90012",9,0
 Honest Tax,"19710 Ventura Blvd, Woodland Hills, CA, 91364",12,0
-In-N-Out Burger #79,"142 E Palmdale Blvd, Palmdale, CA, 93550",7,0
 International Medication System-Building 14,"1886 Santa Anita Ave, Bldg 14, South El Monte, CA, 91733",10,0
+King Wire Partition,"6044 N Figueroa St, Los Angeles, CA, 90042",7,0
 LA County Registrar-Recorder/County Clerk Norwalk #2,"12400 Imperial Hwy, Norwalk, CA, 90650",6,0
 LAFD Fire Station 2,"1962 E Cesar E Chavez Ave, Los Angeles, CA, 90033",11,0
 LAFD Fire Station 55,"4455 York Blvd, Los Angeles, CA, 90041",10,0
@@ -42,19 +38,15 @@ Lisi Aerospace,"2600 Skypark Dr, Torrance, CA, 90505",48,0
 Los Angeles Dodgers LLC,"1000 Vin Scully Ave, Los Angeles, CA, 90012",12,1
 "LYMI, Inc.","2263 E Vernon Ave, Vernon, CA, 90058",52,0
 Marathon Petroleum,"2350 E 223rd St, Carson, CA, 90810",114,0
-Michael Kors Distribution Center,"3777 Workman Mill Rd, Whittier, CA, 90601",88,0
-Michaels Distribution Center,"3501 W Ave H, Lancaster, CA, 93536",95,0
 "Mission Foods, Los Angeles","5505 E Olympic Blvd, Commerce, CA, 90022",152,0
 "Mission Foods, Panorama","14200 Arminta St, Panorama City, CA, 91402",36,0
 Northrop Grumman - Palmdale,"3520 E Ave M, Palmdale, CA, 93550",674,0
 OnTrac Shipping - Commerce,"5959 Randolph St, Commerce, CA, 90040",100,0
 Orion Plastics Corporation,"700 W Carob St, Compton, CA, 90220",16,0
-Robert F. Chapman (Metal Fabrication),"43100 Exchange Pl, Lancaster, CA, 93535",33,0
-Rose Hills Memorial Park and Mortuary,"3888 Workman Mill Rd, Whittier, CA, 90601",52,0
 Senior Aerospace SSP,"2980 N San Fernando Blvd, Burbank, CA, 91504",131,0
 Shultz Steel Co.,"5321 Firestone Blvd, South Gate, CA, 90280",35,0
 Simply Salad - Ladera Heights,"5035 W Slauson Ave, B, Los Angeles, CA, 90056",13,0
-Smithfield,"3049 E Vernon Ave, Vernon, CA, 90058",792,0
+Smithfield,"3049 E Vernon Ave, Vernon, CA, 90058",796,0
 Sprouts Farmers Market #272,"6607 Fallbrook Ave, West Hills, CA, 91307",15,0
 Sprouts Farmers Market #418,"1375 Foothill Blvd, La Verne, CA, 91750",5,0
 St. Vincent Meals on Wheels,"2303 Miramar St, Los Angeles, CA, 90057",14,0
@@ -62,8 +54,6 @@ St. Vincent Meals on Wheels,"2303 Miramar St, Los Angeles, CA, 90057",14,0
 "Thibiant International, Inc.","20320 Prairie St, Chatsworth, CA, 91311",110,0
 Trader Joe's #122,"11976 Ventura Blvd, Studio City, CA, 91604",12,0
 Turner AECOM Hunt Office Trailer,"1000 S Prairie Ave, Inglewood, CA, 90301",15,0
-UPS - Cerritos,"13233 Moore St, Cerritos, CA, 90703",82,0
 Voyant Beauty,"9250 Mason Ave, Chatsworth, CA, 91311",15,0
 "Whole Foods Market, Glendale","331 N Glendale Ave, Glendale, CA, 91206",58,0
 "Whole Foods Market, Porter Ranch","20209 Rinaldi St, Porter Ranch, CA, 91326",18,0
-World Oil Corp.,"9302 Garfield Ave, South Gate, CA, 90280",11,0
