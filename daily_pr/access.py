@@ -85,13 +85,13 @@ def query_date(date, json_cache=True, html_cache=True):
     Returns:
         A dictionary of data from a press release.
     """
-    if json_cache and (pr := _load_json(date)):
+    if html_cache and json_cache and (pr := _load_json(date)):
         return pr
     pr = parse_pr(load_html(date, html_cache))
     assert date == pr[DATE].isoformat()
     if date in DATA_TYPOS:
-        keys_value = DATA_TYPOS[date]
-        pr[keys_value[0]][keys_value[1]] = keys_value[2]
+        for correction in DATA_TYPOS[date]:
+            pr[correction[0]][correction[1]] = correction[2]
     if date in HARDCODE_DATE_AREA:
         substitutions = HARDCODE_DATE_AREA[date]
         area_index_map = {}

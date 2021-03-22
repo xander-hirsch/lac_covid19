@@ -152,14 +152,16 @@ NO_REPORT_DATES[const.NEW_DEATHS] = NO_REPORT_DATES[
 ].convert_dtypes()
 
 DATA_TYPOS = {
-    '2020-04-13': (const.CASES_BY_AGE, const.AGE_OVER_65, 2032),
-    '2020-09-06': (const.CASES_BY_AGE, const.AGE_65_79, 18029),
-    '2020-11-03': (const.CASES_BY_AGE, const.AGE_5_11, 11230),
-    '2020-11-10': (const.CASES_BY_AGE, const.AGE_OVER_80, 10220),
-    '2020-11-12': (const.CASES_BY_AGE, const.AGE_0_4, 5601),
-    '2020-11-27': (const.CASES_BY_AGE, const.AGE_30_49, 125868),
-    '2021-01-30': (const.CASES_BY_AGE, const.AGE_12_17, 62373),
-    '2021-01-31': (const.CASES_BY_AGE, const.AGE_OVER_80, 29023),
-    '2021-02-03': (const.CASES_BY_AGE, const.AGE_65_79, 81155),
-    '2021-02-15': (const.CASES_BY_AGE, const.AGE_30_49, 368143),
+    '2020-04-13': ((const.CASES_BY_AGE, const.AGE_OVER_65, 2032),),
+    '2020-09-06': ((const.CASES_BY_AGE, const.AGE_65_79, 18029),),
+    '2020-11-03': ((const.CASES_BY_AGE, const.AGE_5_11, 11230),),
+    '2020-11-10': ((const.CASES_BY_AGE, const.AGE_OVER_80, 10220),),
+    '2020-11-12': ((const.CASES_BY_AGE, const.AGE_0_4, 5601),),
+    '2020-11-27': ((const.CASES_BY_AGE, const.AGE_30_49, 125868),),
+    '2021-01-30': ((const.CASES_BY_AGE, const.AGE_12_17, 62373),),
+    '2021-01-31': ((const.CASES_BY_AGE, const.AGE_OVER_80, 29023),),
+    '2021-02-03': ((const.CASES_BY_AGE, const.AGE_65_79, 81155),),
+    '2021-02-15': ((const.CASES_BY_AGE, const.AGE_30_49, 368143),),
+    '2021-03-20': ((const.CASES_BY_AGE, const.AGE_18_29, 271845),
+                   (const.CASES_BY_AGE, const.AGE_50_64, 222552)),
 }
