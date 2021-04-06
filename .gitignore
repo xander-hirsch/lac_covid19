@@ -20,6 +20,7 @@ lacdph_dashboard/
 scratchpad.py
 
 visualization/*.ipynb*
+visualization/*.png
 
 lacph-monitor/pushbullet-log/
 lacph-monitor/monitor.log
