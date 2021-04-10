@@ -192,7 +192,8 @@ def parse_vaccinated(html):
     df[const.AREA] = df[const.AREA].convert_dtypes()
     for col, str_to_num, missing, dtype in VACCINATED_DTYPE_CONVERSIONS:
         df[col] = df[col].apply(
-            lambda x: missing if x == 'Unreliable Data' else str_to_num(x)
+            lambda x: missing if x in ('Unreliable Data', 'No Pop Data')
+                              else str_to_num(x)
         ).astype(dtype)
     return df
 
