@@ -192,7 +192,7 @@ def parse_vaccinated(html):
     df[const.AREA] = df[const.AREA].convert_dtypes()
     for col, str_to_num, missing, dtype in VACCINATED_DTYPE_CONVERSIONS:
         df[col] = df[col].apply(
-            lambda x: missing if x in ('Unreliable Data', 'No Pop Data')
+            lambda x: missing if x in ('Unreliable Data', 'No population Data')
                               else str_to_num(x)
         ).astype(dtype)
     return df
@@ -231,14 +231,12 @@ def parse_education(html):
 def query_live(cached=False):
     page_html = fetch_page(cached)
     df_csa_total = parse_csa(page_html)
-    df_csa_recent = parse_recent(page_html)
     df_area_vaccinated = parse_vaccinated(page_html)
     df_health_dept = parse_health_dept(page_html)
     return {
         const.AREA: parse_areas(df_csa_total, df_health_dept,
                                 df_area_vaccinated),
         const.CSA_TOTAL: df_csa_total,
-        const.CSA_RECENT: df_csa_recent,
         const.VACCINATED: df_area_vaccinated,
         const.RESIDENTIAL: parse_residential(page_html),
         const.NON_RESIDENTIAL: parse_non_residential(page_html),
