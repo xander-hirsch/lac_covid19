@@ -121,7 +121,13 @@ def parse_csa(html):
         countwide statistical area.
     """
     df = (
-        pd.read_html(str(table_html(html, ID_SUMMARY, True)[1]))[0]
+        pd.read_html(
+            str(
+                html
+                .find('div', id=ID_SUMMARY)
+                .find_next_siblings('table')[1]
+            )
+        )[0]
         .rename(
             columns={
                 'CITY/COMMUNITY**': const.AREA,

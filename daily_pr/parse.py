@@ -10,8 +10,8 @@ import lac_covid19.const as const
 import lac_covid19.daily_pr.bad_data as bad_data
 
 NUMBERS_AS_WORDS = {
-    'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5,
-    'six': 6, 'seven': 7, 'eight': 8, 'nine': 9,
+    'no': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4,
+    'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9,
 }
 
 RE_PR_DATE = re.compile(

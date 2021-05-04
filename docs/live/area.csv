@@ -1,343 +1,343 @@
 Area,Region,Population,CF Outbreak,Cases,Case rate,"New cases, 14-day avg","New cases, 14-day avg per 100k",Deaths,Death rate,People Vaccinated,Percent Vaccinated
-City of Agoura Hills,San Fernando,20883.0,False,1036,4961,0.64,3.07,18,86,10027,55.6
-City of Alhambra,San Gabriel,86724.0,False,6836,7882,2.21,2.5,203,234,39925,54.7
-City of Arcadia,San Gabriel,57754.0,False,2700,4675,1.43,2.5,133,230,28344,55.5
-City of Artesia,East,16795.0,False,2064,12289,0.57,3.36,70,417,7364,51.6
+City of Agoura Hills,San Fernando,20883.0,False,1036,4961,0.5,2.43,18,86,10027,55.6
+City of Alhambra,San Gabriel,86724.0,False,6840,7887,2.64,3.07,204,235,39925,54.7
+City of Arcadia,San Gabriel,57754.0,False,2707,4687,1.5,2.57,133,230,28344,55.5
+City of Artesia,East,16795.0,False,2064,12289,0.43,2.5,70,417,7364,51.6
 City of Avalon,South Bay,3869.0,False,16,414,0.0,0.0,0,0,602,19.6
-City of Azusa,San Gabriel,50040.0,False,6263,12516,1.07,2.14,118,236,16456,39.9
-City of Baldwin Park,San Gabriel,76769.0,False,13099,17063,2.0,2.64,297,387,27611,45.6
-City of Bell,East,36332.0,False,6743,18559,0.57,1.57,113,311,10735,38.5
-City of Bell Gardens,East,43071.0,False,8331,19342,2.0,4.64,111,258,11706,36.3
-City of Bellflower,East,77735.0,False,10716,13785,3.5,4.5,196,252,24830,40.2
-City of Beverly Hills,West,34520.0,False,2696,7810,2.64,7.64,32,93,18206,59.9
+City of Azusa,San Gabriel,50040.0,False,6270,12530,1.36,2.71,118,236,16456,39.9
+City of Baldwin Park,San Gabriel,76769.0,False,13104,17069,1.93,2.5,299,389,27611,45.6
+City of Bell,East,36332.0,False,6746,18568,0.43,1.21,114,314,10735,38.5
+City of Bell Gardens,East,43071.0,False,8333,19347,1.93,4.5,111,258,11706,36.3
+City of Bellflower,East,77735.0,False,10723,13794,3.43,4.36,196,252,24830,40.2
+City of Beverly Hills,West,34520.0,False,2694,7804,1.71,4.93,32,93,18206,59.9
 City of Bradbury,San Gabriel,1069.0,False,36,3368,0.07,6.71,0,0,413,43.9
-City of Burbank,San Fernando,107180.0,False,8845,8252,3.86,3.57,237,221,45193,50.5
-City of Calabasas,San Fernando,24323.0,False,1250,5139,1.29,5.29,32,132,11965,57.8
-City of Carson,South Bay,93846.0,False,9636,10268,5.57,5.93,243,259,39630,51.1
-City of Cerritos,East,50067.0,False,3035,6062,1.57,3.14,57,114,27016,60.4
-City of Claremont,San Gabriel,36484.0,False,2268,6216,1.29,3.5,56,153,16819,51.9
+City of Burbank,San Fernando,107180.0,False,8869,8275,4.71,4.43,237,221,45193,50.5
+City of Calabasas,San Fernando,24323.0,False,1260,5180,1.29,5.29,32,132,11965,57.8
+City of Carson,South Bay,93846.0,False,9645,10277,5.36,5.64,244,260,39630,51.1
+City of Cerritos,East,50067.0,False,3038,6068,1.71,3.43,57,114,27016,60.4
+City of Claremont,San Gabriel,36484.0,False,2270,6222,1.07,2.93,56,153,16819,51.9
 City of Commerce,East,13069.0,True,2392,18303,0.29,2.21,40,306,4924,48.6
-City of Compton,South,99904.0,False,16949,16965,3.93,3.93,228,228,23208,31.4
-City of Covina,San Gabriel,49032.0,False,6363,12977,1.07,2.14,156,318,20138,50.5
-City of Cudahy,East,24347.0,False,4764,19567,0.21,0.86,59,242,6402,35.0
-City of Culver City,West,39865.0,False,2204,5529,1.07,2.71,106,266,21659,64.4
-City of Diamond Bar,San Gabriel,57515.0,False,3224,5605,0.79,1.36,81,141,27468,55.1
-City of Downey,East,114263.0,False,17469,15288,4.86,4.21,297,260,43011,47.1
-City of Duarte,San Gabriel,22016.0,False,2306,10474,0.5,2.29,97,441,9607,52.9
-City of El Monte,San Gabriel,117269.0,False,17146,14621,3.29,2.79,424,362,40177,43.6
-City of El Segundo,South Bay,16786.0,False,719,4283,0.86,5.07,6,36,7991,55.5
-City of Gardena,South Bay,61310.0,False,6287,10254,2.93,4.71,183,298,23974,48.2
-City of Glendale,San Fernando,206493.0,False,19897,9636,9.5,4.64,606,293,74470,42.1
-City of Glendora,San Gabriel,52764.0,False,4775,9050,0.93,1.79,176,334,22077,50.1
-City of Hawaiian Gardens,East,14676.0,False,2220,15127,0.43,2.93,22,150,4080,36.5
-City of Hawthorne,South Bay,88787.0,False,10432,11749,5.29,5.93,202,228,26675,39.2
-City of Hermosa Beach,South Bay,19670.0,False,999,5079,1.14,5.86,10,51,9954,59.3
+City of Compton,South,99904.0,False,16961,16977,3.71,3.71,228,228,23208,31.4
+City of Covina,San Gabriel,49032.0,False,6369,12989,1.36,2.71,157,320,20138,50.5
+City of Cudahy,East,24347.0,False,4765,19571,0.29,1.14,59,242,6402,35.0
+City of Culver City,West,39865.0,False,2210,5544,0.71,1.79,107,268,21659,64.4
+City of Diamond Bar,San Gabriel,57515.0,False,3227,5611,0.64,1.14,81,141,27468,55.1
+City of Downey,East,114263.0,False,17485,15302,4.93,4.29,297,260,43011,47.1
+City of Duarte,San Gabriel,22016.0,False,2306,10474,0.43,1.93,97,441,9607,52.9
+City of El Monte,San Gabriel,117269.0,False,17153,14627,3.64,3.07,424,362,40177,43.6
+City of El Segundo,South Bay,16786.0,False,720,4289,0.71,4.21,6,36,7991,55.5
+City of Gardena,South Bay,61310.0,False,6293,10264,2.79,4.5,183,298,23974,48.2
+City of Glendale,San Fernando,206493.0,False,19927,9650,9.93,4.79,608,294,74470,42.1
+City of Glendora,San Gabriel,52764.0,False,4786,9071,1.5,2.86,176,334,22077,50.1
+City of Hawaiian Gardens,East,14676.0,False,2221,15134,0.36,2.5,22,150,4080,36.5
+City of Hawthorne,South Bay,88787.0,False,10450,11770,5.86,6.64,202,228,26675,39.2
+City of Hermosa Beach,South Bay,19670.0,False,1001,5089,1.07,5.43,10,51,9954,59.3
 City of Hidden Hills,San Fernando,1890.0,False,89,4709,0.0,0.0,2,106,868,51.5
-City of Huntington Park,East,59484.0,False,11203,18834,2.57,4.36,171,287,16939,37.3
-City of Industry,San Gabriel,437.0,False,168,38444,0.0,0.0,6,1373,,
-City of Inglewood,South Bay,113582.0,False,13519,11902,4.79,4.21,304,268,34661,38.8
+City of Huntington Park,East,59484.0,False,11207,18840,2.36,3.93,171,287,16939,37.3
+City of Industry,San Gabriel,437.0,False,169,38673,0.07,16.36,6,1373,,
+City of Inglewood,South Bay,113582.0,False,13533,11915,4.43,3.93,303,267,34661,38.8
 City of Irwindale,San Gabriel,1459.0,False,250,17135,0.0,0.0,6,411,744,59.9
-City of La Canada Flintridge,San Fernando,20693.0,False,755,3649,0.43,2.07,16,77,11355,61.8
+City of La Canada Flintridge,San Fernando,20693.0,False,757,3658,0.29,1.36,16,77,11355,61.8
 City of La Habra Heights,San Gabriel,5455.0,False,111,2035,0.0,0.0,1,18,1220,24.9
-City of La Mirada,East,49599.0,False,4263,8595,1.57,3.14,113,228,19943,47.6
-City of La Puente,San Gabriel,40697.0,False,6669,16387,1.43,3.5,118,290,13788,42.8
-City of La Verne,San Gabriel,33282.0,False,2868,8617,1.29,3.86,51,153,14182,49.3
-City of Lakewood,South Bay,80362.0,False,7254,9027,3.29,4.14,94,117,32598,48.9
-City of Lancaster,Antelope Valley,161570.0,True,21888,13547,8.14,5.0,276,171,40819,32.6
-City of Lawndale,South Bay,33614.0,False,3582,10656,2.21,6.57,55,164,10932,41.4
-City of Lomita,South Bay,20729.0,False,1463,7058,1.21,5.86,31,150,8026,47.4
-City of Long Beach,South Bay,,False,52909,11321,23.36,5.0,931,199,177884,46.7
-City of Lynwood,South,72047.0,True,13312,18477,3.36,4.64,232,322,20168,37.5
-City of Malibu,West,12961.0,False,416,3210,0.43,3.36,7,54,4962,45.1
-City of Manhattan Beach,South Bay,35999.0,False,1353,3758,1.71,4.71,18,50,18716,62.6
-City of Maywood,East,28049.0,False,5205,18557,0.86,3.07,88,314,7965,37.9
-City of Monrovia,San Gabriel,38800.0,False,3165,8157,0.86,2.21,76,196,16175,51.9
-City of Montebello,East,64375.0,False,10127,15731,1.43,2.21,207,322,23378,45.2
-City of Monterey Park,San Gabriel,62262.0,False,4790,7693,0.71,1.14,192,308,30180,57.2
-City of Norwalk,East,107622.0,False,16098,14958,4.71,4.36,367,341,37535,44.1
-City of Palmdale,Antelope Valley,158968.0,False,24357,15322,5.57,3.5,309,194,44513,36.4
-City of Palos Verdes Estates,South Bay,13522.0,False,462,3417,0.79,5.86,9,67,7284,60.3
-City of Paramount,South Bay,56023.0,False,9909,17687,2.57,4.57,146,261,15524,36.6
-City of Pasadena,San Gabriel,,False,11222,7938,2.57,1.82,344,243,69764,57.8
-City of Pico Rivera,East,64284.0,False,11086,17245,2.0,3.07,267,415,24635,48.0
-City of Pomona,San Gabriel,155931.0,False,24249,15551,4.79,3.07,449,288,47843,39.8
-City of Rancho Palos Verdes,South Bay,42747.0,False,1498,3504,1.0,2.29,56,131,22421,59.5
-City of Redondo Beach,South Bay,68697.0,False,2824,4111,4.71,6.86,46,67,32422,58.3
-City of Rolling Hills,South Bay,1940.0,False,54,2784,0.0,0.0,2,103,967,54.8
-City of Rolling Hills Estates,South Bay,8113.0,False,282,3476,0.5,6.14,8,99,4804,65.4
-City of Rosemead,San Gabriel,55350.0,False,4941,8927,1.64,3.0,144,260,24625,53.5
-City of San Dimas,San Gabriel,34516.0,True,3213,9309,0.86,2.5,92,267,14942,50.0
-City of San Fernando,San Fernando,24612.0,False,5250,21331,1.21,4.93,63,256,7964,41.0
-City of San Gabriel,San Gabriel,40954.0,False,3223,7870,0.71,1.79,201,491,19169,55.4
-City of San Marino,San Gabriel,13277.0,False,381,2870,-0.07,-0.5,9,68,7178,61.9
-City of Santa Clarita,San Fernando,220424.0,False,20286,9203,7.93,3.57,261,118,85942,48.6
-City of Santa Fe Springs,East,18364.0,False,2859,15569,1.0,5.5,36,196,7081,47.4
-City of Santa Monica,West,92446.0,False,4771,5161,3.29,3.57,182,197,48510,59.5
+City of La Mirada,East,49599.0,False,4269,8607,1.57,3.14,113,228,19943,47.6
+City of La Puente,San Gabriel,40697.0,False,6672,16394,1.07,2.64,118,290,13788,42.8
+City of La Verne,San Gabriel,33282.0,False,2875,8638,1.79,5.36,51,153,14182,49.3
+City of Lakewood,South Bay,80362.0,False,7257,9030,2.79,3.43,94,117,32598,48.9
+City of Lancaster,Antelope Valley,161570.0,True,21908,13559,7.64,4.71,276,171,40819,32.6
+City of Lawndale,South Bay,33614.0,False,3583,10659,1.57,4.64,55,164,10932,41.4
+City of Lomita,South Bay,20729.0,False,1465,7067,1.29,6.14,31,150,8026,47.4
+City of Long Beach,South Bay,,False,52956,11331,21.21,4.54,931,199,177884,46.7
+City of Lynwood,South,72047.0,True,13314,18480,2.36,3.29,231,321,20168,37.5
+City of Malibu,West,12961.0,False,416,3210,0.36,2.79,7,54,4962,45.1
+City of Manhattan Beach,South Bay,35999.0,False,1357,3770,1.64,4.57,18,50,18716,62.6
+City of Maywood,East,28049.0,False,5209,18571,0.64,2.29,88,314,7965,37.9
+City of Monrovia,San Gabriel,38800.0,False,3164,8155,0.64,1.71,76,196,16175,51.9
+City of Montebello,East,64375.0,False,10133,15741,1.5,2.36,206,320,23378,45.2
+City of Monterey Park,San Gabriel,62262.0,False,4793,7698,0.86,1.36,192,308,30180,57.2
+City of Norwalk,East,107622.0,False,16100,14960,4.07,3.79,366,340,37535,44.1
+City of Palmdale,Antelope Valley,158968.0,False,24371,15331,5.0,3.14,308,194,44513,36.4
+City of Palos Verdes Estates,South Bay,13522.0,False,466,3446,0.86,6.36,9,67,7284,60.3
+City of Paramount,South Bay,56023.0,False,9912,17693,2.29,4.07,147,262,15524,36.6
+City of Pasadena,San Gabriel,,False,11224,7939,2.43,1.71,346,245,69764,57.8
+City of Pico Rivera,East,64284.0,False,11091,17253,1.79,2.79,267,415,24635,48.0
+City of Pomona,San Gabriel,155931.0,False,24261,15559,4.93,3.14,449,288,47843,39.8
+City of Rancho Palos Verdes,South Bay,42747.0,False,1504,3518,0.86,2.0,56,131,22421,59.5
+City of Redondo Beach,South Bay,68697.0,False,2827,4115,3.43,5.0,46,67,32422,58.3
+City of Rolling Hills,South Bay,1940.0,False,56,2887,0.14,7.36,2,103,967,54.8
+City of Rolling Hills Estates,South Bay,8113.0,False,282,3476,0.43,5.29,8,99,4804,65.4
+City of Rosemead,San Gabriel,55350.0,False,4950,8943,1.93,3.5,145,262,24625,53.5
+City of San Dimas,San Gabriel,34516.0,True,3218,9323,0.86,2.5,92,267,14942,50.0
+City of San Fernando,San Fernando,24612.0,False,5255,21351,1.36,5.5,63,256,7964,41.0
+City of San Gabriel,San Gabriel,40954.0,False,3225,7875,0.86,2.14,201,491,19169,55.4
+City of San Marino,San Gabriel,13277.0,False,381,2870,-0.07,-0.5,10,75,7178,61.9
+City of Santa Clarita,San Fernando,220424.0,False,20307,9213,7.64,3.5,260,118,85942,48.6
+City of Santa Fe Springs,East,18364.0,False,2863,15590,1.14,6.21,36,196,7081,47.4
+City of Santa Monica,West,92446.0,False,4784,5175,3.21,3.5,183,198,48510,59.5
 City of Sierra Madre,San Gabriel,10989.0,False,464,4222,0.0,0.0,13,118,5981,62.9
-City of Signal Hill,East,11797.0,False,1137,9638,0.14,1.21,8,68,4918,52.9
-City of South El Monte,San Gabriel,20885.0,False,3415,16351,0.36,1.64,64,306,7108,43.1
-City of South Gate,East,98155.0,False,18568,18917,3.71,3.79,225,229,30756,41.3
-City of South Pasadena,San Gabriel,26053.0,False,1315,5047,0.57,2.14,39,150,13953,63.0
-City of Temple City,San Gabriel,36455.0,False,2357,6466,0.64,1.79,120,329,17758,56.3
-City of Torrance,South Bay,149268.0,False,7238,4849,5.14,3.43,210,141,69745,55.9
-City of Vernon,East,209.0,False,126,60287,0.07,34.14,0,0,,
-City of Walnut,San Gabriel,30532.0,False,1751,5735,0.14,0.5,38,124,15751,58.1
-City of West Covina,San Gabriel,108235.0,False,12826,11850,3.21,2.93,256,237,46813,52.7
-City of West Hollywood,San Fernando,36951.0,False,2306,6241,1.79,4.86,39,106,18888,55.0
+City of Signal Hill,East,11797.0,False,1137,9638,0.07,0.57,8,68,4918,52.9
+City of South El Monte,San Gabriel,20885.0,False,3417,16361,0.36,1.71,64,306,7108,43.1
+City of South Gate,East,98155.0,False,18580,18929,4.14,4.21,225,229,30756,41.3
+City of South Pasadena,San Gabriel,26053.0,False,1315,5047,0.36,1.36,39,150,13953,63.0
+City of Temple City,San Gabriel,36455.0,False,2357,6466,0.36,1.0,120,329,17758,56.3
+City of Torrance,South Bay,149268.0,False,7261,4864,5.64,3.79,211,141,69745,55.9
+City of Vernon,East,209.0,False,124,59330,-0.07,-34.21,0,0,,
+City of Walnut,San Gabriel,30532.0,False,1751,5735,0.07,0.21,38,124,15751,58.1
+City of West Covina,San Gabriel,108235.0,False,12838,11861,3.07,2.86,257,237,46813,52.7
+City of West Hollywood,San Fernando,36951.0,False,2311,6254,1.93,5.21,39,106,18888,55.0
 City of Westlake Village,San Fernando,8360.0,False,113,1352,0.07,0.86,1,12,2443,32.9
-City of Whittier,East,87432.0,False,11023,12608,2.21,2.57,239,273,33314,47.1
-Los Angeles - Adams-Normandie,South,8202.0,False,1196,14582,0.71,8.71,18,219,2459,37.8
-Los Angeles - Alsace,West,12445.0,False,1584,12728,0.29,2.29,19,153,3683,38.6
+City of Whittier,East,87432.0,False,11027,12612,2.14,2.43,239,273,33314,47.1
+Los Angeles - Adams-Normandie,South,8202.0,False,1199,14618,0.86,10.43,18,219,2459,37.8
+Los Angeles - Alsace,West,12445.0,False,1588,12760,0.5,4.0,19,153,3683,38.6
 Los Angeles - Angeles National Forest,San Fernando,40.0,False,5,12500,0.0,0.0,0,0,5,13.2
-Los Angeles - Angelino Heights,Metro,2502.0,False,281,11231,0.0,0.0,6,240,1082,52.1
-Los Angeles - Arleta,San Fernando,34370.0,False,7058,20535,1.29,3.71,112,326,12021,44.2
-Los Angeles - Atwater Village,Metro,14666.0,False,1414,9641,0.79,5.36,27,184,7314,57.2
-Los Angeles - Baldwin Hills,West,31125.0,False,2709,8704,1.07,3.5,61,196,9383,38.0
-Los Angeles - Bel Air,West,8429.0,False,399,4734,0.36,4.29,2,24,4257,59.4
+Los Angeles - Angelino Heights,Metro,2502.0,False,282,11271,0.07,2.86,6,240,1082,52.1
+Los Angeles - Arleta,San Fernando,34370.0,False,7061,20544,1.29,3.71,112,326,12021,44.2
+Los Angeles - Atwater Village,Metro,14666.0,False,1413,9635,0.43,2.93,27,184,7314,57.2
+Los Angeles - Baldwin Hills,West,31125.0,False,2712,8713,0.71,2.29,62,199,9383,38.0
+Los Angeles - Bel Air,West,8429.0,False,399,4734,0.29,3.43,2,24,4257,59.4
 Los Angeles - Beverly Crest,San Fernando,12525.0,False,642,5126,0.43,3.43,5,40,6343,61.7
-Los Angeles - Beverlywood,West,13173.0,False,924,7014,0.5,3.79,2,15,6254,61.9
-Los Angeles - Boyle Heights,Metro,86884.0,True,17431,20062,2.71,3.07,297,342,25408,38.8
-Los Angeles - Brentwood,West,30955.0,False,1551,5010,1.14,3.64,17,55,16327,62.0
+Los Angeles - Beverlywood,West,13173.0,False,925,7022,0.43,3.29,2,15,6254,61.9
+Los Angeles - Boyle Heights,Metro,86884.0,True,17433,20065,2.14,2.5,297,342,25408,38.8
+Los Angeles - Brentwood,West,30955.0,False,1555,5023,1.07,3.43,17,55,16327,62.0
 Los Angeles - Brookside,Metro,581.0,False,33,5680,0.07,12.29,2,344,364,78.8
-Los Angeles - Cadillac-Corning,Metro,7121.0,False,718,10083,1.07,15.07,10,140,2160,38.3
-Los Angeles - Canoga Park,San Fernando,65289.0,False,9337,14301,3.36,5.14,170,260,20230,39.4
-Los Angeles - Carthay,Metro,14363.0,False,938,6531,0.79,5.5,73,508,7583,60.9
-Los Angeles - Central,South,38992.0,False,7609,19514,1.64,4.21,133,341,8368,29.3
-Los Angeles - Century City,West,12792.0,False,620,4847,0.79,6.14,14,109,7379,69.7
-Los Angeles - Century Palms/Cove,South,33766.0,False,6195,18347,2.93,8.71,92,272,7092,28.7
-Los Angeles - Chatsworth,San Fernando,37061.0,False,3620,9768,1.93,5.21,76,205,16980,53.2
-Los Angeles - Cheviot Hills,West,9171.0,False,455,4961,0.43,4.64,7,76,5335,72.1
-Los Angeles - Chinatown,Metro,8021.0,False,731,9114,0.14,1.79,16,199,3497,47.0
-Los Angeles - Cloverdale/Cochran,Metro,14553.0,False,1598,10981,0.57,3.93,23,158,4648,39.9
-Los Angeles - Country Club Park,Metro,15153.0,False,1538,10150,0.86,5.64,78,515,6252,49.6
-Los Angeles - Crenshaw District,South,13829.0,False,1456,10529,0.21,1.57,26,188,4927,43.9
-Los Angeles - Crestview,Metro,11368.0,False,1019,8964,0.79,6.93,46,405,4978,55.1
-Los Angeles - Del Rey,West,29936.0,False,2015,6731,1.14,3.79,32,107,12979,52.6
-Los Angeles - Downtown,Metro,27507.0,True,4041,14691,4.21,15.36,51,185,17252,53.5
-Los Angeles - Eagle Rock,San Fernando,39589.0,False,3662,9250,1.21,3.07,109,275,17985,54.2
-Los Angeles - East Hollywood,Metro,29287.0,False,3240,11063,0.93,3.14,110,376,9521,39.2
-Los Angeles - Echo Park,Metro,14256.0,False,1329,9322,-0.14,-1.0,21,147,6410,52.8
-Los Angeles - El Sereno,San Gabriel,41808.0,False,6183,14789,1.5,3.57,107,256,15598,46.9
+Los Angeles - Cadillac-Corning,Metro,7121.0,False,720,10111,0.93,13.07,10,140,2160,38.3
+Los Angeles - Canoga Park,San Fernando,65289.0,False,9358,14333,4.21,6.43,170,260,20230,39.4
+Los Angeles - Carthay,Metro,14363.0,False,938,6531,0.5,3.5,73,508,7583,60.9
+Los Angeles - Central,South,38992.0,False,7615,19530,1.86,4.79,133,341,8368,29.3
+Los Angeles - Century City,West,12792.0,False,621,4855,0.57,4.5,14,109,7379,69.7
+Los Angeles - Century Palms/Cove,South,33766.0,False,6202,18368,2.29,6.79,92,272,7092,28.7
+Los Angeles - Chatsworth,San Fernando,37061.0,False,3621,9770,1.71,4.57,76,205,16980,53.2
+Los Angeles - Cheviot Hills,West,9171.0,False,455,4961,0.21,2.29,7,76,5335,72.1
+Los Angeles - Chinatown,Metro,8021.0,False,731,9114,0.21,2.71,16,199,3497,47.0
+Los Angeles - Cloverdale/Cochran,Metro,14553.0,False,1598,10981,0.43,3.0,23,158,4648,39.9
+Los Angeles - Country Club Park,Metro,15153.0,False,1540,10163,0.64,4.21,78,515,6252,49.6
+Los Angeles - Crenshaw District,South,13829.0,False,1459,10550,0.36,2.57,26,188,4927,43.9
+Los Angeles - Crestview,Metro,11368.0,False,1024,9008,1.0,8.79,46,405,4978,55.1
+Los Angeles - Del Rey,West,29936.0,False,2017,6738,1.21,4.07,32,107,12979,52.6
+Los Angeles - Downtown,Metro,27507.0,True,4043,14698,3.64,13.21,51,185,17252,53.5
+Los Angeles - Eagle Rock,San Fernando,39589.0,False,3662,9250,1.0,2.5,109,275,17985,54.2
+Los Angeles - East Hollywood,Metro,29287.0,False,3241,11066,0.79,2.64,110,376,9521,39.2
+Los Angeles - Echo Park,Metro,14256.0,False,1331,9336,0.0,0.0,21,147,6410,52.8
+Los Angeles - El Sereno,San Gabriel,41808.0,False,6183,14789,1.07,2.57,107,256,15598,46.9
 Los Angeles - Elysian Park,Metro,5712.0,False,507,8876,0.21,3.71,4,70,2824,58.4
-Los Angeles - Elysian Valley,Metro,10171.0,False,1298,12762,0.21,2.14,25,246,4189,50.8
-Los Angeles - Encino,San Fernando,45172.0,False,3431,7595,1.57,3.43,63,139,23152,61.9
-Los Angeles - Exposition,West,3326.0,False,361,10854,0.0,0.0,7,210,1275,47.7
-Los Angeles - Exposition Park,South,44917.0,False,6189,13779,1.21,2.71,84,187,12542,34.7
-Los Angeles - Faircrest Heights,Metro,3600.0,False,273,7583,0.64,17.86,2,56,1546,52.0
-Los Angeles - Figueroa Park Square,South,8721.0,False,1349,15468,0.07,0.79,24,275,2315,34.1
-Los Angeles - Florence-Firestone,South,47445.0,False,9273,19545,4.14,8.79,118,249,10288,30.1
-Los Angeles - Glassell Park,Metro,31604.0,False,3406,10777,0.5,1.57,52,165,13104,51.3
-Los Angeles - Gramercy Place,South Bay,10764.0,False,1321,12272,0.86,7.93,22,204,3548,39.6
-Los Angeles - Granada Hills,San Fernando,58191.0,False,6488,11149,3.29,5.64,181,311,24581,49.9
-Los Angeles - Green Meadows,South,21505.0,False,3945,18345,2.21,10.36,51,237,4723,30.5
-Los Angeles - Hancock Park,Metro,17039.0,False,1043,6121,0.71,4.14,8,47,8453,60.8
-Los Angeles - Harbor City,South Bay,29070.0,False,2504,8614,1.36,4.71,35,120,10176,44.0
-Los Angeles - Harbor Gateway,South Bay,43600.0,False,4902,11243,1.0,2.29,65,149,13124,38.7
-Los Angeles - Harbor Pines,South Bay,2409.0,False,170,7057,0.36,14.86,1,42,912,46.9
-Los Angeles - Harvard Heights,Metro,18035.0,False,2586,14339,0.36,2.0,71,394,5204,36.9
-Los Angeles - Harvard Park,South,37935.0,False,7181,18930,2.5,6.64,97,256,10242,35.2
-Los Angeles - Highland Park,San Fernando,48391.0,False,5779,11942,1.07,2.21,105,217,18566,48.7
-Los Angeles - Historic Filipinotown,Metro,13870.0,False,2043,14730,0.36,2.57,73,526,4937,43.8
-Los Angeles - Hollywood,San Fernando,68254.0,False,5509,8071,3.71,5.43,68,100,24887,40.7
-Los Angeles - Hollywood Hills,San Fernando,29434.0,False,1531,5201,1.57,5.29,25,85,13905,54.1
-Los Angeles - Hyde Park,South Bay,28541.0,False,3681,12897,2.57,9.0,77,270,8324,36.9
-Los Angeles - Jefferson Park,South,8073.0,False,1169,14480,0.29,3.5,13,161,2606,41.6
-Los Angeles - Koreatown,Metro,51693.0,False,5554,10744,2.43,4.71,124,240,17411,40.9
+Los Angeles - Elysian Valley,Metro,10171.0,False,1300,12781,0.36,3.5,25,246,4189,50.8
+Los Angeles - Encino,San Fernando,45172.0,False,3433,7600,1.29,2.86,63,139,23152,61.9
+Los Angeles - Exposition,West,3326.0,False,362,10884,0.07,2.14,7,210,1275,47.7
+Los Angeles - Exposition Park,South,44917.0,False,6189,13779,0.86,1.93,84,187,12542,34.7
+Los Angeles - Faircrest Heights,Metro,3600.0,False,274,7611,0.5,13.86,2,56,1546,52.0
+Los Angeles - Figueroa Park Square,South,8721.0,False,1349,15468,0.21,2.43,24,275,2315,34.1
+Los Angeles - Florence-Firestone,South,47445.0,False,9278,19555,2.21,4.64,119,251,10288,30.1
+Los Angeles - Glassell Park,Metro,31604.0,False,3407,10780,0.43,1.36,52,165,13104,51.3
+Los Angeles - Gramercy Place,South Bay,10764.0,False,1321,12272,0.64,5.93,22,204,3548,39.6
+Los Angeles - Granada Hills,San Fernando,58191.0,False,6501,11172,3.36,5.79,181,311,24581,49.9
+Los Angeles - Green Meadows,South,21505.0,False,3947,18354,0.79,3.64,51,237,4723,30.5
+Los Angeles - Hancock Park,Metro,17039.0,False,1047,6145,0.5,2.93,8,47,8453,60.8
+Los Angeles - Harbor City,South Bay,29070.0,False,2503,8610,0.64,2.21,35,120,10176,44.0
+Los Angeles - Harbor Gateway,South Bay,43600.0,False,4903,11245,0.64,1.43,65,149,13124,38.7
+Los Angeles - Harbor Pines,South Bay,2409.0,False,170,7057,0.29,11.86,1,42,912,46.9
+Los Angeles - Harvard Heights,Metro,18035.0,False,2586,14339,0.14,0.79,71,394,5204,36.9
+Los Angeles - Harvard Park,South,37935.0,False,7187,18946,2.0,5.29,97,256,10242,35.2
+Los Angeles - Highland Park,San Fernando,48391.0,False,5778,11940,0.64,1.29,105,217,18566,48.7
+Los Angeles - Historic Filipinotown,Metro,13870.0,False,2045,14744,0.43,3.07,73,526,4937,43.8
+Los Angeles - Hollywood,San Fernando,68254.0,False,5523,8092,4.07,6.0,68,100,24887,40.7
+Los Angeles - Hollywood Hills,San Fernando,29434.0,False,1534,5212,1.14,3.93,25,85,13905,54.1
+Los Angeles - Hyde Park,South Bay,28541.0,False,3690,12929,2.64,9.29,78,273,8324,36.9
+Los Angeles - Jefferson Park,South,8073.0,False,1170,14493,0.43,5.36,13,161,2606,41.6
+Los Angeles - Koreatown,Metro,51693.0,False,5563,10762,1.57,3.07,124,240,17411,40.9
 Los Angeles - Lafayette Square,Metro,4559.0,False,536,11757,0.0,0.0,10,219,1500,41.5
-Los Angeles - Lake Balboa,San Fernando,42206.0,False,5403,12801,2.21,5.21,62,147,14661,43.8
-Los Angeles - Lakeview Terrace,San Fernando,13133.0,False,2311,17597,0.43,3.29,41,312,4399,42.1
-Los Angeles - Leimert Park,South,15235.0,False,1592,10450,0.57,3.79,22,144,5069,40.1
-Los Angeles - Lincoln Heights,Metro,32597.0,False,5083,15593,0.43,1.29,158,485,11584,45.3
-Los Angeles - Little Armenia,Metro,8025.0,False,1159,14442,0.43,5.29,82,1022,2260,33.0
-Los Angeles - Little Bangladesh,Metro,28343.0,False,2781,9812,1.21,4.29,28,99,10377,44.3
-Los Angeles - Little Tokyo,Metro,3133.0,False,397,12672,0.0,0.0,11,351,2129,73.5
-Los Angeles - Longwood,Metro,4304.0,False,588,13662,0.07,1.71,9,209,1436,41.7
-Los Angeles - Los Feliz,San Fernando,21608.0,False,1047,4845,0.79,3.57,22,102,11033,58.6
-Los Angeles - Manchester Square,South,8536.0,False,943,11047,0.29,3.36,11,129,2478,35.9
+Los Angeles - Lake Balboa,San Fernando,42206.0,False,5407,12811,2.07,4.93,62,147,14661,43.8
+Los Angeles - Lakeview Terrace,San Fernando,13133.0,False,2310,17589,0.29,2.14,41,312,4399,42.1
+Los Angeles - Leimert Park,South,15235.0,False,1594,10463,0.57,3.79,22,144,5069,40.1
+Los Angeles - Lincoln Heights,Metro,32597.0,False,5081,15587,0.29,0.86,158,485,11584,45.3
+Los Angeles - Little Armenia,Metro,8025.0,False,1159,14442,0.5,6.21,82,1022,2260,33.0
+Los Angeles - Little Bangladesh,Metro,28343.0,False,2787,9833,1.5,5.29,28,99,10377,44.3
+Los Angeles - Little Tokyo,Metro,3133.0,False,399,12735,0.14,4.5,11,351,2129,73.5
+Los Angeles - Longwood,Metro,4304.0,False,586,13615,-0.14,-3.36,9,209,1436,41.7
+Los Angeles - Los Feliz,San Fernando,21608.0,False,1047,4845,0.71,3.29,22,102,11033,58.6
+Los Angeles - Manchester Square,South,8536.0,False,946,11082,0.5,5.86,11,129,2478,35.9
 Los Angeles - Mandeville Canyon,West,3124.0,False,158,5058,0.14,4.57,1,32,1829,68.6
-Los Angeles - Mar Vista,West,42471.0,False,2056,4841,1.07,2.5,37,87,19646,56.7
-Los Angeles - Marina Peninsula,West,4360.0,False,146,3349,0.29,6.57,2,46,2356,61.9
-Los Angeles - Melrose,Metro,77696.0,False,8182,10531,3.57,4.64,210,270,30783,47.9
-Los Angeles - Mid-city,Metro,15030.0,False,1205,8017,0.29,1.86,44,293,6427,51.6
-Los Angeles - Miracle Mile,Metro,17985.0,False,986,5482,1.36,7.5,16,89,8273,53.3
-Los Angeles - Mission Hills,San Fernando,24124.0,False,4318,17899,1.0,4.14,123,510,9021,46.4
-Los Angeles - Mt. Washington,Metro,24145.0,False,2848,11795,0.71,2.93,62,257,9744,49.9
-Los Angeles - North Hills,San Fernando,61575.0,False,9337,15164,3.36,5.5,134,218,19539,40.6
-Los Angeles - North Hollywood,San Fernando,151421.0,False,20719,13683,7.14,4.71,343,227,47249,38.5
-Los Angeles - Northridge,San Fernando,69797.0,False,7548,10814,2.93,4.21,174,249,27507,46.0
-Los Angeles - Pacific Palisades,West,21291.0,False,842,3955,0.57,2.71,15,70,11397,64.8
-Los Angeles - Pacoima,San Fernando,76979.0,False,17171,22306,3.64,4.71,224,291,20613,36.1
+Los Angeles - Mar Vista,West,42471.0,False,2058,4846,1.0,2.36,37,87,19646,56.7
+Los Angeles - Marina Peninsula,West,4360.0,False,146,3349,0.21,4.93,2,46,2356,61.9
+Los Angeles - Melrose,Metro,77696.0,False,8194,10546,3.14,4.0,210,270,30783,47.9
+Los Angeles - Mid-city,Metro,15030.0,False,1207,8031,0.43,2.86,44,293,6427,51.6
+Los Angeles - Miracle Mile,Metro,17985.0,False,989,5499,1.0,5.57,16,89,8273,53.3
+Los Angeles - Mission Hills,San Fernando,24124.0,False,4322,17916,0.64,2.71,123,510,9021,46.4
+Los Angeles - Mt. Washington,Metro,24145.0,False,2849,11800,0.64,2.71,62,257,9744,49.9
+Los Angeles - North Hills,San Fernando,61575.0,False,9342,15172,2.93,4.79,134,218,19539,40.6
+Los Angeles - North Hollywood,San Fernando,151421.0,False,20742,13698,7.86,5.14,344,227,47249,38.5
+Los Angeles - Northridge,San Fernando,69797.0,False,7557,10827,3.07,4.36,174,249,27507,46.0
+Los Angeles - Pacific Palisades,West,21291.0,False,841,3950,0.14,0.64,14,66,11397,64.8
+Los Angeles - Pacoima,San Fernando,76979.0,False,17179,22316,3.86,5.0,224,291,20613,36.1
 Los Angeles - Palisades Highlands,West,3846.0,False,146,3796,-0.07,-1.86,1,26,2076,62.9
-Los Angeles - Palms,West,43877.0,False,2591,5905,1.14,2.57,62,141,19238,52.2
-Los Angeles - Panorama City,San Fernando,75250.0,False,13479,17912,2.79,3.71,262,348,21725,37.7
-Los Angeles - Park La Brea,Metro,13580.0,False,632,4654,1.21,8.93,1,7,4812,44.0
-Los Angeles - Pico-Union,Metro,41842.0,False,7091,16947,1.79,4.29,232,554,11543,35.4
-Los Angeles - Playa Del Rey,West,3196.0,False,110,3442,0.0,0.0,1,31,1499,55.4
-Los Angeles - Playa Vista,West,10947.0,False,602,5499,0.71,6.5,8,73,6421,70.6
-Los Angeles - Porter Ranch,San Fernando,35588.0,False,2433,6837,1.21,3.43,35,98,18410,60.0
-Los Angeles - Rancho Park,West,6560.0,False,365,5564,0.36,5.43,3,46,3876,75.2
+Los Angeles - Palms,West,43877.0,False,2595,5914,1.21,2.71,62,141,19238,52.2
+Los Angeles - Panorama City,San Fernando,75250.0,False,13488,17924,3.07,4.07,262,348,21725,37.7
+Los Angeles - Park La Brea,Metro,13580.0,False,634,4669,0.93,6.86,1,7,4812,44.0
+Los Angeles - Pico-Union,Metro,41842.0,False,7095,16957,0.86,2.07,232,554,11543,35.4
+Los Angeles - Playa Del Rey,West,3196.0,False,113,3536,0.21,6.71,1,31,1499,55.4
+Los Angeles - Playa Vista,West,10947.0,False,603,5508,0.64,5.86,8,73,6421,70.6
+Los Angeles - Porter Ranch,San Fernando,35588.0,False,2436,6845,1.36,3.79,36,101,18410,60.0
+Los Angeles - Rancho Park,West,6560.0,False,365,5564,0.29,4.36,3,46,3876,75.2
 Los Angeles - Regent Square,Metro,2780.0,False,257,9245,0.07,2.57,3,108,1090,48.3
-Los Angeles - Reseda,San Fernando,76617.0,False,11470,14971,2.57,3.36,291,380,29696,48.0
-Los Angeles - Reseda Ranch,San Fernando,4636.0,False,694,14970,0.14,3.07,3,65,1695,44.9
-Los Angeles - Reynier Village,Metro,4228.0,False,268,6339,0.36,8.5,2,47,1872,55.5
-Los Angeles - San Pedro,South Bay,78038.0,True,7198,9224,3.43,4.43,113,145,25413,40.8
-Los Angeles - Shadow Hills,San Fernando,4442.0,False,390,8780,0.0,0.0,5,113,1703,44.0
-Los Angeles - Sherman Oaks,San Fernando,87254.0,False,5806,6654,4.71,5.43,108,124,41277,56.9
-Los Angeles - Silverlake,Metro,44083.0,False,3187,7230,1.71,3.93,120,272,21525,57.5
-Los Angeles - South Carthay,Metro,10595.0,False,717,6767,0.36,3.36,6,57,4688,55.2
-Los Angeles - South Park,South,37961.0,False,7333,19317,1.36,3.57,105,277,8295,30.4
+Los Angeles - Reseda,San Fernando,76617.0,False,11478,14981,2.57,3.36,292,381,29696,48.0
+Los Angeles - Reseda Ranch,San Fernando,4636.0,False,696,15013,0.29,6.14,3,65,1695,44.9
+Los Angeles - Reynier Village,Metro,4228.0,False,269,6362,0.36,8.43,2,47,1872,55.5
+Los Angeles - San Pedro,South Bay,78038.0,True,7200,9226,3.14,4.0,113,145,25413,40.8
+Los Angeles - Shadow Hills,San Fernando,4442.0,False,391,8802,0.07,1.57,5,113,1703,44.0
+Los Angeles - Sherman Oaks,San Fernando,87254.0,False,5813,6662,4.21,4.79,108,124,41277,56.9
+Los Angeles - Silverlake,Metro,44083.0,False,3191,7239,1.57,3.57,120,272,21525,57.5
+Los Angeles - South Carthay,Metro,10595.0,False,718,6777,0.43,4.07,6,57,4688,55.2
+Los Angeles - South Park,South,37961.0,False,7335,19322,1.0,2.57,105,277,8295,30.4
 Los Angeles - St Elmo Village,Metro,4584.0,False,700,15271,0.0,0.0,42,916,1212,33.8
-Los Angeles - Studio City,San Fernando,22440.0,False,1392,6203,1.14,5.07,50,223,11364,59.8
-Los Angeles - Sun Valley,San Fernando,52483.0,False,9458,18021,5.43,10.36,148,282,16347,39.6
-Los Angeles - Sunland,San Fernando,20408.0,False,2282,11182,0.43,2.14,57,279,7175,41.2
+Los Angeles - Studio City,San Fernando,22440.0,False,1398,6230,1.29,5.71,50,223,11364,59.8
+Los Angeles - Sun Valley,San Fernando,52483.0,False,9462,18029,4.71,9.0,148,282,16347,39.6
+Los Angeles - Sunland,San Fernando,20408.0,False,2283,11187,0.36,1.79,57,279,7175,41.2
 Los Angeles - Sycamore Square,Metro,647.0,False,29,4482,0.0,0.0,2,309,303,54.5
-Los Angeles - Sylmar,San Fernando,82398.0,True,16101,19541,4.5,5.5,236,286,27529,42.7
-Los Angeles - Tarzana,San Fernando,30876.0,False,3314,10733,1.57,5.07,78,253,14229,55.5
-Los Angeles - Temple-Beaudry,Metro,39482.0,False,5044,12775,1.29,3.21,111,281,12467,39.3
-Los Angeles - Thai Town,San Fernando,9809.0,False,895,9124,0.29,2.93,19,194,3277,37.6
-Los Angeles - Toluca Lake,San Fernando,8704.0,False,498,5722,0.21,2.5,4,46,4207,55.1
+Los Angeles - Sylmar,San Fernando,82398.0,True,16109,19550,4.21,5.07,237,288,27529,42.7
+Los Angeles - Tarzana,San Fernando,30876.0,False,3320,10753,1.71,5.57,78,253,14229,55.5
+Los Angeles - Temple-Beaudry,Metro,39482.0,False,5052,12796,1.71,4.36,111,281,12467,39.3
+Los Angeles - Thai Town,San Fernando,9809.0,False,897,9145,0.07,0.79,19,194,3277,37.6
+Los Angeles - Toluca Lake,San Fernando,8704.0,False,498,5722,0.07,0.86,4,46,4207,55.1
 Los Angeles - Toluca Terrace,San Fernando,1306.0,False,143,10949,0.0,0.0,7,536,559,56.2
-Los Angeles - Toluca Woods,San Fernando,1858.0,False,105,5651,0.21,11.5,0,0,888,55.7
-Los Angeles - Tujunga,San Fernando,27810.0,False,2925,10518,1.93,6.93,66,237,9119,39.0
+Los Angeles - Toluca Woods,San Fernando,1858.0,False,105,5651,0.14,7.64,0,0,888,55.7
+Los Angeles - Tujunga,San Fernando,27810.0,False,2927,10525,1.79,6.43,66,237,9119,39.0
 Los Angeles - University Hills,San Gabriel,3429.0,False,270,7874,0.0,0.0,1,29,1064,36.9
-Los Angeles - University Park,South,27456.0,False,3548,12922,1.64,5.93,56,204,8190,34.2
-Los Angeles - Valley Glen,San Fernando,30016.0,False,3839,12790,1.5,5.0,68,227,9376,38.4
-Los Angeles - Valley Village,San Fernando,24720.0,False,2049,8289,1.21,4.93,75,303,10486,50.8
-Los Angeles - Van Nuys,San Fernando,93194.0,True,14571,15635,4.57,4.93,326,350,25659,35.5
-Los Angeles - Venice,West,33885.0,False,1692,4993,2.0,5.86,13,38,15567,54.2
-Los Angeles - Vermont Knolls,South,17200.0,False,2833,16471,0.79,4.57,55,320,4225,32.1
-Los Angeles - Vermont Square,South,7657.0,False,1465,19133,0.07,0.93,23,300,2317,39.5
-Los Angeles - Vermont Vista,South,41186.0,False,7508,18229,4.07,9.86,101,245,8206,27.7
-Los Angeles - Vernon Central,South,51998.0,False,11069,21287,1.29,2.43,164,315,11117,29.6
-Los Angeles - Victoria Park,Metro,8399.0,False,1043,12418,0.14,1.71,11,131,2630,39.7
-Los Angeles - View Heights,West,3694.0,False,227,6145,0.29,7.71,7,189,1368,43.8
-Los Angeles - Watts,South,42674.0,False,7479,17526,3.57,8.36,98,230,8586,28.7
-Los Angeles - Wellington Square,Metro,4915.0,False,578,11760,0.43,8.71,9,183,1596,41.3
-Los Angeles - West Adams,Metro,27630.0,False,3986,14426,1.57,5.64,149,539,9132,42.0
-Los Angeles - West Hills,San Fernando,40545.0,False,3013,7431,1.71,4.21,111,274,19744,56.5
-Los Angeles - West Los Angeles,West,37636.0,False,2418,6425,1.86,4.93,53,141,18321,56.0
-Los Angeles - West Vernon,South,53644.0,False,10106,18839,2.5,4.64,187,349,13930,34.1
-Los Angeles - Westchester,West,51603.0,False,2504,4852,1.71,3.29,48,93,23685,54.4
-Los Angeles - Westlake,Metro,59355.0,False,7712,12993,1.71,2.86,303,510,14406,30.2
-Los Angeles - Westwood,West,54109.0,False,2741,5066,2.71,5.07,25,46,21471,43.8
-Los Angeles - Wholesale District,Metro,36129.0,True,6337,17540,1.21,3.36,106,293,15915,48.9
-Los Angeles - Wilmington,South Bay,56487.0,False,8398,14867,1.79,3.14,91,161,14902,35.1
-Los Angeles - Wilshire Center,Metro,50170.0,False,5598,11158,3.29,6.57,126,251,17393,42.8
-Los Angeles - Winnetka,San Fernando,51786.0,False,6751,13036,0.86,1.64,80,154,19505,47.0
-Los Angeles - Woodland Hills,San Fernando,68055.0,False,5012,7365,3.5,5.14,82,120,32439,56.6
-Unincorporated - Acton,Antelope Valley,7971.0,False,470,5896,0.14,1.79,6,75,2061,29.6
-Unincorporated - Agua Dulce,Antelope Valley,4158.0,False,279,6710,0.14,3.43,3,72,1184,31.7
-Unincorporated - Altadena,San Gabriel,43620.0,False,3305,7577,1.21,2.79,74,170,20407,55.4
+Los Angeles - University Park,South,27456.0,False,3549,12926,1.14,4.14,56,204,8190,34.2
+Los Angeles - Valley Glen,San Fernando,30016.0,False,3844,12807,1.71,5.71,68,227,9376,38.4
+Los Angeles - Valley Village,San Fernando,24720.0,False,2051,8297,1.21,4.93,76,307,10486,50.8
+Los Angeles - Van Nuys,San Fernando,93194.0,True,14575,15639,4.29,4.57,327,351,25659,35.5
+Los Angeles - Venice,West,33885.0,False,1697,5008,1.71,5.07,13,38,15567,54.2
+Los Angeles - Vermont Knolls,South,17200.0,False,2835,16483,0.79,4.57,55,320,4225,32.1
+Los Angeles - Vermont Square,South,7657.0,False,1466,19146,-0.07,-0.93,23,300,2317,39.5
+Los Angeles - Vermont Vista,South,41186.0,False,7510,18234,2.79,6.71,101,245,8206,27.7
+Los Angeles - Vernon Central,South,51998.0,False,11062,21274,0.5,1.0,163,313,11117,29.6
+Los Angeles - Victoria Park,Metro,8399.0,False,1042,12406,0.07,0.86,11,131,2630,39.7
+Los Angeles - View Heights,West,3694.0,False,227,6145,0.14,3.86,7,189,1368,43.8
+Los Angeles - Watts,South,42674.0,False,7487,17545,2.07,4.86,98,230,8586,28.7
+Los Angeles - Wellington Square,Metro,4915.0,False,579,11780,0.21,4.36,9,183,1596,41.3
+Los Angeles - West Adams,Metro,27630.0,False,3989,14437,1.14,4.14,149,539,9132,42.0
+Los Angeles - West Hills,San Fernando,40545.0,False,3018,7444,1.57,3.93,111,274,19744,56.5
+Los Angeles - West Los Angeles,West,37636.0,False,2422,6435,1.57,4.14,53,141,18321,56.0
+Los Angeles - West Vernon,South,53644.0,False,10113,18852,2.5,4.64,187,349,13930,34.1
+Los Angeles - Westchester,West,51603.0,False,2509,4862,1.57,3.07,48,93,23685,54.4
+Los Angeles - Westlake,Metro,59355.0,False,7714,12996,1.5,2.5,303,510,14406,30.2
+Los Angeles - Westwood,West,54109.0,False,2742,5068,1.29,2.43,25,46,21471,43.8
+Los Angeles - Wholesale District,Metro,36129.0,True,6338,17543,1.21,3.36,106,293,15915,48.9
+Los Angeles - Wilmington,South Bay,56487.0,False,8405,14880,2.07,3.71,91,161,14902,35.1
+Los Angeles - Wilshire Center,Metro,50170.0,False,5603,11168,2.14,4.29,126,251,17393,42.8
+Los Angeles - Winnetka,San Fernando,51786.0,False,6751,13036,0.57,1.07,80,154,19505,47.0
+Los Angeles - Woodland Hills,San Fernando,68055.0,False,5020,7376,3.36,4.93,83,122,32439,56.6
+Unincorporated - Acton,Antelope Valley,7971.0,False,470,5896,0.07,0.86,6,75,2061,29.6
+Unincorporated - Agua Dulce,Antelope Valley,4158.0,False,279,6710,0.07,1.71,3,72,1184,31.7
+Unincorporated - Altadena,San Gabriel,43620.0,False,3306,7579,0.93,2.14,74,170,20407,55.4
 Unincorporated - Anaverde,Antelope Valley,1508.0,False,148,9814,0.0,0.0,0,0,426,33.3
 Unincorporated - Angeles National Forest,San Gabriel,1245.0,False,33,2651,0.0,0.0,1,80,434,39.6
-Unincorporated - Arcadia,San Gabriel,7981.0,False,610,7643,-0.14,-1.79,15,188,3692,55.9
-Unincorporated - Athens Village,South,4897.0,False,1053,21503,0.0,0.0,30,613,1613,42.4
-Unincorporated - Athens-Westmont,South Bay,42442.0,False,6305,14856,1.36,3.21,101,238,10145,31.0
-Unincorporated - Avocado Heights,San Gabriel,6775.0,False,1074,15852,-0.07,-1.07,13,192,2216,41.1
-Unincorporated - Azusa,San Gabriel,15923.0,False,2355,14790,0.5,3.14,36,226,5065,41.7
-Unincorporated - Bassett,San Gabriel,14817.0,False,2630,17750,0.36,2.43,47,317,5521,47.1
+Unincorporated - Arcadia,San Gabriel,7981.0,False,611,7656,-0.07,-0.86,15,188,3692,55.9
+Unincorporated - Athens Village,South,4897.0,False,1052,21483,0.0,0.0,30,613,1613,42.4
+Unincorporated - Athens-Westmont,South Bay,42442.0,False,6309,14865,1.64,3.86,101,238,10145,31.0
+Unincorporated - Avocado Heights,San Gabriel,6775.0,False,1076,15882,0.07,1.07,13,192,2216,41.1
+Unincorporated - Azusa,San Gabriel,15923.0,False,2356,14796,0.5,3.14,36,226,5065,41.7
+Unincorporated - Bassett,San Gabriel,14817.0,False,2632,17763,0.5,3.36,47,317,5521,47.1
 Unincorporated - Bouquet Canyon,Antelope Valley,1073.0,False,47,4380,0.0,0.0,1,93,291,32.0
 Unincorporated - Bradbury,San Gabriel,108.0,False,53,49074,0.0,0.0,24,22222,,
 Unincorporated - Canyon Country,San Fernando,7728.0,False,841,10883,0.36,4.64,3,39,605,38.4
-Unincorporated - Castaic,San Fernando,27191.0,True,3728,13710,1.36,4.93,18,66,8171,35.9
+Unincorporated - Castaic,San Fernando,27191.0,True,3729,13714,1.29,4.71,18,66,8171,35.9
 Unincorporated - Cerritos,East,587.0,False,72,12266,0.0,0.0,1,170,235,51.2
 Unincorporated - Charter Oak,San Gabriel,20.0,False,0,0,0.0,0.0,0,0,11,57.9
 Unincorporated - Claremont,San Gabriel,702.0,False,41,5840,0.0,0.0,4,570,216,37.6
-Unincorporated - Covina,San Gabriel,16819.0,False,2332,13865,0.71,4.21,43,256,6597,47.8
+Unincorporated - Covina,San Gabriel,16819.0,False,2333,13871,0.5,2.93,43,256,6597,47.8
 Unincorporated - Covina (Charter Oak),San Gabriel,13144.0,False,1529,11633,0.14,1.14,18,137,4824,44.0
-Unincorporated - Del Aire,West,4393.0,False,312,7102,0.43,9.71,3,68,1851,51.7
+Unincorporated - Del Aire,West,4393.0,False,312,7102,0.21,4.86,3,68,1851,51.7
 Unincorporated - Del Rey,West,318.0,False,30,9434,0.14,44.93,1,314,222,59.5
 Unincorporated - Del Sur,Antelope Valley,2415.0,False,167,6915,0.07,2.93,3,124,622,29.2
-Unincorporated - Desert View Highlands,Antelope Valley,2493.0,False,355,14240,0.36,14.36,4,160,610,30.3
-Unincorporated - Duarte,San Gabriel,4428.0,False,847,19128,0.07,1.57,10,226,1482,43.1
+Unincorporated - Desert View Highlands,Antelope Valley,2493.0,False,355,14240,0.21,8.57,4,160,610,30.3
+Unincorporated - Duarte,San Gabriel,4428.0,False,847,19128,0.0,0.0,10,226,1482,43.1
 Unincorporated - East Covina,San Gabriel,329.0,False,34,10334,0.0,0.0,1,304,161,51.8
-Unincorporated - East La Mirada,East,5292.0,False,506,9562,0.36,6.79,7,132,2107,47.3
+Unincorporated - East La Mirada,East,5292.0,False,506,9562,0.43,8.14,7,132,2107,47.3
 Unincorporated - East Lancaster,Antelope Valley,114.0,False,15,13158,0.0,0.0,0,0,27,28.7
-Unincorporated - East Los Angeles,East,125269.0,False,24880,19861,2.93,2.29,426,340,38786,40.9
+Unincorporated - East Los Angeles,East,125269.0,False,24886,19866,2.57,2.07,426,340,38786,40.9
 Unincorporated - East Pasadena,San Gabriel,6403.0,False,217,3389,0.21,3.36,10,156,3662,56.9
-Unincorporated - East Rancho Dominguez,South,15308.0,False,2780,18160,0.79,5.07,51,333,3635,32.6
+Unincorporated - East Rancho Dominguez,South,15308.0,False,2779,18154,0.64,4.21,51,333,3635,32.6
 Unincorporated - East Whittier,East,5306.0,False,467,8801,0.43,8.07,8,151,1710,39.6
-Unincorporated - El Camino Village,South Bay,8791.0,False,824,9373,0.57,6.5,14,159,3295,48.4
-Unincorporated - El Monte,San Gabriel,145.0,False,25,17241,0.07,49.21,0,0,33,32.0
+Unincorporated - El Camino Village,South Bay,8791.0,False,826,9396,0.36,4.07,14,159,3295,48.4
+Unincorporated - El Monte,San Gabriel,145.0,False,24,16552,0.0,0.0,0,0,33,32.0
 Unincorporated - Elizabeth Lake,Antelope Valley,1661.0,False,76,4576,0.0,0.0,1,60,313,21.7
-Unincorporated - Florence-Firestone,East,64705.0,False,13561,20958,7.07,10.93,211,326,15967,33.6
+Unincorporated - Florence-Firestone,East,64705.0,False,13572,20975,3.71,5.71,213,329,15967,33.6
 Unincorporated - Franklin Canyon,San Fernando,12.0,False,1,8333,0.0,0.0,0,0,,
-Unincorporated - Glendora,San Gabriel,660.0,False,68,10303,0.07,10.79,3,455,269,45.5
-Unincorporated - Hacienda Heights,San Gabriel,55926.0,False,5205,9307,1.86,3.36,98,175,24724,51.7
+Unincorporated - Glendora,San Gabriel,660.0,False,68,10303,0.0,0.0,3,455,269,45.5
+Unincorporated - Hacienda Heights,San Gabriel,55926.0,False,5211,9318,2.21,4.0,99,177,24724,51.7
 Unincorporated - Harbor Gateway,South Bay,1.0,False,0,0,0.0,0.0,0,0,,
-Unincorporated - Hawthorne,South Bay,2514.0,False,318,12649,0.07,2.86,2,80,814,42.1
+Unincorporated - Hawthorne,South Bay,2514.0,False,317,12609,0.0,0.0,2,80,814,42.1
 Unincorporated - Hi Vista,Antelope Valley,1098.0,False,44,4007,0.0,0.0,0,0,261,29.9
-Unincorporated - Kagel/Lopez Canyons,San Fernando,1412.0,False,267,18909,0.36,25.29,2,142,346,31.6
-Unincorporated - La Crescenta-Montrose,San Fernando,19801.0,False,1096,5535,0.64,3.21,15,76,9454,55.4
+Unincorporated - Kagel/Lopez Canyons,San Fernando,1412.0,False,267,18909,0.29,20.21,2,142,346,31.6
+Unincorporated - La Crescenta-Montrose,San Fernando,19801.0,False,1099,5550,0.64,3.21,15,76,9454,55.4
 Unincorporated - La Habra Heights,San Gabriel,676.0,False,14,2071,0.0,0.0,1,148,130,21.5
-Unincorporated - La Rambla,South Bay,2075.0,False,270,13012,0.14,6.86,21,1012,665,39.8
-Unincorporated - La Verne,San Gabriel,2040.0,True,165,8088,0.07,3.5,1,49,852,50.2
-Unincorporated - Ladera Heights,West,7071.0,False,385,5445,0.5,7.07,10,141,3376,54.5
+Unincorporated - La Rambla,South Bay,2075.0,False,270,13012,0.07,3.43,21,1012,665,39.8
+Unincorporated - La Verne,San Gabriel,2040.0,True,166,8137,0.14,7.0,1,49,852,50.2
+Unincorporated - Ladera Heights,West,7071.0,False,389,5501,0.71,10.07,10,141,3376,54.5
 Unincorporated - Lake Hughes,San Fernando,668.0,False,42,6287,0.0,0.0,1,150,86,16.3
 Unincorporated - Lake Los Angeles,Antelope Valley,12994.0,False,1564,12036,0.14,1.07,18,139,2486,24.8
 Unincorporated - Lake Manor,San Fernando,1643.0,False,127,7730,0.0,0.0,2,122,614,43.6
 Unincorporated - Lakewood,East,,False,0,0,0.0,0.0,0,0,33,30.3
-Unincorporated - Lennox,West,22542.0,False,3520,15615,0.64,2.86,51,226,6056,35.6
+Unincorporated - Lennox,West,22542.0,False,3523,15629,0.79,3.5,52,231,6056,35.6
 Unincorporated - Leona Valley,Antelope Valley,1751.0,False,110,6282,0.0,0.0,1,57,388,24.5
-Unincorporated - Littlerock,Antelope Valley,4021.0,False,533,13255,0.21,5.29,7,174,827,25.0
+Unincorporated - Littlerock,Antelope Valley,4021.0,False,533,13255,0.29,7.07,7,174,827,25.0
 Unincorporated - Littlerock/Juniper Hills,Antelope Valley,1297.0,False,113,8712,0.07,5.5,2,154,416,33.7
-Unincorporated - Littlerock/Pearblossom,Antelope Valley,3569.0,False,532,14906,0.07,2.0,11,308,821,28.7
-Unincorporated - Llano,Antelope Valley,877.0,False,40,4561,0.0,0.0,1,114,174,23.2
-Unincorporated - Marina del Rey,West,9411.0,False,381,4048,0.36,3.79,3,32,5034,60.1
+Unincorporated - Littlerock/Pearblossom,Antelope Valley,3569.0,False,533,14934,0.14,4.0,11,308,821,28.7
+Unincorporated - Llano,Antelope Valley,877.0,False,41,4675,0.07,8.14,1,114,174,23.2
+Unincorporated - Marina del Rey,West,9411.0,False,384,4080,0.57,6.07,3,32,5034,60.1
 Unincorporated - Miracle Mile,San Fernando,,False,0,0,0.0,0.0,0,0,,
 Unincorporated - Monrovia,San Gabriel,3881.0,False,372,9585,0.14,3.64,0,0,1564,48.5
 Unincorporated - Newhall,San Fernando,220.0,False,68,30909,0.0,0.0,1,455,78,42.9
-Unincorporated - North Lancaster,Antelope Valley,1198.0,False,155,12938,0.14,11.93,2,167,385,37.1
-Unincorporated - North Whittier,San Gabriel,8360.0,False,1107,13242,0.29,3.43,28,335,3273,48.4
-Unincorporated - Northeast San Gabriel,San Gabriel,24036.0,False,1612,6707,0.29,1.21,40,166,10676,53.1
+Unincorporated - North Lancaster,Antelope Valley,1198.0,False,155,12938,0.0,0.0,2,167,385,37.1
+Unincorporated - North Whittier,San Gabriel,8360.0,False,1107,13242,0.21,2.57,28,335,3273,48.4
+Unincorporated - Northeast San Gabriel,San Gabriel,24036.0,False,1612,6707,0.14,0.64,40,166,10676,53.1
 Unincorporated - Padua Hills,San Gabriel,,False,9,4186,0.0,0.0,0,0,77,42.5
-Unincorporated - Palmdale,Antelope Valley,842.0,False,110,13064,0.0,0.0,4,475,113,18.3
+Unincorporated - Palmdale,Antelope Valley,842.0,False,111,13183,0.07,8.5,4,475,113,18.3
 Unincorporated - Palos Verdes Peninsula,South Bay,621.0,False,22,3543,0.0,0.0,0,0,321,56.5
-Unincorporated - Pearblossom/Llano,Antelope Valley,1956.0,False,117,5982,0.07,3.71,1,51,287,17.2
+Unincorporated - Pearblossom/Llano,Antelope Valley,1956.0,False,117,5982,0.0,0.0,1,51,287,17.2
 Unincorporated - Pellissier Village,San Gabriel,619.0,False,166,26817,0.0,0.0,1,162,242,50.9
 Unincorporated - Placerita Canyon,San Fernando,460.0,False,1,217,0.0,0.0,0,0,52,14.8
 Unincorporated - Pomona,San Gabriel,1938.0,False,61,3148,0.0,0.0,1,52,220,12.2
-Unincorporated - Quartz Hill,Antelope Valley,12906.0,False,1186,9190,0.29,2.21,20,155,3383,31.5
+Unincorporated - Quartz Hill,Antelope Valley,12906.0,False,1186,9190,0.14,1.14,20,155,3383,31.5
 Unincorporated - Rancho Dominguez,South Bay,2661.0,False,381,14318,0.0,0.0,5,188,1046,45.6
-Unincorporated - Roosevelt,Antelope Valley,931.0,False,85,9130,0.0,0.0,0,0,208,28.6
+Unincorporated - Roosevelt,Antelope Valley,931.0,False,86,9237,0.07,7.64,0,0,208,28.6
 Unincorporated - Rosewood,South,1286.0,False,159,12364,0.21,16.64,4,311,334,31.5
-Unincorporated - Rosewood/East Gardena,South,1193.0,False,156,13076,0.0,0.0,6,503,457,45.5
-Unincorporated - Rosewood/West Rancho Dominguez,South,3361.0,False,500,14877,0.43,12.79,12,357,782,29.3
-Unincorporated - Rowland Heights,San Gabriel,51022.0,False,3629,7113,0.93,1.86,76,149,22000,50.5
+Unincorporated - Rosewood/East Gardena,South,1193.0,False,156,13076,-0.07,-6.0,6,503,457,45.5
+Unincorporated - Rosewood/West Rancho Dominguez,South,3361.0,False,501,14906,0.36,10.57,12,357,782,29.3
+Unincorporated - Rowland Heights,San Gabriel,51022.0,False,3630,7115,0.93,1.86,76,149,22000,50.5
 Unincorporated - San Clemente Island,South Bay,,False,0,0,0.0,0.0,0,0,,
 Unincorporated - San Francisquito Canyon/Bouquet Canyon,San Fernando,,False,15,1748,0.0,0.0,0,0,110,76.9
-Unincorporated - San Jose Hills,San Gabriel,20221.0,False,3478,17200,0.36,1.79,70,346,6471,41.1
+Unincorporated - San Jose Hills,San Gabriel,20221.0,False,3477,17195,0.36,1.79,70,346,6471,41.1
 Unincorporated - San Pasqual,San Gabriel,2035.0,False,39,1916,0.07,3.5,0,0,1110,67.3
 Unincorporated - Sand Canyon,San Fernando,308.0,False,17,5519,0.0,0.0,0,0,138,48.8
 Unincorporated - Santa Catalina Island,South Bay,267.0,False,163,61049,0.0,0.0,2,749,36,14.5
-Unincorporated - Santa Monica Mountains,San Fernando,18621.0,True,693,3722,1.29,6.93,10,54,7499,46.0
+Unincorporated - Santa Monica Mountains,San Fernando,18621.0,True,696,3738,1.29,6.93,10,54,7499,46.0
 Unincorporated - Saugus,San Fernando,155.0,False,129,83226,0.07,46.07,0,0,,
 Unincorporated - Saugus/Canyon Country,San Fernando,356.0,False,40,11236,0.07,20.07,1,281,201,59.8
 Unincorporated - South Antelope Valley,Antelope Valley,455.0,False,28,6154,0.0,0.0,0,0,103,24.6
 Unincorporated - South El Monte,San Gabriel,1795.0,False,345,19220,-0.07,-4.0,5,279,508,36.4
-Unincorporated - South San Gabriel,San Gabriel,8848.0,False,936,10579,0.0,0.0,45,509,4223,55.9
-Unincorporated - South Whittier,East,59222.0,False,8376,14143,1.64,2.71,149,252,19492,41.2
+Unincorporated - South San Gabriel,San Gabriel,8848.0,False,940,10624,0.29,3.21,45,509,4223,55.9
+Unincorporated - South Whittier,East,59222.0,False,8377,14145,1.57,2.64,150,253,19492,41.2
 Unincorporated - Southeast Antelope Valley,Antelope Valley,781.0,False,79,10115,0.0,0.0,0,0,,
-Unincorporated - Stevenson Ranch,San Fernando,20966.0,False,1138,5428,0.43,2.07,6,29,8951,51.3
-Unincorporated - Sun Village,Antelope Valley,6036.0,False,931,15424,0.14,2.36,14,232,1403,29.8
+Unincorporated - Stevenson Ranch,San Fernando,20966.0,False,1138,5428,0.29,1.36,6,29,8951,51.3
+Unincorporated - Sun Village,Antelope Valley,6036.0,False,932,15441,0.21,3.57,14,232,1403,29.8
 Unincorporated - Sunrise Village,San Gabriel,1296.0,False,191,14738,0.0,0.0,1,77,493,46.6
 Unincorporated - Twin Lakes/Oat Mountain,San Fernando,1658.0,False,92,5549,0.14,8.64,2,121,681,48.9
 Unincorporated - Val Verde,San Fernando,3309.0,False,336,10154,0.0,0.0,1,30,957,35.2
-Unincorporated - Valencia,San Fernando,3072.0,False,193,6283,0.14,4.71,1,33,1397,60.1
-Unincorporated - Valinda,San Gabriel,23371.0,False,3735,15981,1.43,6.07,68,291,8352,45.1
-Unincorporated - View Park/Windsor Hills,West,11635.0,False,684,5879,0.57,4.93,13,112,5108,50.7
-Unincorporated - Walnut Park,East,16143.0,False,3057,18937,0.14,0.86,53,328,5274,42.3
+Unincorporated - Valencia,San Fernando,3072.0,False,192,6250,0.07,2.36,1,33,1397,60.1
+Unincorporated - Valinda,San Gabriel,23371.0,False,3739,15998,1.5,6.36,68,291,8352,45.1
+Unincorporated - View Park/Windsor Hills,West,11635.0,False,685,5887,0.57,4.86,13,112,5108,50.7
+Unincorporated - Walnut Park,East,16143.0,False,3059,18949,0.21,1.29,53,328,5274,42.3
 Unincorporated - West Antelope Valley,Antelope Valley,1511.0,False,56,3706,0.0,0.0,1,66,278,20.6
-Unincorporated - West Carson,South Bay,22086.0,False,2161,9784,0.64,2.86,128,580,10128,54.8
+Unincorporated - West Carson,South Bay,22086.0,False,2163,9794,0.71,3.29,128,580,10128,54.8
 Unincorporated - West Chatsworth,San Fernando,12.0,False,2,16667,0.0,0.0,0,0,,
-Unincorporated - West LA,West,952.0,False,225,23634,-0.14,-15.07,17,1786,155,17.6
-Unincorporated - West Puente Valley,San Gabriel,9835.0,False,1714,17428,0.29,2.93,22,224,3672,46.6
-Unincorporated - West Rancho Dominguez,South,1359.0,False,197,14496,0.21,15.79,5,368,378,34.4
-Unincorporated - West Whittier/Los Nietos,East,26925.0,False,4196,15584,0.43,1.57,83,308,9864,45.7
+Unincorporated - West LA,West,952.0,False,225,23634,0.07,7.5,17,1786,155,17.6
+Unincorporated - West Puente Valley,San Gabriel,9835.0,False,1712,17407,0.07,0.71,22,224,3672,46.6
+Unincorporated - West Rancho Dominguez,South,1359.0,False,198,14570,0.21,15.79,5,368,378,34.4
+Unincorporated - West Whittier/Los Nietos,East,26925.0,False,4195,15580,0.29,1.07,83,308,9864,45.7
 Unincorporated - Westfield/Academy Hills,South Bay,1300.0,False,42,3231,0.0,0.0,0,0,780,67.3
 Unincorporated - Westhills,San Fernando,839.0,False,42,5006,0.0,0.0,0,0,419,54.4
-Unincorporated - White Fence Farms,Antelope Valley,3683.0,False,267,7250,-0.07,-1.93,2,54,1087,32.5
+Unincorporated - White Fence Farms,Antelope Valley,3683.0,False,267,7250,-0.14,-3.86,2,54,1087,32.5
 Unincorporated - Whittier,San Gabriel,3784.0,False,315,8325,0.14,3.79,9,238,1758,54.6
 Unincorporated - Whittier Narrows,San Gabriel,12.0,False,13,108333,0.0,0.0,1,8333,,
-Unincorporated - Willowbrook,South,34913.0,False,6014,17226,0.79,2.29,87,249,8500,32.2
-Unincorporated - Wiseburn,South Bay,6027.0,False,511,8479,0.07,1.21,11,183,2582,53.3
+Unincorporated - Willowbrook,South,34913.0,False,6021,17246,0.86,2.5,87,249,8500,32.2
+Unincorporated - Wiseburn,South Bay,6027.0,False,512,8495,0.14,2.36,11,183,2582,53.3
