@@ -121,13 +121,7 @@ def parse_csa(html):
         countwide statistical area.
     """
     df = (
-        pd.read_html(
-            str(
-                html
-                .find('div', id=ID_SUMMARY)
-                .find_next_siblings('table')[1]
-            )
-        )[0]
+        pd.read_html(str(table_html(html, ID_SUMMARY, True)[1]))[0]
         .rename(
             columns={
                 'CITY/COMMUNITY**': const.AREA,
@@ -198,7 +192,7 @@ def parse_vaccinated(html):
     df[const.AREA] = df[const.AREA].convert_dtypes()
     for col, str_to_num, missing, dtype in VACCINATED_DTYPE_CONVERSIONS:
         df[col] = df[col].apply(
-            lambda x: missing if x in ('Unreliable Data', 'No population Data')
+            lambda x: missing if x in ('Unreliable Data', 'No Denominator Data')
                               else str_to_num(x)
         ).astype(dtype)
     return df
