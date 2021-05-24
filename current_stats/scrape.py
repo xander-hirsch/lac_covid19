@@ -198,13 +198,13 @@ def parse_vaccinated(html):
     return df
 
 
-def parse_areas(df_csa_total, df_health_dept, df_area_vaccinated):
+def parse_areas(df_csa_total, df_health_dept):
     df = (
         pd.concat([df_csa_total, df_health_dept])
         .sort_values(const.AREA).reset_index(drop=True).copy()
     )
     df[const.AREA] = df[const.AREA].convert_dtypes()
-    return pd.merge(df, df_area_vaccinated, 'left', const.AREA)
+    return df
 
 
 def parse_outbreaks(html, id_):
@@ -231,13 +231,10 @@ def parse_education(html):
 def query_live(cached=False):
     page_html = fetch_page(cached)
     df_csa_total = parse_csa(page_html)
-    df_area_vaccinated = parse_vaccinated(page_html)
     df_health_dept = parse_health_dept(page_html)
     return {
-        const.AREA: parse_areas(df_csa_total, df_health_dept,
-                                df_area_vaccinated),
+        const.AREA: parse_areas(df_csa_total, df_health_dept),
         const.CSA_TOTAL: df_csa_total,
-        const.VACCINATED: df_area_vaccinated,
         const.RESIDENTIAL: parse_residential(page_html),
         const.NON_RESIDENTIAL: parse_non_residential(page_html),
         const.HOMELESS: parse_homeless(page_html),

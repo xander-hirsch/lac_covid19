@@ -61,8 +61,7 @@ def area_data(df_area_live, df_area_ts): #, lower=0.05, upper=0.95):
         [const.AREA, const.REGION, const.POPULATION, const.CF_OUTBREAK,
          const.CASES, const.CASE_RATE,
          const.NEW_CASES_14_DAY_AVG, const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
-         const.DEATHS, const.DEATH_RATE,
-         const.VACCINATED_PEOPLE, const.VACCINATED_PERCENT]
+         const.DEATHS, const.DEATH_RATE]
     ]
     df_area.to_csv(os.path.join(DIR_LIVE, 'area.csv'), index=False)
     return df_area
@@ -93,7 +92,6 @@ def arcgis_map(df_area, lower=0.05, upper=0.95):
     choropleth_suggestions(const.NEW_CASES_14_DAY_AVG_PER_CAPITA)
     choropleth_suggestions(const.CASE_RATE)
     choropleth_suggestions(const.DEATH_RATE, 0.1, 0.9)
-    choropleth_suggestions(const.VACCINATED_PERCENT)
 
 
 def arcgis_live_vaccinated(df_vaccinated):
