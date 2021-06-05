@@ -188,24 +188,56 @@ def create_by_area(many_daily_pr: Tuple[Dict[str, Any], ...]) -> pd.DataFrame:
     df = (pd.concat([df_csa, df_hd])
           .sort_values([DATE, AREA]).reset_index(drop=True))
 
+    # Patch for May 27, 2021 backdated cases
+    df_new_cases_unadj = covid_tools.calc.daily_change_groups(
+        df, DATE, const.CASES, const.NEW_CASES, const.AREA
+    )
+    df_new_cases_per100k = covid_tools.calc.daily_change_groups(
+        df, DATE, const.CASES_PER_CAPITA, 'new cases per capita', const.AREA
+    )
+    backdated = pd.to_datetime('2021-05-27')
+    df_new_cases_unadj.loc[
+        df_new_cases_unadj[const.DATE]==backdated,
+        const.NEW_CASES
+    ] = 0
+    df_new_cases_per100k.loc[
+        df_new_cases_per100k[const.DATE]==backdated,
+        'new cases per capita'
+    ] = 0
+
     # Calculate new cases rolling average
-    df = covid_tools.calc.rolling_avg_groups(
-        covid_tools.calc.daily_change_groups(
-            df, DATE, const.CASES, const.NEW_CASES, const.AREA
-        ), DATE, const.NEW_CASES, const.NEW_CASES_14_DAY_AVG, 14, const.AREA
+    df_new_cases_unadj = covid_tools.calc.rolling_avg_groups(
+        df_new_cases_unadj,
+        DATE, const.NEW_CASES, const.NEW_CASES_14_DAY_AVG, 14, const.AREA
     )
     # Calculate new cases per capita rolling average
-    df = covid_tools.calc.rolling_avg_groups(
-        covid_tools.calc.daily_change_groups(
-            df, DATE, const.CASES_PER_CAPITA, 'new cases per capita', const.AREA
-        ), DATE, 'new cases per capita',
+    df_new_cases_per100k = covid_tools.calc.rolling_avg_groups(
+        df_new_cases_per100k,
+        DATE, 'new cases per capita',
         const.NEW_CASES_14_DAY_AVG_PER_CAPITA, 14, const.AREA
+    )
+    df = pd.merge(
+        df_new_cases_unadj[[
+            const.DATE,
+            const.AREA,
+            const.CASES,
+            const.CASES_PER_CAPITA,
+            const.CF_OUTBREAK,
+            const.NEW_CASES,
+            const.NEW_CASES_14_DAY_AVG,
+        ]],
+        df_new_cases_per100k[[
+            const.DATE,
+            const.AREA,
+            const.NEW_CASES_14_DAY_AVG_PER_CAPITA,
+        ]],
+        'left',
+        [const.DATE, const.AREA]
     )
     df[const.NEW_CASES_14_DAY_AVG] = df[const.NEW_CASES_14_DAY_AVG].round(2)
     df[const.NEW_CASES_14_DAY_AVG_PER_CAPITA] = (
         df[const.NEW_CASES_14_DAY_AVG_PER_CAPITA].round(2)
     )
-    df.drop(columns='new cases per capita', inplace=True)
     return df.convert_dtypes()
 
 
