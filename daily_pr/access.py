@@ -2,11 +2,14 @@ from copy import deepcopy
 import os.path
 import datetime as dt
 import json
+
 import bs4
 import requests
 import re
 import pickle
+import numpy as np
 
+from lac_covid19.const.columns import NEW_CASES, NEW_DEATHS
 from lac_covid19.daily_pr.prid import PRID
 from lac_covid19.daily_pr.parse import parse_pr
 from lac_covid19.daily_pr.paths import *
@@ -28,6 +31,11 @@ def _json_path(date):
 
 def _fetch_html(date):
     """Fetches the webpage online and returns the html source as text."""
+    # Fix for June 27, 2021 press release overwrite
+    if date == '2021-06-27':
+        with open(_html_path(date)) as f:
+            return f.read()
+
     date_prid = PRID.get(date)
     if date_prid is None:
         raise ValueError(f'No Press Release ID for {date_prid}')
@@ -60,6 +68,10 @@ def load_html(date, cache=True):
 def _write_json(pr_dict):
     pr_dict = deepcopy(pr_dict)
     pr_dict[DATE] = pr_dict[DATE].isoformat()
+    if pr_dict[NEW_CASES] is np.nan:
+        pr_dict[NEW_CASES] = None
+    if pr_dict[NEW_DEATHS] is np.nan:
+        pr_dict[NEW_DEATHS] = None
     with open(_json_path(pr_dict[DATE]), 'w') as f:
         json.dump(pr_dict, f, separators=JSON_COMPACT)
 
@@ -70,6 +82,10 @@ def _load_json(date):
         with open(date_json) as f:
             pr_dict = json.load(f)
         pr_dict[DATE] = dt.date.fromisoformat(pr_dict[DATE])
+        if pr_dict[NEW_CASES] is None:
+            pr_dict[NEW_CASES] = np.nan
+        if pr_dict[NEW_DEATHS] is None:
+            pr_dict[NEW_DEATHS] = np.nan
         for i in range(len(pr_dict[AREA])):
             pr_dict[AREA][i] = tuple(pr_dict[AREA][i])
         pr_dict[AREA] = tuple(pr_dict[AREA])

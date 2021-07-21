@@ -423,7 +423,7 @@ def generate_all_ts(many_daily_pr=None):
             return pickle.load(f)
     df_area = create_by_area(many_daily_pr)
     all_ts = {
-        const.AGGREGATE: aggregate_stats(many_daily_pr),
+        # const.AGGREGATE: aggregate_stats(many_daily_pr),
         const.AGE_GROUP: create_by_age(many_daily_pr),
         const.GENDER: create_by_gender(many_daily_pr),
         const.RACE: create_by_race(many_daily_pr),

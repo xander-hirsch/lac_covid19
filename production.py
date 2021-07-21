@@ -1,6 +1,7 @@
 import math
 import os.path
 import re
+from datetime import date
 
 import pandas as pd
 
@@ -27,8 +28,7 @@ def datetime_input(obj):
         return obj
     elif isinstance(obj, str):
         return pd.to_datetime(obj)
-    else:
-        raise ValueError
+    return pd.to_datetime(date.today())
 
 
 def choropleth_colors(df_area_day, col, lower, upper):
@@ -234,7 +234,7 @@ def export_live(live_dict):
                                   index=False)
 
 
-def publish(date=None, update_live=True, ts_cache=False, live_cache=False):
+def publish(date_=None, update_live=True, ts_cache=False, live_cache=False):
 
     df_area_live = None
 
@@ -253,15 +253,15 @@ def publish(date=None, update_live=True, ts_cache=False, live_cache=False):
     else:
         export_time_series(ts_dict := update_ts())
 
-    if date is None:
-        date = ts_dict[const.AGGREGATE][const.DATE].max()
+    if date_ is None:
+        date_ = date.today()
 
     df_area_ts = ts_dict[const.AREA]
     df_area = area_data(df_area_live, df_area_ts)
     arcgis_map(df_area)
-    arcgis_csa_ts(ts_dict[const.AREA], date)
+    arcgis_csa_ts(ts_dict[const.AREA], date_)
     # arcgis_region_ts(ts_dict[const.REGION], date)
-    arcgis_aggregate_ts(ts_dict[const.AGGREGATE], date)
+    # arcgis_aggregate_ts(ts_dict[const.AGGREGATE], date_)
     arcgis_region_snapshot(ts_dict[const.REGION])
     arcgis_age_snapshot(ts_dict[const.AGE_GROUP])
 

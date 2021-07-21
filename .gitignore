@@ -5,6 +5,7 @@
 current_stats/locations.htm
 
 daily_pr/cached-html/*.html
+!daily_pr/cached-html/2021-06-27.html
 daily_pr/parsed-json/*.json
 daily_pr/pickle-cache/*.pickle
 

@@ -6,6 +6,8 @@ import datetime as dt
 import re
 from typing import Any, Dict, Tuple, Optional, Union
 
+import numpy as np
+
 import lac_covid19.const as const
 import lac_covid19.daily_pr.bad_data as bad_data
 
@@ -129,19 +131,21 @@ def _get_new_cases_deaths(pr_txt: str) -> Tuple[int, int]:
         in bad_data.HARDCODE_NEW_CASES_DEATHS.keys()):
         return bad_data.HARDCODE_NEW_CASES_DEATHS[date]
 
-    deaths, cases = None, None
-    result = RE_NEW_DEATHS_CASES_NORMAL.search(pr_txt)
-    if result:
-        deaths = result.group('deaths')
+    deaths, cases = np.nan, np.nan
+    result_normal = RE_NEW_DEATHS_CASES_NORMAL.search(pr_txt)
+    result_auto = RE_NEW_DEATHS_CASES_AUTO.search(pr_txt)
+    if result_normal:
+        deaths = result_normal.group('deaths')
         if deaths in NUMBERS_AS_WORDS.keys():
             deaths = NUMBERS_AS_WORDS[deaths]
         else:
             deaths = _str_to_int(deaths)
-        cases = _str_to_int(result.group('cases'))
+        cases = _str_to_int(result_normal.group('cases'))
+    elif result_auto:
+        cases = _str_to_int(result_auto.group('cases'))
+        deaths = _str_to_int(result_auto.group('deaths'))
     else:
-        result = RE_NEW_DEATHS_CASES_AUTO.search(pr_txt)
-        cases = _str_to_int(result.group('cases'))
-        deaths = _str_to_int(result.group('deaths'))
+        print('New cases and new deaths not extracted')
     return cases, deaths
 
 
