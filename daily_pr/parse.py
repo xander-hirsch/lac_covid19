@@ -113,7 +113,8 @@ def _parse_csa(
     output = []
     cf_recorded = _parse_date(pr_txt) >= bad_data.CORR_FACILITY_RECORDED
     search_txt = pr_txt
-    if (csa_txt := CSA_ENTIRE.search(pr_txt)):
+    csa_txt = CSA_ENTIRE.search(pr_txt)
+    if csa_txt:
         search_txt = csa_txt.group()
     for row in RE_CSA_ENTRY.finditer(search_txt):
         output.append((
@@ -127,8 +128,8 @@ def _parse_csa(
 
 def _get_new_cases_deaths(pr_txt: str) -> Tuple[int, int]:
     """Extracts the daily new deaths and cases."""
-    if ((date := _parse_date(pr_txt).isoformat())
-        in bad_data.HARDCODE_NEW_CASES_DEATHS.keys()):
+    date = _parse_date(pr_txt).isoformat()
+    if date in bad_data.HARDCODE_NEW_CASES_DEATHS.keys():
         return bad_data.HARDCODE_NEW_CASES_DEATHS[date]
 
     deaths, cases = np.nan, np.nan

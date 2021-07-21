@@ -85,7 +85,7 @@ HARDCODE_DATE_AREA = {
     )
 }
 
-CORR_FACILITY_RECORDED = dt.date(2020, 5, 14)
+CORR_FACILITY_RECORDED = pd.to_datetime('2020-05-14')
 
 _unic_val_verde = 'Unincorporated - Val Verde'
 _city_of_vernon = 'City of Vernon'

@@ -77,7 +77,8 @@ def _write_json(pr_dict):
 
 
 def _load_json(date):
-    if os.path.isfile(date_json := _json_path(date)):
+    date_json = _json_path(date)
+    if os.path.isfile(date_json):
         pr_dict = None
         with open(date_json) as f:
             pr_dict = json.load(f)
@@ -101,7 +102,8 @@ def query_date(date, json_cache=True, html_cache=True):
     Returns:
         A dictionary of data from a press release.
     """
-    if html_cache and json_cache and (pr := _load_json(date)):
+    pr = _load_json(date)
+    if html_cache and json_cache and pr:
         return pr
     pr = parse_pr(load_html(date, html_cache))
     assert date == pr[DATE].isoformat()
@@ -115,7 +117,8 @@ def query_date(date, json_cache=True, html_cache=True):
             area_index_map[substitutions[i][0]] = i
         pr_area = list(pr[AREA])
         for i in range(len(pr_area)):
-            if (area := pr_area[i][0]) in area_index_map:
+            area = pr_area[i][0]
+            if area in area_index_map:
                 pr_area[i] = substitutions[area_index_map[area]]
         pr[AREA] = tuple(pr_area)
     _write_json(pr)

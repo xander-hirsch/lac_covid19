@@ -27,3 +27,5 @@ lacph-monitor/pushbullet-log/
 lacph-monitor/monitor.log
 lacph-monitor/*.txt
 lacph-monitor/.suspend_*
+
+envs/

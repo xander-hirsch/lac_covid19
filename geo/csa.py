@@ -59,8 +59,9 @@ def determine_region(csa_series, df_region, region_name_col,
         - A list of multiple regions if the area fits into multiple regions.
         - None if no determination can be made.
     """
+    csa_name = csa_series.loc[csa_name_col]
     if (all((csa_name_col, manual_assignment))
-        and (csa_name := csa_series.loc[csa_name_col]) in manual_assignment):
+        and csa_name in manual_assignment):
         return manual_assignment[csa_name]
     region_scale = 2 - csa_scale
     df_contains = df_region[

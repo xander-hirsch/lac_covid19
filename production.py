@@ -251,7 +251,8 @@ def publish(date_=None, update_live=True, ts_cache=False, live_cache=False):
     if ts_cache:
         ts_dict = generate_all_ts()
     else:
-        export_time_series(ts_dict := update_ts())
+        ts_dict = update_ts()
+        export_time_series(ts_dict)
 
     if date_ is None:
         date_ = date.today()

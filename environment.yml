@@ -1,0 +1,16 @@
+name: lac-covid
+dependencies:
+  - requests
+  - beautifulsoup4
+  - pandas
+  - geopandas
+  - shapely>=1.7
+  - lxml
+  - html5lib
+  # dev packages
+  - pylint
+  - rope
+  - ipython
+  - pip
+  - pip:
+    - geopy
